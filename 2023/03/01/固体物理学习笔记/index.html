@@ -27,7 +27,7 @@
 <meta property="og:description" content="金属自由电子气">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-01T01:43:02.000Z">
-<meta property="article:modified_time" content="2023-03-01T11:26:38.306Z">
+<meta property="article:modified_time" content="2023-03-02T09:39:28.147Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="笔记">
@@ -190,9 +190,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-03-01 09:43:02 / 修改时间：19:26:38" itemprop="dateCreated datePublished" datetime="2023-03-01T09:43:02+08:00">2023-03-01</time>
+      <time title="创建时间：2023-03-01 09:43:02" itemprop="dateCreated datePublished" datetime="2023-03-01T09:43:02+08:00">2023-03-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-02 17:39:28" itemprop="dateModified" datetime="2023-03-02T17:39:28+08:00">2023-03-02</time>
     </span>
 
   
@@ -216,14 +222,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.3k</span>
+      <span>6.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -408,6 +414,86 @@ class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与
 <h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
 <p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
 <h2 id="自由电子气的热性质">自由电子气的热性质</h2>
+<ul>
+<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
+class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
+E}-1}\)</span>.其中<span
+class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
+class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
+<li><p>量子态数量N与动量的关系</p></li>
+</ul>
+<p>对于自由电子的哈密顿量<span
+class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
+class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
+class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
+<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
+class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
+class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
+class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
+class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
+<span class="math display">\[
+\begin{align}
+dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\end{align}
+\]</span></p>
+<p>补上电子自旋带来的自由度为<span
+class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
+k^2dk\)</span>。</p>
+<ul>
+<li>在固体物理中我们经常用到态密度<span
+class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
+<span class="math display">\[
+\begin{align}
+dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
+E=&amp;\frac{\hbar^2k^2}{2m}\\
+\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
+=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
+\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
+\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
+=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;g(E)dE
+\end{align}
+\]</span></li>
+</ul>
+<p>因此态密度为<span
+class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
+正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。</p>
+<p>因此数密度<span class="math inline">\(\rho=\int
+g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
+g(E)EdE\)</span>.</p>
+<ul>
+<li>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></li>
+</ul>
+<p>当T=0K时，费米分布<span
+class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
+class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
+class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
+class="math inline">\(E_F\)</span>，称为费米能量，对于普通金属，这个值在2-10eV之间，其换算为温度为<span
+class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
+class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
+<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
+class="math inline">\(k_F\)</span>，记作费米波矢，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
+<p>我们试着计算一下零温时电子气的态密度以及能量密度</p>
+<ul>
+<li><p>态密度 <span class="math display">\[
+\begin{align}
+N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{align}
+\]</span></p></li>
+<li><p>能量密度 <span class="math display">\[
+\begin{align}
+U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
+=&amp;\frac{3}{5}E_F\frac{N}{V}
+\end{align}
+\]</span></p></li>
+</ul>
+<p>因此我们可以得到单个电子的平均能量应该为<span
+class="math inline">\(U/N=\frac{3}{5}E_F\)</span></p>
 <h2 id="泡利顺磁性">泡利顺磁性</h2>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
@@ -419,6 +505,11 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li
 id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
 href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -475,13 +566,13 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">20k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">36 分钟</span>
+    <span title="站点阅读时长">39 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
