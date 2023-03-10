@@ -19,29 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="23.02.27 使用waline添加评论功能、购买并绑定域名 解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常） 对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.i">
+    <meta name="description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory 这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。 接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。 Groups 群是什么？大致可以理解为集合+一种运算。比如说所有转动操作构成的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站bug记录">
-<meta property="og:url" content="https://sirohune.site/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="群论学习笔记">
+<meta property="og:url" content="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="はくのblog">
-<meta property="og:description" content="23.02.27 使用waline添加评论功能、购买并绑定域名 解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常） 对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.i">
+<meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory 这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。 接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。 Groups 群是什么？大致可以理解为集合+一种运算。比如说所有转动操作构成的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-27T11:11:41.000Z">
-<meta property="article:modified_time" content="2023-02-27T11:21:42.452Z">
+<meta property="article:published_time" content="2023-03-06T09:34:50.000Z">
+<meta property="article:modified_time" content="2023-03-07T15:03:46.883Z">
 <meta property="article:author" content="白舟尘">
-<meta property="article:tag" content="博客">
-<meta property="article:tag" content="debug">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sirohune.site/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/">
+<link rel="canonical" href="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/","path":"2023/02/27/建站bug记录/","title":"建站bug记录"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2023/03/06/群论学习笔记/","title":"群论学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>建站bug记录 | はくのblog</title>
+<title>群论学习笔记 | はくのblog</title>
   
 
 
@@ -114,8 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8waline%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E8%B4%AD%E4%B9%B0%E5%B9%B6%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">1.</span> <span class="nav-text">23.02.27
-使用waline添加评论功能、购买并绑定域名</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lie-group-theory"><span class="nav-number">1.</span> <span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#groups"><span class="nav-number">1.1.</span> <span class="nav-text">Groups</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -130,13 +129,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -163,7 +162,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -176,12 +175,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="建站bug记录 | はくのblog">
+      <meta itemprop="name" content="群论学习笔记 | はくのblog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          建站bug记录
+          群论学习笔记
         </h1>
 
         <div class="post-meta-container">
@@ -191,9 +190,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-02-27 19:11:41 / 修改时间：19:21:42" itemprop="dateCreated datePublished" datetime="2023-02-27T19:11:41+08:00">2023-02-27</time>
+      <time title="创建时间：2023-03-06 17:34:50" itemprop="dateCreated datePublished" datetime="2023-03-06T17:34:50+08:00">2023-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-07 23:03:46" itemprop="dateModified" datetime="2023-03-07T23:03:46+08:00">2023-03-07</time>
     </span>
 
   
@@ -205,8 +210,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -217,7 +222,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>223</span>
+      <span>426</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -235,10 +240,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="使用waline添加评论功能购买并绑定域名">23.02.27
-使用waline添加评论功能、购买并绑定域名</h3>
-<p>解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常）</p>
-<p>对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.io，之后更改为购买的域名，然后就解决了网页白底蓝字的问题。</p>
+        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<h1 id="lie-group-theory">Lie Group Theory</h1>
+<p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
+<p>接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。</p>
+<h2 id="groups">Groups</h2>
+<p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符<span
+class="math inline">\(\circ\)</span>构成转动群。比如说群元素<span
+class="math inline">\(g_1\)</span> 与<span
+class="math inline">\(g_2\)</span> 之间的运算<span
+class="math inline">\(g_1\circ g_2\)</span>
+是多少，由运算符的规定给出。</p>
+<p>除此之外，对群还有一些数学要求：</p>
+<ul>
+<li>存在恒元<span class="math inline">\(I\)</span><a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+<ul>
+<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p></li>
+<li><p>群乘法封闭，即<span class="math inline">\(g_1\circ g_2=g_3\in
+G,\forall g_1,g_2\in G\)</span></p></li>
+<li><p>结合律<span
+class="math inline">\(\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}\)</span></p></li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>就是什么也不干的群元素，作用于任何东西上都得到它自己<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -248,21 +281,21 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
-              <a href="/tags/debug/" rel="tag"># debug</a>
+              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" rel="prev" title="初等量子力学期末复习">
-                  <i class="fa fa-chevron-left"></i> 初等量子力学期末复习
+                <a href="/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/" rel="prev" title="固体物理学习笔记（第一章）">
+                  <i class="fa fa-chevron-left"></i> 固体物理学习笔记（第一章）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="固体物理学习笔记">
-                  固体物理学习笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0/" rel="next" title="热统复习">
+                  热统复习 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -296,13 +329,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">49 分钟</span>
+    <span title="站点阅读时长">1:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
@@ -343,17 +376,6 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/02/27/%E5%BB%BA%E7%AB%99bug%E8%AE%B0%E5%BD%95/"}</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
-    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => 
-    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
-  );
-});
-</script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -373,6 +395,17 @@ var options = {
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
+</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
 </script>
 
 </body>
