@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory">
+    <meta name="description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="群论学习笔记">
 <meta property="og:url" content="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="はくのblog">
-<meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory">
+<meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg Lie Group Theory">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-06T09:34:50.000Z">
 <meta property="article:modified_time" content="2023-03-10T09:58:41.101Z">
@@ -114,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lie-Group-Theory"><span class="nav-number">1.</span> <span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Groups"><span class="nav-number">1.1.</span> <span class="nav-text">Groups</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lie-group-theory"><span class="nav-number">1.</span> <span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#groups"><span class="nav-number">1.1.</span> <span class="nav-text">Groups</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -222,7 +222,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>436</span>
+      <span>447</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -240,26 +240,40 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg
-</code></pre><h1 id="Lie-Group-Theory"><a href="#Lie-Group-Theory" class="headerlink" title="Lie Group Theory"></a>Lie Group Theory</h1><span id="more"></span>
-<script type="math/tex; mode=display">\require{physics}</script><p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
+        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<h1 id="lie-group-theory">Lie Group Theory</h1>
+<span id="more"></span>
+<p><span class="math display">\[\require{physics}\]</span></p>
+<p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
 <p>接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。</p>
-<h2 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h2><p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符$\circ$构成转动群。比如说群元素$g_1$ 与$g_2$ 之间的运算$g_1\circ g_2$ 是多少，由运算符的规定给出。</p>
+<h2 id="groups">Groups</h2>
+<p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符<span
+class="math inline">\(\circ\)</span>构成转动群。比如说群元素<span
+class="math inline">\(g_1\)</span> 与<span
+class="math inline">\(g_2\)</span> 之间的运算<span
+class="math inline">\(g_1\circ g_2\)</span>
+是多少，由运算符的规定给出。</p>
 <p>除此之外，对群还有一些数学要求：</p>
 <ul>
-<li>存在恒元$I$<sup><a href="#fn_1" id="reffn_1">1</a></sup></li>
+<li>存在恒元<span class="math inline">\(I\)</span><a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></li>
 </ul>
-<blockquote id="fn_1">
-<sup>1</sup>. 就是什么也不干的群元素，作用于任何东西上都得到它自己<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
 <ul>
-<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p>
-</li>
-<li><p>群乘法封闭，即$g_1\circ g_2=g_3\in G,\forall g_1,g_2\in G$</p>
-</li>
-<li><p>结合律$\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}$ </p>
-</li>
+<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p></li>
+<li><p>群乘法封闭，即<span class="math inline">\(g_1\circ g_2=g_3\in
+G,\forall g_1,g_2\in G\)</span></p></li>
+<li><p>结合律<span
+class="math inline">\(\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}\)</span></p></li>
 </ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>就是什么也不干的群元素，作用于任何东西上都得到它自己<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -317,13 +331,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">23k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">1:02</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
