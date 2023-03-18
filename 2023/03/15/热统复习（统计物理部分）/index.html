@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="热统复习（统计物理部分）">
+<meta property="og:url" content="https://sirohune.site/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/index.html">
+<meta property="og:site_name" content="はくのblog">
+<meta property="og:description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-15T01:51:10.000Z">
+<meta property="article:modified_time" content="2023-03-17T16:35:50.911Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="热力学与统计力学">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://sirohune.site/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/","path":"2023/03/15/热统复习（统计物理部分）/","title":"热统复习（统计物理部分）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>热统复习（统计物理部分） | はくのblog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">はくのblog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">发电的地方</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6"><span class="nav-number">1.</span> <span class="nav-text">统计力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%91%E7%8B%AC%E7%AB%8B%E7%B2%92%E5%AD%90%E7%9A%84%E6%9C%80%E6%A6%82%E7%84%B6%E5%88%86%E5%B8%83"><span class="nav-number">1.1.</span> <span class="nav-text">近独立粒子的最概然分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E5%88%86%E5%B8%83"><span class="nav-number">1.1.1.</span> <span class="nav-text">玻尔兹曼分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E8%89%B2%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%B9%E7%B1%B3%E5%88%86%E5%B8%83"><span class="nav-number">1.1.2.</span> <span class="nav-text">玻色分布与费米分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%88%86%E5%B8%83%E4%B8%8E%E9%87%8F%E5%AD%90%E5%88%86%E5%B8%83%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">1.1.3.</span> <span class="nav-text">经典分布与量子分布之间的联系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">玻尔兹曼统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">温度的统计定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E5%88%B0%E6%80%81%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">得到态函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E8%83%BD"><span class="nav-number">1.2.0.2.1.</span> <span class="nav-text">内能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%86%B5"><span class="nav-number">1.2.0.2.2.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.2.0.2.3.</span> <span class="nav-text">亥姆霍兹自由能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%84%93"><span class="nav-number">1.2.0.2.4.</span> <span class="nav-text">焓</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maxwell%E9%80%9F%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Maxwell速率分布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">量子统计</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">物理与人生</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="はくのblog">
+      <meta itemprop="description" content="物理与人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="热统复习（统计物理部分） | はくのblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          热统复习（统计物理部分）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-15 09:51:10" itemprop="dateCreated datePublished" datetime="2023-03-15T09:51:10+08:00">2023-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-18 00:35:50" itemprop="dateModified" datetime="2023-03-18T00:35:50+08:00">2023-03-18</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>17 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <pre><code>参考书目：
+《热力学·统计物理》—— 汪志诚
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
+<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+<span id="more"></span>
+<h1 id="统计力学">统计力学</h1>
+<h2 id="近独立粒子的最概然分布">近独立粒子的最概然分布</h2>
+<p>近独立的意思是说粒子之间的相互作用能量远小于粒子本身的能量，但并不是说完全没有相互作用，完全没有相互作用的是自由粒子。在经典力学中所有粒子都是可分辨的，因此统计物理早期将粒子视作可分辨的近独立粒子，这种系统称为<strong>玻尔兹曼系统</strong>，得到的是经典统计。量子力学中的粒子是不可分辨的全同粒子，全同粒子分为<strong>玻色子</strong>与<strong>费米子</strong>，玻色子做宇称变换后波函数不变，费米子做宇称变换后波函数出现负号。两种粒子构成的系统分别称为<strong>玻色系统</strong>与<strong>费米系统</strong>，得到的都是量子统计。</p>
+<p>很显然三种系统的分布是不一样的（<del>不然为什么要分为三个系统</del>），为什么全同与可分辨、宇称性会影响粒子分布呢？这与我们得到分布的方式有关，我们是通过<strong>最概然</strong>得到分布的，什么意思呢？对于一个系统，我们先列出它的所有宏观态，我们观察结果只能观测到这些宏观态。每一个宏观态包含有很多个可能的微观态，比如说掷两个骰子，将面数求和，得到的其中一个宏观态便是6，这个6可能是1+5、2+4、3+3等情况，这些就是微观态。我们认为出现宏观态的概率与其微观态个数成正比<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>。最概然的分布，自然就是微观态的极大值点，因此我们找到一个系统的所有可能状态（微观态）后，要求一阶变分为0即可得到系统的分布<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>。</p>
+<p>这样我们就得到了写出分布的标准步骤 1. 写出微观态个数表达式 2.
+要求一阶变分为0</p>
+<p>因为三种系统写出来的微观态个数表达式是不一样的，所以变分得到的分布也是不一样的。</p>
+<h3 id="玻尔兹曼分布">玻尔兹曼分布</h3>
+<p>假设有N个例子，系统总能量是E，体积是V。粒子所处的第l个能级用<span
+class="math inline">\(\epsilon_l\)</span>来表示，第l能级的简并度用<span
+class="math inline">\(\omega_l\)</span>来表示，能级l上的粒子数用<span
+class="math inline">\(a_l\)</span>来表示。显然有 <span
+class="math display">\[
+\begin{equation}
+\begin{cases}
+N=\sum\limits_la_l\\
+E=\sum\limits_la_l\epsilon_l
+\end{cases}
+\end{equation}
+\]</span>
+为了方便记忆，我们可以把系统想象成一座图书馆，第几能级便是图书馆的第几层，每一层会有一个书架，而书架也会分层，每层书架便对应一个简并态<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>，每能级的粒子数自然是每层楼的书本数。玻尔兹曼系统的每本书都是不同的，因此对于第l楼，有<span
+class="math inline">\(a_l\)</span>本书，每本书都有<span
+class="math inline">\(\omega_l\)</span>种选择，因此每层有<span
+class="math inline">\(\omega_l^{a_l}\)</span>中情况，对于所有楼层便有<span
+class="math inline">\(\prod\limits_l\omega_l^{a_l}\)</span>种情况，因为所有书都不一样，所以对所有书进行全排列<span
+class="math inline">\(N!\)</span>，再除掉每层楼已经算过的情况<span
+class="math inline">\(\prod\limits_la_l!\)</span>，因此最后得到微观态数目为</p>
+<p><span class="math display">\[
+\begin{equation}
+\Omega_{M.B}=N!\prod_l\frac{\omega_l^{a_l}}{a_l!}
+\end{equation}
+\]</span> 将上式进行对粒子分布进行变分（也就是对<span
+class="math inline">\(a_l\)</span>进行变分，因为我们要求得的就是<span
+class="math inline">\(a_l\)</span>），同时因为变分有两个约束，粒子数守恒<span
+class="math inline">\(\delta N=\sum\limits_l\delta
+a_l=0\)</span>以及能量守恒<span class="math inline">\(\delta
+E=\sum\limits_l\epsilon_l\delta
+a_l\)</span>，所以要引入拉格朗日乘子，还有一步很重要的是，直接对<span
+class="math inline">\(\Omega\)</span>变分有点困难，根据其表达式可以看出，对<span
+class="math inline">\(\ln\Omega\)</span>变分是更加方便的
+，而且对数函数本身是单调的 <span class="math display">\[
+\begin{align}
+\delta\ln\Omega_{M.B}=&amp;\delta\pqty{\sum_l\pqty{a_l\ln \omega_l-\ln
+(a_l!)}}\\
+=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta \ln(a_l!)}
+\end{align}
+\]</span> 使用斯特朗公式<span
+class="math inline">\(\ln(a_l!)\approx=a_l\pqty{\ln a_l-1}\)</span>
+<span class="math display">\[
+\begin{align}
+\delta\ln\Omega_{M.B}=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta
+a_l\ln a_l}\\
+=&amp;\sum_l\delta a_l \ln\frac{\omega_l}{a_l}
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\Rightarrow \delta\ln\Omega_{M.B}-\alpha\sum_l\delta a_l-\beta\sum_l
+\epsilon_l\delta a_l=&amp;0\\
+\sum_l\pqty{\ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l}\delta
+a_l=0\\
+\Rightarrow \ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l=&amp;0\\
+\end{align}
+\]</span> 因此我们得到粒子在不同能量的分布为 <span
+class="math display">\[
+\begin{equation}
+a_l=\omega_l e^{-\pqty{\alpha+\beta\epsilon_l}}
+\end{equation}
+\]</span> 根据上式我们可以得到粒子在不同微观态的平均分布应该为 <span
+class="math display">\[
+\begin{align}
+f_l=&amp;\frac{a_l}{\omega_l}\\
+=&amp;e^{-\pqty{\alpha+\beta\epsilon_l}}
+\end{align}
+\]</span>
+那么拉格朗日乘子作为参数出现在表达式里是什么意义呢？由于是复习，这里就不卖关子了，<span
+class="math inline">\(\beta=1/kT\)</span> 而<span
+class="math inline">\(\alpha\)</span>作为归一化因子，没什么物理意义。</p>
+<h3 id="玻色分布与费米分布">玻色分布与费米分布</h3>
+<p>首先要写出微观态的个数，这里也叫量子态的个数。
+对于玻色分布，回到图书馆的第l楼，对于<span
+class="math inline">\(a_l\)</span>本全同的书以及<span
+class="math inline">\(\omega_l\)</span>层书架，这是一个组合问题，我们可以将书以及书架的隔板看成<span
+class="math inline">\(a_l+\omega_l\)</span>个“东西”，事先并不知道他们是书还是书架的隔板，从中挑取<span
+class="math inline">\(\omega_l\)</span>个“东西”出来作为书架，其他自然成为书，但是书不能放在地上，所以最底下那一个“东西”必须是书架的隔板，所以最后变成在<span
+class="math inline">\(a_l+\omega_l-1\)</span>个“东西”里挑<span
+class="math inline">\(\omega_l-1\)</span>个出来作为隔板<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>，其他的自然成为书，这种操作并不会涉及全同书的顺序问题，因此每一层有<span
+class="math inline">\(C_{a_l+\omega_l-1}^{\omega_l-1}=\frac{(\omega_l+a_l-1)!}{(\omega-1)!a_l!}\)</span>种情况
+<span class="math display">\[
+\begin{equation}
+\Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}
+\end{equation}
+\]</span></p>
+<p>对于费米分布，因为遵循泡利不相容原理，每个量子态只能有一个粒子，也就是说每层书架最多只能放一本书。因此对于第l楼来说有<span
+class="math inline">\(C_{\omega_l}^{a_l}=\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\)</span>种情况<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a> <span class="math display">\[
+\begin{equation}
+\Omega_{F.D}=\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}
+\end{equation}
+\]</span></p>
+<p>这样我们得到玻色系统和费米系统的量子态数目，现在将其进行变分 <span
+class="math display">\[
+\begin{align}
+\delta
+\ln\Omega_{F.D}=&amp;\delta\sum_l\bqty{\ln(\omega_l!)-\ln(a_l!)-\ln((\omega_l-a_l)!)}\\
+=&amp;-\delta\sum_l\bqty{a_l(\ln
+a_l-1)-(\omega_l-a_l)(\ln(\omega_l-a_l)-1)}\\
+=&amp;-\sum_l\bqty{\delta a_l\ln
+a_l-\delta(\omega_l-a_l)\ln(\omega_l-a_l)}\\
+=&amp;\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)}\delta a_l
+\end{align}
+\]</span> 因此有 <span class="math display">\[
+\begin{align}
+\delta\ln\Omega_{F.D}-\alpha\sum_l\delta a_l-\beta\sum_l
+\epsilon_l\delta a_l=&amp;0\\
+=\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l}\delta&amp;
+a_l\\
+\Rightarrow \ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l=&amp;0
+\end{align}
+\]</span> 整理得费米分布如下 <span class="math display">\[
+\begin{equation}
+a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}+1}
+\end{equation}
+\]</span> 同有量子态分布 <span class="math display">\[
+\begin{equation}
+f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}+1}
+\end{equation}
+\]</span></p>
+<p>玻色分布推导同理，有 <span class="math display">\[
+\begin{equation}
+\begin{cases}
+a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}-1}\\
+f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}-1}
+\end{cases}
+\end{equation}
+\]</span></p>
+<h3 id="经典分布与量子分布之间的联系">经典分布与量子分布之间的联系</h3>
+<p>简并是量子系统特有的，当简并度的数目远大于该能级的粒子数，即<span
+class="math inline">\(\omega_l\gg
+a_l\)</span>，量子系统特有的简并性便没那么明显，因此该条件称为<strong>经典极限条件</strong>或者<strong>非简并条件</strong>，此时
+<span class="math display">\[
+\begin{align}
+\Omega_{B.E}=&amp;\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}\\
+\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
+=&amp;\frac{1}{N!}\Omega_{M.B}\\
+\Omega_{F.D}=&amp;\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\\
+\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
+  =&amp;\frac{1}{N!}\Omega_{M.B}
+\end{align}
+\]</span></p>
+<p>同时当<span
+class="math inline">\(e^\alpha\gg1\)</span>时，量子分布的结果都回到玻尔兹曼分布，这两个条件是等价的</p>
+<h2 id="玻尔兹曼统计">玻尔兹曼统计</h2>
+<p>从可分辨粒子得到玻尔兹曼的统计结论，这一节从玻尔兹曼统计出发推到一些统计结论。
+这里并不会遵循汪志诚老师的思路，我们直接从<strong>正则系综</strong>出发，我们直接关心系统的每一个微观态，而不是宏观态，这样便不用考虑每一宏观态的简并数<a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a></p>
+<p>将系统S与一个大热源接触形成复合系统，整个复合系统的的总能量为E，是一个守恒量，现在想知道系统S处于处于s态的概率是多少，系统S处于s态时拥有能量<span
+class="math inline">\(E_s\)</span>，则热源自然拥有能量<span
+class="math inline">\(E-E_s\)</span>，复合系统以上述方式分配能量的概率就是系统S处于s态的概率，这个概率应当与这种分配方式对应的微观态数目成正比，也就是
+<span class="math display">\[
+\begin{equation}
+P(E_s)\propto \Omega(E-E_s)\times 1
+\end{equation}
+\]</span> 既然如此，只需要计算出微观态数<span
+class="math inline">\(\Omega(E-E_s)\)</span>即可。</p>
+<h4 id="温度的统计定义">温度的统计定义</h4>
+<p>在计算这个微观态前我们还需要做一件事情，便是定义温度。热力学中并没有为我们给出温度的数学定义，我们可以从正则系统统计的方式来定义温度。假设有两个可以交换能量的系统1、2.
+因为两个系统可以交换能量，因此我们一开始并不能知道系统如何分配能量是平衡的，但是我们相信平衡态一定是微观态数目最大的态，因此为求平衡能量分配方式，我们将整个系统的微观态数目对能量进行变分(当然还是先取对数，理由与前面一样)
+<span class="math display">\[
+\begin{align}
+\delta\ln\pqty{\Omega_1(E_1)\Omega_2(E_2)}=&amp;\delta\pqty{\ln\Omega_1(E_1)+\ln\Omega_2(E_2)}\\
+=&amp;\pdv{\ln\Omega_1}{E_1}\delta E_1+\pdv{\ln\Omega_2}{E_2}\delta E_2
+\end{align}
+\]</span> 因为系统能量守恒<span class="math inline">\(\delta E_1+\delta
+E_2=0\)</span>，所以 <span class="math display">\[
+\begin{align}
+\delta\ln\pqty{\Omega(E_1)\Omega(E_2)}=&amp;\pqty{\pdv{\ln\Omega_1}{E_1}-\pdv{\ln\Omega_2}{E_2}}\delta
+E_1\\
+=&amp;0\\
+\Rightarrow \pdv{\ln\Omega_1}{E_1}=&amp;\pdv{\ln\Omega_2}{E_2}
+\end{align}
+\]</span>
+因此这个条件定义了能量在两个系统之间最可能的分割，这种分割（平衡）我们称为相同温度，因此定义
+<span class="math display">\[
+\begin{equation}
+\pdv{\ln\Omega}{E}\triangleq \frac{1}{kT}
+\end{equation}
+\]</span> #### 写出配分函数</p>
+<p>定义了温度后我们便可以继续我们对微观态数<span
+class="math inline">\(\Omega(E-E_s)\)</span>的推导 <span
+class="math display">\[
+\begin{align}
+\ln\Omega(E-E_s)=&amp;\ln\Omega(E)-\pdv{\ln\Omega}{E}E_s+\order{E_s^2}\\
+=&amp;\ln\Omega(E)-\frac{E_s}{kT}+\order{E_s^2}\\
+\Rightarrow \Omega(E-E_s)\approx &amp;\ln\Omega(E)e^{-\frac{E_s}{kT}}\\
+  \Omega(E-E_s)\propto &amp; e^{-\frac{E_s}{kT}}
+\end{align}
+\]</span> 因此系统S处于s态的概率正比于<span
+class="math inline">\(e^{-\frac{E_s}{kT}}\)</span>，其实就是玻尔兹曼因子，然后我们所有微观态的概率求和归一化即可得到概率
+<span class="math display">\[
+\begin{equation}
+P(E_s)=\frac{e^{-E_s/kT}}{\sum\limits_ie^{-E_i/kT}}
+\end{equation}
+\]</span> 其分母即定义为所谓<strong>配分函数</strong>，记作<span
+class="math inline">\(Z\)</span>，可见其是所有态玻尔兹曼因子的求和，作为归一化系数，这样便没有涉及前面的拉格朗日乘子<span
+class="math inline">\(\alpha\)</span>.</p>
+<h4 id="得到态函数">得到态函数</h4>
+<h5 id="内能">内能</h5>
+<p>对于一个系统，其内能应该是其所有态的平均值 <span
+class="math display">\[
+\begin{align}
+U=&amp;\sum_sE_s\frac{e^{-E_s/kT}}{Z}\\
+=&amp;\frac{1}{Z}\sum_sE_se^{-E_s/kT}\\
+=&amp;-\frac{1}{Z}\pdv{\beta}\sum_se^{-\beta E_s}\\
+=&amp;-\frac{1}{Z}\pdv{Z}{\beta}
+\end{align}
+\]</span> 因此有 <span class="math display">\[
+\begin{equation}
+U=-\pdv{\ln Z}{\beta}
+\end{equation}
+\]</span></p>
+<h5 id="熵">熵</h5>
+<p>为了得到熵的统计定义，我们回顾之前热力学公式<span
+class="math inline">\(\dd{U}=T\dd{S}-p\dd{V}\)</span>，即<span
+class="math inline">\(T=\pqty{\pdv{U}{S}}_V\)</span>再结合前面对温度的定义
+<span class="math display">\[
+\begin{align}
+\frac{1}{kT}=&amp;\pdv{\ln\Omega}{E}\\
+=&amp;\frac{1}{k}\pqty{\pdv{S}{U}}_V\\
+\Rightarrow S=&amp;k\ln\Omega
+\end{align}
+\]</span> 根据等概率原理，熵又可以写成 <span class="math display">\[
+\begin{equation}
+S=-\sum_i kP_i\ln P_i
+\end{equation}
+\]</span> 其中<span class="math inline">\(P_i\)</span>是系统取到<span
+class="math inline">\(i\)</span>态的概率。 我们上一节是得到了<span
+class="math inline">\(P_i=e^{-\beta E_i}/Z\)</span>，因此有 <span
+class="math display">\[
+\begin{align}
+S=&amp;-\sum_i k\frac{e^{-\beta E_i}}{Z}\pqty{-\beta E_i-\ln Z}\\
+=&amp;k\pqty{\beta U+\ln Z}
+\end{align}
+\]</span></p>
+<h5 id="亥姆霍兹自由能">亥姆霍兹自由能</h5>
+<p>由<span class="math inline">\(F=U-TS\)</span>得 <span
+class="math display">\[
+\begin{align}
+F=&amp;U-U-kT\ln Z\\
+=&amp;-kT\ln Z
+\end{align}
+\]</span></p>
+<p>我们实际上也可以从亥姆霍兹自由能得到熵公式 <span
+class="math display">\[
+\begin{align}
+S=&amp;-\pqty{\pdv{F}{T}}_V\\
+=&amp;k\ln Z+kT\pdv{\ln Z}{T}
+\end{align}
+\]</span></p>
+<p>接着根据上式我们可以进一步得到等体热容 <span class="math display">\[
+\begin{align}
+C_V=&amp;T\pqty{\pdv{S}{T}}_V\\
+=&amp;2kT\pqty{\pdv{\ln Z}{T}}_V+kT^2\pqty{\pdv[2]{\ln Z}{T}}_V
+\end{align}
+\]</span></p>
+<h5 id="焓">焓</h5>
+<p>由<span
+class="math inline">\(H=U+pV\)</span>，我们应该先求得压强的表达式，可以利用<span
+class="math inline">\(p=-\pqty{\pdv{U}{V}}_S\)</span>或者利用<span
+class="math inline">\(p=-\pqty{\pdv{F}{V}}_T\)</span>得到 <span
+class="math display">\[
+\begin{align}
+p=&amp;kT\pqty{\pdv{\ln Z}{V}}_T\\
+\Rightarrow H=&amp;-\pdv{\ln Z}{\beta}+kTV\pqty{\pdv{\ln Z}{V}}_T
+\end{align}
+\]</span></p>
+<p>吉布斯函数可以利用类似的方法从配分函数得到。</p>
+<h4 id="maxwell速率分布">Maxwell速率分布</h4>
+<p>对于一坨气体，我们想知道一个粒子处于速度大小为<span
+class="math inline">\(v\)</span>的状态概率为多少，从前面的正则系综知道，处于该状态是能量为<span
+class="math inline">\(mv^2/2\)</span>，因此概率正比于<span
+class="math inline">\(e^{-mv^2/2kT}\)</span>，即 <span
+class="math display">\[
+\begin{align}
+f(v)\dd{v}=\propto v^2 e^{-mv^2/2kT}
+\end{align}
+\]</span> 我们要求上式积分是归一化的，因此 <span class="math display">\[
+\begin{align}
+\int_0^\infty f(v)\dd{v}=&amp;\int_0^\infty v^2 e^{-mv^2/2kT}\\
+=&amp;\frac{\sqrt{\pi}}{4}\pqty{\frac{2kT}{m}}^{3/2}\\
+\Rightarrow
+f(v)\dd{v}=&amp;\frac{4}{\sqrt{\pi}}\pqty{\frac{m}{2kT}}^{3/2}v^2
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi v^2 e^{-mv^2/2kT}\dd{v}
+\end{align}
+\]</span></p>
+<p>因此对于一团气体，单位体积有处于速度大小为<span
+class="math inline">\(v\)</span>的粒子数应该就有 <span
+class="math display">\[
+\begin{equation}
+nf(v)\dd{v}
+\end{equation}
+\]</span> 其中<span
+class="math inline">\(n\)</span>为气体的数密度，从上面的式子我们可以推出一些有意思的结论，比如平均速度，速度平方的平均值</p>
+<ul>
+<li><span class="math inline">\(\expval{v}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\expval{v}=&amp;\int_0^\infty f(v)v\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^3
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\int_0^\infty
+\frac{2kT}{m}\frac{mv^2}{2kT}e^{-mv^2/2kT}\frac{kT}{m}\dd{\frac{mv^2}{2kT}}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\frac{2(kT)^2}{m^2}\Gamma(2)\\
+=&amp;\sqrt{\frac{8kT}{\pi m}}
+\end{align}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\expval{v^2}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\expval{v^2}=&amp;\int_0^\infty f(v)v^2\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^4
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi
+\dv[2]{\alpha}\frac{\sqrt{\pi}}{2\sqrt{\alpha}}\\
+=&amp;\frac{3kT}{m}
+\end{align}
+\]</span></p>
+<ul>
+<li>最概然速率<span class="math inline">\(v_m\)</span></li>
+</ul>
+<p>求速率的分布函数求个导就可以得到了，这里就不敲了 <span
+class="math display">\[
+\begin{equation}
+v_m=\sqrt{\frac{2kT}{m}}
+\end{equation}
+\]</span></p>
+<ul>
+<li>泄流速率</li>
+</ul>
+<p>这个弄了图床再补吧，没图嗯写也没意思</p>
+<p>先放个结论，单位时间通过单位截面跑出去的分子数为 <span
+class="math display">\[
+\begin{equation}
+\frac{n\expval{v}}{4}
+\end{equation}
+\]</span></p>
+<h2 id="量子统计">量子统计</h2>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>统计物理还有一个等概率原理，我忘记讲了。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn2"><p>什么？你说这不一定是极大值？实际上你可以证明二阶变分小于0，但我太懒了。<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>不要问为什么这图书馆这么小，书架每层只能放一本书，问就是不知道。<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>你如果喜欢挑<span
+class="math inline">\(a_l\)</span>本书出来结果也是一样的<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>这里假设了简并态数目<span
+class="math inline">\(\omega_l&gt;a_l\)</span><a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>实际上也只是从<span
+class="math inline">\(a_l\)</span>的使用转向<span
+class="math inline">\(f_s\)</span>的使用罢了，本来是数宏观态数目l，每次乘上简并度<span
+class="math inline">\(\omega_l\)</span>，现在是直接数微观态数目s<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/" rel="tag"># 热力学与统计力学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/" rel="prev" title="数理方法复习（复变）">
+                  <i class="fa fa-chevron-left"></i> 数理方法复习（复变）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">50k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:30</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
