@@ -50,7 +50,44 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+  
+
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -307,7 +344,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-18 10:20:28" itemprop="dateModified" datetime="2023-03-18T10:20:28+08:00">2023-03-18</time>
+      <time title="修改时间：2023-03-23 22:20:53" itemprop="dateModified" datetime="2023-03-23T22:20:53+08:00">2023-03-23</time>
     </span>
 
   
@@ -331,14 +368,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>14 分钟</span>
     </span>
 </div>
 
@@ -349,7 +386,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="复变函数">复变函数</h2>
+          <pre><code>参考书籍：
+《数学物理方法》——梁昆淼
+《数学物理方法简明导论》_v3.1——黄志琦</code></pre>
+<h2 id="复变函数">复变函数</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/#more" rel="contents">
@@ -609,7 +649,7 @@ role="doc-noteref"><sup>1</sup></a></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -627,7 +667,7 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">群论学习笔记</a>
+          <a href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/" class="post-title-link" itemprop="url">群论学习笔记(part1)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -645,7 +685,7 @@ role="doc-noteref"><sup>1</sup></a></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-15 10:15:43" itemprop="dateModified" datetime="2023-03-15T10:15:43+08:00">2023-03-15</time>
+      <time title="修改时间：2023-03-22 15:53:00" itemprop="dateModified" datetime="2023-03-22T15:53:00+08:00">2023-03-22</time>
     </span>
 
   
@@ -657,8 +697,8 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -669,14 +709,14 @@ role="doc-noteref"><sup>1</sup></a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>447</span>
+      <span>2.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -688,10 +728,11 @@ role="doc-noteref"><sup>1</sup></a></p>
     
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<p>参考教材第三章</p>
 <h1 id="lie-group-theory">Lie Group Theory</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+              <a class="btn" href="/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1295,16 +1336,16 @@ id="关于广相期末考你应该记得的公式">关于广相期末考你应�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">50k</span>
+    <span title="站点总字数">58k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:30</span>
+    <span title="站点阅读时长">1:46</span>
   </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
