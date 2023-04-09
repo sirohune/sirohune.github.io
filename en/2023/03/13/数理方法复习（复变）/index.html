@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.github.io","root":"/tree/main/en/","images":"/tree/main/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/tree/main/en/js/config.js"></script>
 
-    <meta name="description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
+    <meta name="description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数理方法复习（复变）">
 <meta property="og:url" content="https://sirohune.github.io/tree/main/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/index.html">
 <meta property="og:site_name" content="Haku&#39;s blog">
-<meta property="og:description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
+<meta property="og:description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-13T09:43:57.000Z">
 <meta property="article:modified_time" content="2023-03-24T15:53:45.016Z">
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0"><span class="nav-number">1.0.1.</span> <span class="nav-text">复变函数的导数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%AE%9A%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">柯西定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80"><span class="nav-number">3.</span> <span class="nav-text">级数展开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80tylor-expansion"><span class="nav-number">3.1.</span> <span class="nav-text">泰勒展开(Tylor Expansion)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%9B%E6%9C%97%E5%B1%95%E5%BC%80laurent-expansion"><span class="nav-number">3.2.</span> <span class="nav-text">洛朗展开(Laurent Expansion)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">留数定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.1.</span> <span class="nav-text">一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-number">4.2.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0"><span class="nav-number">1.0.1.</span> <span class="nav-text">复变函数的导数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%AE%9A%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">柯西定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80"><span class="nav-number">3.</span> <span class="nav-text">级数展开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80-Tylor-Expansion"><span class="nav-number">3.1.</span> <span class="nav-text">泰勒展开(Tylor Expansion)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%9B%E6%9C%97%E5%B1%95%E5%BC%80-Laurent-Expansion"><span class="nav-number">3.2.</span> <span class="nav-text">洛朗展开(Laurent Expansion)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">留数定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.1.</span> <span class="nav-text">一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-number">4.2.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -262,14 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>8.2k</span>
+      <span>7.7k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>15 mins.</span>
+      <span>14 mins.</span>
     </span>
 </div>
 
@@ -282,362 +282,217 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考书籍：
 《数学物理方法》——梁昆淼
-《数学物理方法简明导论》_v3.1——黄志琦</code></pre>
-<h2 id="复变函数">复变函数</h2>
-<span id="more"></span>
-<p>复数是可以理解为一个两个实数的有序组合，定义域是一个矢量空间，维度可以说是两个实维度<span
-class="math inline">\(\mathbb{R}\times \mathbb{R}\)</span>
-也可以说是一个复维度<span class="math inline">\(\mathbb{C}\)</span>.
-而复变函数是两个实变函数的有序组合。复变函数输入一个矢量，返回一个矢量。（像是算符？）</p>
-<h4 id="复变函数的导数">复变函数的导数</h4>
-<p>复变函数的导数与多元函数类似，要求宗量从任意方向趋近于<span
-class="math inline">\(z_0\)</span>得到一样的结果，这样我们才说复变函数<span
-class="math inline">\(f(z)\)</span>在这一点导数存在。除此之外复变函数的导数规则与实变函数基本相同。</p>
-<p>正是由于前面提到的要求，我们可以得到所谓的<strong>柯西-黎曼方程</strong>（简称<strong>C-R条件</strong>）：既然任意方向的极限存在，那么取两条特殊的方向——x轴和y轴，将函数分为实部与虚部<span
-class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span></p>
+《数学物理方法简明导论》_v3.1——黄志琦
+</code></pre><h2 id="复变函数"><a href="#复变函数" class="headerlink" title="复变函数"></a>复变函数</h2><span id="more"></span>
+<p>复数是可以理解为一个两个实数的有序组合，定义域是一个矢量空间，维度可以说是两个实维度$\mathbb{R}\times \mathbb{R}$ 也可以说是一个复维度$\mathbb{C}$. 而复变函数是两个实变函数的有序组合。复变函数输入一个矢量，返回一个矢量。（像是算符？）</p>
+<h4 id="复变函数的导数"><a href="#复变函数的导数" class="headerlink" title="复变函数的导数"></a>复变函数的导数</h4><p>复变函数的导数与多元函数类似，要求宗量从任意方向趋近于$z_0$得到一样的结果，这样我们才说复变函数$f(z)$在这一点导数存在。除此之外复变函数的导数规则与实变函数基本相同。</p>
+<p>正是由于前面提到的要求，我们可以得到所谓的<strong>柯西-黎曼方程</strong>（简称<strong>C-R条件</strong>）：既然任意方向的极限存在，那么取两条特殊的方向——x轴和y轴，将函数分为实部与虚部$f(z)=u(x,y)+iv(x,y)$</p>
 <ul>
 <li>当宗量沿着x轴趋近于0的时候</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \require{physics}
 \begin{align}
-f&#39;(0)&amp;=\lim_{\Delta x\to0}\frac{u(x+\Delta x,y)+iv(x+\Delta
-x,y)-u(x,y)-iv(x,y)}{\Delta x}\\
-&amp;=\pdv{u}{x}+i\pdv{v}{x}
-\end{align}
-\]</span></p>
-<ul>
+ f'(0)&=\lim_{\Delta x\to0}\frac{u(x+\Delta x,y)+iv(x+\Delta x,y)-u(x,y)-iv(x,y)}{\Delta x}\\
+ &=\pdv{u}{x}+i\pdv{v}{x}
+\end{align}</script><ul>
 <li>当宗量沿着y轴趋近于0的时候</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{align}
-f&#39;(0)&amp;=\lim_{\Delta x\to0}\frac{u(x,y+\Delta y)+iv(x,y+\Delta
-y)-u(x,y)-iv(x,y)}{i\Delta y}\\
-&amp;=\pdv{v}{y}-i\pdv{u}{y}
-\end{align}
-\]</span> 导数存在要求两者相等，因此实部与实部相等，虚部与虚部相等，得到
-<span class="math display">\[
+ f'(0)&=\lim_{\Delta x\to0}\frac{u(x,y+\Delta y)+iv(x,y+\Delta y)-u(x,y)-iv(x,y)}{i\Delta y}\\
+ &=\pdv{v}{y}-i\pdv{u}{y}
+\end{align}</script><p>导数存在要求两者相等，因此实部与实部相等，虚部与虚部相等，得到</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
-\pdv{u}{x}=\pdv{v}{y}\\
-\pdv{v}{x}=-\pdv{u}{y}
-\end{cases}
-\end{equation}
-\]</span></p>
-<p>很显然这是导数存在的<strong>必要条件</strong>。</p>
-<p>复变函数可导的<strong>充要条件</strong>是<span
-class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span>的实部与虚部的偏导数<span
-class="math inline">\(\pdv{u}{x},\pdv{u}{y},\)</span><span
-class="math inline">\(\pdv{v}{x},\pdv{v}{y}\)</span>存在，且满足C-R条件。</p>
-<h4 id="解析函数">解析函数</h4>
-<p>解析函数是要求复变函数在某点及其领域都可导。由此可以得到一些较好的性质。函数在一个区域内可导意味着函数的实部与虚部在一个范围内满足C-R条件，由此实部与虚部之间存在联系，他们并不是独立存在的。根据C-R条件
-<span class="math display">\[
+ \begin{cases}
+ \pdv{u}{x}=\pdv{v}{y}\\
+ \pdv{v}{x}=-\pdv{u}{y}
+ \end{cases}
+\end{equation}</script><p>很显然这是导数存在的<strong>必要条件</strong>。</p>
+<p>复变函数可导的<strong>充要条件</strong>是$f(z)=u(x,y)+iv(x,y)$的实部与虚部的偏导数$\pdv{u}{x},\pdv{u}{y},$$\pdv{v}{x},\pdv{v}{y}$存在，且满足C-R条件。</p>
+<h4 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h4><p>解析函数是要求复变函数在某点及其领域都可导。由此可以得到一些较好的性质。函数在一个区域内可导意味着函数的实部与虚部在一个范围内满足C-R条件，由此实部与虚部之间存在联系，他们并不是独立存在的。根据C-R条件</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\pdv{u}{x}\pdv{v}{x}=&amp;-\pdv{u}{y}\pdv{v}{y}\\
-\Rightarrow \pdv{u}{x}\pdv{v}{x}+&amp;\pdv{u}{y}\pdv{v}{y}=0\\
-\end{align}
-\]</span> 即<span class="math inline">\((\nabla u)\cdot (\nabla
-v)^T=0\)</span>，若从微分几何的角度来看，在一个流形上选定坐标系后，存在有两个函数<span
-class="math inline">\(u,v\)</span>，这两个函数沿着坐标的切矢在每点都相互正交，因此在某一点给出其中一个函数后，一定可以确定另一个函数到只相差一个常数的地步。</p>
-<p>在技术上有一个技巧可以判断复变函数是否可导，将z与<span
-class="math inline">\(z^*\)</span>看成完全独立的变量（即便他们实际上模长相等幅角相反），将复变函数写成<span
-class="math inline">\(z\)</span>与<span
-class="math inline">\(z^*\)</span>的函数，如果其对<span
-class="math inline">\(z^*\)</span>的偏导数为0，则函数可导，若不为0则不可导。</p>
-<h2 id="复变函数的积分">复变函数的积分</h2>
-<p>与实变函数一样可以通过求得原函数<span
-class="math inline">\(f(z)dz=dF(z)\)</span>的方式来计算积分，对于原函数是单值函数的积分与实变函数无异，但是对于原函数是多值函数的积分，则积分结果与路径相关（很可能跑出来个<span
-class="math inline">\(2n\pi
-i\)</span>），而且听起来还需要判断原函数是否是多值函数，这又给我们的大脑带来了工作量。好在我们可以将函数级数展开，只有<span
-class="math inline">\(\frac{1}{z-z_0}\)</span>的原函数<span
-class="math inline">\(\ln(z-z_0)\)</span>是一个多值函数，逆时针绕支点一周得到<span
-class="math inline">\(2\pi i\)</span>，而其他的幂级数<span
-class="math inline">\((z-z_0)^n\)</span>（<span
-class="math inline">\(n\neq-1\)</span>）的原函数<span
-class="math inline">\(\frac{(z-z_0)^{n+1}}{n+1}\)</span>则都是单值函数，因此理论上对于任意复变函数的环路积分<span
-class="math inline">\(\oint\)</span>，我们都可以将其展开为幂级数，然后只留下-1次幂的环路积分，其余项的环路积分为0.这其实就是后面的留数定理。</p>
-<h3 id="柯西定理">柯西定理</h3>
-<p>在介绍留数定理前我们还需要介绍一个定理——<strong>柯西定理</strong>。这是后面柯西积分公式的来源，也是留数定理的来源，而这个柯西定理的是来自于C-R条件以及斯托克斯定理。话不多说，我们看看什么是柯西定理。</p>
-<p>柯西定理其实就是说：解析区域的环路积分结果为0.
-但是一般教材将该定理分为单联通区域以及复联通区域来讨论，但其实二者我认为差别不大，这里先讨论单连通区域的柯西定理。对于一个闭合曲线的积分
-<span class="math display">\[
+ \pdv{u}{x}\pdv{v}{x}=&-\pdv{u}{y}\pdv{v}{y}\\
+ \Rightarrow \pdv{u}{x}\pdv{v}{x}+&\pdv{u}{y}\pdv{v}{y}=0\\
+\end{align}</script><p>即$(\nabla u)\cdot (\nabla v)^T=0$，若从微分几何的角度来看，在一个流形上选定坐标系后，存在有两个函数$u,v$，这两个函数沿着坐标的切矢在每点都相互正交，因此在某一点给出其中一个函数后，一定可以确定另一个函数到只相差一个常数的地步。</p>
+<p>在技术上有一个技巧可以判断复变函数是否可导，将z与$z^<em>$看成完全独立的变量（即便他们实际上模长相等幅角相反），将复变函数写成$z$与$z^</em>$的函数，如果其对$z^*$的偏导数为0，则函数可导，若不为0则不可导。</p>
+<h2 id="复变函数的积分"><a href="#复变函数的积分" class="headerlink" title="复变函数的积分"></a>复变函数的积分</h2><p>与实变函数一样可以通过求得原函数$f(z)dz=dF(z)$的方式来计算积分，对于原函数是单值函数的积分与实变函数无异，但是对于原函数是多值函数的积分，则积分结果与路径相关（很可能跑出来个$2n\pi i$），而且听起来还需要判断原函数是否是多值函数，这又给我们的大脑带来了工作量。好在我们可以将函数级数展开，只有$\frac{1}{z-z_0}$的原函数$\ln(z-z_0)$是一个多值函数，逆时针绕支点一周得到$2\pi i$，而其他的幂级数$(z-z_0)^n$（$n\neq-1$）的原函数$\frac{(z-z_0)^{n+1}}{n+1}$则都是单值函数，因此理论上对于任意复变函数的环路积分$\oint$，我们都可以将其展开为幂级数，然后只留下-1次幂的环路积分，其余项的环路积分为0.这其实就是后面的留数定理。</p>
+<h3 id="柯西定理"><a href="#柯西定理" class="headerlink" title="柯西定理"></a>柯西定理</h3><p>在介绍留数定理前我们还需要介绍一个定理——<strong>柯西定理</strong>。这是后面柯西积分公式的来源，也是留数定理的来源，而这个柯西定理的是来自于C-R条件以及斯托克斯定理。话不多说，我们看看什么是柯西定理。</p>
+<p>柯西定理其实就是说：解析区域的环路积分结果为0.<br>但是一般教材将该定理分为单联通区域以及复联通区域来讨论，但其实二者我认为差别不大，这里先讨论单连通区域的柯西定理。对于一个闭合曲线的积分</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint\limits_lf(z)dz=&amp;\oint\limits_l\pqty{u+iv}\pqty{dx+idy}\\
-=&amp;\oint\limits_ludx-vdy+i\oint\limits_lvdx+udy\\
-=&amp;-\iint\limits_S\pqty{\pdv{v}{x}+\pdv{u}{y}}dxdy+i\iint\limits_S\pqty{\pdv{u}{x}-\pdv{v}{y}}dxdy
-\end{align}
-\]</span> 当被积函数在区域S中解析的时候，满足C-R条件如下 <span
-class="math display">\[
+ \oint\limits_lf(z)dz=&\oint\limits_l\pqty{u+iv}\pqty{dx+idy}\\
+ =&\oint\limits_ludx-vdy+i\oint\limits_lvdx+udy\\
+ =&-\iint\limits_S\pqty{\pdv{v}{x}+\pdv{u}{y}}dxdy+i\iint\limits_S\pqty{\pdv{u}{x}-\pdv{v}{y}}dxdy
+\end{align}</script><p>当被积函数在区域S中解析的时候，满足C-R条件如下</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
-\pdv{u}{x}=\pdv{v}{y}\\
-\pdv{v}{x}=-\pdv{u}{y}
-\end{cases}
-\end{equation}
-\]</span> 因此该环路积分结果为0</p>
+ \begin{cases}
+ \pdv{u}{x}=\pdv{v}{y}\\
+ \pdv{v}{x}=-\pdv{u}{y}
+ \end{cases}
+\end{equation}</script><p>因此该环路积分结果为0</p>
 <p>而对于复连通区域（就是说你选的区域中可能有一个或者多个洞），我们可以将其划分为多个单连通区域，比如说一个甜甜圈形状的区域，一刀将其劈成两半，这样就得到了两个单连通区域，两个环路积分，劈开的地方积分方向相反，因此劈开处积分结果相互抵消。两个单连通区域可以分别用单连通的方式证明积分结果为0.</p>
-<h3 id="柯西积分公式">柯西积分公式</h3>
-<p>由上面的结果我们可以得到柯西积分公式。其思想是，选定一个包含奇点的区域C，被积函数<span
-class="math inline">\(f(z)\)</span>在这一点不解析，因此我们把这一点从区域中挖去，得到区域C'，因此在区域C'中是柯西定理，得到积分为0，而区域C'的环路积分包括原本的环路以及为了将奇点挖去的环路<span
-class="math inline">\(\gamma\)</span>，两者相加为0，便可以得到。
-比如说函数<span class="math inline">\(g(z)\)</span>在<span
-class="math inline">\(z_0\)</span>处有一阶奇点，因此可以写为<span
-class="math inline">\(f(z)/(z-z_0)\)</span>，这里的<span
-class="math inline">\(f(z)\)</span>便是解析的，环路<span
-class="math inline">\(\gamma\)</span>是围绕奇点的一个小环路，无限趋近于<span
-class="math inline">\(z_0\)</span>，因此我们将解析的<span
-class="math inline">\(f(z)\)</span>在奇点处展开 <span
-class="math display">\[
+<h3 id="柯西积分公式"><a href="#柯西积分公式" class="headerlink" title="柯西积分公式"></a>柯西积分公式</h3><p>由上面的结果我们可以得到柯西积分公式。其思想是，选定一个包含奇点的区域C，被积函数$f(z)$在这一点不解析，因此我们把这一点从区域中挖去，得到区域C’，因此在区域C’中是柯西定理，得到积分为0，而区域C’的环路积分包括原本的环路以及为了将奇点挖去的环路$\gamma$，两者相加为0，便可以得到。<br>比如说函数$g(z)$在$z_0$处有一阶奇点，因此可以写为$f(z)/(z-z_0)$，这里的$f(z)$便是解析的，环路$\gamma$是围绕奇点的一个小环路，无限趋近于$z_0$，因此我们将解析的$f(z)$在奇点处展开</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint_\gamma g(z)dz=&amp;\oint_\gamma\frac{f(z)}{z-z_0}dz\\
-=&amp;\oint_\gamma \frac{f(z_0)+f&#39;(z)(z-z_0)}{z-z_0}dz\\
-=&amp;f(z_0)\oint_\gamma \frac{1}{z-z_0}dz+0\\
-=&amp;2\pi if(z_0)
-\end{align}
-\]</span> 因此有 <span class="math display">\[
+\oint_\gamma g(z)dz=&\oint_\gamma\frac{f(z)}{z-z_0}dz\\
+=&\oint_\gamma \frac{f(z_0)+f'(z)(z-z_0)}{z-z_0}dz\\
+=&f(z_0)\oint_\gamma \frac{1}{z-z_0}dz+0\\
+=&2\pi if(z_0)
+\end{align}</script><p>因此有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 f(z_0)=\frac{1}{2\pi i}\oint_\gamma\frac{f(z)}{z-z_0}dz
-\end{equation}
-\]</span> 或者也可以写为 <span class="math display">\[
+\end{equation}</script><p>或者也可以写为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 f(z)=\frac{1}{2\pi i}\oint_\gamma\frac{f(\zeta)}{\zeta-z}d\zeta
-\end{equation}
-\]</span></p>
-<p>对于n阶奇点，则将分子的解析函数在奇点<span
-class="math inline">\(z_0\)</span>展开到n阶，可以得到类似的结论 <span
-class="math display">\[
+\end{equation}</script><p>对于n阶奇点，则将分子的解析函数在奇点$z_0$展开到n阶，可以得到类似的结论</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-f^{(n)}(z)=\frac{n!}{2\pi
-i}\oint_\gamma\frac{f(\zeta)}{(\zeta-z)^{n+1}}d\zeta
-\end{equation}
-\]</span></p>
-<p>柯西积分公式告诉我们，对于一个函数<span
-class="math inline">\(g(\zeta)=f(\zeta)/(\zeta-z)^{n+1}\)</span>在区域中有n+1阶奇点<span
-class="math inline">\(\zeta=z\)</span>，其围道积分等于<span
-class="math inline">\(\frac{2\pi
-i}{n!}\dv[n]{\zeta}\pqty{(\zeta-z)^{n+1}g(\zeta)}\)</span></p>
+f^{(n)}(z)=\frac{n!}{2\pi i}\oint_\gamma\frac{f(\zeta)}{(\zeta-z)^{n+1}}d\zeta
+\end{equation}</script><p>柯西积分公式告诉我们，对于一个函数$g(\zeta)=f(\zeta)/(\zeta-z)^{n+1}$在区域中有n+1阶奇点$\zeta=z$，其围道积分等于$\frac{2\pi i}{n!}\dv[n]{\zeta}\pqty{(\zeta-z)^{n+1}g(\zeta)}$ </p>
 <p>此外，柯西积分公式还说明：解析函数在区域边界上的函数值可以完全地确定其在区域内的函数值以及任意次导数的值！</p>
-<h3 id="例题">例题</h3>
-<ol type="1">
-<li><span class="math inline">\(I=\int_0^{2\pi}\sin^{2n}\theta
-d\theta\)</span></li>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><ol>
+<li>$I=\int_0^{2\pi}\sin^{2n}\theta d\theta$ </li>
 </ol>
-<p>积分路径其实就是绕单位圆一圈，利用复积分求解，取<span
-class="math inline">\(z=e^{i\theta}\)</span> <span
-class="math display">\[
+<p>积分路径其实就是绕单位圆一圈，利用复积分求解，取$z=e^{i\theta}$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-dz=&amp;izd\theta\\
-I=&amp;\oint \pqty{\frac{z-z^{-1}}{2i}}^{2n}\frac{dz}{iz}\\
-=&amp;\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
-=&amp;\frac{(-)^n}{2^{2n}i}\frac{2\pi
-i}{(2n)!}\dv[2n]{z}(1-z)^{2n}|_{z=0}\\
-=&amp;2\pi (-)^nP_{2n}(0)
-\end{align}
-\]</span> 查表得到Legendre函数在0点的值即可。
-或者也可利用前面说过的，只有z的负一次幂对积分有贡献 <span
-class="math display">\[
+ dz=&izd\theta\\
+ I=&\oint \pqty{\frac{z-z^{-1}}{2i}}^{2n}\frac{dz}{iz}\\
+ =&\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
+ =&\frac{(-)^n}{2^{2n}i}\frac{2\pi i}{(2n)!}\dv[2n]{z}(1-z)^{2n}|_{z=0}\\
+ =&2\pi (-)^nP_{2n}(0)
+\end{align}</script><p>查表得到Legendre函数在0点的值即可。<br>或者也可利用前面说过的，只有z的负一次幂对积分有贡献</p>
+<script type="math/tex; mode=display">
 \begin{align}
-I=&amp;\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
-=&amp;\frac{(-)^n}{2^{2n}i}\oint \sum_l^{2n}C_{2n}^l
-(-)^{2n-l}z^{2l}\frac{1}{z^{2n+1}}dz
-\end{align}
-\]</span> 因为只有z的负一次幂对积分有贡献，所以只有<span
-class="math inline">\(l=n\)</span>有贡献： <span class="math display">\[
+ I=&\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
+ =&\frac{(-)^n}{2^{2n}i}\oint \sum_l^{2n}C_{2n}^l (-)^{2n-l}z^{2l}\frac{1}{z^{2n+1}}dz
+\end{align}</script><p>因为只有z的负一次幂对积分有贡献，所以只有$l=n$有贡献：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-I=&amp;\frac{1}{2^{2n}i}C^n_{2n}\oint \frac{dz}{z}\\
-=&amp;\frac{1}{2^{2n}i}C^n_{2n}2\pi i\\
-=&amp;\frac{\pi(2n)!}{2^{2n-1}n!n!}
-\end{align}
-\]</span></p>
-<ol start="2" type="1">
-<li><span class="math inline">\(\oint_C
-\frac{e^z}{z^2+1}dz\)</span>，其中围道C为<span
-class="math inline">\(\abs{z}=3/2\)</span></li>
+ I=&\frac{1}{2^{2n}i}C^n_{2n}\oint \frac{dz}{z}\\
+ =&\frac{1}{2^{2n}i}C^n_{2n}2\pi i\\
+ =&\frac{\pi(2n)!}{2^{2n-1}n!n!}
+\end{align}</script><ol>
+<li>$\oint_C \frac{e^z}{z^2+1}dz$，其中围道C为$\abs{z}=3/2$</li>
 </ol>
-<p>被积函数的奇点在<span class="math inline">\(\pm
-i\)</span>的位置，围道中含有<span
-class="math inline">\(-i\)</span>奇点，围道该奇点做一个顺时针的小围道<span
-class="math inline">\(\gamma^-\)</span> <span class="math display">\[
+<p>被积函数的奇点在$\pm i$的位置，围道中含有$-i$奇点，围道该奇点做一个顺时针的小围道$\gamma^-$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint_c+\oint_{\gamma^-}f(z)dz=&amp;0\\
-\Rightarrow \oint_C f(z)dz=&amp;\oint_\gamma f(z)dz\\
-\end{align}
-\]</span> 因此积分围道转化为逆时针的<span
-class="math inline">\(\gamma\)</span> <span class="math display">\[
+ \oint_c+\oint_{\gamma^-}f(z)dz=&0\\
+ \Rightarrow \oint_C f(z)dz=&\oint_\gamma f(z)dz\\
+\end{align}</script><p>因此积分围道转化为逆时针的$\gamma$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-I=&amp;\oint_\gamma \frac{e^z}{z^2+1}dz\\
-=&amp;\oint_\gamma \frac{e^z}{(z-i)(z+i)}dz\\
-=&amp;2\pi i\eval{\frac{e^z}{z-i}}_{z=-i}\\
-=&amp;-\pi e^{-i}
-\end{align}
-\]</span></p>
-<ol start="3" type="1">
-<li><span class="math inline">\(\oint_C \frac{\cos
-z}{(z-a)^2}\abs{dz}\)</span> ，其中围道C为<span
-class="math inline">\(\abs{z}=b\neq a\)</span></li>
+ I=&\oint_\gamma \frac{e^z}{z^2+1}dz\\
+ =&\oint_\gamma \frac{e^z}{(z-i)(z+i)}dz\\
+ =&2\pi i\eval{\frac{e^z}{z-i}}_{z=-i}\\
+ =&-\pi e^{-i}
+\end{align}</script><ol>
+<li>$\oint_C \frac{\cos z}{(z-a)^2}\abs{dz}$ ，其中围道C为$\abs{z}=b\neq a$</li>
 </ol>
-<p>注意积分微元不是<span class="math inline">\(dz\)</span>而是<span
-class="math inline">\(\abs{dz}\)</span>，因此需要做一些变换，注意到积分围道，我们设<span
-class="math inline">\(z=be^{i\theta}\)</span> <span
-class="math display">\[
+<p>注意积分微元不是$dz$而是$\abs{dz}$，因此需要做一些变换，注意到积分围道，我们设$z=be^{i\theta}$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-dz=&amp;izd\theta\\
-\Rightarrow \abs{dz}=&amp;bd\theta\\
-=&amp;b\frac{dz}{iz}
-\end{align}
-\]</span> 因此积分变为 <span class="math display">\[
+ dz=&izd\theta\\
+ \Rightarrow \abs{dz}=&bd\theta\\
+ =&b\frac{dz}{iz}
+\end{align}</script><p>因此积分变为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-I=\oint_C \frac{b\cos z}{iz(z-a)^2}dz
-\end{align}
-\]</span>
-对于围道需要分类讨论，当围道包含a点时有两个奇点，当不包含a点时只有一个奇点</p>
+ I=\oint_C \frac{b\cos z}{iz(z-a)^2}dz
+\end{align}</script><p>对于围道需要分类讨论，当围道包含a点时有两个奇点，当不包含a点时只有一个奇点</p>
 <ul>
-<li>当<span class="math inline">\(b&lt;a\)</span>时(<span
-class="math inline">\(C_1\)</span>是包含0的小围道)</li>
+<li>当$b&lt;a$时($C_1$是包含0的小围道)</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{align}
-I=&amp;\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz\\
-=&amp;2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}\\
-=&amp;\frac{2\pi b}{a^2}
-\end{align}
-\]</span></p>
-<ul>
-<li>当<span class="math inline">\(b&gt;a\)</span>时(<span
-class="math inline">\(C_1,C_2\)</span>)分别是包含0和a的小围道</li>
+ I=&\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz\\
+ =&2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}\\
+ =&\frac{2\pi b}{a^2}
+\end{align}</script><ul>
+<li>当$b&gt;a$时($C_1,C_2$)分别是包含0和a的小围道</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{align}
-I=&amp;\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz+\oint_{C_2} \frac{b\cos
-z}{iz(z-a)^2}dz\\
-=&amp;2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}+\frac{2\pi i}{1}
-\eval{(\frac{b\cos z}{iz})&#39;}_{z=a}\\
-=&amp;\frac{2\pi b}{a^2}-\frac{2\pi ba\cos a}{a^2}-\frac{2\pi b\cos
-a}{a^2}
-\end{align}
-\]</span></p>
-<h2 id="级数展开">级数展开</h2>
-<p>级数展开和留数定理一并看了，但留数定理有所感悟，所以先写留数定理的note，回头来补</p>
-<h3 id="泰勒展开tylor-expansion">泰勒展开(Tylor Expansion)</h3>
-<p>在解析的点附近展开，跟普通泰勒展开没区别</p>
-<h3 id="洛朗展开laurent-expansion">洛朗展开(Laurent Expansion)</h3>
-<p>在不解析的点附近展开，思想是：利用柯西积分公式把非解析的点用周围的解析围道积分表示。因此理论上一个复变函数在奇点上可以写成
-<span class="math display">\[
+ I=&\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz+\oint_{C_2} \frac{b\cos z}{iz(z-a)^2}dz\\
+ =&2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}+\frac{2\pi i}{1} \eval{(\frac{b\cos z}{iz})'}_{z=a}\\
+ =&\frac{2\pi b}{a^2}-\frac{2\pi ba\cos a}{a^2}-\frac{2\pi b\cos a}{a^2}
+\end{align}</script><h2 id="级数展开"><a href="#级数展开" class="headerlink" title="级数展开"></a>级数展开</h2><p>级数展开和留数定理一并看了，但留数定理有所感悟，所以先写留数定理的note，回头来补</p>
+<h3 id="泰勒展开-Tylor-Expansion"><a href="#泰勒展开-Tylor-Expansion" class="headerlink" title="泰勒展开(Tylor Expansion)"></a>泰勒展开(Tylor Expansion)</h3><p>在解析的点附近展开，跟普通泰勒展开没区别</p>
+<h3 id="洛朗展开-Laurent-Expansion"><a href="#洛朗展开-Laurent-Expansion" class="headerlink" title="洛朗展开(Laurent Expansion)"></a>洛朗展开(Laurent Expansion)</h3><p>在不解析的点附近展开，思想是：利用柯西积分公式把非解析的点用周围的解析围道积分表示。因此理论上一个复变函数在奇点上可以写成</p>
+<script type="math/tex; mode=display">
 \begin{align}
-f(z)=&amp;\sum_{n=-\infty}^\infty a_n(z-z_0)^n
-\end{align}
-\]</span>
-而通常情况下，复变函数在奇点上通常是有限阶奇点，假设是m阶奇点(<span
-class="math inline">\(m\geq1\)</span>)，则洛朗展开为 <span
-class="math display">\[
+ f(z)=&\sum_{n=-\infty}^\infty a_n(z-z_0)^n
+\end{align}</script><p>而通常情况下，复变函数在奇点上通常是有限阶奇点，假设是m阶奇点($m\geq1$)，则洛朗展开为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-f(z)=&amp;\sum_{n=-m}^\infty a_n(z-z_0)^n
-\end{align}
-\]</span> 这正是留数定理的来源</p>
-<h2 id="留数定理">留数定理</h2>
-<h3 id="一般步骤">一般步骤</h3>
-<p>我们先阐述一下留数定理的一般步骤：</p>
-<ol type="1">
-<li><p>对于一个围道积分<span class="math inline">\(I=\oint_C
-f(z)dz\)</span>，先找出围道中的所有奇点，假设包含有i个奇点(<span
-class="math inline">\(i\geq0\)</span>)</p></li>
-<li><p>利用<strong>柯西定理</strong>——解析区域的围道积分为0。因此我们把i个奇点都用小围道围起来，正向逆时针记作<span
-class="math inline">\(C_k\)</span>(k代表第k个奇点的围道)，逆向则是<span
-class="math inline">\(C_k^-\)</span>，注意每个小围道只有<strong>一个奇点</strong>。此时根据柯西定理有
-<span class="math display">\[
+ f(z)=&\sum_{n=-m}^\infty a_n(z-z_0)^n
+\end{align}</script><p>这正是留数定理的来源</p>
+<h2 id="留数定理"><a href="#留数定理" class="headerlink" title="留数定理"></a>留数定理</h2><h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><p>我们先阐述一下留数定理的一般步骤：</p>
+<ol>
+<li>对于一个围道积分$I=\oint_C f(z)dz$，先找出围道中的所有奇点，假设包含有i个奇点($i\geq0$)</li>
+<li><p>利用<strong>柯西定理</strong>——解析区域的围道积分为0。因此我们把i个奇点都用小围道围起来，正向逆时针记作$C_k$(k代表第k个奇点的围道)，逆向则是$C_k^-$，注意每个小围道只有<strong>一个奇点</strong>。此时根据柯西定理有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-&amp;I+\sum_k^i \oint_{C_k^-}f(z)dz=0\\
-\Rightarrow &amp;I=\sum_k^i \oint_{C_k}f(z)dz
-\end{align}
-\]</span> 此时我们已经将积分<span
-class="math inline">\(I\)</span>转化为i个包含单个奇点的小围道积分。</p></li>
-<li><p>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，<span
-class="math inline">\(m_k\)</span>是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有<span
-class="math inline">\(m_k\)</span>阶奇点，<strong>柯西积分公式告诉我们</strong>，这个围道积分的结果等于
-<span class="math display">\[
+&I+\sum_k^i \oint_{C_k^-}f(z)dz=0\\
+\Rightarrow &I=\sum_k^i \oint_{C_k}f(z)dz
+\end{align}</script><p>此时我们已经将积分$I$转化为i个包含单个奇点的小围道积分。</p>
+</li>
+<li><p>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，$m_k$是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有$m_k$阶奇点，<strong>柯西积分公式告诉我们</strong>，这个围道积分的结果等于</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint_{C_k}f(z)dz=\frac{2\pi
-i}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
-\end{align}
-\]</span></p></li>
-<li><p>然后我们声称上面的结果中与k有关的部分是函数<span
-class="math inline">\(f(z)\)</span>在奇点<span
-class="math inline">\(z=z_k\)</span>处的<strong>留数</strong>（意思是我把<span
-class="math inline">\(2\pi i\)</span>提出来了），记作Res<span
-class="math inline">\(f(z_k)\)</span>，因此有 <span
-class="math display">\[
+\oint_{C_k}f(z)dz=\frac{2\pi i}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
+\end{align}</script></li>
+<li>然后我们声称上面的结果中与k有关的部分是函数$f(z)$在奇点$z=z_k$处的<strong>留数</strong>（意思是我把$2\pi i$提出来了），记作Res$f(z_k)$，因此有<script type="math/tex; mode=display">
 \begin{align}
-\oint_C f(z)dz=&amp;2\pi i\sum_k^iResf(z_k)
-\end{align}
-\]</span> 我们把上式称为<strong>留数定理</strong></p></li>
+\oint_C f(z)dz=&2\pi i\sum_k^iResf(z_k)
+\end{align}</script>我们把上式称为<strong>留数定理</strong></li>
 </ol>
 <p>这样便可以很好地体现留数定理和柯西积分公式的关系了。不过这并不是留数定理本身定义啦，下面我们看看留数定理原本的定义：</p>
-<ol type="1">
-<li><p>与前面相同</p></li>
-<li><p>与前面相同</p></li>
-<li><p>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，<span
-class="math inline">\(m_k\)</span>是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有<span
-class="math inline">\(m_k\)</span>阶奇点，洛朗展开告诉我们，在第k个奇点的围道上，被积函数一定可以展开成
-<span class="math display">\[
+<ol>
+<li>与前面相同</li>
+<li>与前面相同</li>
+<li>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，$m_k$是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有$m_k$阶奇点，洛朗展开告诉我们，在第k个奇点的围道上，被积函数一定可以展开成<script type="math/tex; mode=display">
 \begin{align}
 f(z)=\sum_{n=-m_k}^\infty a_n^{(k)}(z-z_k)^n
-\end{align}
-\]</span></p></li>
-<li><p>我们在复变积分的时候提到过，对于幂级数的环路积分，只有负一次幂对积分贡献<span
-class="math inline">\(2\pi
-i\)</span>，其余幂次因为解析，积分结果为0，因此第k个小围道积分为 <span
-class="math display">\[
+\end{align}</script></li>
+<li><p>我们在复变积分的时候提到过，对于幂级数的环路积分，只有负一次幂对积分贡献$2\pi i$，其余幂次因为解析，积分结果为0，因此第k个小围道积分为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint_{C_k}f(z)dz=&amp;2\pi i a_{-1}^{(k)}
-\end{align}
-\]</span> 奇点保证了<span
-class="math inline">\(m_k\geq1\)</span>，因此存在<span
-class="math inline">\(a_{-1}\)</span></p></li>
-<li><p>接着我们将<span
-class="math inline">\(a^{(-k)}_{-1}\)</span>称为函数<span
-class="math inline">\(f(z)\)</span>在<span
-class="math inline">\(z=z_k\)</span>处的留数，因此有 <span
-class="math display">\[
+\oint_{C_k}f(z)dz=&2\pi i a_{-1}^{(k)}
+\end{align}</script><p>奇点保证了$m<em>k\geq1$，因此存在$a</em>{-1}$</p>
+</li>
+<li><p>接着我们将$a^{(-k)}_{-1}$称为函数$f(z)$在$z=z_k$处的留数，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\oint_C f(z)dz=&amp;2\pi i\sum_k^iResf(z_k)
-\end{align}
-\]</span></p></li>
+\oint_C f(z)dz=&2\pi i\sum_k^iResf(z_k)
+\end{align}</script></li>
 </ol>
 <p>我们可以明显看到，原本的定义是给出了理论结果，但到目前为止并没有告诉我们留数该如何计算，我们只能从定义出发将函数在各个奇点展开到-1次幂来得到留数。</p>
-<p>或者更进一步，假设奇点是<span
-class="math inline">\(m_k\)</span>阶奇点，所以函数可以写成<span
-class="math inline">\(f(z)=\phi(z)/(z-z_k)^{m_k}\)</span>的形式，其中<span
-class="math inline">\(\phi(z)\)</span>是解析函数，我们便从这个表达式可以得到留数为<span
-class="math inline">\(\phi^{m_k-1}(z_k)/(m_k-1)!\)</span>，写成函数<span
-class="math inline">\(f(z)\)</span>的形式即 <span
-class="math display">\[
+<p>或者更进一步，假设奇点是$m_k$阶奇点，所以函数可以写成$f(z)=\phi(z)/(z-z_k)^{m_k}$的形式，其中$\phi(z)$是解析函数，我们便从这个表达式可以得到留数为$\phi^{m_k-1}(z_k)/(m_k-1)!$，写成函数$f(z)$的形式即</p>
+<script type="math/tex; mode=display">
 \begin{align}
-a^{(k)}_{-1}=&amp;\phi^{m_k-1}(z_k)/(m_k-1)!\\
-=&amp;\frac{1}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
-\end{align}
-\]</span></p>
-<p>然后我们可以从这个留数定理推出柯西积分公式。
-我们可以看出本质上柯西积分公式和留数定理是同一个东西——级数展开已经负一次幂的积分贡献<span
-class="math inline">\(2\pi
-i\)</span>，所以他们才会具有非常相似的形式。</p>
-<h3 id="例题-1">例题</h3>
-<ol type="1">
-<li>求<span
-class="math inline">\(f(z)=\frac{e^z}{\sin^2z}\)</span>在<span
-class="math inline">\(0&lt;\abs{z}&lt;\pi\)</span>展开的<span
-class="math inline">\(a_{-1}\)</span></li>
+ a^{(k)}_{-1}=&\phi^{m_k-1}(z_k)/(m_k-1)!\\
+ =&\frac{1}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
+\end{align}</script><p>然后我们可以从这个留数定理推出柯西积分公式。<br>我们可以看出本质上柯西积分公式和留数定理是同一个东西——级数展开已经负一次幂的积分贡献$2\pi i$，所以他们才会具有非常相似的形式。</p>
+<h3 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h3><ol>
+<li>求$f(z)=\frac{e^z}{\sin^2z}$在$0&lt;\abs{z}&lt;\pi$展开的$a_{-1}$</li>
 </ol>
-<p>题目的意思便是将函数<span
-class="math inline">\(f(z)\)</span>在0处展开到-1次幂，如果是硬算： <span
-class="math display">\[
+<p>题目的意思便是将函数$f(z)$在0处展开到-1次幂，如果是硬算：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-f(z)=&amp;\frac{2e^z}{1-\cos2z}\\
-=&amp;2(1+z+\frac{z^2}{2}+...)\frac{1}{2z^2-\frac{2}{3}z^4+...}\\
-=&amp;\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)\frac{1}{1-\frac{1}{3}z^2+...}\\
-\approx &amp;\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)(1+\frac{z^2}{3})\\
-=&amp;\frac{1}{z^2}+\frac{1}{z}+...
-\end{align}
-\]</span> 因此负一次幂的系数为1,</p>
+ f(z)=&\frac{2e^z}{1-\cos2z}\\
+ =&2(1+z+\frac{z^2}{2}+...)\frac{1}{2z^2-\frac{2}{3}z^4+...}\\
+ =&\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)\frac{1}{1-\frac{1}{3}z^2+...}\\
+ \approx &\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)(1+\frac{z^2}{3})\\
+ =&\frac{1}{z^2}+\frac{1}{z}+...
+\end{align}</script><p>因此负一次幂的系数为1,</p>
 
     </div>
 
@@ -696,13 +551,13 @@ f(z)=&amp;\frac{2e^z}{1-\cos2z}\\
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">65k</span>
+    <span title="Word count total">50k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:57</span>
+    <span title="Reading time total">1:31</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
