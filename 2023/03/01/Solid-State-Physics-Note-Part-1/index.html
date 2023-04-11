@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="金属自由电子气">
+<meta property="og:type" content="article">
+<meta property="og:title" content="固体物理学习笔记（第一章）">
+<meta property="og:url" content="https://sirohune.site/2023/03/01/Solid-State-Physics-Note-Part-1/index.html">
+<meta property="og:site_name" content="はくのblog">
+<meta property="og:description" content="金属自由电子气">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-01T01:43:02.000Z">
+<meta property="article:modified_time" content="2023-03-15T02:33:32.921Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="固体物理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://sirohune.site/2023/03/01/Solid-State-Physics-Note-Part-1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/03/01/Solid-State-Physics-Note-Part-1/","path":"2023/03/01/Solid-State-Physics-Note-Part-1/","title":"固体物理学习笔记（第一章）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>固体物理学习笔记（第一章） | はくのblog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="はくのblog" href="https://sirohune.site/2023/03/01/Solid-State-Physics-Note-Part-1//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">はくのblog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">发电的地方</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-language"><a href="https://sirohune.site/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%91%E5%B1%9E%E8%87%AA%E7%94%B1%E7%94%B5%E5%AD%90%E6%B0%94"><span class="nav-number">1.</span> <span class="nav-text">金属自由电子气</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%B7%E9%B2%81%E7%89%B9-Drude-%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">德鲁特(Drude) 模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%81%87%E8%AE%BE"><span class="nav-number">1.1.1.</span> <span class="nav-text">模型假设</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AD%A6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">电学性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%87%E5%8C%80%E7%9B%B4%E6%B5%81%E5%A4%96%E7%94%B5%E5%9C%BA%E4%B8%8B"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">均匀直流外电场下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A4%E6%B5%81%E5%A4%96%E7%94%B5%E5%9C%BA%E4%B8%8B"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">交流外电场下</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">光学性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%AD%A6%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.4.</span> <span class="nav-text">热学性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A2%E6%9C%AB%E8%8F%B2-Sommerfeld-%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">索末菲(Sommerfeld) 模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E7%94%B1%E7%94%B5%E5%AD%90%E6%B0%94%E7%9A%84%E6%AF%94%E7%83%AD"><span class="nav-number">1.2.1.</span> <span class="nav-text">自由电子气的比热</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%B6%E6%B8%A9T-0K%E6%97%B6"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">零温T&#x3D;0K时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E9%9B%B6%E6%B8%A9T-gt-0K%E6%97%B6"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">非零温T&gt;0K时</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E7%94%B1%E7%94%B5%E5%AD%90%E6%B0%94%E7%9A%84%E7%83%AD%E5%AF%BC%E7%8E%87"><span class="nav-number">1.2.2.</span> <span class="nav-text">自由电子气的热导率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A1%E5%88%A9%E9%A1%BA%E7%A3%81%E6%80%A7"><span class="nav-number">1.2.3.</span> <span class="nav-text">泡利顺磁性</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">物理与人生</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/03/01/Solid-State-Physics-Note-Part-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="はくのblog">
+      <meta itemprop="description" content="物理与人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="固体物理学习笔记（第一章） | はくのblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          固体物理学习笔记（第一章）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-01 09:43:02" itemprop="dateCreated datePublished" datetime="2023-03-01T09:43:02+08:00">2023-03-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-15 10:33:32" itemprop="dateModified" datetime="2023-03-15T10:33:32+08:00">2023-03-15</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/03/01/Solid-State-Physics-Note-Part-1/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/03/01/Solid-State-Physics-Note-Part-1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>19 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="金属自由电子气"><a href="#金属自由电子气" class="headerlink" title="金属自由电子气"></a>金属自由电子气</h1><span id="more"></span>
+<h2 id="德鲁特-Drude-模型"><a href="#德鲁特-Drude-模型" class="headerlink" title="德鲁特(Drude) 模型"></a>德鲁特(Drude) 模型</h2><p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
+<p>废话少说，先来看看Drude模型到底说了什么。</p>
+<h3 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h3><ol>
+<li><p><strong>自由</strong>电子气体的<strong>自由</strong><br>电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p>
+</li>
+<li><p>自由电子<strong>气</strong>的<strong>气</strong><br>毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p>
+</li>
+</ol>
+<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
+<ol>
+<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
+<li>电子碰撞的几率用弛豫时间$\tau$ 来描述，这是电子气模型中很重要的一个参数</li>
+</ol>
+<p>我们假设粒子两次散射时间的平均时间为$\tau$ ，则$dt$ 时间内发生散射的概率即为$\frac{dt}{\tau}$。取某一次散射发生的时刻为$t=0$，可以得到粒子从0-t时间段内不发生散射的概率为$e^{-t/\tau}$ ，证明如下：将t时间段分为N段 $\Delta t=t/N$，当N趋于无穷的时候$\Delta t\to dt$，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:</p>
+<script type="math/tex; mode=display">
+\require{physics}
+\begin{align}
+P(t)=&\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
+   =&\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
+   =&e^{t/\tau}
+\end{align}</script><p>则粒子在t时刻后的$dt$ 时间内发生第二次散射的概率为$e^{-t/\tau}dt/\tau$ ，则第二次散射发生的平均时间为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\expval{t}=&\int_0^\infty te^{-t/\tau}dt/\tau\\
+  =&\tau\Gamma(2)=\tau
+\end{align}</script><p>所以参数$\tau$的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
+<h3 id="电学性质"><a href="#电学性质" class="headerlink" title="电学性质"></a>电学性质</h3><p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究$dt$时间段内电子的动量变化，假设t时刻电子的动量为$p(t)$，则接下来的$dt$ 时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+p(t+dt)&=0+(1-dt/\tau)(p(t)+Fdt)\\
+  =&p(t)+Fdt-pdt/\tau\\
+  \Rightarrow \dv{p(t)}{t}=&-p/\tau+F
+\end{align}</script><p>这样便得到了电子气的运动方程</p>
+<h4 id="均匀直流外电场下"><a href="#均匀直流外电场下" class="headerlink" title="均匀直流外电场下"></a>均匀直流外电场下</h4><p>均匀直流外电场下的运动方程为</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ \dv{p(t)}{t}=-p/\tau-eE
+\end{equation}</script><p>取动量导数为0，可以得到电子的稳态动量为$p=-e\tau E$。电流密度的公式为$J=\rho qv$，因此电流密度为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+\end{align}</script><p>根据公式$J=\sigma_0 E$可以得到直流电导率为$\sigma_0=\rho e^2 \tau/m$ ，是一个由弛豫时间$\tau$ 及电子数密度$\rho$  共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<sup><a href="#fn_1" id="reffn_1">1</a></sup> ,电子的弛豫时间量级在$10^{-15}-10^{-14}$s之间。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. 至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<p>接着从热学的能均分定理$\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT$，可以得到室温300K下电子运动的平均速度约为$1.2\times 10^{5}m/s$.将平均速度与弛豫时间相乘便可得到平均自由程$l=\tau \bar{v}$在 0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
+<h4 id="交流外电场下"><a href="#交流外电场下" class="headerlink" title="交流外电场下"></a>交流外电场下</h4><p>$E(t)=E(\omega)e^{-i\omega t}$，因此电子动量的形式应该也与之相同$p(t)=p(\omega)e^{-i\omega t}$，将其带入运动方程得:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ -i\omega p(\omega)e^{-i\omega t}=&-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega t}\\
+ \Rightarrow p(\omega)=&\frac{-e\tau E(\omega)}{1-i\omega\tau}
+\end{align}</script><p>带入电流密度公式$J=\rho q\frac{p}{m}$得</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
+\end{equation}</script><p>因此可以得到交流复电导率为$\sigma(\omega)=\frac{\rho e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}$ .虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ Re\pqty{J(t)}=&\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega t}}{1-i\omega \tau}}\\
+ =&\sigma_0 E(\omega)\frac{\cos(\omega t+\phi)}{\sqrt{1+\omega^2\tau^2}}
+\end{align}</script><p>可以看出电流密度与外加交电场相比，多了一个相位差$\phi$以及振幅的衰减$\frac{1}{\sqrt{1+\omega^2\tau^2}}$.</p>
+<p>这个模型可以用于电磁波对金属的影响，因为$E=cB$，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
+<h3 id="光学性质"><a href="#光学性质" class="headerlink" title="光学性质"></a>光学性质</h3><p>略</p>
+<h3 id="热学性质"><a href="#热学性质" class="headerlink" title="热学性质"></a>热学性质</h3><p>电子气的热学性质主要是热导率$\kappa$ 以及比热$C_v$. </p>
+<p>热导率的定义是净热流$J_Q=-\kappa \nabla T$ .其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
+<p>热流为$J=\rho vE(T)$ ,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ J_Q=&\expval{\rho v_x \pdv{E}{x}\delta x}\\
+ =&\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
+\end{align}</script><p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以$\delta x=v_x \tau$，带入上式有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ J_Q=&\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
+ =&\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
+ =&\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
+\end{align}</script><p>速度平方的平均值$\expval{v^2}$有能均分定义得到$\expval{v^2}=\frac{3}{m}k_bT$ ，同时还可以得到$\pdv{E}{T}=\frac{3}{2}k_b$ <sup><a href="#fn_2" id="reffn_2">2</a></sup>带入上式得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ J_Q=&\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
+ =&\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
+\end{align}</script><p>根据上式可以读出$\kappa$为$\frac{3\rho\tau k_b^2T}{2m}$(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
+<blockquote id="fn_2">
+<sup>2</sup>. 这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<p>对比直流电导率与热导率$\sigma_0=\frac{\rho e^2\tau}{m};\kappa=\frac{3\rho\tau k_b^2T}{2m}$，可以得到一个常数比值$\frac{\kappa}{\sigma_0 T}=\frac{3k_b^2}{2e^2}$。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
+<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的$C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b$是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
+<h2 id="索末菲-Sommerfeld-模型"><a href="#索末菲-Sommerfeld-模型" class="headerlink" title="索末菲(Sommerfeld) 模型"></a>索末菲(Sommerfeld) 模型</h2><p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
+<h3 id="自由电子气的比热"><a href="#自由电子气的比热" class="headerlink" title="自由电子气的比热"></a>自由电子气的比热</h3><ul>
+<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为$f(E)=\frac{1}{e^{\alpha+\beta E}+1}$.其中$\alpha=-\frac{\mu}{kT}$，$\beta=\frac{1}{kT}$.</p>
+</li>
+<li><p>量子态数量N与动量的关系</p>
+</li>
+</ul>
+<p>对于自由电子的哈密顿量$H=\frac{p^2}{2m}$，得到电子的解为$e^{ikx}$，取周期性边界条件，得到波矢的离散取值$k_x=\frac{2n_x\pi}{L}$，其中L是金属的尺寸。</p>
+<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为$\frac{2\pi}{L}$的立方体，也就是说每个态在动量空间中的体积是$\frac{2\pi}{L}$.因此$dk_xdk_ydk_z$中有$dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3$个态，即</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ dN=&\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\end{align}</script><p>补上电子自旋带来的自由度为$dN=\frac{2V}{\pqty{2\pi}^3}4\pi k^2dk$。</p>
+<ul>
+<li>在固体物理中我们经常用到态密度$g(E)$，也就是单位体积中每能量间隔中有多少电子态数目:<script type="math/tex; mode=display">
+\begin{align}
+dN/V=&\frac{1}{\pi^2}k^2dk\\
+E=&\frac{\hbar^2k^2}{2m}\\
+\Rightarrow dE=&\frac{\hbar^2kdk}{m}\\
+=&\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
+\Rightarrow dN/V=&\frac{2mE}{\hbar^2 \pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
+=&\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&g(E)dE
+\end{align}</script></li>
+</ul>
+<p>因此态密度为$g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}$ 正比于能量的根号<sup><a href="#fn_3" id="reffn_3">3</a></sup>。</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<p>因此数密度$\rho=\int g(E)dE$，能量密度为$U/V=\int g(E)EdE$.</p>
+<h4 id="零温T-0K时"><a href="#零温T-0K时" class="headerlink" title="零温T=0K时"></a>零温T=0K时</h4><p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<sup><a href="#fn_4" id="reffn_4">4</a></sup>。</p>
+<blockquote id="fn_4">
+<sup>4</sup>. 物理中的常见操作<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<p>当T=0K时，费米分布$f(E)$变成一个阶跃函数，当E大于化学势$\mu$时为0，当E小于化学势$\mu$时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作$E_F$，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<sup><a href="#fn_5" id="reffn_5">5</a></sup>，其换算为温度为$T_F=E_F/k_b$称为费米温度，大约在$10^4-10^5$K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
+<blockquote id="fn_5">
+<sup>5</sup>. 这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
+</blockquote>
+<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值$k_F$，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
+<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
+<ul>
+<li><p>数密度</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\rho= N/V=&\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{align}</script></li>
+<li><p>能量密度</p>
+<script type="math/tex; mode=display">
+\begin{align}
+U/V=&\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
+=&\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
+=&\frac{3}{5}E_F\frac{N}{V}
+\end{align}</script></li>
+</ul>
+<p>因此我们可以得到单个电子的平均能量应该为$U/N=\frac{3}{5}E_F$. 这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
+<h4 id="非零温T-gt-0K时"><a href="#非零温T-gt-0K时" class="headerlink" title="非零温T&gt;0K时"></a>非零温T&gt;0K时</h4><p>由于上述的原因，我们认为$f(E)$在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ N/V=&\int_0^\infty f(E)g(E)dE\\
+ U/V=&\int_0^\infty f(E)g(E)EdE\\
+ \Rightarrow I=&\int_0^\infty f(E)h(E)dE
+\end{align}</script><p>因此我们只需要计算出积分式$I$的一般表达式即可得到数密度与能量密度（数密度的$h(E)=g(E)$,能量密度的$h(E)=g(E)E$）。为了计算$I$，我们需要借助零温时的表达式,将T=0K时的$I$记作Q，是费米能量的函数</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ Q(E_F)=\int_0^{E_F} h(E)dE
+\end{equation}</script><p>则有$\pdv{Q}{E}=h(E)$，将其带入$I$的积分得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\int_0^\infty f(E)\pdv{Q}{E}dE\\
+ =&\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E) 
+\end{align}</script><p>对于上式右边的第一项，E等于0的时，$Q(E)$作为变上限积分为0；而E趋于无穷时，费米分布函数$f(E)$为0. 因此只剩下第二项积分表达式，第二项中包含$-\pdv{f}{E}$ ，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对$\delta$ 函数的小偏离。当其导数就是$\delta$ 函数时，积分由费米能量$E_F$贡献，而当其有微小偏离时，积分应该由化学势$\mu$附近的能量E贡献<sup><a href="#fn_6" id="reffn_6">6</a></sup>，因此只需将Q在$\mu$处进行泰勒展开，先展开到二阶项<sup><a href="#fn_7" id="reffn_7">7</a></sup>，同时积分下限更改为$-\infty$：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\int_{-\infty}^\infty dE\pqty{Q(\mu)+Q'(\mu)(E-\mu)+Q''(\mu)(E-\mu)^2/2}\pqty{-\partial_E f}\\
+ =&Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E f}+\int_{-\infty}0^\infty dEQ'(\mu)(E-\mu)\pqty{-\partial_E f}\\
+ &+\int_{-\infty}^\infty dEQ''(\mu)(E-\mu)^2/2
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+ -\pdv{f}{E}=&\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+ x=&\frac{E-\mu}{k_bT}
+\end{align}</script><blockquote id="fn_6">
+<sup>6</sup>. 注意不是费米能量附近，前面定义的费米能量是在零温时候的，即$E_F=\mu(0)$，此时已经是非零温的情况<a href="#reffn_6" title="Jump back to footnote [6] in the text."> &#8617;</a>
+</blockquote>
+<p>将Q泰勒展开后便是考虑了$\delta$ 函数的偏离，此时$-\pdv{f}{E}$的积分便如$\delta$ 函数一般，上式第二项积分关于$E=\mu$奇对称，而$\delta$ 函数关于$E=\mu$对称偶对称，结果应当是0<sup><a href="#fn_8" id="reffn_8">8</a></sup>，因此积分$I$化简为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&Q(\mu)+Q''(\mu)/2\int_{-\infty}^\infty dE(E-\mu)^2\pqty{-\partial_E f}\\
+ =&Q(\mu))+Q''(\mu)/2\int_{-\infty}^\infty dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+ =&Q(\mu))+(k_bT)^2Q''(\mu)/2\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
+\end{align}</script><p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
+\end{equation}</script><p>带入积分$I$为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&Q(\mu)+Q''(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}</script><ul>
+<li>当计算数密度时，$Q(E_F)=\int_0^{E_F} g(E)dE$</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=N/V=&Q(\mu)+g'(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}</script><ul>
+<li>当计算能量密度时，$Q(E_F)=\int_0^{E_F} g(E)EdE$<script type="math/tex; mode=display">
+\begin{align}
+I=U/V=&Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}'
+\end{align}</script></li>
+</ul>
+<p>求出来数密度$\rho$与能量密度$U/V$的表达式中含有有限温度下的化学势$\mu(T)$，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ 0=&\pdv{Q(\mu)}{T}+g''(\mu)\pdv{\mu}{T}\frac{(\pi k_bT)^2}{6}+g'(\mu)\frac{(\pi k_b)^2}{3}T\\
+ =&\pdv{\mu}{T}\pqty{g(\mu)+g''(\mu)\frac{(\pi k_bT)^2}{6}}+g'(\mu)\frac{(\pi k_b)^2}{3}T 
+\end{align}</script><p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\mu(T)=&\mu(0)+\mu(0)'T+\frac{\mu''(0)}{2}T^2+\order{\epsilon^3}
+\end{align}</script><p>因此数密度的式子变为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g''(\mu)\frac{(\pi k_bT)^2}{6}}=&0\\
+ \Rightarrow\eval{\pdv{\mu}{T}}_0=&0
+\end{align}</script><p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的$\mu(T)$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \eval{\pqty{\pdv{\mu}{T}g(\mu)}'}_0+\eval{\pqty{g''(\mu)\frac{(\pi k_bT)^2}{6}}'}_0+\eval{\pqty{g'(\mu)\frac{(\pi k_b)^2}{3}T }'}_0=&0\\
+ \Rightarrow 0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g'(\mu)}_0\frac{(\pi k_b)^2}{3}+0=&0\\
+ \Rightarrow \eval{\pdv[2]{\mu}{T}}_0=-\frac{g'(\mu_0)}{g(\mu_0)}\frac{(\pi k_b)^2}{3}
+\end{align}</script><p>带入态密度在零温时的表达式为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \mu(T)=&\mu(0)+0-\frac{g'(\mu_0)}{g(\mu_0)}\frac{(\pi k_b)^2}{6}T^2\\
+  =&\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
+  =&\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
+\end{align}</script><p>而化学势在零温时即为费米能量$E_F$，因此有</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ \mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
+\end{equation}</script><p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可:</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ \rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{equation}</script><p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ U/V=&Q(E_F)+Q'(E_F)(\mu-E_F)+\pqty{E_Fg'(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
+ g(E_F)=&C\sqrt{E_F}\\
+ \Rightarrow  U/V=&C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
+ =&\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
+ =&\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
+\end{align}</script><p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ C_V=&\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
+\end{align}</script><p>还可以得到单个电子的比热为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
+\end{align}</script><p>这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
+<h3 id="自由电子气的热导率"><a href="#自由电子气的热导率" class="headerlink" title="自由电子气的热导率"></a>自由电子气的热导率</h3><p>根据上一节的推导，热导率和比热的关系为$\kappa=\frac{\tau}{3}C_V\bar{v}^2$ ，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \kappa=&\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
+ =&\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
+\end{align}</script><p>相比Durde模型给出的$\frac{3}{2}\frac{\rho\tau k_b^2T}{m}$更接近实验值。</p>
+<h3 id="泡利顺磁性"><a href="#泡利顺磁性" class="headerlink" title="泡利顺磁性"></a>泡利顺磁性</h3><p><strong>暂略，以后再补上</strong></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/" rel="tag"># 固体物理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" rel="prev" title="初等量子力学期末复习">
+                  <i class="fa fa-chevron-left"></i> 初等量子力学期末复习
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/06/Lie-Group-Study-Note-(part1)/" rel="next" title="群论学习笔记(part1)">
+                  群论学习笔记(part1) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">59k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:47</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/03/01/Solid-State-Physics-Note-Part-1/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
