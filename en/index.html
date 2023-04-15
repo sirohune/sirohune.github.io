@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/en/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/04/11/Solid-State-Physics-Note-Part-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/en/images/head.jpg">
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/" class="post-title-link" itemprop="url">热统复习（统计物理部分）</a>
+          <a href="/en/2023/04/11/Solid-State-Physics-Note-Part-2/" class="post-title-link" itemprop="url">固体物理学习笔记（能带）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -221,15 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2023-03-15 09:51:10" itemprop="dateCreated datePublished" datetime="2023-03-15T09:51:10+08:00">2023-03-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-24 23:47:47" itemprop="dateModified" datetime="2023-03-24T23:47:47+08:00">2023-03-24</time>
+      <time title="Created: 2023-04-11 21:52:21 / Modified: 23:17:47" itemprop="dateCreated datePublished" datetime="2023-04-11T21:52:21+08:00">2023-04-11</time>
     </span>
 
   
@@ -241,8 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/en/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/" itemprop="commentCount"></span>
+    <a title="waline" href="/en/2023/04/11/Solid-State-Physics-Note-Part-2/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/04/11/Solid-State-Physics-Note-Part-2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -253,14 +247,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>9.2k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>17 mins.</span>
+      <span>4 mins.</span>
     </span>
 </div>
 
@@ -271,13 +265,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre><code>参考书目：
-《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+          <pre><code>参考资料：
+《固体物理基础》——阎守胜
+课程PPT——俞宏毅</code></pre>
+<p>自由电子气有三个近似</p>
+<ul>
+<li>自由电子近似</li>
+<li>单电子近似</li>
+<li>弛豫时间近似</li>
+</ul>
+<p>这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。<strong>能带论</strong>是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/en/2023/03/15/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E9%83%A8%E5%88%86%EF%BC%89/#more" rel="contents">
+              <a class="btn" href="/en/2023/04/11/Solid-State-Physics-Note-Part-2/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/15/Statistical-Review-Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/en/images/head.jpg">
@@ -326,7 +326,122 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/" class="post-title-link" itemprop="url">数理方法复习（复变）</a>
+          <a href="/en/2023/03/15/Statistical-Review-Note/" class="post-title-link" itemprop="url">热统复习（统计物理部分）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-15 09:51:10" itemprop="dateCreated datePublished" datetime="2023-03-15T09:51:10+08:00">2023-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-06 20:29:28" itemprop="dateModified" datetime="2023-04-06T20:29:28+08:00">2023-04-06</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline: </span>
+  
+    <a title="waline" href="/en/2023/03/15/Statistical-Review-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/15/Statistical-Review-Note/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>12k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>21 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <pre><code>参考书目：
+《热力学·统计物理》—— 汪志诚
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
+<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/en/2023/03/15/Statistical-Review-Note/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/en/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haku's blog">
+      <meta itemprop="description" content="Physics and Life">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Haku's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/" class="post-title-link" itemprop="url">数理方法复习（复变）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -344,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-24 23:53:45" itemprop="dateModified" datetime="2023-03-24T23:53:45+08:00">2023-03-24</time>
+      <time title="Modified: 2023-04-05 13:16:49" itemprop="dateModified" datetime="2023-04-05T13:16:49+08:00">2023-04-05</time>
     </span>
 
   
@@ -356,8 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/" itemprop="commentCount"></span>
+    <a title="waline" href="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -368,14 +483,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>8.2k</span>
+      <span>13k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>15 mins.</span>
+      <span>24 mins.</span>
     </span>
 </div>
 
@@ -392,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <h2 id="复变函数">复变函数</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/en/2023/03/13/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%EF%BC%88%E5%A4%8D%E5%8F%98%EF%BC%89/#more" rel="contents">
+              <a class="btn" href="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -531,7 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/08/Thermodynamic-Review-Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/en/images/head.jpg">
@@ -549,7 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%89/" class="post-title-link" itemprop="url">热统复习（热力学部分）</a>
+          <a href="/en/2023/03/08/Thermodynamic-Review-Note/" class="post-title-link" itemprop="url">热统复习（热力学部分）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -567,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-16 15:36:26" itemprop="dateModified" datetime="2023-03-16T15:36:26+08:00">2023-03-16</time>
+      <time title="Modified: 2023-04-06 19:43:20" itemprop="dateModified" datetime="2023-04-06T19:43:20+08:00">2023-04-06</time>
     </span>
 
   
@@ -579,8 +694,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/en/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%89/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%89/" itemprop="commentCount"></span>
+    <a title="waline" href="/en/2023/03/08/Thermodynamic-Review-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/08/Thermodynamic-Review-Note/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -618,7 +733,7 @@ href="#fn1" class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/en/2023/03/08/%E7%83%AD%E7%BB%9F%E5%A4%8D%E4%B9%A0%EF%BC%88%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86%EF%BC%89/#more" rel="contents">
+              <a class="btn" href="/en/2023/03/08/Thermodynamic-Review-Note/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -649,7 +764,7 @@ role="doc-noteref"><sup>1</sup></a></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/en/images/head.jpg">
@@ -667,7 +782,7 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/" class="post-title-link" itemprop="url">群论学习笔记(part1)</a>
+          <a href="/en/2023/03/06/Lie-Group-Study-Note-(part1)/" class="post-title-link" itemprop="url">群论学习笔记(part1)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -685,7 +800,7 @@ role="doc-noteref"><sup>1</sup></a></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-26 15:51:23" itemprop="dateModified" datetime="2023-03-26T15:51:23+08:00">2023-03-26</time>
+      <time title="Modified: 2023-04-05 15:14:32" itemprop="dateModified" datetime="2023-04-05T15:14:32+08:00">2023-04-05</time>
     </span>
 
   
@@ -697,8 +812,8 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/en/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/" itemprop="commentCount"></span>
+    <a title="waline" href="/en/2023/03/06/Lie-Group-Study-Note-(part1)/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/06/Lie-Group-Study-Note-(part1)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -732,7 +847,7 @@ role="doc-noteref"><sup>1</sup></a></p>
 <h1 id="lie-group-theory">Lie Group Theory</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/en/2023/03/06/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(part1)/#more" rel="contents">
+              <a class="btn" href="/en/2023/03/06/Lie-Group-Study-Note-(part1)/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -763,7 +878,7 @@ role="doc-noteref"><sup>1</sup></a></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/01/Solid-State-Physics-Note-Part-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/en/images/head.jpg">
@@ -781,7 +896,7 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/" class="post-title-link" itemprop="url">固体物理学习笔记（第一章）</a>
+          <a href="/en/2023/03/01/Solid-State-Physics-Note-Part-1/" class="post-title-link" itemprop="url">固体物理学习笔记（第一章）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -811,8 +926,8 @@ role="doc-noteref"><sup>1</sup></a></p>
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/en/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/" itemprop="commentCount"></span>
+    <a title="waline" href="/en/2023/03/01/Solid-State-Physics-Note-Part-1/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/01/Solid-State-Physics-Note-Part-1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -844,7 +959,7 @@ role="doc-noteref"><sup>1</sup></a></p>
           <h1 id="金属自由电子气">金属自由电子气</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/en/2023/03/01/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%89/#more" rel="contents">
+              <a class="btn" href="/en/2023/03/01/Solid-State-Physics-Note-Part-1/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1097,119 +1212,6 @@ class="math display">\[
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/en/images/head.jpg">
-      <meta itemprop="name" content="白舟尘">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Haku's blog">
-      <meta itemprop="description" content="Physics and Life">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Haku's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/en/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">建站记录</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-02-10 16:11:50" itemprop="dateCreated datePublished" datetime="2023-02-10T16:11:50+08:00">2023-02-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-13 17:38:33" itemprop="dateModified" datetime="2023-03-13T17:38:33+08:00">2023-03-13</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline: </span>
-  
-    <a title="waline" href="/en/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/en/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>450</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
-<p>接下来就是好好装修自己的小屋(*╹▽╹*)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/en/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/02/10/%E5%B9%BF%E7%9B%B8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1315,6 +1317,9 @@ id="关于广相期末考你应该记得的公式">关于广相期末考你应�
 
 
 
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/en/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/en/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>
@@ -1336,13 +1341,13 @@ id="关于广相期末考你应该记得的公式">关于广相期末考你应�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">65k</span>
+    <span title="Word count total">74k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:57</span>
+    <span title="Reading time total">2:15</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
