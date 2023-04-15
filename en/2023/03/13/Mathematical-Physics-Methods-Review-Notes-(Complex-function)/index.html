@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/en/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/en/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/en/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/en/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/en/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/en/","images":"/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
+
+    <meta name="description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数理方法复习（复变）">
+<meta property="og:url" content="https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/index.html">
+<meta property="og:site_name" content="Haku&#39;s blog">
+<meta property="og:description" content="参考书籍： 《数学物理方法》——梁昆淼 《数学物理方法简明导论》_v3.1——黄志琦 复变函数">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-13T09:43:57.000Z">
+<meta property="article:modified_time" content="2023-04-05T05:16:49.866Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="数学物理方法">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/","path":"2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/","title":"数理方法复习（复变）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数理方法复习（复变） | Haku's blog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/en/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="Haku's blog" href="https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site/en')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site/en').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/en/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Haku's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Domicile of The Soul</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/en/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/en/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/en/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/en/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/en/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-language"><a href="https://sirohune.site/" rel="section"><i class="fa fa-language fa-fw"></i>中文</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0"><span class="nav-number">1.0.1.</span> <span class="nav-text">复变函数的导数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%AE%9A%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">柯西定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80"><span class="nav-number">3.</span> <span class="nav-text">级数展开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80-Tylor-Expansion"><span class="nav-number">3.1.</span> <span class="nav-text">泰勒展开(Tylor Expansion)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%9B%E6%9C%97%E5%B1%95%E5%BC%80-Laurent-Expansion"><span class="nav-number">3.2.</span> <span class="nav-text">洛朗展开(Laurent Expansion)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">留数定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.1.</span> <span class="nav-text">一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-number">4.2.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/en/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">Physics and Life</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/en/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/en/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/en/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haku's blog">
+      <meta itemprop="description" content="Physics and Life">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数理方法复习（复变） | Haku's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数理方法复习（复变）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-13 17:43:57" itemprop="dateCreated datePublished" datetime="2023-03-13T17:43:57+08:00">2023-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-05 13:16:49" itemprop="dateModified" datetime="2023-04-05T13:16:49+08:00">2023-04-05</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline: </span>
+  
+    <a title="waline" href="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>12k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>22 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <pre><code>参考书籍：
+《数学物理方法》——梁昆淼
+《数学物理方法简明导论》_v3.1——黄志琦
+</code></pre><h2 id="复变函数"><a href="#复变函数" class="headerlink" title="复变函数"></a>复变函数</h2><span id="more"></span>
+<p>复数是可以理解为一个两个实数的有序组合，定义域是一个矢量空间，维度可以说是两个实维度$\mathbb{R}\times \mathbb{R}$ 也可以说是一个复维度$\mathbb{C}$. 而复变函数是两个实变函数的有序组合。复变函数输入一个矢量，返回一个矢量。（像是算符？）</p>
+<h4 id="复变函数的导数"><a href="#复变函数的导数" class="headerlink" title="复变函数的导数"></a>复变函数的导数</h4><p>复变函数的导数与多元函数类似，要求宗量从任意方向趋近于$z_0$得到一样的结果，这样我们才说复变函数$f(z)$在这一点导数存在。除此之外复变函数的导数规则与实变函数基本相同。</p>
+<p>正是由于前面提到的要求，我们可以得到所谓的<strong>柯西-黎曼方程</strong>（简称<strong>C-R条件</strong>）：既然任意方向的极限存在，那么取两条特殊的方向——x轴和y轴，将函数分为实部与虚部$f(z)=u(x,y)+iv(x,y)$</p>
+<ul>
+<li>当宗量沿着x轴趋近于0的时候</li>
+</ul>
+<script type="math/tex; mode=display">
+\require{physics}
+\begin{align}
+ f'(0)&=\lim_{\Delta x\to0}\frac{u(x+\Delta x,y)+iv(x+\Delta x,y)-u(x,y)-iv(x,y)}{\Delta x}\\
+ &=\pdv{u}{x}+i\pdv{v}{x}
+\end{align}</script><ul>
+<li>当宗量沿着y轴趋近于0的时候</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{align}
+ f'(0)&=\lim_{\Delta x\to0}\frac{u(x,y+\Delta y)+iv(x,y+\Delta y)-u(x,y)-iv(x,y)}{i\Delta y}\\
+ &=\pdv{v}{y}-i\pdv{u}{y}
+\end{align}</script><p>导数存在要求两者相等，因此实部与实部相等，虚部与虚部相等，得到</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ \begin{cases}
+ \pdv{u}{x}=\pdv{v}{y}\\
+ \pdv{v}{x}=-\pdv{u}{y}
+ \end{cases}
+\end{equation}</script><p>很显然这是导数存在的<strong>必要条件</strong>。</p>
+<p>复变函数可导的<strong>充要条件</strong>是$f(z)=u(x,y)+iv(x,y)$的实部与虚部的偏导数$\pdv{u}{x},\pdv{u}{y},$$\pdv{v}{x},\pdv{v}{y}$存在，且满足C-R条件。</p>
+<h4 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h4><p>解析函数是要求复变函数在某点及其领域都可导。由此可以得到一些较好的性质。函数在一个区域内可导意味着函数的实部与虚部在一个范围内满足C-R条件，由此实部与虚部之间存在联系，他们并不是独立存在的。根据C-R条件</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \pdv{u}{x}\pdv{v}{x}=&-\pdv{u}{y}\pdv{v}{y}\\
+ \Rightarrow \pdv{u}{x}\pdv{v}{x}+&\pdv{u}{y}\pdv{v}{y}=0\\
+\end{align}</script><p>即$(\nabla u)\cdot (\nabla v)^T=0$，若从微分几何的角度来看，在一个流形上选定坐标系后，存在有两个函数$u,v$，这两个函数沿着坐标的切矢在每点都相互正交，因此在某一点给出其中一个函数后，一定可以确定另一个函数到只相差一个常数的地步。</p>
+<p>在技术上有一个技巧可以判断复变函数是否可导，将z与$z^<em>$看成完全独立的变量（即便他们实际上模长相等幅角相反），将复变函数写成$z$与$z^</em>$的函数，如果其对$z^*$的偏导数为0，则函数可导，若不为0则不可导。</p>
+<h2 id="复变函数的积分"><a href="#复变函数的积分" class="headerlink" title="复变函数的积分"></a>复变函数的积分</h2><p>与实变函数一样可以通过求得原函数$f(z)dz=dF(z)$的方式来计算积分，对于原函数是单值函数的积分与实变函数无异，但是对于原函数是多值函数的积分，则积分结果与路径相关（很可能跑出来个$2n\pi i$），而且听起来还需要判断原函数是否是多值函数，这又给我们的大脑带来了工作量。好在我们可以将函数级数展开，只有$\frac{1}{z-z_0}$的原函数$\ln(z-z_0)$是一个多值函数，逆时针绕支点一周得到$2\pi i$，而其他的幂级数$(z-z_0)^n$（$n\neq-1$）的原函数$\frac{(z-z_0)^{n+1}}{n+1}$则都是单值函数，因此理论上对于任意复变函数的环路积分$\oint$，我们都可以将其展开为幂级数，然后只留下-1次幂的环路积分，其余项的环路积分为0.这其实就是后面的留数定理。</p>
+<h3 id="柯西定理"><a href="#柯西定理" class="headerlink" title="柯西定理"></a>柯西定理</h3><p>在介绍留数定理前我们还需要介绍一个定理——<strong>柯西定理</strong>。这是后面柯西积分公式的来源，也是留数定理的来源，而这个柯西定理的是来自于C-R条件以及斯托克斯定理。话不多说，我们看看什么是柯西定理。</p>
+<p>柯西定理其实就是说：解析区域的环路积分结果为0.<br>但是一般教材将该定理分为单联通区域以及复联通区域来讨论，但其实二者我认为差别不大，这里先讨论单连通区域的柯西定理。对于一个闭合曲线的积分</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \oint\limits_lf(z)dz=&\oint\limits_l\pqty{u+iv}\pqty{dx+idy}\\
+ =&\oint\limits_ludx-vdy+i\oint\limits_lvdx+udy\\
+ =&-\iint\limits_S\pqty{\pdv{v}{x}+\pdv{u}{y}}dxdy+i\iint\limits_S\pqty{\pdv{u}{x}-\pdv{v}{y}}dxdy
+\end{align}</script><p>当被积函数在区域S中解析的时候，满足C-R条件如下</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+ \begin{cases}
+ \pdv{u}{x}=\pdv{v}{y}\\
+ \pdv{v}{x}=-\pdv{u}{y}
+ \end{cases}
+\end{equation}</script><p>因此该环路积分结果为0</p>
+<p>而对于复连通区域（就是说你选的区域中可能有一个或者多个洞），我们可以将其划分为多个单连通区域，比如说一个甜甜圈形状的区域，一刀将其劈成两半，这样就得到了两个单连通区域，两个环路积分，劈开的地方积分方向相反，因此劈开处积分结果相互抵消。两个单连通区域可以分别用单连通的方式证明积分结果为0.</p>
+<h3 id="柯西积分公式"><a href="#柯西积分公式" class="headerlink" title="柯西积分公式"></a>柯西积分公式</h3><p>由上面的结果我们可以得到柯西积分公式。其思想是，选定一个包含奇点的区域C，被积函数$f(z)$在这一点不解析，因此我们把这一点从区域中挖去，得到区域C’，因此在区域C’中是柯西定理，得到积分为0，而区域C’的环路积分包括原本的环路以及为了将奇点挖去的环路$\gamma$，两者相加为0，便可以得到。<br>比如说函数$g(z)$在$z_0$处有一阶奇点，因此可以写为$f(z)/(z-z_0)$，这里的$f(z)$便是解析的，环路$\gamma$是围绕奇点的一个小环路，无限趋近于$z_0$，因此我们将解析的$f(z)$在奇点处展开</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\oint_\gamma g(z)dz=&\oint_\gamma\frac{f(z)}{z-z_0}dz\\
+=&\oint_\gamma \frac{f(z_0)+f'(z)(z-z_0)}{z-z_0}dz\\
+=&f(z_0)\oint_\gamma \frac{1}{z-z_0}dz+0\\
+=&2\pi if(z_0)
+\end{align}</script><p>因此有</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+f(z_0)=\frac{1}{2\pi i}\oint_\gamma\frac{f(z)}{z-z_0}dz
+\end{equation}</script><p>或者也可以写为</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+f(z)=\frac{1}{2\pi i}\oint_\gamma\frac{f(\zeta)}{\zeta-z}d\zeta
+\end{equation}</script><p>对于n阶奇点，则将分子的解析函数在奇点$z_0$展开到n阶，可以得到类似的结论</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+f^{(n)}(z)=\frac{n!}{2\pi i}\oint_\gamma\frac{f(\zeta)}{(\zeta-z)^{n+1}}d\zeta
+\end{equation}</script><p>柯西积分公式告诉我们，对于一个函数$g(\zeta)=f(\zeta)/(\zeta-z)^{n+1}$在区域中有一个n+1阶奇点$\zeta=z$，其围道积分等于$\frac{2\pi i}{n!}\dv[n]{\zeta}\pqty{(\zeta-z)^{n+1}g(\zeta)}$ </p>
+<p>此外，柯西积分公式还说明：解析函数在区域边界上的函数值可以完全地确定其在区域内的函数值以及任意次导数的值！</p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><ol>
+<li>$I=\int_0^{2\pi}\sin^{2n}\theta d\theta$ </li>
+</ol>
+<p>积分路径其实就是绕单位圆一圈，利用复积分求解，取$z=e^{i\theta}$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ dz=&izd\theta\\
+ I=&\oint \pqty{\frac{z-z^{-1}}{2i}}^{2n}\frac{dz}{iz}\\
+ =&\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
+ =&\frac{(-)^n}{2^{2n}i}\frac{2\pi i}{(2n)!}\dv[2n]{z}(1-z)^{2n}|_{z=0}\\
+ =&2\pi (-)^nP_{2n}(0)
+\end{align}</script><p>查表得到Legendre函数在0点的值即可。<br>或者也可利用前面说过的，只有z的负一次幂对积分有贡献</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\frac{(-)^n}{2^{2n}i}\oint \frac{\pqty{z^2-1}^{2n}}{z^{2n+1}}dz\\
+ =&\frac{(-)^n}{2^{2n}i}\oint \sum_l^{2n}C_{2n}^l (-)^{2n-l}z^{2l}\frac{1}{z^{2n+1}}dz
+\end{align}</script><p>因为只有z的负一次幂对积分有贡献，所以只有$l=n$有贡献：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\frac{1}{2^{2n}i}C^n_{2n}\oint \frac{dz}{z}\\
+ =&\frac{1}{2^{2n}i}C^n_{2n}2\pi i\\
+ =&\frac{\pi(2n)!}{2^{2n-1}n!n!}
+\end{align}</script><ol>
+<li>$\oint_C \frac{e^z}{z^2+1}dz$，其中围道C为$\abs{z}=3/2$</li>
+</ol>
+<p>被积函数的奇点在$\pm i$的位置，围道中含有$-i$奇点，围道该奇点做一个顺时针的小围道$\gamma^-$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \oint_c+\oint_{\gamma^-}f(z)dz=&0\\
+ \Rightarrow \oint_C f(z)dz=&\oint_\gamma f(z)dz\\
+\end{align}</script><p>因此积分围道转化为逆时针的$\gamma$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\oint_\gamma \frac{e^z}{z^2+1}dz\\
+ =&\oint_\gamma \frac{e^z}{(z-i)(z+i)}dz\\
+ =&2\pi i\eval{\frac{e^z}{z-i}}_{z=-i}\\
+ =&-\pi e^{-i}
+\end{align}</script><ol>
+<li>$\oint_C \frac{\cos z}{(z-a)^2}\abs{dz}$ ，其中围道C为$\abs{z}=b\neq a$</li>
+</ol>
+<p>注意积分微元不是$dz$而是$\abs{dz}$，因此需要做一些变换，注意到积分围道，我们设$z=be^{i\theta}$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ dz=&izd\theta\\
+ \Rightarrow \abs{dz}=&bd\theta\\
+ =&b\frac{dz}{iz}
+\end{align}</script><p>因此积分变为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=\oint_C \frac{b\cos z}{iz(z-a)^2}dz
+\end{align}</script><p>对于围道需要分类讨论，当围道包含a点时有两个奇点，当不包含a点时只有一个奇点</p>
+<ul>
+<li>当$b&lt;a$时($C_1$是包含0的小围道)</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz\\
+ =&2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}\\
+ =&\frac{2\pi b}{a^2}
+\end{align}</script><ul>
+<li>当$b&gt;a$时($C_1,C_2$)分别是包含0和a的小围道</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\oint_{C_1} \frac{b\cos z}{i(z-a)^2z}dz+\oint_{C_2} \frac{b\cos z}{iz(z-a)^2}dz\\
+ =&2\pi i \eval{\frac{b\cos z}{i(z-a)^2}}_{z=0}+\frac{2\pi i}{1} \eval{(\frac{b\cos z}{iz})'}_{z=a}\\
+ =&\frac{2\pi b}{a^2}-\frac{2\pi ba\cos a}{a^2}-\frac{2\pi b\cos a}{a^2}
+\end{align}</script><h2 id="级数展开"><a href="#级数展开" class="headerlink" title="级数展开"></a>级数展开</h2><p>级数展开和留数定理一并看了，但留数定理有所感悟，所以先写留数定理的note，回头来补</p>
+<h3 id="泰勒展开-Tylor-Expansion"><a href="#泰勒展开-Tylor-Expansion" class="headerlink" title="泰勒展开(Tylor Expansion)"></a>泰勒展开(Tylor Expansion)</h3><p>在解析的点附近展开，跟普通泰勒展开没区别</p>
+<h3 id="洛朗展开-Laurent-Expansion"><a href="#洛朗展开-Laurent-Expansion" class="headerlink" title="洛朗展开(Laurent Expansion)"></a>洛朗展开(Laurent Expansion)</h3><p>在不解析的点附近展开，思想是：利用柯西积分公式把非解析的点用周围的解析围道积分表示。因此理论上一个复变函数在奇点上可以写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ f(z)=&\sum_{n=-\infty}^\infty a_n(z-z_0)^n
+\end{align}</script><p>而通常情况下，复变函数在奇点上通常是有限阶奇点，假设是m阶奇点($m\geq1$)，则洛朗展开为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ f(z)=&\sum_{n=-m}^\infty a_n(z-z_0)^n
+\end{align}</script><p>这正是留数定理的来源</p>
+<h2 id="留数定理"><a href="#留数定理" class="headerlink" title="留数定理"></a>留数定理</h2><h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><p>我们先阐述一下留数定理的一般步骤：</p>
+<ol>
+<li>对于一个围道积分$I=\oint_C f(z)dz$，先找出围道中的所有奇点，假设包含有i个奇点($i\geq0$)</li>
+<li><p>利用<strong>柯西定理</strong>——解析区域的围道积分为0。因此我们把i个奇点都用小围道围起来，正向逆时针记作$C_k$(k代表第k个奇点的围道)，逆向则是$C_k^-$，注意每个小围道只有<strong>一个奇点</strong>。此时根据柯西定理有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&I+\sum_k^i \oint_{C_k^-}f(z)dz=0\\
+\Rightarrow &I=\sum_k^i \oint_{C_k}f(z)dz
+\end{align}</script><p>此时我们已经将积分$I$转化为i个包含单个奇点的小围道积分。</p>
+</li>
+<li><p>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，$m_k$是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有$m_k$阶奇点，<strong>柯西积分公式告诉我们</strong>，这个围道积分的结果等于</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\oint_{C_k}f(z)dz=\frac{2\pi i}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
+\end{align}</script></li>
+<li>然后我们声称上面的结果中与k有关的部分是函数$f(z)$在奇点$z=z_k$处的<strong>留数</strong>（意思是我把$2\pi i$提出来了），记作Res$f(z_k)$，因此有<script type="math/tex; mode=display">
+\begin{align}
+\oint_C f(z)dz=&2\pi i\sum_k^iResf(z_k)
+\end{align}</script>我们把上式称为<strong>留数定理</strong></li>
+</ol>
+<p>这样便可以很好地体现留数定理和柯西积分公式的关系了。不过这并不是留数定理本身定义啦，下面我们看看留数定理原本的定义：</p>
+<ol>
+<li>与前面相同</li>
+<li>与前面相同</li>
+<li>我们假设这i个奇点都是极点，不包含本性奇点，也就是说都是阶数有限的奇点，$m_k$是第k个奇点的阶数。对于第k个小围道积分，被积函数在围道内有$m_k$阶奇点，洛朗展开告诉我们，在第k个奇点的围道上，被积函数一定可以展开成<script type="math/tex; mode=display">
+\begin{align}
+f(z)=\sum_{n=-m_k}^\infty a_n^{(k)}(z-z_k)^n
+\end{align}</script></li>
+<li><p>我们在复变积分的时候提到过，对于幂级数的环路积分，只有负一次幂对积分贡献$2\pi i$，其余幂次因为解析，积分结果为0，因此第k个小围道积分为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\oint_{C_k}f(z)dz=&2\pi i a_{-1}^{(k)}
+\end{align}</script><p>奇点保证了$m<em>k\geq1$，因此存在$a</em>{-1}$</p>
+</li>
+<li><p>接着我们将$a^{(-k)}_{-1}$称为函数$f(z)$在$z=z_k$处的留数，因此有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\oint_C f(z)dz=&2\pi i\sum_k^iResf(z_k)
+\end{align}</script></li>
+</ol>
+<p>我们可以明显看到，原本的定义是给出了理论结果，但到目前为止并没有告诉我们留数该如何计算，我们只能从定义出发将函数在各个奇点展开到-1次幂来得到留数。</p>
+<p>或者更进一步，假设奇点是$m_k$阶奇点，所以函数可以写成$f(z)=\phi(z)/(z-z_k)^{m_k}$的形式，其中$\phi(z)$是解析函数，我们便从这个表达式可以得到留数为$\phi^{m_k-1}(z_k)/(m_k-1)!$，写成函数$f(z)$的形式即</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ a^{(k)}_{-1}=&\phi^{m_k-1}(z_k)/(m_k-1)!\\
+ =&\frac{1}{(m_k-1)!}\eval{\dv[m_k-1]{z}(z-z_k)^{m_k}f(z)}_{z=z_k}
+\end{align}</script><p>然后我们可以从这个留数定理推出柯西积分公式。<br>我们可以看出本质上柯西积分公式和留数定理是同一个东西——级数展开已经负一次幂的积分贡献$2\pi i$，所以他们才会具有非常相似的形式。</p>
+<h3 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h3><ol>
+<li>求$f(z)=\frac{e^z}{\sin^2z}$在$0&lt;\abs{z}&lt;\pi$展开的$a_{-1}$</li>
+</ol>
+<p>题目的意思便是将函数$f(z)$在0处展开到-1次幂，如果是硬算：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ f(z)=&\frac{2e^z}{1-\cos2z}\\
+ =&2(1+z+\frac{z^2}{2}+...)\frac{1}{2z^2-\frac{2}{3}z^4+...}\\
+ =&\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)\frac{1}{1-\frac{1}{3}z^2+...}\\
+ \approx &\frac{1}{z^2}(1+z+\frac{z^2}{2}+...)(1+\frac{z^2}{3})\\
+ =&\frac{1}{z^2}+\frac{1}{z}+...
+\end{align}</script><p>因此负一次幂的系数为1。</p>
+<p>除此之外，我们可以利用留数定理的特点，围道积分的结果是$2\pi i$乘上奇点处的留数，而奇点恰好就是我们的展开点（Laurent展开）。当然，这并不意味着我们需要用围道积分来代替级数展开，因为我们使用留数定理就是为了避免计算积分，我们对于留数有标准的做法</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ a_{-1}=&\dv{z}e^z\eval{\frac{z^2}{\sin^2z}}_0\\
+ =&e^z \frac{z^2}{\sin^2z}+e^z\pqty{\frac{z^2}{\sin^2z}}'\\
+ =&1+0=1
+\end{align}</script><p>如上</p>
+<ol>
+<li>例2  求出下列函数在孤立奇点处的留数<script type="math/tex; mode=display">
+\begin{align}
+\begin{cases}
+\frac{1}{e^z+1}\\
+\frac{z}{\sin^2 z}\\
+\frac{1}{z}e^{1/(1-z)}
+\end{cases}
+\end{align}</script></li>
+</ol>
+<ul>
+<li><p>$\frac{1}{e^z+1}$的奇点为$z=(2n+1)\pi$，为一阶奇点，因此留数为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\Res=\eval{\frac{z}{e^z+1}}_{z=(2n+1)\pi}=-1
+\end{align}</script></li>
+<li><p>$\frac{z}{\sin^2 z}$的奇点为$z=n\pi$，其中当n=0时为一阶奇点，其他情况为二阶奇点</p>
+</li>
+</ul>
+<p>因此，当n=0时</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Res(f(0))=&\eval{\frac{z^2}{\sin^2 z}}_{z=0}\\
+ =&1
+\end{align}</script><p>当n不等于0时，将函数在$z-n\pi$处展开，很显然$\sin z=(-)^n\sum \frac{-^i}{(2i+1)!}(z-n\pi)^{2i+1}$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ f(z)=&\frac{z-n\pi+n\pi}{\pqty{\sum\limits_i \frac{-^i}{(2i+1)!}(z-n\pi)^{2i+1}}^2}\\
+ =&\frac{z-n\pi}{\pqty{z-n\pi-\frac{1}{6}(z-n\pi)^3+...}^2}+\frac{n\pi}{\pqty{z-n\pi-\frac{1}{6}(z-n\pi)^3+...}^2}\\
+\end{align}</script><p>从上面的结果可以读出-1次幂项只在第一项中会出现，第二项是$\order{z-n\pi}^{-2}$。很显然第一项泰勒展开后可以得到-1次幂的系数为1</p>
+<ul>
+<li>$\frac{1}{z}e^{1/(1-z)}$的奇点为0与1，其中0为一阶奇点，1为本性奇点<script type="math/tex; mode=display">
+\begin{align}
+\Res(f(0))=&\eval{\frac{z}{z}e^{1/(1-z)}}_{z=0}=e
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+\Res(f(1))=&\frac{1}{1+z-1}\sum_n \frac{(-)^{n}}{n!}(z-1)^{-n}\\
+=&\sum_l(-)^{l}(z-1)^l\sum_n \frac{(-)^{n}}{n!}(z-1)^{-n}\\
+=&\sum_{n=0}\sum_{l=0}\frac{(-1)^{n+l}}{n!}(z-1)^{l-n}\\
+\end{align}</script>做变量替换$t=l-n$，将外层求和的n更改为t<script type="math/tex; mode=display">
+\begin{align}
+f(z)=&\sum_{t=-\infty}\sum_{l=0}\frac{(-1)^{2l-t}}{(l-t)!}(z-1)^t\\
+=&\sum_{t=-\infty} a_t (z-1)^t\\
+\Rightarrow a_{-1}=&\sum_{l=0}\frac{(-1)^{2l+1}}{(l+1)!}=-\sum_{l=0}\frac{1}{(l+1)!}\\
+=&1-\sum_{l=0}\frac{1}{l!}=1-e
+\end{align}</script>或者也可以将内层的求和l更换，就是要注意此时t便不是从负无穷取起<script type="math/tex; mode=display">
+\begin{align}
+f(z)=&\sum_{n=0}\sum_{t=-n}\frac{(-1)^{2n+t}}{n!}(z-1)^t\\
+\Rightarrow a_{-1}=&\sum_{n=1}\frac{(-1)^{2n-1}}{n!}=1-e
+\end{align}</script></li>
+</ul>
+<ol>
+<li>sinc函数积分$I=\int_0^\infty \frac{\sin x}{x}dx$</li>
+</ol>
+<p>利用留数定理求积分结果，少不了恰当的回路构造，回路自然是优先简单且好算。对于这一积分的围道，由于被积函数是偶函数，所以我们可以取x轴的负无穷到正无穷+一个上半平面的半圆围道+绕开奇点0的顺时针围道（目前还没整图床，整了图床再回来补个图    <del>咕咕咕警告</del>，现在就辛苦你想象一下），负无穷到正无穷的路径记作$C<em>1$，逆时针半圆的路径记作$C_R$，绕开奇点的顺围道记作$C</em>\delta^-$ </p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\frac{1}{2}\Im \int_{-\infty}^\infty \frac{\sin z}{z}dz\\
+ \int_{C_1+C_R+C_\delta^-}&f(z)dz=0\\
+ \Rightarrow \int_{c_1}f(z)dz=&\int_{C_\delta^+}f(z)dz+0
+\end{align}</script><p>上式最后一步用了<strong>约当引理</strong>使得大圆弧的积分为0（R趋于无穷时），对于剩下的小半圆积分结果，有<strong>小圆弧引理</strong>可以得到$\int<em>{C</em>\delta^+}f(z)dz=i\pi$,因此</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=\frac{1}{2}\Im(i\pi)=\frac{\pi}{2}
+\end{align}</script><p>至此我们得到了一个常用的积分结果：sinc函数从0到正无穷积分结果为$\frac{\pi}{2}$，更一般地</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \int_0^\infty\frac{\sin ax}{x}dx=sign(a)\frac{\pi}{2}
+\end{align}</script><ol>
+<li>Fresnel积分$\int_0^\infty\sin x^2dx$</li>
+</ol>
+<p>对于该积分的围道，我一开始也想的是和上一道积分的围道相同，可是我发现这样的围道只能给出trivial的结果$0=0$，因此我们采取其他围道$C_1:0\to\infty$,$C_R$是一个逆时针的大圆，从0度到四十五度<sup><a href="#fn_1" id="reffn_1">1</a></sup>，$C_2$是一个从四十五度的无穷远到原点的路径$z=re^{i\pi/4}$，同时积分可以写为$I=\Im\int_0^\infty e^{iz^2}dz$ </p>
+<script type="math/tex; mode=display">
+\begin{align}
+ &\int_{C_1+C_2+C_R}f(z)dz=0,\quad f(z)=e^{iz^2}\\
+ &\int_{C_1}f(z)dz=\int_{-C_2}f(z)dz-\int_{C_R}f(z)dz
+\end{align}</script><blockquote id="fn_1">
+<sup>1</sup>. 这里为什么选四十五度是有原因的，你可以试一下任意的$\theta$，然后你会发现，在$0-\pi$之间只有四十五度可以计算出结果<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<p>我们先证明大圆的积分结果为0，想利用约当引理证明，所以要将被积函数写成$e^{-iz}$的形式，令$z^2=t$,即$z=\sqrt{t}$,规定t的幅角范围后有$dz=\frac{dt}{t\sqrt{t}}$,则积分变为$\int_{C_R}\frac{e^{it}}{2\sqrt{t}}dt$，在上半平面可以使用约当引理得到该积分结果为0.所以</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \int_{C_1}f(z)dz=&\int_0^\infty \exp(ir^2e^{i\pi/2})e^{i\pi/4}dr\\
+ =&e^{i\pi/4}\int_0^\infty e^{-r^2}dr=e^{i\pi/4}\frac{\sqrt{\pi}}{2}\\
+ =&\frac{\sqrt{\pi}}{2}\pqty{\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}}}\\
+ \Rightarrow I=&\sqrt{\frac{\pi}{8}}
+\end{align}</script><p>同时也可以看出$\int_0^\infty \cos x^2dx$的积分也是一样的结果。</p>
+<ol>
+<li>积分$I=\int_0^{2\pi} \frac{dx}{2+\cos x}$</li>
+</ol>
+<p>该积分可视为单位圆上的环路积分，做变量替换$\cos x=\frac{e^{i\theta}+e^{-i\theta}}{2}$ (顺便换了字母)</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&\oint \frac{2d\theta}{4+e^{i\theta}+e^{-i\theta}}\\
+ \abs{z}=1&\Rightarrow dz=izd\theta\\
+ I=&\oint \frac{-2idz}{z^2+4z+1}
+\end{align}</script><p>有两个奇点$z=-2\pm\sqrt{3}$,但是只有$z=-2+\sqrt{3}$在围道中，因此上述积分结果为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ I=&2\pi i\Res(f(-2+\sqrt{3}))\\
+ =&2\pi i (-2 i)\frac{1}{2\sqrt{3}}=\frac{2\pi}{\sqrt{3}}
+\end{align}</script><ol>
+<li>积分$I=\int_0^\infty \frac{dx}{1+x^\alpha}$</li>
+</ol>
+<p>该被积函数在单位圆上有若干个奇点$z=e^{i(2n+1)\pi/\alpha}$，对于围道的构建，实轴上0到正无穷的路径是必要的，然后再就是一个0度到$\theta$度的大圆以及其一条$\theta=\theta$的直线。在最后一条直线的积分上$z=re^{i\theta}$,带入被积函数后有$z^\alpha=r^\alpha e^{i\alpha\theta}$,为了方便我们积分，选取$\alpha\theta=2m\pi$是方便的。结合前面的奇点位置，我们选取$\theta=2\pi/\alpha$,围道中包含一个奇点$\beta=e^{i\pi/\alpha}$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \int_{C_1+C_2^-+C_R}f(z)dz=&2\pi i\Res(f(\beta))\\
+ I+0=&2\pi i\Res(f(\beta))+\int_{C_2}f(z)dz\\
+ I=&2\pi i\eval{\frac{z-\beta}{1+z^\alpha}}_{z=\beta}+\int_0^\infty \frac{e^{i2\pi/\alpha}dr}{1+z^\alpha}\\
+ (1-e^{i2\pi/\alpha})I=&2\pi i\frac{1}{-\alpha e^{-i\pi/\alpha}}\\
+ \Rightarrow I=&-\frac{2\pi i}{\alpha} \frac{1}{e^{-i\pi/\alpha}-e^{i\pi/\alpha}}\\
+ =&\frac{\pi/\alpha}{\sin(\pi/\alpha)}
+\end{align}</script>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/en/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
+              <a href="/en/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/en/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="tag"># 数学物理方法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/en/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="《资本论》读书笔记">
+                  <i class="fa fa-chevron-left"></i> 《资本论》读书笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/en/2023/03/15/Statistical-Review-Note/" rel="next" title="热统复习（统计物理部分）">
+                  热统复习（统计物理部分） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">59k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:47</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/en/js/comments.js"></script><script src="/en/js/utils.js"></script><script src="/en/js/motion.js"></script><script src="/en/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/en/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/en/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

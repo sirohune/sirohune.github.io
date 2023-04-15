@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/en/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/en/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/en/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/en/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/en/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/en/","images":"/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
+
+    <meta name="description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg 参考教材第三章 Lie Group Theory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群论学习笔记(part1)">
+<meta property="og:url" content="https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)/index.html">
+<meta property="og:site_name" content="Haku&#39;s blog">
+<meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg 参考教材第三章 Lie Group Theory">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-06T09:34:50.000Z">
+<meta property="article:modified_time" content="2023-04-05T07:14:32.999Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="群论">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)/","path":"2023/03/06/Lie-Group-Study-Note-(part1)/","title":"群论学习笔记(part1)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>群论学习笔记(part1) | Haku's blog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/en/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="Haku's blog" href="https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site/en')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site/en').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/en/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Haku's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Domicile of The Soul</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/en/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/en/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/en/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/en/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/en/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-language"><a href="https://sirohune.site/" rel="section"><i class="fa fa-language fa-fw"></i>中文</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lie-Group-Theory"><span class="nav-number">1.</span> <span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Groups"><span class="nav-number">1.1.</span> <span class="nav-text">Groups</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rotations-in-two-Dimensions"><span class="nav-number">1.2.</span> <span class="nav-text">Rotations in two Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%AD%A3%E4%BA%A4%E7%BE%A4-SO-2"><span class="nav-number">1.2.1.</span> <span class="nav-text">特殊正交群$SO(2)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#U-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">U(1)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rotations-in-three-Dimensions"><span class="nav-number">1.3.</span> <span class="nav-text">Rotations in three Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0Quaternions%E7%9A%84%E8%BD%AC%E5%8A%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">四元数Quaternions的转动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E8%A6%86%E7%9B%96-double-cover"><span class="nav-number">1.3.2.</span> <span class="nav-text">双覆盖(double cover)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%8E%E4%BB%A3%E6%95%B0-Lie-Algebras"><span class="nav-number">1.4.</span> <span class="nav-text">李代数 Lie Algebras</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5-SO-3-%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.1.</span> <span class="nav-text">以$SO(3)$为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5-SU-2-%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.2.</span> <span class="nav-text">以$SU(2)$为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%8E%E7%BE%A4%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.3.</span> <span class="nav-text">李群的抽象定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E8%AE%BA-Representation-Theory"><span class="nav-number">1.5.</span> <span class="nav-text">表示论 Representation Theory</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/en/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">Physics and Life</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/en/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/en/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/en/2023/03/06/Lie-Group-Study-Note-(part1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/en/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haku's blog">
+      <meta itemprop="description" content="Physics and Life">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="群论学习笔记(part1) | Haku's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          群论学习笔记(part1)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-06 17:34:50" itemprop="dateCreated datePublished" datetime="2023-03-06T17:34:50+08:00">2023-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-05 15:14:32" itemprop="dateModified" datetime="2023-04-05T15:14:32+08:00">2023-04-05</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline: </span>
+  
+    <a title="waline" href="/en/2023/03/06/Lie-Group-Study-Note-(part1)/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/en/2023/03/06/Lie-Group-Study-Note-(part1)/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>7.7k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>14 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg
+</code></pre><p>参考教材第三章</p>
+<h1 id="Lie-Group-Theory"><a href="#Lie-Group-Theory" class="headerlink" title="Lie Group Theory"></a>Lie Group Theory</h1><span id="more"></span>
+<script type="math/tex; mode=display">\require{physics}</script><p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
+<p>接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。</p>
+<h2 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h2><p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符$\circ$构成转动群。比如说群元素$g_1$ 与$g_2$ 之间的运算$g_1\circ g_2$ 是多少，由运算符的规定给出。</p>
+<p>除此之外，对群还有一些数学要求：</p>
+<ul>
+<li>存在恒元$I$<sup><a href="#fn_1" id="reffn_1">1</a></sup></li>
+</ul>
+<blockquote id="fn_1">
+<sup>1</sup>. 就是什么也不干的群元素，作用于任何东西上都得到它自己<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<ul>
+<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p>
+</li>
+<li><p>群乘法封闭，即$g_1\circ g_2=g_3\in G,\forall g_1,g_2\in G$</p>
+</li>
+<li><p>结合律$\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}$ </p>
+</li>
+</ul>
+<h2 id="Rotations-in-two-Dimensions"><a href="#Rotations-in-two-Dimensions" class="headerlink" title="Rotations in two Dimensions"></a>Rotations in two Dimensions</h2><p>先研究二维空间中的转动。</p>
+<h3 id="特殊正交群-SO-2"><a href="#特殊正交群-SO-2" class="headerlink" title="特殊正交群$SO(2)$"></a>特殊正交群$SO(2)$</h3><p>转动的定义中包含有“矢量模长不变”，但显然不只有这个要求，因为起码反射也符合这个要求，因此如果只有“模长不变”的要求的话，那么转动和反射便没有区别。但我们可以先找到所有满足“模长不变”的操作，再从中挑出我们心仪的转动操作。</p>
+<p>根据上述定义自然有（选取矩阵表示）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ v'=&Ov\\
+ (v')^Tv'=&v^TO^TOv=v^Tv\\
+ \Rightarrow O^TO=&I
+\end{align}</script><p>显然满足“模长不变”的操作的矩阵也满足<strong>正交矩阵</strong>的定义:$O^T=O^{-1}$</p>
+<p>很容易可以证明，以矩阵乘法作为群乘法是封闭的，逆元恒元结合律自然有矩阵运算保证。因此所有2x2的正交矩阵构成二维实空间的正交群$O(2)$。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ O^TO=&I\\
+ \Rightarrow \det{O}=&\pm1
+\end{align}</script><p>其中满足$\det(O)=1$的一般矩阵为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ R=\mqty(\cos\theta&-\sin\
+ \theta\\
+ \sin\theta & \cos\theta)
+\end{align}</script><p>满足$\det(O)=-1$的一般矩阵为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P=\mqty(\cos\theta&\sin\
+ \theta\\
+ \sin\theta & -\cos\theta)
+\end{align}</script><p>很容易验证第一类群元代表纯转动，第二类代表反射（关于$\theta /2$反射）。因此把第一类群元挑出来构成另外一个群$SO(2)$，称为特殊正交群。</p>
+<h3 id="U-1"><a href="#U-1" class="headerlink" title="U(1)"></a>U(1)</h3><p>对于复数而言，由于欧拉公式$e^{i\theta}=\cos\theta+i\sin\theta$，复数天生就很容易可以表示转动。同样在复数域中我们很容易可以得到，模长不变的操作满足</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ v'=&Uv\\
+ (v')^\dagger v'=&v^\dagger U^\dagger Uv=v^\dagger v\\
+ \Rightarrow U^\dagger U=&I
+\end{align}</script><p>在复数域中我们很容易取到$U=e^{i\theta}$，满足上述要求，以复数乘法为群乘法，构成幺正群$U(1)$。为了与实数域的转动群对比，我们也为其选取矩阵表示(用2x2的实矩阵来表示复数)</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ 1=\mqty(1&0\\0&1),\quad i=\mqty(0&-1\\1&0)
+\end{align}</script><p>如此，复数域上的两个基底都被实矩阵表示了，这样复空间中的转动便可以写为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e^{i\theta}=&1\cdot \cos\theta+i\cdot \sin\theta\\
+ =&\mqty(\cos\theta&0\\0&\cos\theta)+\mqty(0&-\sin\theta\\\sin\theta&0)\\
+ =&\mqty(\cos\theta&-\sin\
+ \theta\\
+ \sin\theta & \cos\theta)
+\end{align}</script><p>嗯，我们发现复数域中的幺正群$U(1)$的矩阵表示与特殊正交群$SO(2)$的矩阵表示一模一样，很显然两个群之间的映射$\Pi$是双射，而且满足$\Pi(g_1)\Pi(g_2)=\Pi(g_1g_2)$，所以$U(1)$群与$SO(2)$群同构。</p>
+<h2 id="Rotations-in-three-Dimensions"><a href="#Rotations-in-three-Dimensions" class="headerlink" title="Rotations in three Dimensions"></a>Rotations in three Dimensions</h2><p>仿照上一节的操作，我们可以得到我们已经很熟悉的$SO(3)$群元，一般将其分为绕xyz轴的旋转</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ &R_x=\mqty(1&0&0\\
+ 0&\cos\theta &-\sin\theta\\
+ 0&\sin\theta&\cos\theta),\quad 
+ R_y=\mqty(\cos\theta&0&\sin\theta\\0&1&0\\
+ -\sin\theta&0&\cos\theta)\\
+ &R_z=\mqty(\cos\theta&-\sin\theta&0\\
+ \sin\theta&\cos\theta&0\\
+ 0&0&1)
+\end{align}</script><p>接着我们会猜想，是否也有一个复数的幺正群与$SO(3)$群同构呢？因此接下来便是要研究三维空间中复数的转动。</p>
+<h3 id="四元数Quaternions的转动"><a href="#四元数Quaternions的转动" class="headerlink" title="四元数Quaternions的转动"></a>四元数Quaternions的转动</h3><p>前面二维空间时，我们选取了两个实自由度的复数域，因此我们或许会猜想这时要选取三个实自由度的复数域，但在数学上，这样的数域定义似乎不是很良好（具体可以查一下三元数），而四元数在抛弃乘法交换律的前提下，性质非常符合我们的要求，因此我们使用四元数来描述三维转动。（很快你会发现，这个四元数跟我们熟悉的泡利矩阵基本算同一个东西）</p>
+<p>四元数的构建需要引入另外两个单位复数满足</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\begin{cases}
+ j^2=k^2=i^2=-1&\\
+ ijk=1\\
+ ij=-ji,\ ik=-ki,\ jk=-kj
+\end{cases}
+\end{align}</script><p>注意我们新引入的复数是不满足乘法交换律的，第三行可以从第二行推出来。<br>将四元数记作$q=a1+bi+cj+dk$，与二维的情况相同，我们要求四元数满足</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ q^\dagger q=&1\\
+ \Rightarrow a^2+b^2+c^2+d^2=&1
+\end{align}</script><p>四元数在四元数乘法作为群乘法时构成一个群。我们先证明四元数可以对矢量进行转动操作，为此我们要研究四元数的结构。</p>
+<p>四元数中三个复数基底之间是不满足交换律的，但他们分别与单位1的乘积是满足交换律的，因此很自然的，三个复数基底自己可以张成一个与单位1没啥关系的向量空间，而且明显是三维的。将这个矢量空间记作W，W空间中的矢量乘积已经被基矢之间的乘积定义了，因此我们可以得到矢量中任意两个矢量$u,v$之间的乘积为(我们把矢量乘积的符号用$\cdot$来表示，但注意这并不是内积<sup><a href="#fn_2" id="reffn_2">2</a></sup>)</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ u\cdot v=&(ai+bj+ck)\cdot (xi+yj+zk)\\
+ =&-ax-by-cz\\
+ &+ayij+azik+bxji+bzjk+cxki+cykj\\
+ =&-ax-by-cz+(bz-cy)i+(cx-az)j+(ay-bx)k\\
+\end{align}</script><p>现在在这个矢量空间W中定义一个内积括号$\expval{}$，其运算规则与高中普通矢量的内积规则相同；同时观察上式的乘积结果，其结果并不能被矢量空间W中的基底线性表示，也就是说这个乘法运算并不是封闭的，根据内积括号与我们曾经学过的叉乘，我们可以将上面的结果写为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ u\cdot v=&-\expval{u,v}+u\times v
+\end{align}</script><blockquote id="fn_2">
+<sup>2</sup>. “内积”是一种映射:$V\times V\to \mathbb{R}$的映射，属于张量，我们在这个矢量空间中还没下这个定义<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<p>好吧，现在矢量空间W中的矢量乘法是不封闭的，听起来不太妙，但是没关系，我们用于转动的是四元数q，而不是这三个虚数，把实维度补充到上面的矢量空间后$\mathbb{R}\times W$的空间是四元数的空间，它的乘法是封闭的，设四元数$q=m+u,p=n+v$，把每个四元数都写成实数与三维矢量的叠加（聪明的你肯定知道我哪个字母指代的是实数，哪个是虚数矢量），我们再来看看四元数的乘法:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ q\cdot p=&(m+u)(n+v)\\
+ =&mn+mv+un+uv\\
+ =&mn-\expval{u,v}+mv+nu+u\times v\\
+ \Rightarrow q^\dagger\cdot q=&m^2+\expval{u,u}+u\times u\\
+ =&\expval{q,q}
+\end{align}</script><p>原谅我在这之前还没有在四元数的空间中定义内积括号<sup><a href="#fn_3" id="reffn_3">3</a></sup>，现在我们发现四元数的厄米乘上自身得到的便是该四元数的内积，这与$\mathbb{C}$是一样的，因此我们可以很安心地取一个模长为1的四元数q，然后我们声称他可以转动一个三维矢量，你兴冲冲地取来一个矢量$xe_x+ye_y+ze_z$，然后把归一化的四元数丢上去$(xe_x+ye_y+ze_z)(m+u)$，嗯，左边是一个矢量，右边的实数部分可以直接乘上去，但是u也是一个三维矢量，它的基底是$ijk$，它和$e_x,e_y,e_z$乘积得到….？等下，这个式子怎么会有六个矢量基底，你发现这不妥，所以这是三维矢量当然不能拿$\mathbb{R}^3$来表示，四元数自己的运算封闭，你得拿四元数来表示，好在四元数中自带一个三维的矢量空间W，最基本的数乘和矢量加法规则还是满足的，所以我们要用W中的矢量$v$来表示三维空间中的矢量。好了，这下我们的四元数乘矢量$q\cdot v$的表达式中起码不会出现一堆不知道怎么运算的矢量乘积，但是有一个严重的问题，你可能还看不出来，没关系，你按照我们之前的四元数乘法算一下:</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 但是没关系，相信你很快就反应过来了<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<script type="math/tex; mode=display">
+\begin{align}
+ qv=&(m+u)v\\
+ =&-\expval{u,v}+mv+u\times v
+\end{align}</script><p>你说：”我们已经用四元数把矢量$v$转动啦！”但是仔细一瞧，转动后的矢量是哪个矢量呢？$-\expval{u,v}$甚至不在矢量空间W里，这是一个严重的问题。所以这意味着四元数的转动表示肯定不是$qv$，我们也不卖关子了，四元数中的转动应当是$qvq^\dagger$<sup><a href="#fn_4" id="reffn_4">4</a></sup>:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ qvq^\dagger=&(m+u)v(m-u)\\
+ =&(-\expval{u,v}+mv+u\times v)(m-u)\\
+ =&-m\expval{u,v}+m^2v +mu \times v\\
+ &+\expval{u,v}u+m\expval{v,u}-mv\times u+\expval{u\times v,u}-u\times v\times u\\
+ =&m^2v+2mu\times v+\expval{u,v}u\in W
+\end{align}</script><blockquote id="fn_4">
+<sup>4</sup>. 当然，如果你喜欢，也可以定义$q^\dagger vq$，只不过你定义的转动方向可能和我的不太一样<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<p>太好了，我们终于得到了四元数表示的转动，很容易验证$qvq^\dagger$的内积与$v$的内积是相同的。</p>
+<p>证明了四元数本身可以表示转动后，紧接着便要研究四元数的转动群与$SO(3)$群之间的联系</p>
+<h3 id="双覆盖-double-cover"><a href="#双覆盖-double-cover" class="headerlink" title="双覆盖(double cover)"></a>双覆盖(double cover)</h3><p>仿照二维的思路，先为四元数的基矢找到合适的矩阵表示，合适的矩阵表示有很多种，但这里选择2x2矩阵来表示(为了和泡利矩阵对应，这里的矩阵和书上的不太一样)</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ 1=\mqty(1&0\\0&1),&\quad i=\mqty(0&i\\ i&0)\\
+ j=\mqty(0&1\\-1&0),&\quad k=\mqty(i&0\\0&-i)
+\end{align}</script><p>我们现在得到了四元数的矩阵表示，而且行列式为+1，上面的四元数构成特殊酉群$SU(2)$。<br>任意转动$q=a+bi+cj+dk$，以绕z轴为例</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ R_z(\theta)=&\cos\theta+\sin\theta k\\
+ =&\mqty(e^{i\theta}&0\\
+ 0&e^{-i\theta})
+\end{align}</script><p>取矢量$v=(1,0,0)^T$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ R_z(\theta)vR^\dagger(\theta)=&\mqty(e^{i\theta}&0\\
+ 0&e^{-i\theta})\mqty(0&i\\ i&0)\mqty(e^{-i\theta}&0\\
+ 0&e^{i\theta})\\
+ =&\mqty(0&ie^{2i\theta}\\ie^{-2i\theta}&0)\\
+ =&\mqty(0&i\cos2\theta-\sin2\theta\\i\cos2\theta+\sin2\theta&0)\\
+ =&(\cos2\theta,-\sin2\theta,0)^T
+\end{align}</script><p>其转动的角度为$2\theta$，因此$SU(2)$群中的参数为$[0,\pi]$或$[\pi,2\pi]$对应的群元便可以与$SO(3)$中的群元同构，换句话说两个群之间的映射不是单射，因此不满足双射，$SO(3)$群与$SU(2)$群不是同构关系，而是$SU(2)$群双覆盖$SO(3)$群。书中喜欢用半球与完整求的关系来比喻两个群，但我觉得抛物线$y=x^2$与$x=0(y&gt;0)$的关系更适合比喻两个群（或者单层吉士堡也很贴合）。</p>
+<h2 id="李代数-Lie-Algebras"><a href="#李代数-Lie-Algebras" class="headerlink" title="李代数 Lie Algebras"></a>李代数 Lie Algebras</h2><p>李群中的任一群元可以从生成元+指数映射得到。这应该是从物理意义得到的，比如说三维空间轴绕z轴的转动$\theta$的操作，指数函数的定义告诉我们，可以表示成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ R_z(\theta)=&\lim_{N\to \infty}(1+\frac{\theta}{N}J_z)^N\\
+ =&e^{\theta J_z}
+\end{align}</script><p>若是把转动群理解为参数同胚群，则生成元便是在流行上指定了方向，选择了一条参数曲线，参数是$\theta$。流形上选定了图集后，自然便有n个坐标基矢，对应n个独立的方向，这应该对应生成元的基底？</p>
+<ul>
+<li><p>对于任意群元可以通过求导，然后参数取0得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+J_z=&\eval{\dv{\theta}R_z}_{\theta=0}
+\end{align}</script></li>
+<li><p>生成元本身构成一个向量空间$\mathfrak{g}$，其中的乘法用李括号$\comm{}{}$来定义，这个乘法是线性且封闭的，且不满足交换律、满足雅阁比恒等式</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\begin{cases}
+\comm{A}{B}=-\comm{B}{A}\\
+\comm{A}{\comm{B}{C}}+\comm{B}{\comm{C}{A}}+\comm{C}{\comm{A}{B}}=0
+\end{cases}
+\end{align}</script></li>
+</ul>
+<ul>
+<li>李代数与群的关系是：多个群可能对应同一个李代数</li>
+</ul>
+<h3 id="以-SO-3-为例"><a href="#以-SO-3-为例" class="headerlink" title="以$SO(3)$为例"></a>以$SO(3)$为例</h3><ul>
+<li><p>群元素满足$O^TO=I$，即$e^{-\theta J^T}e^{\theta J}=I$，生成元反对称</p>
+<script type="math/tex; mode=display">
+\begin{align}
+J^T+J=I
+\end{align}</script></li>
+<li><p>同时特殊正交群还要求$\det{O}=1$，由矩阵论中的结论的$\det{e^A}=e^{\tr{A}}$得生成元无迹</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\tr{J}=0
+\end{align}</script></li>
+<li><p>特殊正交群生成元基底的写出，我们实际上是将已知的转动矩阵小量展开到一阶，或者用前面提到的求导的方法：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+J_1=\mqty(0&0&0\\0&0&-1\\0&1&0),\quad J_2=\mqty(0&0&1\\0&0&0\\-1&0&0),\quad J_3=\mqty(0&-1&0\\1&0&0\\0&0&0)
+\end{align}</script><p>很容易可以得到，生成元的的矩阵表示为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(J_i)_{jk}=-\epsilon_{ijk}
+\end{align}</script><p>也很容易验证，上式与参数$\theta$带入指数里，可以得到先前的转动矩阵。</p>
+</li>
+<li><p>因为李代数的乘法运算是李括号，所以只需要知道基底的李括号，便可以得到李代数中所有生成元之间的乘积（是不是让你想起基本对易关系）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\comm{J_i}{J_j}=&\epsilon_{ijk}J_k
+\end{align}</script></li>
+<li><p>比起反对称矩阵，我们更喜欢厄米矩阵，因为厄米算符在量子力学中尤其重要，因此</p>
+<script type="math/tex; mode=display">
+\begin{align}
+e^{\theta J}=e^{-i\theta iJ}
+\end{align}</script><p>我们把上面的$iJ$重新定义为$J$，则生成元可以写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+J_1=\mqty(0&0&0\\0&0&-i\\0&i&0),\quad J_2=\mqty(0&0&i\\0&0&0\\-i&0&0),\quad J_3=\mqty(0&-i&0\\i&0&0\\0&0&0)
+\end{align}</script><p>如此$e^{-i\theta J}$得到的转动效果与原先是一样的。对易关系变为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\comm{J_i}{J_j}=&i\epsilon_{ijk}J_k
+\end{align}</script></li>
+</ul>
+<h3 id="以-SU-2-为例"><a href="#以-SU-2-为例" class="headerlink" title="以$SU(2)$为例"></a>以$SU(2)$为例</h3><ul>
+<li><p>有了前面的讨论，这里我们直接在指数上放上一个虚数i，则酉群的定义要求生成元是厄米矩阵</p>
+<script type="math/tex; mode=display">
+\begin{align}
+U^\dagger U=&I\\
+e^{-iJ^\dagger}e^{iJ}=&I\\
+\Rightarrow J^\dagger=J
+\end{align}</script></li>
+<li><p>特殊酉群要求行列式为0，因此$SU(2)$生成元也是无迹的</p>
+</li>
+<li><p>$SU(2)$的生成元正是泡利矩阵</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\sigma_x=\mqty(0&1\\1&0),\quad \sigma_y=\mqty(0&-i\\i&0),\quad \sigma_z=\mqty(1&0\\0&-1)
+\end{align}</script></li>
+<li><p>泡利矩阵满足如下对易关系（<a href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">关于更多泡利矩阵可以参考这里的“自旋”章节</a>)）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\comm{\sigma_i}{\sigma_j}=2i\epsilon_{ijk}\sigma_k
+\end{align}</script></li>
+<li><p>泡利矩阵作为李代数空间的基底，基底当然可以任意选取长度，我们选$\sigma/2$作为基底，则基底的对易关系便于$SO(3)$的相同</p>
+</li>
+</ul>
+<p>到此，我们已经发现了$SU(2)$的李代数与$SO(3)$的相同，为了进一步描述群，我们需要给群下一个更抽象的定义，分清它与矩阵的关系。</p>
+<h3 id="李群的抽象定义"><a href="#李群的抽象定义" class="headerlink" title="李群的抽象定义"></a>李群的抽象定义</h3><h2 id="表示论-Representation-Theory"><a href="#表示论-Representation-Theory" class="headerlink" title="表示论 Representation Theory"></a>表示论 Representation Theory</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/en/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
+              <a href="/en/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/en/tags/%E7%BE%A4%E8%AE%BA/" rel="tag"># 群论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/en/2023/03/01/Solid-State-Physics-Note-Part-1/" rel="prev" title="固体物理学习笔记（第一章）">
+                  <i class="fa fa-chevron-left"></i> 固体物理学习笔记（第一章）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/en/2023/03/08/Thermodynamic-Review-Note/" rel="next" title="热统复习（热力学部分）">
+                  热统复习（热力学部分） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">59k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:47</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/en/js/comments.js"></script><script src="/en/js/utils.js"></script><script src="/en/js/motion.js"></script><script src="/en/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/en/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/en/2023/03/06/Lie-Group-Study-Note-(part1)/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
