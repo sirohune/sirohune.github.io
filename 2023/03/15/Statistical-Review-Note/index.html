@@ -17,14 +17,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
+    <meta name="description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="热统复习（统计物理部分）">
 <meta property="og:url" content="https://sirohune.site/2023/03/15/Statistical-Review-Note/index.html">
 <meta property="og:site_name" content="はくのblog">
-<meta property="og:description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
+<meta property="og:description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-15T01:51:10.000Z">
 <meta property="article:modified_time" content="2023-04-15T03:34:24.063Z">
@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -130,11 +131,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-language"><a href="https://sirohune.site/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </header>
         
@@ -154,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6"><span class="nav-number">1.</span> <span class="nav-text">统计力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%91%E7%8B%AC%E7%AB%8B%E7%B2%92%E5%AD%90%E7%9A%84%E6%9C%80%E6%A6%82%E7%84%B6%E5%88%86%E5%B8%83"><span class="nav-number">1.1.</span> <span class="nav-text">近独立粒子的最概然分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E5%88%86%E5%B8%83"><span class="nav-number">1.1.1.</span> <span class="nav-text">玻尔兹曼分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E8%89%B2%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%B9%E7%B1%B3%E5%88%86%E5%B8%83"><span class="nav-number">1.1.2.</span> <span class="nav-text">玻色分布与费米分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%88%86%E5%B8%83%E4%B8%8E%E9%87%8F%E5%AD%90%E5%88%86%E5%B8%83%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">1.1.3.</span> <span class="nav-text">经典分布与量子分布之间的联系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E7%B3%BB%E7%BB%BC%E4%B8%8E%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">正则系综与玻尔兹曼统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">温度的统计定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E5%88%B0%E6%80%81%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">得到态函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E8%83%BD"><span class="nav-number">1.2.0.2.1.</span> <span class="nav-text">内能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%86%B5"><span class="nav-number">1.2.0.2.2.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.2.0.2.3.</span> <span class="nav-text">亥姆霍兹自由能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%84%93"><span class="nav-number">1.2.0.2.4.</span> <span class="nav-text">焓</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maxwell%E9%80%9F%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Maxwell速率分布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A8%E6%AD%A3%E5%88%99%E7%B3%BB%E7%BB%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">巨正则系综与量子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6%E5%8A%BF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">化学势的统计定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%87%BA%E9%85%8D%E5%88%86%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.2.</span> <span class="nav-text">写出配分函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.3.</span> <span class="nav-text">量子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%BB%E8%89%B2%E5%AD%90"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">玻色子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%B9%E7%B1%B3%E5%AD%90"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">费米子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6"><span class="nav-number">1.</span> <span class="nav-text">统计力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%91%E7%8B%AC%E7%AB%8B%E7%B2%92%E5%AD%90%E7%9A%84%E6%9C%80%E6%A6%82%E7%84%B6%E5%88%86%E5%B8%83"><span class="nav-number">1.1.</span> <span class="nav-text">近独立粒子的最概然分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E5%88%86%E5%B8%83"><span class="nav-number">1.1.1.</span> <span class="nav-text">玻尔兹曼分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%BB%E8%89%B2%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%B9%E7%B1%B3%E5%88%86%E5%B8%83"><span class="nav-number">1.1.2.</span> <span class="nav-text">玻色分布与费米分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%88%86%E5%B8%83%E4%B8%8E%E9%87%8F%E5%AD%90%E5%88%86%E5%B8%83%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">1.1.3.</span> <span class="nav-text">经典分布与量子分布之间的联系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E7%B3%BB%E7%BB%BC%E4%B8%8E%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">正则系综与玻尔兹曼统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">温度的统计定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%99%E5%87%BA%E9%85%8D%E5%88%86%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">写出配分函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E5%88%B0%E6%80%81%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">得到态函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E8%83%BD"><span class="nav-number">1.2.0.3.1.</span> <span class="nav-text">内能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%86%B5"><span class="nav-number">1.2.0.3.2.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.2.0.3.3.</span> <span class="nav-text">亥姆霍兹自由能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%84%93"><span class="nav-number">1.2.0.3.4.</span> <span class="nav-text">焓</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maxwell%E9%80%9F%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">Maxwell速率分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E5%88%86%E8%BE%A8%E6%80%A7%E4%B8%8E%E5%A4%9A%E7%B2%92%E5%AD%90%E9%85%8D%E5%88%86%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">可分辨性与多粒子配分函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A8%E6%AD%A3%E5%88%99%E7%B3%BB%E7%BB%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">巨正则系综与量子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6%E5%8A%BF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">化学势的统计定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%87%BA%E9%85%8D%E5%88%86%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">写出配分函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.3.</span> <span class="nav-text">量子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%BB%E8%89%B2%E5%AD%90"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">玻色子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%B9%E7%B1%B3%E5%AD%90"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">费米子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -269,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>24 分钟</span>
+      <span>23 分钟</span>
     </span>
 </div>
 
@@ -282,558 +309,348 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考书目：
 《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell
+</code></pre><p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
 <span id="more"></span>
-<h1 id="统计力学">统计力学</h1>
-<h2 id="近独立粒子的最概然分布">近独立粒子的最概然分布</h2>
-<p>近独立的意思是说粒子之间的相互作用能量远小于粒子本身的能量，但并不是说完全没有相互作用，完全没有相互作用的是自由粒子。在经典力学中所有粒子都是可分辨的，因此统计物理早期将粒子视作可分辨的近独立粒子，这种系统称为<strong>玻尔兹曼系统</strong>，得到的是经典统计。量子力学中的粒子是不可分辨的全同粒子，全同粒子分为<strong>玻色子</strong>与<strong>费米子</strong>，玻色子做宇称变换后波函数不变，费米子做宇称变换后波函数出现负号。两种粒子构成的系统分别称为<strong>玻色系统</strong>与<strong>费米系统</strong>，得到的都是量子统计。</p>
-<p>很显然三种系统的分布是不一样的（<del>不然为什么要分为三个系统</del>），为什么全同与可分辨、宇称性会影响粒子分布呢？这与我们得到分布的方式有关，我们是通过<strong>最概然</strong>得到分布的，什么意思呢？对于一个系统，我们先列出它的所有宏观态，我们观察结果只能观测到这些宏观态。每一个宏观态包含有很多个可能的微观态，比如说掷两个骰子，将面数求和，得到的其中一个宏观态便是6，这个6可能是1+5、2+4、3+3等情况，这些就是微观态。我们认为出现宏观态的概率与其微观态个数成正比<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>。最概然的分布，自然就是微观态的极大值点，因此我们找到一个系统的所有可能状态（微观态）后，要求一阶变分为0即可得到系统的分布<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
-<p>这样我们就得到了写出分布的标准步骤 1. 写出微观态个数表达式 2.
-要求一阶变分为0</p>
+<h1 id="统计力学"><a href="#统计力学" class="headerlink" title="统计力学"></a>统计力学</h1><h2 id="近独立粒子的最概然分布"><a href="#近独立粒子的最概然分布" class="headerlink" title="近独立粒子的最概然分布"></a>近独立粒子的最概然分布</h2><p>近独立的意思是说粒子之间的相互作用能量远小于粒子本身的能量，但并不是说完全没有相互作用，完全没有相互作用的是自由粒子。在经典力学中所有粒子都是可分辨的，因此统计物理早期将粒子视作可分辨的近独立粒子，这种系统称为<strong>玻尔兹曼系统</strong>，得到的是经典统计。量子力学中的粒子是不可分辨的全同粒子，全同粒子分为<strong>玻色子</strong>与<strong>费米子</strong>，玻色子做宇称变换后波函数不变，费米子做宇称变换后波函数出现负号。两种粒子构成的系统分别称为<strong>玻色系统</strong>与<strong>费米系统</strong>，得到的都是量子统计。</p>
+<p>很显然三种系统的分布是不一样的（<del>不然为什么要分为三个系统</del>），为什么全同与可分辨、宇称性会影响粒子分布呢？这与我们得到分布的方式有关，我们是通过<strong>最概然</strong>得到分布的，什么意思呢？对于一个系统，我们先列出它的所有宏观态，我们观察结果只能观测到这些宏观态。每一个宏观态包含有很多个可能的微观态，比如说掷两个骰子，将面数求和，得到的其中一个宏观态便是6，这个6可能是1+5、2+4、3+3等情况，这些就是微观态。我们认为出现宏观态的概率与其微观态个数成正比<sup><a href="#fn_1" id="reffn_1">1</a></sup>。最概然的分布，自然就是微观态的极大值点，因此我们找到一个系统的所有可能状态（微观态）后，要求一阶变分为0即可得到系统的分布<sup><a href="#fn_2" id="reffn_2">2</a></sup>。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. 统计物理还有一个等概率原理，我忘记讲了。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 什么？你说这不一定是极大值？实际上你可以证明二阶变分小于0，但我太懒了。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<p>这样我们就得到了写出分布的标准步骤</p>
+<ol>
+<li>写出微观态个数表达式</li>
+<li>要求一阶变分为0</li>
+</ol>
 <p>因为三种系统写出来的微观态个数表达式是不一样的，所以变分得到的分布也是不一样的。</p>
-<h3 id="玻尔兹曼分布">玻尔兹曼分布</h3>
-<p>假设有N个例子，系统总能量是E，体积是V。粒子所处的第l个能级用<span
-class="math inline">\(\epsilon_l\)</span>来表示，第l能级的简并度用<span
-class="math inline">\(\omega_l\)</span>来表示，能级l上的粒子数用<span
-class="math inline">\(a_l\)</span>来表示。显然有 <span
-class="math display">\[
+<h3 id="玻尔兹曼分布"><a href="#玻尔兹曼分布" class="headerlink" title="玻尔兹曼分布"></a>玻尔兹曼分布</h3><p>假设有N个例子，系统总能量是E，体积是V。粒子所处的第l个能级用$\epsilon_l$来表示，第l能级的简并度用$\omega_l$来表示，能级l上的粒子数用$a_l$来表示。显然有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
-N=\sum\limits_la_l\\
-E=\sum\limits_la_l\epsilon_l
-\end{cases}
-\end{equation}
-\]</span>
-为了方便记忆，我们可以把系统想象成一座图书馆，第几能级便是图书馆的第几层，每一层会有一个书架，而书架也会分层，每层书架便对应一个简并态<a
-href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>，每能级的粒子数自然是每层楼的书本数。玻尔兹曼系统的每本书都是不同的，因此对于第l楼，有<span
-class="math inline">\(a_l\)</span>本书，每本书都有<span
-class="math inline">\(\omega_l\)</span>种选择，因此每层有<span
-class="math inline">\(\omega_l^{a_l}\)</span>中情况，对于所有楼层便有<span
-class="math inline">\(\prod\limits_l\omega_l^{a_l}\)</span>种情况，因为所有书都不一样，所以对所有书进行全排列<span
-class="math inline">\(N!\)</span>，再除掉每层楼已经算过的情况<span
-class="math inline">\(\prod\limits_la_l!\)</span>，因此最后得到微观态数目为</p>
-<p><span class="math display">\[
+ \begin{cases}
+ N=\sum\limits_la_l\\
+ E=\sum\limits_la_l\epsilon_l
+ \end{cases}
+\end{equation}</script><p>为了方便记忆，我们可以把系统想象成一座图书馆，第几能级便是图书馆的第几层，每一层会有一个书架，而书架也会分层，每层书架便对应一个简并态<sup><a href="#fn_3" id="reffn_3">3</a></sup>，每能级的粒子数自然是每层楼的书本数。玻尔兹曼系统的每本书都是不同的，因此对于第l楼，有$a_l$本书，每本书都有$\omega_l$种选择，因此每层有$\omega_l^{a_l}$中情况，对于所有楼层便有$\prod\limits_l\omega_l^{a_l}$种情况，因为所有书都不一样，所以对所有书进行全排列$N!$，再除掉每层楼已经算过的情况$\prod\limits_la_l!$，因此最后得到微观态数目为</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 不要问为什么这图书馆这么小，书架每层只能放一本书，问就是不知道。<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<script type="math/tex; mode=display">
 \begin{equation}
-\Omega_{M.B}=N!\prod_l\frac{\omega_l^{a_l}}{a_l!}
-\end{equation}
-\]</span> 将上式进行对粒子分布进行变分（也就是对<span
-class="math inline">\(a_l\)</span>进行变分，因为我们要求得的就是<span
-class="math inline">\(a_l\)</span>），同时因为变分有两个约束，粒子数守恒<span
-class="math inline">\(\delta N=\sum\limits_l\delta
-a_l=0\)</span>以及能量守恒<span class="math inline">\(\delta
-E=\sum\limits_l\epsilon_l\delta
-a_l\)</span>，所以要引入拉格朗日乘子，还有一步很重要的是，直接对<span
-class="math inline">\(\Omega\)</span>变分有点困难，根据其表达式可以看出，对<span
-class="math inline">\(\ln\Omega\)</span>变分是更加方便的
-，而且对数函数本身是单调的 <span class="math display">\[
+ \Omega_{M.B}=N!\prod_l\frac{\omega_l^{a_l}}{a_l!}
+\end{equation}</script><p>将上式进行对粒子分布进行变分（也就是对$a_l$进行变分，因为我们要求得的就是$a_l$），同时因为变分有两个约束，粒子数守恒$\delta N=\sum\limits_l\delta a_l=0$以及能量守恒$\delta E=\sum\limits_l\epsilon_l\delta a_l$，所以要引入拉格朗日乘子，还有一步很重要的是，直接对$\Omega$变分有点困难，根据其表达式可以看出，对$\ln\Omega$变分是更加方便的 ，而且对数函数本身是单调的</p>
+<script type="math/tex; mode=display">
 \require{physics}
 \begin{align}
-\delta\ln\Omega_{M.B}=&amp;\delta\pqty{\sum_l\pqty{a_l\ln \omega_l-\ln
-(a_l!)}}\\
-=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta \ln(a_l!)}
-\end{align}
-\]</span> 使用斯特朗公式<span
-class="math inline">\(\ln(a_l!)\approx=a_l\pqty{\ln a_l-1}\)</span>
-<span class="math display">\[
+ \delta\ln\Omega_{M.B}=&\delta\pqty{\sum_l\pqty{a_l\ln \omega_l-\ln (a_l!)}}\\
+ =&\sum_l\pqty{\delta a_l\ln\omega_l-\delta \ln(a_l!)}
+\end{align}</script><p>使用斯特朗公式$\ln(a_l!)\approx=a_l\pqty{\ln a_l-1}$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta\ln\Omega_{M.B}=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta
-a_l\ln a_l}\\
-=&amp;\sum_l\delta a_l \ln\frac{\omega_l}{a_l}
-\end{align}
-\]</span> <span class="math display">\[
+ \delta\ln\Omega_{M.B}=&\sum_l\pqty{\delta a_l\ln\omega_l-\delta a_l\ln a_l}\\
+ =&\sum_l\delta a_l \ln\frac{\omega_l}{a_l}
+\end{align}</script><script type="math/tex; mode=display">
 \begin{align}
-\Rightarrow \delta\ln\Omega_{M.B}-\alpha\sum_l\delta a_l-\beta\sum_l
-\epsilon_l\delta a_l=&amp;0\\
-\sum_l\pqty{\ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l}\delta
-a_l=0\\
-\Rightarrow \ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l=&amp;0\\
-\end{align}
-\]</span> 因此我们得到粒子在不同能量的分布为 <span
-class="math display">\[
+ \Rightarrow \delta\ln\Omega_{M.B}-\alpha\sum_l\delta a_l-\beta\sum_l \epsilon_l\delta a_l=&0\\
+ \sum_l\pqty{\ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l}\delta a_l=0\\
+ \Rightarrow \ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l=&0\\
+\end{align}</script><p>因此我们得到粒子在不同能量的分布为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-a_l=\omega_l e^{-\pqty{\alpha+\beta\epsilon_l}}
-\end{equation}
-\]</span> 根据上式我们可以得到粒子在不同微观态的平均分布应该为 <span
-class="math display">\[
+ a_l=\omega_l e^{-\pqty{\alpha+\beta\epsilon_l}}
+\end{equation}</script><p>根据上式我们可以得到粒子在不同微观态的平均分布应该为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-f_l=&amp;\frac{a_l}{\omega_l}\\
-=&amp;e^{-\pqty{\alpha+\beta\epsilon_l}}
-\end{align}
-\]</span>
-那么拉格朗日乘子作为参数出现在表达式里是什么意义呢？由于是复习，这里就不卖关子了，<span
-class="math inline">\(\beta=1/kT\)</span> 而<span
-class="math inline">\(\alpha\)</span>作为归一化因子，没什么物理意义。</p>
-<h3 id="玻色分布与费米分布">玻色分布与费米分布</h3>
-<p>首先要写出微观态的个数，这里也叫量子态的个数。
-对于玻色分布，回到图书馆的第l楼，对于<span
-class="math inline">\(a_l\)</span>本全同的书以及<span
-class="math inline">\(\omega_l\)</span>层书架，这是一个组合问题，我们可以将书以及书架的隔板看成<span
-class="math inline">\(a_l+\omega_l\)</span>个“东西”，事先并不知道他们是书还是书架的隔板，从中挑取<span
-class="math inline">\(\omega_l\)</span>个“东西”出来作为书架，其他自然成为书，但是书不能放在地上，所以最底下那一个“东西”必须是书架的隔板，所以最后变成在<span
-class="math inline">\(a_l+\omega_l-1\)</span>个“东西”里挑<span
-class="math inline">\(\omega_l-1\)</span>个出来作为隔板<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>，其他的自然成为书，这种操作并不会涉及全同书的顺序问题，因此每一层有<span
-class="math inline">\(C_{a_l+\omega_l-1}^{\omega_l-1}=\frac{(\omega_l+a_l-1)!}{(\omega-1)!a_l!}\)</span>种情况
-<span class="math display">\[
+ f_l=&\frac{a_l}{\omega_l}\\
+ =&e^{-\pqty{\alpha+\beta\epsilon_l}}
+\end{align}</script><p>那么拉格朗日乘子作为参数出现在表达式里是什么意义呢？由于是复习，这里就不卖关子了，$\beta=1/kT$ 而$\alpha$作为归一化因子，没什么物理意义。</p>
+<h3 id="玻色分布与费米分布"><a href="#玻色分布与费米分布" class="headerlink" title="玻色分布与费米分布"></a>玻色分布与费米分布</h3><p>首先要写出微观态的个数，这里也叫量子态的个数。<br>对于玻色分布，回到图书馆的第l楼，对于$a<em>l$本全同的书以及$\omega_l$层书架，这是一个组合问题，我们可以将书以及书架的隔板看成$a_l+\omega_l$个“东西”，事先并不知道他们是书还是书架的隔板，从中挑取$\omega_l$个“东西”出来作为书架，其他自然成为书，但是书不能放在地上，所以最底下那一个“东西”必须是书架的隔板，所以最后变成在$a_l+\omega_l-1$个“东西”里挑$\omega_l-1$个出来作为隔板<sup><a href="#fn_4" id="reffn_4">4</a></sup>，其他的自然成为书，这种操作并不会涉及全同书的顺序问题，因此每一层有$C</em>{a_l+\omega_l-1}^{\omega_l-1}=\frac{(\omega_l+a_l-1)!}{(\omega-1)!a_l!}$种情况</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}
-\end{equation}
-\]</span></p>
-<p>对于费米分布，因为遵循泡利不相容原理，每个量子态只能有一个粒子，也就是说每层书架最多只能放一本书。因此对于第l楼来说有<span
-class="math inline">\(C_{\omega_l}^{a_l}=\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\)</span>种情况<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a> <span class="math display">\[
+ \Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}
+\end{equation}</script><blockquote id="fn_4">
+<sup>4</sup>. 你如果喜欢挑$a_l$本书出来结果也是一样的<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<p>对于费米分布，因为遵循泡利不相容原理，每个量子态只能有一个粒子，也就是说每层书架最多只能放一本书。因此对于第l楼来说有$C_{\omega_l}^{a_l}=\frac{\omega_l!}{a_l!(\omega_l-a_l)!}$种情况<sup><a href="#fn_5" id="reffn_5">5</a></sup></p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\Omega_{F.D}=\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}
-\end{equation}
-\]</span></p>
-<p>这样我们得到玻色系统和费米系统的量子态数目，现在将其进行变分 <span
-class="math display">\[
+ \Omega_{F.D}=\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}
+\end{equation}</script><blockquote id="fn_5">
+<sup>5</sup>. 这里假设了简并态数目$\omega_l&gt;a_l$<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
+</blockquote>
+<p>这样我们得到玻色系统和费米系统的量子态数目，现在将其进行变分</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta
-\ln\Omega_{F.D}=&amp;\delta\sum_l\bqty{\ln(\omega_l!)-\ln(a_l!)-\ln((\omega_l-a_l)!)}\\
-=&amp;-\delta\sum_l\bqty{a_l(\ln
-a_l-1)-(\omega_l-a_l)(\ln(\omega_l-a_l)-1)}\\
-=&amp;-\sum_l\bqty{\delta a_l\ln
-a_l-\delta(\omega_l-a_l)\ln(\omega_l-a_l)}\\
-=&amp;\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)}\delta a_l
-\end{align}
-\]</span> 上面第二行式子我也用了斯特朗公式，因此有 <span
-class="math display">\[
+ \delta \ln\Omega_{F.D}=&\delta\sum_l\bqty{\ln(\omega_l!)-\ln(a_l!)-\ln((\omega_l-a_l)!)}\\
+ =&-\delta\sum_l\bqty{a_l(\ln a_l-1)-(\omega_l-a_l)(\ln(\omega_l-a_l)-1)}\\
+ =&-\sum_l\bqty{\delta a_l\ln a_l-\delta(\omega_l-a_l)\ln(\omega_l-a_l)}\\
+ =&\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)}\delta a_l
+\end{align}</script><p>上面第二行式子我也用了斯特朗公式，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta\ln\Omega_{F.D}-\alpha\sum_l\delta a_l-\beta\sum_l
-\epsilon_l\delta a_l=&amp;0\\
-=\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l}\delta&amp;
-a_l\\
-\Rightarrow \ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l=&amp;0
-\end{align}
-\]</span> 整理得费米分布如下 <span class="math display">\[
+ \delta\ln\Omega_{F.D}-\alpha\sum_l\delta a_l-\beta\sum_l \epsilon_l\delta a_l=&0\\
+ =\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l}\delta& a_l\\
+ \Rightarrow \ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l=&0
+\end{align}</script><p>整理得费米分布如下</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}+1}
-\end{equation}
-\]</span> 同有量子态分布 <span class="math display">\[
+\end{equation}</script><p>同有量子态分布</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}+1}
-\end{equation}
-\]</span></p>
-<p>玻色分布推导同理，有 <span class="math display">\[
+\end{equation}</script><p>玻色分布推导同理，有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
-a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}-1}\\
-f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}-1}
-\end{cases}
-\end{equation}
-\]</span></p>
-<h3 id="经典分布与量子分布之间的联系">经典分布与量子分布之间的联系</h3>
-<p>简并是量子系统特有的，当简并度的数目远大于该能级的粒子数，即<span
-class="math inline">\(\omega_l\gg
-a_l\)</span>，量子系统特有的简并性便没那么明显，因此该条件称为<strong>经典极限条件</strong>或者<strong>非简并条件</strong>，此时
-<span class="math display">\[
+ \begin{cases}
+ a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}-1}\\
+ f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}-1}
+ \end{cases}
+\end{equation}</script><h3 id="经典分布与量子分布之间的联系"><a href="#经典分布与量子分布之间的联系" class="headerlink" title="经典分布与量子分布之间的联系"></a>经典分布与量子分布之间的联系</h3><p>简并是量子系统特有的，当简并度的数目远大于该能级的粒子数，即$\omega_l\gg a_l$，量子系统特有的简并性便没那么明显，因此该条件称为<strong>经典极限条件</strong>或者<strong>非简并条件</strong>，此时</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Omega_{B.E}=&amp;\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}\\
-\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
-=&amp;\frac{1}{N!}\Omega_{M.B}\\
-\Omega_{F.D}=&amp;\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\\
-\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
-  =&amp;\frac{1}{N!}\Omega_{M.B}
-\end{align}
-\]</span></p>
-<p>同时当<span
-class="math inline">\(e^\alpha\gg1\)</span>时，量子分布的结果都回到玻尔兹曼分布，这两个条件是等价的</p>
-<h2 id="正则系综与玻尔兹曼统计">正则系综与玻尔兹曼统计</h2>
-<p>这里并不会遵循汪志诚老师的思路，我们直接从<strong>正则系综</strong>出发，我们直接关心系统的每一个微观态，而不是宏观态，这样便不用考虑每一宏观态的简并数<a
-href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a></p>
-<p>将系统S与一个大热源接触形成复合系统，整个复合系统的的总能量为E，是一个守恒量，现在想知道系统S处于处于s态的概率是多少，系统S处于s态时拥有能量<span
-class="math inline">\(E_s\)</span>，则热源自然拥有能量<span
-class="math inline">\(E-E_s\)</span>，复合系统以上述方式分配能量的概率就是系统S处于s态的概率，这个概率应当与这种分配方式对应的微观态数目成正比，也就是
-<span class="math display">\[
+ \Omega_{B.E}=&\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}\\
+ \approx&\prod_l\frac{\omega^{a_l}}{a_l!}\\
+ =&\frac{1}{N!}\Omega_{M.B}\\
+ \Omega_{F.D}=&\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\\
+ \approx&\prod_l\frac{\omega^{a_l}}{a_l!}\\
+  =&\frac{1}{N!}\Omega_{M.B}
+\end{align}</script><p>同时当$e^\alpha\gg1$时，量子分布的结果都回到玻尔兹曼分布，这两个条件是等价的</p>
+<h2 id="正则系综与玻尔兹曼统计"><a href="#正则系综与玻尔兹曼统计" class="headerlink" title="正则系综与玻尔兹曼统计"></a>正则系综与玻尔兹曼统计</h2><p>这里并不会遵循汪志诚老师的思路，我们直接从<strong>正则系综</strong>出发，我们直接关心系统的每一个微观态，而不是宏观态，这样便不用考虑每一宏观态的简并数<sup><a href="#fn_6" id="reffn_6">6</a></sup></p>
+<blockquote id="fn_6">
+<sup>6</sup>. 实际上也只是从$a_l$的使用转向$f_s$的使用罢了，本来是数宏观态数目l，每次乘上简并度$\omega_l$，现在是直接数微观态数目s，这样使得表达式看起来更简单，但实际计算时还是老老实实算上简并度。<a href="#reffn_6" title="Jump back to footnote [6] in the text."> &#8617;</a>
+</blockquote>
+<p>将系统S与一个大热源接触形成复合系统，整个复合系统的的总能量为E，是一个守恒量，现在想知道系统S处于处于s态的概率是多少，系统S处于s态时拥有能量$E_s$，则热源自然拥有能量$E-E_s$，复合系统以上述方式分配能量的概率就是系统S处于s态的概率，这个概率应当与这种分配方式对应的微观态数目成正比，也就是</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 P(E_s)\propto \Omega(E-E_s)\times 1
-\end{equation}
-\]</span> 既然如此，只需要计算出微观态数<span
-class="math inline">\(\Omega(E-E_s)\)</span>即可。</p>
-<h4 id="温度的统计定义">温度的统计定义</h4>
-<p>在计算这个微观态前我们还需要做一件事情，便是定义温度。热力学中并没有为我们给出温度的数学定义，我们可以从正则系统统计的方式来定义温度。假设有两个可以交换能量的系统1、2.
-因为两个系统可以交换能量，因此我们一开始并不能知道系统如何分配能量是平衡的，但是我们相信平衡态一定是微观态数目最大的态，因此为求平衡能量分配方式，我们将整个系统的微观态数目对能量进行变分(当然还是先取对数，理由与前面一样)
-<span class="math display">\[
+\end{equation}</script><p>既然如此，只需要计算出微观态数$\Omega(E-E_s)$即可。</p>
+<h4 id="温度的统计定义"><a href="#温度的统计定义" class="headerlink" title="温度的统计定义"></a>温度的统计定义</h4><p>在计算这个微观态前我们还需要做一件事情，便是定义温度。热力学中并没有为我们给出温度的数学定义，我们可以从正则系统统计的方式来定义温度。假设有两个可以交换能量的系统1、2. 因为两个系统可以交换能量，因此我们一开始并不能知道系统如何分配能量是平衡的，但是我们相信平衡态一定是微观态数目最大的态，因此为求平衡能量分配方式，我们将整个系统的微观态数目对能量进行变分(当然还是先取对数，理由与前面一样)</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta\ln\pqty{\Omega_1(E_1)\Omega_2(E_2)}=&amp;\delta\pqty{\ln\Omega_1(E_1)+\ln\Omega_2(E_2)}\\
-=&amp;\pdv{\ln\Omega_1}{E_1}\delta E_1+\pdv{\ln\Omega_2}{E_2}\delta E_2
-\end{align}
-\]</span> 因为系统能量守恒<span class="math inline">\(\delta E_1+\delta
-E_2=0\)</span>，所以 <span class="math display">\[
+\delta\ln\pqty{\Omega_1(E_1)\Omega_2(E_2)}=&\delta\pqty{\ln\Omega_1(E_1)+\ln\Omega_2(E_2)}\\
+ =&\pdv{\ln\Omega_1}{E_1}\delta E_1+\pdv{\ln\Omega_2}{E_2}\delta E_2
+\end{align}</script><p>因为系统能量守恒$\delta E_1+\delta E_2=0$，所以</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta\ln\pqty{\Omega(E_1)\Omega(E_2)}=&amp;\pqty{\pdv{\ln\Omega_1}{E_1}-\pdv{\ln\Omega_2}{E_2}}\delta
-E_1\\
-=&amp;0\\
-\Rightarrow \pdv{\ln\Omega_1}{E_1}=&amp;\pdv{\ln\Omega_2}{E_2}
-\end{align}
-\]</span>
-因此这个条件定义了能量在两个系统之间最可能的分割，这种分割（平衡）我们称为相同温度，因此定义
-<span class="math display">\[
+ \delta\ln\pqty{\Omega(E_1)\Omega(E_2)}=&\pqty{\pdv{\ln\Omega_1}{E_1}-\pdv{\ln\Omega_2}{E_2}}\delta E_1\\
+ =&0\\
+ \Rightarrow \pdv{\ln\Omega_1}{E_1}=&\pdv{\ln\Omega_2}{E_2}
+\end{align}</script><p>因此这个条件定义了能量在两个系统之间最可能的分割，这种分割（平衡）我们称为相同温度，因此定义</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\pdv{\ln\Omega}{E}\triangleq \frac{1}{kT}
-\end{equation}
-\]</span> #### 写出配分函数</p>
-<p>定义了温度后我们便可以继续我们对微观态数<span
-class="math inline">\(\Omega(E-E_s)\)</span>的推导 <span
-class="math display">\[
+ \pdv{\ln\Omega}{E}\triangleq \frac{1}{kT}
+\end{equation}</script><h4 id="写出配分函数"><a href="#写出配分函数" class="headerlink" title="写出配分函数"></a>写出配分函数</h4><p>定义了温度后我们便可以继续我们对微观态数$\Omega(E-E_s)$的推导</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\ln\Omega(E-E_s)=&amp;\ln\Omega(E)-\pdv{\ln\Omega}{E}E_s+\order{E_s^2}\\
-=&amp;\ln\Omega(E)-\frac{E_s}{kT}+\order{E_s^2}\\
-\Rightarrow \Omega(E-E_s)\approx &amp;\Omega(E)e^{-\frac{E_s}{kT}}\\
-  \Omega(E-E_s)\propto &amp; e^{-\frac{E_s}{kT}}
-\end{align}
-\]</span> 因此系统S处于s态的概率正比于<span
-class="math inline">\(e^{-\frac{E_s}{kT}}\)</span><a href="#fn7"
-class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>，其实就是玻尔兹曼因子，然后我们所有微观态的概率求和归一化即可得到概率
-<span class="math display">\[
+ \ln\Omega(E-E_s)=&\ln\Omega(E)-\pdv{\ln\Omega}{E}E_s+\order{E_s^2}\\
+ =&\ln\Omega(E)-\frac{E_s}{kT}+\order{E_s^2}\\
+ \Rightarrow \Omega(E-E_s)\approx &\Omega(E)e^{-\frac{E_s}{kT}}\\
+  \Omega(E-E_s)\propto & e^{-\frac{E_s}{kT}}
+\end{align}</script><p>因此系统S处于s态的概率正比于$e^{-\frac{E_s}{kT}}$<sup><a href="#fn_8" id="reffn_8">8</a></sup>，其实就是玻尔兹曼因子，然后我们所有微观态的概率求和归一化即可得到概率</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 P(E_s)=\frac{e^{-E_s/kT}}{\sum\limits_ie^{-E_i/kT}}
-\end{equation}
-\]</span></p>
-<p>其分母即定义为所谓<strong>单粒子配分函数</strong>，记作<span
-class="math inline">\(Z\)</span>，可见其是所有态玻尔兹曼因子的求和<a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>，作为归一化系数，这样便没有涉及前面的拉格朗日乘子<span
-class="math inline">\(\alpha\)</span>. <span class="math display">\[
+\end{equation}</script><blockquote id="fn_8">
+<sup>8</sup>. 这里$\Omega(E)$是一个常数，因为总能量E不变<a href="#reffn_8" title="Jump back to footnote [8] in the text."> &#8617;</a>
+</blockquote>
+<p>其分母即定义为所谓<strong>单粒子配分函数</strong>，记作$Z$，可见其是所有态玻尔兹曼因子的求和<sup><a href="#fn_7" id="reffn_7">7</a></sup>，作为归一化系数，这样便没有涉及前面的拉格朗日乘子$\alpha$.</p>
+<script type="math/tex; mode=display">
 \begin{align}
-Z=&amp;\sum_i e^{-iE_i/kT}
-\end{align}
-\]</span></p>
-<h4 id="得到态函数">得到态函数</h4>
-<h5 id="内能">内能</h5>
-<p>对于一个系统，其内能应该是其所有可能能量的平均值 <span
-class="math display">\[
+ Z=&\sum_i e^{-iE_i/kT}
+\end{align}</script><blockquote id="fn_7">
+<sup>7</sup>. 这里是考虑所有的态，全知全能的上帝当然可以输出所有的态，但实际上存在一些简并态的能量是相同的，所以存在简并的时候要补上系数$\omega_l$<a href="#reffn_7" title="Jump back to footnote [7] in the text."> &#8617;</a>
+</blockquote>
+<h4 id="得到态函数"><a href="#得到态函数" class="headerlink" title="得到态函数"></a>得到态函数</h4><h5 id="内能"><a href="#内能" class="headerlink" title="内能"></a>内能</h5><p>对于一个系统，其内能应该是其所有可能能量的平均值</p>
+<script type="math/tex; mode=display">
 \begin{align}
-U=&amp;\sum_sE_s\frac{e^{-E_s/kT}}{Z}\\
-=&amp;\frac{1}{Z}\sum_sE_se^{-E_s/kT}\\
-=&amp;-\frac{1}{Z}\pdv{\beta}\sum_se^{-\beta E_s}\\
-=&amp;-\frac{1}{Z}\pdv{Z}{\beta}
-\end{align}
-\]</span> 因此有 <span class="math display">\[
+ U=&\sum_sE_s\frac{e^{-E_s/kT}}{Z}\\
+ =&\frac{1}{Z}\sum_sE_se^{-E_s/kT}\\
+ =&-\frac{1}{Z}\pdv{\beta}\sum_se^{-\beta E_s}\\
+ =&-\frac{1}{Z}\pdv{Z}{\beta}
+\end{align}</script><p>因此有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-U=-\pdv{\ln Z}{\beta}
-\end{equation}
-\]</span></p>
-<h5 id="熵">熵</h5>
-<p>为了得到熵的统计定义，我们回顾之前热力学公式<span
-class="math inline">\(\dd{U}=T\dd{S}-p\dd{V}\)</span>，即<span
-class="math inline">\(T=\pqty{\pdv{U}{S}}_V\)</span>再结合前面对温度的定义
-<span class="math display">\[
+ U=-\pdv{\ln Z}{\beta}
+\end{equation}</script><h5 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h5><p>为了得到熵的统计定义，我们回顾之前热力学公式$\dd{U}=T\dd{S}-p\dd{V}$，即$T=\pqty{\pdv{U}{S}}_V$再结合前面对温度的定义</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{1}{kT}=&amp;\pdv{\ln\Omega}{E}\\
-=&amp;\frac{1}{k}\pqty{\pdv{S}{U}}_V\\
-\Rightarrow S=&amp;k\ln\Omega
-\end{align}
-\]</span> 根据等概率原理，熵又可以写成 <span class="math display">\[
+\frac{1}{kT}=&\pdv{\ln\Omega}{E}\\
+=&\frac{1}{k}\pqty{\pdv{S}{U}}_V\\
+\Rightarrow S=&k\ln\Omega
+\end{align}</script><p>根据等概率原理，熵又可以写成</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-S=-\sum_i kP_i\ln P_i
-\end{equation}
-\]</span> 其中<span class="math inline">\(P_i\)</span>是系统取到<span
-class="math inline">\(i\)</span>态的概率。 我们上一节是得到了<span
-class="math inline">\(P_i=e^{-\beta E_i}/Z\)</span>，因此有 <span
-class="math display">\[
+ S=-\sum_i kP_i\ln P_i
+\end{equation}</script><p>其中$P_i$是系统取到$i$态的概率。<br>我们上一节是得到了$P_i=e^{-\beta E_i}/Z$，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-S=&amp;-\sum_i k\frac{e^{-\beta E_i}}{Z}\pqty{-\beta E_i-\ln Z}\\
-=&amp;k\pqty{\beta U+\ln Z}
-\end{align}
-\]</span></p>
-<h5 id="亥姆霍兹自由能">亥姆霍兹自由能</h5>
-<p>由<span class="math inline">\(F=U-TS\)</span>得 <span
-class="math display">\[
+ S=&-\sum_i k\frac{e^{-\beta E_i}}{Z}\pqty{-\beta E_i-\ln Z}\\
+ =&k\pqty{\beta U+\ln Z}
+\end{align}</script><h5 id="亥姆霍兹自由能"><a href="#亥姆霍兹自由能" class="headerlink" title="亥姆霍兹自由能"></a>亥姆霍兹自由能</h5><p>由$F=U-TS$得</p>
+<script type="math/tex; mode=display">
 \begin{align}
-F=&amp;U-U-kT\ln Z\\
-=&amp;-kT\ln Z\\
-\Rightarrow Z=&amp;e^{-\beta F}
-\end{align}
-\]</span></p>
-<p>我们实际上也可以从亥姆霍兹自由能得到熵公式 <span
-class="math display">\[
+ F=&U-U-kT\ln Z\\
+ =&-kT\ln Z\\
+ \Rightarrow Z=&e^{-\beta F}
+\end{align}</script><p>我们实际上也可以从亥姆霍兹自由能得到熵公式</p>
+<script type="math/tex; mode=display">
 \begin{align}
-S=&amp;-\pqty{\pdv{F}{T}}_V\\
-=&amp;k\ln Z+kT\pdv{\ln Z}{T}
-\end{align}
-\]</span></p>
-<p>接着根据上式我们可以进一步得到等体热容 <span class="math display">\[
+ S=&-\pqty{\pdv{F}{T}}_V\\
+ =&k\ln Z+kT\pdv{\ln Z}{T}
+\end{align}</script><p>接着根据上式我们可以进一步得到等体热容</p>
+<script type="math/tex; mode=display">
 \begin{align}
-C_V=&amp;T\pqty{\pdv{S}{T}}_V\\
-=&amp;2kT\pqty{\pdv{\ln Z}{T}}_V+kT^2\pqty{\pdv[2]{\ln Z}{T}}_V
-\end{align}
-\]</span></p>
-<h5 id="焓">焓</h5>
-<p>由<span
-class="math inline">\(H=U+pV\)</span>，我们应该先求得压强的表达式，可以利用<span
-class="math inline">\(p=-\pqty{\pdv{U}{V}}_S\)</span>或者利用<span
-class="math inline">\(p=-\pqty{\pdv{F}{V}}_T\)</span>得到 <span
-class="math display">\[
+C_V=&T\pqty{\pdv{S}{T}}_V\\
+=&2kT\pqty{\pdv{\ln Z}{T}}_V+kT^2\pqty{\pdv[2]{\ln Z}{T}}_V
+\end{align}</script><h5 id="焓"><a href="#焓" class="headerlink" title="焓"></a>焓</h5><p>由$H=U+pV$，我们应该先求得压强的表达式，可以利用$p=-\pqty{\pdv{U}{V}}_S$或者利用$p=-\pqty{\pdv{F}{V}}_T$得到</p>
+<script type="math/tex; mode=display">
 \begin{align}
-p=&amp;kT\pqty{\pdv{\ln Z}{V}}_T\\
-\Rightarrow H=&amp;-\pdv{\ln Z}{\beta}+kTV\pqty{\pdv{\ln Z}{V}}_T
-\end{align}
-\]</span></p>
-<p>吉布斯函数可以利用类似的方法从配分函数得到。</p>
-<h4 id="maxwell速率分布">Maxwell速率分布</h4>
-<p>对于一坨气体，我们想知道一个粒子处于速度大小为<span
-class="math inline">\(v\)</span>的状态概率为多少，从前面的正则系综知道，处于该状态是能量为<span
-class="math inline">\(mv^2/2\)</span>，因此概率正比于<span
-class="math inline">\(e^{-mv^2/2kT}\)</span>，即 <span
-class="math display">\[
+ p=&kT\pqty{\pdv{\ln Z}{V}}_T\\
+ \Rightarrow H=&-\pdv{\ln Z}{\beta}+kTV\pqty{\pdv{\ln Z}{V}}_T
+\end{align}</script><p>吉布斯函数可以利用类似的方法从配分函数得到。</p>
+<h4 id="Maxwell速率分布"><a href="#Maxwell速率分布" class="headerlink" title="Maxwell速率分布"></a>Maxwell速率分布</h4><p>对于一坨气体，我们想知道一个粒子处于速度大小为$v$的状态概率为多少，从前面的正则系综知道，处于该状态是能量为$mv^2/2$，因此概率正比于$e^{-mv^2/2kT}$，即</p>
+<script type="math/tex; mode=display">
 \begin{align}
-f(v)\dd{v}=\propto v^2 e^{-mv^2/2kT}
-\end{align}
-\]</span> 我们要求上式积分是归一化的，因此 <span class="math display">\[
+ f(v)\dd{v}=\propto v^2 e^{-mv^2/2kT}
+\end{align}</script><p>我们要求上式积分是归一化的，因此</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\int_0^\infty f(v)\dd{v}=&amp;\int_0^\infty v^2 e^{-mv^2/2kT}\\
-=&amp;\frac{\sqrt{\pi}}{4}\pqty{\frac{2kT}{m}}^{3/2}\\
-\Rightarrow
-f(v)\dd{v}=&amp;\frac{4}{\sqrt{\pi}}\pqty{\frac{m}{2kT}}^{3/2}v^2
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi v^2 e^{-mv^2/2kT}\dd{v}
-\end{align}
-\]</span></p>
-<p>因此对于一团气体，单位体积有处于速度大小为<span
-class="math inline">\(v\)</span>的粒子数应该就有 <span
-class="math display">\[
+ \int_0^\infty f(v)\dd{v}=&\int_0^\infty v^2 e^{-mv^2/2kT}\\
+ =&\frac{\sqrt{\pi}}{4}\pqty{\frac{2kT}{m}}^{3/2}\\
+ \Rightarrow f(v)\dd{v}=&\frac{4}{\sqrt{\pi}}\pqty{\frac{m}{2kT}}^{3/2}v^2 e^{-mv^2/2kT}\dd{v}\\
+ =&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi v^2 e^{-mv^2/2kT}\dd{v}
+\end{align}</script><p>因此对于一团气体，单位体积有处于速度大小为$v$的粒子数应该就有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 nf(v)\dd{v}
-\end{equation}
-\]</span> 其中<span
-class="math inline">\(n\)</span>为气体的数密度，从上面的式子我们可以推出一些有意思的结论，比如平均速度，速度平方的平均值</p>
+\end{equation}</script><p>其中$n$为气体的数密度，从上面的式子我们可以推出一些有意思的结论，比如平均速度，速度平方的平均值</p>
 <ul>
-<li><span class="math inline">\(\expval{v}\)</span></li>
+<li>$\expval{v}$</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{align}
-\expval{v}=&amp;\int_0^\infty f(v)v\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^3
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\int_0^\infty
-\frac{2kT}{m}\frac{mv^2}{2kT}e^{-mv^2/2kT}\frac{kT}{m}\dd{\frac{mv^2}{2kT}}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\frac{2(kT)^2}{m^2}\Gamma(2)\\
-=&amp;\sqrt{\frac{8kT}{\pi m}}
-\end{align}
-\]</span></p>
-<ul>
-<li><span class="math inline">\(\expval{v^2}\)</span></li>
+\expval{v}=&\int_0^\infty f(v)v\dd{v}\\
+=&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^3 e^{-mv^2/2kT}\dd{v}\\
+=&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\int_0^\infty \frac{2kT}{m}\frac{mv^2}{2kT}e^{-mv^2/2kT}\frac{kT}{m}\dd{\frac{mv^2}{2kT}}\\
+=&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\frac{2(kT)^2}{m^2}\Gamma(2)\\
+=&\sqrt{\frac{8kT}{\pi m}}
+\end{align}</script><ul>
+<li>$\expval{v^2}$</li>
 </ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{align}
-\expval{v^2}=&amp;\int_0^\infty f(v)v^2\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^4
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi
-\dv[2]{\alpha}\frac{\sqrt{\pi}}{2\sqrt{\alpha}}\\
-=&amp;\frac{3kT}{m}
-\end{align}
-\]</span></p>
-<ul>
-<li>最概然速率<span class="math inline">\(v_m\)</span></li>
+\expval{v^2}=&\int_0^\infty f(v)v^2\dd{v}\\
+=&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^4 e^{-mv^2/2kT}\dd{v}\\
+=&\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \dv[2]{\alpha}\frac{\sqrt{\pi}}{2\sqrt{\alpha}}\\
+=&\frac{3kT}{m}
+\end{align}</script><ul>
+<li>最概然速率$v_m$</li>
 </ul>
-<p>求速率的分布函数求个导就可以得到了，这里就不敲了 <span
-class="math display">\[
+<p>求速率的分布函数求个导就可以得到了，这里就不敲了</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-v_m=\sqrt{\frac{2kT}{m}}
-\end{equation}
-\]</span></p>
-<ul>
+ v_m=\sqrt{\frac{2kT}{m}}
+\end{equation}</script><ul>
 <li>泄流速率</li>
 </ul>
 <p>这个弄了图床再补吧，没图嗯写也没意思</p>
-<p>先放个结论，单位时间通过单位截面跑出去的分子数为 <span
-class="math display">\[
+<p>先放个结论，单位时间通过单位截面跑出去的分子数为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\frac{n\expval{v}}{4}
-\end{equation}
-\]</span> #### 可分辨性与多粒子配分函数</p>
-<p>可分辨如何对配分函数产生影响呢？我们先从组合配分函数出发，对于某个原子，当它处于i态时，能量由平动动能<span
-class="math inline">\(E^t_i\)</span>以及转动动能<span
-class="math inline">\(E^l_i\)</span>组成，则单粒子配分函数可以写成 <span
-class="math display">\[
+ \frac{n\expval{v}}{4}
+\end{equation}</script><h4 id="可分辨性与多粒子配分函数"><a href="#可分辨性与多粒子配分函数" class="headerlink" title="可分辨性与多粒子配分函数"></a>可分辨性与多粒子配分函数</h4><p>可分辨如何对配分函数产生影响呢？我们先从组合配分函数出发，对于某个原子，当它处于i态时，能量由平动动能$E^t_i$以及转动动能$E^l_i$组成，则单粒子配分函数可以写成</p>
+<script type="math/tex; mode=display">
 \begin{align}
-Z=&amp;\sum_i e^{-i\beta(E^t_i+E^l_i)}\\
-=&amp;Z^t\cdot Z^l
-\end{align}
-\]</span> 其中<span class="math inline">\(Z^t=\sum\limits_ie^{-i\beta
-E^t_i},\ Z^l=\sum\limits_ie^{-i\beta
-E^l_i}\)</span>，也就是对系统不同贡献的能量来源，我们可以将其写为配分函数的乘积。而对于含有多个粒子的系统，比如说有两个粒子a和b，他们都只有<span
-class="math inline">\(E_1,E_2\)</span>两种状态，那么很容易写出配分函数
-<span class="math display">\[
+ Z=&\sum_i e^{-i\beta(E^t_i+E^l_i)}\\
+ =&Z^t\cdot Z^l
+\end{align}</script><p>其中$Z^t=\sum\limits_ie^{-i\beta E^t_i},\ Z^l=\sum\limits_ie^{-i\beta E^l_i}$，也就是对系统不同贡献的能量来源，我们可以将其写为配分函数的乘积。而对于含有多个粒子的系统，比如说有两个粒子a和b，他们都只有$E_1,E_2$两种状态，那么很容易写出配分函数</p>
+<script type="math/tex; mode=display">
 \begin{align}
-Z_{2}=&amp;e^{-i\beta E_1}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta
-E_2}}+e^{-i\beta E_2}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta E_2}}\\
-=&amp;Z_a\cdot Z_b=(Z_1)^2
-\end{align}
-\]</span> 很显然对于N个粒子的系统，其配分函数为<span
-class="math inline">\(Z_N=(Z_1)^N\)</span>.但这是建立在粒子可分辨的前提下，如果粒子是不可分辨的全同粒子，则上面<span
-class="math inline">\(e^{-\beta
-(E_1+E_2)}\)</span>是同一个状态，不应该数两次，在这种情况下<span
-class="math inline">\(Z_2\neq (Z_1)^2\)</span>.
-因此对于全同粒子，多粒子配分函数与单粒子配分函数的关系是复杂的，<strong>除非</strong>。</p>
-<p>除非<strong>满足弱简并条件</strong>。想象一下如果存在的态数目远大于粒子的个数，那么你任意取两个粒子出来，他们处于同一个能级的可能性是很小的，因此几乎就不存在多个粒子处于同一个能级的情况。此时粒子都处于不同能级，在这种条件下，N个不可分辨粒子的配分函数若误写为<span
-class="math inline">\(Z_N=(Z_1)^N\)</span>的话，不过是重复数了<span
-class="math inline">\(N!\)</span>种情况，因此正确的写法为<span
-class="math inline">\(Z^N=\frac{1}{N!}(Z_1)^N\)</span>.</p>
-<p>实际上从前面分布的推导也可以得到，满足弱简并条件的时候不可分辨粒子的态数目与可分辨粒子的态数目相差<span
-class="math inline">\(N!\)</span>.</p>
+ Z_{2}=&e^{-i\beta E_1}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta E_2}}+e^{-i\beta E_2}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta E_2}}\\
+ =&Z_a\cdot Z_b=(Z_1)^2
+\end{align}</script><p>很显然对于N个粒子的系统，其配分函数为$Z_N=(Z_1)^N$.但这是建立在粒子可分辨的前提下，如果粒子是不可分辨的全同粒子，则上面$e^{-\beta (E_1+E_2)}$是同一个状态，不应该数两次，在这种情况下$Z_2\neq (Z_1)^2$. 因此对于全同粒子，多粒子配分函数与单粒子配分函数的关系是复杂的，<strong>除非</strong>。</p>
+<p>除非<strong>满足弱简并条件</strong>。想象一下如果存在的态数目远大于粒子的个数，那么你任意取两个粒子出来，他们处于同一个能级的可能性是很小的，因此几乎就不存在多个粒子处于同一个能级的情况。此时粒子都处于不同能级，在这种条件下，N个不可分辨粒子的配分函数若误写为$Z_N=(Z_1)^N$的话，不过是重复数了$N!$种情况，因此正确的写法为$Z^N=\frac{1}{N!}(Z_1)^N$.</p>
+<p>实际上从前面分布的推导也可以得到，满足弱简并条件的时候不可分辨粒子的态数目与可分辨粒子的态数目相差$N!$.</p>
 <p><strong>这里写一个表格总结</strong></p>
-<h2 id="巨正则系综与量子统计">巨正则系综与量子统计</h2>
-<p>与正则系综类似，我们考虑一个由热源与我们研究的系统所构成的复合系统，热源与系统之间可以交换能量与粒子（正则系综只能交换能量），复合系统的总能量为<span
-class="math inline">\(E\)</span>，总粒子数为<span
-class="math inline">\(N\)</span>，系统的能量和粒子数分别为为<span
-class="math inline">\(E_s,n\)</span>，则热源的能量和粒子数为<span
-class="math inline">\(E-E_s,N-n\)</span>，如此，系统处于<span
-class="math inline">\((E_s,n)\)</span>态的概率正比于该态对应的微观态数目
-<span class="math display">\[
+<h2 id="巨正则系综与量子统计"><a href="#巨正则系综与量子统计" class="headerlink" title="巨正则系综与量子统计"></a>巨正则系综与量子统计</h2><p>与正则系综类似，我们考虑一个由热源与我们研究的系统所构成的复合系统，热源与系统之间可以交换能量与粒子（正则系综只能交换能量），复合系统的总能量为$E$，总粒子数为$N$，系统的能量和粒子数分别为为$E_s,n$，则热源的能量和粒子数为$E-E_s,N-n$，如此，系统处于$(E_s,n)$态的概率正比于该态对应的微观态数目</p>
+<script type="math/tex; mode=display">
 \begin{align}
-P(E_s,n)\propto \Omega(E-E_s,N-n)\times 1
-\end{align}
-\]</span> 在推导巨正则系统之前，我们需要先定义化学势。</p>
-<h3 id="化学势的统计定义">化学势的统计定义</h3>
-<p>由于系统允许交换粒子，我们若在不改变系统熵和体积的情况下（对于闭系这种条件是不改变内能的）向系统加入一个粒子，则系统内能的改变量称为化学势，即
-<span class="math display">\[
+ P(E_s,n)\propto \Omega(E-E_s,N-n)\times 1
+\end{align}</script><p>在推导巨正则系统之前，我们需要先定义化学势。</p>
+<h3 id="化学势的统计定义"><a href="#化学势的统计定义" class="headerlink" title="化学势的统计定义"></a>化学势的统计定义</h3><p>由于系统允许交换粒子，我们若在不改变系统熵和体积的情况下（对于闭系这种条件是不改变内能的）向系统加入一个粒子，则系统内能的改变量称为化学势，即</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\mu=\pqty{\pdv{U}{N}}_{S,V}
-\end{align}
-\]</span> 因此得到修改的热力学方程 <span class="math display">\[
+ \mu=\pqty{\pdv{U}{N}}_{S,V}
+\end{align}</script><p>因此得到修改的热力学方程</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\dd{U}=&amp;T\dd{S}-p\dd{V}+\mu\dd{N}\\
-\Rightarrow
-\dd{S}=&amp;\frac{1}{T}\dd{U}+\frac{p}{T}\dd{V}-\frac{\mu}{T}\mu\dd{N}
-\end{align}
-\]</span> 即<span
-class="math inline">\(-\frac{\mu}{T}=\pqty{\pdv{S}{N}}_{U,V}\)</span></p>
-<h3 id="写出配分函数">写出配分函数</h3>
-<p><span class="math display">\[
+ \dd{U}=&T\dd{S}-p\dd{V}+\mu\dd{N}\\
+ \Rightarrow \dd{S}=&\frac{1}{T}\dd{U}+\frac{p}{T}\dd{V}-\frac{\mu}{T}\mu\dd{N}
+\end{align}</script><p>即$-\frac{\mu}{T}=\pqty{\pdv{S}{N}}_{U,V}$</p>
+<h3 id="写出配分函数-1"><a href="#写出配分函数-1" class="headerlink" title="写出配分函数"></a>写出配分函数</h3><script type="math/tex; mode=display">
 \begin{align}
-\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\pqty{\pdv{\ln\Omega}{E}}_{N}E_s-\pqty{\pdv{\ln\Omega}{N}}_{E}n
-\end{align}
-\]</span> 因为<span class="math inline">\(S=k\ln\Omega\)</span>，因此有
-<span class="math display">\[
+ \ln\Omega(E-E_s,N-n)=&\ln\Omega(E,N)-\pqty{\pdv{\ln\Omega}{E}}_{N}E_s-\pqty{\pdv{\ln\Omega}{N}}_{E}n
+\end{align}</script><p>因为$S=k\ln\Omega$，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\frac{1}{k}\pqty{\pdv{S}{E}}_{N}E_s-\frac{1}{k}\pqty{\pdv{S}{N}}_{E}n\\
-=&amp;\ln\Omega(E,N)-\frac{E_s}{kT}+\frac{n\mu}{kT}\\
-\Rightarrow \Omega(E-E_s,N-n)=&amp;\Omega(E,N)e^{\beta(n\mu-E_s)}
-\end{align}
-\]</span> 因此系统处于能量<span
-class="math inline">\(E_s\)</span>，粒子数<span
-class="math inline">\(n\)</span>的概率为 <span class="math display">\[
+ \ln\Omega(E-E_s,N-n)=&\ln\Omega(E,N)-\frac{1}{k}\pqty{\pdv{S}{E}}_{N}E_s-\frac{1}{k}\pqty{\pdv{S}{N}}_{E}n\\
+ =&\ln\Omega(E,N)-\frac{E_s}{kT}+\frac{n\mu}{kT}\\
+ \Rightarrow \Omega(E-E_s,N-n)=&\Omega(E,N)e^{\beta(n\mu-E_s)}
+\end{align}</script><p>因此系统处于能量$E_s$，粒子数$n$的概率为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-P(E_s,n)\propto e^{\beta(n\mu-E_s)}
-\end{align}
-\]</span> 其归一化系数即为<strong>巨配分函数</strong><span
-class="math inline">\(\Xi\)</span> <span class="math display">\[
+ P(E_s,n)\propto e^{\beta(n\mu-E_s)}
+\end{align}</script><p>其归一化系数即为<strong>巨配分函数</strong>$\Xi$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-  P(E_s,n)=&amp;\frac{e^{\beta(n\mu-E)}}{\Xi}\\
-  \Xi=&amp;\sum_{n=0}\sum_E e^{\beta(n\mu-E)}
-\end{align}
-\]</span> 注意这里的n是是对系统允许存在的所有粒子数求和，<span
-class="math inline">\(\sum_n\sum_E\)</span>两个求和是代表对所有可能的态求和。</p>
-<h3 id="量子统计">量子统计</h3>
-<p>上面的表达式才是巨配分函数的由来，汪志诚老师书上是直接将其丢出来，而且你发现，他给的表达式和上式不一样，这是因为他给出来的是一种特殊情况，只适用于玻色子与费米子的，我们现在来推导它。</p>
-<h4 id="玻色子">玻色子</h4>
-<p>需要注意的是，我们前面推导巨正则系综的时候提过，对于拥有能量<span
-class="math inline">\(E_s\)</span>的系统，其内部有多个微观态，不同微观态当然可以具有不同能量，也就是说系统内部会有多个能级，即<span
-class="math inline">\(E=\sum_i a_i E_i\)</span>，且总粒子为<span
-class="math inline">\(n=\sum_i a_i\)</span>，因此 <span
-class="math display">\[
+  P(E_s,n)=&\frac{e^{\beta(n\mu-E)}}{\Xi}\\
+  \Xi=&\sum_{n=0}\sum_E e^{\beta(n\mu-E)}
+\end{align}</script><p>注意这里的n是是对系统允许存在的所有粒子数求和，$\sum_n\sum_E$两个求和是代表对所有可能的态求和。</p>
+<h3 id="量子统计"><a href="#量子统计" class="headerlink" title="量子统计"></a>量子统计</h3><p>上面的表达式才是巨配分函数的由来，汪志诚老师书上是直接将其丢出来，而且你发现，他给的表达式和上式不一样，这是因为他给出来的是一种特殊情况，只适用于玻色子与费米子的，我们现在来推导它。</p>
+<h4 id="玻色子"><a href="#玻色子" class="headerlink" title="玻色子"></a>玻色子</h4><p>需要注意的是，我们前面推导巨正则系综的时候提过，对于拥有能量$E_s$的系统，其内部有多个微观态，不同微观态当然可以具有不同能量，也就是说系统内部会有多个能级，即$E=\sum_i a_i E_i$，且总粒子为$n=\sum_i a_i$，因此</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Xi=&amp;\sum_{n=0}\sum_Ee^{\beta\pqty{\sum_i a_i-\sum_ia_i E_i}}\\
-=&amp;\sum_{n=0}\sum_E e^{\sum\limits_i\beta a_i(\mu-E_i)}\\
-=&amp;\sum_{n=0}\sum_E \prod_i e^{\beta a_i(\mu-E_i)}
-\end{align}
-\]</span> 上式的求和<span
-class="math inline">\(\sum_n\sum_E\)</span>指标E和n已经不存在，我们在求和时可能会产生一些困惑，但实际上这两个求和只是遍历所有可能的微观态，在这里便是所有允许的占据数<span
-class="math inline">\(a_i\)</span>，即 <span class="math display">\[
+ \Xi=&\sum_{n=0}\sum_Ee^{\beta\pqty{\sum_i a_i-\sum_ia_i E_i}}\\
+ =&\sum_{n=0}\sum_E e^{\sum\limits_i\beta a_i(\mu-E_i)}\\
+ =&\sum_{n=0}\sum_E \prod_i e^{\beta a_i(\mu-E_i)}
+\end{align}</script><p>上式的求和$\sum_n\sum_E$指标E和n已经不存在，我们在求和时可能会产生一些困惑，但实际上这两个求和只是遍历所有可能的微观态，在这里便是所有允许的占据数$a_i$，即</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Xi=&amp;\sum_{\{a_i\}}\prod_i e^{\beta a_i(\mu-E_i)}\\
-=&amp;\prod_i\sum_{\{a_i\}}e^{\beta a_i(\mu-E_i)}
-\end{align}
-\]</span> 玻色子各能级允许的占据数为0到无穷，因此 <span
-class="math display">\[
+ \Xi=&\sum_{\{a_i\}}\prod_i e^{\beta a_i(\mu-E_i)}\\
+ =&\prod_i\sum_{\{a_i\}}e^{\beta a_i(\mu-E_i)}
+\end{align}</script><p>玻色子各能级允许的占据数为0到无穷，因此</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Xi=&amp;\prod_i \frac{1}{1-e^{\beta(\mu-E_i)}}\\
-\Rightarrow \ln\Xi=&amp;-\sum_i \ln[1-e^{\beta(\mu-E_i)}]
-\end{align}
-\]</span></p>
-<h4 id="费米子">费米子</h4>
-<p>而对于费米子，因为泡利不相容原理，各能级允许的占据数为0或1，因此
-<span class="math display">\[
+ \Xi=&\prod_i \frac{1}{1-e^{\beta(\mu-E_i)}}\\
+ \Rightarrow \ln\Xi=&-\sum_i \ln[1-e^{\beta(\mu-E_i)}]
+\end{align}</script><h4 id="费米子"><a href="#费米子" class="headerlink" title="费米子"></a>费米子</h4><p>而对于费米子，因为泡利不相容原理，各能级允许的占据数为0或1，因此</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Xi=&amp;\prod_i \pqty{1+e^{\beta(\mu-E_i)}}\\
-\Rightarrow \ln\Xi=&amp;\sum_i\ln\bqty{1+e^{e^{\beta(\mu-E_i)}}}
-\end{align}
-\]</span></p>
-<p>综上，全同粒子的巨配分函数为 <span class="math display">\[
+ \Xi=&\prod_i \pqty{1+e^{\beta(\mu-E_i)}}\\
+ \Rightarrow \ln\Xi=&\sum_i\ln\bqty{1+e^{e^{\beta(\mu-E_i)}}}
+\end{align}</script><p>综上，全同粒子的巨配分函数为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\ln\Xi=\mp \sum_i \ln\bqty{1\mp e^{\beta(\mu-E_i)}}
-\end{equation}
-\]</span>
-其中上方的-号对应玻色子，下方的+号对应费米子。若系统能级存在简并的情况，则在求和和的时候对于同一个<span
-class="math inline">\(E_i\)</span>多求和<span
-class="math inline">\(\omega_i\)</span>次即可 <span
-class="math display">\[
+ \ln\Xi=\mp \sum_i \ln\bqty{1\mp e^{\beta(\mu-E_i)}} 
+\end{equation}</script><p>其中上方的-号对应玻色子，下方的+号对应费米子。若系统能级存在简并的情况，则在求和和的时候对于同一个$E_i$多求和$\omega_i$次即可</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\ln\Xi=&amp;\mp \sum\limits_{i}\omega_i\ln\bqty{1\mp e^{\beta(\mu-E_i)}}
-\end{align}
-\]</span></p>
-<h4 id="分布函数">分布函数</h4>
-<p>分布函数即平均占据数<span class="math inline">\(\expval{a_i}\)</span>
-<span class="math display">\[
+ \ln\Xi=&\mp \sum\limits_{i}\omega_i\ln\bqty{1\mp e^{\beta(\mu-E_i)}}
+\end{align}</script><h4 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h4><p>分布函数即平均占据数$\expval{a_i}$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\expval{a_i}=&amp;\sum\limits_{n,E}\frac{ a_{l} e^{\sum\limits_i
-a_i\beta(\mu-E_i)}}{\Xi}\\
-=&amp;-\frac{1}{\beta}\frac{\pdv{\Xi}{E_{i}}}{\Xi}\\
-=&amp;-\frac{1}{\beta}\pdv{\ln\Xi}{E_i}
-\end{align}
-\]</span> 因此对于量子统计的分布函数为 <span class="math display">\[
+ \expval{a_i}=&\sum\limits_{n,E}\frac{ a_{l} e^{\sum\limits_i a_i\beta(\mu-E_i)}}{\Xi}\\
+ =&-\frac{1}{\beta}\frac{\pdv{\Xi}{E_{i}}}{\Xi}\\
+=&-\frac{1}{\beta}\pdv{\ln\Xi}{E_i}
+\end{align}</script><p>因此对于量子统计的分布函数为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\expval{a_i}=&amp;(-)\mp\frac{\pm \omega_{i}e^{\beta(\mu- E_i)}}{1\mp
-e^{\beta(\mu-E_i)}}\\
-=&amp;\frac{\omega_i}{e^{\beta(E_i-\mu)}\mp1}
-\end{align}
-\]</span> 该结果与先前得到的结果一致。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>统计物理还有一个等概率原理，我忘记讲了。<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn2"><p>什么？你说这不一定是极大值？实际上你可以证明二阶变分小于0，但我太懒了。<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>不要问为什么这图书馆这么小，书架每层只能放一本书，问就是不知道。<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>你如果喜欢挑<span
-class="math inline">\(a_l\)</span>本书出来结果也是一样的<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>这里假设了简并态数目<span
-class="math inline">\(\omega_l&gt;a_l\)</span><a href="#fnref5"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>实际上也只是从<span
-class="math inline">\(a_l\)</span>的使用转向<span
-class="math inline">\(f_s\)</span>的使用罢了，本来是数宏观态数目l，每次乘上简并度<span
-class="math inline">\(\omega_l\)</span>，现在是直接数微观态数目s，这样使得表达式看起来更简单，但实际计算时还是老老实实算上简并度。<a
-href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>这里<span
-class="math inline">\(\Omega(E)\)</span>是一个常数，因为总能量E不变<a
-href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn8"><p>这里是考虑所有的态，全知全能的上帝当然可以输出所有的态，但实际上存在一些简并态的能量是相同的，所以存在简并的时候要补上系数<span
-class="math inline">\(\omega_l\)</span><a href="#fnref8"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+ \expval{a_i}=&(-)\mp\frac{\pm \omega_{i}e^{\beta(\mu- E_i)}}{1\mp e^{\beta(\mu-E_i)}}\\
+=&\frac{\omega_i}{e^{\beta(E_i-\mu)}\mp1}
+\end{align}</script><p>该结果与先前得到的结果一致。</p>
 
     </div>
 
@@ -877,28 +694,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
   <footer class="footer">
     <div class="footer-inner">
-  <div class="languages">
-    <label class="lang-select-label">
-      <i class="fa fa-language"></i>
-      <span>简体中文</span>
-      <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </label>
-    <select class="lang-select" data-canonical="" aria-label="选择语言">
-      
-        <option value="zh-CN" data-href="/2023/03/15/Statistical-Review-Note/" selected="">
-          简体中文
-        </option>
-      
-        <option value="en" data-href="/en/2023/03/15/Statistical-Review-Note/" selected="">
-          English
-        </option>
-      
-        <option value="ja" data-href="/ja/2023/03/15/Statistical-Review-Note/" selected="">
-          日本語
-        </option>
-      
-    </select>
-  </div>
 
 
 <div class="copyright">
@@ -914,13 +709,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">76k</span>
+    <span title="站点总字数">60k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:18</span>
+    <span title="站点阅读时长">1:50</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
@@ -946,7 +741,9 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
