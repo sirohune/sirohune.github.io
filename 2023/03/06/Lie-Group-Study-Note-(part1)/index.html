@@ -30,7 +30,7 @@
 <meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg 参考教材第三章 Lie Group Theory">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-06T09:34:50.000Z">
-<meta property="article:modified_time" content="2023-04-12T02:35:25.098Z">
+<meta property="article:modified_time" content="2023-04-18T11:49:00.882Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="笔记">
@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lie-group-theory"><span class="nav-number">1.</span> <span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#groups"><span class="nav-number">1.1.</span> <span class="nav-text">Groups</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rotations-in-two-dimensions"><span class="nav-number">1.2.</span> <span class="nav-text">Rotations in two Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%AD%A3%E4%BA%A4%E7%BE%A4so2"><span class="nav-number">1.2.1.</span> <span class="nav-text">特殊正交群\(SO(2)\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u1"><span class="nav-number">1.2.2.</span> <span class="nav-text">U(1)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rotations-in-three-dimensions"><span class="nav-number">1.3.</span> <span class="nav-text">Rotations in three
-Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0quaternions%E7%9A%84%E8%BD%AC%E5%8A%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">四元数Quaternions的转动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E8%A6%86%E7%9B%96double-cover"><span class="nav-number">1.3.2.</span> <span class="nav-text">双覆盖(double cover)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%8E%E4%BB%A3%E6%95%B0-lie-algebras"><span class="nav-number">1.4.</span> <span class="nav-text">李代数 Lie Algebras</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5so3%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.1.</span> <span class="nav-text">以\(SO(3)\)为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5su2%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.2.</span> <span class="nav-text">以\(SU(2)\)为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%8E%E7%BE%A4%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.3.</span> <span class="nav-text">李群的抽象定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E8%AE%BA-representation-theory"><span class="nav-number">1.5.</span> <span class="nav-text">表示论 Representation Theory</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lie-group-theory"><span class="nav-text">Lie Group Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#groups"><span class="nav-text">Groups</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rotations-in-two-dimensions"><span class="nav-text">Rotations in two Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%AD%A3%E4%BA%A4%E7%BE%A4so2"><span class="nav-text">特殊正交群\(SO(2)\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u1"><span class="nav-text">U(1)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rotations-in-three-dimensions"><span class="nav-text">Rotations in three
+Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0quaternions%E7%9A%84%E8%BD%AC%E5%8A%A8"><span class="nav-text">四元数Quaternions的转动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E8%A6%86%E7%9B%96double-cover"><span class="nav-text">双覆盖(double cover)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%8E%E4%BB%A3%E6%95%B0-lie-algebras"><span class="nav-text">李代数 Lie Algebras</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5so3%E4%B8%BA%E4%BE%8B"><span class="nav-text">以\(SO(3)\)为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5su2%E4%B8%BA%E4%BE%8B"><span class="nav-text">以\(SU(2)\)为例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%8E%E7%BE%A4%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%AE%9A%E4%B9%89"><span class="nav-text">李群的抽象定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E8%AE%BA-representation-theory"><span class="nav-text">表示论 Representation Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E8%A5%BF%E7%B1%B3%E5%B0%94%E5%85%83%E7%B4%A0"><span class="nav-text">卡西米尔元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%98%89%E5%BD%93%E5%85%83%E7%B4%A0"><span class="nav-text">嘉当元素</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,6 +204,11 @@ Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
         <span class="site-state-item-count">13</span>
@@ -211,6 +216,11 @@ Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
       </div>
   </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:hakufune@gmail.com" title="E-Mail → mailto:hakufune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
         </div>
       </div>
@@ -269,7 +279,16 @@ Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-12 10:35:25" itemprop="dateModified" datetime="2023-04-12T10:35:25+08:00">2023-04-12</time>
+      <time title="修改时间：2023-04-18 19:49:00" itemprop="dateModified" datetime="2023-04-18T19:49:00+08:00">2023-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+        </span>
     </span>
 
   
@@ -293,14 +312,14 @@ Dimensions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>8.6k</span>
+      <span>11k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>20 分钟</span>
     </span>
 </div>
 
@@ -682,7 +701,87 @@ class="math inline">\(SO(3)\)</span>的相同</p></li>
 class="math inline">\(SU(2)\)</span>的李代数与<span
 class="math inline">\(SO(3)\)</span>的相同，为了进一步描述群，我们需要给群下一个更抽象的定义，分清它与矩阵的关系。</p>
 <h3 id="李群的抽象定义">李群的抽象定义</h3>
+<p>简单来说：李群=群+流形</p>
+<p>此外，我们还要求群乘法必须要诱导出一个流形到流形本身的映射。这是很好理解的，因为群和流形最基本的属性是一个集合，群元便是集合的元素，自然也应当是流形上的点。既然群元运算本身是封闭的<span
+class="math inline">\(g_3=g_{1}\circ g_{2}\in
+G\)</span>，那么它应当对应流形上的一个点，从这个角度来看，群乘法自然是从流形到流形的映射。</p>
+<p>有了这个定义后，我们便可以进一步理解什么叫<span
+class="math inline">\(SU(2)\)</span>群是<span
+class="math inline">\(SO(3)\)</span>群的二重覆盖，其实<span
+class="math inline">\(SU(2)\)</span>的流形长得就像两个<span
+class="math inline">\(SO(3)\)</span>流形的拼接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=0:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SO(3)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=-2.5:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SU(2)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>他们的关系有点像上面两个图，但当然没这么简单，这只是一个示意。
+如果你还记得的话，同一个李代数可以对应多个群，但其中有一个群是最特殊的群，这个群往往可以覆盖其他群，而且是<strong>简单单连通</strong>的，一般叫做<strong>覆盖群</strong>，比如前面的<span
+class="math inline">\(SU(2)\&amp;SO(3)\)</span>就是一个例子。而自然界往往会选择覆盖群来描述粒子的基本属性，而不是用其他的群。</p>
 <h2 id="表示论-representation-theory">表示论 Representation Theory</h2>
+<p>一个群可以作用于多个对象，被作用的对象往往处于某个线性空间<span
+class="math inline">\(V\)</span>中，当群作用在这个对象上的时候，其作用效果往往是一个矩阵作用在矢量上，在这个线性空间<span
+class="math inline">\(V\)</span>中，所有的群元<span
+class="math inline">\(g\)</span>操作对应一群变换矩阵<span
+class="math inline">\(R(g)\)</span>（他们会作用在矢量上，得到变换后的矢量）。将群与变换矩阵联系在一起的映射就叫做<strong>表示</strong>
+<span class="math display">\[
+\begin{align}
+R:g\to R(g)
+\end{align}
+\]</span></p>
+<p>我们要求这个映射是同态的 <span class="math display">\[
+\begin{align}
+R(g_{1})R(g_{2})=&amp;R(g_{1}\circ g_{2})
+\end{align}
+\]</span> 我们找了一个矢量空间<span
+class="math inline">\(V\)</span>，对应便有一个表示<span
+class="math inline">\(R\)</span>，若矢量空间中存在一个子空间<span
+class="math inline">\(V&#39;\)</span>，让群的变换矩阵作用在子空间上的任意元素上得到的结果依旧在这个子空间<span
+class="math inline">\(V&#39;\)</span>中，则称这个空间为不变子空间，如此我们可以定义一个子表示<span
+class="math inline">\(R&#39;\)</span>，这个子表示的矩阵作用在子空间<span
+class="math inline">\(V&#39;\)</span>上的元素上得到的结果依旧属于这个不变子空间，且作用效果与<span
+class="math inline">\(R\)</span>相同<span
+class="math inline">\(R&#39;(g)v&#39;=R(g)v&#39;\)</span>。</p>
+<p>如果出现了这种情况，我们说这是一个<strong>可约表示(reducible
+representation)</strong>。反之则是<strong>不可约表示</strong>，而不可约表示才是更加基础的，因为它不是由其他更小的表示组成。举一个关于可约表示的，可能不太恰当的例子，加入空间<span
+class="math inline">\(V\)</span>是四维的，取子空间<span
+class="math inline">\(V&#39;\)</span>为<span
+class="math inline">\(\pqty{a,b,0,0}^{T}\)</span>，而群表示<span
+class="math inline">\(R\)</span>的变换矩阵为<span
+class="math inline">\(\mqty(A&amp;0\\0&amp;B)\)</span>
+,很显然我们可以取块矩阵A作为一个子表示<span
+class="math inline">\(R&#39;\)</span>的变换矩阵.</p>
+<p>群表示论是十分强大的，我们即将看到它强大的威力。
+我们首先需要介绍表示论中两个重要的概念：<strong>卡西米尔元素</strong>和<strong>嘉当元素</strong>。</p>
+<h3 id="卡西米尔元素">卡西米尔元素</h3>
+<p>对于一个群，它可以有很多个表示，我们想要区分这些不同的表示，所以我们引入了<strong>卡西米尔元素</strong>，他的定义是与所有的生成元<span
+class="math inline">\(X\)</span>都对易的一个群元素。 <span
+class="math display">\[
+\begin{align}
+\comm{C}{X}=0
+\end{align}
+\]</span>
+在李群中有一个Schur定理告诉我们，若群中一个元素与所有群元素的对易，则该元素的矩阵表示一定是<span
+class="math inline">\(C=\lambda I\)</span>,其中<span
+class="math inline">\(\lambda\)</span>是一个常数，为<span
+class="math inline">\(C\)</span>的特征值。这里的<span
+class="math inline">\(C\)</span>就是我们的卡西米尔元素。我们用卡西米尔元素来区分不同的表示。</p>
+<p>比如在量子力学中，角动量算符的矩阵表示是我们的<span
+class="math inline">\(SU(2)\)</span>在三维表示的生成元<a href="#fn5"
+class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，角动量的平方<span
+class="math inline">\(J^2\)</span>算符是与角动量的三个分量都对易的(如果你忘了，请戳这里<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>复习)，这个角动量平方算符便是三维表示的卡西米尔元素，很显然<span
+class="math inline">\(J^2=j(j+1)I\)</span>，这里的<span
+class="math inline">\(j(j+1)\)</span>便是我们对这个表示的标记。</p>
+<h3 id="嘉当元素">嘉当元素</h3>
+<p>对于一个群的表示的表示空间<span
+class="math inline">\(V\)</span>，我们也寻找一种方式来标记它的基底。群表示的若干个生成元中，至少有一个可以被对角化，我们使用这些可以对角化生成元来得到基底的标记。<strong>嘉当元素</strong>就是这些可对角化生成元的特征值。</p>
+<p>比如说群<span class="math inline">\(SU(2)\)</span>的生成元中只有<span
+class="math inline">\(J_3\)</span>是可以被对角化的（实际上已经对角化了）
+<span class="math display">\[
+\begin{align}
+J_3=\mqty(1&amp;0&amp;0\\0&amp;0&amp;0\\0&amp;0&amp;-1)
+\end{align}
+\]</span>
+所以该表示空间的嘉当元素就是-1,0,1，我们用这三个数字来标记表示空间的三个基底<span
+class="math inline">\(\ket{2,-1},\ket{2,0},\ket{2,1}\)</span>。</p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -698,6 +797,9 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>当然，如果你喜欢，也可以定义<span
 class="math inline">\(q^\dagger
 vq\)</span>，只不过你定义的转动方向可能和我的不太一样<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>我们后面会演示如何得到<span
+class="math inline">\(SU(2)\)</span>群的三维表示生成元<a href="#fnref5"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
@@ -759,13 +861,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">76k</span>
+    <span title="站点总字数">85k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:18</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动

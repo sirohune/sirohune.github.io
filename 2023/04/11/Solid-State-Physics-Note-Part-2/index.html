@@ -30,7 +30,7 @@
 <meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-11T13:52:21.000Z">
-<meta property="article:modified_time" content="2023-04-11T15:17:47.384Z">
+<meta property="article:modified_time" content="2023-04-18T15:06:24.220Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="笔记">
@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch
-Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-text">布洛赫定理(Bloch
+Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-text">波矢k的物理意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-text">紧束缚近似</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,6 +204,11 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
         <span class="site-state-item-count">13</span>
@@ -211,6 +216,11 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
       </div>
   </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:hakufune@gmail.com" title="E-Mail → mailto:hakufune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
         </div>
       </div>
@@ -261,9 +271,24 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-11 21:52:21 / 修改时间：23:17:47" itemprop="dateCreated datePublished" datetime="2023-04-11T21:52:21+08:00">2023-04-11</time>
+      <time title="创建时间：2023-04-11 21:52:21" itemprop="dateCreated datePublished" datetime="2023-04-11T21:52:21+08:00">2023-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-18 23:06:24" itemprop="dateModified" datetime="2023-04-18T23:06:24+08:00">2023-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+        </span>
     </span>
 
   
@@ -287,14 +312,14 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
+      <span>9.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
+      <span>17 分钟</span>
     </span>
 </div>
 
@@ -345,7 +370,7 @@ V_{ee}(r_i,r_j)=&amp;\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi
 \]</span> 因此总的哈氏量写为 <span class="math display">\[
 \begin{align}
 H=&amp;\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n
-\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-R_n}}}
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}}
 \end{align}
 \]</span></p>
 <p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
@@ -393,9 +418,261 @@ class="math display">\[
 \begin{align}
 k=\sum_i\frac{l_i}{N_i}b_i
 \end{align}
-\]</span> 从</p>
+\]</span> 从（回头再来补证明）</p>
+<p>下面有两种模型分别适用于金属价电子与绝缘体&amp;半导体的电子。</p>
 <h2 id="弱周期势近似">弱周期势近似</h2>
+<p>对于相当多的价电子为s电子和p电子的金属，其感受到的来自离子实的吸引力比较弱，如果我们先忽略离子实，那便是自由电子，此时再把微弱的周期势<span
+class="math inline">\(V(x)\)</span>考虑进去<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>，则可以采用标准的微扰论来处理（如果忘了微扰论，可以看<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>）。</p>
+<p><span class="math display">\[
+\begin{align}
+H=H_0+H&#39;
+\end{align}
+\]</span> 非微扰的哈密顿量<span
+class="math inline">\(H_{0}=-\frac{\hbar^{2}}{2m}\nabla^{2}\)</span>，其本征矢为平面波<span
+class="math inline">\(\ket{k}=\frac{1}{\sqrt{L^3}}e^{ik\cdot
+r}\)</span>，对于微扰论，我们的标准步骤是求得微扰哈氏量的矩阵元(或者说是平面波的展开系数)<span
+class="math inline">\(H&#39;_{kk&#39;}\)</span>，对于 <span
+class="math display">\[
+\begin{align}
+H=\frac{\hbar^2}{2m}\nabla^2+v_i(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span>
+的哈氏量，第一项已经被视为非微扰项，其余部分统统打包起来写成一个周期函数<span
+class="math inline">\(V(x)\)</span>，因此 <span class="math display">\[
+\begin{align}
+H&#39;_{kk&#39;}=&amp;\mel{k}{H&#39;}{k&#39;}\\
+=&amp;\mel{k}{V}{k&#39;}\\
+=&amp;\frac{1}{L^{3}}\int V(x)e^{i(k&#39;-k)r}\dd{r}\\
+\end{align}
+\]</span> 因为势能<span class="math inline">\(V(x)\)</span>的周期为<span
+class="math inline">\(R_n\)</span>，满足<span
+class="math inline">\(V(x+R_n)=V(x)\)</span>，所以可以写成傅里叶级数
+<span class="math display">\[
+\begin{align}
+V(x)=\sum\limits_G \tilde{V}(G)e^{iGr}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(G\)</span>为倒格矢，由于倒格矢的特殊性，容易验证上面的傅里叶展开式满足周期条件。
+我们将该傅里叶级数形式带入前面的积分中有 <span class="math display">\[
+\begin{align}
+H&#39;_{kk&#39;}=&amp;\frac{1}{L^3}\int \sum\limits_G
+\tilde{V}(G)e^{i(G+k&#39;-k)r}\dd{r}\\
+=&amp;\sum\limits_G \tilde{V}(G)\delta_{G,k-k&#39;}
+\end{align}
+\]</span> 上面利用了积分结果<span class="math inline">\(\int
+e^{ikr}\dd{r}=V=L^3\)</span>.
+因此可以看出，在微扰论的视角下，只有满足<span
+class="math inline">\(G=k-k&#39;\)</span>的电子之间才能感受到周期势的效果。（这里我们已经进入了动量空间探讨问题，而不是在位置空间中讨论问题，不同波矢的电子之间以这种方式联系在一起，这在位置空间中是很难想象的）</p>
+<h3 id="非简并微扰">非简并微扰</h3>
+<h4 id="一阶微扰能量">一阶微扰能量</h4>
+<p>我们先考虑非简并的情况，从一阶能量开始算起，一阶微扰能量的公式为<span
+class="math inline">\(E^1(k)=\mel{k}{H&#39;}{k}\)</span>,即 <span
+class="math display">\[
+\begin{align}
+E^1(k)=&amp;H&#39;_{kk}=\sum\limits_G \tilde{V}(G)\delta_{G,0}\\
+=&amp;\tilde{V}(0)
+\end{align}
+\]</span> 这一项是一个与波矢<span
+class="math inline">\(k\)</span>无关的常数，在无微扰的基础上添加上一个与波矢无关的常数并不会改变能量的色散关系<span
+class="math inline">\(E(k)\)</span>,我们总可以对哈氏量添加任意的常数，因此我们将这一项设为0，也就是认为一阶能量微扰为0，因此我们需要进一步计算二阶微扰能量。</p>
+<h4 id="二阶微扰能量">二阶微扰能量</h4>
+<p>能量的二阶微扰为 <span class="math display">\[
+\begin{align}
+E^2(k)=&amp;\sum\limits_{k&#39;\neq
+k}\frac{\abs{H&#39;_{kk&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}
+\end{align}
+\]</span> 因为周期势<span
+class="math inline">\(V(x)\)</span>本身是一个很小的量，所以其二阶效应带来的修正很小，一般情况我们不予考虑，所以非简并时电子的能量基本可以认为是自由电子的能量。</p>
+<p>但是如果上面的二阶修正分母发散，结果就将大为不同，也就是接下来马上要讨论的简并微扰情况。</p>
+<h3 id="简并微扰">简并微扰</h3>
+<p>为了讨论简并微扰，我们将上面的能量二阶修正写得更清楚一些，同时假设系统是一维的<span
+class="math inline">\(G=\frac{2\pi}{a}\)</span>,则有 <span
+class="math display">\[
+\begin{align}
+E^2(k)=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_G
+\tilde{V}(G)\delta_{G,k-k&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_n
+\tilde{V}(\frac{2n\pi}{a})\delta_{k&#39;,k-\frac{2n\pi}{a}}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{k^2-(k-\frac{2n\pi}{a})^2}}
+\end{align}
+\]</span> 我们在前面已经将<span
+class="math inline">\(V(0)\)</span>设为0，也就是将n=0的项丢掉了，所以上面的n取值不包括0，但是包括了其他所有整数
+<span class="math display">\[
+\begin{align}
+E^2(k)=\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{2k-\frac{2n\pi}{a}}\frac{2n\pi}{a}}
+\end{align}
+\]</span> 从上面的表达式可以看出，当<span
+class="math inline">\(k=\frac{n\pi}{a}(n\neq 0)\)</span>时<span
+class="math inline">\(\ket{k}\)</span>与<span
+class="math inline">\(\ket{k&#39;}=\ket{k-\frac{2n\pi}{a}}\)</span>态的能量相同，此时分母发散，系统存在简并情况，应该使用简并微扰论进行计算。</p>
+<p>对于非简并微扰论，我们有 <span class="math display">\[
+\begin{align}
+H&#39;=&amp;\mqty(H&#39;_{\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;_{\frac{n\pi}{a},-\frac{n\pi}{a}}\\
+H&#39;_{-\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;
+_{\frac{n\pi}{a},\frac{n\pi}{a}})\\
+=&amp;\pqty{\begin{matrix}0&amp;\tilde{V}(\frac{2n\pi}{a})\\
+\tilde{V}(-\frac{2n\pi}{a})&amp;0
+\end{matrix}}
+\end{align}
+\]</span> 因为<span
+class="math inline">\(\tilde{V}^*(G)=\tilde{V}(-G)\)</span>，所以上面的一阶微扰矩阵很容易可以解出
+<span class="math display">\[
+\begin{align}
+E^1_{\pm}=&amp;\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Rightarrow E_{\pm}=&amp;\frac{\hbar^2 k^2}{2m}\pm
+\abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Delta E=&amp;2\abs{\tilde{V}(\frac{2n\pi}{a})}
+\end{align}
+\]</span> 这便是能隙的产生，比如当n=1时，比如<span
+class="math inline">\(k=\frac{\pi}{a},k&#39;=-\frac{\pi}{a}\)</span>时，能隙为<span
+class="math inline">\(2\abs{\tilde{V}(\frac{2\pi}{a})}\)</span>。未加入周期势时能量关于波矢是一个二次函数，在上述两态的附近分别都是连续的，但是加入周期势后这因为两态的相互作用能隙出现，这个能隙使得能量在<span
+class="math inline">\(k=\frac{\pi}{a}\)</span>与<span
+class="math inline">\(k=-\frac{\pi}{a}\)</span>的左右产生跳跃间断点，因此产生多个能带。</p>
+<p>值得一提的是，在能隙处有<span
+class="math inline">\(\pdv{E}{k}=0\)</span>，这是周期性与对称性共同要求的。</p>
+<h4 id="简约布里渊区图示">简约布里渊区图示</h4>
+<p>动量空间中产生能隙后，两个能隙之间的间距(指的是k的间隙，能量差距叫能隙的大小)除了<span
+class="math inline">\(k=\pm\frac{\pi}{a}\)</span>是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>外，其余的能隙间距都是<span
+class="math inline">\(\frac{\pi}{a}\)</span>，但是因为对称性使得<span
+class="math inline">\(\ket{k}\)</span>态与<span
+class="math inline">\(\ket{-k}\)</span>态一样，所以实际上其余的能隙间距也是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为<span
+class="math inline">\(\frac{2\pi}{a}\)</span>的区间<span
+class="math inline">\([-\frac{\pi}{a},-\frac{\pi}{a}]\)</span>内，其余取值与该区间的取值只相差<span
+class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
 <h2 id="紧束缚近似">紧束缚近似</h2>
+<p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></strong>，紧束缚近似的出发点是将电子近似为N个简并原子波函数的线性组合，这与前面的进自由电子近似相区别，我们将以电子在原子核某个轨道上的波函数作为非微扰的本征态，而其他原子的吸引势看成微扰。</p>
+<p>所谓的紧束缚就是假设原子对电子的束缚很紧，使得电子的轨道半径远小于原子核之间的距离，因此我们认为不同原子的轨道波函数是正交的关系。</p>
+<p>转换成数学的语言也就是 <span class="math display">\[
+\begin{align}
+\psi(r)=&amp;\sum\limits_{R_n}a_n\phi_i(r-R_n)
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\int \phi_i^*(r-R_n)\phi_i(r-R_m)\dd{r}=\delta_{mn}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\phi_i(r)\)</span>是原子轨道的波函数，其中指标i用于标记哪一个原子轨道，比如我们可以用所有简并的<span
+class="math inline">\(1s\)</span>态也可以用所有简并的<span
+class="math inline">\(2s\)</span>态来展开电子波函数<a href="#fn3"
+class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.</p>
+<p>通常来说，在考虑晶体中能量和<span
+class="math inline">\(1s\)</span>差不多的电子态的时候，我们使用基态<span
+class="math inline">\(1s\)</span>来做展开，所以后面的<span
+class="math inline">\(\phi_i\)</span>会省去<span
+class="math inline">\(i\)</span>。</p>
+<p>紧束缚近似的晶格势场当然也是周期性的，所以电子的波函数应当满足布洛赫定理
+<span class="math display">\[
+\begin{align}
+\psi(r+a)=\psi(r)
+\end{align}
+\]</span> 从这个要求我们可以得到前面电子波函数对<span
+class="math inline">\(1s\)</span>态的展开系数为<span
+class="math inline">\(\frac{1}{\sqrt{N}}e^{ikR_n}\)</span>,即 <span
+class="math display">\[
+\begin{align}
+\psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r)
+\end{align}
+\]</span> 这个表达式称为<span
+class="math inline">\(1s\)</span>原子轨道的布洛赫和</p>
+<p>对于 <span class="math display">\[
+\begin{align}
+H=\frac{\hbar^2}{2m}\nabla^2+v(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span> 的哈氏量，我们从其中的<span
+class="math inline">\(\frac{\hbar^2}{2m}\nabla^2-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}\)</span>视为非微扰的部分，其本证函数取<span
+class="math inline">\(1s\)</span>态，其余的部分统一打包为周期的<span
+class="math inline">\(V(r)\)</span>，包含其余原子核的吸引势。</p>
+<p>对于这个N重简并的系统，我们当然不能使用非简并微扰论，而使用简并微扰论的矩阵来计算该微扰能量也颇有困难的，因此我们换种方法。既然<span
+class="math inline">\(\psi_k(r)\)</span>已经被我们当做系统的本征态了，那哈氏量直接作用在其上应该得到本征能量
+<span class="math display">\[
+\begin{align}
+H\psi_k(r)=&amp;E\psi_k(r)
+\end{align}
+\]</span> 我们在两边同乘<span
+class="math inline">\(\phi^*(r)\)</span>并积分有 <span
+class="math display">\[
+\begin{align}
+\int \phi^*(r)H\frac{1}{\sqrt{N}}\sum\limits_n
+e^{ikR_n}\phi(r-R_n)dr=&amp;E\int
+\phi^*(r)\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr\\
+\sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr=&amp;E\sum\limits_n
+e^{ikR_n}\int \phi^*(r)\phi(r-R_n)dr\\
+E\sum\limits_n e^{ikR_n} \delta_{0,n}=&amp;\sum\limits_n e^{ikR_n}\int
+\phi^*(r)H\phi(r-R_n)dr
+\end{align}
+\]</span> 将哈氏量分为非微扰与微扰部分得 <span class="math display">\[
+\begin{align}
+E=&amp;\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;\sum\limits_ne^{ikR_n}\bqty{E^0\delta_{0,n}+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;E^0-\sum\limits_n e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(E^0\)</span>是<span
+class="math inline">\(1s\)</span>态的本征能量，<span
+class="math inline">\(J(R_n)\triangleq-\int\phi^*(r)V(r)\phi(r-R_n)dr\)</span>
+称为第0个原子轨道与第n个原子轨道的<strong>交叠积分</strong>，随着<span
+class="math inline">\(R_n\)</span>是指数衰减的。</p>
+<p>因此我们一般只考虑<span
+class="math inline">\(n=0\&amp;n=\pm1\)</span>的情况，即 <span
+class="math display">\[
+\begin{align}
+E=E^0-J(0)-\sum\limits_{\expval{R_n}}e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(J(0)=-\int dr
+V\abs{\phi}^2\)</span>，<span
+class="math inline">\(\expval{R_n}\)</span>代表最近邻原子之间的位移。</p>
+<p>以简并立方晶格为例子，最近邻的原子有上下左右前后六个，位矢<span
+class="math inline">\(R_n\)</span>分别为<span
+class="math inline">\(\mqty(a,0,0),(-a,0,0),(0,a,0)\)</span>...等，带入上式可以得到
+<span class="math display">\[
+\begin{align}
+E=&amp;E^0-J(0)-2J(R_n)\pqty{\cos k_xa+\cos k_ya+\cos k_za}\\
+\triangleq&amp;E^0-J_0-2J_1\pqty{\cos k_xa+\cos k_ya+\cos k_za}
+\end{align}
+\]</span> 如果是面心立方，则最近邻有十二个，位矢分别为<span
+class="math inline">\(\frac12\pqty{1,1,0},\frac12\pqty{-1,1,0}\)</span>...等，带入上式有
+<span class="math display">\[
+\begin{align}
+E=&amp;E^0-J_0-2J_1\left(\cos\frac a2(k_x+k_y)+\cos\frac
+a2(k_x-k_y)+\cos\frac a2(k_x+k_z)\right.\\
+&amp;\left.+\cos\frac a2(k_x-k_z)+\cos\frac a2(k_y+k_z)+\cos\frac
+a2(k_y-k_z)\right)
+\end{align}
+\]</span> 体心立方的情况就不敲了，很容易可以类比得到。</p>
+<p>从上面的结果可以很容易可以看出，简单立方晶格的能量关于波矢k变化，变化范围为<span
+class="math inline">\(12J_1\)</span>，因此我们说<span
+class="math inline">\(1s\)</span>的单原子能级展宽成<strong>能带</strong>，如法炮制我们可以得到其余原子能级也展宽成能带，这样便也得到了能带，<span
+class="math inline">\(1s\)</span>的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
+<p>对于更高能级的单原子波函数，比如<span
+class="math inline">\(p\)</span>态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>因此弱周期势近似又称为近自由电子近似<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>这里说的简并并不是指<span
+class="math inline">\(1s\)</span>内部的简并态，说的是N个电子的<span
+class="math inline">\(1s\)</span>态是简并的，<span
+class="math inline">\(2s\)</span>同理。<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -451,13 +728,13 @@ k=\sum_i\frac{l_i}{N_i}b_i
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">76k</span>
+    <span title="站点总字数">85k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:18</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
