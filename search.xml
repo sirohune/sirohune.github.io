@@ -6,7 +6,6 @@
     <content><![CDATA[<p><strong>前念不生，即心 后年不灭，即佛</strong></p>
 <span id="more"></span>
 <p>测试一下图片<img src="test1.jpg" alt="你好" /></p>
-<img src="/2023/04/19/Climbing%20Diary-1/test1.jpg" class="" title="这是一张图片">
 <p>不知道是什么原因，这学期来训练的人很少，大家训练都没什么热情，可能是因为这学期还没出过线吧？终于盼来了天水，天水来的时候我也恰好做了一个我觉得是很重要的决定，为了完成那个那个决定带来的目标，我需要腾出很多时间去准备，所以本来是新学期起始线的天水突然就变成了大三的最后一条线。有点突然，但是想想其实也是缘分。</p>
 <p>天水是我加入野草<a href="#fn1" class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a>后出的第一条线，直到现在我都还能回忆起当时第一次出线的不安<a
@@ -81,6 +80,492 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>日常</tag>
         <tag>爬山游记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>群论学习笔记(part1)</title>
+    <url>/2023/03/06/Lie-Group-Study-Note-(part1)/</url>
+    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<p>参考教材第三章</p>
+<h1 id="lie-group-theory">Lie Group Theory</h1>
+<span id="more"></span>
+<p><span class="math display">\[\require{physics}\]</span></p>
+<p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
+<p>接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。</p>
+<h2 id="groups">Groups</h2>
+<p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符<span
+class="math inline">\(\circ\)</span>构成转动群。比如说群元素<span
+class="math inline">\(g_1\)</span> 与<span
+class="math inline">\(g_2\)</span> 之间的运算<span
+class="math inline">\(g_1\circ g_2\)</span>
+是多少，由运算符的规定给出。</p>
+<p>除此之外，对群还有一些数学要求：</p>
+<ul>
+<li>存在恒元<span class="math inline">\(I\)</span><a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+<ul>
+<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p></li>
+<li><p>群乘法封闭，即<span class="math inline">\(g_1\circ g_2=g_3\in
+G,\forall g_1,g_2\in G\)</span></p></li>
+<li><p>结合律<span
+class="math inline">\(\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}\)</span></p></li>
+</ul>
+<h2 id="rotations-in-two-dimensions">Rotations in two Dimensions</h2>
+<p>先研究二维空间中的转动。</p>
+<h3 id="特殊正交群so2">特殊正交群<span
+class="math inline">\(SO(2)\)</span></h3>
+<p>转动的定义中包含有“矢量模长不变”，但显然不只有这个要求，因为起码反射也符合这个要求，因此如果只有“模长不变”的要求的话，那么转动和反射便没有区别。但我们可以先找到所有满足“模长不变”的操作，再从中挑出我们心仪的转动操作。</p>
+<p>根据上述定义自然有（选取矩阵表示） <span class="math display">\[
+\begin{align}
+v&#39;=&amp;Ov\\
+(v&#39;)^Tv&#39;=&amp;v^TO^TOv=v^Tv\\
+\Rightarrow O^TO=&amp;I
+\end{align}
+\]</span>
+显然满足“模长不变”的操作的矩阵也满足<strong>正交矩阵</strong>的定义:<span
+class="math inline">\(O^T=O^{-1}\)</span></p>
+<p>很容易可以证明，以矩阵乘法作为群乘法是封闭的，逆元恒元结合律自然有矩阵运算保证。因此所有2x2的正交矩阵构成二维实空间的正交群<span
+class="math inline">\(O(2)\)</span>。 <span class="math display">\[
+\begin{align}
+O^TO=&amp;I\\
+\Rightarrow \det{O}=&amp;\pm1
+\end{align}
+\]</span> 其中满足<span
+class="math inline">\(\det(O)=1\)</span>的一般矩阵为 <span
+class="math display">\[
+\begin{align}
+R=\mqty(\cos\theta&amp;-\sin\
+\theta\\
+\sin\theta &amp; \cos\theta)
+\end{align}
+\]</span> 满足<span
+class="math inline">\(\det(O)=-1\)</span>的一般矩阵为 <span
+class="math display">\[
+\begin{align}
+P=\mqty(\cos\theta&amp;\sin\
+\theta\\
+\sin\theta &amp; -\cos\theta)
+\end{align}
+\]</span> 很容易验证第一类群元代表纯转动，第二类代表反射（关于<span
+class="math inline">\(\theta
+/2\)</span>反射）。因此把第一类群元挑出来构成另外一个群<span
+class="math inline">\(SO(2)\)</span>，称为特殊正交群。</p>
+<h3 id="u1">U(1)</h3>
+<p>对于复数而言，由于欧拉公式<span
+class="math inline">\(e^{i\theta}=\cos\theta+i\sin\theta\)</span>，复数天生就很容易可以表示转动。同样在复数域中我们很容易可以得到，模长不变的操作满足
+<span class="math display">\[
+\begin{align}
+v&#39;=&amp;Uv\\
+(v&#39;)^\dagger v&#39;=&amp;v^\dagger U^\dagger Uv=v^\dagger v\\
+\Rightarrow U^\dagger U=&amp;I
+\end{align}
+\]</span> 在复数域中我们很容易取到<span
+class="math inline">\(U=e^{i\theta}\)</span>，满足上述要求，以复数乘法为群乘法，构成幺正群<span
+class="math inline">\(U(1)\)</span>。为了与实数域的转动群对比，我们也为其选取矩阵表示(用2x2的实矩阵来表示复数)
+<span class="math display">\[
+\begin{align}
+1=\mqty(1&amp;0\\0&amp;1),\quad i=\mqty(0&amp;-1\\1&amp;0)
+\end{align}
+\]</span>
+如此，复数域上的两个基底都被实矩阵表示了，这样复空间中的转动便可以写为
+<span class="math display">\[
+\begin{align}
+e^{i\theta}=&amp;1\cdot \cos\theta+i\cdot \sin\theta\\
+=&amp;\mqty(\cos\theta&amp;0\\0&amp;\cos\theta)+\mqty(0&amp;-\sin\theta\\\sin\theta&amp;0)\\
+=&amp;\mqty(\cos\theta&amp;-\sin\
+\theta\\
+\sin\theta &amp; \cos\theta)
+\end{align}
+\]</span> 嗯，我们发现复数域中的幺正群<span
+class="math inline">\(U(1)\)</span>的矩阵表示与特殊正交群<span
+class="math inline">\(SO(2)\)</span>的矩阵表示一模一样，很显然两个群之间的映射<span
+class="math inline">\(\Pi\)</span>是双射，而且满足<span
+class="math inline">\(\Pi(g_1)\Pi(g_2)=\Pi(g_1g_2)\)</span>，所以<span
+class="math inline">\(U(1)\)</span>群与<span
+class="math inline">\(SO(2)\)</span>群同构。</p>
+<h2 id="rotations-in-three-dimensions">Rotations in three
+Dimensions</h2>
+<p>仿照上一节的操作，我们可以得到我们已经很熟悉的<span
+class="math inline">\(SO(3)\)</span>群元，一般将其分为绕xyz轴的旋转
+<span class="math display">\[
+\begin{align}
+&amp;R_x=\mqty(1&amp;0&amp;0\\
+0&amp;\cos\theta &amp;-\sin\theta\\
+0&amp;\sin\theta&amp;\cos\theta),\quad
+R_y=\mqty(\cos\theta&amp;0&amp;\sin\theta\\0&amp;1&amp;0\\
+-\sin\theta&amp;0&amp;\cos\theta)\\
+&amp;R_z=\mqty(\cos\theta&amp;-\sin\theta&amp;0\\
+\sin\theta&amp;\cos\theta&amp;0\\
+0&amp;0&amp;1)
+\end{align}
+\]</span> 接着我们会猜想，是否也有一个复数的幺正群与<span
+class="math inline">\(SO(3)\)</span>群同构呢？因此接下来便是要研究三维空间中复数的转动。</p>
+<h3 id="四元数quaternions的转动">四元数Quaternions的转动</h3>
+<p>前面二维空间时，我们选取了两个实自由度的复数域，因此我们或许会猜想这时要选取三个实自由度的复数域，但在数学上，这样的数域定义似乎不是很良好（具体可以查一下三元数），而四元数在抛弃乘法交换律的前提下，性质非常符合我们的要求，因此我们使用四元数来描述三维转动。（很快你会发现，这个四元数跟我们熟悉的泡利矩阵基本算同一个东西）</p>
+<p>四元数的构建需要引入另外两个单位复数满足 <span
+class="math display">\[
+\begin{align}
+\begin{cases}
+j^2=k^2=i^2=-1&amp;\\
+ijk=1\\
+ij=-ji,\ ik=-ki,\ jk=-kj
+\end{cases}
+\end{align}
+\]</span>
+注意我们新引入的复数是不满足乘法交换律的，第三行可以从第二行推出来。
+将四元数记作<span
+class="math inline">\(q=a1+bi+cj+dk\)</span>，与二维的情况相同，我们要求四元数满足
+<span class="math display">\[
+\begin{align}
+q^\dagger q=&amp;1\\
+\Rightarrow a^2+b^2+c^2+d^2=&amp;1
+\end{align}
+\]</span>
+四元数在四元数乘法作为群乘法时构成一个群。我们先证明四元数可以对矢量进行转动操作，为此我们要研究四元数的结构。</p>
+<p>四元数中三个复数基底之间是不满足交换律的，但他们分别与单位1的乘积是满足交换律的，因此很自然的，三个复数基底自己可以张成一个与单位1没啥关系的向量空间，而且明显是三维的。将这个矢量空间记作W，W空间中的矢量乘积已经被基矢之间的乘积定义了，因此我们可以得到矢量中任意两个矢量<span
+class="math inline">\(u,v\)</span>之间的乘积为(我们把矢量乘积的符号用<span
+class="math inline">\(\cdot\)</span>来表示，但注意这并不是内积<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>) <span class="math display">\[
+\begin{align}
+u\cdot v=&amp;(ai+bj+ck)\cdot (xi+yj+zk)\\
+=&amp;-ax-by-cz\\
+&amp;+ayij+azik+bxji+bzjk+cxki+cykj\\
+=&amp;-ax-by-cz+(bz-cy)i+(cx-az)j+(ay-bx)k\\
+\end{align}
+\]</span> 现在在这个矢量空间W中定义一个内积括号<span
+class="math inline">\(\expval{}\)</span>，其运算规则与高中普通矢量的内积规则相同；同时观察上式的乘积结果，其结果并不能被矢量空间W中的基底线性表示，也就是说这个乘法运算并不是封闭的，根据内积括号与我们曾经学过的叉乘，我们可以将上面的结果写为
+<span class="math display">\[
+\begin{align}
+u\cdot v=&amp;-\expval{u,v}+u\times v
+\end{align}
+\]</span></p>
+<p>好吧，现在矢量空间W中的矢量乘法是不封闭的，听起来不太妙，但是没关系，我们用于转动的是四元数q，而不是这三个虚数，把实维度补充到上面的矢量空间后<span
+class="math inline">\(\mathbb{R}\times
+W\)</span>的空间是四元数的空间，它的乘法是封闭的，设四元数<span
+class="math inline">\(q=m+u,p=n+v\)</span>，把每个四元数都写成实数与三维矢量的叠加（聪明的你肯定知道我哪个字母指代的是实数，哪个是虚数矢量），我们再来看看四元数的乘法:
+<span class="math display">\[
+\begin{align}
+q\cdot p=&amp;(m+u)(n+v)\\
+=&amp;mn+mv+un+uv\\
+=&amp;mn-\expval{u,v}+mv+nu+u\times v\\
+\Rightarrow q^\dagger\cdot q=&amp;m^2+\expval{u,u}+u\times u\\
+=&amp;\expval{q,q}
+\end{align}
+\]</span> 原谅我在这之前还没有在四元数的空间中定义内积括号<a href="#fn3"
+class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>，现在我们发现四元数的厄米乘上自身得到的便是该四元数的内积，这与<span
+class="math inline">\(\mathbb{C}\)</span>是一样的，因此我们可以很安心地取一个模长为1的四元数q，然后我们声称他可以转动一个三维矢量，你兴冲冲地取来一个矢量<span
+class="math inline">\(xe_x+ye_y+ze_z\)</span>，然后把归一化的四元数丢上去<span
+class="math inline">\((xe_x+ye_y+ze_z)(m+u)\)</span>，嗯，左边是一个矢量，右边的实数部分可以直接乘上去，但是u也是一个三维矢量，它的基底是<span
+class="math inline">\(ijk\)</span>，它和<span
+class="math inline">\(e_x,e_y,e_z\)</span>乘积得到....？等下，这个式子怎么会有六个矢量基底，你发现这不妥，所以这是三维矢量当然不能拿<span
+class="math inline">\(\mathbb{R}^3\)</span>来表示，四元数自己的运算封闭，你得拿四元数来表示，好在四元数中自带一个三维的矢量空间W，最基本的数乘和矢量加法规则还是满足的，所以我们要用W中的矢量<span
+class="math inline">\(v\)</span>来表示三维空间中的矢量。好了，这下我们的四元数乘矢量<span
+class="math inline">\(q\cdot
+v\)</span>的表达式中起码不会出现一堆不知道怎么运算的矢量乘积，但是有一个严重的问题，你可能还看不出来，没关系，你按照我们之前的四元数乘法算一下:</p>
+<p><span class="math display">\[
+\begin{align}
+qv=&amp;(m+u)v\\
+=&amp;-\expval{u,v}+mv+u\times v
+\end{align}
+\]</span> 你说："我们已经用四元数把矢量<span
+class="math inline">\(v\)</span>转动啦！"但是仔细一瞧，转动后的矢量是哪个矢量呢？<span
+class="math inline">\(-\expval{u,v}\)</span>甚至不在矢量空间W里，这是一个严重的问题。所以这意味着四元数的转动表示肯定不是<span
+class="math inline">\(qv\)</span>，我们也不卖关子了，四元数中的转动应当是<span
+class="math inline">\(qvq^\dagger\)</span><a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>:
+<span class="math display">\[
+\begin{align}
+qvq^\dagger=&amp;(m+u)v(m-u)\\
+=&amp;(-\expval{u,v}+mv+u\times v)(m-u)\\
+=&amp;-m\expval{u,v}+m^2v +mu \times v\\
+&amp;+\expval{u,v}u+m\expval{v,u}-mv\times u+\expval{u\times
+v,u}-u\times v\times u\\
+=&amp;m^2v+2mu\times v+\expval{u,v}u\in W
+\end{align}
+\]</span></p>
+<p>太好了，我们终于得到了四元数表示的转动，很容易验证<span
+class="math inline">\(qvq^\dagger\)</span>的内积与<span
+class="math inline">\(v\)</span>的内积是相同的。</p>
+<p>证明了四元数本身可以表示转动后，紧接着便要研究四元数的转动群与<span
+class="math inline">\(SO(3)\)</span>群之间的联系</p>
+<h3 id="双覆盖double-cover">双覆盖(double cover)</h3>
+<p>仿照二维的思路，先为四元数的基矢找到合适的矩阵表示，合适的矩阵表示有很多种，但这里选择2x2矩阵来表示(为了和泡利矩阵对应，这里的矩阵和书上的不太一样)
+<span class="math display">\[
+\begin{align}
+1=\mqty(1&amp;0\\0&amp;1),&amp;\quad i=\mqty(0&amp;i\\ i&amp;0)\\
+j=\mqty(0&amp;1\\-1&amp;0),&amp;\quad k=\mqty(i&amp;0\\0&amp;-i)
+\end{align}
+\]</span>
+我们现在得到了四元数的矩阵表示，而且行列式为+1，上面的四元数构成特殊酉群<span
+class="math inline">\(SU(2)\)</span>。 任意转动<span
+class="math inline">\(q=a+bi+cj+dk\)</span>，以绕z轴为例 <span
+class="math display">\[
+\begin{align}
+R_z(\theta)=&amp;\cos\theta+\sin\theta k\\
+=&amp;\mqty(e^{i\theta}&amp;0\\
+0&amp;e^{-i\theta})
+\end{align}
+\]</span> 取矢量<span class="math inline">\(v=(1,0,0)^T\)</span>: <span
+class="math display">\[
+\begin{align}
+R_z(\theta)vR^\dagger(\theta)=&amp;\mqty(e^{i\theta}&amp;0\\
+0&amp;e^{-i\theta})\mqty(0&amp;i\\ i&amp;0)\mqty(e^{-i\theta}&amp;0\\
+0&amp;e^{i\theta})\\
+=&amp;\mqty(0&amp;ie^{2i\theta}\\ie^{-2i\theta}&amp;0)\\
+=&amp;\mqty(0&amp;i\cos2\theta-\sin2\theta\\i\cos2\theta+\sin2\theta&amp;0)\\
+=&amp;(\cos2\theta,-\sin2\theta,0)^T
+\end{align}
+\]</span> 其转动的角度为<span
+class="math inline">\(2\theta\)</span>，因此<span
+class="math inline">\(SU(2)\)</span>群中的参数为<span
+class="math inline">\([0,\pi]\)</span>或<span
+class="math inline">\([\pi,2\pi]\)</span>对应的群元便可以与<span
+class="math inline">\(SO(3)\)</span>中的群元同构，换句话说两个群之间的映射不是单射，因此不满足双射，<span
+class="math inline">\(SO(3)\)</span>群与<span
+class="math inline">\(SU(2)\)</span>群不是同构关系，而是<span
+class="math inline">\(SU(2)\)</span>群双覆盖<span
+class="math inline">\(SO(3)\)</span>群。书中喜欢用半球与完整求的关系来比喻两个群，但我觉得抛物线<span
+class="math inline">\(y=x^2\)</span>与<span
+class="math inline">\(x=0(y&gt;0)\)</span>的关系更适合比喻两个群（或者单层吉士堡也很贴合）。</p>
+<h2 id="李代数-lie-algebras">李代数 Lie Algebras</h2>
+<p>李群中的任一群元可以从生成元+指数映射得到。这应该是从物理意义得到的，比如说三维空间轴绕z轴的转动<span
+class="math inline">\(\theta\)</span>的操作，指数函数的定义告诉我们，可以表示成
+<span class="math display">\[
+\begin{align}
+R_z(\theta)=&amp;\lim_{N\to \infty}(1+\frac{\theta}{N}J_z)^N\\
+=&amp;e^{\theta J_z}
+\end{align}
+\]</span>
+若是把转动群理解为参数同胚群，则生成元便是在流行上指定了方向，选择了一条参数曲线，参数是<span
+class="math inline">\(\theta\)</span>。流形上选定了图集后，自然便有n个坐标基矢，对应n个独立的方向，这应该对应生成元的基底？</p>
+<ul>
+<li><p>对于任意群元可以通过求导，然后参数取0得到 <span
+class="math display">\[
+\begin{align}
+J_z=&amp;\eval{\dv{\theta}R_z}_{\theta=0}
+\end{align}
+\]</span></p></li>
+<li><p>生成元本身构成一个向量空间<span
+class="math inline">\(\mathfrak{g}\)</span>，其中的乘法用李括号<span
+class="math inline">\(\comm{}{}\)</span>来定义，这个乘法是线性且封闭的，且不满足交换律、满足雅阁比恒等式
+<span class="math display">\[
+\begin{align}
+\begin{cases}
+\comm{A}{B}=-\comm{B}{A}\\
+\comm{A}{\comm{B}{C}}+\comm{B}{\comm{C}{A}}+\comm{C}{\comm{A}{B}}=0
+\end{cases}
+\end{align}
+\]</span></p></li>
+<li><p>李代数与群的关系是：多个群可能对应同一个李代数</p></li>
+</ul>
+<h3 id="以so3为例">以<span class="math inline">\(SO(3)\)</span>为例</h3>
+<ul>
+<li><p>群元素满足<span class="math inline">\(O^TO=I\)</span>，即<span
+class="math inline">\(e^{-\theta J^T}e^{\theta
+J}=I\)</span>，生成元反对称 <span class="math display">\[
+\begin{align}
+J^T+J=I
+\end{align}
+\]</span></p></li>
+<li><p>同时特殊正交群还要求<span
+class="math inline">\(\det{O}=1\)</span>，由矩阵论中的结论的<span
+class="math inline">\(\det{e^A}=e^{\tr{A}}\)</span>得生成元无迹 <span
+class="math display">\[
+\begin{align}
+\tr{J}=0
+\end{align}
+\]</span></p></li>
+<li><p>特殊正交群生成元基底的写出，我们实际上是将已知的转动矩阵小量展开到一阶，或者用前面提到的求导的方法：
+<span class="math display">\[
+\begin{align}
+J_1=\mqty(0&amp;0&amp;0\\0&amp;0&amp;-1\\0&amp;1&amp;0),\quad
+J_2=\mqty(0&amp;0&amp;1\\0&amp;0&amp;0\\-1&amp;0&amp;0),\quad
+J_3=\mqty(0&amp;-1&amp;0\\1&amp;0&amp;0\\0&amp;0&amp;0)
+\end{align}
+\]</span> 很容易可以得到，生成元的的矩阵表示为 <span
+class="math display">\[
+\begin{align}
+(J_i)_{jk}=-\epsilon_{ijk}
+\end{align}
+\]</span> 也很容易验证，上式与参数<span
+class="math inline">\(\theta\)</span>带入指数里，可以得到先前的转动矩阵。</p></li>
+<li><p>因为李代数的乘法运算是李括号，所以只需要知道基底的李括号，便可以得到李代数中所有生成元之间的乘积（是不是让你想起基本对易关系）
+<span class="math display">\[
+\begin{align}
+\comm{J_i}{J_j}=&amp;\epsilon_{ijk}J_k
+\end{align}
+\]</span></p></li>
+<li><p>比起反对称矩阵，我们更喜欢厄米矩阵，因为厄米算符在量子力学中尤其重要，因此
+<span class="math display">\[
+\begin{align}
+e^{\theta J}=e^{-i\theta iJ}
+\end{align}
+\]</span> 我们把上面的<span
+class="math inline">\(iJ\)</span>重新定义为<span
+class="math inline">\(J\)</span>，则生成元可以写成 <span
+class="math display">\[
+\begin{align}
+J_1=\mqty(0&amp;0&amp;0\\0&amp;0&amp;-i\\0&amp;i&amp;0),\quad
+J_2=\mqty(0&amp;0&amp;i\\0&amp;0&amp;0\\-i&amp;0&amp;0),\quad
+J_3=\mqty(0&amp;-i&amp;0\\i&amp;0&amp;0\\0&amp;0&amp;0)
+\end{align}
+\]</span> 如此<span class="math inline">\(e^{-i\theta
+J}\)</span>得到的转动效果与原先是一样的。对易关系变为 <span
+class="math display">\[
+\begin{align}
+\comm{J_i}{J_j}=&amp;i\epsilon_{ijk}J_k
+\end{align}
+\]</span></p></li>
+</ul>
+<h3 id="以su2为例">以<span class="math inline">\(SU(2)\)</span>为例</h3>
+<ul>
+<li><p>有了前面的讨论，这里我们直接在指数上放上一个虚数i，则酉群的定义要求生成元是厄米矩阵
+<span class="math display">\[
+\begin{align}
+U^\dagger U=&amp;I\\
+e^{-iJ^\dagger}e^{iJ}=&amp;I\\
+\Rightarrow J^\dagger=J
+\end{align}
+\]</span></p></li>
+<li><p>特殊酉群要求行列式为0，因此<span
+class="math inline">\(SU(2)\)</span>生成元也是无迹的</p></li>
+<li><p><span class="math inline">\(SU(2)\)</span>的生成元正是泡利矩阵
+<span class="math display">\[
+\begin{align}
+\sigma_x=\mqty(0&amp;1\\1&amp;0),\quad
+\sigma_y=\mqty(0&amp;-i\\i&amp;0),\quad
+\sigma_z=\mqty(1&amp;0\\0&amp;-1)
+\end{align}
+\]</span></p></li>
+<li><p>泡利矩阵满足如下对易关系（<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">关于更多泡利矩阵可以参考这里的“自旋”章节</a>)）
+<span class="math display">\[
+\begin{align}
+\comm{\sigma_i}{\sigma_j}=2i\epsilon_{ijk}\sigma_k
+\end{align}
+\]</span></p></li>
+<li><p>泡利矩阵作为李代数空间的基底，基底当然可以任意选取长度，我们选<span
+class="math inline">\(\sigma/2\)</span>作为基底，则基底的对易关系便于<span
+class="math inline">\(SO(3)\)</span>的相同</p></li>
+</ul>
+<p>到此，我们已经发现了<span
+class="math inline">\(SU(2)\)</span>的李代数与<span
+class="math inline">\(SO(3)\)</span>的相同，为了进一步描述群，我们需要给群下一个更抽象的定义，分清它与矩阵的关系。</p>
+<h3 id="李群的抽象定义">李群的抽象定义</h3>
+<p>简单来说：李群=群+流形</p>
+<p>此外，我们还要求群乘法必须要诱导出一个流形到流形本身的映射。这是很好理解的，因为群和流形最基本的属性是一个集合，群元便是集合的元素，自然也应当是流形上的点。既然群元运算本身是封闭的<span
+class="math inline">\(g_3=g_{1}\circ g_{2}\in
+G\)</span>，那么它应当对应流形上的一个点，从这个角度来看，群乘法自然是从流形到流形的映射。</p>
+<p>有了这个定义后，我们便可以进一步理解什么叫<span
+class="math inline">\(SU(2)\)</span>群是<span
+class="math inline">\(SO(3)\)</span>群的二重覆盖，其实<span
+class="math inline">\(SU(2)\)</span>的流形长得就像两个<span
+class="math inline">\(SO(3)\)</span>流形的拼接。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;document&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=0:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SO(3)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=-2.5:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SU(2)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>他们的关系有点像上面两个图，但当然没这么简单，这只是一个示意。
+如果你还记得的话，同一个李代数可以对应多个群，但其中有一个群是最特殊的群，这个群往往可以覆盖其他群，而且是<strong>简单单连通</strong>的，一般叫做<strong>覆盖群</strong>，比如前面的<span
+class="math inline">\(SU(2)\&amp;SO(3)\)</span>就是一个例子。而自然界往往会选择覆盖群来描述粒子的基本属性，而不是用其他的群。</p>
+<h2 id="表示论-representation-theory">表示论 Representation Theory</h2>
+<p>一个群可以作用于多个对象，被作用的对象往往处于某个线性空间<span
+class="math inline">\(V\)</span>中，当群作用在这个对象上的时候，其作用效果往往是一个矩阵作用在矢量上，在这个线性空间<span
+class="math inline">\(V\)</span>中，所有的群元<span
+class="math inline">\(g\)</span>操作对应一群变换矩阵<span
+class="math inline">\(R(g)\)</span>（他们会作用在矢量上，得到变换后的矢量）。将群与变换矩阵联系在一起的映射就叫做<strong>表示</strong>
+<span class="math display">\[
+\begin{align}
+R:g\to R(g)
+\end{align}
+\]</span></p>
+<p>我们要求这个映射是同态的 <span class="math display">\[
+\begin{align}
+R(g_{1})R(g_{2})=&amp;R(g_{1}\circ g_{2})
+\end{align}
+\]</span> 我们找了一个矢量空间<span
+class="math inline">\(V\)</span>，对应便有一个表示<span
+class="math inline">\(R\)</span>，若矢量空间中存在一个子空间<span
+class="math inline">\(V&#39;\)</span>，让群的变换矩阵作用在子空间上的任意元素上得到的结果依旧在这个子空间<span
+class="math inline">\(V&#39;\)</span>中，则称这个空间为不变子空间，如此我们可以定义一个子表示<span
+class="math inline">\(R&#39;\)</span>，这个子表示的矩阵作用在子空间<span
+class="math inline">\(V&#39;\)</span>上的元素上得到的结果依旧属于这个不变子空间，且作用效果与<span
+class="math inline">\(R\)</span>相同<span
+class="math inline">\(R&#39;(g)v&#39;=R(g)v&#39;\)</span>。</p>
+<p>如果出现了这种情况，我们说这是一个<strong>可约表示(reducible
+representation)</strong>。反之则是<strong>不可约表示</strong>，而不可约表示才是更加基础的，因为它不是由其他更小的表示组成。举一个关于可约表示的，可能不太恰当的例子，加入空间<span
+class="math inline">\(V\)</span>是四维的，取子空间<span
+class="math inline">\(V&#39;\)</span>为<span
+class="math inline">\(\pqty{a,b,0,0}^{T}\)</span>，而群表示<span
+class="math inline">\(R\)</span>的变换矩阵为<span
+class="math inline">\(\mqty(A&amp;0\\0&amp;B)\)</span>
+,很显然我们可以取块矩阵A作为一个子表示<span
+class="math inline">\(R&#39;\)</span>的变换矩阵.</p>
+<p>群表示论是十分强大的，我们即将看到它强大的威力。
+我们首先需要介绍表示论中两个重要的概念：<strong>卡西米尔元素</strong>和<strong>嘉当元素</strong>。</p>
+<h3 id="卡西米尔元素">卡西米尔元素</h3>
+<p>对于一个群，它可以有很多个表示，我们想要区分这些不同的表示，所以我们引入了<strong>卡西米尔元素</strong>，他的定义是与所有的生成元<span
+class="math inline">\(X\)</span>都对易的一个群元素。 <span
+class="math display">\[
+\begin{align}
+\comm{C}{X}=0
+\end{align}
+\]</span>
+在李群中有一个Schur定理告诉我们，若群中一个元素与所有群元素的对易，则该元素的矩阵表示一定是<span
+class="math inline">\(C=\lambda I\)</span>,其中<span
+class="math inline">\(\lambda\)</span>是一个常数，为<span
+class="math inline">\(C\)</span>的特征值。这里的<span
+class="math inline">\(C\)</span>就是我们的卡西米尔元素。我们用卡西米尔元素来区分不同的表示。</p>
+<p>比如在量子力学中，角动量算符的矩阵表示是我们的<span
+class="math inline">\(SU(2)\)</span>在三维表示的生成元<a href="#fn5"
+class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，角动量的平方<span
+class="math inline">\(J^2\)</span>算符是与角动量的三个分量都对易的(如果你忘了，请戳这里<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>复习)，这个角动量平方算符便是三维表示的卡西米尔元素，很显然<span
+class="math inline">\(J^2=j(j+1)I\)</span>，这里的<span
+class="math inline">\(j(j+1)\)</span>便是我们对这个表示的标记。</p>
+<h3 id="嘉当元素">嘉当元素</h3>
+<p>对于一个群的表示的表示空间<span
+class="math inline">\(V\)</span>，我们也寻找一种方式来标记它的基底。群表示的若干个生成元中，至少有一个可以被对角化，我们使用这些可以对角化生成元来得到基底的标记。<strong>嘉当元素</strong>就是这些可对角化生成元的特征值。</p>
+<p>比如说群<span class="math inline">\(SU(2)\)</span>的生成元中只有<span
+class="math inline">\(J_3\)</span>是可以被对角化的（实际上已经对角化了）
+<span class="math display">\[
+\begin{align}
+J_3=\mqty(1&amp;0&amp;0\\0&amp;0&amp;0\\0&amp;0&amp;-1)
+\end{align}
+\]</span>
+所以该表示空间的嘉当元素就是-1,0,1，我们用这三个数字来标记表示空间的三个基底<span
+class="math inline">\(\ket{2,-1},\ket{2,0},\ket{2,1}\)</span>。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>就是什么也不干的群元素，作用于任何东西上都得到它自己<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>“内积”是一种映射:<span class="math inline">\(V\times
+V\to
+\mathbb{R}\)</span>的映射，属于张量，我们在这个矢量空间中还没下这个定义<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>但是没关系，相信你很快就反应过来了<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>当然，如果你喜欢，也可以定义<span
+class="math inline">\(q^\dagger
+vq\)</span>，只不过你定义的转动方向可能和我的不太一样<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>我们后面会演示如何得到<span
+class="math inline">\(SU(2)\)</span>群的三维表示生成元<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>群论</tag>
       </tags>
   </entry>
   <entry>
@@ -659,848 +1144,6 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>群论学习笔记(part1)</title>
-    <url>/2023/03/06/Lie-Group-Study-Note-(part1)/</url>
-    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
-<p>参考教材第三章</p>
-<h1 id="lie-group-theory">Lie Group Theory</h1>
-<span id="more"></span>
-<p><span class="math display">\[\require{physics}\]</span></p>
-<p>这章将先以转动为例子来介绍李群与李代数。李代数是从李群中抽象出来的一个数学对象，不同的群可能对应于同一个李代数。</p>
-<p>接着将会介绍洛伦兹群与庞加莱群，庞加莱群是洛伦兹群加上平移变换。</p>
-<h2 id="groups">Groups</h2>
-<p>群是什么？大致可以理解为<strong>集合+一种运算</strong>。比如说所有转动操作构成的集合，加上运算符<span
-class="math inline">\(\circ\)</span>构成转动群。比如说群元素<span
-class="math inline">\(g_1\)</span> 与<span
-class="math inline">\(g_2\)</span> 之间的运算<span
-class="math inline">\(g_1\circ g_2\)</span>
-是多少，由运算符的规定给出。</p>
-<p>除此之外，对群还有一些数学要求：</p>
-<ul>
-<li>存在恒元<span class="math inline">\(I\)</span><a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></li>
-</ul>
-<ul>
-<li><p>任意群元都存在逆元，恒元的逆元就是它自己</p></li>
-<li><p>群乘法封闭，即<span class="math inline">\(g_1\circ g_2=g_3\in
-G,\forall g_1,g_2\in G\)</span></p></li>
-<li><p>结合律<span
-class="math inline">\(\pqty{g_1g_2}g_3=g_1\pqty{g_2g_3}\)</span></p></li>
-</ul>
-<h2 id="rotations-in-two-dimensions">Rotations in two Dimensions</h2>
-<p>先研究二维空间中的转动。</p>
-<h3 id="特殊正交群so2">特殊正交群<span
-class="math inline">\(SO(2)\)</span></h3>
-<p>转动的定义中包含有“矢量模长不变”，但显然不只有这个要求，因为起码反射也符合这个要求，因此如果只有“模长不变”的要求的话，那么转动和反射便没有区别。但我们可以先找到所有满足“模长不变”的操作，再从中挑出我们心仪的转动操作。</p>
-<p>根据上述定义自然有（选取矩阵表示） <span class="math display">\[
-\begin{align}
-v&#39;=&amp;Ov\\
-(v&#39;)^Tv&#39;=&amp;v^TO^TOv=v^Tv\\
-\Rightarrow O^TO=&amp;I
-\end{align}
-\]</span>
-显然满足“模长不变”的操作的矩阵也满足<strong>正交矩阵</strong>的定义:<span
-class="math inline">\(O^T=O^{-1}\)</span></p>
-<p>很容易可以证明，以矩阵乘法作为群乘法是封闭的，逆元恒元结合律自然有矩阵运算保证。因此所有2x2的正交矩阵构成二维实空间的正交群<span
-class="math inline">\(O(2)\)</span>。 <span class="math display">\[
-\begin{align}
-O^TO=&amp;I\\
-\Rightarrow \det{O}=&amp;\pm1
-\end{align}
-\]</span> 其中满足<span
-class="math inline">\(\det(O)=1\)</span>的一般矩阵为 <span
-class="math display">\[
-\begin{align}
-R=\mqty(\cos\theta&amp;-\sin\
-\theta\\
-\sin\theta &amp; \cos\theta)
-\end{align}
-\]</span> 满足<span
-class="math inline">\(\det(O)=-1\)</span>的一般矩阵为 <span
-class="math display">\[
-\begin{align}
-P=\mqty(\cos\theta&amp;\sin\
-\theta\\
-\sin\theta &amp; -\cos\theta)
-\end{align}
-\]</span> 很容易验证第一类群元代表纯转动，第二类代表反射（关于<span
-class="math inline">\(\theta
-/2\)</span>反射）。因此把第一类群元挑出来构成另外一个群<span
-class="math inline">\(SO(2)\)</span>，称为特殊正交群。</p>
-<h3 id="u1">U(1)</h3>
-<p>对于复数而言，由于欧拉公式<span
-class="math inline">\(e^{i\theta}=\cos\theta+i\sin\theta\)</span>，复数天生就很容易可以表示转动。同样在复数域中我们很容易可以得到，模长不变的操作满足
-<span class="math display">\[
-\begin{align}
-v&#39;=&amp;Uv\\
-(v&#39;)^\dagger v&#39;=&amp;v^\dagger U^\dagger Uv=v^\dagger v\\
-\Rightarrow U^\dagger U=&amp;I
-\end{align}
-\]</span> 在复数域中我们很容易取到<span
-class="math inline">\(U=e^{i\theta}\)</span>，满足上述要求，以复数乘法为群乘法，构成幺正群<span
-class="math inline">\(U(1)\)</span>。为了与实数域的转动群对比，我们也为其选取矩阵表示(用2x2的实矩阵来表示复数)
-<span class="math display">\[
-\begin{align}
-1=\mqty(1&amp;0\\0&amp;1),\quad i=\mqty(0&amp;-1\\1&amp;0)
-\end{align}
-\]</span>
-如此，复数域上的两个基底都被实矩阵表示了，这样复空间中的转动便可以写为
-<span class="math display">\[
-\begin{align}
-e^{i\theta}=&amp;1\cdot \cos\theta+i\cdot \sin\theta\\
-=&amp;\mqty(\cos\theta&amp;0\\0&amp;\cos\theta)+\mqty(0&amp;-\sin\theta\\\sin\theta&amp;0)\\
-=&amp;\mqty(\cos\theta&amp;-\sin\
-\theta\\
-\sin\theta &amp; \cos\theta)
-\end{align}
-\]</span> 嗯，我们发现复数域中的幺正群<span
-class="math inline">\(U(1)\)</span>的矩阵表示与特殊正交群<span
-class="math inline">\(SO(2)\)</span>的矩阵表示一模一样，很显然两个群之间的映射<span
-class="math inline">\(\Pi\)</span>是双射，而且满足<span
-class="math inline">\(\Pi(g_1)\Pi(g_2)=\Pi(g_1g_2)\)</span>，所以<span
-class="math inline">\(U(1)\)</span>群与<span
-class="math inline">\(SO(2)\)</span>群同构。</p>
-<h2 id="rotations-in-three-dimensions">Rotations in three
-Dimensions</h2>
-<p>仿照上一节的操作，我们可以得到我们已经很熟悉的<span
-class="math inline">\(SO(3)\)</span>群元，一般将其分为绕xyz轴的旋转
-<span class="math display">\[
-\begin{align}
-&amp;R_x=\mqty(1&amp;0&amp;0\\
-0&amp;\cos\theta &amp;-\sin\theta\\
-0&amp;\sin\theta&amp;\cos\theta),\quad
-R_y=\mqty(\cos\theta&amp;0&amp;\sin\theta\\0&amp;1&amp;0\\
--\sin\theta&amp;0&amp;\cos\theta)\\
-&amp;R_z=\mqty(\cos\theta&amp;-\sin\theta&amp;0\\
-\sin\theta&amp;\cos\theta&amp;0\\
-0&amp;0&amp;1)
-\end{align}
-\]</span> 接着我们会猜想，是否也有一个复数的幺正群与<span
-class="math inline">\(SO(3)\)</span>群同构呢？因此接下来便是要研究三维空间中复数的转动。</p>
-<h3 id="四元数quaternions的转动">四元数Quaternions的转动</h3>
-<p>前面二维空间时，我们选取了两个实自由度的复数域，因此我们或许会猜想这时要选取三个实自由度的复数域，但在数学上，这样的数域定义似乎不是很良好（具体可以查一下三元数），而四元数在抛弃乘法交换律的前提下，性质非常符合我们的要求，因此我们使用四元数来描述三维转动。（很快你会发现，这个四元数跟我们熟悉的泡利矩阵基本算同一个东西）</p>
-<p>四元数的构建需要引入另外两个单位复数满足 <span
-class="math display">\[
-\begin{align}
-\begin{cases}
-j^2=k^2=i^2=-1&amp;\\
-ijk=1\\
-ij=-ji,\ ik=-ki,\ jk=-kj
-\end{cases}
-\end{align}
-\]</span>
-注意我们新引入的复数是不满足乘法交换律的，第三行可以从第二行推出来。
-将四元数记作<span
-class="math inline">\(q=a1+bi+cj+dk\)</span>，与二维的情况相同，我们要求四元数满足
-<span class="math display">\[
-\begin{align}
-q^\dagger q=&amp;1\\
-\Rightarrow a^2+b^2+c^2+d^2=&amp;1
-\end{align}
-\]</span>
-四元数在四元数乘法作为群乘法时构成一个群。我们先证明四元数可以对矢量进行转动操作，为此我们要研究四元数的结构。</p>
-<p>四元数中三个复数基底之间是不满足交换律的，但他们分别与单位1的乘积是满足交换律的，因此很自然的，三个复数基底自己可以张成一个与单位1没啥关系的向量空间，而且明显是三维的。将这个矢量空间记作W，W空间中的矢量乘积已经被基矢之间的乘积定义了，因此我们可以得到矢量中任意两个矢量<span
-class="math inline">\(u,v\)</span>之间的乘积为(我们把矢量乘积的符号用<span
-class="math inline">\(\cdot\)</span>来表示，但注意这并不是内积<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>) <span class="math display">\[
-\begin{align}
-u\cdot v=&amp;(ai+bj+ck)\cdot (xi+yj+zk)\\
-=&amp;-ax-by-cz\\
-&amp;+ayij+azik+bxji+bzjk+cxki+cykj\\
-=&amp;-ax-by-cz+(bz-cy)i+(cx-az)j+(ay-bx)k\\
-\end{align}
-\]</span> 现在在这个矢量空间W中定义一个内积括号<span
-class="math inline">\(\expval{}\)</span>，其运算规则与高中普通矢量的内积规则相同；同时观察上式的乘积结果，其结果并不能被矢量空间W中的基底线性表示，也就是说这个乘法运算并不是封闭的，根据内积括号与我们曾经学过的叉乘，我们可以将上面的结果写为
-<span class="math display">\[
-\begin{align}
-u\cdot v=&amp;-\expval{u,v}+u\times v
-\end{align}
-\]</span></p>
-<p>好吧，现在矢量空间W中的矢量乘法是不封闭的，听起来不太妙，但是没关系，我们用于转动的是四元数q，而不是这三个虚数，把实维度补充到上面的矢量空间后<span
-class="math inline">\(\mathbb{R}\times
-W\)</span>的空间是四元数的空间，它的乘法是封闭的，设四元数<span
-class="math inline">\(q=m+u,p=n+v\)</span>，把每个四元数都写成实数与三维矢量的叠加（聪明的你肯定知道我哪个字母指代的是实数，哪个是虚数矢量），我们再来看看四元数的乘法:
-<span class="math display">\[
-\begin{align}
-q\cdot p=&amp;(m+u)(n+v)\\
-=&amp;mn+mv+un+uv\\
-=&amp;mn-\expval{u,v}+mv+nu+u\times v\\
-\Rightarrow q^\dagger\cdot q=&amp;m^2+\expval{u,u}+u\times u\\
-=&amp;\expval{q,q}
-\end{align}
-\]</span> 原谅我在这之前还没有在四元数的空间中定义内积括号<a href="#fn3"
-class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>，现在我们发现四元数的厄米乘上自身得到的便是该四元数的内积，这与<span
-class="math inline">\(\mathbb{C}\)</span>是一样的，因此我们可以很安心地取一个模长为1的四元数q，然后我们声称他可以转动一个三维矢量，你兴冲冲地取来一个矢量<span
-class="math inline">\(xe_x+ye_y+ze_z\)</span>，然后把归一化的四元数丢上去<span
-class="math inline">\((xe_x+ye_y+ze_z)(m+u)\)</span>，嗯，左边是一个矢量，右边的实数部分可以直接乘上去，但是u也是一个三维矢量，它的基底是<span
-class="math inline">\(ijk\)</span>，它和<span
-class="math inline">\(e_x,e_y,e_z\)</span>乘积得到....？等下，这个式子怎么会有六个矢量基底，你发现这不妥，所以这是三维矢量当然不能拿<span
-class="math inline">\(\mathbb{R}^3\)</span>来表示，四元数自己的运算封闭，你得拿四元数来表示，好在四元数中自带一个三维的矢量空间W，最基本的数乘和矢量加法规则还是满足的，所以我们要用W中的矢量<span
-class="math inline">\(v\)</span>来表示三维空间中的矢量。好了，这下我们的四元数乘矢量<span
-class="math inline">\(q\cdot
-v\)</span>的表达式中起码不会出现一堆不知道怎么运算的矢量乘积，但是有一个严重的问题，你可能还看不出来，没关系，你按照我们之前的四元数乘法算一下:</p>
-<p><span class="math display">\[
-\begin{align}
-qv=&amp;(m+u)v\\
-=&amp;-\expval{u,v}+mv+u\times v
-\end{align}
-\]</span> 你说："我们已经用四元数把矢量<span
-class="math inline">\(v\)</span>转动啦！"但是仔细一瞧，转动后的矢量是哪个矢量呢？<span
-class="math inline">\(-\expval{u,v}\)</span>甚至不在矢量空间W里，这是一个严重的问题。所以这意味着四元数的转动表示肯定不是<span
-class="math inline">\(qv\)</span>，我们也不卖关子了，四元数中的转动应当是<span
-class="math inline">\(qvq^\dagger\)</span><a href="#fn4"
-class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>:
-<span class="math display">\[
-\begin{align}
-qvq^\dagger=&amp;(m+u)v(m-u)\\
-=&amp;(-\expval{u,v}+mv+u\times v)(m-u)\\
-=&amp;-m\expval{u,v}+m^2v +mu \times v\\
-&amp;+\expval{u,v}u+m\expval{v,u}-mv\times u+\expval{u\times
-v,u}-u\times v\times u\\
-=&amp;m^2v+2mu\times v+\expval{u,v}u\in W
-\end{align}
-\]</span></p>
-<p>太好了，我们终于得到了四元数表示的转动，很容易验证<span
-class="math inline">\(qvq^\dagger\)</span>的内积与<span
-class="math inline">\(v\)</span>的内积是相同的。</p>
-<p>证明了四元数本身可以表示转动后，紧接着便要研究四元数的转动群与<span
-class="math inline">\(SO(3)\)</span>群之间的联系</p>
-<h3 id="双覆盖double-cover">双覆盖(double cover)</h3>
-<p>仿照二维的思路，先为四元数的基矢找到合适的矩阵表示，合适的矩阵表示有很多种，但这里选择2x2矩阵来表示(为了和泡利矩阵对应，这里的矩阵和书上的不太一样)
-<span class="math display">\[
-\begin{align}
-1=\mqty(1&amp;0\\0&amp;1),&amp;\quad i=\mqty(0&amp;i\\ i&amp;0)\\
-j=\mqty(0&amp;1\\-1&amp;0),&amp;\quad k=\mqty(i&amp;0\\0&amp;-i)
-\end{align}
-\]</span>
-我们现在得到了四元数的矩阵表示，而且行列式为+1，上面的四元数构成特殊酉群<span
-class="math inline">\(SU(2)\)</span>。 任意转动<span
-class="math inline">\(q=a+bi+cj+dk\)</span>，以绕z轴为例 <span
-class="math display">\[
-\begin{align}
-R_z(\theta)=&amp;\cos\theta+\sin\theta k\\
-=&amp;\mqty(e^{i\theta}&amp;0\\
-0&amp;e^{-i\theta})
-\end{align}
-\]</span> 取矢量<span class="math inline">\(v=(1,0,0)^T\)</span>: <span
-class="math display">\[
-\begin{align}
-R_z(\theta)vR^\dagger(\theta)=&amp;\mqty(e^{i\theta}&amp;0\\
-0&amp;e^{-i\theta})\mqty(0&amp;i\\ i&amp;0)\mqty(e^{-i\theta}&amp;0\\
-0&amp;e^{i\theta})\\
-=&amp;\mqty(0&amp;ie^{2i\theta}\\ie^{-2i\theta}&amp;0)\\
-=&amp;\mqty(0&amp;i\cos2\theta-\sin2\theta\\i\cos2\theta+\sin2\theta&amp;0)\\
-=&amp;(\cos2\theta,-\sin2\theta,0)^T
-\end{align}
-\]</span> 其转动的角度为<span
-class="math inline">\(2\theta\)</span>，因此<span
-class="math inline">\(SU(2)\)</span>群中的参数为<span
-class="math inline">\([0,\pi]\)</span>或<span
-class="math inline">\([\pi,2\pi]\)</span>对应的群元便可以与<span
-class="math inline">\(SO(3)\)</span>中的群元同构，换句话说两个群之间的映射不是单射，因此不满足双射，<span
-class="math inline">\(SO(3)\)</span>群与<span
-class="math inline">\(SU(2)\)</span>群不是同构关系，而是<span
-class="math inline">\(SU(2)\)</span>群双覆盖<span
-class="math inline">\(SO(3)\)</span>群。书中喜欢用半球与完整求的关系来比喻两个群，但我觉得抛物线<span
-class="math inline">\(y=x^2\)</span>与<span
-class="math inline">\(x=0(y&gt;0)\)</span>的关系更适合比喻两个群（或者单层吉士堡也很贴合）。</p>
-<h2 id="李代数-lie-algebras">李代数 Lie Algebras</h2>
-<p>李群中的任一群元可以从生成元+指数映射得到。这应该是从物理意义得到的，比如说三维空间轴绕z轴的转动<span
-class="math inline">\(\theta\)</span>的操作，指数函数的定义告诉我们，可以表示成
-<span class="math display">\[
-\begin{align}
-R_z(\theta)=&amp;\lim_{N\to \infty}(1+\frac{\theta}{N}J_z)^N\\
-=&amp;e^{\theta J_z}
-\end{align}
-\]</span>
-若是把转动群理解为参数同胚群，则生成元便是在流行上指定了方向，选择了一条参数曲线，参数是<span
-class="math inline">\(\theta\)</span>。流形上选定了图集后，自然便有n个坐标基矢，对应n个独立的方向，这应该对应生成元的基底？</p>
-<ul>
-<li><p>对于任意群元可以通过求导，然后参数取0得到 <span
-class="math display">\[
-\begin{align}
-J_z=&amp;\eval{\dv{\theta}R_z}_{\theta=0}
-\end{align}
-\]</span></p></li>
-<li><p>生成元本身构成一个向量空间<span
-class="math inline">\(\mathfrak{g}\)</span>，其中的乘法用李括号<span
-class="math inline">\(\comm{}{}\)</span>来定义，这个乘法是线性且封闭的，且不满足交换律、满足雅阁比恒等式
-<span class="math display">\[
-\begin{align}
-\begin{cases}
-\comm{A}{B}=-\comm{B}{A}\\
-\comm{A}{\comm{B}{C}}+\comm{B}{\comm{C}{A}}+\comm{C}{\comm{A}{B}}=0
-\end{cases}
-\end{align}
-\]</span></p></li>
-<li><p>李代数与群的关系是：多个群可能对应同一个李代数</p></li>
-</ul>
-<h3 id="以so3为例">以<span class="math inline">\(SO(3)\)</span>为例</h3>
-<ul>
-<li><p>群元素满足<span class="math inline">\(O^TO=I\)</span>，即<span
-class="math inline">\(e^{-\theta J^T}e^{\theta
-J}=I\)</span>，生成元反对称 <span class="math display">\[
-\begin{align}
-J^T+J=I
-\end{align}
-\]</span></p></li>
-<li><p>同时特殊正交群还要求<span
-class="math inline">\(\det{O}=1\)</span>，由矩阵论中的结论的<span
-class="math inline">\(\det{e^A}=e^{\tr{A}}\)</span>得生成元无迹 <span
-class="math display">\[
-\begin{align}
-\tr{J}=0
-\end{align}
-\]</span></p></li>
-<li><p>特殊正交群生成元基底的写出，我们实际上是将已知的转动矩阵小量展开到一阶，或者用前面提到的求导的方法：
-<span class="math display">\[
-\begin{align}
-J_1=\mqty(0&amp;0&amp;0\\0&amp;0&amp;-1\\0&amp;1&amp;0),\quad
-J_2=\mqty(0&amp;0&amp;1\\0&amp;0&amp;0\\-1&amp;0&amp;0),\quad
-J_3=\mqty(0&amp;-1&amp;0\\1&amp;0&amp;0\\0&amp;0&amp;0)
-\end{align}
-\]</span> 很容易可以得到，生成元的的矩阵表示为 <span
-class="math display">\[
-\begin{align}
-(J_i)_{jk}=-\epsilon_{ijk}
-\end{align}
-\]</span> 也很容易验证，上式与参数<span
-class="math inline">\(\theta\)</span>带入指数里，可以得到先前的转动矩阵。</p></li>
-<li><p>因为李代数的乘法运算是李括号，所以只需要知道基底的李括号，便可以得到李代数中所有生成元之间的乘积（是不是让你想起基本对易关系）
-<span class="math display">\[
-\begin{align}
-\comm{J_i}{J_j}=&amp;\epsilon_{ijk}J_k
-\end{align}
-\]</span></p></li>
-<li><p>比起反对称矩阵，我们更喜欢厄米矩阵，因为厄米算符在量子力学中尤其重要，因此
-<span class="math display">\[
-\begin{align}
-e^{\theta J}=e^{-i\theta iJ}
-\end{align}
-\]</span> 我们把上面的<span
-class="math inline">\(iJ\)</span>重新定义为<span
-class="math inline">\(J\)</span>，则生成元可以写成 <span
-class="math display">\[
-\begin{align}
-J_1=\mqty(0&amp;0&amp;0\\0&amp;0&amp;-i\\0&amp;i&amp;0),\quad
-J_2=\mqty(0&amp;0&amp;i\\0&amp;0&amp;0\\-i&amp;0&amp;0),\quad
-J_3=\mqty(0&amp;-i&amp;0\\i&amp;0&amp;0\\0&amp;0&amp;0)
-\end{align}
-\]</span> 如此<span class="math inline">\(e^{-i\theta
-J}\)</span>得到的转动效果与原先是一样的。对易关系变为 <span
-class="math display">\[
-\begin{align}
-\comm{J_i}{J_j}=&amp;i\epsilon_{ijk}J_k
-\end{align}
-\]</span></p></li>
-</ul>
-<h3 id="以su2为例">以<span class="math inline">\(SU(2)\)</span>为例</h3>
-<ul>
-<li><p>有了前面的讨论，这里我们直接在指数上放上一个虚数i，则酉群的定义要求生成元是厄米矩阵
-<span class="math display">\[
-\begin{align}
-U^\dagger U=&amp;I\\
-e^{-iJ^\dagger}e^{iJ}=&amp;I\\
-\Rightarrow J^\dagger=J
-\end{align}
-\]</span></p></li>
-<li><p>特殊酉群要求行列式为0，因此<span
-class="math inline">\(SU(2)\)</span>生成元也是无迹的</p></li>
-<li><p><span class="math inline">\(SU(2)\)</span>的生成元正是泡利矩阵
-<span class="math display">\[
-\begin{align}
-\sigma_x=\mqty(0&amp;1\\1&amp;0),\quad
-\sigma_y=\mqty(0&amp;-i\\i&amp;0),\quad
-\sigma_z=\mqty(1&amp;0\\0&amp;-1)
-\end{align}
-\]</span></p></li>
-<li><p>泡利矩阵满足如下对易关系（<a
-href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">关于更多泡利矩阵可以参考这里的“自旋”章节</a>)）
-<span class="math display">\[
-\begin{align}
-\comm{\sigma_i}{\sigma_j}=2i\epsilon_{ijk}\sigma_k
-\end{align}
-\]</span></p></li>
-<li><p>泡利矩阵作为李代数空间的基底，基底当然可以任意选取长度，我们选<span
-class="math inline">\(\sigma/2\)</span>作为基底，则基底的对易关系便于<span
-class="math inline">\(SO(3)\)</span>的相同</p></li>
-</ul>
-<p>到此，我们已经发现了<span
-class="math inline">\(SU(2)\)</span>的李代数与<span
-class="math inline">\(SO(3)\)</span>的相同，为了进一步描述群，我们需要给群下一个更抽象的定义，分清它与矩阵的关系。</p>
-<h3 id="李群的抽象定义">李群的抽象定义</h3>
-<p>简单来说：李群=群+流形</p>
-<p>此外，我们还要求群乘法必须要诱导出一个流形到流形本身的映射。这是很好理解的，因为群和流形最基本的属性是一个集合，群元便是集合的元素，自然也应当是流形上的点。既然群元运算本身是封闭的<span
-class="math inline">\(g_3=g_{1}\circ g_{2}\in
-G\)</span>，那么它应当对应流形上的一个点，从这个角度来看，群乘法自然是从流形到流形的映射。</p>
-<p>有了这个定义后，我们便可以进一步理解什么叫<span
-class="math inline">\(SU(2)\)</span>群是<span
-class="math inline">\(SO(3)\)</span>群的二重覆盖，其实<span
-class="math inline">\(SU(2)\)</span>的流形长得就像两个<span
-class="math inline">\(SO(3)\)</span>流形的拼接。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;document&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=0:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SO(3)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\begin&#123;tikzpicture&#125;[domain=-2.5:2.5] </span><br><span class="line">\draw[very thin,color=gray] (-2.1,-2.1) grid (2.5,2.5);</span><br><span class="line">\draw[-&gt;] (-2.2,0) -- (3,0) ;</span><br><span class="line">\draw[-&gt;] (0,-1.2) -- (0,3.2) ;</span><br><span class="line">\draw[color=red] plot (\x,&#123;0.3*\x*\x&#125;) node[right] &#123;$SU(2)$&#125;; </span><br><span class="line">\end&#123;tikzpicture&#125; </span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-<p>他们的关系有点像上面两个图，但当然没这么简单，这只是一个示意。
-如果你还记得的话，同一个李代数可以对应多个群，但其中有一个群是最特殊的群，这个群往往可以覆盖其他群，而且是<strong>简单单连通</strong>的，一般叫做<strong>覆盖群</strong>，比如前面的<span
-class="math inline">\(SU(2)\&amp;SO(3)\)</span>就是一个例子。而自然界往往会选择覆盖群来描述粒子的基本属性，而不是用其他的群。</p>
-<h2 id="表示论-representation-theory">表示论 Representation Theory</h2>
-<p>一个群可以作用于多个对象，被作用的对象往往处于某个线性空间<span
-class="math inline">\(V\)</span>中，当群作用在这个对象上的时候，其作用效果往往是一个矩阵作用在矢量上，在这个线性空间<span
-class="math inline">\(V\)</span>中，所有的群元<span
-class="math inline">\(g\)</span>操作对应一群变换矩阵<span
-class="math inline">\(R(g)\)</span>（他们会作用在矢量上，得到变换后的矢量）。将群与变换矩阵联系在一起的映射就叫做<strong>表示</strong>
-<span class="math display">\[
-\begin{align}
-R:g\to R(g)
-\end{align}
-\]</span></p>
-<p>我们要求这个映射是同态的 <span class="math display">\[
-\begin{align}
-R(g_{1})R(g_{2})=&amp;R(g_{1}\circ g_{2})
-\end{align}
-\]</span> 我们找了一个矢量空间<span
-class="math inline">\(V\)</span>，对应便有一个表示<span
-class="math inline">\(R\)</span>，若矢量空间中存在一个子空间<span
-class="math inline">\(V&#39;\)</span>，让群的变换矩阵作用在子空间上的任意元素上得到的结果依旧在这个子空间<span
-class="math inline">\(V&#39;\)</span>中，则称这个空间为不变子空间，如此我们可以定义一个子表示<span
-class="math inline">\(R&#39;\)</span>，这个子表示的矩阵作用在子空间<span
-class="math inline">\(V&#39;\)</span>上的元素上得到的结果依旧属于这个不变子空间，且作用效果与<span
-class="math inline">\(R\)</span>相同<span
-class="math inline">\(R&#39;(g)v&#39;=R(g)v&#39;\)</span>。</p>
-<p>如果出现了这种情况，我们说这是一个<strong>可约表示(reducible
-representation)</strong>。反之则是<strong>不可约表示</strong>，而不可约表示才是更加基础的，因为它不是由其他更小的表示组成。举一个关于可约表示的，可能不太恰当的例子，加入空间<span
-class="math inline">\(V\)</span>是四维的，取子空间<span
-class="math inline">\(V&#39;\)</span>为<span
-class="math inline">\(\pqty{a,b,0,0}^{T}\)</span>，而群表示<span
-class="math inline">\(R\)</span>的变换矩阵为<span
-class="math inline">\(\mqty(A&amp;0\\0&amp;B)\)</span>
-,很显然我们可以取块矩阵A作为一个子表示<span
-class="math inline">\(R&#39;\)</span>的变换矩阵.</p>
-<p>群表示论是十分强大的，我们即将看到它强大的威力。
-我们首先需要介绍表示论中两个重要的概念：<strong>卡西米尔元素</strong>和<strong>嘉当元素</strong>。</p>
-<h3 id="卡西米尔元素">卡西米尔元素</h3>
-<p>对于一个群，它可以有很多个表示，我们想要区分这些不同的表示，所以我们引入了<strong>卡西米尔元素</strong>，他的定义是与所有的生成元<span
-class="math inline">\(X\)</span>都对易的一个群元素。 <span
-class="math display">\[
-\begin{align}
-\comm{C}{X}=0
-\end{align}
-\]</span>
-在李群中有一个Schur定理告诉我们，若群中一个元素与所有群元素的对易，则该元素的矩阵表示一定是<span
-class="math inline">\(C=\lambda I\)</span>,其中<span
-class="math inline">\(\lambda\)</span>是一个常数，为<span
-class="math inline">\(C\)</span>的特征值。这里的<span
-class="math inline">\(C\)</span>就是我们的卡西米尔元素。我们用卡西米尔元素来区分不同的表示。</p>
-<p>比如在量子力学中，角动量算符的矩阵表示是我们的<span
-class="math inline">\(SU(2)\)</span>在三维表示的生成元<a href="#fn5"
-class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，角动量的平方<span
-class="math inline">\(J^2\)</span>算符是与角动量的三个分量都对易的(如果你忘了，请戳这里<a
-href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>复习)，这个角动量平方算符便是三维表示的卡西米尔元素，很显然<span
-class="math inline">\(J^2=j(j+1)I\)</span>，这里的<span
-class="math inline">\(j(j+1)\)</span>便是我们对这个表示的标记。</p>
-<h3 id="嘉当元素">嘉当元素</h3>
-<p>对于一个群的表示的表示空间<span
-class="math inline">\(V\)</span>，我们也寻找一种方式来标记它的基底。群表示的若干个生成元中，至少有一个可以被对角化，我们使用这些可以对角化生成元来得到基底的标记。<strong>嘉当元素</strong>就是这些可对角化生成元的特征值。</p>
-<p>比如说群<span class="math inline">\(SU(2)\)</span>的生成元中只有<span
-class="math inline">\(J_3\)</span>是可以被对角化的（实际上已经对角化了）
-<span class="math display">\[
-\begin{align}
-J_3=\mqty(1&amp;0&amp;0\\0&amp;0&amp;0\\0&amp;0&amp;-1)
-\end{align}
-\]</span>
-所以该表示空间的嘉当元素就是-1,0,1，我们用这三个数字来标记表示空间的三个基底<span
-class="math inline">\(\ket{2,-1},\ket{2,0},\ket{2,1}\)</span>。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>就是什么也不干的群元素，作用于任何东西上都得到它自己<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>“内积”是一种映射:<span class="math inline">\(V\times
-V\to
-\mathbb{R}\)</span>的映射，属于张量，我们在这个矢量空间中还没下这个定义<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>但是没关系，相信你很快就反应过来了<a href="#fnref3"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>当然，如果你喜欢，也可以定义<span
-class="math inline">\(q^\dagger
-vq\)</span>，只不过你定义的转动方向可能和我的不太一样<a href="#fnref4"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>我们后面会演示如何得到<span
-class="math inline">\(SU(2)\)</span>群的三维表示生成元<a href="#fnref5"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>群论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>固体物理学习笔记（能带）</title>
-    <url>/2023/04/11/Solid-State-Physics-Note-Part-2/</url>
-    <content><![CDATA[<pre><code>参考资料：
-《固体物理基础》——阎守胜
-课程PPT——俞宏毅</code></pre>
-<p>自由电子气有三个近似</p>
-<ul>
-<li>自由电子近似</li>
-<li>单电子近似</li>
-<li>弛豫时间近似</li>
-</ul>
-<p>这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。<strong>能带论</strong>是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。</p>
-<span id="more"></span>
-<p>对于体系的哈密顿量 <span class="math display">\[
-\require{physics}
-\begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2\\
-&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}
-\]</span>
-即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下
-<span class="math display">\[
-\begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
-&amp;-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}
-\]</span>
-对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数<span
-class="math inline">\(V(r)\)</span>，且这个函数是一个周期函数满足<span
-class="math inline">\(V(r+R_n)=V(r)\)</span>，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
-<p>单电子近似允许我们将电子相互作用项写为 <span class="math display">\[
-\begin{align}
-V_{ee}(r_i,r_j)=&amp;\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi
-\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
-=&amp;\sum_i v_i(r_i)
-\end{align}
-\]</span> 因此总的哈氏量写为 <span class="math display">\[
-\begin{align}
-H=&amp;\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n
-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}}
-\end{align}
-\]</span></p>
-<p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
-<p>接下来只需要解单电子的薛定谔方程即可，其中，周期性近似是能带产生的来源。</p>
-<h2 id="布洛赫定理bloch-theorem与能带">布洛赫定理(Bloch
-Theorem)与能带</h2>
-<h3 id="布洛赫定理">布洛赫定理</h3>
-<p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足
-<span class="math display">\[
-\begin{align}
-\psi(r+R_n)=e^{ikR_n}\psi(r)
-\end{align}
-\]</span></p>
-<p>另外一种是其本征函数可以写为如下形式 <span class="math display">\[
-\begin{align}
-\psi(r)=e^{ikr}u_k(r)
-\end{align}
-\]</span> 其中<span
-class="math inline">\(u_k(r)\)</span>是一个周期函数满足<span
-class="math inline">\(u(r+R_n)=u(r)\)</span>。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
-<h3 id="布洛赫定理的证明">布洛赫定理的证明</h3>
-<h3 id="波矢k的物理意义">波矢k的物理意义</h3>
-<p>很显然，这里的<span class="math inline">\(\hbar
-k\)</span>并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到<span
-class="math inline">\(\hbar k\)</span>的本征值的。</p>
-<p>波矢<span
-class="math inline">\(k\)</span>的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件
-<span class="math display">\[
-\begin{align}
-\begin{cases}
-\psi(r+N_1a_1)=\psi(r)\\
-\psi(r+N_2a_2)=\psi(r)\\
-\psi(r+N_3a_3)=\psi(r)
-\end{cases}
-\end{align}
-\]</span> 对于布洛赫函数，这样的边界条件无疑是在说 <span
-class="math display">\[
-\begin{align}
-\exp(ik\cdot N_ia_i)=&amp;1\\
-\Rightarrow k\cdot N_ia_i=2l_i\pi
-\end{align}
-\]</span> 如果你还记得的话，我们的倒格矢满足<span
-class="math inline">\(b_i\cdot a_j=2\pi\delta_{ij}\)</span>,因此 <span
-class="math display">\[
-\begin{align}
-k=\sum_i\frac{l_i}{N_i}b_i
-\end{align}
-\]</span> 从（回头再来补证明）</p>
-<p>下面有两种模型分别适用于金属价电子与绝缘体&amp;半导体的电子。</p>
-<h2 id="弱周期势近似">弱周期势近似</h2>
-<p>对于相当多的价电子为s电子和p电子的金属，其感受到的来自离子实的吸引力比较弱，如果我们先忽略离子实，那便是自由电子，此时再把微弱的周期势<span
-class="math inline">\(V(x)\)</span>考虑进去<a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，则可以采用标准的微扰论来处理（如果忘了微扰论，可以看<a
-href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>）。</p>
-<p><span class="math display">\[
-\begin{align}
-H=H_0+H&#39;
-\end{align}
-\]</span> 非微扰的哈密顿量<span
-class="math inline">\(H_{0}=-\frac{\hbar^{2}}{2m}\nabla^{2}\)</span>，其本征矢为平面波<span
-class="math inline">\(\ket{k}=\frac{1}{\sqrt{L^3}}e^{ik\cdot
-r}\)</span>，对于微扰论，我们的标准步骤是求得微扰哈氏量的矩阵元(或者说是平面波的展开系数)<span
-class="math inline">\(H&#39;_{kk&#39;}\)</span>，对于 <span
-class="math display">\[
-\begin{align}
-H=\frac{\hbar^2}{2m}\nabla^2+v_i(r)-\sum_n
-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
-\end{align}
-\]</span>
-的哈氏量，第一项已经被视为非微扰项，其余部分统统打包起来写成一个周期函数<span
-class="math inline">\(V(x)\)</span>，因此 <span class="math display">\[
-\begin{align}
-H&#39;_{kk&#39;}=&amp;\mel{k}{H&#39;}{k&#39;}\\
-=&amp;\mel{k}{V}{k&#39;}\\
-=&amp;\frac{1}{L^{3}}\int V(x)e^{i(k&#39;-k)r}\dd{r}\\
-\end{align}
-\]</span> 因为势能<span class="math inline">\(V(x)\)</span>的周期为<span
-class="math inline">\(R_n\)</span>，满足<span
-class="math inline">\(V(x+R_n)=V(x)\)</span>，所以可以写成傅里叶级数
-<span class="math display">\[
-\begin{align}
-V(x)=\sum\limits_G \tilde{V}(G)e^{iGr}
-\end{align}
-\]</span> 其中<span
-class="math inline">\(G\)</span>为倒格矢，由于倒格矢的特殊性，容易验证上面的傅里叶展开式满足周期条件。
-我们将该傅里叶级数形式带入前面的积分中有 <span class="math display">\[
-\begin{align}
-H&#39;_{kk&#39;}=&amp;\frac{1}{L^3}\int \sum\limits_G
-\tilde{V}(G)e^{i(G+k&#39;-k)r}\dd{r}\\
-=&amp;\sum\limits_G \tilde{V}(G)\delta_{G,k-k&#39;}
-\end{align}
-\]</span> 上面利用了积分结果<span class="math inline">\(\int
-e^{ikr}\dd{r}=V=L^3\)</span>.
-因此可以看出，在微扰论的视角下，只有满足<span
-class="math inline">\(G=k-k&#39;\)</span>的电子之间才能感受到周期势的效果。（这里我们已经进入了动量空间探讨问题，而不是在位置空间中讨论问题，不同波矢的电子之间以这种方式联系在一起，这在位置空间中是很难想象的）</p>
-<h3 id="非简并微扰">非简并微扰</h3>
-<h4 id="一阶微扰能量">一阶微扰能量</h4>
-<p>我们先考虑非简并的情况，从一阶能量开始算起，一阶微扰能量的公式为<span
-class="math inline">\(E^1(k)=\mel{k}{H&#39;}{k}\)</span>,即 <span
-class="math display">\[
-\begin{align}
-E^1(k)=&amp;H&#39;_{kk}=\sum\limits_G \tilde{V}(G)\delta_{G,0}\\
-=&amp;\tilde{V}(0)
-\end{align}
-\]</span> 这一项是一个与波矢<span
-class="math inline">\(k\)</span>无关的常数，在无微扰的基础上添加上一个与波矢无关的常数并不会改变能量的色散关系<span
-class="math inline">\(E(k)\)</span>,我们总可以对哈氏量添加任意的常数，因此我们将这一项设为0，也就是认为一阶能量微扰为0，因此我们需要进一步计算二阶微扰能量。</p>
-<h4 id="二阶微扰能量">二阶微扰能量</h4>
-<p>能量的二阶微扰为 <span class="math display">\[
-\begin{align}
-E^2(k)=&amp;\sum\limits_{k&#39;\neq
-k}\frac{\abs{H&#39;_{kk&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}
-\end{align}
-\]</span> 因为周期势<span
-class="math inline">\(V(x)\)</span>本身是一个很小的量，所以其二阶效应带来的修正很小，一般情况我们不予考虑，所以非简并时电子的能量基本可以认为是自由电子的能量。</p>
-<p>但是如果上面的二阶修正分母发散，结果就将大为不同，也就是接下来马上要讨论的简并微扰情况。</p>
-<h3 id="简并微扰">简并微扰</h3>
-<p>为了讨论简并微扰，我们将上面的能量二阶修正写得更清楚一些，同时假设系统是一维的<span
-class="math inline">\(G=\frac{2\pi}{a}\)</span>,则有 <span
-class="math display">\[
-\begin{align}
-E^2(k)=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_G
-\tilde{V}(G)\delta_{G,k-k&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
-=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_n
-\tilde{V}(\frac{2n\pi}{a})\delta_{k&#39;,k-\frac{2n\pi}{a}}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
-=&amp;\sum\limits_n
-\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{k^2-(k-\frac{2n\pi}{a})^2}}
-\end{align}
-\]</span> 我们在前面已经将<span
-class="math inline">\(V(0)\)</span>设为0，也就是将n=0的项丢掉了，所以上面的n取值不包括0，但是包括了其他所有整数
-<span class="math display">\[
-\begin{align}
-E^2(k)=\sum\limits_n
-\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{2k-\frac{2n\pi}{a}}\frac{2n\pi}{a}}
-\end{align}
-\]</span> 从上面的表达式可以看出，当<span
-class="math inline">\(k=\frac{n\pi}{a}(n\neq 0)\)</span>时<span
-class="math inline">\(\ket{k}\)</span>与<span
-class="math inline">\(\ket{k&#39;}=\ket{k-\frac{2n\pi}{a}}\)</span>态的能量相同，此时分母发散，系统存在简并情况，应该使用简并微扰论进行计算。</p>
-<p>对于非简并微扰论，我们有 <span class="math display">\[
-\begin{align}
-H&#39;=&amp;\mqty(H&#39;_{\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;_{\frac{n\pi}{a},-\frac{n\pi}{a}}\\
-H&#39;_{-\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;
-_{\frac{n\pi}{a},\frac{n\pi}{a}})\\
-=&amp;\pqty{\begin{matrix}0&amp;\tilde{V}(\frac{2n\pi}{a})\\
-\tilde{V}(-\frac{2n\pi}{a})&amp;0
-\end{matrix}}
-\end{align}
-\]</span> 因为<span
-class="math inline">\(\tilde{V}^*(G)=\tilde{V}(-G)\)</span>，所以上面的一阶微扰矩阵很容易可以解出
-<span class="math display">\[
-\begin{align}
-E^1_{\pm}=&amp;\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
-\Rightarrow E_{\pm}=&amp;\frac{\hbar^2 k^2}{2m}\pm
-\abs{\tilde{V}(\frac{2n\pi}{a})}\\
-\Delta E=&amp;2\abs{\tilde{V}(\frac{2n\pi}{a})}
-\end{align}
-\]</span> 这便是能隙的产生，比如当n=1时，比如<span
-class="math inline">\(k=\frac{\pi}{a},k&#39;=-\frac{\pi}{a}\)</span>时，能隙为<span
-class="math inline">\(2\abs{\tilde{V}(\frac{2\pi}{a})}\)</span>。未加入周期势时能量关于波矢是一个二次函数，在上述两态的附近分别都是连续的，但是加入周期势后这因为两态的相互作用能隙出现，这个能隙使得能量在<span
-class="math inline">\(k=\frac{\pi}{a}\)</span>与<span
-class="math inline">\(k=-\frac{\pi}{a}\)</span>的左右产生跳跃间断点，因此产生多个能带。</p>
-<p>值得一提的是，在能隙处有<span
-class="math inline">\(\pdv{E}{k}=0\)</span>，这是周期性与对称性共同要求的。</p>
-<h4 id="简约布里渊区图示">简约布里渊区图示</h4>
-<p>动量空间中产生能隙后，两个能隙之间的间距(指的是k的间隙，能量差距叫能隙的大小)除了<span
-class="math inline">\(k=\pm\frac{\pi}{a}\)</span>是<span
-class="math inline">\(\frac{2\pi}{a}\)</span>外，其余的能隙间距都是<span
-class="math inline">\(\frac{\pi}{a}\)</span>，但是因为对称性使得<span
-class="math inline">\(\ket{k}\)</span>态与<span
-class="math inline">\(\ket{-k}\)</span>态一样，所以实际上其余的能隙间距也是<span
-class="math inline">\(\frac{2\pi}{a}\)</span>，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为<span
-class="math inline">\(\frac{2\pi}{a}\)</span>的区间<span
-class="math inline">\([-\frac{\pi}{a},-\frac{\pi}{a}]\)</span>内，其余取值与该区间的取值只相差<span
-class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
-<h2 id="紧束缚近似">紧束缚近似</h2>
-<p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a></strong>，紧束缚近似的出发点是将电子近似为N个简并原子波函数的线性组合，这与前面的进自由电子近似相区别，我们将以电子在原子核某个轨道上的波函数作为非微扰的本征态，而其他原子的吸引势看成微扰。</p>
-<p>所谓的紧束缚就是假设原子对电子的束缚很紧，使得电子的轨道半径远小于原子核之间的距离，因此我们认为不同原子的轨道波函数是正交的关系。</p>
-<p>转换成数学的语言也就是 <span class="math display">\[
-\begin{align}
-\psi(r)=&amp;\sum\limits_{R_n}a_n\phi_i(r-R_n)
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-\int \phi_i^*(r-R_n)\phi_i(r-R_m)\dd{r}=\delta_{mn}
-\end{align}
-\]</span> 其中<span
-class="math inline">\(\phi_i(r)\)</span>是原子轨道的波函数，其中指标i用于标记哪一个原子轨道，比如我们可以用所有简并的<span
-class="math inline">\(1s\)</span>态也可以用所有简并的<span
-class="math inline">\(2s\)</span>态来展开电子波函数<a href="#fn3"
-class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>.</p>
-<p>通常来说，在考虑晶体中能量和<span
-class="math inline">\(1s\)</span>差不多的电子态的时候，我们使用基态<span
-class="math inline">\(1s\)</span>来做展开，所以后面的<span
-class="math inline">\(\phi_i\)</span>会省去<span
-class="math inline">\(i\)</span>。</p>
-<p>紧束缚近似的晶格势场当然也是周期性的，所以电子的波函数应当满足布洛赫定理
-<span class="math display">\[
-\begin{align}
-\psi(r+a)=\psi(r)
-\end{align}
-\]</span> 从这个要求我们可以得到前面电子波函数对<span
-class="math inline">\(1s\)</span>态的展开系数为<span
-class="math inline">\(\frac{1}{\sqrt{N}}e^{ikR_n}\)</span>,即 <span
-class="math display">\[
-\begin{align}
-\psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r)
-\end{align}
-\]</span> 这个表达式称为<span
-class="math inline">\(1s\)</span>原子轨道的布洛赫和</p>
-<p>对于 <span class="math display">\[
-\begin{align}
-H=\frac{\hbar^2}{2m}\nabla^2+v(r)-\sum_n
-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
-\end{align}
-\]</span> 的哈氏量，我们从其中的<span
-class="math inline">\(\frac{\hbar^2}{2m}\nabla^2-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}\)</span>视为非微扰的部分，其本证函数取<span
-class="math inline">\(1s\)</span>态，其余的部分统一打包为周期的<span
-class="math inline">\(V(r)\)</span>，包含其余原子核的吸引势。</p>
-<p>对于这个N重简并的系统，我们当然不能使用非简并微扰论，而使用简并微扰论的矩阵来计算该微扰能量也颇有困难的，因此我们换种方法。既然<span
-class="math inline">\(\psi_k(r)\)</span>已经被我们当做系统的本征态了，那哈氏量直接作用在其上应该得到本征能量
-<span class="math display">\[
-\begin{align}
-H\psi_k(r)=&amp;E\psi_k(r)
-\end{align}
-\]</span> 我们在两边同乘<span
-class="math inline">\(\phi^*(r)\)</span>并积分有 <span
-class="math display">\[
-\begin{align}
-\int \phi^*(r)H\frac{1}{\sqrt{N}}\sum\limits_n
-e^{ikR_n}\phi(r-R_n)dr=&amp;E\int
-\phi^*(r)\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr\\
-\sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr=&amp;E\sum\limits_n
-e^{ikR_n}\int \phi^*(r)\phi(r-R_n)dr\\
-E\sum\limits_n e^{ikR_n} \delta_{0,n}=&amp;\sum\limits_n e^{ikR_n}\int
-\phi^*(r)H\phi(r-R_n)dr
-\end{align}
-\]</span> 将哈氏量分为非微扰与微扰部分得 <span class="math display">\[
-\begin{align}
-E=&amp;\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int
-\phi^*(r)V(r)\phi(r-R_n)dr}\\
-=&amp;\sum\limits_ne^{ikR_n}\bqty{E^0\delta_{0,n}+\int
-\phi^*(r)V(r)\phi(r-R_n)dr}\\
-=&amp;E^0-\sum\limits_n e^{ikR_n}J(R_n)
-\end{align}
-\]</span> 其中<span class="math inline">\(E^0\)</span>是<span
-class="math inline">\(1s\)</span>态的本征能量，<span
-class="math inline">\(J(R_n)\triangleq-\int\phi^*(r)V(r)\phi(r-R_n)dr\)</span>
-称为第0个原子轨道与第n个原子轨道的<strong>交叠积分</strong>，随着<span
-class="math inline">\(R_n\)</span>是指数衰减的。</p>
-<p>因此我们一般只考虑<span
-class="math inline">\(n=0\&amp;n=\pm1\)</span>的情况，即 <span
-class="math display">\[
-\begin{align}
-E=E^0-J(0)-\sum\limits_{\expval{R_n}}e^{ikR_n}J(R_n)
-\end{align}
-\]</span> 其中<span class="math inline">\(J(0)=-\int dr
-V\abs{\phi}^2\)</span>，<span
-class="math inline">\(\expval{R_n}\)</span>代表最近邻原子之间的位移。</p>
-<p>以简并立方晶格为例子，最近邻的原子有上下左右前后六个，位矢<span
-class="math inline">\(R_n\)</span>分别为<span
-class="math inline">\(\mqty(a,0,0),(-a,0,0),(0,a,0)\)</span>...等，带入上式可以得到
-<span class="math display">\[
-\begin{align}
-E=&amp;E^0-J(0)-2J(R_n)\pqty{\cos k_xa+\cos k_ya+\cos k_za}\\
-\triangleq&amp;E^0-J_0-2J_1\pqty{\cos k_xa+\cos k_ya+\cos k_za}
-\end{align}
-\]</span> 如果是面心立方，则最近邻有十二个，位矢分别为<span
-class="math inline">\(\frac12\pqty{1,1,0},\frac12\pqty{-1,1,0}\)</span>...等，带入上式有
-<span class="math display">\[
-\begin{align}
-E=&amp;E^0-J_0-2J_1\left(\cos\frac a2(k_x+k_y)+\cos\frac
-a2(k_x-k_y)+\cos\frac a2(k_x+k_z)\right.\\
-&amp;\left.+\cos\frac a2(k_x-k_z)+\cos\frac a2(k_y+k_z)+\cos\frac
-a2(k_y-k_z)\right)
-\end{align}
-\]</span> 体心立方的情况就不敲了，很容易可以类比得到。</p>
-<p>从上面的结果可以很容易可以看出，简单立方晶格的能量关于波矢k变化，变化范围为<span
-class="math inline">\(12J_1\)</span>，因此我们说<span
-class="math inline">\(1s\)</span>的单原子能级展宽成<strong>能带</strong>，如法炮制我们可以得到其余原子能级也展宽成能带，这样便也得到了能带，<span
-class="math inline">\(1s\)</span>的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
-<p>对于更高能级的单原子波函数，比如<span
-class="math inline">\(p\)</span>态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>因此弱周期势近似又称为近自由电子近似<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>这里说的简并并不是指<span
-class="math inline">\(1s\)</span>内部的简并态，说的是N个电子的<span
-class="math inline">\(1s\)</span>态是简并的，<span
-class="math inline">\(2s\)</span>同理。<a href="#fnref3"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>固体物理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>固体物理学习笔记（第一章）</title>
     <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
     <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
@@ -1986,6 +1629,362 @@ role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>虽然积分区间不关于<span
 class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
 class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>固体物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固体物理学习笔记（能带）</title>
+    <url>/2023/04/11/Solid-State-Physics-Note-Part-2/</url>
+    <content><![CDATA[<pre><code>参考资料：
+《固体物理基础》——阎守胜
+课程PPT——俞宏毅</code></pre>
+<p>自由电子气有三个近似</p>
+<ul>
+<li>自由电子近似</li>
+<li>单电子近似</li>
+<li>弛豫时间近似</li>
+</ul>
+<p>这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。<strong>能带论</strong>是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。</p>
+<span id="more"></span>
+<p>对于体系的哈密顿量 <span class="math display">\[
+\require{physics}
+\begin{align}
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下
+<span class="math display">\[
+\begin{align}
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+&amp;-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数<span
+class="math inline">\(V(r)\)</span>，且这个函数是一个周期函数满足<span
+class="math inline">\(V(r+R_n)=V(r)\)</span>，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
+<p>单电子近似允许我们将电子相互作用项写为 <span class="math display">\[
+\begin{align}
+V_{ee}(r_i,r_j)=&amp;\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi
+\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+=&amp;\sum_i v_i(r_i)
+\end{align}
+\]</span> 因此总的哈氏量写为 <span class="math display">\[
+\begin{align}
+H=&amp;\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}}
+\end{align}
+\]</span></p>
+<p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
+<p>接下来只需要解单电子的薛定谔方程即可，其中，周期性近似是能带产生的来源。</p>
+<h2 id="布洛赫定理bloch-theorem与能带">布洛赫定理(Bloch
+Theorem)与能带</h2>
+<h3 id="布洛赫定理">布洛赫定理</h3>
+<p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足
+<span class="math display">\[
+\begin{align}
+\psi(r+R_n)=e^{ikR_n}\psi(r)
+\end{align}
+\]</span></p>
+<p>另外一种是其本征函数可以写为如下形式 <span class="math display">\[
+\begin{align}
+\psi(r)=e^{ikr}u_k(r)
+\end{align}
+\]</span> 其中<span
+class="math inline">\(u_k(r)\)</span>是一个周期函数满足<span
+class="math inline">\(u(r+R_n)=u(r)\)</span>。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
+<h3 id="布洛赫定理的证明">布洛赫定理的证明</h3>
+<h3 id="波矢k的物理意义">波矢k的物理意义</h3>
+<p>很显然，这里的<span class="math inline">\(\hbar
+k\)</span>并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到<span
+class="math inline">\(\hbar k\)</span>的本征值的。</p>
+<p>波矢<span
+class="math inline">\(k\)</span>的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件
+<span class="math display">\[
+\begin{align}
+\begin{cases}
+\psi(r+N_1a_1)=\psi(r)\\
+\psi(r+N_2a_2)=\psi(r)\\
+\psi(r+N_3a_3)=\psi(r)
+\end{cases}
+\end{align}
+\]</span> 对于布洛赫函数，这样的边界条件无疑是在说 <span
+class="math display">\[
+\begin{align}
+\exp(ik\cdot N_ia_i)=&amp;1\\
+\Rightarrow k\cdot N_ia_i=2l_i\pi
+\end{align}
+\]</span> 如果你还记得的话，我们的倒格矢满足<span
+class="math inline">\(b_i\cdot a_j=2\pi\delta_{ij}\)</span>,因此 <span
+class="math display">\[
+\begin{align}
+k=\sum_i\frac{l_i}{N_i}b_i
+\end{align}
+\]</span> 从（回头再来补证明）</p>
+<p>下面有两种模型分别适用于金属价电子与绝缘体&amp;半导体的电子。</p>
+<h2 id="弱周期势近似">弱周期势近似</h2>
+<p>对于相当多的价电子为s电子和p电子的金属，其感受到的来自离子实的吸引力比较弱，如果我们先忽略离子实，那便是自由电子，此时再把微弱的周期势<span
+class="math inline">\(V(x)\)</span>考虑进去<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>，则可以采用标准的微扰论来处理（如果忘了微扰论，可以看<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>）。</p>
+<p><span class="math display">\[
+\begin{align}
+H=H_0+H&#39;
+\end{align}
+\]</span> 非微扰的哈密顿量<span
+class="math inline">\(H_{0}=-\frac{\hbar^{2}}{2m}\nabla^{2}\)</span>，其本征矢为平面波<span
+class="math inline">\(\ket{k}=\frac{1}{\sqrt{L^3}}e^{ik\cdot
+r}\)</span>，对于微扰论，我们的标准步骤是求得微扰哈氏量的矩阵元(或者说是平面波的展开系数)<span
+class="math inline">\(H&#39;_{kk&#39;}\)</span>，对于 <span
+class="math display">\[
+\begin{align}
+H=\frac{\hbar^2}{2m}\nabla^2+v_i(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span>
+的哈氏量，第一项已经被视为非微扰项，其余部分统统打包起来写成一个周期函数<span
+class="math inline">\(V(x)\)</span>，因此 <span class="math display">\[
+\begin{align}
+H&#39;_{kk&#39;}=&amp;\mel{k}{H&#39;}{k&#39;}\\
+=&amp;\mel{k}{V}{k&#39;}\\
+=&amp;\frac{1}{L^{3}}\int V(x)e^{i(k&#39;-k)r}\dd{r}\\
+\end{align}
+\]</span> 因为势能<span class="math inline">\(V(x)\)</span>的周期为<span
+class="math inline">\(R_n\)</span>，满足<span
+class="math inline">\(V(x+R_n)=V(x)\)</span>，所以可以写成傅里叶级数
+<span class="math display">\[
+\begin{align}
+V(x)=\sum\limits_G \tilde{V}(G)e^{iGr}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(G\)</span>为倒格矢，由于倒格矢的特殊性，容易验证上面的傅里叶展开式满足周期条件。
+我们将该傅里叶级数形式带入前面的积分中有 <span class="math display">\[
+\begin{align}
+H&#39;_{kk&#39;}=&amp;\frac{1}{L^3}\int \sum\limits_G
+\tilde{V}(G)e^{i(G+k&#39;-k)r}\dd{r}\\
+=&amp;\sum\limits_G \tilde{V}(G)\delta_{G,k-k&#39;}
+\end{align}
+\]</span> 上面利用了积分结果<span class="math inline">\(\int
+e^{ikr}\dd{r}=V=L^3\)</span>.
+因此可以看出，在微扰论的视角下，只有满足<span
+class="math inline">\(G=k-k&#39;\)</span>的电子之间才能感受到周期势的效果。（这里我们已经进入了动量空间探讨问题，而不是在位置空间中讨论问题，不同波矢的电子之间以这种方式联系在一起，这在位置空间中是很难想象的）</p>
+<h3 id="非简并微扰">非简并微扰</h3>
+<h4 id="一阶微扰能量">一阶微扰能量</h4>
+<p>我们先考虑非简并的情况，从一阶能量开始算起，一阶微扰能量的公式为<span
+class="math inline">\(E^1(k)=\mel{k}{H&#39;}{k}\)</span>,即 <span
+class="math display">\[
+\begin{align}
+E^1(k)=&amp;H&#39;_{kk}=\sum\limits_G \tilde{V}(G)\delta_{G,0}\\
+=&amp;\tilde{V}(0)
+\end{align}
+\]</span> 这一项是一个与波矢<span
+class="math inline">\(k\)</span>无关的常数，在无微扰的基础上添加上一个与波矢无关的常数并不会改变能量的色散关系<span
+class="math inline">\(E(k)\)</span>,我们总可以对哈氏量添加任意的常数，因此我们将这一项设为0，也就是认为一阶能量微扰为0，因此我们需要进一步计算二阶微扰能量。</p>
+<h4 id="二阶微扰能量">二阶微扰能量</h4>
+<p>能量的二阶微扰为 <span class="math display">\[
+\begin{align}
+E^2(k)=&amp;\sum\limits_{k&#39;\neq
+k}\frac{\abs{H&#39;_{kk&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}
+\end{align}
+\]</span> 因为周期势<span
+class="math inline">\(V(x)\)</span>本身是一个很小的量，所以其二阶效应带来的修正很小，一般情况我们不予考虑，所以非简并时电子的能量基本可以认为是自由电子的能量。</p>
+<p>但是如果上面的二阶修正分母发散，结果就将大为不同，也就是接下来马上要讨论的简并微扰情况。</p>
+<h3 id="简并微扰">简并微扰</h3>
+<p>为了讨论简并微扰，我们将上面的能量二阶修正写得更清楚一些，同时假设系统是一维的<span
+class="math inline">\(G=\frac{2\pi}{a}\)</span>,则有 <span
+class="math display">\[
+\begin{align}
+E^2(k)=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_G
+\tilde{V}(G)\delta_{G,k-k&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_n
+\tilde{V}(\frac{2n\pi}{a})\delta_{k&#39;,k-\frac{2n\pi}{a}}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{k^2-(k-\frac{2n\pi}{a})^2}}
+\end{align}
+\]</span> 我们在前面已经将<span
+class="math inline">\(V(0)\)</span>设为0，也就是将n=0的项丢掉了，所以上面的n取值不包括0，但是包括了其他所有整数
+<span class="math display">\[
+\begin{align}
+E^2(k)=\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{2k-\frac{2n\pi}{a}}\frac{2n\pi}{a}}
+\end{align}
+\]</span> 从上面的表达式可以看出，当<span
+class="math inline">\(k=\frac{n\pi}{a}(n\neq 0)\)</span>时<span
+class="math inline">\(\ket{k}\)</span>与<span
+class="math inline">\(\ket{k&#39;}=\ket{k-\frac{2n\pi}{a}}\)</span>态的能量相同，此时分母发散，系统存在简并情况，应该使用简并微扰论进行计算。</p>
+<p>对于非简并微扰论，我们有 <span class="math display">\[
+\begin{align}
+H&#39;=&amp;\mqty(H&#39;_{\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;_{\frac{n\pi}{a},-\frac{n\pi}{a}}\\
+H&#39;_{-\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;
+_{\frac{n\pi}{a},\frac{n\pi}{a}})\\
+=&amp;\pqty{\begin{matrix}0&amp;\tilde{V}(\frac{2n\pi}{a})\\
+\tilde{V}(-\frac{2n\pi}{a})&amp;0
+\end{matrix}}
+\end{align}
+\]</span> 因为<span
+class="math inline">\(\tilde{V}^*(G)=\tilde{V}(-G)\)</span>，所以上面的一阶微扰矩阵很容易可以解出
+<span class="math display">\[
+\begin{align}
+E^1_{\pm}=&amp;\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Rightarrow E_{\pm}=&amp;\frac{\hbar^2 k^2}{2m}\pm
+\abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Delta E=&amp;2\abs{\tilde{V}(\frac{2n\pi}{a})}
+\end{align}
+\]</span> 这便是能隙的产生，比如当n=1时，比如<span
+class="math inline">\(k=\frac{\pi}{a},k&#39;=-\frac{\pi}{a}\)</span>时，能隙为<span
+class="math inline">\(2\abs{\tilde{V}(\frac{2\pi}{a})}\)</span>。未加入周期势时能量关于波矢是一个二次函数，在上述两态的附近分别都是连续的，但是加入周期势后这因为两态的相互作用能隙出现，这个能隙使得能量在<span
+class="math inline">\(k=\frac{\pi}{a}\)</span>与<span
+class="math inline">\(k=-\frac{\pi}{a}\)</span>的左右产生跳跃间断点，因此产生多个能带。</p>
+<p>值得一提的是，在能隙处有<span
+class="math inline">\(\pdv{E}{k}=0\)</span>，这是周期性与对称性共同要求的。</p>
+<h4 id="简约布里渊区图示">简约布里渊区图示</h4>
+<p>动量空间中产生能隙后，两个能隙之间的间距(指的是k的间隙，能量差距叫能隙的大小)除了<span
+class="math inline">\(k=\pm\frac{\pi}{a}\)</span>是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>外，其余的能隙间距都是<span
+class="math inline">\(\frac{\pi}{a}\)</span>，但是因为对称性使得<span
+class="math inline">\(\ket{k}\)</span>态与<span
+class="math inline">\(\ket{-k}\)</span>态一样，所以实际上其余的能隙间距也是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为<span
+class="math inline">\(\frac{2\pi}{a}\)</span>的区间<span
+class="math inline">\([-\frac{\pi}{a},-\frac{\pi}{a}]\)</span>内，其余取值与该区间的取值只相差<span
+class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
+<h2 id="紧束缚近似">紧束缚近似</h2>
+<p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></strong>，紧束缚近似的出发点是将电子近似为N个简并原子波函数的线性组合，这与前面的进自由电子近似相区别，我们将以电子在原子核某个轨道上的波函数作为非微扰的本征态，而其他原子的吸引势看成微扰。</p>
+<p>所谓的紧束缚就是假设原子对电子的束缚很紧，使得电子的轨道半径远小于原子核之间的距离，因此我们认为不同原子的轨道波函数是正交的关系。</p>
+<p>转换成数学的语言也就是 <span class="math display">\[
+\begin{align}
+\psi(r)=&amp;\sum\limits_{R_n}a_n\phi_i(r-R_n)
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\int \phi_i^*(r-R_n)\phi_i(r-R_m)\dd{r}=\delta_{mn}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\phi_i(r)\)</span>是原子轨道的波函数，其中指标i用于标记哪一个原子轨道，比如我们可以用所有简并的<span
+class="math inline">\(1s\)</span>态也可以用所有简并的<span
+class="math inline">\(2s\)</span>态来展开电子波函数<a href="#fn3"
+class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.</p>
+<p>通常来说，在考虑晶体中能量和<span
+class="math inline">\(1s\)</span>差不多的电子态的时候，我们使用基态<span
+class="math inline">\(1s\)</span>来做展开，所以后面的<span
+class="math inline">\(\phi_i\)</span>会省去<span
+class="math inline">\(i\)</span>。</p>
+<p>紧束缚近似的晶格势场当然也是周期性的，所以电子的波函数应当满足布洛赫定理
+<span class="math display">\[
+\begin{align}
+\psi(r+a)=\psi(r)
+\end{align}
+\]</span> 从这个要求我们可以得到前面电子波函数对<span
+class="math inline">\(1s\)</span>态的展开系数为<span
+class="math inline">\(\frac{1}{\sqrt{N}}e^{ikR_n}\)</span>,即 <span
+class="math display">\[
+\begin{align}
+\psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r)
+\end{align}
+\]</span> 这个表达式称为<span
+class="math inline">\(1s\)</span>原子轨道的布洛赫和</p>
+<p>对于 <span class="math display">\[
+\begin{align}
+H=\frac{\hbar^2}{2m}\nabla^2+v(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span> 的哈氏量，我们从其中的<span
+class="math inline">\(\frac{\hbar^2}{2m}\nabla^2-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}\)</span>视为非微扰的部分，其本证函数取<span
+class="math inline">\(1s\)</span>态，其余的部分统一打包为周期的<span
+class="math inline">\(V(r)\)</span>，包含其余原子核的吸引势。</p>
+<p>对于这个N重简并的系统，我们当然不能使用非简并微扰论，而使用简并微扰论的矩阵来计算该微扰能量也颇有困难的，因此我们换种方法。既然<span
+class="math inline">\(\psi_k(r)\)</span>已经被我们当做系统的本征态了，那哈氏量直接作用在其上应该得到本征能量
+<span class="math display">\[
+\begin{align}
+H\psi_k(r)=&amp;E\psi_k(r)
+\end{align}
+\]</span> 我们在两边同乘<span
+class="math inline">\(\phi^*(r)\)</span>并积分有 <span
+class="math display">\[
+\begin{align}
+\int \phi^*(r)H\frac{1}{\sqrt{N}}\sum\limits_n
+e^{ikR_n}\phi(r-R_n)dr=&amp;E\int
+\phi^*(r)\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr\\
+\sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr=&amp;E\sum\limits_n
+e^{ikR_n}\int \phi^*(r)\phi(r-R_n)dr\\
+E\sum\limits_n e^{ikR_n} \delta_{0,n}=&amp;\sum\limits_n e^{ikR_n}\int
+\phi^*(r)H\phi(r-R_n)dr
+\end{align}
+\]</span> 将哈氏量分为非微扰与微扰部分得 <span class="math display">\[
+\begin{align}
+E=&amp;\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;\sum\limits_ne^{ikR_n}\bqty{E^0\delta_{0,n}+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;E^0-\sum\limits_n e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(E^0\)</span>是<span
+class="math inline">\(1s\)</span>态的本征能量，<span
+class="math inline">\(J(R_n)\triangleq-\int\phi^*(r)V(r)\phi(r-R_n)dr\)</span>
+称为第0个原子轨道与第n个原子轨道的<strong>交叠积分</strong>，随着<span
+class="math inline">\(R_n\)</span>是指数衰减的。</p>
+<p>因此我们一般只考虑<span
+class="math inline">\(n=0\&amp;n=\pm1\)</span>的情况，即 <span
+class="math display">\[
+\begin{align}
+E=E^0-J(0)-\sum\limits_{\expval{R_n}}e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(J(0)=-\int dr
+V\abs{\phi}^2\)</span>，<span
+class="math inline">\(\expval{R_n}\)</span>代表最近邻原子之间的位移。</p>
+<p>以简并立方晶格为例子，最近邻的原子有上下左右前后六个，位矢<span
+class="math inline">\(R_n\)</span>分别为<span
+class="math inline">\(\mqty(a,0,0),(-a,0,0),(0,a,0)\)</span>...等，带入上式可以得到
+<span class="math display">\[
+\begin{align}
+E=&amp;E^0-J(0)-2J(R_n)\pqty{\cos k_xa+\cos k_ya+\cos k_za}\\
+\triangleq&amp;E^0-J_0-2J_1\pqty{\cos k_xa+\cos k_ya+\cos k_za}
+\end{align}
+\]</span> 如果是面心立方，则最近邻有十二个，位矢分别为<span
+class="math inline">\(\frac12\pqty{1,1,0},\frac12\pqty{-1,1,0}\)</span>...等，带入上式有
+<span class="math display">\[
+\begin{align}
+E=&amp;E^0-J_0-2J_1\left(\cos\frac a2(k_x+k_y)+\cos\frac
+a2(k_x-k_y)+\cos\frac a2(k_x+k_z)\right.\\
+&amp;\left.+\cos\frac a2(k_x-k_z)+\cos\frac a2(k_y+k_z)+\cos\frac
+a2(k_y-k_z)\right)
+\end{align}
+\]</span> 体心立方的情况就不敲了，很容易可以类比得到。</p>
+<p>从上面的结果可以很容易可以看出，简单立方晶格的能量关于波矢k变化，变化范围为<span
+class="math inline">\(12J_1\)</span>，因此我们说<span
+class="math inline">\(1s\)</span>的单原子能级展宽成<strong>能带</strong>，如法炮制我们可以得到其余原子能级也展宽成能带，这样便也得到了能带，<span
+class="math inline">\(1s\)</span>的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
+<p>对于更高能级的单原子波函数，比如<span
+class="math inline">\(p\)</span>态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>因此弱周期势近似又称为近自由电子近似<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>这里说的简并并不是指<span
+class="math inline">\(1s\)</span>内部的简并态，说的是N个电子的<span
+class="math inline">\(1s\)</span>态是简并的，<span
+class="math inline">\(2s\)</span>同理。<a href="#fnref3"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
@@ -3020,6 +3019,57 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
+    <title>《资本论》读书笔记</title>
+    <url>/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<pre><code>参考：
+《资本论》——马克思 恩格斯
+复旦王德峰教授公开课</code></pre>
+<span id="more"></span>
+<p>《资本论》中提到，资本家先预付一定的货币购置生产资料以及雇佣工人生产，然后将生产的产品卖到市场，这个价格包含了必要劳动时间与剩余劳动时间，实现资本的增值；资本将人的劳动抽象化，资本增值要么延长劳动时间要么增加剩余价值的比例，追求剩余价值的同时便带来了技术，同时也带来了一个指标：<strong>效率</strong></p>
+<p>追求“效率”让社会的节奏越来越快，类似“时间就是金钱，效率就是生命”的口号潜移默化地影响我们的观念。资本的逻辑造成了一种<strong>进步强制</strong><a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>——“停下就是落后”。因此社会仿佛一条湍急的河流，谁也不敢停下来，网络上流行视频的长度从四十分钟到二十分钟再到现在的五六分钟，客观上可能没有那么多空闲时间，但很多时候也是我们没法静下心来观看一个二十分钟的视频，许多视频软件也贴心地为我们准备了“长按屏幕倍速播放功能”，这或许是如今社会短视频盛行的原因之一。</p>
+<p>技术以及对效率的追求<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>使我们的生活效率越来越高，但是人生的意义却越来越空虚化<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。就我自己而言，早上在图书馆学习，然后中午骑个车去若海吃饭，吃完饭再回到图书馆，晚上再骑个车去若海或者鸡山吃饭，然后再回到图书馆。每次回到图书馆都很恍惚<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>，对于“离开图书馆去吃饭”这件事好像没有什么很深的印象，一天就这样匆匆忙忙地过去了，一天也不知道自己在忙什么事情。后来我决定走路去吃饭，虽然走到若海比骑单车慢很多，但是我似乎感受到了“<strong>生活</strong>”，“生活”就在看似浪费时间的空间移动上<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，也在透过树叶洒在泥土上的阳光里。</p>
+<p>资本停止增值就会死亡，资本对剩余价值的追求带来资本的内部矛盾：资本提高剩余价值的比例，降低必要劳动的比例，则相同的时间会更多的产品生产，但工人的工资却没有增加，市场的购买力不增加，因此生产的产品没法进行价值实现，抑制资本的增值。<strong>这是广大民众购买力的限制与商品的大量生产和销售之间的矛盾</strong><a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>。</p>
+<p>剩余劳动与剩余价值是两个概念。从前也追求剩余劳动，正是剩余劳动将一部分的人从生产劳动中解放出来，从事艺术、哲学与科学的研究。资本主义极大地促进了生产力的发展，剩余劳动的积累是史无前例的，这是不容置疑的。但这蕴含着资本的另一矛盾：资本对生产力的促进是为了追求剩余价值，实现资本的增值，若生产的产品无法进行价值的实现，那么资本主义便会破坏既得的剩余劳动，破坏生产力。</p>
+<p>还有一段不知道插在哪里的话，是王德峰教授课上举的例子。从前表达爱意的情书，需要跋山涉水几天才能送达到意中人的手里，而现在有微信，随时随地都可以进行信息的交流，方便了的同时却缺少了寄托思念的过程。在信件到达之前的那种期待，或许能促进两人感情的增长，或许与“小别胜新欢”是同一个道理<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>这是王德峰教授说的<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>这里并无对技术以及效率进行批判的意思<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>这也是王德峰教授说的~我觉得很有道理<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>当然也是困得要命，吃饱就困。所以不排除是我太困的原因。<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>没想到更好的词来描述我慢慢走到若海这件事情<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>王德峰教授言<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>人就是难得到的才会珍惜。<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <tags>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初等量子力学期末复习</title>
     <url>/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h2
@@ -3600,99 +3650,6 @@ P_{fi}(t)=\frac{1}{\hbar^2}\abs{\int_0^t\dd{t&#39;}e^{i\omega_{fi}t}V_{fi}(t&#39
       </tags>
   </entry>
   <entry>
-    <title>建站记录</title>
-    <url>/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
-<p>接下来就是好好装修自己的小屋(*╹▽╹*)</p>
-<span id="more"></span>
-<h2 id="更新日志">更新日志：</h2>
-<ul class="task-list">
-<li><p><input type="checkbox" checked="" />设置菜单</p></li>
-<li><p><input type="checkbox" checked="" />设置阅读进度条</p></li>
-<li><p><input type="checkbox"
-checked="" />设置字数统计及阅读时长估计</p></li>
-<li><p><input type="checkbox" checked="" />设置夜间模式选项</p></li>
-<li><p><input type="checkbox" checked="" />设置评论区</p></li>
-<li><p><input type="checkbox" />设置图传以便在网页显示图片</p></li>
-<li><p><input type="checkbox" />设置博客背景</p></li>
-<li><p><input type="checkbox" />设置个人日记</p></li>
-<li><p><input
-type="checkbox" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bing算了)</p></li>
-<li><p><input type="checkbox" checked="" />设置中英双语</p></li>
-</ul>
-<h2 id="建站bug记录">建站bug记录</h2>
-<ul>
-<li>23.02.27 使用waline添加评论功能、购买并绑定域名</li>
-</ul>
-<p>解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常）
-对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.io，之后更改为购买的域名，然后就解决了网页白底蓝字的问题。</p>
-<ul>
-<li>23.3.10 使用Google search console，想添加SEO功能</li>
-</ul>
-<p>提交sitemap了，但好像索引添加失败</p>
-<ul>
-<li>20.4.11
-按照知乎上的一个教程，实现了中英双语的按钮，但是这种方法感觉非常丑陋，建多的en文件夹好像插件是不一样的，比如渲染引擎就不同。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>记录</tag>
-        <tag>博客</tag>
-        <tag>debug</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《资本论》读书笔记</title>
-    <url>/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<pre><code>参考：
-《资本论》——马克思 恩格斯
-复旦王德峰教授公开课</code></pre>
-<span id="more"></span>
-<p>《资本论》中提到，资本家先预付一定的货币购置生产资料以及雇佣工人生产，然后将生产的产品卖到市场，这个价格包含了必要劳动时间与剩余劳动时间，实现资本的增值；资本将人的劳动抽象化，资本增值要么延长劳动时间要么增加剩余价值的比例，追求剩余价值的同时便带来了技术，同时也带来了一个指标：<strong>效率</strong></p>
-<p>追求“效率”让社会的节奏越来越快，类似“时间就是金钱，效率就是生命”的口号潜移默化地影响我们的观念。资本的逻辑造成了一种<strong>进步强制</strong><a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>——“停下就是落后”。因此社会仿佛一条湍急的河流，谁也不敢停下来，网络上流行视频的长度从四十分钟到二十分钟再到现在的五六分钟，客观上可能没有那么多空闲时间，但很多时候也是我们没法静下心来观看一个二十分钟的视频，许多视频软件也贴心地为我们准备了“长按屏幕倍速播放功能”，这或许是如今社会短视频盛行的原因之一。</p>
-<p>技术以及对效率的追求<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>使我们的生活效率越来越高，但是人生的意义却越来越空虚化<a
-href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>。就我自己而言，早上在图书馆学习，然后中午骑个车去若海吃饭，吃完饭再回到图书馆，晚上再骑个车去若海或者鸡山吃饭，然后再回到图书馆。每次回到图书馆都很恍惚<a
-href="#fn4" class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>，对于“离开图书馆去吃饭”这件事好像没有什么很深的印象，一天就这样匆匆忙忙地过去了，一天也不知道自己在忙什么事情。后来我决定走路去吃饭，虽然走到若海比骑单车慢很多，但是我似乎感受到了“<strong>生活</strong>”，“生活”就在看似浪费时间的空间移动上<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，也在透过树叶洒在泥土上的阳光里。</p>
-<p>资本停止增值就会死亡，资本对剩余价值的追求带来资本的内部矛盾：资本提高剩余价值的比例，降低必要劳动的比例，则相同的时间会更多的产品生产，但工人的工资却没有增加，市场的购买力不增加，因此生产的产品没法进行价值实现，抑制资本的增值。<strong>这是广大民众购买力的限制与商品的大量生产和销售之间的矛盾</strong><a
-href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>。</p>
-<p>剩余劳动与剩余价值是两个概念。从前也追求剩余劳动，正是剩余劳动将一部分的人从生产劳动中解放出来，从事艺术、哲学与科学的研究。资本主义极大地促进了生产力的发展，剩余劳动的积累是史无前例的，这是不容置疑的。但这蕴含着资本的另一矛盾：资本对生产力的促进是为了追求剩余价值，实现资本的增值，若生产的产品无法进行价值的实现，那么资本主义便会破坏既得的剩余劳动，破坏生产力。</p>
-<p>还有一段不知道插在哪里的话，是王德峰教授课上举的例子。从前表达爱意的情书，需要跋山涉水几天才能送达到意中人的手里，而现在有微信，随时随地都可以进行信息的交流，方便了的同时却缺少了寄托思念的过程。在信件到达之前的那种期待，或许能促进两人感情的增长，或许与“小别胜新欢”是同一个道理<a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>这是王德峰教授说的<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>这里并无对技术以及效率进行批判的意思<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>这也是王德峰教授说的~我觉得很有道理<a href="#fnref3"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>当然也是困得要命，吃饱就困。所以不排除是我太困的原因。<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>没想到更好的词来描述我慢慢走到若海这件事情<a
-href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>王德峰教授言<a href="#fnref6" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>人就是难得到的才会珍惜。<a href="#fnref7"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>广义相对论期末复习</title>
     <url>/2023/02/10/%E5%B9%BF%E7%9B%B8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h2
@@ -3869,6 +3826,48 @@ orz（还是太菜了）</li>
         <tag>物理</tag>
         <tag>期末复习</tag>
         <tag>广义相对论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建站记录</title>
+    <url>/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
+<p>接下来就是好好装修自己的小屋(*╹▽╹*)</p>
+<span id="more"></span>
+<h2 id="更新日志">更新日志：</h2>
+<ul class="task-list">
+<li><p><input type="checkbox" checked="" />设置菜单</p></li>
+<li><p><input type="checkbox" checked="" />设置阅读进度条</p></li>
+<li><p><input type="checkbox"
+checked="" />设置字数统计及阅读时长估计</p></li>
+<li><p><input type="checkbox" checked="" />设置夜间模式选项</p></li>
+<li><p><input type="checkbox" checked="" />设置评论区</p></li>
+<li><p><input type="checkbox" />设置图传以便在网页显示图片</p></li>
+<li><p><input type="checkbox" />设置博客背景</p></li>
+<li><p><input type="checkbox" />设置个人日记</p></li>
+<li><p><input
+type="checkbox" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bing算了)</p></li>
+<li><p><input type="checkbox" checked="" />设置中英双语</p></li>
+</ul>
+<h2 id="建站bug记录">建站bug记录</h2>
+<ul>
+<li>23.02.27 使用waline添加评论功能、购买并绑定域名</li>
+</ul>
+<p>解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常）
+对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.io，之后更改为购买的域名，然后就解决了网页白底蓝字的问题。</p>
+<ul>
+<li>23.3.10 使用Google search console，想添加SEO功能</li>
+</ul>
+<p>提交sitemap了，但好像索引添加失败</p>
+<ul>
+<li>20.4.11
+按照知乎上的一个教程，实现了中英双语的按钮，但是这种方法感觉非常丑陋，建多的en文件夹好像插件是不一样的，比如渲染引擎就不同。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>记录</tag>
+        <tag>博客</tag>
+        <tag>debug</tag>
       </tags>
   </entry>
   <entry>
