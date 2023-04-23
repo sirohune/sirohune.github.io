@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/en/","images":"/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
 
-    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
+    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="固体物理学习笔记（能带）">
 <meta property="og:url" content="https://sirohune.site/en/2023/04/11/Solid-State-Physics-Note-Part-2/index.html">
 <meta property="og:site_name" content="Haku&#39;s blog">
-<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
+<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-11T13:52:21.000Z">
 <meta property="article:modified_time" content="2023-04-11T15:17:47.384Z">
@@ -181,7 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86-Bloch-Theorem-%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch
+Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -283,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>2.2k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -303,8 +304,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅
-</code></pre><p>自由电子气有三个近似</p>
+课程PPT——俞宏毅</code></pre>
+<p>自由电子气有三个近似</p>
 <ul>
 <li>自由电子近似</li>
 <li>单电子近似</li>
@@ -312,58 +313,87 @@ document.addEventListener('DOMContentLoaded', () => {
 </ul>
 <p>这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。<strong>能带论</strong>是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。</p>
 <span id="more"></span>
-<p>对于体系的哈密顿量</p>
-<script type="math/tex; mode=display">
+<p>对于体系的哈密顿量 <span class="math display">\[
 \require{physics}
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
- &+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}</script><p>即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下
+<span class="math display">\[
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
- &-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}</script><p>对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数$V(r)$，且这个函数是一个周期函数满足$V(r+R_n)=V(r)$，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
-<p>单电子近似允许我们将电子相互作用项写为</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+&amp;-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数<span
+class="math inline">\(V(r)\)</span>，且这个函数是一个周期函数满足<span
+class="math inline">\(V(r+R_n)=V(r)\)</span>，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
+<p>单电子近似允许我们将电子相互作用项写为 <span class="math display">\[
 \begin{align}
- V_{ee}(r_i,r_j)=&\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi \epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
- =&\sum_i v_i(r_i)
-\end{align}</script><p>因此总的哈氏量写为</p>
-<script type="math/tex; mode=display">
+V_{ee}(r_i,r_j)=&amp;\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi
+\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+=&amp;\sum_i v_i(r_i)
+\end{align}
+\]</span> 因此总的哈氏量写为 <span class="math display">\[
 \begin{align}
- H=&\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n \frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-R_n}}}
-\end{align}</script><p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
+H=&amp;\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-R_n}}}
+\end{align}
+\]</span></p>
+<p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
 <p>接下来只需要解单电子的薛定谔方程即可，其中，周期性近似是能带产生的来源。</p>
-<h2 id="布洛赫定理-Bloch-Theorem-与能带"><a href="#布洛赫定理-Bloch-Theorem-与能带" class="headerlink" title="布洛赫定理(Bloch Theorem)与能带"></a>布洛赫定理(Bloch Theorem)与能带</h2><h3 id="布洛赫定理"><a href="#布洛赫定理" class="headerlink" title="布洛赫定理"></a>布洛赫定理</h3><p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足</p>
-<script type="math/tex; mode=display">
+<h2 id="布洛赫定理bloch-theorem与能带">布洛赫定理(Bloch
+Theorem)与能带</h2>
+<h3 id="布洛赫定理">布洛赫定理</h3>
+<p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足
+<span class="math display">\[
 \begin{align}
- \psi(r+R_n)=e^{ikR_n}\psi(r)
-\end{align}</script><p>另外一种是其本征函数可以写为如下形式</p>
-<script type="math/tex; mode=display">
+\psi(r+R_n)=e^{ikR_n}\psi(r)
+\end{align}
+\]</span></p>
+<p>另外一种是其本征函数可以写为如下形式 <span class="math display">\[
 \begin{align}
- \psi(r)=e^{ikr}u_k(r)
-\end{align}</script><p>其中$u_k(r)$是一个周期函数满足$u(r+R_n)=u(r)$。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
-<h3 id="布洛赫定理的证明"><a href="#布洛赫定理的证明" class="headerlink" title="布洛赫定理的证明"></a>布洛赫定理的证明</h3><h3 id="波矢k的物理意义"><a href="#波矢k的物理意义" class="headerlink" title="波矢k的物理意义"></a>波矢k的物理意义</h3><p>很显然，这里的$\hbar k$并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到$\hbar k$的本征值的。</p>
-<p>波矢$k$的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件</p>
-<script type="math/tex; mode=display">
+\psi(r)=e^{ikr}u_k(r)
+\end{align}
+\]</span> 其中<span
+class="math inline">\(u_k(r)\)</span>是一个周期函数满足<span
+class="math inline">\(u(r+R_n)=u(r)\)</span>。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
+<h3 id="布洛赫定理的证明">布洛赫定理的证明</h3>
+<h3 id="波矢k的物理意义">波矢k的物理意义</h3>
+<p>很显然，这里的<span class="math inline">\(\hbar
+k\)</span>并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到<span
+class="math inline">\(\hbar k\)</span>的本征值的。</p>
+<p>波矢<span
+class="math inline">\(k\)</span>的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件
+<span class="math display">\[
 \begin{align}
- \begin{cases}
- \psi(r+N_1a_1)=\psi(r)\\
- \psi(r+N_2a_2)=\psi(r)\\
- \psi(r+N_3a_3)=\psi(r)
- \end{cases}
-\end{align}</script><p>对于布洛赫函数，这样的边界条件无疑是在说</p>
-<script type="math/tex; mode=display">
+\begin{cases}
+\psi(r+N_1a_1)=\psi(r)\\
+\psi(r+N_2a_2)=\psi(r)\\
+\psi(r+N_3a_3)=\psi(r)
+\end{cases}
+\end{align}
+\]</span> 对于布洛赫函数，这样的边界条件无疑是在说 <span
+class="math display">\[
 \begin{align}
- \exp(ik\cdot N_ia_i)=&1\\
- \Rightarrow k\cdot N_ia_i=2l_i\pi
-\end{align}</script><p>如果你还记得的话，我们的倒格矢满足$b<em>i\cdot a_j=2\pi\delta</em>{ij}$,因此</p>
-<script type="math/tex; mode=display">
+\exp(ik\cdot N_ia_i)=&amp;1\\
+\Rightarrow k\cdot N_ia_i=2l_i\pi
+\end{align}
+\]</span> 如果你还记得的话，我们的倒格矢满足<span
+class="math inline">\(b_i\cdot a_j=2\pi\delta_{ij}\)</span>,因此 <span
+class="math display">\[
 \begin{align}
- k=\sum_i\frac{l_i}{N_i}b_i
-\end{align}</script><p>从</p>
-<h2 id="弱周期势近似"><a href="#弱周期势近似" class="headerlink" title="弱周期势近似"></a>弱周期势近似</h2><h2 id="紧束缚近似"><a href="#紧束缚近似" class="headerlink" title="紧束缚近似"></a>紧束缚近似</h2>
+k=\sum_i\frac{l_i}{N_i}b_i
+\end{align}
+\]</span> 从</p>
+<h2 id="弱周期势近似">弱周期势近似</h2>
+<h2 id="紧束缚近似">紧束缚近似</h2>
+
     </div>
 
     
@@ -418,13 +448,13 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">59k</span>
+    <span title="Word count total">74k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:47</span>
+    <span title="Reading time total">2:15</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
