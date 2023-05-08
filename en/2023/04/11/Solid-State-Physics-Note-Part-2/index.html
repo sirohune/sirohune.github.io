@@ -28,7 +28,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://sirohune.site/en/2023/04/11/Solid-State-Physics-Note-Part-2/band.png">
 <meta property="article:published_time" content="2023-04-11T13:52:21.000Z">
-<meta property="article:modified_time" content="2023-05-07T13:11:50.961Z">
+<meta property="article:modified_time" content="2023-05-08T07:54:23.988Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="笔记">
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch
-Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.4.</span> <span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.1.</span> <span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.2.</span> <span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-number">2.2.1.</span> <span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6%E4%B8%8E%E8%B4%B9%E7%B1%B3%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">电子态密度与费米面</span></a></li></ol></div>
+Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.4.</span> <span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.1.</span> <span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.2.</span> <span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-number">2.2.1.</span> <span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">电子态密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">4.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">4.2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -273,7 +273,7 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-07 21:11:50" itemprop="dateModified" datetime="2023-05-07T21:11:50+08:00">2023-05-07</time>
+      <time title="Modified: 2023-05-08 15:54:23" itemprop="dateModified" datetime="2023-05-08T15:54:23+08:00">2023-05-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -306,14 +306,14 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>12k</span>
+      <span>15k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>21 mins.</span>
+      <span>28 mins.</span>
     </span>
 </div>
 
@@ -463,11 +463,11 @@ role="doc-noteref"><sup>1</sup></a>。而PPT中直接拿原子波函数来进行
 href="#fn2" class="footnote-ref" id="fnref2"
 role="doc-noteref"><sup>2</sup></a>。</p>
 <p>量子数n的出现，也就是说能带的出现，我觉得还是依赖于周期性。因为周期性和实空间的有限相关，所以这可能是为什么教材上说实空间的有限会导致能带n的出现。具体可以参考<a
-href="%5BParticle%20in%20a%20one-dimensional%20lattice%20-%20Wikipedia%5D(https://en.wikipedia.org/wiki/Particle_in_a_one-dimensional_lattice)">wiki上的Kronig–Penney
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Particle_in_a_one-dimensional_lattice">wiki上的Kronig–Penney
 model</a>，如果懒得看wiki，那可以听我简单介绍一下。我们举一个简单的模型，在自由空间中放入无穷个宽度为b的势垒，上一个势垒的末端与下一个势垒的前端相距a，所以周期为a+b，构造这样一个周期性的势场。很显然我们只需要求解a范围内的波函数和b范围内的波函数，b范围内的波函数是<span
 class="math inline">\(\sinh,\cosh\)</span>函数的叠加，a范围内的波函数是<span
 class="math inline">\(\sin,\cos\)</span>函数的叠加，这样的波函数我们在<a
-href="%5B初等量子力学期末复习%20%7C%20はくのblog%20(sirohune.site)%5D(https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more)">初等量子力学</a>中是求解过的。
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">初等量子力学</a>中是求解过的。
 <span class="math display">\[
 \begin{align}
 \psi_1(r)=&amp;Ae^{iKr}+Be^{-iKr},0&lt;r&lt;a\\
@@ -737,7 +737,144 @@ class="math inline">\(1s\)</span>的单原子能级展宽成<strong>能带</stro
 class="math inline">\(1s\)</span>的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
 <p>对于更高能级的单原子波函数，比如<span
 class="math inline">\(p\)</span>态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
-<h2 id="电子态密度与费米面">电子态密度与费米面</h2>
+<h2 id="电子态密度">电子态密度</h2>
+<p>态密度我们在上一份笔记是求过的，需要注意的是，之前求的态密度是自由电子气的，也就是已知能量<span
+class="math inline">\(E\)</span>与波矢<span
+class="math inline">\(k\)</span>的关系为 <span class="math display">\[
+\begin{align}
+E=\frac{\hbar^2k^2}{2m}
+\end{align}
+\]</span>
+但是显然一般的模型并不具有上述色散关系，因此这一小节主要是推导一般色散关系下的态密度公式。</p>
+<h3 id="方法一">方法一</h3>
+<p>我们可以从定义出发，态密度是单位体积单位能量中的态数目，因此我们可以写出
+<span class="math display">\[
+\begin{align}
+g(E)dE=\frac{dN}{L^D}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(L^D\)</span>是实空间的体积，D是空间维度。在倒格空间中，态数目等于倒格空间的体积<span
+class="math inline">\(V_k\)</span>除以<span
+class="math inline">\(\pqty{\frac{2\pi}{L}}^D\)</span>，这是因为每个态占据的体积为<span
+class="math inline">\(\pqty{\frac{2\pi}{L}}^D\)</span>，若考虑自旋则可以补上因子2，因此态密度可以进一步写为
+<span class="math display">\[
+\begin{align}
+g(E)dE=&amp;\frac{dV_k}{L^D\pqty{\frac{2\pi}{L}}^D}\\
+=&amp;\frac{1}{(2\pi)^D}dk\int_{S(E)}dS
+\end{align}
+\]</span> 其中<span
+class="math inline">\(S(E)\)</span>是倒格空间中满足能量<span
+class="math inline">\(E(\va{k})=E\)</span>的等能面（是一个镶嵌在D维中的<strong>超曲面</strong>），乘上<span
+class="math inline">\(dk\)</span>即到达<span
+class="math inline">\(E(\va{k})=E+dE\)</span>的等能面。这里的<span
+class="math inline">\(dE\)</span>是由<span
+class="math inline">\(dk\)</span>诱导出来的，所以 <span
+class="math display">\[
+\begin{align}
+dE=&amp;\abs{\nabla_{k_i}E}dk\\
+\Rightarrow
+g(E)\abs{\nabla_{k_i}E}dk=&amp;\frac{1}{(2\pi)^D}dk\int_{S(E)}dS\\
+\Rightarrow
+g(E)=&amp;\frac{1}{(2\pi)^D}\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span></p>
+<h3 id="方法二">方法二</h3>
+<p>考虑态数目的两种表达式，态数目等于各微观态<a
+href="http://sirohune.site/2023/03/15/Statistical-Review-Note/">平均占据数</a>的求和
+<span class="math display">\[
+\begin{align}
+N={\color{red}2}\sum\limits_{n,k\in BZ}f(E_{n,k})
+\end{align}
+\]</span>
+其中因子2来自自旋，采用简约布里渊区图示，只对第一布里渊区内的k求和。另一方面，根据态密度的定义可以写出
+<span class="math display">\[
+\begin{align}
+N=&amp;L^D\int f(E)g(E)dE\\
+\Rightarrow L^D\int f(E)g(E)dE=&amp;2\sum\limits_{n,k\in BZ}f(E_{n,k})
+\end{align}
+\]</span> 利用积分恒等式<span class="math inline">\(\int
+\delta(E-E_{n,k})dE=1\)</span>, <span class="math display">\[
+\begin{align}
+\int f(E)g(E)dE=&amp;\frac{2}{L^D}\sum\limits_{n,k\in BZ}f(E_{n,k})\int
+\delta(E-E_{n,k})dE\\
+=&amp;\frac{2}{L^D}\int dE
+\sum\limits_{n}f(E)\pqty{\frac{L}{2\pi}}^D\int d^Dk\delta(E-E_{n,k})\\
+=&amp;\frac{2}{(2\pi)^D}\int f(E)\sum\limits_n \int d^D
+k\delta(E-E_{n,k})\\
+\Rightarrow g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D
+k\delta(E-E_{n,k})
+\end{align}
+\]</span> 可以对比发现这个公式与方法一的公式相差一个求和<span
+class="math inline">\(\sum\limits_n\)</span>，其实第一个方法也应该考虑该求和，因为该求和是来自于：能带之间存在交叠现象，如果画在简约布里渊图示中就是横坐标的k与纵坐标的E都相等，但是他们确实是属于不同量子数n的，所以计算的时候应该将重叠的能带考虑进去。</p>
+<p>同时对我个人来说，第二个方法的公式并不能直接拿来计算。什么意思呢？当你给我第二个公式的时候，我计算的过程还是会将其化为方法一的形式，但是两个公式是等价的，因为根据<span
+class="math inline">\(\delta\)</span>函数的性质，可以将其写为 <span
+class="math display">\[
+\begin{align}
+g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\delta(E-E_{n,k})\\
+=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\sum\limits_l
+\frac{\delta(\va{k}-\va{k_l})}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span> 上面积分的意义是对所有满足<span
+class="math inline">\(E(\va{k_l})=E\)</span>的<span
+class="math inline">\(\va{k}\)</span>进行计数，满足左边约束条件的<span
+class="math inline">\(\va{k}\)</span>构成一个超曲面<span
+class="math inline">\(S(E)\)</span>，如果没有<span
+class="math inline">\(\nabla_K E\)</span>，那么积分<span
+class="math inline">\(\int d^Dk \sum\limits_l
+\delta(\va{k}-\va{k_l})\)</span>就是<span
+class="math inline">\(S(E)\)</span>的面积，现在不过是加上一个积分函数，因此上式进一步化为
+<span class="math display">\[
+\begin{align}
+g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span></p>
+<h3 id="例题">例题</h3>
+<p>以作业题为例子，考虑二维正方晶格，第一布里渊区为<span
+class="math inline">\(k_i\in[-\pi/a,\pi/a]\)</span>,色散关系为<span
+class="math inline">\(E(\va{k})=C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)\)</span>，第一步我们要得到超曲面<span
+class="math inline">\(S(\epsilon)\)</span>，超曲面上的波矢满足<span
+class="math inline">\(E(\va{k})=\epsilon\)</span>，即 <span
+class="math display">\[
+\begin{align}
+S(\epsilon)&amp;:\ C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)-\epsilon=0\\
+\Rightarrow S(\epsilon)&amp;:\
+k_x^2-k_y^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}
+\end{align}
+\]</span> 这里需要分类讨论 <span class="math display">\[
+\begin{align}
+S(\epsilon):\begin{cases}
+\frac{k_x^2}{A^2}-\frac{k_y^2}{A^2}=1&amp;,
+A^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}\\
+\frac{k_y^2}{A^2}-\frac{k_x^2}{A^2}=1&amp;,
+A^2=\frac{\pi^2}{a^2}-\frac{\epsilon}{C}
+\end{cases}
+\end{align}
+\]</span> 无论是那种情况，都是双曲线。而对于被积函数 <span
+class="math display">\[
+\begin{align}
+\abs{\nabla_{k_i}E}=&amp;C\abs{(2k_x,-2k_y)}\\
+=&amp;2C\sqrt{k_x^2+k_y^2}
+\end{align}
+\]</span> 同时此时无能带重叠，因此态密度为 <span class="math display">\[
+\begin{align}
+g(\epsilon)=&amp;\frac{2}{(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{2Ck}\\
+=&amp;\frac{1}{C(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{k}
+\end{align}
+\]</span> 假设是第一种情况，<span class="math inline">\(S(\epsilon):\
+k_x^2-k_y^2=A^2\)</span>，随意挑选<span
+class="math inline">\(k_x,k_y\)</span>作为积分变量都可以，只要积分上下限不弄错，这里以<span
+class="math inline">\(k_x\)</span>为例子，被积的双曲线具有明显的对称性，积分结果为第一象限的4倍，积分从A到<span
+class="math inline">\(\pi/a\)</span>。积分线元为 <span
+class="math display">\[
+\begin{align}
+dl=&amp;\sqrt{1+\frac{k_x^2}{k_x^2-A^2}}dk_x\\
+=&amp;\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}dk_x\\
+\Rightarrow
+g(\epsilon)=&amp;\frac{1}{C\pi^2}\int_A^{\pi/a}dk_x\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}/\sqrt{2k_x^2-A^2}\\
+=&amp;\frac{1}{C\pi^2}\int_A^{\pi/a}\frac{dk_x}{\sqrt{k_x^2-A^2}}\\
+=&amp;\frac{1}{C\pi^2}arc\cosh\frac{\pi/a}{\sqrt{\epsilon/C-\pi^2/a^2}}
+\end{align}
+\]</span></p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -813,13 +950,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">89k</span>
+    <span title="Word count total">93k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:41</span>
+    <span title="Reading time total">2:49</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
