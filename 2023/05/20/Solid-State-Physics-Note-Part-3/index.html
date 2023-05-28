@@ -23,12 +23,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
+    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="固体物理学习笔记（晶格振动）">
 <meta property="og:url" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/index.html">
 <meta property="og:site_name" content="はくのblog">
-<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
+<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-20T01:35:25.000Z">
 <meta property="article:modified_time" content="2023-05-20T08:29:02.315Z">
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%B6%E6%A0%BC%E6%8C%AF%E5%8A%A8%E7%9A%84%E7%BB%8F%E5%85%B8%E7%90%86%E8%AE%BA"><span class="nav-text">晶格振动的经典理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E8%B0%90%E8%BF%91%E4%BC%BC"><span class="nav-text">简谐近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E6%8C%AF%E5%8A%A8"><span class="nav-text">一维振动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%8E%9F%E5%AD%90%E9%93%BE"><span class="nav-text">单原子链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%8E%9F%E5%AD%90%E9%93%BE"><span class="nav-text">双原子链</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E7%BB%B4%E6%8C%AF%E5%8A%A8"><span class="nav-text">高维振动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E7%AE%80%E5%8D%95%E6%99%B6%E6%A0%BC%E5%8D%95%E5%8E%9F%E5%AD%90"><span class="nav-text">二维简单晶格(单原子)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%B6%E6%A0%BC%E6%8C%AF%E5%8A%A8%E7%9A%84%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA"><span class="nav-text">晶格振动的量子理论</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%B6%E6%A0%BC%E6%8C%AF%E5%8A%A8%E7%9A%84%E7%BB%8F%E5%85%B8%E7%90%86%E8%AE%BA"><span class="nav-text">晶格振动的经典理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E8%B0%90%E8%BF%91%E4%BC%BC"><span class="nav-text">简谐近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E6%8C%AF%E5%8A%A8"><span class="nav-text">一维振动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%8E%9F%E5%AD%90%E9%93%BE"><span class="nav-text">单原子链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%8E%9F%E5%AD%90%E9%93%BE"><span class="nav-text">双原子链</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E7%BB%B4%E6%8C%AF%E5%8A%A8"><span class="nav-text">高维振动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E7%AE%80%E5%8D%95%E6%99%B6%E6%A0%BC-%E5%8D%95%E5%8E%9F%E5%AD%90"><span class="nav-text">二维简单晶格(单原子)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%B6%E6%A0%BC%E6%8C%AF%E5%8A%A8%E7%9A%84%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA"><span class="nav-text">晶格振动的量子理论</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -321,14 +321,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.7k</span>
+      <span>4.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
+      <span>8 分钟</span>
     </span>
 </div>
 
@@ -341,174 +341,108 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅</code></pre>
-<p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
+课程PPT——俞宏毅
+</code></pre><p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
 <span id="more"></span>
-<p>对于体系的哈密顿量 <span class="math display">\[
+<p>对于体系的哈密顿量</p>
+<script type="math/tex; mode=display">
 \require{physics}
 \begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2\\
-&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}
-\]</span> 原本<span
-class="math inline">\(R_n\)</span>代表离子实的位置，但由于我们上一章的近似，我们通常认为<span
-class="math inline">\(R_n\)</span>是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置<span
-class="math inline">\(R\)</span>，<span
-class="math inline">\(V_{mn}(R)\)</span>是所有离子实之间的相互作用，<span
-class="math inline">\(V_{en}(r,R)\)</span>是所有离子实与所有电子之间相互作用，<span
-class="math inline">\(V_{en}(R_n)\)</span>代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为
-<span class="math display">\[
+ H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
+ &+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}</script><p>原本$R<em>n$代表离子实的位置，但由于我们上一章的近似，我们通常认为$R_n$是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置$R$，$V</em>{mn}(R)$是所有离子实之间的相互作用，$V<em>{en}(r,R)$是所有离子实与所有电子之间相互作用，$V</em>{en}(R_n)$代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2\\
-&amp;+V_{mn}(R)+V_{en}(r,R)
-\end{align}
-\]</span> 为了使用上一章的结论，我们将哈密顿量改写为 <span
-class="math display">\[
+ H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
+ &+V_{mn}(R)+V_{en}(r,R)
+\end{align}</script><p>为了使用上一章的结论，我们将哈密顿量改写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
-&amp;-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
-=&amp;H_e+H_n
-\end{align}
-\]</span> 很显然<span
-class="math inline">\(H_e\)</span>的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解<span
-class="math inline">\(H_n\)</span>的本征函数即可。将原子总波函数写为<span
-class="math inline">\(\Psi(r,R)=\psi(r,R_n)\chi(R)\)</span>，带入薛定谔方程得
-<span class="math display">\[
+ H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
+ &-\sum_n \frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
+ =&H_e+H_n
+\end{align}</script><p>很显然$H_e$的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解$H_n$的本征函数即可。将原子总波函数写为$\Psi(r,R)=\psi(r,R_n)\chi(R)$，带入薛定谔方程得</p>
+<script type="math/tex; mode=display">
 \begin{align}
-(H_e+H_n)\psi(r,R_n)\chi(R)=&amp;E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
-=&amp;E\psi(r,R_n)\chi(R)
-\end{align}
-\]</span> 其中<span
-class="math inline">\(E_e\)</span>为布洛赫电子的能量,与总能量关系为<span
-class="math inline">\(E=E_e+E_n\)</span>，上述方程左乘<span
-class="math inline">\(\psi^*(r,R_n)\)</span>并对电子位矢积分得 <span
-class="math display">\[
+(H_e+H_n)\psi(r,R_n)\chi(R)=&E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
+ =&E\psi(r,R_n)\chi(R)
+\end{align}</script><p>其中$E_e$为布洛赫电子的能量,与总能量关系为$E=E_e+E_n$，上述方程左乘$\psi^*(r,R_n)$并对电子位矢积分得</p>
+<script type="math/tex; mode=display">
 \begin{align}
-E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&amp;E\chi(R)\\
-\int\psi^*H_n\psi dr \chi(R)=&amp;E_n\chi(R)\\
-\end{align}
-\]</span> 带入<span class="math inline">\(H_n\)</span>表达式有 <span
-class="math display">\[
+ E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&E\chi(R)\\
+ \int\psi^*H_n\psi dr \chi(R)=&E_n\chi(R)\\
+\end{align}</script><p>带入$H_n$表达式有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-E_n\chi(R)=&amp;\bqty{-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int
-\psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
-=&amp;[T_n+V(R)]\chi(R)
-\end{align}
-\]</span></p>
-<p>到目前为止我们还未用到近似，上面的总势能<span
-class="math inline">\(V(R)\)</span>具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。
-但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
-<h1 id="晶格振动的经典理论">晶格振动的经典理论</h1>
-<h2 id="简谐近似">简谐近似</h2>
-<p>根据简谐近似，我们将第n个离子实的坐标写为 <span
-class="math display">\[
+ E_n\chi(R)=&\bqty{-\sum_n \frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int \psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
+ =&[T_n+V(R)]\chi(R)
+\end{align}</script><p>到目前为止我们还未用到近似，上面的总势能$V(R)$具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。<br>但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
+<h1 id="晶格振动的经典理论"><a href="#晶格振动的经典理论" class="headerlink" title="晶格振动的经典理论"></a>晶格振动的经典理论</h1><h2 id="简谐近似"><a href="#简谐近似" class="headerlink" title="简谐近似"></a>简谐近似</h2><p>根据简谐近似，我们将第n个离子实的坐标写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-R(n)=R_n+u_n
-\end{align}
-\]</span> <span
-class="math inline">\(u_n\)</span>表示第n个粒子实对其平衡位置的偏离，令<span
-class="math inline">\(\phi(\Delta R)\)</span>为两个离子实之间的势能
-<span class="math display">\[
+ R(n)=R_n+u_n
+\end{align}</script><p>$u_n$表示第n个粒子实对其平衡位置的偏离，令$\phi(\Delta R)$为两个离子实之间的势能</p>
+<script type="math/tex; mode=display">
 \begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
-\approx &amp;
-\frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
-&amp;+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
-\end{align}
-\]</span>
-理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的<span
-class="math inline">\(\phi&#39;=0\)</span>，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为
-<span class="math display">\[
+ V(R)=&\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
+ \approx & \frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
+ &+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
+\end{align}</script><p>理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的$\phi’=0$，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-V(R)&amp;\approx
-\frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
-\end{align}
-\]</span> 这边是简谐近似的势能项。</p>
-<h2 id="一维振动">一维振动</h2>
-<h3 id="单原子链">单原子链</h3>
-<p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为
-<span class="math display">\[
+ V(R)&\approx \frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
+\end{align}</script><p>这边是简谐近似的势能项。</p>
+<h2 id="一维振动"><a href="#一维振动" class="headerlink" title="一维振动"></a>一维振动</h2><h3 id="单原子链"><a href="#单原子链" class="headerlink" title="单原子链"></a>单原子链</h3><p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-V(R)\approx&amp; \frac{1}{2}\sum\limits_n
-\phi&#39;&#39;_{xx}(u_n-u_{n+1})^2
-\end{align}
-\]</span> 记<span
-class="math inline">\(\beta=\phi&#39;&#39;_{xx}\)</span>，根据经典的牛顿力学，第n个原子的运动方程为
-<span class="math display">\[
+ V(R)\approx& \frac{1}{2}\sum\limits_n \phi''_{xx}(u_n-u_{n+1})^2
+\end{align}</script><p>记$\beta=\phi’’_{xx}$，根据经典的牛顿力学，第n个原子的运动方程为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-M\dv[2]{t}u_n=&amp;-\pdv{V}{u_n}\\
-=&amp;\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
-=&amp;\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
-\end{align}
-\]</span>
-如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理
-<span class="math display">\[
+ M\dv[2]{t}u_n=&-\pdv{V}{u_n}\\
+ =&\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
+ =&\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
+\end{align}</script><p>如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理</p>
+<script type="math/tex; mode=display">
 \begin{align}
-u(x+R_n)=e^{iqR_n}u(x)
-\end{align}
-\]</span> 因此<span
-class="math inline">\(u(na,t)=e^{iqna}u(0,t)\)</span>，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
-<p>把解带进去我们可以得到一维单原子链的解与色散关系 <span
-class="math display">\[
+ u(x+R_n)=e^{iqR_n}u(x)
+\end{align}</script><p>因此$u(na,t)=e^{iqna}u(0,t)$，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
+<p>把解带进去我们可以得到一维单原子链的解与色散关系</p>
+<script type="math/tex; mode=display">
 \begin{align}
-Me^{iqna}\dv[2]{t}u_0=&amp;\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
-M\dv[2]{t}u_0=&amp;\beta\pqty{2-2\cos{qa}}u_0\\
-\Rightarrow u_0=&amp;Ae^{-i\omega t}
-\end{align}
-\]</span> 其中 <span class="math display">\[
+ Me^{iqna}\dv[2]{t}u_0=&\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
+ M\dv[2]{t}u_0=&\beta\pqty{2-2\cos{qa}}u_0\\
+\Rightarrow u_0=&Ae^{-i\omega t}
+\end{align}</script><p>其中</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\omega=&amp;\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
-=&amp;2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
-\end{align}
-\]</span></p>
-<p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢<span
-class="math inline">\(q\)</span>给出不同波长<span
-class="math inline">\(2\pi/q\)</span>的简正模式，这种波称为<strong>格波</strong>。</p>
-<h3 id="双原子链">双原子链</h3>
-<h2 id="高维振动">高维振动</h2>
-<p>对于高维晶格振动，推导过程与一维的类似，这里以二维的作为例子。</p>
-<h3 id="二维简单晶格单原子">二维简单晶格(单原子)</h3>
-<p>以简单正方晶格为例子，此时平衡位置的偏离写为<span
-class="math inline">\(u_{nl}\)</span>，代表第n行第l列的原子相对平衡位置的偏离。考虑最近邻域与次近邻的势能项，此时势能写为
-<span class="math display">\[
+ \omega=&\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
+ =&2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
+\end{align}</script><p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢$q$给出不同波长$2\pi/q$的简正模式，这种波称为<strong>格波</strong>。</p>
+<h3 id="双原子链"><a href="#双原子链" class="headerlink" title="双原子链"></a>双原子链</h3><h2 id="高维振动"><a href="#高维振动" class="headerlink" title="高维振动"></a>高维振动</h2><p>对于高维晶格振动，推导过程与一维的类似，这里以二维的作为例子。</p>
+<h3 id="二维简单晶格-单原子"><a href="#二维简单晶格-单原子" class="headerlink" title="二维简单晶格(单原子)"></a>二维简单晶格(单原子)</h3><p>以简单正方晶格为例子，此时平衡位置的偏离写为$u_{nl}$，代表第n行第l列的原子相对平衡位置的偏离。考虑最近邻域与次近邻的势能项，此时势能写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
-[\nabla_x^2\phi(u^x_{nl}-u^x_{n+1,l})^2+\nabla_y^2\phi(u^y_{nl}-u^y_{n,l+1})^2\\
-&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
-&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,,l+1})]
-\end{align}
-\]</span> 由对称性得<span
-class="math inline">\(\nabla_x^2\phi=\nabla_y^2\phi\)</span>，将其记作<span
-class="math inline">\(\beta_1\)</span>，将<span
-class="math inline">\(\nabla_x\nabla_y\phi\)</span>记作<span
-class="math inline">\(\beta_2\)</span>，如此便有 <span
-class="math display">\[
+ V(R)=&\frac{1}{2}\sum\limits_{n,l} [\nabla_x^2\phi(u^x_{nl}-u^x_{n+1,l})^2+\nabla_y^2\phi(u^y_{nl}-u^y_{n,l+1})^2\\
+&+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
+&+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,,l+1})]
+\end{align}</script><p>由对称性得$\nabla_x^2\phi=\nabla_y^2\phi$，将其记作$\beta_1$，将$\nabla_x\nabla_y\phi$记作$\beta_2$，如此便有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
-[\beta_1\phi(u^x_{nl}-u^x_{n+1,l})^2+\beta_1(u^y_{nl}-u^y_{n,l+1})^2\\
-&amp;+\beta_2(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
-&amp;+\beta_2(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,l+1})]
-\end{align}
-\]</span> 带入经典运动方程得 <span class="math display">\[
+ V(R)=&\frac{1}{2}\sum\limits_{n,l} [\beta_1\phi(u^x_{nl}-u^x_{n+1,l})^2+\beta_1(u^y_{nl}-u^y_{n,l+1})^2\\
+&+\beta_2(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
+&+\beta_2(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,l+1})]
+\end{align}</script><p>带入经典运动方程得</p>
+<script type="math/tex; mode=display">
 \begin{align}
-F^x_{nl}=&amp;-\pdv{V}{u^x_{nl}}\\
-=&amp;-\sum\limits_{mk}[\beta_1(u_{mk}-u_{m+1,k})(\delta_{mn}-\delta_{m+1,n})\delta_{lk}\\
-&amp;+\beta_2(u^y_{m+1,k}-u^y_{m+1,k+1})(\delta_{mn}-\delta_{m+1,n})\delta_{kl}\\
-&amp;+\beta_2(u^y_{m-1,k}-u^y_{m-1,k+1})(\delta_{mn}-\delta_{m-1,n})\delta_{kl}\\
-=&amp;-\beta_1(2u^x_{nl}-u^x_{n+1,l}-u^x_{n-1,l})\\
-&amp;-\beta_2(u^y_{n+1,l}-u^y_{n,l}-u^y_{n+1,l+1}+u^y_{n,l+1})\\
-&amp;-\beta_2\pqty{u^y_{n-1,l}-u^y_{n,l}-u^y_{n-1,l+1}+u^y _{n,l+1}}
-\end{align}
-\]</span></p>
-<h1 id="晶格振动的量子理论">晶格振动的量子理论</h1>
-
+ F^x_{nl}=&-\pdv{V}{u^x_{nl}}\\
+ =&-\sum\limits_{mk}[\beta_1(u_{mk}-u_{m+1,k})(\delta_{mn}-\delta_{m+1,n})\delta_{lk}\\
+&+\beta_2(u^y_{m+1,k}-u^y_{m+1,k+1})(\delta_{mn}-\delta_{m+1,n})\delta_{kl}\\
+&+\beta_2(u^y_{m-1,k}-u^y_{m-1,k+1})(\delta_{mn}-\delta_{m-1,n})\delta_{kl}\\
+=&-\beta_1(2u^x_{nl}-u^x_{n+1,l}-u^x_{n-1,l})\\
+&-\beta_2(u^y_{n+1,l}-u^y_{n,l}-u^y_{n+1,l+1}+u^y_{n,l+1})\\
+&-\beta_2\pqty{u^y_{n-1,l}-u^y_{n,l}-u^y_{n-1,l+1}+u^y _{n,l+1}}
+\end{align}</script><h1 id="晶格振动的量子理论"><a href="#晶格振动的量子理论" class="headerlink" title="晶格振动的量子理论"></a>晶格振动的量子理论</h1>
     </div>
 
     
@@ -563,13 +497,13 @@ F^x_{nl}=&amp;-\pdv{V}{u^x_{nl}}\\
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">107k</span>
+    <span title="站点总字数">79k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:14</span>
+    <span title="站点阅读时长">2:23</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
