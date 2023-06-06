@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/Mathematical-physics/</loc>
+    <loc>https://sirohune.site/en/tags/Quantum-Field-Theory/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -191,14 +191,7 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/Quantum-Field-Theory/</loc>
-    <lastmod>2023-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sirohune.site/en/tags/Statistical-physics/</loc>
+    <loc>https://sirohune.site/en/tags/Mathematical-physics/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -206,6 +199,13 @@
   
   <url>
     <loc>https://sirohune.site/en/tags/Thermodynamic-physics/</loc>
+    <lastmod>2023-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sirohune.site/en/tags/Statistical-physics/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
