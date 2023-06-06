@@ -271,32 +271,6 @@ orz（还是太菜了）</li>
       </tags>
   </entry>
   <entry>
-    <title>Lie-Group-Study-Note-(part2)</title>
-    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
-    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
-<span id="more"></span>
-<p>前情提要：<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
-| はくのblog</a></p>
-<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
-<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
-class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
-<span class="math display">\[
-\begin{align}
-\Lambda^T \eta \Lambda=\eta
-\end{align}
-\]</span></p>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>群论</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>群论学习笔记(part1)</title>
     <url>/2023/03/06/Lie-Group-Study-Note-(part1)/</url>
     <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
@@ -908,11 +882,58 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
+    <title>Lie-Group-Study-Note-(part2)</title>
+    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
+    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<span id="more"></span>
+<p>前情提要：<a
+href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
+| はくのblog</a></p>
+<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
+<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
+class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
+<span class="math display">\[
+\begin{align}
+\Lambda^T \eta \Lambda=\eta
+\end{align}
+\]</span></p>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>群论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数理方法复习（积分变换）</title>
+    <url>/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/</url>
+    <content><![CDATA[<pre><code>参考书籍：
+《数学物理方法简明导论》_v3.1——黄志琦
+《数学物理方法》——梁昆淼
+《数学物理方法》——吴崇试</code></pre>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>数学物理方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Relativistic-Quantum-Mechanics(Part-1)</title>
     <url>/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/</url>
     <content><![CDATA[<p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
 <span id="more"></span>
 <pre><code>参考教材:《高等量子力学》——喀兴林</code></pre>
+<p><span class="math display">\[
+\require{physics}
+\]</span></p>
 <p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
 class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
 <h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
@@ -1036,6 +1057,560 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <tag>物理</tag>
         <tag>笔记</tag>
         <tag>量子场论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固体物理学习笔记（第一章）</title>
+    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
+    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
+<span id="more"></span>
+<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
+<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
+<p>废话少说，先来看看Drude模型到底说了什么。</p>
+<h3 id="模型假设">模型假设</h3>
+<ol type="1">
+<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
+电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
+<li><p>自由电子<strong>气</strong>的<strong>气</strong>
+毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
+</ol>
+<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
+<ol start="3" type="1">
+<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
+<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
+来描述，这是电子气模型中很重要的一个参数</li>
+</ol>
+<p>我们假设粒子两次散射时间的平均时间为<span
+class="math inline">\(\tau\)</span> ，则<span
+class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
+class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
+class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
+class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
+<span class="math inline">\(\Delta
+t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
+dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
+<span class="math display">\[
+\require{physics}
+\begin{align}
+P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
+   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
+   =&amp;e^{t/\tau}
+\end{align}
+\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
+时间内发生第二次散射的概率为<span
+class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
+，则第二次散射发生的平均时间为 <span class="math display">\[
+\begin{align}
+\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
+  =&amp;\tau\Gamma(2)=\tau
+\end{align}
+\]</span></p>
+<p>所以参数<span
+class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
+<h3 id="电学性质">电学性质</h3>
+<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
+class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
+class="math inline">\(p(t)\)</span>，则接下来的<span
+class="math inline">\(dt\)</span>
+时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
+<span class="math display">\[
+\begin{align}
+p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
+  =&amp;p(t)+Fdt-pdt/\tau\\
+  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
+\end{align}
+\]</span></p>
+<p>这样便得到了电子气的运动方程</p>
+<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
+<p>均匀直流外电场下的运动方程为</p>
+<p><span class="math display">\[
+\begin{equation}
+\dv{p(t)}{t}=-p/\tau-eE
+\end{equation}
+\]</span></p>
+<p>取动量导数为0，可以得到电子的稳态动量为<span
+class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
+class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
+class="math display">\[
+\begin{align}
+J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+\end{align}
+\]</span></p>
+<p>根据公式<span class="math inline">\(J=\sigma_0
+E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
+e^2 \tau/m\)</span> ，是一个由弛豫时间<span
+class="math inline">\(\tau\)</span> 及电子数密度<span
+class="math inline">\(\rho\)</span>
+共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
+class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
+<p>接着从热学的能均分定理<span
+class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
+class="math inline">\(1.2\times
+10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
+class="math inline">\(l=\tau \bar{v}\)</span>在
+0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
+<h4 id="交流外电场下">交流外电场下</h4>
+<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
+t}\)</span>，因此电子动量的形式应该也与之相同<span
+class="math inline">\(p(t)=p(\omega)e^{-i\omega
+t}\)</span>，将其带入运动方程得: <span class="math display">\[
+\begin{align}
+-i\omega p(\omega)e^{-i\omega
+t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
+t}\\
+\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
+\end{align}
+\]</span></p>
+<p>带入电流密度公式<span class="math inline">\(J=\rho
+q\frac{p}{m}\)</span>得 <span class="math display">\[
+\begin{equation}
+J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
+\end{equation}
+\]</span> 因此可以得到交流复电导率为<span
+class="math inline">\(\sigma(\omega)=\frac{\rho
+e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
+.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
+<span class="math display">\[
+\begin{align}
+Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
+t}}{1-i\omega \tau}}\\
+=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
+t+\phi)}{\sqrt{1+\omega^2\tau^2}}
+\end{align}
+\]</span></p>
+<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
+class="math inline">\(\phi\)</span>以及振幅的衰减<span
+class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
+<p>这个模型可以用于电磁波对金属的影响，因为<span
+class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
+<h3 id="光学性质">光学性质</h3>
+<p>略</p>
+<h3 id="热学性质">热学性质</h3>
+<p>电子气的热学性质主要是热导率<span
+class="math inline">\(\kappa\)</span> 以及比热<span
+class="math inline">\(C_v\)</span>.</p>
+<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
+T\)</span>
+.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
+<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
+,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
+=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
+\end{align}
+\]</span></p>
+<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
+class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
+=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
+=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
+\end{align}
+\]</span></p>
+<p>速度平方的平均值<span
+class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
+class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
+，同时还可以得到<span
+class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
+=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
+\end{align}
+\]</span></p>
+<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
+class="math inline">\(\frac{3\rho\tau
+k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
+<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
+e^2\tau}{m};\kappa=\frac{3\rho\tau
+k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
+class="math inline">\(\frac{\kappa}{\sigma_0
+T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
+<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
+class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
+<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
+<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
+<h3 id="自由电子气的比热">自由电子气的比热</h3>
+<ul>
+<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
+class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
+E}+1}\)</span>.其中<span
+class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
+class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
+<li><p>量子态数量N与动量的关系</p></li>
+</ul>
+<p>对于自由电子的哈密顿量<span
+class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
+class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
+class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
+<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
+class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
+class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
+class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
+class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
+<span class="math display">\[
+\begin{align}
+dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\end{align}
+\]</span></p>
+<p>补上电子自旋带来的自由度为<span
+class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
+k^2dk\)</span>。</p>
+<ul>
+<li>在固体物理中我们经常用到态密度<span
+class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
+<span class="math display">\[
+\begin{align}
+dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
+E=&amp;\frac{\hbar^2k^2}{2m}\\
+\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
+=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
+\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
+\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
+=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;g(E)dE
+\end{align}
+\]</span></li>
+</ul>
+<p>因此态密度为<span
+class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
+正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。</p>
+<p>因此数密度<span class="math inline">\(\rho=\int
+g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
+g(E)EdE\)</span>.</p>
+<h4 id="零温t0k时">零温T=0K时</h4>
+<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>。</p>
+<p>当T=0K时，费米分布<span
+class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
+class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
+class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
+class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
+class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
+class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
+<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
+class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
+<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
+<ul>
+<li><p>数密度 <span class="math display">\[
+\begin{align}
+\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{align}
+\]</span></p></li>
+<li><p>能量密度 <span class="math display">\[
+\begin{align}
+U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
+=&amp;\frac{3}{5}E_F\frac{N}{V}
+\end{align}
+\]</span></p></li>
+</ul>
+<p>因此我们可以得到单个电子的平均能量应该为<span
+class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
+这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
+<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
+<p>由于上述的原因，我们认为<span
+class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
+<span class="math display">\[
+\begin{align}
+N/V=&amp;\int_0^\infty f(E)g(E)dE\\
+U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
+\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
+\end{align}
+\]</span></p>
+<p>因此我们只需要计算出积分式<span
+class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
+class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
+class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
+class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
+class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
+class="math display">\[
+\begin{equation}
+Q(E_F)=\int_0^{E_F} h(E)dE
+\end{equation}
+\]</span> 则有<span
+class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
+class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
+\begin{align}
+I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
+=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
+\end{align}
+\]</span> 对于上式右边的第一项，E等于0的时，<span
+class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
+class="math inline">\(f(E)\)</span>为0.
+因此只剩下第二项积分表达式，第二项中包含<span
+class="math inline">\(-\pdv{f}{E}\)</span>
+，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
+class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
+class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
+class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
+class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
+class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
+class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
+class="math inline">\(-\infty\)</span>： <span class="math display">\[
+\begin{align}
+I=&amp;\int_{-\infty}^\infty
+dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
+f}\\
+=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
+f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
+&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+-\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+x=&amp;\frac{E-\mu}{k_bT}
+\end{align}
+\]</span></p>
+<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
+函数的偏离，此时<span
+class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
+class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
+class="math inline">\(E=\mu\)</span>奇对称，而<span
+class="math inline">\(\delta\)</span> 函数关于<span
+class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>，因此积分<span
+class="math inline">\(I\)</span>化简为 <span class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE(E-\mu)^2\pqty{-\partial_E f}\\
+=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
+\end{align}
+\]</span></p>
+<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
+class="math display">\[
+\begin{equation}
+\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
+\end{equation}
+\]</span></p>
+<p>带入积分<span class="math inline">\(I\)</span>为 <span
+class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)dE\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)EdE\)</span> <span class="math display">\[
+\begin{align}
+I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
+\end{align}
+\]</span></li>
+</ul>
+<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
+class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
+class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
+<span class="math display">\[
+\begin{align}
+0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
+k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
+=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+\end{align}
+\]</span></p>
+<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
+<span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
+\end{align}
+\]</span></p>
+<p>因此数密度的式子变为 <span class="math display">\[
+\begin{align}
+\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}=&amp;0\\
+\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
+\end{align}
+\]</span></p>
+<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
+class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
+\begin{align}
+\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+}&#39;}_0=&amp;0\\
+\Rightarrow
+0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
+k_b)^2}{3}+0=&amp;0\\
+\Rightarrow
+\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{3}
+\end{align}
+\]</span></p>
+<p>带入态密度在零温时的表达式为 <span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{6}T^2\\
+  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
+  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
+\end{align}
+\]</span> 而化学势在零温时即为费米能量<span
+class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
+\begin{equation}
+\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
+\end{equation}
+\]</span></p>
+<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
+class="math display">\[
+\begin{equation}
+\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{equation}
+\]</span></p>
+<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
+<span class="math display">\[
+\begin{align}
+U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
+g(E_F)=&amp;C\sqrt{E_F}\\
+\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
+\end{align}
+\]</span></p>
+<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
+<span class="math display">\[
+\begin{align}
+C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
+\end{align}
+\]</span></p>
+<p>还可以得到单个电子的比热为 <span class="math display">\[
+\begin{align}
+C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
+\end{align}
+\]</span>
+这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
+<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
+<p>根据上一节的推导，热导率和比热的关系为<span
+class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
+，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
+<span class="math display">\[
+\begin{align}
+\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
+=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
+\end{align}
+\]</span></p>
+<p>相比Durde模型给出的<span
+class="math inline">\(\frac{3}{2}\frac{\rho\tau
+k_b^2T}{m}\)</span>更接近实验值。</p>
+<h3 id="泡利顺磁性">泡利顺磁性</h3>
+<p><strong>暂略，以后再补上</strong></p>
+<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
+<p>晶格结构是后面能带论以及晶格振动的基础。</p>
+<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
+<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
+<ul>
+<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
+<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
+<li><p>基矢的长度称为晶格常数</p></li>
+<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
+<li><p>最小的周期重复单元叫原胞</p></li>
+</ul>
+<h2 id="晶向与晶面">晶向与晶面</h2>
+<ul>
+<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
+<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
+</ul>
+<h2 id="倒格空间">倒格空间</h2>
+<ul>
+<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
+<span class="math display">\[
+\begin{align}
+2d\sin\theta=n\lambda
+\end{align}
+\]</span> 其中d是原子间距，<span
+class="math inline">\(\theta\)</span>是入射角的余角</p></li>
+<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
+class="math display">\[
+\begin{align}
+\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
+class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
+<li><p>劳厄方程给出一个定义倒格矢<span
+class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
+class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
+class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
+\begin{align}
+a_i\cdot b_j=\delta_{ij}2\pi
+\end{align}
+\]</span>
+上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
+</ul>
+<p>倒格矢<span
+class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
+<ul>
+<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
+class="math display">\[
+\begin{align}
+b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
+b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
+b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
+\end{align}
+\]</span></li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
+class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>虽然积分区间不关于<span
+class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
+class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>固体物理</tag>
       </tags>
   </entry>
   <entry>
@@ -1797,564 +2372,559 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>数理方法复习（积分变换）</title>
-    <url>/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/</url>
-    <content><![CDATA[<pre><code>参考书籍：
-《数学物理方法简明导论》_v3.1——黄志琦
-《数学物理方法》——梁昆淼
-《数学物理方法》——吴崇试</code></pre>
+    <title>热统复习（统计物理部分）</title>
+    <url>/2023/03/15/Statistical-Review-Note/</url>
+    <content><![CDATA[<pre><code>参考书目：
+《热力学·统计物理》—— 汪志诚
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
+<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
 <span id="more"></span>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>数学物理方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>固体物理学习笔记（第一章）</title>
-    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
-    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
-<span id="more"></span>
-<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
-<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
-<p>废话少说，先来看看Drude模型到底说了什么。</p>
-<h3 id="模型假设">模型假设</h3>
-<ol type="1">
-<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
-电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
-<li><p>自由电子<strong>气</strong>的<strong>气</strong>
-毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
-</ol>
-<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
-<ol start="3" type="1">
-<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
-<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
-来描述，这是电子气模型中很重要的一个参数</li>
-</ol>
-<p>我们假设粒子两次散射时间的平均时间为<span
-class="math inline">\(\tau\)</span> ，则<span
-class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
-class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
-class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
-class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
-<span class="math inline">\(\Delta
-t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
-dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
-<span class="math display">\[
-\require{physics}
-\begin{align}
-P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
-   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
-   =&amp;e^{t/\tau}
-\end{align}
-\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
-时间内发生第二次散射的概率为<span
-class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
-，则第二次散射发生的平均时间为 <span class="math display">\[
-\begin{align}
-\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
-  =&amp;\tau\Gamma(2)=\tau
-\end{align}
-\]</span></p>
-<p>所以参数<span
-class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
-<h3 id="电学性质">电学性质</h3>
-<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
-class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
-class="math inline">\(p(t)\)</span>，则接下来的<span
-class="math inline">\(dt\)</span>
-时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
-<span class="math display">\[
-\begin{align}
-p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
-  =&amp;p(t)+Fdt-pdt/\tau\\
-  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
-\end{align}
-\]</span></p>
-<p>这样便得到了电子气的运动方程</p>
-<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
-<p>均匀直流外电场下的运动方程为</p>
+<h1 id="统计力学">统计力学</h1>
+<h2 id="近独立粒子的最概然分布">近独立粒子的最概然分布</h2>
+<p>近独立的意思是说粒子之间的相互作用能量远小于粒子本身的能量，但并不是说完全没有相互作用，完全没有相互作用的是自由粒子。在经典力学中所有粒子都是可分辨的，因此统计物理早期将粒子视作可分辨的近独立粒子，这种系统称为<strong>玻尔兹曼系统</strong>，得到的是经典统计。量子力学中的粒子是不可分辨的全同粒子，全同粒子分为<strong>玻色子</strong>与<strong>费米子</strong>，玻色子做宇称变换后波函数不变，费米子做宇称变换后波函数出现负号。两种粒子构成的系统分别称为<strong>玻色系统</strong>与<strong>费米系统</strong>，得到的都是量子统计。</p>
+<p>很显然三种系统的分布是不一样的（<del>不然为什么要分为三个系统</del>），为什么全同与可分辨、宇称性会影响粒子分布呢？这与我们得到分布的方式有关，我们是通过<strong>最概然</strong>得到分布的，什么意思呢？对于一个系统，我们先列出它的所有宏观态，我们观察结果只能观测到这些宏观态。每一个宏观态包含有很多个可能的微观态，比如说掷两个骰子，将面数求和，得到的其中一个宏观态便是6，这个6可能是1+5、2+4、3+3等情况，这些就是微观态。我们认为出现宏观态的概率与其微观态个数成正比<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>。最概然的分布，自然就是微观态的极大值点，因此我们找到一个系统的所有可能状态（微观态）后，要求一阶变分为0即可得到系统的分布<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>。</p>
+<p>这样我们就得到了写出分布的标准步骤 1. 写出微观态个数表达式 2.
+要求一阶变分为0</p>
+<p>因为三种系统写出来的微观态个数表达式是不一样的，所以变分得到的分布也是不一样的。</p>
+<h3 id="玻尔兹曼分布">玻尔兹曼分布</h3>
+<p>假设有N个例子，系统总能量是E，体积是V。粒子所处的第l个能级用<span
+class="math inline">\(\epsilon_l\)</span>来表示，第l能级的简并度用<span
+class="math inline">\(\omega_l\)</span>来表示，能级l上的粒子数用<span
+class="math inline">\(a_l\)</span>来表示。显然有 <span
+class="math display">\[
+\begin{equation}
+\begin{cases}
+N=\sum\limits_la_l\\
+E=\sum\limits_la_l\epsilon_l
+\end{cases}
+\end{equation}
+\]</span>
+为了方便记忆，我们可以把系统想象成一座图书馆，第几能级便是图书馆的第几层，每一层会有一个书架，而书架也会分层，每层书架便对应一个简并态<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>，每能级的粒子数自然是每层楼的书本数。玻尔兹曼系统的每本书都是不同的，因此对于第l楼，有<span
+class="math inline">\(a_l\)</span>本书，每本书都有<span
+class="math inline">\(\omega_l\)</span>种选择，因此每层有<span
+class="math inline">\(\omega_l^{a_l}\)</span>中情况，对于所有楼层便有<span
+class="math inline">\(\prod\limits_l\omega_l^{a_l}\)</span>种情况，因为所有书都不一样，所以对所有书进行全排列<span
+class="math inline">\(N!\)</span>，再除掉每层楼已经算过的情况<span
+class="math inline">\(\prod\limits_la_l!\)</span>，因此最后得到微观态数目为</p>
 <p><span class="math display">\[
 \begin{equation}
-\dv{p(t)}{t}=-p/\tau-eE
+\Omega_{M.B}=N!\prod_l\frac{\omega_l^{a_l}}{a_l!}
 \end{equation}
-\]</span></p>
-<p>取动量导数为0，可以得到电子的稳态动量为<span
-class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
-class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
-class="math display">\[
+\]</span> 将上式进行对粒子分布进行变分（也就是对<span
+class="math inline">\(a_l\)</span>进行变分，因为我们要求得的就是<span
+class="math inline">\(a_l\)</span>），同时因为变分有两个约束，粒子数守恒<span
+class="math inline">\(\delta N=\sum\limits_l\delta
+a_l=0\)</span>以及能量守恒<span class="math inline">\(\delta
+E=\sum\limits_l\epsilon_l\delta
+a_l\)</span>，所以要引入拉格朗日乘子，还有一步很重要的是，直接对<span
+class="math inline">\(\Omega\)</span>变分有点困难，根据其表达式可以看出，对<span
+class="math inline">\(\ln\Omega\)</span>变分是更加方便的
+，而且对数函数本身是单调的 <span class="math display">\[
+\require{physics}
 \begin{align}
-J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+\delta\ln\Omega_{M.B}=&amp;\delta\pqty{\sum_l\pqty{a_l\ln \omega_l-\ln
+(a_l!)}}\\
+=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta \ln(a_l!)}
 \end{align}
-\]</span></p>
-<p>根据公式<span class="math inline">\(J=\sigma_0
-E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
-e^2 \tau/m\)</span> ，是一个由弛豫时间<span
-class="math inline">\(\tau\)</span> 及电子数密度<span
-class="math inline">\(\rho\)</span>
-共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
-class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
-<p>接着从热学的能均分定理<span
-class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
-class="math inline">\(1.2\times
-10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
-class="math inline">\(l=\tau \bar{v}\)</span>在
-0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
-<h4 id="交流外电场下">交流外电场下</h4>
-<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
-t}\)</span>，因此电子动量的形式应该也与之相同<span
-class="math inline">\(p(t)=p(\omega)e^{-i\omega
-t}\)</span>，将其带入运动方程得: <span class="math display">\[
-\begin{align}
--i\omega p(\omega)e^{-i\omega
-t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
-t}\\
-\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
-\end{align}
-\]</span></p>
-<p>带入电流密度公式<span class="math inline">\(J=\rho
-q\frac{p}{m}\)</span>得 <span class="math display">\[
-\begin{equation}
-J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
-\end{equation}
-\]</span> 因此可以得到交流复电导率为<span
-class="math inline">\(\sigma(\omega)=\frac{\rho
-e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
-.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
+\]</span> 使用斯特朗公式<span
+class="math inline">\(\ln(a_l!)\approx=a_l\pqty{\ln a_l-1}\)</span>
 <span class="math display">\[
 \begin{align}
-Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
-t}}{1-i\omega \tau}}\\
-=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
-t+\phi)}{\sqrt{1+\omega^2\tau^2}}
-\end{align}
-\]</span></p>
-<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
-class="math inline">\(\phi\)</span>以及振幅的衰减<span
-class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
-<p>这个模型可以用于电磁波对金属的影响，因为<span
-class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
-<h3 id="光学性质">光学性质</h3>
-<p>略</p>
-<h3 id="热学性质">热学性质</h3>
-<p>电子气的热学性质主要是热导率<span
-class="math inline">\(\kappa\)</span> 以及比热<span
-class="math inline">\(C_v\)</span>.</p>
-<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
-T\)</span>
-.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
-<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
-,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
-=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
-\end{align}
-\]</span></p>
-<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
-class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
-=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
-=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
-\end{align}
-\]</span></p>
-<p>速度平方的平均值<span
-class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
-class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
-，同时还可以得到<span
-class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
-class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
-=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
-\end{align}
-\]</span></p>
-<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
-class="math inline">\(\frac{3\rho\tau
-k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
-<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
-e^2\tau}{m};\kappa=\frac{3\rho\tau
-k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
-class="math inline">\(\frac{\kappa}{\sigma_0
-T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
-<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
-class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
-<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
-<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
-<h3 id="自由电子气的比热">自由电子气的比热</h3>
-<ul>
-<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
-class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
-E}+1}\)</span>.其中<span
-class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
-class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
-<li><p>量子态数量N与动量的关系</p></li>
-</ul>
-<p>对于自由电子的哈密顿量<span
-class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
-class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
-class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
-<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
-class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
-class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
-class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
-class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
-<span class="math display">\[
-\begin{align}
-dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
-\end{align}
-\]</span></p>
-<p>补上电子自旋带来的自由度为<span
-class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
-k^2dk\)</span>。</p>
-<ul>
-<li>在固体物理中我们经常用到态密度<span
-class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
-<span class="math display">\[
-\begin{align}
-dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
-E=&amp;\frac{\hbar^2k^2}{2m}\\
-\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
-=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
-\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
-\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
-=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;g(E)dE
-\end{align}
-\]</span></li>
-</ul>
-<p>因此态密度为<span
-class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
-正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>。</p>
-<p>因此数密度<span class="math inline">\(\rho=\int
-g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
-g(E)EdE\)</span>.</p>
-<h4 id="零温t0k时">零温T=0K时</h4>
-<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>。</p>
-<p>当T=0K时，费米分布<span
-class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
-class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
-class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
-class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
-class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
-class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
-<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
-class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
-<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
-<ul>
-<li><p>数密度 <span class="math display">\[
-\begin{align}
-\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
-\end{align}
-\]</span></p></li>
-<li><p>能量密度 <span class="math display">\[
-\begin{align}
-U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
-=&amp;\frac{3}{5}E_F\frac{N}{V}
-\end{align}
-\]</span></p></li>
-</ul>
-<p>因此我们可以得到单个电子的平均能量应该为<span
-class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
-这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
-<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
-<p>由于上述的原因，我们认为<span
-class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
-<span class="math display">\[
-\begin{align}
-N/V=&amp;\int_0^\infty f(E)g(E)dE\\
-U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
-\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
-\end{align}
-\]</span></p>
-<p>因此我们只需要计算出积分式<span
-class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
-class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
-class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
-class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
-class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
-class="math display">\[
-\begin{equation}
-Q(E_F)=\int_0^{E_F} h(E)dE
-\end{equation}
-\]</span> 则有<span
-class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
-class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
-\begin{align}
-I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
-=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
-\end{align}
-\]</span> 对于上式右边的第一项，E等于0的时，<span
-class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
-class="math inline">\(f(E)\)</span>为0.
-因此只剩下第二项积分表达式，第二项中包含<span
-class="math inline">\(-\pdv{f}{E}\)</span>
-，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
-class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
-class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
-class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
-class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
-class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
-class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
-class="math inline">\(-\infty\)</span>： <span class="math display">\[
-\begin{align}
-I=&amp;\int_{-\infty}^\infty
-dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
-f}\\
-=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
-f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
-&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
+\delta\ln\Omega_{M.B}=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta
+a_l\ln a_l}\\
+=&amp;\sum_l\delta a_l \ln\frac{\omega_l}{a_l}
 \end{align}
 \]</span> <span class="math display">\[
 \begin{align}
--\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-x=&amp;\frac{E-\mu}{k_bT}
+\Rightarrow \delta\ln\Omega_{M.B}-\alpha\sum_l\delta a_l-\beta\sum_l
+\epsilon_l\delta a_l=&amp;0\\
+\sum_l\pqty{\ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l}\delta
+a_l=0\\
+\Rightarrow \ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l=&amp;0\\
 \end{align}
-\]</span></p>
-<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
-函数的偏离，此时<span
-class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
-class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
-class="math inline">\(E=\mu\)</span>奇对称，而<span
-class="math inline">\(\delta\)</span> 函数关于<span
-class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>，因此积分<span
-class="math inline">\(I\)</span>化简为 <span class="math display">\[
-\begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE(E-\mu)^2\pqty{-\partial_E f}\\
-=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
-\end{align}
-\]</span></p>
-<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
+\]</span> 因此我们得到粒子在不同能量的分布为 <span
 class="math display">\[
 \begin{equation}
-\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
+a_l=\omega_l e^{-\pqty{\alpha+\beta\epsilon_l}}
 \end{equation}
-\]</span></p>
-<p>带入积分<span class="math inline">\(I\)</span>为 <span
+\]</span> 根据上式我们可以得到粒子在不同微观态的平均分布应该为 <span
 class="math display">\[
 \begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+f_l=&amp;\frac{a_l}{\omega_l}\\
+=&amp;e^{-\pqty{\alpha+\beta\epsilon_l}}
+\end{align}
+\]</span>
+那么拉格朗日乘子作为参数出现在表达式里是什么意义呢？由于是复习，这里就不卖关子了，<span
+class="math inline">\(\beta=1/kT\)</span> 而<span
+class="math inline">\(\alpha\)</span>作为归一化因子，没什么物理意义。</p>
+<h3 id="玻色分布与费米分布">玻色分布与费米分布</h3>
+<p>首先要写出微观态的个数，这里也叫量子态的个数。
+对于玻色分布，回到图书馆的第l楼，对于<span
+class="math inline">\(a_l\)</span>本全同的书以及<span
+class="math inline">\(\omega_l\)</span>层书架，这是一个组合问题，我们可以将书以及书架的隔板看成<span
+class="math inline">\(a_l+\omega_l\)</span>个“东西”，事先并不知道他们是书还是书架的隔板，从中挑取<span
+class="math inline">\(\omega_l\)</span>个“东西”出来作为书架，其他自然成为书，但是书不能放在地上，所以最底下那一个“东西”必须是书架的隔板，所以最后变成在<span
+class="math inline">\(a_l+\omega_l-1\)</span>个“东西”里挑<span
+class="math inline">\(\omega_l-1\)</span>个出来作为隔板<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>，其他的自然成为书，这种操作并不会涉及全同书的顺序问题，因此每一层有<span
+class="math inline">\(C_{a_l+\omega_l-1}^{\omega_l-1}=\frac{(\omega_l+a_l-1)!}{(\omega-1)!a_l!}\)</span>种情况
+<span class="math display">\[
+\begin{equation}
+\Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}
+\end{equation}
+\]</span></p>
+<p>对于费米分布，因为遵循泡利不相容原理，每个量子态只能有一个粒子，也就是说每层书架最多只能放一本书。因此对于第l楼来说有<span
+class="math inline">\(C_{\omega_l}^{a_l}=\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\)</span>种情况<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a> <span class="math display">\[
+\begin{equation}
+\Omega_{F.D}=\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}
+\end{equation}
+\]</span></p>
+<p>这样我们得到玻色系统和费米系统的量子态数目，现在将其进行变分 <span
+class="math display">\[
+\begin{align}
+\delta
+\ln\Omega_{F.D}=&amp;\delta\sum_l\bqty{\ln(\omega_l!)-\ln(a_l!)-\ln((\omega_l-a_l)!)}\\
+=&amp;-\delta\sum_l\bqty{a_l(\ln
+a_l-1)-(\omega_l-a_l)(\ln(\omega_l-a_l)-1)}\\
+=&amp;-\sum_l\bqty{\delta a_l\ln
+a_l-\delta(\omega_l-a_l)\ln(\omega_l-a_l)}\\
+=&amp;\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)}\delta a_l
+\end{align}
+\]</span> 上面第二行式子我也用了斯特朗公式，因此有 <span
+class="math display">\[
+\begin{align}
+\delta\ln\Omega_{F.D}-\alpha\sum_l\delta a_l-\beta\sum_l
+\epsilon_l\delta a_l=&amp;0\\
+=\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l}\delta&amp;
+a_l\\
+\Rightarrow \ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l=&amp;0
+\end{align}
+\]</span> 整理得费米分布如下 <span class="math display">\[
+\begin{equation}
+a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}+1}
+\end{equation}
+\]</span> 同有量子态分布 <span class="math display">\[
+\begin{equation}
+f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}+1}
+\end{equation}
+\]</span></p>
+<p>玻色分布推导同理，有 <span class="math display">\[
+\begin{equation}
+\begin{cases}
+a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}-1}\\
+f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}-1}
+\end{cases}
+\end{equation}
+\]</span></p>
+<h3 id="经典分布与量子分布之间的联系">经典分布与量子分布之间的联系</h3>
+<p>简并是量子系统特有的，当简并度的数目远大于该能级的粒子数，即<span
+class="math inline">\(\omega_l\gg
+a_l\)</span>，量子系统特有的简并性便没那么明显，因此该条件称为<strong>经典极限条件</strong>或者<strong>非简并条件</strong>，此时
+<span class="math display">\[
+\begin{align}
+\Omega_{B.E}=&amp;\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}\\
+\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
+=&amp;\frac{1}{N!}\Omega_{M.B}\\
+\Omega_{F.D}=&amp;\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\\
+\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
+  =&amp;\frac{1}{N!}\Omega_{M.B}
 \end{align}
 \]</span></p>
+<p>同时当<span
+class="math inline">\(e^\alpha\gg1\)</span>时，量子分布的结果都回到玻尔兹曼分布，这两个条件是等价的</p>
+<h2 id="正则系综与玻尔兹曼统计">正则系综与玻尔兹曼统计</h2>
+<p>这里并不会遵循汪志诚老师的思路，我们直接从<strong>正则系综</strong>出发，我们直接关心系统的每一个微观态，而不是宏观态，这样便不用考虑每一宏观态的简并数<a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a></p>
+<p>将系统S与一个大热源接触形成复合系统，整个复合系统的的总能量为E，是一个守恒量，现在想知道系统S处于处于s态的概率是多少，系统S处于s态时拥有能量<span
+class="math inline">\(E_s\)</span>，则热源自然拥有能量<span
+class="math inline">\(E-E_s\)</span>，复合系统以上述方式分配能量的概率就是系统S处于s态的概率，这个概率应当与这种分配方式对应的微观态数目成正比，也就是
+<span class="math display">\[
+\begin{equation}
+P(E_s)\propto \Omega(E-E_s)\times 1
+\end{equation}
+\]</span> 既然如此，只需要计算出微观态数<span
+class="math inline">\(\Omega(E-E_s)\)</span>即可。</p>
+<h4 id="温度的统计定义">温度的统计定义</h4>
+<p>在计算这个微观态前我们还需要做一件事情，便是定义温度。热力学中并没有为我们给出温度的数学定义，我们可以从正则系统统计的方式来定义温度。假设有两个可以交换能量的系统1、2.
+因为两个系统可以交换能量，因此我们一开始并不能知道系统如何分配能量是平衡的，但是我们相信平衡态一定是微观态数目最大的态，因此为求平衡能量分配方式，我们将整个系统的微观态数目对能量进行变分(当然还是先取对数，理由与前面一样)
+<span class="math display">\[
+\begin{align}
+\delta\ln\pqty{\Omega_1(E_1)\Omega_2(E_2)}=&amp;\delta\pqty{\ln\Omega_1(E_1)+\ln\Omega_2(E_2)}\\
+=&amp;\pdv{\ln\Omega_1}{E_1}\delta E_1+\pdv{\ln\Omega_2}{E_2}\delta E_2
+\end{align}
+\]</span> 因为系统能量守恒<span class="math inline">\(\delta E_1+\delta
+E_2=0\)</span>，所以 <span class="math display">\[
+\begin{align}
+\delta\ln\pqty{\Omega(E_1)\Omega(E_2)}=&amp;\pqty{\pdv{\ln\Omega_1}{E_1}-\pdv{\ln\Omega_2}{E_2}}\delta
+E_1\\
+=&amp;0\\
+\Rightarrow \pdv{\ln\Omega_1}{E_1}=&amp;\pdv{\ln\Omega_2}{E_2}
+\end{align}
+\]</span>
+因此这个条件定义了能量在两个系统之间最可能的分割，这种分割（平衡）我们称为相同温度，因此定义
+<span class="math display">\[
+\begin{equation}
+\pdv{\ln\Omega}{E}\triangleq \frac{1}{kT}
+\end{equation}
+\]</span> #### 写出配分函数</p>
+<p>定义了温度后我们便可以继续我们对微观态数<span
+class="math inline">\(\Omega(E-E_s)\)</span>的推导 <span
+class="math display">\[
+\begin{align}
+\ln\Omega(E-E_s)=&amp;\ln\Omega(E)-\pdv{\ln\Omega}{E}E_s+\order{E_s^2}\\
+=&amp;\ln\Omega(E)-\frac{E_s}{kT}+\order{E_s^2}\\
+\Rightarrow \Omega(E-E_s)\approx &amp;\Omega(E)e^{-\frac{E_s}{kT}}\\
+  \Omega(E-E_s)\propto &amp; e^{-\frac{E_s}{kT}}
+\end{align}
+\]</span> 因此系统S处于s态的概率正比于<span
+class="math inline">\(e^{-\frac{E_s}{kT}}\)</span><a href="#fn7"
+class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>，其实就是玻尔兹曼因子，然后我们所有微观态的概率求和归一化即可得到概率
+<span class="math display">\[
+\begin{equation}
+P(E_s)=\frac{e^{-E_s/kT}}{\sum\limits_ie^{-E_i/kT}}
+\end{equation}
+\]</span></p>
+<p>其分母即定义为所谓<strong>单粒子配分函数</strong>，记作<span
+class="math inline">\(Z\)</span>，可见其是所有态玻尔兹曼因子的求和<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>，作为归一化系数，这样便没有涉及前面的拉格朗日乘子<span
+class="math inline">\(\alpha\)</span>. <span class="math display">\[
+\begin{align}
+Z=&amp;\sum_i e^{-iE_i/kT}
+\end{align}
+\]</span></p>
+<h4 id="得到态函数">得到态函数</h4>
+<h5 id="内能">内能</h5>
+<p>对于一个系统，其内能应该是其所有可能能量的平均值 <span
+class="math display">\[
+\begin{align}
+U=&amp;\sum_sE_s\frac{e^{-E_s/kT}}{Z}\\
+=&amp;\frac{1}{Z}\sum_sE_se^{-E_s/kT}\\
+=&amp;-\frac{1}{Z}\pdv{\beta}\sum_se^{-\beta E_s}\\
+=&amp;-\frac{1}{Z}\pdv{Z}{\beta}
+\end{align}
+\]</span> 因此有 <span class="math display">\[
+\begin{equation}
+U=-\pdv{\ln Z}{\beta}
+\end{equation}
+\]</span></p>
+<h5 id="熵">熵</h5>
+<p>为了得到熵的统计定义，我们回顾之前热力学公式<span
+class="math inline">\(\dd{U}=T\dd{S}-p\dd{V}\)</span>，即<span
+class="math inline">\(T=\pqty{\pdv{U}{S}}_V\)</span>再结合前面对温度的定义
+<span class="math display">\[
+\begin{align}
+\frac{1}{kT}=&amp;\pdv{\ln\Omega}{E}\\
+=&amp;\frac{1}{k}\pqty{\pdv{S}{U}}_V\\
+\Rightarrow S=&amp;k\ln\Omega
+\end{align}
+\]</span> 根据等概率原理，熵又可以写成 <span class="math display">\[
+\begin{equation}
+S=-k\sum_i P_i\ln P_i
+\end{equation}
+\]</span> 其中<span class="math inline">\(P_i\)</span>是系统取到<span
+class="math inline">\(i\)</span>态的概率。 我们上一节是得到了<span
+class="math inline">\(P_i=e^{-\beta E_i}/Z\)</span>，因此有 <span
+class="math display">\[
+\begin{align}
+S=&amp;-\sum_i k\frac{e^{-\beta E_i}}{Z}\pqty{-\beta E_i-\ln Z}\\
+=&amp;k\pqty{\beta U+\ln Z}
+\end{align}
+\]</span></p>
+<h5 id="亥姆霍兹自由能">亥姆霍兹自由能</h5>
+<p>由<span class="math inline">\(F=U-TS\)</span>得 <span
+class="math display">\[
+\begin{align}
+F=&amp;U-U-kT\ln Z\\
+=&amp;-kT\ln Z\\
+\Rightarrow Z=&amp;e^{-\beta F}
+\end{align}
+\]</span></p>
+<p>我们实际上也可以从亥姆霍兹自由能得到熵公式 <span
+class="math display">\[
+\begin{align}
+S=&amp;-\pqty{\pdv{F}{T}}_V\\
+=&amp;k\ln Z+kT\pdv{\ln Z}{T}
+\end{align}
+\]</span></p>
+<p>接着根据上式我们可以进一步得到等体热容 <span class="math display">\[
+\begin{align}
+C_V=&amp;T\pqty{\pdv{S}{T}}_V\\
+=&amp;2kT\pqty{\pdv{\ln Z}{T}}_V+kT^2\pqty{\pdv[2]{\ln Z}{T}}_V
+\end{align}
+\]</span></p>
+<h5 id="焓">焓</h5>
+<p>由<span
+class="math inline">\(H=U+pV\)</span>，我们应该先求得压强的表达式，可以利用<span
+class="math inline">\(p=-\pqty{\pdv{U}{V}}_S\)</span>或者利用<span
+class="math inline">\(p=-\pqty{\pdv{F}{V}}_T\)</span>得到 <span
+class="math display">\[
+\begin{align}
+p=&amp;kT\pqty{\pdv{\ln Z}{V}}_T\\
+\Rightarrow H=&amp;-\pdv{\ln Z}{\beta}+kTV\pqty{\pdv{\ln Z}{V}}_T
+\end{align}
+\]</span></p>
+<p>吉布斯函数可以利用类似的方法从配分函数得到。</p>
+<h4 id="maxwell速率分布">Maxwell速率分布</h4>
+<p>对于一坨气体，我们想知道一个粒子处于速度大小为<span
+class="math inline">\(v\)</span>的状态概率为多少，从前面的正则系综知道，处于该状态是能量为<span
+class="math inline">\(mv^2/2\)</span>，因此概率正比于<span
+class="math inline">\(e^{-mv^2/2kT}\)</span>，即 <span
+class="math display">\[
+\begin{align}
+f(v)\dd{v}=\propto v^2 e^{-mv^2/2kT}
+\end{align}
+\]</span> 我们要求上式积分是归一化的，因此 <span class="math display">\[
+\begin{align}
+\int_0^\infty f(v)\dd{v}=&amp;\int_0^\infty v^2 e^{-mv^2/2kT}\\
+=&amp;\frac{\sqrt{\pi}}{4}\pqty{\frac{2kT}{m}}^{3/2}\\
+\Rightarrow
+f(v)\dd{v}=&amp;\frac{4}{\sqrt{\pi}}\pqty{\frac{m}{2kT}}^{3/2}v^2
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi v^2 e^{-mv^2/2kT}\dd{v}
+\end{align}
+\]</span></p>
+<p>因此对于一团气体，单位体积有处于速度大小为<span
+class="math inline">\(v\)</span>的粒子数应该就有 <span
+class="math display">\[
+\begin{equation}
+nf(v)\dd{v}
+\end{equation}
+\]</span> 其中<span
+class="math inline">\(n\)</span>为气体的数密度，从上面的式子我们可以推出一些有意思的结论，比如平均速度，速度平方的平均值</p>
 <ul>
-<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)dE\)</span></li>
+<li><span class="math inline">\(\expval{v}\)</span></li>
 </ul>
 <p><span class="math display">\[
 \begin{align}
-I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\expval{v}=&amp;\int_0^\infty f(v)v\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^3
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\int_0^\infty
+\frac{2kT}{m}\frac{mv^2}{2kT}e^{-mv^2/2kT}\frac{kT}{m}\dd{\frac{mv^2}{2kT}}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\frac{2(kT)^2}{m^2}\Gamma(2)\\
+=&amp;\sqrt{\frac{8kT}{\pi m}}
 \end{align}
 \]</span></p>
 <ul>
-<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)EdE\)</span> <span class="math display">\[
-\begin{align}
-I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
-\end{align}
-\]</span></li>
+<li><span class="math inline">\(\expval{v^2}\)</span></li>
 </ul>
-<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
-class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
-class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{align}
-0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
-k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
-=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+\expval{v^2}=&amp;\int_0^\infty f(v)v^2\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^4
+e^{-mv^2/2kT}\dd{v}\\
+=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi
+\dv[2]{\alpha}\frac{\sqrt{\pi}}{2\sqrt{\alpha}}\\
+=&amp;\frac{3kT}{m}
 \end{align}
 \]</span></p>
-<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
-<span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
-\end{align}
-\]</span></p>
-<p>因此数密度的式子变为 <span class="math display">\[
-\begin{align}
-\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}=&amp;0\\
-\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
-\end{align}
-\]</span></p>
-<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
-class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
-\begin{align}
-\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
-}&#39;}_0=&amp;0\\
-\Rightarrow
-0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
-k_b)^2}{3}+0=&amp;0\\
-\Rightarrow
-\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{3}
-\end{align}
-\]</span></p>
-<p>带入态密度在零温时的表达式为 <span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{6}T^2\\
-  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
-  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
-\end{align}
-\]</span> 而化学势在零温时即为费米能量<span
-class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
-\begin{equation}
-\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
-\end{equation}
-\]</span></p>
-<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
+<ul>
+<li>最概然速率<span class="math inline">\(v_m\)</span></li>
+</ul>
+<p>求速率的分布函数求个导就可以得到了，这里就不敲了 <span
 class="math display">\[
 \begin{equation}
-\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+v_m=\sqrt{\frac{2kT}{m}}
 \end{equation}
 \]</span></p>
-<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
-<span class="math display">\[
-\begin{align}
-U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
-g(E_F)=&amp;C\sqrt{E_F}\\
-\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
-\end{align}
-\]</span></p>
-<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
-<span class="math display">\[
-\begin{align}
-C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
-\end{align}
-\]</span></p>
-<p>还可以得到单个电子的比热为 <span class="math display">\[
-\begin{align}
-C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
-\end{align}
-\]</span>
-这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
-<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
-<p>根据上一节的推导，热导率和比热的关系为<span
-class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
-，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
-<span class="math display">\[
-\begin{align}
-\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
-=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
-\end{align}
-\]</span></p>
-<p>相比Durde模型给出的<span
-class="math inline">\(\frac{3}{2}\frac{\rho\tau
-k_b^2T}{m}\)</span>更接近实验值。</p>
-<h3 id="泡利顺磁性">泡利顺磁性</h3>
-<p><strong>暂略，以后再补上</strong></p>
-<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
-<p>晶格结构是后面能带论以及晶格振动的基础。</p>
-<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
-<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
 <ul>
-<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
-<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
-<li><p>基矢的长度称为晶格常数</p></li>
-<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
-<li><p>最小的周期重复单元叫原胞</p></li>
+<li>泄流速率</li>
 </ul>
-<h2 id="晶向与晶面">晶向与晶面</h2>
-<ul>
-<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
-<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
-</ul>
-<h2 id="倒格空间">倒格空间</h2>
-<ul>
-<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
-<span class="math display">\[
-\begin{align}
-2d\sin\theta=n\lambda
-\end{align}
-\]</span> 其中d是原子间距，<span
-class="math inline">\(\theta\)</span>是入射角的余角</p></li>
-<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
+<p>这个弄了图床再补吧，没图嗯写也没意思</p>
+<p>先放个结论，单位时间通过单位截面跑出去的分子数为 <span
+class="math display">\[
+\begin{equation}
+\frac{n\expval{v}}{4}
+\end{equation}
+\]</span> #### 可分辨性与多粒子配分函数</p>
+<p>可分辨如何对配分函数产生影响呢？我们先从组合配分函数出发，对于某个原子，当它处于i态时，能量由平动动能<span
+class="math inline">\(E^t_i\)</span>以及转动动能<span
+class="math inline">\(E^l_i\)</span>组成，则单粒子配分函数可以写成 <span
 class="math display">\[
 \begin{align}
-\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
+Z=&amp;\sum_i e^{-i\beta(E^t_i+E^l_i)}\\
+=&amp;Z^t\cdot Z^l
 \end{align}
-\]</span> 其中<span
-class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
-class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
-<li><p>劳厄方程给出一个定义倒格矢<span
-class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
-class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
-class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
+\]</span> 其中<span class="math inline">\(Z^t=\sum\limits_ie^{-i\beta
+E^t_i},\ Z^l=\sum\limits_ie^{-i\beta
+E^l_i}\)</span>，也就是对系统不同贡献的能量来源，我们可以将其写为配分函数的乘积。而对于含有多个粒子的系统，比如说有两个粒子a和b，他们都只有<span
+class="math inline">\(E_1,E_2\)</span>两种状态，那么很容易写出配分函数
+<span class="math display">\[
 \begin{align}
-a_i\cdot b_j=\delta_{ij}2\pi
+Z_{2}=&amp;e^{-i\beta E_1}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta
+E_2}}+e^{-i\beta E_2}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta E_2}}\\
+=&amp;Z_a\cdot Z_b=(Z_1)^2
 \end{align}
-\]</span>
-上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
-</ul>
-<p>倒格矢<span
-class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
-<ul>
-<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
+\]</span> 很显然对于N个粒子的系统，其配分函数为<span
+class="math inline">\(Z_N=(Z_1)^N\)</span>.但这是建立在粒子可分辨的前提下，如果粒子是不可分辨的全同粒子，则上面<span
+class="math inline">\(e^{-\beta
+(E_1+E_2)}\)</span>是同一个状态，不应该数两次，在这种情况下<span
+class="math inline">\(Z_2\neq (Z_1)^2\)</span>.
+因此对于全同粒子，多粒子配分函数与单粒子配分函数的关系是复杂的，<strong>除非</strong>。</p>
+<p>除非<strong>满足弱简并条件</strong>。想象一下如果存在的态数目远大于粒子的个数，那么你任意取两个粒子出来，他们处于同一个能级的可能性是很小的，因此几乎就不存在多个粒子处于同一个能级的情况。此时粒子都处于不同能级，在这种条件下，N个不可分辨粒子的配分函数若误写为<span
+class="math inline">\(Z_N=(Z_1)^N\)</span>的话，不过是重复数了<span
+class="math inline">\(N!\)</span>种情况，因此正确的写法为<span
+class="math inline">\(Z^N=\frac{1}{N!}(Z_1)^N\)</span>.</p>
+<p>实际上从前面分布的推导也可以得到，满足弱简并条件的时候不可分辨粒子的态数目与可分辨粒子的态数目相差<span
+class="math inline">\(N!\)</span>.</p>
+<p><strong>这里写一个表格总结</strong></p>
+<h2 id="巨正则系综与量子统计">巨正则系综与量子统计</h2>
+<p>与正则系综类似，我们考虑一个由热源与我们研究的系统所构成的复合系统，热源与系统之间可以交换能量与粒子（正则系综只能交换能量），复合系统的总能量为<span
+class="math inline">\(E\)</span>，总粒子数为<span
+class="math inline">\(N\)</span>，系统的能量和粒子数分别为为<span
+class="math inline">\(E_s,n\)</span>，则热源的能量和粒子数为<span
+class="math inline">\(E-E_s,N-n\)</span>，如此，系统处于<span
+class="math inline">\((E_s,n)\)</span>态的概率正比于该态对应的微观态数目
+<span class="math display">\[
+\begin{align}
+P(E_s,n)\propto \Omega(E-E_s,N-n)\times 1
+\end{align}
+\]</span> 在推导巨正则系统之前，我们需要先定义化学势。</p>
+<h3 id="化学势的统计定义">化学势的统计定义</h3>
+<p>由于系统允许交换粒子，我们若在不改变系统熵和体积的情况下（对于闭系这种条件是不改变内能的）向系统加入一个粒子，则系统内能的改变量称为化学势，即
+<span class="math display">\[
+\begin{align}
+\mu=\pqty{\pdv{U}{N}}_{S,V}
+\end{align}
+\]</span> 因此得到修改的热力学方程 <span class="math display">\[
+\begin{align}
+\dd{U}=&amp;T\dd{S}-p\dd{V}+\mu\dd{N}\\
+\Rightarrow
+\dd{S}=&amp;\frac{1}{T}\dd{U}+\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}
+\end{align}
+\]</span> 即<span
+class="math inline">\(-\frac{\mu}{T}=\pqty{\pdv{S}{N}}_{U,V}\)</span></p>
+<h3 id="写出配分函数">写出配分函数</h3>
+<p><span class="math display">\[
+\begin{align}
+\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\pqty{\pdv{\ln\Omega}{E}}_{N}E_s-\pqty{\pdv{\ln\Omega}{N}}_{E}n
+\end{align}
+\]</span> 因为<span class="math inline">\(S=k\ln\Omega\)</span>，因此有
+<span class="math display">\[
+\begin{align}
+\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\frac{1}{k}\pqty{\pdv{S}{E}}_{N}E_s-\frac{1}{k}\pqty{\pdv{S}{N}}_{E}n\\
+=&amp;\ln\Omega(E,N)-\frac{E_s}{kT}+\frac{n\mu}{kT}\\
+\Rightarrow \Omega(E-E_s,N-n)=&amp;\Omega(E,N)e^{\beta(n\mu-E_s)}
+\end{align}
+\]</span> 因此系统处于能量<span
+class="math inline">\(E_s\)</span>，粒子数<span
+class="math inline">\(n\)</span>的概率为 <span class="math display">\[
+\begin{align}
+P(E_s,n)\propto e^{\beta(n\mu-E_s)}
+\end{align}
+\]</span> 其归一化系数即为<strong>巨配分函数</strong><span
+class="math inline">\(\Xi\)</span> <span class="math display">\[
+\begin{align}
+  P(E_s,n)=&amp;\frac{e^{\beta(n\mu-E)}}{\Xi}\\
+  \Xi=&amp;\sum_{n=0}\sum_E e^{\beta(n\mu-E)}
+\end{align}
+\]</span> 注意这里的n是是对系统允许存在的所有粒子数求和，<span
+class="math inline">\(\sum_n\sum_E\)</span>两个求和是代表对所有可能的态求和。</p>
+<h3 id="量子统计">量子统计</h3>
+<p>上面的表达式才是巨配分函数的由来，汪志诚老师书上是直接将其丢出来，而且你发现，他给的表达式和上式不一样，这是因为他给出来的是一种特殊情况，只适用于玻色子与费米子的，我们现在来推导它。</p>
+<h4 id="玻色子">玻色子</h4>
+<p>需要注意的是，我们前面推导巨正则系综的时候提过，对于拥有能量<span
+class="math inline">\(E_s\)</span>的系统，其内部有多个微观态，不同微观态当然可以具有不同能量，也就是说系统内部会有多个能级，即<span
+class="math inline">\(E=\sum_i a_i E_i\)</span>，且总粒子为<span
+class="math inline">\(n=\sum_i a_i\)</span>，因此 <span
 class="math display">\[
 \begin{align}
-b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
-b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
-b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
+\Xi=&amp;\sum_{n=0}\sum_Ee^{\beta\pqty{\sum_i \mu a_i-\sum_ia_i E_i}}\\
+=&amp;\sum_{n=0}\sum_E e^{\sum\limits_i\beta a_i(\mu-E_i)}\\
+=&amp;\sum_{n=0}\sum_E \prod_i e^{\beta a_i(\mu-E_i)}
 \end{align}
-\]</span></li>
-</ul>
+\]</span> 上式的求和<span
+class="math inline">\(\sum_n\sum_E\)</span>指标E和n已经不存在，我们在求和时可能会产生一些困惑，但实际上这两个求和只是遍历所有可能的微观态，在这里便是所有允许的占据数<span
+class="math inline">\(a_i\)</span>，即 <span class="math display">\[
+\begin{align}
+\Xi=&amp;\sum_{\{a_i\}}\prod_i e^{\beta a_i(\mu-E_i)}\\
+=&amp;\prod_i\sum_{\{a_i\}}e^{\beta a_i(\mu-E_i)}
+\end{align}
+\]</span> 玻色子各能级允许的占据数为0到无穷，因此 <span
+class="math display">\[
+\begin{align}
+\Xi=&amp;\prod_i \frac{1}{1-e^{\beta(\mu-E_i)}}\\
+\Rightarrow \ln\Xi=&amp;-\sum_i \ln[1-e^{\beta(\mu-E_i)}]
+\end{align}
+\]</span></p>
+<h4 id="费米子">费米子</h4>
+<p>而对于费米子，因为泡利不相容原理，各能级允许的占据数为0或1，因此
+<span class="math display">\[
+\begin{align}
+\Xi=&amp;\prod_i \pqty{1+e^{\beta(\mu-E_i)}}\\
+\Rightarrow \ln\Xi=&amp;\sum_i\ln\bqty{1+e^{e^{\beta(\mu-E_i)}}}
+\end{align}
+\]</span></p>
+<p>综上，全同粒子的巨配分函数为 <span class="math display">\[
+\begin{equation}
+\ln\Xi=\mp \sum_i \ln\bqty{1\mp e^{\beta(\mu-E_i)}}
+\end{equation}
+\]</span>
+其中上方的-号对应玻色子，下方的+号对应费米子。若系统能级存在简并的情况，则在求和和的时候对于同一个<span
+class="math inline">\(E_i\)</span>多求和<span
+class="math inline">\(\omega_i\)</span>次即可 <span
+class="math display">\[
+\begin{align}
+\ln\Xi=&amp;\mp \sum\limits_{i}\omega_i\ln\bqty{1\mp e^{\beta(\mu-E_i)}}
+\end{align}
+\]</span></p>
+<h4 id="分布函数">分布函数</h4>
+<p>分布函数即平均占据数<span class="math inline">\(\expval{a_i}\)</span>
+<span class="math display">\[
+\begin{align}
+\expval{a_i}=&amp;\sum\limits_{n,E}\frac{ a_{l} e^{\sum\limits_i
+a_i\beta(\mu-E_i)}}{\Xi}\\
+=&amp;-\frac{1}{\beta}\frac{\pdv{\Xi}{E_{i}}}{\Xi}\\
+=&amp;-\frac{1}{\beta}\pdv{\ln\Xi}{E_i}
+\end{align}
+\]</span> 因此对于量子统计的分布函数为 <span class="math display">\[
+\begin{align}
+\expval{a_i}=&amp;(-)\mp\frac{\pm \omega_{i}e^{\beta(\mu- E_i)}}{1\mp
+e^{\beta(\mu-E_i)}}\\
+=&amp;\frac{\omega_i}{e^{\beta(E_i-\mu)}\mp1}
+\end{align}
+\]</span> 该结果与先前得到的结果一致。</p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li
-id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
+<li id="fn1"><p>统计物理还有一个等概率原理，我忘记讲了。<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li
-id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
+id="fn2"><p>什么？你说这不一定是极大值？实际上你可以证明二阶变分小于0，但我太懒了。<a
 href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li
-id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
+id="fn3"><p>不要问为什么这图书馆这么小，书架每层只能放一本书，问就是不知道。<a
 href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
-href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
-class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
+<li id="fn4"><p>你如果喜欢挑<span
+class="math inline">\(a_l\)</span>本书出来结果也是一样的<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>这里假设了简并态数目<span
+class="math inline">\(\omega_l&gt;a_l\)</span><a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>实际上也只是从<span
+class="math inline">\(a_l\)</span>的使用转向<span
+class="math inline">\(f_s\)</span>的使用罢了，本来是数宏观态数目l，每次乘上简并度<span
+class="math inline">\(\omega_l\)</span>，现在是直接数微观态数目s，这样使得表达式看起来更简单，但实际计算时还是老老实实算上简并度。<a
 href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>虽然积分区间不关于<span
-class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
-class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+<li id="fn7"><p>这里<span
+class="math inline">\(\Omega(E)\)</span>是一个常数，因为总能量E不变<a
+href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn8"><p>这里是考虑所有的态，全知全能的上帝当然可以输出所有的态，但实际上存在一些简并态的能量是相同的，所以存在简并的时候要补上系数<span
+class="math inline">\(\omega_l\)</span><a href="#fnref8"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
@@ -2365,202 +2935,7 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>物理</tag>
         <tag>笔记</tag>
-        <tag>固体物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>固体物理学习笔记（晶格振动）</title>
-    <url>/2023/05/20/Solid-State-Physics-Note-Part-3/</url>
-    <content><![CDATA[<pre><code>参考资料：
-《固体物理基础》——阎守胜
-课程PPT——俞宏毅</code></pre>
-<p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
-<span id="more"></span>
-<p>对于体系的哈密顿量 <span class="math display">\[
-\require{physics}
-\begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2\\
-&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}
-\]</span> 原本<span
-class="math inline">\(R_n\)</span>代表离子实的位置，但由于我们上一章的近似，我们通常认为<span
-class="math inline">\(R_n\)</span>是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置<span
-class="math inline">\(R\)</span>，<span
-class="math inline">\(V_{mn}(R)\)</span>是所有离子实之间的相互作用，<span
-class="math inline">\(V_{en}(r,R)\)</span>是所有离子实与所有电子之间相互作用，<span
-class="math inline">\(V_{en}(R_n)\)</span>代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为
-<span class="math display">\[
-\begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2\\
-&amp;+V_{mn}(R)+V_{en}(r,R)
-\end{align}
-\]</span> 为了使用上一章的结论，我们将哈密顿量改写为 <span
-class="math display">\[
-\begin{align}
-H=&amp;-\sum_i
-\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
-&amp;-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
-=&amp;H_e+H_n
-\end{align}
-\]</span> 很显然<span
-class="math inline">\(H_e\)</span>的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解<span
-class="math inline">\(H_n\)</span>的本征函数即可。将原子总波函数写为<span
-class="math inline">\(\Psi(r,R)=\psi(r,R_n)\chi(R)\)</span>，带入薛定谔方程得
-<span class="math display">\[
-\begin{align}
-(H_e+H_n)\psi(r,R_n)\chi(R)=&amp;E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
-=&amp;E\psi(r,R_n)\chi(R)
-\end{align}
-\]</span> 其中<span
-class="math inline">\(E_e\)</span>为布洛赫电子的能量,与总能量关系为<span
-class="math inline">\(E=E_e+E_n\)</span>，上述方程左乘<span
-class="math inline">\(\psi^*(r,R_n)\)</span>并对电子位矢积分得 <span
-class="math display">\[
-\begin{align}
-E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&amp;E\chi(R)\\
-\int\psi^*H_n\psi dr \chi(R)=&amp;E_n\chi(R)\\
-\end{align}
-\]</span> 带入<span class="math inline">\(H_n\)</span>表达式有 <span
-class="math display">\[
-\begin{align}
-E_n\chi(R)=&amp;\bqty{-\sum_n
-\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int
-\psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
-=&amp;[T_n+V(R)]\chi(R)
-\end{align}
-\]</span></p>
-<p>到目前为止我们还未用到近似，上面的总势能<span
-class="math inline">\(V(R)\)</span>具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。
-但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
-<h1 id="晶格振动的经典理论">晶格振动的经典理论</h1>
-<h2 id="简谐近似">简谐近似</h2>
-<p>根据简谐近似，我们将第n个离子实的坐标写为 <span
-class="math display">\[
-\begin{align}
-R(n)=R_n+u_n
-\end{align}
-\]</span> <span
-class="math inline">\(u_n\)</span>表示第n个粒子实对其平衡位置的偏离，令<span
-class="math inline">\(\phi(\Delta R)\)</span>为两个离子实之间的势能
-<span class="math display">\[
-\begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
-\approx &amp;
-\frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
-&amp;+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
-\end{align}
-\]</span>
-理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的<span
-class="math inline">\(\phi&#39;=0\)</span>，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为
-<span class="math display">\[
-\begin{align}
-V(R)&amp;\approx
-\frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
-\end{align}
-\]</span> 这边是简谐近似的势能项。</p>
-<h2 id="一维振动">一维振动</h2>
-<h3 id="单原子链">单原子链</h3>
-<p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为
-<span class="math display">\[
-\begin{align}
-V(R)\approx&amp; \frac{1}{2}\sum\limits_n
-\phi&#39;&#39;_{xx}(u_n-u_{n+1})^2
-\end{align}
-\]</span> 记<span
-class="math inline">\(\beta=\phi&#39;&#39;_{xx}\)</span>，根据经典的牛顿力学，第n个原子的运动方程为
-<span class="math display">\[
-\begin{align}
-M\dv[2]{t}u_n=&amp;-\pdv{V}{u_n}\\
-=&amp;\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
-=&amp;\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
-\end{align}
-\]</span>
-如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理
-<span class="math display">\[
-\begin{align}
-u(x+R_n)=e^{iqR_n}u(x)
-\end{align}
-\]</span> 因此<span
-class="math inline">\(u(na,t)=e^{iqna}u(0,t)\)</span>，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
-<p>把解带进去我们可以得到一维单原子链的解与色散关系 <span
-class="math display">\[
-\begin{align}
-Me^{iqna}\dv[2]{t}u_0=&amp;\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
-M\dv[2]{t}u_0=&amp;\beta\pqty{2-2\cos{qa}}u_0\\
-\Rightarrow u_0=&amp;Ae^{-i\omega t}
-\end{align}
-\]</span> 其中 <span class="math display">\[
-\begin{align}
-\omega=&amp;\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
-=&amp;2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
-\end{align}
-\]</span></p>
-<p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢<span
-class="math inline">\(q\)</span>给出不同波长<span
-class="math inline">\(2\pi/q\)</span>的简正模式，这种波称为<strong>格波</strong>。</p>
-<h3 id="双原子链">双原子链</h3>
-<h2 id="高维振动">高维振动</h2>
-<p>对于高维晶格振动，推导过程与一维的类似，这里以二维的作为例子。</p>
-<h3 id="二维简单晶格单原子">二维简单晶格(单原子)</h3>
-<p>以简单正方晶格为例子，此时平衡位置的偏离写为<span
-class="math inline">\(u_{nl}\)</span>，代表第n行第l列的原子相对平衡位置的偏离。考虑最近邻
-域与次近邻的势能项，此时势能写为 <span class="math display">\[
-\begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
-[\nabla_x^2\phi(u^x_{nl}-u^x_{n+1,l})^2+\nabla_y^2\phi(u^y_{nl}-u^y_{n,l+1})^2\\
-&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
-&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,,l+1})]
-\end{align}
-\]</span> 由对称性得<span
-class="math inline">\(\nabla_x^2\phi=\nabla_y^2\phi\)</span>，将其记作<span
-class="math inline">\(\beta_1\)</span>，将<span
-class="math inline">\(\nabla_x\nabla_y\phi\)</span>记作<span
-class="math inline">\(\beta_2\)</span>，如此便有 <span
-class="math display">\[
-\begin{align}
-V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
-[\beta_1\phi(u^x_{nl}-u^x_{n+1,l})^2+\beta_1(u^y_{nl}-u^y_{n,l+1})^2\\
-&amp;+\beta_2(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
-&amp;+\beta_2(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,l+1})]
-\end{align}
-\]</span> 带入经典运动方程得 <span class="math display">\[
-\begin{align}
-F^x_{nl}=&amp;-\pdv{V}{u^x_{nl}}\\
-=&amp;-\sum\limits_{mk}[\beta_1(u_{mk}-u_{m+1,k})(\delta_{mn}-\delta_{m+1,n})\delta_{lk}\\
-&amp;+\beta_2(u^y_{m+1,k}-u^y_{m+1,k+1})(\delta_{mn}-\delta_{m+1,n})\delta_{kl}\\
-&amp;+\beta_2(u^y_{m-1,k}-u^y_{m-1,k+1})(\delta_{mn}-\delta_{m-1,n})\delta_{kl}\\
-=&amp;-\beta_1(2u^x_{nl}-u^x_{n+1,l}-u^x_{n-1,l})\\
-&amp;-\beta_2(u^y_{n+1,l}-u^y_{n,l}-u^y_{n+1,l+1}+u^y_{n,l+1})\\
-&amp;-\beta_2\pqty{u^y_{n-1,l}-u^y_{n,l}-u^y_{n-1,l+1}+u^y _{n,l+1}}
-\end{align}
-\]</span></p>
-<h1 id="晶格振动的量子理论">晶格振动的量子理论</h1>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>固体物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xact-Note</title>
-    <url>/2023/05/16/Xact-Note/</url>
-    <content><![CDATA[<span id="more"></span>
-]]></content>
-      <categories>
-        <category>Mathematica</category>
-      </categories>
-      <tags>
-        <tag>Mathematica</tag>
-        <tag>General Relativity Calculation</tag>
+        <tag>热力学与统计力学</tag>
       </tags>
   </entry>
   <entry>
@@ -3148,562 +3523,185 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>热统复习（统计物理部分）</title>
-    <url>/2023/03/15/Statistical-Review-Note/</url>
-    <content><![CDATA[<pre><code>参考书目：
-《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+    <title>测试</title>
+    <url>/2023/02/22/Test/</url>
+    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
+\hat{H}\ket{\psi}=E\ket{\psi}
+\]</span> 上方应该有一个定态薛定谔方程</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>固体物理学习笔记（晶格振动）</title>
+    <url>/2023/05/20/Solid-State-Physics-Note-Part-3/</url>
+    <content><![CDATA[<pre><code>参考资料：
+《固体物理基础》——阎守胜
+课程PPT——俞宏毅</code></pre>
+<p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
 <span id="more"></span>
-<h1 id="统计力学">统计力学</h1>
-<h2 id="近独立粒子的最概然分布">近独立粒子的最概然分布</h2>
-<p>近独立的意思是说粒子之间的相互作用能量远小于粒子本身的能量，但并不是说完全没有相互作用，完全没有相互作用的是自由粒子。在经典力学中所有粒子都是可分辨的，因此统计物理早期将粒子视作可分辨的近独立粒子，这种系统称为<strong>玻尔兹曼系统</strong>，得到的是经典统计。量子力学中的粒子是不可分辨的全同粒子，全同粒子分为<strong>玻色子</strong>与<strong>费米子</strong>，玻色子做宇称变换后波函数不变，费米子做宇称变换后波函数出现负号。两种粒子构成的系统分别称为<strong>玻色系统</strong>与<strong>费米系统</strong>，得到的都是量子统计。</p>
-<p>很显然三种系统的分布是不一样的（<del>不然为什么要分为三个系统</del>），为什么全同与可分辨、宇称性会影响粒子分布呢？这与我们得到分布的方式有关，我们是通过<strong>最概然</strong>得到分布的，什么意思呢？对于一个系统，我们先列出它的所有宏观态，我们观察结果只能观测到这些宏观态。每一个宏观态包含有很多个可能的微观态，比如说掷两个骰子，将面数求和，得到的其中一个宏观态便是6，这个6可能是1+5、2+4、3+3等情况，这些就是微观态。我们认为出现宏观态的概率与其微观态个数成正比<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>。最概然的分布，自然就是微观态的极大值点，因此我们找到一个系统的所有可能状态（微观态）后，要求一阶变分为0即可得到系统的分布<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
-<p>这样我们就得到了写出分布的标准步骤 1. 写出微观态个数表达式 2.
-要求一阶变分为0</p>
-<p>因为三种系统写出来的微观态个数表达式是不一样的，所以变分得到的分布也是不一样的。</p>
-<h3 id="玻尔兹曼分布">玻尔兹曼分布</h3>
-<p>假设有N个例子，系统总能量是E，体积是V。粒子所处的第l个能级用<span
-class="math inline">\(\epsilon_l\)</span>来表示，第l能级的简并度用<span
-class="math inline">\(\omega_l\)</span>来表示，能级l上的粒子数用<span
-class="math inline">\(a_l\)</span>来表示。显然有 <span
-class="math display">\[
-\begin{equation}
-\begin{cases}
-N=\sum\limits_la_l\\
-E=\sum\limits_la_l\epsilon_l
-\end{cases}
-\end{equation}
-\]</span>
-为了方便记忆，我们可以把系统想象成一座图书馆，第几能级便是图书馆的第几层，每一层会有一个书架，而书架也会分层，每层书架便对应一个简并态<a
-href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>，每能级的粒子数自然是每层楼的书本数。玻尔兹曼系统的每本书都是不同的，因此对于第l楼，有<span
-class="math inline">\(a_l\)</span>本书，每本书都有<span
-class="math inline">\(\omega_l\)</span>种选择，因此每层有<span
-class="math inline">\(\omega_l^{a_l}\)</span>中情况，对于所有楼层便有<span
-class="math inline">\(\prod\limits_l\omega_l^{a_l}\)</span>种情况，因为所有书都不一样，所以对所有书进行全排列<span
-class="math inline">\(N!\)</span>，再除掉每层楼已经算过的情况<span
-class="math inline">\(\prod\limits_la_l!\)</span>，因此最后得到微观态数目为</p>
-<p><span class="math display">\[
-\begin{equation}
-\Omega_{M.B}=N!\prod_l\frac{\omega_l^{a_l}}{a_l!}
-\end{equation}
-\]</span> 将上式进行对粒子分布进行变分（也就是对<span
-class="math inline">\(a_l\)</span>进行变分，因为我们要求得的就是<span
-class="math inline">\(a_l\)</span>），同时因为变分有两个约束，粒子数守恒<span
-class="math inline">\(\delta N=\sum\limits_l\delta
-a_l=0\)</span>以及能量守恒<span class="math inline">\(\delta
-E=\sum\limits_l\epsilon_l\delta
-a_l\)</span>，所以要引入拉格朗日乘子，还有一步很重要的是，直接对<span
-class="math inline">\(\Omega\)</span>变分有点困难，根据其表达式可以看出，对<span
-class="math inline">\(\ln\Omega\)</span>变分是更加方便的
-，而且对数函数本身是单调的 <span class="math display">\[
+<p>对于体系的哈密顿量 <span class="math display">\[
 \require{physics}
 \begin{align}
-\delta\ln\Omega_{M.B}=&amp;\delta\pqty{\sum_l\pqty{a_l\ln \omega_l-\ln
-(a_l!)}}\\
-=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta \ln(a_l!)}
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
 \end{align}
-\]</span> 使用斯特朗公式<span
-class="math inline">\(\ln(a_l!)\approx=a_l\pqty{\ln a_l-1}\)</span>
+\]</span> 原本<span
+class="math inline">\(R_n\)</span>代表离子实的位置，但由于我们上一章的近似，我们通常认为<span
+class="math inline">\(R_n\)</span>是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置<span
+class="math inline">\(R\)</span>，<span
+class="math inline">\(V_{mn}(R)\)</span>是所有离子实之间的相互作用，<span
+class="math inline">\(V_{en}(r,R)\)</span>是所有离子实与所有电子之间相互作用，<span
+class="math inline">\(V_{en}(R_n)\)</span>代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为
 <span class="math display">\[
 \begin{align}
-\delta\ln\Omega_{M.B}=&amp;\sum_l\pqty{\delta a_l\ln\omega_l-\delta
-a_l\ln a_l}\\
-=&amp;\sum_l\delta a_l \ln\frac{\omega_l}{a_l}
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+V_{mn}(R)+V_{en}(r,R)
 \end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-\Rightarrow \delta\ln\Omega_{M.B}-\alpha\sum_l\delta a_l-\beta\sum_l
-\epsilon_l\delta a_l=&amp;0\\
-\sum_l\pqty{\ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l}\delta
-a_l=0\\
-\Rightarrow \ln\frac{\omega_l}{a_l}-\alpha-\beta\epsilon_l=&amp;0\\
-\end{align}
-\]</span> 因此我们得到粒子在不同能量的分布为 <span
-class="math display">\[
-\begin{equation}
-a_l=\omega_l e^{-\pqty{\alpha+\beta\epsilon_l}}
-\end{equation}
-\]</span> 根据上式我们可以得到粒子在不同微观态的平均分布应该为 <span
+\]</span> 为了使用上一章的结论，我们将哈密顿量改写为 <span
 class="math display">\[
 \begin{align}
-f_l=&amp;\frac{a_l}{\omega_l}\\
-=&amp;e^{-\pqty{\alpha+\beta\epsilon_l}}
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
+&amp;-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
+=&amp;H_e+H_n
 \end{align}
-\]</span>
-那么拉格朗日乘子作为参数出现在表达式里是什么意义呢？由于是复习，这里就不卖关子了，<span
-class="math inline">\(\beta=1/kT\)</span> 而<span
-class="math inline">\(\alpha\)</span>作为归一化因子，没什么物理意义。</p>
-<h3 id="玻色分布与费米分布">玻色分布与费米分布</h3>
-<p>首先要写出微观态的个数，这里也叫量子态的个数。
-对于玻色分布，回到图书馆的第l楼，对于<span
-class="math inline">\(a_l\)</span>本全同的书以及<span
-class="math inline">\(\omega_l\)</span>层书架，这是一个组合问题，我们可以将书以及书架的隔板看成<span
-class="math inline">\(a_l+\omega_l\)</span>个“东西”，事先并不知道他们是书还是书架的隔板，从中挑取<span
-class="math inline">\(\omega_l\)</span>个“东西”出来作为书架，其他自然成为书，但是书不能放在地上，所以最底下那一个“东西”必须是书架的隔板，所以最后变成在<span
-class="math inline">\(a_l+\omega_l-1\)</span>个“东西”里挑<span
-class="math inline">\(\omega_l-1\)</span>个出来作为隔板<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>，其他的自然成为书，这种操作并不会涉及全同书的顺序问题，因此每一层有<span
-class="math inline">\(C_{a_l+\omega_l-1}^{\omega_l-1}=\frac{(\omega_l+a_l-1)!}{(\omega-1)!a_l!}\)</span>种情况
-<span class="math display">\[
-\begin{equation}
-\Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}
-\end{equation}
-\]</span></p>
-<p>对于费米分布，因为遵循泡利不相容原理，每个量子态只能有一个粒子，也就是说每层书架最多只能放一本书。因此对于第l楼来说有<span
-class="math inline">\(C_{\omega_l}^{a_l}=\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\)</span>种情况<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a> <span class="math display">\[
-\begin{equation}
-\Omega_{F.D}=\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}
-\end{equation}
-\]</span></p>
-<p>这样我们得到玻色系统和费米系统的量子态数目，现在将其进行变分 <span
-class="math display">\[
-\begin{align}
-\delta
-\ln\Omega_{F.D}=&amp;\delta\sum_l\bqty{\ln(\omega_l!)-\ln(a_l!)-\ln((\omega_l-a_l)!)}\\
-=&amp;-\delta\sum_l\bqty{a_l(\ln
-a_l-1)-(\omega_l-a_l)(\ln(\omega_l-a_l)-1)}\\
-=&amp;-\sum_l\bqty{\delta a_l\ln
-a_l-\delta(\omega_l-a_l)\ln(\omega_l-a_l)}\\
-=&amp;\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)}\delta a_l
-\end{align}
-\]</span> 上面第二行式子我也用了斯特朗公式，因此有 <span
-class="math display">\[
-\begin{align}
-\delta\ln\Omega_{F.D}-\alpha\sum_l\delta a_l-\beta\sum_l
-\epsilon_l\delta a_l=&amp;0\\
-=\sum_l\bqty{\ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l}\delta&amp;
-a_l\\
-\Rightarrow \ln(\frac{\omega_l}{a_l}-1)-\alpha-\beta\epsilon_l=&amp;0
-\end{align}
-\]</span> 整理得费米分布如下 <span class="math display">\[
-\begin{equation}
-a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}+1}
-\end{equation}
-\]</span> 同有量子态分布 <span class="math display">\[
-\begin{equation}
-f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}+1}
-\end{equation}
-\]</span></p>
-<p>玻色分布推导同理，有 <span class="math display">\[
-\begin{equation}
-\begin{cases}
-a_l=\frac{\omega_l}{e^{\alpha+\beta\epsilon_l}-1}\\
-f_l=\frac{1}{e^{\alpha+\beta\epsilon_l}-1}
-\end{cases}
-\end{equation}
-\]</span></p>
-<h3 id="经典分布与量子分布之间的联系">经典分布与量子分布之间的联系</h3>
-<p>简并是量子系统特有的，当简并度的数目远大于该能级的粒子数，即<span
-class="math inline">\(\omega_l\gg
-a_l\)</span>，量子系统特有的简并性便没那么明显，因此该条件称为<strong>经典极限条件</strong>或者<strong>非简并条件</strong>，此时
+\]</span> 很显然<span
+class="math inline">\(H_e\)</span>的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解<span
+class="math inline">\(H_n\)</span>的本征函数即可。将原子总波函数写为<span
+class="math inline">\(\Psi(r,R)=\psi(r,R_n)\chi(R)\)</span>，带入薛定谔方程得
 <span class="math display">\[
 \begin{align}
-\Omega_{B.E}=&amp;\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}\\
-\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
-=&amp;\frac{1}{N!}\Omega_{M.B}\\
-\Omega_{F.D}=&amp;\prod_l\frac{\omega_l!}{a_l!(\omega_l-a_l)!}\\
-\approx&amp;\prod_l\frac{\omega^{a_l}}{a_l!}\\
-  =&amp;\frac{1}{N!}\Omega_{M.B}
+(H_e+H_n)\psi(r,R_n)\chi(R)=&amp;E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
+=&amp;E\psi(r,R_n)\chi(R)
 \end{align}
-\]</span></p>
-<p>同时当<span
-class="math inline">\(e^\alpha\gg1\)</span>时，量子分布的结果都回到玻尔兹曼分布，这两个条件是等价的</p>
-<h2 id="正则系综与玻尔兹曼统计">正则系综与玻尔兹曼统计</h2>
-<p>这里并不会遵循汪志诚老师的思路，我们直接从<strong>正则系综</strong>出发，我们直接关心系统的每一个微观态，而不是宏观态，这样便不用考虑每一宏观态的简并数<a
-href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a></p>
-<p>将系统S与一个大热源接触形成复合系统，整个复合系统的的总能量为E，是一个守恒量，现在想知道系统S处于处于s态的概率是多少，系统S处于s态时拥有能量<span
-class="math inline">\(E_s\)</span>，则热源自然拥有能量<span
-class="math inline">\(E-E_s\)</span>，复合系统以上述方式分配能量的概率就是系统S处于s态的概率，这个概率应当与这种分配方式对应的微观态数目成正比，也就是
-<span class="math display">\[
-\begin{equation}
-P(E_s)\propto \Omega(E-E_s)\times 1
-\end{equation}
-\]</span> 既然如此，只需要计算出微观态数<span
-class="math inline">\(\Omega(E-E_s)\)</span>即可。</p>
-<h4 id="温度的统计定义">温度的统计定义</h4>
-<p>在计算这个微观态前我们还需要做一件事情，便是定义温度。热力学中并没有为我们给出温度的数学定义，我们可以从正则系统统计的方式来定义温度。假设有两个可以交换能量的系统1、2.
-因为两个系统可以交换能量，因此我们一开始并不能知道系统如何分配能量是平衡的，但是我们相信平衡态一定是微观态数目最大的态，因此为求平衡能量分配方式，我们将整个系统的微观态数目对能量进行变分(当然还是先取对数，理由与前面一样)
-<span class="math display">\[
-\begin{align}
-\delta\ln\pqty{\Omega_1(E_1)\Omega_2(E_2)}=&amp;\delta\pqty{\ln\Omega_1(E_1)+\ln\Omega_2(E_2)}\\
-=&amp;\pdv{\ln\Omega_1}{E_1}\delta E_1+\pdv{\ln\Omega_2}{E_2}\delta E_2
-\end{align}
-\]</span> 因为系统能量守恒<span class="math inline">\(\delta E_1+\delta
-E_2=0\)</span>，所以 <span class="math display">\[
-\begin{align}
-\delta\ln\pqty{\Omega(E_1)\Omega(E_2)}=&amp;\pqty{\pdv{\ln\Omega_1}{E_1}-\pdv{\ln\Omega_2}{E_2}}\delta
-E_1\\
-=&amp;0\\
-\Rightarrow \pdv{\ln\Omega_1}{E_1}=&amp;\pdv{\ln\Omega_2}{E_2}
-\end{align}
-\]</span>
-因此这个条件定义了能量在两个系统之间最可能的分割，这种分割（平衡）我们称为相同温度，因此定义
-<span class="math display">\[
-\begin{equation}
-\pdv{\ln\Omega}{E}\triangleq \frac{1}{kT}
-\end{equation}
-\]</span> #### 写出配分函数</p>
-<p>定义了温度后我们便可以继续我们对微观态数<span
-class="math inline">\(\Omega(E-E_s)\)</span>的推导 <span
-class="math display">\[
-\begin{align}
-\ln\Omega(E-E_s)=&amp;\ln\Omega(E)-\pdv{\ln\Omega}{E}E_s+\order{E_s^2}\\
-=&amp;\ln\Omega(E)-\frac{E_s}{kT}+\order{E_s^2}\\
-\Rightarrow \Omega(E-E_s)\approx &amp;\Omega(E)e^{-\frac{E_s}{kT}}\\
-  \Omega(E-E_s)\propto &amp; e^{-\frac{E_s}{kT}}
-\end{align}
-\]</span> 因此系统S处于s态的概率正比于<span
-class="math inline">\(e^{-\frac{E_s}{kT}}\)</span><a href="#fn7"
-class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>，其实就是玻尔兹曼因子，然后我们所有微观态的概率求和归一化即可得到概率
-<span class="math display">\[
-\begin{equation}
-P(E_s)=\frac{e^{-E_s/kT}}{\sum\limits_ie^{-E_i/kT}}
-\end{equation}
-\]</span></p>
-<p>其分母即定义为所谓<strong>单粒子配分函数</strong>，记作<span
-class="math inline">\(Z\)</span>，可见其是所有态玻尔兹曼因子的求和<a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>，作为归一化系数，这样便没有涉及前面的拉格朗日乘子<span
-class="math inline">\(\alpha\)</span>. <span class="math display">\[
-\begin{align}
-Z=&amp;\sum_i e^{-iE_i/kT}
-\end{align}
-\]</span></p>
-<h4 id="得到态函数">得到态函数</h4>
-<h5 id="内能">内能</h5>
-<p>对于一个系统，其内能应该是其所有可能能量的平均值 <span
-class="math display">\[
-\begin{align}
-U=&amp;\sum_sE_s\frac{e^{-E_s/kT}}{Z}\\
-=&amp;\frac{1}{Z}\sum_sE_se^{-E_s/kT}\\
-=&amp;-\frac{1}{Z}\pdv{\beta}\sum_se^{-\beta E_s}\\
-=&amp;-\frac{1}{Z}\pdv{Z}{\beta}
-\end{align}
-\]</span> 因此有 <span class="math display">\[
-\begin{equation}
-U=-\pdv{\ln Z}{\beta}
-\end{equation}
-\]</span></p>
-<h5 id="熵">熵</h5>
-<p>为了得到熵的统计定义，我们回顾之前热力学公式<span
-class="math inline">\(\dd{U}=T\dd{S}-p\dd{V}\)</span>，即<span
-class="math inline">\(T=\pqty{\pdv{U}{S}}_V\)</span>再结合前面对温度的定义
-<span class="math display">\[
-\begin{align}
-\frac{1}{kT}=&amp;\pdv{\ln\Omega}{E}\\
-=&amp;\frac{1}{k}\pqty{\pdv{S}{U}}_V\\
-\Rightarrow S=&amp;k\ln\Omega
-\end{align}
-\]</span> 根据等概率原理，熵又可以写成 <span class="math display">\[
-\begin{equation}
-S=-k\sum_i P_i\ln P_i
-\end{equation}
-\]</span> 其中<span class="math inline">\(P_i\)</span>是系统取到<span
-class="math inline">\(i\)</span>态的概率。 我们上一节是得到了<span
-class="math inline">\(P_i=e^{-\beta E_i}/Z\)</span>，因此有 <span
-class="math display">\[
-\begin{align}
-S=&amp;-\sum_i k\frac{e^{-\beta E_i}}{Z}\pqty{-\beta E_i-\ln Z}\\
-=&amp;k\pqty{\beta U+\ln Z}
-\end{align}
-\]</span></p>
-<h5 id="亥姆霍兹自由能">亥姆霍兹自由能</h5>
-<p>由<span class="math inline">\(F=U-TS\)</span>得 <span
-class="math display">\[
-\begin{align}
-F=&amp;U-U-kT\ln Z\\
-=&amp;-kT\ln Z\\
-\Rightarrow Z=&amp;e^{-\beta F}
-\end{align}
-\]</span></p>
-<p>我们实际上也可以从亥姆霍兹自由能得到熵公式 <span
-class="math display">\[
-\begin{align}
-S=&amp;-\pqty{\pdv{F}{T}}_V\\
-=&amp;k\ln Z+kT\pdv{\ln Z}{T}
-\end{align}
-\]</span></p>
-<p>接着根据上式我们可以进一步得到等体热容 <span class="math display">\[
-\begin{align}
-C_V=&amp;T\pqty{\pdv{S}{T}}_V\\
-=&amp;2kT\pqty{\pdv{\ln Z}{T}}_V+kT^2\pqty{\pdv[2]{\ln Z}{T}}_V
-\end{align}
-\]</span></p>
-<h5 id="焓">焓</h5>
-<p>由<span
-class="math inline">\(H=U+pV\)</span>，我们应该先求得压强的表达式，可以利用<span
-class="math inline">\(p=-\pqty{\pdv{U}{V}}_S\)</span>或者利用<span
-class="math inline">\(p=-\pqty{\pdv{F}{V}}_T\)</span>得到 <span
-class="math display">\[
-\begin{align}
-p=&amp;kT\pqty{\pdv{\ln Z}{V}}_T\\
-\Rightarrow H=&amp;-\pdv{\ln Z}{\beta}+kTV\pqty{\pdv{\ln Z}{V}}_T
-\end{align}
-\]</span></p>
-<p>吉布斯函数可以利用类似的方法从配分函数得到。</p>
-<h4 id="maxwell速率分布">Maxwell速率分布</h4>
-<p>对于一坨气体，我们想知道一个粒子处于速度大小为<span
-class="math inline">\(v\)</span>的状态概率为多少，从前面的正则系综知道，处于该状态是能量为<span
-class="math inline">\(mv^2/2\)</span>，因此概率正比于<span
-class="math inline">\(e^{-mv^2/2kT}\)</span>，即 <span
-class="math display">\[
-\begin{align}
-f(v)\dd{v}=\propto v^2 e^{-mv^2/2kT}
-\end{align}
-\]</span> 我们要求上式积分是归一化的，因此 <span class="math display">\[
-\begin{align}
-\int_0^\infty f(v)\dd{v}=&amp;\int_0^\infty v^2 e^{-mv^2/2kT}\\
-=&amp;\frac{\sqrt{\pi}}{4}\pqty{\frac{2kT}{m}}^{3/2}\\
-\Rightarrow
-f(v)\dd{v}=&amp;\frac{4}{\sqrt{\pi}}\pqty{\frac{m}{2kT}}^{3/2}v^2
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi v^2 e^{-mv^2/2kT}\dd{v}
-\end{align}
-\]</span></p>
-<p>因此对于一团气体，单位体积有处于速度大小为<span
-class="math inline">\(v\)</span>的粒子数应该就有 <span
-class="math display">\[
-\begin{equation}
-nf(v)\dd{v}
-\end{equation}
 \]</span> 其中<span
-class="math inline">\(n\)</span>为气体的数密度，从上面的式子我们可以推出一些有意思的结论，比如平均速度，速度平方的平均值</p>
-<ul>
-<li><span class="math inline">\(\expval{v}\)</span></li>
-</ul>
-<p><span class="math display">\[
-\begin{align}
-\expval{v}=&amp;\int_0^\infty f(v)v\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^3
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\int_0^\infty
-\frac{2kT}{m}\frac{mv^2}{2kT}e^{-mv^2/2kT}\frac{kT}{m}\dd{\frac{mv^2}{2kT}}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi\frac{2(kT)^2}{m^2}\Gamma(2)\\
-=&amp;\sqrt{\frac{8kT}{\pi m}}
-\end{align}
-\]</span></p>
-<ul>
-<li><span class="math inline">\(\expval{v^2}\)</span></li>
-</ul>
-<p><span class="math display">\[
-\begin{align}
-\expval{v^2}=&amp;\int_0^\infty f(v)v^2\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi \int_0^\infty v^4
-e^{-mv^2/2kT}\dd{v}\\
-=&amp;\pqty{\frac{m}{2\pi kT}}^{3/2}4\pi
-\dv[2]{\alpha}\frac{\sqrt{\pi}}{2\sqrt{\alpha}}\\
-=&amp;\frac{3kT}{m}
-\end{align}
-\]</span></p>
-<ul>
-<li>最概然速率<span class="math inline">\(v_m\)</span></li>
-</ul>
-<p>求速率的分布函数求个导就可以得到了，这里就不敲了 <span
-class="math display">\[
-\begin{equation}
-v_m=\sqrt{\frac{2kT}{m}}
-\end{equation}
-\]</span></p>
-<ul>
-<li>泄流速率</li>
-</ul>
-<p>这个弄了图床再补吧，没图嗯写也没意思</p>
-<p>先放个结论，单位时间通过单位截面跑出去的分子数为 <span
-class="math display">\[
-\begin{equation}
-\frac{n\expval{v}}{4}
-\end{equation}
-\]</span> #### 可分辨性与多粒子配分函数</p>
-<p>可分辨如何对配分函数产生影响呢？我们先从组合配分函数出发，对于某个原子，当它处于i态时，能量由平动动能<span
-class="math inline">\(E^t_i\)</span>以及转动动能<span
-class="math inline">\(E^l_i\)</span>组成，则单粒子配分函数可以写成 <span
+class="math inline">\(E_e\)</span>为布洛赫电子的能量,与总能量关系为<span
+class="math inline">\(E=E_e+E_n\)</span>，上述方程左乘<span
+class="math inline">\(\psi^*(r,R_n)\)</span>并对电子位矢积分得 <span
 class="math display">\[
 \begin{align}
-Z=&amp;\sum_i e^{-i\beta(E^t_i+E^l_i)}\\
-=&amp;Z^t\cdot Z^l
+E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&amp;E\chi(R)\\
+\int\psi^*H_n\psi dr \chi(R)=&amp;E_n\chi(R)\\
 \end{align}
-\]</span> 其中<span class="math inline">\(Z^t=\sum\limits_ie^{-i\beta
-E^t_i},\ Z^l=\sum\limits_ie^{-i\beta
-E^l_i}\)</span>，也就是对系统不同贡献的能量来源，我们可以将其写为配分函数的乘积。而对于含有多个粒子的系统，比如说有两个粒子a和b，他们都只有<span
-class="math inline">\(E_1,E_2\)</span>两种状态，那么很容易写出配分函数
-<span class="math display">\[
-\begin{align}
-Z_{2}=&amp;e^{-i\beta E_1}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta
-E_2}}+e^{-i\beta E_2}\cdot \pqty{e^{-i\beta E_1}+e^{-i\beta E_2}}\\
-=&amp;Z_a\cdot Z_b=(Z_1)^2
-\end{align}
-\]</span> 很显然对于N个粒子的系统，其配分函数为<span
-class="math inline">\(Z_N=(Z_1)^N\)</span>.但这是建立在粒子可分辨的前提下，如果粒子是不可分辨的全同粒子，则上面<span
-class="math inline">\(e^{-\beta
-(E_1+E_2)}\)</span>是同一个状态，不应该数两次，在这种情况下<span
-class="math inline">\(Z_2\neq (Z_1)^2\)</span>.
-因此对于全同粒子，多粒子配分函数与单粒子配分函数的关系是复杂的，<strong>除非</strong>。</p>
-<p>除非<strong>满足弱简并条件</strong>。想象一下如果存在的态数目远大于粒子的个数，那么你任意取两个粒子出来，他们处于同一个能级的可能性是很小的，因此几乎就不存在多个粒子处于同一个能级的情况。此时粒子都处于不同能级，在这种条件下，N个不可分辨粒子的配分函数若误写为<span
-class="math inline">\(Z_N=(Z_1)^N\)</span>的话，不过是重复数了<span
-class="math inline">\(N!\)</span>种情况，因此正确的写法为<span
-class="math inline">\(Z^N=\frac{1}{N!}(Z_1)^N\)</span>.</p>
-<p>实际上从前面分布的推导也可以得到，满足弱简并条件的时候不可分辨粒子的态数目与可分辨粒子的态数目相差<span
-class="math inline">\(N!\)</span>.</p>
-<p><strong>这里写一个表格总结</strong></p>
-<h2 id="巨正则系综与量子统计">巨正则系综与量子统计</h2>
-<p>与正则系综类似，我们考虑一个由热源与我们研究的系统所构成的复合系统，热源与系统之间可以交换能量与粒子（正则系综只能交换能量），复合系统的总能量为<span
-class="math inline">\(E\)</span>，总粒子数为<span
-class="math inline">\(N\)</span>，系统的能量和粒子数分别为为<span
-class="math inline">\(E_s,n\)</span>，则热源的能量和粒子数为<span
-class="math inline">\(E-E_s,N-n\)</span>，如此，系统处于<span
-class="math inline">\((E_s,n)\)</span>态的概率正比于该态对应的微观态数目
-<span class="math display">\[
-\begin{align}
-P(E_s,n)\propto \Omega(E-E_s,N-n)\times 1
-\end{align}
-\]</span> 在推导巨正则系统之前，我们需要先定义化学势。</p>
-<h3 id="化学势的统计定义">化学势的统计定义</h3>
-<p>由于系统允许交换粒子，我们若在不改变系统熵和体积的情况下（对于闭系这种条件是不改变内能的）向系统加入一个粒子，则系统内能的改变量称为化学势，即
-<span class="math display">\[
-\begin{align}
-\mu=\pqty{\pdv{U}{N}}_{S,V}
-\end{align}
-\]</span> 因此得到修改的热力学方程 <span class="math display">\[
-\begin{align}
-\dd{U}=&amp;T\dd{S}-p\dd{V}+\mu\dd{N}\\
-\Rightarrow
-\dd{S}=&amp;\frac{1}{T}\dd{U}+\frac{p}{T}\dd{V}-\frac{\mu}{T}\dd{N}
-\end{align}
-\]</span> 即<span
-class="math inline">\(-\frac{\mu}{T}=\pqty{\pdv{S}{N}}_{U,V}\)</span></p>
-<h3 id="写出配分函数">写出配分函数</h3>
-<p><span class="math display">\[
-\begin{align}
-\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\pqty{\pdv{\ln\Omega}{E}}_{N}E_s-\pqty{\pdv{\ln\Omega}{N}}_{E}n
-\end{align}
-\]</span> 因为<span class="math inline">\(S=k\ln\Omega\)</span>，因此有
-<span class="math display">\[
-\begin{align}
-\ln\Omega(E-E_s,N-n)=&amp;\ln\Omega(E,N)-\frac{1}{k}\pqty{\pdv{S}{E}}_{N}E_s-\frac{1}{k}\pqty{\pdv{S}{N}}_{E}n\\
-=&amp;\ln\Omega(E,N)-\frac{E_s}{kT}+\frac{n\mu}{kT}\\
-\Rightarrow \Omega(E-E_s,N-n)=&amp;\Omega(E,N)e^{\beta(n\mu-E_s)}
-\end{align}
-\]</span> 因此系统处于能量<span
-class="math inline">\(E_s\)</span>，粒子数<span
-class="math inline">\(n\)</span>的概率为 <span class="math display">\[
-\begin{align}
-P(E_s,n)\propto e^{\beta(n\mu-E_s)}
-\end{align}
-\]</span> 其归一化系数即为<strong>巨配分函数</strong><span
-class="math inline">\(\Xi\)</span> <span class="math display">\[
-\begin{align}
-  P(E_s,n)=&amp;\frac{e^{\beta(n\mu-E)}}{\Xi}\\
-  \Xi=&amp;\sum_{n=0}\sum_E e^{\beta(n\mu-E)}
-\end{align}
-\]</span> 注意这里的n是是对系统允许存在的所有粒子数求和，<span
-class="math inline">\(\sum_n\sum_E\)</span>两个求和是代表对所有可能的态求和。</p>
-<h3 id="量子统计">量子统计</h3>
-<p>上面的表达式才是巨配分函数的由来，汪志诚老师书上是直接将其丢出来，而且你发现，他给的表达式和上式不一样，这是因为他给出来的是一种特殊情况，只适用于玻色子与费米子的，我们现在来推导它。</p>
-<h4 id="玻色子">玻色子</h4>
-<p>需要注意的是，我们前面推导巨正则系综的时候提过，对于拥有能量<span
-class="math inline">\(E_s\)</span>的系统，其内部有多个微观态，不同微观态当然可以具有不同能量，也就是说系统内部会有多个能级，即<span
-class="math inline">\(E=\sum_i a_i E_i\)</span>，且总粒子为<span
-class="math inline">\(n=\sum_i a_i\)</span>，因此 <span
+\]</span> 带入<span class="math inline">\(H_n\)</span>表达式有 <span
 class="math display">\[
 \begin{align}
-\Xi=&amp;\sum_{n=0}\sum_Ee^{\beta\pqty{\sum_i \mu a_i-\sum_ia_i E_i}}\\
-=&amp;\sum_{n=0}\sum_E e^{\sum\limits_i\beta a_i(\mu-E_i)}\\
-=&amp;\sum_{n=0}\sum_E \prod_i e^{\beta a_i(\mu-E_i)}
+E_n\chi(R)=&amp;\bqty{-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int
+\psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
+=&amp;[T_n+V(R)]\chi(R)
 \end{align}
-\]</span> 上式的求和<span
-class="math inline">\(\sum_n\sum_E\)</span>指标E和n已经不存在，我们在求和时可能会产生一些困惑，但实际上这两个求和只是遍历所有可能的微观态，在这里便是所有允许的占据数<span
-class="math inline">\(a_i\)</span>，即 <span class="math display">\[
-\begin{align}
-\Xi=&amp;\sum_{\{a_i\}}\prod_i e^{\beta a_i(\mu-E_i)}\\
-=&amp;\prod_i\sum_{\{a_i\}}e^{\beta a_i(\mu-E_i)}
-\end{align}
-\]</span> 玻色子各能级允许的占据数为0到无穷，因此 <span
+\]</span></p>
+<p>到目前为止我们还未用到近似，上面的总势能<span
+class="math inline">\(V(R)\)</span>具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。
+但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
+<h1 id="晶格振动的经典理论">晶格振动的经典理论</h1>
+<h2 id="简谐近似">简谐近似</h2>
+<p>根据简谐近似，我们将第n个离子实的坐标写为 <span
 class="math display">\[
 \begin{align}
-\Xi=&amp;\prod_i \frac{1}{1-e^{\beta(\mu-E_i)}}\\
-\Rightarrow \ln\Xi=&amp;-\sum_i \ln[1-e^{\beta(\mu-E_i)}]
+R(n)=R_n+u_n
 \end{align}
-\]</span></p>
-<h4 id="费米子">费米子</h4>
-<p>而对于费米子，因为泡利不相容原理，各能级允许的占据数为0或1，因此
+\]</span> <span
+class="math inline">\(u_n\)</span>表示第n个粒子实对其平衡位置的偏离，令<span
+class="math inline">\(\phi(\Delta R)\)</span>为两个离子实之间的势能
 <span class="math display">\[
 \begin{align}
-\Xi=&amp;\prod_i \pqty{1+e^{\beta(\mu-E_i)}}\\
-\Rightarrow \ln\Xi=&amp;\sum_i\ln\bqty{1+e^{e^{\beta(\mu-E_i)}}}
+V(R)=&amp;\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
+\approx &amp;
+\frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
+&amp;+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
 \end{align}
-\]</span></p>
-<p>综上，全同粒子的巨配分函数为 <span class="math display">\[
-\begin{equation}
-\ln\Xi=\mp \sum_i \ln\bqty{1\mp e^{\beta(\mu-E_i)}}
-\end{equation}
 \]</span>
-其中上方的-号对应玻色子，下方的+号对应费米子。若系统能级存在简并的情况，则在求和和的时候对于同一个<span
-class="math inline">\(E_i\)</span>多求和<span
-class="math inline">\(\omega_i\)</span>次即可 <span
-class="math display">\[
-\begin{align}
-\ln\Xi=&amp;\mp \sum\limits_{i}\omega_i\ln\bqty{1\mp e^{\beta(\mu-E_i)}}
-\end{align}
-\]</span></p>
-<h4 id="分布函数">分布函数</h4>
-<p>分布函数即平均占据数<span class="math inline">\(\expval{a_i}\)</span>
+理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的<span
+class="math inline">\(\phi&#39;=0\)</span>，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为
 <span class="math display">\[
 \begin{align}
-\expval{a_i}=&amp;\sum\limits_{n,E}\frac{ a_{l} e^{\sum\limits_i
-a_i\beta(\mu-E_i)}}{\Xi}\\
-=&amp;-\frac{1}{\beta}\frac{\pdv{\Xi}{E_{i}}}{\Xi}\\
-=&amp;-\frac{1}{\beta}\pdv{\ln\Xi}{E_i}
+V(R)&amp;\approx
+\frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
 \end{align}
-\]</span> 因此对于量子统计的分布函数为 <span class="math display">\[
+\]</span> 这边是简谐近似的势能项。</p>
+<h2 id="一维振动">一维振动</h2>
+<h3 id="单原子链">单原子链</h3>
+<p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为
+<span class="math display">\[
 \begin{align}
-\expval{a_i}=&amp;(-)\mp\frac{\pm \omega_{i}e^{\beta(\mu- E_i)}}{1\mp
-e^{\beta(\mu-E_i)}}\\
-=&amp;\frac{\omega_i}{e^{\beta(E_i-\mu)}\mp1}
+V(R)\approx&amp; \frac{1}{2}\sum\limits_n
+\phi&#39;&#39;_{xx}(u_n-u_{n+1})^2
 \end{align}
-\]</span> 该结果与先前得到的结果一致。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>统计物理还有一个等概率原理，我忘记讲了。<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn2"><p>什么？你说这不一定是极大值？实际上你可以证明二阶变分小于0，但我太懒了。<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>不要问为什么这图书馆这么小，书架每层只能放一本书，问就是不知道。<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>你如果喜欢挑<span
-class="math inline">\(a_l\)</span>本书出来结果也是一样的<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>这里假设了简并态数目<span
-class="math inline">\(\omega_l&gt;a_l\)</span><a href="#fnref5"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>实际上也只是从<span
-class="math inline">\(a_l\)</span>的使用转向<span
-class="math inline">\(f_s\)</span>的使用罢了，本来是数宏观态数目l，每次乘上简并度<span
-class="math inline">\(\omega_l\)</span>，现在是直接数微观态数目s，这样使得表达式看起来更简单，但实际计算时还是老老实实算上简并度。<a
-href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>这里<span
-class="math inline">\(\Omega(E)\)</span>是一个常数，因为总能量E不变<a
-href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn8"><p>这里是考虑所有的态，全知全能的上帝当然可以输出所有的态，但实际上存在一些简并态的能量是相同的，所以存在简并的时候要补上系数<span
-class="math inline">\(\omega_l\)</span><a href="#fnref8"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+\]</span> 记<span
+class="math inline">\(\beta=\phi&#39;&#39;_{xx}\)</span>，根据经典的牛顿力学，第n个原子的运动方程为
+<span class="math display">\[
+\begin{align}
+M\dv[2]{t}u_n=&amp;-\pdv{V}{u_n}\\
+=&amp;\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
+=&amp;\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
+\end{align}
+\]</span>
+如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理
+<span class="math display">\[
+\begin{align}
+u(x+R_n)=e^{iqR_n}u(x)
+\end{align}
+\]</span> 因此<span
+class="math inline">\(u(na,t)=e^{iqna}u(0,t)\)</span>，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
+<p>把解带进去我们可以得到一维单原子链的解与色散关系 <span
+class="math display">\[
+\begin{align}
+Me^{iqna}\dv[2]{t}u_0=&amp;\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
+M\dv[2]{t}u_0=&amp;\beta\pqty{2-2\cos{qa}}u_0\\
+\Rightarrow u_0=&amp;Ae^{-i\omega t}
+\end{align}
+\]</span> 其中 <span class="math display">\[
+\begin{align}
+\omega=&amp;\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
+=&amp;2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
+\end{align}
+\]</span></p>
+<p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢<span
+class="math inline">\(q\)</span>给出不同波长<span
+class="math inline">\(2\pi/q\)</span>的简正模式，这种波称为<strong>格波</strong>。</p>
+<h3 id="双原子链">双原子链</h3>
+<h2 id="高维振动">高维振动</h2>
+<p>对于高维晶格振动，推导过程与一维的类似，这里以二维的作为例子。</p>
+<h3 id="二维简单晶格单原子">二维简单晶格(单原子)</h3>
+<p>以简单正方晶格为例子，此时平衡位置的偏离写为<span
+class="math inline">\(u_{nl}\)</span>，代表第n行第l列的原子相对平衡位置的偏离。考虑最近邻
+域与次近邻的势能项，此时势能写为 <span class="math display">\[
+\begin{align}
+V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
+[\nabla_x^2\phi(u^x_{nl}-u^x_{n+1,l})^2+\nabla_y^2\phi(u^y_{nl}-u^y_{n,l+1})^2\\
+&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
+&amp;+2\nabla_x\nabla_y\phi(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,,l+1})]
+\end{align}
+\]</span> 由对称性得<span
+class="math inline">\(\nabla_x^2\phi=\nabla_y^2\phi\)</span>，将其记作<span
+class="math inline">\(\beta_1\)</span>，将<span
+class="math inline">\(\nabla_x\nabla_y\phi\)</span>记作<span
+class="math inline">\(\beta_2\)</span>，如此便有 <span
+class="math display">\[
+\begin{align}
+V(R)=&amp;\frac{1}{2}\sum\limits_{n,l}
+[\beta_1\phi(u^x_{nl}-u^x_{n+1,l})^2+\beta_1(u^y_{nl}-u^y_{n,l+1})^2\\
+&amp;+\beta_2(u^x_{nl}-u^x_{n+1,l})(u^y_{n+1,l}-u^y_{n+1,l+1})\\
+&amp;+\beta_2(u^x_{nl}-u^x_{n-1,l})(u^y_{n-1,l}-u^y_{n-1,l+1})]
+\end{align}
+\]</span> 带入经典运动方程得 <span class="math display">\[
+\begin{align}
+F^x_{nl}=&amp;-\pdv{V}{u^x_{nl}}\\
+=&amp;-\sum\limits_{mk}[\beta_1(u_{mk}-u_{m+1,k})(\delta_{mn}-\delta_{m+1,n})\delta_{lk}\\
+&amp;+\beta_2(u^y_{m+1,k}-u^y_{m+1,k+1})(\delta_{mn}-\delta_{m+1,n})\delta_{kl}\\
+&amp;+\beta_2(u^y_{m-1,k}-u^y_{m-1,k+1})(\delta_{mn}-\delta_{m-1,n})\delta_{kl}\\
+=&amp;-\beta_1(2u^x_{nl}-u^x_{n+1,l}-u^x_{n-1,l})\\
+&amp;-\beta_2(u^y_{n+1,l}-u^y_{n,l}-u^y_{n+1,l+1}+u^y_{n,l+1})\\
+&amp;-\beta_2\pqty{u^y_{n-1,l}-u^y_{n,l}-u^y_{n-1,l+1}+u^y _{n,l+1}}
+\end{align}
+\]</span></p>
+<h1 id="晶格振动的量子理论">晶格振动的量子理论</h1>
 ]]></content>
       <categories>
         <category>物理</category>
@@ -3711,7 +3709,20 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>物理</tag>
         <tag>笔记</tag>
-        <tag>热力学与统计力学</tag>
+        <tag>固体物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xact-Note</title>
+    <url>/2023/05/16/Xact-Note/</url>
+    <content><![CDATA[<span id="more"></span>
+]]></content>
+      <categories>
+        <category>Mathematica</category>
+      </categories>
+      <tags>
+        <tag>Mathematica</tag>
+        <tag>General Relativity Calculation</tag>
       </tags>
   </entry>
   <entry>
@@ -4168,14 +4179,6 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>测试</title>
-    <url>/2023/02/22/Test/</url>
-    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
-\hat{H}\ket{\psi}=E\ket{\psi}
-\]</span> 上方应该有一个定态薛定谔方程</p>
-]]></content>
-  </entry>
-  <entry>
     <title>《资本论》读书笔记</title>
     <url>/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<pre><code>参考：
@@ -4224,48 +4227,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 ]]></content>
       <tags>
         <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>建站记录</title>
-    <url>/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
-<p>接下来就是好好装修自己的小屋(*╹▽╹*)</p>
-<span id="more"></span>
-<h2 id="更新日志">更新日志：</h2>
-<ul class="task-list">
-<li><p><input type="checkbox" checked="" />设置菜单</p></li>
-<li><p><input type="checkbox" checked="" />设置阅读进度条</p></li>
-<li><p><input type="checkbox"
-checked="" />设置字数统计及阅读时长估计</p></li>
-<li><p><input type="checkbox" checked="" />设置夜间模式选项</p></li>
-<li><p><input type="checkbox" checked="" />设置评论区</p></li>
-<li><p><input type="checkbox" />设置图传以便在网页显示图片</p></li>
-<li><p><input type="checkbox" />设置博客背景</p></li>
-<li><p><input type="checkbox" />设置个人日记</p></li>
-<li><p><input
-type="checkbox" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bing算了)</p></li>
-<li><p><input type="checkbox" checked="" />设置中英双语</p></li>
-</ul>
-<h2 id="建站bug记录">建站bug记录</h2>
-<ul>
-<li>23.02.27 使用waline添加评论功能、购买并绑定域名</li>
-</ul>
-<p>解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常）
-对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.io，之后更改为购买的域名，然后就解决了网页白底蓝字的问题。</p>
-<ul>
-<li>23.3.10 使用Google search console，想添加SEO功能</li>
-</ul>
-<p>提交sitemap了，但好像索引添加失败</p>
-<ul>
-<li>20.4.11
-按照知乎上的一个教程，实现了中英双语的按钮，但是这种方法感觉非常丑陋，建多的en文件夹好像插件是不一样的，比如渲染引擎就不同。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>记录</tag>
-        <tag>博客</tag>
-        <tag>debug</tag>
       </tags>
   </entry>
   <entry>
@@ -4846,6 +4807,48 @@ P_{fi}(t)=\frac{1}{\hbar^2}\abs{\int_0^t\dd{t&#39;}e^{i\omega_{fi}t}V_{fi}(t&#39
         <tag>期末复习</tag>
         <tag>物理</tag>
         <tag>量子力学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建站记录</title>
+    <url>/2023/02/10/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
+<p>接下来就是好好装修自己的小屋(*╹▽╹*)</p>
+<span id="more"></span>
+<h2 id="更新日志">更新日志：</h2>
+<ul class="task-list">
+<li><p><input type="checkbox" checked="" />设置菜单</p></li>
+<li><p><input type="checkbox" checked="" />设置阅读进度条</p></li>
+<li><p><input type="checkbox"
+checked="" />设置字数统计及阅读时长估计</p></li>
+<li><p><input type="checkbox" checked="" />设置夜间模式选项</p></li>
+<li><p><input type="checkbox" checked="" />设置评论区</p></li>
+<li><p><input type="checkbox" />设置图传以便在网页显示图片</p></li>
+<li><p><input type="checkbox" />设置博客背景</p></li>
+<li><p><input type="checkbox" />设置个人日记</p></li>
+<li><p><input
+type="checkbox" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bing算了)</p></li>
+<li><p><input type="checkbox" checked="" />设置中英双语</p></li>
+</ul>
+<h2 id="建站bug记录">建站bug记录</h2>
+<ul>
+<li>23.02.27 使用waline添加评论功能、购买并绑定域名</li>
+</ul>
+<p>解析域名时设置了A类型与CNAME类型，之后访问网页时变成白底蓝字，类似零几年时的网页，公式无法正常显示，同时“关于”、“标签”页面均显示404.（本地测试显示正常）
+对此我做了两件事情，第一是在解析域名出增加多了一个A类型，同时更改网站配置文件的url。之前绑定域名后忘记更改此处的url，填写的依旧是xxxx.github.io，之后更改为购买的域名，然后就解决了网页白底蓝字的问题。</p>
+<ul>
+<li>23.3.10 使用Google search console，想添加SEO功能</li>
+</ul>
+<p>提交sitemap了，但好像索引添加失败</p>
+<ul>
+<li>20.4.11
+按照知乎上的一个教程，实现了中英双语的按钮，但是这种方法感觉非常丑陋，建多的en文件夹好像插件是不一样的，比如渲染引擎就不同。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>记录</tag>
+        <tag>博客</tag>
+        <tag>debug</tag>
       </tags>
   </entry>
 </search>
