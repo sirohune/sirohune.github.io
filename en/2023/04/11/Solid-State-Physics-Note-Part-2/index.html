@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/en/","images":"/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
 
-    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
+    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Solid-State-Physics-Note-Part-2">
 <meta property="og:url" content="https://sirohune.site/en/2023/04/11/Solid-State-Physics-Note-Part-2/index.html">
 <meta property="og:site_name" content="Haku&#39;s blog">
-<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
+<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://sirohune.site/en/2023/04/11/Solid-State-Physics-Note-Part-2/band.png">
 <meta property="article:published_time" content="2023-04-11T13:52:21.000Z">
@@ -183,7 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86-Bloch-Theorem-%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.4.</span> <span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.1.</span> <span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.2.</span> <span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-number">2.2.1.</span> <span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">电子态密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">4.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">4.2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.</span> <span class="nav-text">布洛赫定理(Bloch
+Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-number">1.4.</span> <span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-number">2.</span> <span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.1.</span> <span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-number">2.2.</span> <span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-number">2.2.1.</span> <span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-number">3.</span> <span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">电子态密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">4.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">4.2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -198,18 +199,18 @@ document.addEventListener('DOMContentLoaded', () => {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/en/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/en/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/en/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -305,14 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>3.7k</span>
+      <span>15k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>7 mins.</span>
+      <span>28 mins.</span>
     </span>
 </div>
 
@@ -325,8 +326,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅
-</code></pre><p>自由电子气有三个近似</p>
+课程PPT——俞宏毅</code></pre>
+<p>自由电子气有三个近似</p>
 <ul>
 <li>自由电子近似</li>
 <li>单电子近似</li>
@@ -334,319 +335,567 @@ document.addEventListener('DOMContentLoaded', () => {
 </ul>
 <p>这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。<strong>能带论</strong>是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。</p>
 <span id="more"></span>
-<p>对于体系的哈密顿量</p>
-<script type="math/tex; mode=display">
+<p>对于体系的哈密顿量 <span class="math display">\[
 \require{physics}
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
- &+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}</script><p>即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+即便是考虑离子实的影响，我们也不可能说直接计算完整的哈氏量，我们需要采取一些近似，认为离子实对电子是有影响，但离子实本身由于质量很大，所以运动相对电子较慢，近似为静止。这个近似称为<strong>绝热近似(Born-Oppenheimer近似)</strong>，这样一来，上面的哈氏量中关于离子实运动的那项为0，离子实相互作用的那项为一个常数，可以丢掉，哈氏量剩下
+<span class="math display">\[
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
- &-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}</script><p>对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数$V(r)$，且这个函数是一个周期函数满足$V(r+R_n)=V(r)$，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
-<p>单电子近似允许我们将电子相互作用项写为</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+&amp;-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span>
+对于上面的哈氏量，来自电子相互作用的那项是一个多变量函数，变量之间相互耦合，使得薛定谔方程难以精确求解，因此我们还需要采取一个近似。结合前面的单电子近似，将其他所有电子对某个电子的影响用平均场代替（因为其他电子在运动，所以原本应该是时间的函数），我们将其视为空间分布的平均场，同时将平均场与离子实对某个电子的势场全部揉在一起写成一个整体的势能函数<span
+class="math inline">\(V(r)\)</span>，且这个函数是一个周期函数满足<span
+class="math inline">\(V(r+R_n)=V(r)\)</span>，这个近似称为<strong>周期场近似</strong>（注意这里还不是弱周期势近似）。</p>
+<p>单电子近似允许我们将电子相互作用项写为 <span class="math display">\[
 \begin{align}
- V_{ee}(r_i,r_j)=&\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi \epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
- =&\sum_i v_i(r_i)
-\end{align}</script><p>因此总的哈氏量写为</p>
-<script type="math/tex; mode=display">
+V_{ee}(r_i,r_j)=&amp;\frac{1}{2}\sum_i\sum_{j\neq i}\frac{1}{4\pi
+\epsilon}\frac{e^2}{\abs{r_i-r_j}}\\
+=&amp;\sum_i v_i(r_i)
+\end{align}
+\]</span> 因此总的哈氏量写为 <span class="math display">\[
 \begin{align}
- H=&\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n \frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}}
-\end{align}</script><p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
+H=&amp;\sum_i\pqty{\frac{\hbar^2}{2m}\nabla_i^2+v_i(r_i)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}}
+\end{align}
+\]</span></p>
+<p>如上所示，我们取消了自由电子近似以考虑离子实的作用，同时引入了一些较弱的近似用以将多体问题简化为单体问题。</p>
 <p>接下来只需要解单电子的薛定谔方程即可，其中，周期性近似是能带产生的来源。</p>
-<h2 id="布洛赫定理-Bloch-Theorem-与能带"><a href="#布洛赫定理-Bloch-Theorem-与能带" class="headerlink" title="布洛赫定理(Bloch Theorem)与能带"></a>布洛赫定理(Bloch Theorem)与能带</h2><h3 id="布洛赫定理"><a href="#布洛赫定理" class="headerlink" title="布洛赫定理"></a>布洛赫定理</h3><p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足</p>
-<script type="math/tex; mode=display">
+<h2 id="布洛赫定理bloch-theorem与能带">布洛赫定理(Bloch
+Theorem)与能带</h2>
+<h3 id="布洛赫定理">布洛赫定理</h3>
+<p>周期性近似之所以能产生能带，需要<strong>布洛赫定理</strong>将其周期的效果表现出来。布洛赫定理有两种等价的表述，其中一种是：对于周期性势场的哈密顿量，其本征函数满足
+<span class="math display">\[
 \begin{align}
- \psi(r+R_n)=e^{ikR_n}\psi(r)
-\end{align}</script><p>另外一种是其本征函数可以写为如下形式</p>
-<script type="math/tex; mode=display">
+\psi(r+R_n)=e^{ikR_n}\psi(r)
+\end{align}
+\]</span></p>
+<p>另外一种是其本征函数可以写为如下形式 <span class="math display">\[
 \begin{align}
- \psi(r)=e^{ikr}u_k(r)
-\end{align}</script><p>其中$u_k(r)$是一个周期函数满足$u(r+R_n)=u(r)$。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
-<h3 id="布洛赫定理的证明"><a href="#布洛赫定理的证明" class="headerlink" title="布洛赫定理的证明"></a>布洛赫定理的证明</h3><p>布洛赫定理适用于周期势场，因此系统与平移操作离不开关系。定义平移算符有如下功能</p>
-<script type="math/tex; mode=display">
+\psi(r)=e^{ikr}u_k(r)
+\end{align}
+\]</span> 其中<span
+class="math inline">\(u_k(r)\)</span>是一个周期函数满足<span
+class="math inline">\(u(r+R_n)=u(r)\)</span>。这样的波函数称为<strong>布洛赫函数</strong>，从其数学形式可以看出，它是一个被周期函数被平面波调制，将其与自由电子相区别，这样的电子称为<strong>布洛赫电子</strong></p>
+<h3 id="布洛赫定理的证明">布洛赫定理的证明</h3>
+<p>布洛赫定理适用于周期势场，因此系统与平移操作离不开关系。定义平移算符有如下功能
+<span class="math display">\[
 \begin{align}
- T_Rf(r)=&f(r+R)
-\end{align}</script><p>很显然平移本身对导数算符是不起作用的（动量守恒与空间平移不变性的关系），而对于周期函数也是没有影响，因此周期势场的哈密顿量与平移算符对易，则两个算符具有共同的本征函数。对于哈密顿量的本征函数有$H\psi(r)=E\psi(r)$,其应该也是平移算符的本征函数，本征值为$\lambda$:$T_R\psi(r)=\lambda_R\psi(r)$，即</p>
-<script type="math/tex; mode=display">
+T_Rf(r)=&amp;f(r+R)
+\end{align}
+\]</span>
+很显然平移本身对导数算符是不起作用的（动量守恒与空间平移不变性的关系），而对于周期函数也是没有影响，因此周期势场的哈密顿量与平移算符对易，则两个算符具有共同的本征函数。对于哈密顿量的本征函数有<span
+class="math inline">\(H\psi(r)=E\psi(r)\)</span>,其应该也是平移算符的本征函数，本征值为<span
+class="math inline">\(\lambda\)</span>:<span
+class="math inline">\(T_R\psi(r)=\lambda_R\psi(r)\)</span>，即 <span
+class="math display">\[
 \begin{align}
- \psi(r+R)=&\lambda_R\psi(r)\\
- \Rightarrow \abs{\lambda_R}^2=&1
-\end{align}</script><p>第二行是由本征函数的归一化条件得到的。因此我们可以将本征值写为</p>
-<script type="math/tex; mode=display">
+\psi(r+R)=&amp;\lambda_R\psi(r)\\
+\Rightarrow \abs{\lambda_R}^2=&amp;1
+\end{align}
+\]</span> 第二行是由本征函数的归一化条件得到的。因此我们可以将本征值写为
+<span class="math display">\[
 \begin{align}
- \lambda_R=\exp(i\phi(R))
-\end{align}</script><p>其中$\phi(R)$是一个R的函数。同时，根据平移算符的定义我们可以看出</p>
-<script type="math/tex; mode=display">
+\lambda_R=\exp(i\phi(R))
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\phi(R)\)</span>是一个R的函数。同时，根据平移算符的定义我们可以看出
+<span class="math display">\[
 \begin{align}
- T_{R_1+R_2}f(r)=&f(r+R_1+R_2)\\
- =&T_{R_1}T_{R_2}f(r)\\
-\Rightarrow T_{R_1+R_2}=&T_{R_1}T_{R_2}
-\end{align}</script><p>因此有:</p>
-<script type="math/tex; mode=display">
+T_{R_1+R_2}f(r)=&amp;f(r+R_1+R_2)\\
+=&amp;T_{R_1}T_{R_2}f(r)\\
+\Rightarrow T_{R_1+R_2}=&amp;T_{R_1}T_{R_2}
+\end{align}
+\]</span> 因此有: <span class="math display">\[
 \begin{align}
- T_{R_1+R_2}\psi(r)=&\exp(i\phi(R_1+R_2))\psi(r)\\
- T_{R_1}T_{R_2}\psi(r)=&\exp\pqty{i(\phi(R_1)+\phi(R_2))}\\
-\Rightarrow \phi(R_1+R_2)=&\phi(R_1)+\phi(R_2)
-\end{align}</script><p>当且仅当$\phi(R)$是R的线性函数的时候才满足上式，所以$\phi(R)=kR$，即</p>
-<script type="math/tex; mode=display">
+T_{R_1+R_2}\psi(r)=&amp;\exp(i\phi(R_1+R_2))\psi(r)\\
+T_{R_1}T_{R_2}\psi(r)=&amp;\exp\pqty{i(\phi(R_1)+\phi(R_2))}\\
+\Rightarrow \phi(R_1+R_2)=&amp;\phi(R_1)+\phi(R_2)
+\end{align}
+\]</span> 当且仅当<span
+class="math inline">\(\phi(R)\)</span>是R的线性函数的时候才满足上式，所以<span
+class="math inline">\(\phi(R)=kR\)</span>，即 <span
+class="math display">\[
 \begin{align}
- \psi(r+R)=e^{ikR}\psi(r)
-\end{align}</script><p>布洛赫函数应多一个指标k用于标记不同的平移算符本征值$\psi_k(r)$.k的取值以及物理意义将在下一小节介绍。</p>
-<h3 id="波矢k的物理意义"><a href="#波矢k的物理意义" class="headerlink" title="波矢k的物理意义"></a>波矢k的物理意义</h3><p>很显然，这里的$\hbar k$并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到$\hbar k$的本征值的。</p>
-<p>波矢$k$的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件</p>
-<script type="math/tex; mode=display">
+\psi(r+R)=e^{ikR}\psi(r)
+\end{align}
+\]</span> 布洛赫函数应多一个指标k用于标记不同的平移算符本征值<span
+class="math inline">\(\psi_k(r)\)</span>.k的取值以及物理意义将在下一小节介绍。</p>
+<h3 id="波矢k的物理意义">波矢k的物理意义</h3>
+<p>很显然，这里的<span class="math inline">\(\hbar
+k\)</span>并不是布洛赫电子的波矢，因为若将动量算符作用在布洛赫函数上，显然是没法得到<span
+class="math inline">\(\hbar k\)</span>的本征值的。</p>
+<p>波矢<span
+class="math inline">\(k\)</span>的取值由边界条件决定，对于周期势能近似，我们很自然地对整个系统使用周期边界条件
+<span class="math display">\[
 \begin{align}
- \begin{cases}
- \psi(r+N_1a_1)=\psi(r)\\
- \psi(r+N_2a_2)=\psi(r)\\
- \psi(r+N_3a_3)=\psi(r)
- \end{cases}
-\end{align}</script><p>对于布洛赫函数，这样的边界条件无疑是在说</p>
-<script type="math/tex; mode=display">
+\begin{cases}
+\psi(r+N_1a_1)=\psi(r)\\
+\psi(r+N_2a_2)=\psi(r)\\
+\psi(r+N_3a_3)=\psi(r)
+\end{cases}
+\end{align}
+\]</span> 对于布洛赫函数，这样的边界条件无疑是在说 <span
+class="math display">\[
 \begin{align}
- \exp(ik\cdot N_ia_i)=&1\\
- \Rightarrow k\cdot N_ia_i=2l_i\pi
-\end{align}</script><p>如果你还记得的话，我们的倒格矢满足$b<em>i\cdot a_j=2\pi\delta</em>{ij}$,因此</p>
-<script type="math/tex; mode=display">
+\exp(ik\cdot N_ia_i)=&amp;1\\
+\Rightarrow k\cdot N_ia_i=2l_i\pi
+\end{align}
+\]</span> 如果你还记得的话，我们的倒格矢满足<span
+class="math inline">\(b_i\cdot a_j=2\pi\delta_{ij}\)</span>,因此 <span
+class="math display">\[
 \begin{align}
- k=\sum_i\frac{l_i}{N_i}b_i
-\end{align}</script><p>波矢k正是我们倒格空间中的矢量。</p>
-<h3 id="关于能带"><a href="#关于能带" class="headerlink" title="关于能带"></a>关于能带</h3><p>教材中提到过一句，实空间中有限的区域会导致分立的本征值，因此每一个k会有无穷个分立的本征值，引出新的量子数n，用于标记能带。但我觉得量子数n的出现，这并不是那么自然的一件事情<sup><a href="#fn_4" id="reffn_4">4</a></sup>。而PPT中直接拿原子波函数来进行类比，然后就得到了“布洛赫电子本征态除了k还需要n与自旋s”的结论<sup><a href="#fn_5" id="reffn_5">5</a></sup>。</p>
-<blockquote id="fn_4">
-<sup>4</sup>. 起码对我来说不是那么自然，我因此想了很久关于n出现的合理性<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_5">
-<sup>5</sup>. 当然也可能老师对此有详细的解释，而我没听课ort<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
-</blockquote>
-<p>量子数n的出现，也就是说能带的出现，我觉得还是依赖于周期性。因为周期性和实空间的有限相关，所以这可能是为什么教材上说实空间的有限会导致能带n的出现。具体可以参考<a target="_blank" href="https://en.wikipedia.org/wiki/Particle_in_a_one-dimensional_lattice" rel="external nofollow noreferrer noopener">wiki上的Kronig–Penney model</a>，如果懒得看wiki，那可以听我简单介绍一下。我们举一个简单的模型，在自由空间中放入无穷个宽度为b的势垒，上一个势垒的末端与下一个势垒的前端相距a，所以周期为a+b，构造这样一个周期性的势场。很显然我们只需要求解a范围内的波函数和b范围内的波函数，b范围内的波函数是$\sinh,\cosh$函数的叠加，a范围内的波函数是$\sin,\cos$函数的叠加，这样的波函数我们在<a href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">初等量子力学</a>中是求解过的。</p>
-<script type="math/tex; mode=display">
+k=\sum_i\frac{l_i}{N_i}b_i
+\end{align}
+\]</span> 波矢k正是我们倒格空间中的矢量。</p>
+<h3 id="关于能带">关于能带</h3>
+<p>教材中提到过一句，实空间中有限的区域会导致分立的本征值，因此每一个k会有无穷个分立的本征值，引出新的量子数n，用于标记能带。但我觉得量子数n的出现，这并不是那么自然的一件事情<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>。而PPT中直接拿原子波函数来进行类比，然后就得到了“布洛赫电子本征态除了k还需要n与自旋s”的结论<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>。</p>
+<p>量子数n的出现，也就是说能带的出现，我觉得还是依赖于周期性。因为周期性和实空间的有限相关，所以这可能是为什么教材上说实空间的有限会导致能带n的出现。具体可以参考<a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Particle_in_a_one-dimensional_lattice">wiki上的Kronig–Penney
+model</a>，如果懒得看wiki，那可以听我简单介绍一下。我们举一个简单的模型，在自由空间中放入无穷个宽度为b的势垒，上一个势垒的末端与下一个势垒的前端相距a，所以周期为a+b，构造这样一个周期性的势场。很显然我们只需要求解a范围内的波函数和b范围内的波函数，b范围内的波函数是<span
+class="math inline">\(\sinh,\cosh\)</span>函数的叠加，a范围内的波函数是<span
+class="math inline">\(\sin,\cos\)</span>函数的叠加，这样的波函数我们在<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">初等量子力学</a>中是求解过的。
+<span class="math display">\[
 \begin{align}
- \psi_1(r)=&Ae^{iKr}+Be^{-iKr},0<r<a\\
- \psi_2(r)=&Ce^{\kappa r}+De^{-\kappa r},-b<r0\\
- \psi_3(r)=&e^{ik(a+b)}\psi_2(r-a-b),a<r<a+b
-\end{align}</script><p>接着在a与b的中间以及a或b的另外一侧边缘使用连续条件：波函数及其一阶导数连续。如此可以得到4个拼接方程，你可以想象，这四个方程一定是包含有$\sinh,\cosh,\sin,\cos$，把四个方程写成矩阵$Ax=0$的形式，要求矩阵$A$的行列式为0，得到:</p>
-<script type="math/tex; mode=display">
+\psi_1(r)=&amp;Ae^{iKr}+Be^{-iKr},0&lt;r&lt;a\\
+\psi_2(r)=&amp;Ce^{\kappa r}+De^{-\kappa r},-b&lt;r0\\
+\psi_3(r)=&amp;e^{ik(a+b)}\psi_2(r-a-b),a&lt;r&lt;a+b
+\end{align}
+\]</span>
+接着在a与b的中间以及a或b的另外一侧边缘使用连续条件：波函数及其一阶导数连续。如此可以得到4个拼接方程，你可以想象，这四个方程一定是包含有<span
+class="math inline">\(\sinh,\cosh,\sin,\cos\)</span>，把四个方程写成矩阵<span
+class="math inline">\(Ax=0\)</span>的形式，要求矩阵<span
+class="math inline">\(A\)</span>的行列式为0，得到: <span
+class="math display">\[
 \begin{align}
-\frac{\kappa^2-K^2}{2\kappa K}\sinh(\kappa b)\sin(Ka)+\cosh(\kappa b)\cos(Ka)=&\cos(k(a+b))
-\end{align}</script><p>其中k是布洛赫函数的波矢，$K$是a范围内的波矢，$\kappa$是势垒b范围内的波矢，与势垒高度$U_0$相关，能量$E$正比于$K$的平方。所以上式是一个能量E与波矢k的方程，进一步将其化简，我们取$b\to 0,\kappa\to \infty, b\kappa\to$ constant,上式化简为</p>
-<script type="math/tex; mode=display">
+\frac{\kappa^2-K^2}{2\kappa K}\sinh(\kappa b)\sin(Ka)+\cosh(\kappa
+b)\cos(Ka)=&amp;\cos(k(a+b))
+\end{align}
+\]</span> 其中k是布洛赫函数的波矢，<span
+class="math inline">\(K\)</span>是a范围内的波矢，<span
+class="math inline">\(\kappa\)</span>是势垒b范围内的波矢，与势垒高度<span
+class="math inline">\(U_0\)</span>相关，能量<span
+class="math inline">\(E\)</span>正比于<span
+class="math inline">\(K\)</span>的平方。所以上式是一个能量E与波矢k的方程，进一步将其化简，我们取<span
+class="math inline">\(b\to 0,\kappa\to \infty, b\kappa\to\)</span>
+constant,上式化简为 <span class="math display">\[
 \begin{align}
- \frac{\kappa^2 b}{2K}\sin(Ka)+\cos(Ka)=\cos(ka)
-\end{align}</script><p>等式两边都是周期函数，对于一个特定的波矢k，有多个K满足等式，即一个k对应多个能量E，即<strong>能带</strong>。当能量E取某些特定值的时候等式左边绝对值大于1，则不存在对应的波矢k，即<strong>能隙</strong>。可以用mathematica做一个简单的模拟:<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">c</span> <span class="operator">=</span> <span class="number">4</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K1</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">1</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K2</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">5</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K3</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">9</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="built_in">Plot</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="variable">K1</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="operator">,</span> <span class="variable">K2</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="operator">,</span> <span class="variable">K3</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">k</span><span class="operator">,</span> <span class="operator">-</span><span class="built_in">Pi</span><span class="operator">,</span> <span class="built_in">Pi</span><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure><br><img src="band.png" alt=""></p>
+\frac{\kappa^2 b}{2K}\sin(Ka)+\cos(Ka)=\cos(ka)
+\end{align}
+\]</span>
+等式两边都是周期函数，对于一个特定的波矢k，有多个K满足等式，即一个k对应多个能量E，即<strong>能带</strong>。当能量E取某些特定值的时候等式左边绝对值大于1，则不存在对应的波矢k，即<strong>能隙</strong>。可以用mathematica做一个简单的模拟:
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">c</span> <span class="operator">=</span> <span class="number">4</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K1</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">1</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K2</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">5</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="variable">K3</span><span class="punctuation">[</span><span class="type">k_</span><span class="operator">?</span><span class="built_in">NumberQ</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">K</span> <span class="operator">/.</span> <span class="built_in">FindRoot</span><span class="punctuation">[</span><span class="variable">c</span><span class="operator">/</span><span class="built_in">K</span> <span class="built_in">Sin</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="built_in">K</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="built_in">K</span><span class="operator">,</span> <span class="number">9</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="built_in">Plot</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="variable">K1</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="operator">,</span> <span class="variable">K2</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="operator">,</span> <span class="variable">K3</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">^</span><span class="number">2</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">k</span><span class="operator">,</span> <span class="operator">-</span><span class="built_in">Pi</span><span class="operator">,</span> <span class="built_in">Pi</span><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure> <img src="band.png" /></p>
 <p>下面有两种模型分别适用于金属价电子与绝缘体&amp;半导体的电子。</p>
-<h2 id="弱周期势近似"><a href="#弱周期势近似" class="headerlink" title="弱周期势近似"></a>弱周期势近似</h2><p>对于相当多的价电子为s电子和p电子的金属，其感受到的来自离子实的吸引力比较弱，如果我们先忽略离子实，那便是自由电子，此时再把微弱的周期势$V(x)$考虑进去<sup><a href="#fn_1" id="reffn_1">1</a></sup>，则可以采用标准的微扰论来处理（如果忘了微扰论，可以看<a href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>）。</p>
-<blockquote id="fn_1">
-<sup>1</sup>. 因此弱周期势近似又称为近自由电子近似<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<script type="math/tex; mode=display">
+<h2 id="弱周期势近似">弱周期势近似</h2>
+<p>对于相当多的价电子为s电子和p电子的金属，其感受到的来自离子实的吸引力比较弱，如果我们先忽略离子实，那便是自由电子，此时再把微弱的周期势<span
+class="math inline">\(V(x)\)</span>考虑进去<a href="#fn3"
+class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>，则可以采用标准的微扰论来处理（如果忘了微扰论，可以看<a
+href="https://sirohune.site/2023/02/24/%E5%88%9D%E7%AD%89%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/#more">这里</a>）。</p>
+<p><span class="math display">\[
 \begin{align}
-H=H_0+H'
-\end{align}</script><p>非微扰的哈密顿量$H<em>{0}=-\frac{\hbar^{2}}{2m}\nabla^{2}$，其本征矢为平面波$\ket{k}=\frac{1}{\sqrt{L^3}}e^{ik\cdot r}$，对于微扰论，我们的标准步骤是求得微扰哈氏量的矩阵元(或者说是平面波的展开系数)$H’</em>{kk’}$，对于</p>
-<script type="math/tex; mode=display">
+H=H_0+H&#39;
+\end{align}
+\]</span> 非微扰的哈密顿量<span
+class="math inline">\(H_{0}=-\frac{\hbar^{2}}{2m}\nabla^{2}\)</span>，其本征矢为平面波<span
+class="math inline">\(\ket{k}=\frac{1}{\sqrt{L^3}}e^{ik\cdot
+r}\)</span>，对于微扰论，我们的标准步骤是求得微扰哈氏量的矩阵元(或者说是平面波的展开系数)<span
+class="math inline">\(H&#39;_{kk&#39;}\)</span>，对于 <span
+class="math display">\[
 \begin{align}
-H=\frac{\hbar^2}{2m}\nabla^2+v_i(r)-\sum_n \frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
-\end{align}</script><p>的哈氏量，第一项已经被视为非微扰项，其余部分统统打包起来写成一个周期函数$V(x)$，因此</p>
-<script type="math/tex; mode=display">
+H=\frac{\hbar^2}{2m}\nabla^2+v_i(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span>
+的哈氏量，第一项已经被视为非微扰项，其余部分统统打包起来写成一个周期函数<span
+class="math inline">\(V(x)\)</span>，因此 <span class="math display">\[
 \begin{align}
- H'_{kk'}=&\mel{k}{H'}{k'}\\
- =&\mel{k}{V}{k'}\\
- =&\frac{1}{L^{3}}\int V(x)e^{i(k'-k)r}\dd{r}\\
-\end{align}</script><p>因为势能$V(x)$的周期为$R_n$，满足$V(x+R_n)=V(x)$，所以可以写成傅里叶级数</p>
-<script type="math/tex; mode=display">
+H&#39;_{kk&#39;}=&amp;\mel{k}{H&#39;}{k&#39;}\\
+=&amp;\mel{k}{V}{k&#39;}\\
+=&amp;\frac{1}{L^{3}}\int V(x)e^{i(k&#39;-k)r}\dd{r}\\
+\end{align}
+\]</span> 因为势能<span class="math inline">\(V(x)\)</span>的周期为<span
+class="math inline">\(R_n\)</span>，满足<span
+class="math inline">\(V(x+R_n)=V(x)\)</span>，所以可以写成傅里叶级数
+<span class="math display">\[
 \begin{align}
- V(x)=\sum\limits_G \tilde{V}(G)e^{iGr}
-\end{align}</script><p>其中$G$为倒格矢，由于倒格矢的特殊性，容易验证上面的傅里叶展开式满足周期条件。<br>我们将该傅里叶级数形式带入前面的积分中有</p>
-<script type="math/tex; mode=display">
+V(x)=\sum\limits_G \tilde{V}(G)e^{iGr}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(G\)</span>为倒格矢，由于倒格矢的特殊性，容易验证上面的傅里叶展开式满足周期条件。
+我们将该傅里叶级数形式带入前面的积分中有 <span class="math display">\[
 \begin{align}
- H'_{kk'}=&\frac{1}{L^3}\int \sum\limits_G \tilde{V}(G)e^{i(G+k'-k)r}\dd{r}\\
- =&\sum\limits_G \tilde{V}(G)\delta_{G,k-k'}
-\end{align}</script><p>上面利用了积分结果$\int e^{ikr}\dd{r}=V=L^3$. 因此可以看出，在微扰论的视角下，只有满足$G=k-k’$的电子之间才能感受到周期势的效果。（这里我们已经进入了动量空间探讨问题，而不是在位置空间中讨论问题，不同波矢的电子之间以这种方式联系在一起，这在位置空间中是很难想象的）</p>
-<h3 id="非简并微扰"><a href="#非简并微扰" class="headerlink" title="非简并微扰"></a>非简并微扰</h3><h4 id="一阶微扰能量"><a href="#一阶微扰能量" class="headerlink" title="一阶微扰能量"></a>一阶微扰能量</h4><p>我们先考虑非简并的情况，从一阶能量开始算起，一阶微扰能量的公式为$E^1(k)=\mel{k}{H’}{k}$,即</p>
-<script type="math/tex; mode=display">
+H&#39;_{kk&#39;}=&amp;\frac{1}{L^3}\int \sum\limits_G
+\tilde{V}(G)e^{i(G+k&#39;-k)r}\dd{r}\\
+=&amp;\sum\limits_G \tilde{V}(G)\delta_{G,k-k&#39;}
+\end{align}
+\]</span> 上面利用了积分结果<span class="math inline">\(\int
+e^{ikr}\dd{r}=V=L^3\)</span>.
+因此可以看出，在微扰论的视角下，只有满足<span
+class="math inline">\(G=k-k&#39;\)</span>的电子之间才能感受到周期势的效果。（这里我们已经进入了动量空间探讨问题，而不是在位置空间中讨论问题，不同波矢的电子之间以这种方式联系在一起，这在位置空间中是很难想象的）</p>
+<h3 id="非简并微扰">非简并微扰</h3>
+<h4 id="一阶微扰能量">一阶微扰能量</h4>
+<p>我们先考虑非简并的情况，从一阶能量开始算起，一阶微扰能量的公式为<span
+class="math inline">\(E^1(k)=\mel{k}{H&#39;}{k}\)</span>,即 <span
+class="math display">\[
 \begin{align}
- E^1(k)=&H'_{kk}=\sum\limits_G \tilde{V}(G)\delta_{G,0}\\
-=&\tilde{V}(0)
-\end{align}</script><p>这一项是一个与波矢$k$无关的常数，在无微扰的基础上添加上一个与波矢无关的常数并不会改变能量的色散关系$E(k)$,我们总可以对哈氏量添加任意的常数，因此我们将这一项设为0，也就是认为一阶能量微扰为0，因此我们需要进一步计算二阶微扰能量。</p>
-<h4 id="二阶微扰能量"><a href="#二阶微扰能量" class="headerlink" title="二阶微扰能量"></a>二阶微扰能量</h4><p>能量的二阶微扰为</p>
-<script type="math/tex; mode=display">
+E^1(k)=&amp;H&#39;_{kk}=\sum\limits_G \tilde{V}(G)\delta_{G,0}\\
+=&amp;\tilde{V}(0)
+\end{align}
+\]</span> 这一项是一个与波矢<span
+class="math inline">\(k\)</span>无关的常数，在无微扰的基础上添加上一个与波矢无关的常数并不会改变能量的色散关系<span
+class="math inline">\(E(k)\)</span>,我们总可以对哈氏量添加任意的常数，因此我们将这一项设为0，也就是认为一阶能量微扰为0，因此我们需要进一步计算二阶微扰能量。</p>
+<h4 id="二阶微扰能量">二阶微扰能量</h4>
+<p>能量的二阶微扰为 <span class="math display">\[
 \begin{align}
- E^2(k)=&\sum\limits_{k'\neq k}\frac{\abs{H'_{kk'}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k'^2}
-\end{align}</script><p>因为周期势$V(x)$本身是一个很小的量，所以其二阶效应带来的修正很小，一般情况我们不予考虑，所以非简并时电子的能量基本可以认为是自由电子的能量。</p>
+E^2(k)=&amp;\sum\limits_{k&#39;\neq
+k}\frac{\abs{H&#39;_{kk&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}
+\end{align}
+\]</span> 因为周期势<span
+class="math inline">\(V(x)\)</span>本身是一个很小的量，所以其二阶效应带来的修正很小，一般情况我们不予考虑，所以非简并时电子的能量基本可以认为是自由电子的能量。</p>
 <p>但是如果上面的二阶修正分母发散，结果就将大为不同，也就是接下来马上要讨论的简并微扰情况。</p>
-<h3 id="简并微扰"><a href="#简并微扰" class="headerlink" title="简并微扰"></a>简并微扰</h3><p>为了讨论简并微扰，我们将上面的能量二阶修正写得更清楚一些，同时假设系统是一维的$G=\frac{2\pi}{a}$,则有</p>
-<script type="math/tex; mode=display">
+<h3 id="简并微扰">简并微扰</h3>
+<p>为了讨论简并微扰，我们将上面的能量二阶修正写得更清楚一些，同时假设系统是一维的<span
+class="math inline">\(G=\frac{2\pi}{a}\)</span>,则有 <span
+class="math display">\[
 \begin{align}
- E^2(k)=&\sum\limits_{k'\neq k}\frac{\abs{\sum\limits_G \tilde{V}(G)\delta_{G,k-k'}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k'^2}\\
- =&\sum\limits_{k'\neq k}\frac{\abs{\sum\limits_n \tilde{V}(\frac{2n\pi}{a})\delta_{k',k-\frac{2n\pi}{a}}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k'^2}\\
- =&\sum\limits_n \frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{k^2-(k-\frac{2n\pi}{a})^2}}
-\end{align}</script><p>我们在前面已经将$V(0)$设为0，也就是将n=0的项丢掉了，所以上面的n取值不包括0，但是包括了其他所有整数</p>
-<script type="math/tex; mode=display">
+E^2(k)=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_G
+\tilde{V}(G)\delta_{G,k-k&#39;}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_{k&#39;\neq k}\frac{\abs{\sum\limits_n
+\tilde{V}(\frac{2n\pi}{a})\delta_{k&#39;,k-\frac{2n\pi}{a}}}^2}{\frac{\hbar^2}{2m}k^2-\frac{\hbar^2}{2m}k&#39;^2}\\
+=&amp;\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{k^2-(k-\frac{2n\pi}{a})^2}}
+\end{align}
+\]</span> 我们在前面已经将<span
+class="math inline">\(V(0)\)</span>设为0，也就是将n=0的项丢掉了，所以上面的n取值不包括0，但是包括了其他所有整数
+<span class="math display">\[
 \begin{align}
- E^2(k)=\sum\limits_n \frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{2k-\frac{2n\pi}{a}}\frac{2n\pi}{a}}
-\end{align}</script><p>从上面的表达式可以看出，当$k=\frac{n\pi}{a}(n\neq 0)$时$\ket{k}$与$\ket{k’}=\ket{k-\frac{2n\pi}{a}}$态的能量相同，此时分母发散，系统存在简并情况，应该使用简并微扰论进行计算。</p>
-<p>对于非简并微扰论，我们有</p>
-<script type="math/tex; mode=display">
+E^2(k)=\sum\limits_n
+\frac{\abs{V(\frac{2n\pi}{a})}^2}{\frac{\hbar^2}{2m}\pqty{2k-\frac{2n\pi}{a}}\frac{2n\pi}{a}}
+\end{align}
+\]</span> 从上面的表达式可以看出，当<span
+class="math inline">\(k=\frac{n\pi}{a}(n\neq 0)\)</span>时<span
+class="math inline">\(\ket{k}\)</span>与<span
+class="math inline">\(\ket{k&#39;}=\ket{k-\frac{2n\pi}{a}}\)</span>态的能量相同，此时分母发散，系统存在简并情况，应该使用简并微扰论进行计算。</p>
+<p>对于非简并微扰论，我们有 <span class="math display">\[
 \begin{align}
- H'=&\mqty(H'_{\frac{n\pi}{a},\frac{n\pi}{a}}&H'_{\frac{n\pi}{a},-\frac{n\pi}{a}}\\ H'_{-\frac{n\pi}{a},\frac{n\pi}{a}}&H' _{\frac{n\pi}{a},\frac{n\pi}{a}})\\
-=&\pqty{\begin{matrix}0&\tilde{V}(\frac{2n\pi}{a})\\
-\tilde{V}(-\frac{2n\pi}{a})&0
+H&#39;=&amp;\mqty(H&#39;_{\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;_{\frac{n\pi}{a},-\frac{n\pi}{a}}\\
+H&#39;_{-\frac{n\pi}{a},\frac{n\pi}{a}}&amp;H&#39;
+_{\frac{n\pi}{a},\frac{n\pi}{a}})\\
+=&amp;\pqty{\begin{matrix}0&amp;\tilde{V}(\frac{2n\pi}{a})\\
+\tilde{V}(-\frac{2n\pi}{a})&amp;0
 \end{matrix}}
-\end{align}</script><p>因为$\tilde{V}^*(G)=\tilde{V}(-G)$，所以上面的一阶微扰矩阵很容易可以解出</p>
-<script type="math/tex; mode=display">
+\end{align}
+\]</span> 因为<span
+class="math inline">\(\tilde{V}^*(G)=\tilde{V}(-G)\)</span>，所以上面的一阶微扰矩阵很容易可以解出
+<span class="math display">\[
 \begin{align}
- E^1_{\pm}=&\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
- \Rightarrow E_{\pm}=&\frac{\hbar^2 k^2}{2m}\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
- \Delta E=&2\abs{\tilde{V}(\frac{2n\pi}{a})}
-\end{align}</script><p>这便是能隙的产生，比如当n=1时，比如$k=\frac{\pi}{a},k’=-\frac{\pi}{a}$时，能隙为$2\abs{\tilde{V}(\frac{2\pi}{a})}$。未加入周期势时能量关于波矢是一个二次函数，在上述两态的附近分别都是连续的，但是加入周期势后这因为两态的相互作用能隙出现，这个能隙使得能量在$k=\frac{\pi}{a}$与$k=-\frac{\pi}{a}$的左右产生跳跃间断点，因此产生多个能带。</p>
-<p>值得一提的是，在能隙处有$\pdv{E}{k}=0$，这是周期性与对称性共同要求的。</p>
-<h4 id="简约布里渊区图示"><a href="#简约布里渊区图示" class="headerlink" title="简约布里渊区图示"></a>简约布里渊区图示</h4><p>动量空间中产生能隙后，两个能隙之间的间距(指的是k的间隙，能量差距叫能隙的大小)除了$k=\pm\frac{\pi}{a}$是$\frac{2\pi}{a}$外，其余的能隙间距都是$\frac{\pi}{a}$，但是因为对称性使得$\ket{k}$态与$\ket{-k}$态一样，所以实际上其余的能隙间距也是$\frac{2\pi}{a}$，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为$\frac{2\pi}{a}$的区间$[-\frac{\pi}{a},-\frac{\pi}{a}]$内，其余取值与该区间的取值只相差$\frac{2n\pi}{a}$，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
-<h2 id="紧束缚近似"><a href="#紧束缚近似" class="headerlink" title="紧束缚近似"></a>紧束缚近似</h2><p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<sup><a href="#fn_2" id="reffn_2">2</a></sup></strong>，紧束缚近似的出发点是将电子近似为N个简并原子波函数的线性组合，这与前面的进自由电子近似相区别，我们将以电子在原子核某个轨道上的波函数作为非微扰的本征态，而其他原子的吸引势看成微扰。</p>
-<blockquote id="fn_2">
-<sup>2</sup>. 紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
-</blockquote>
+E^1_{\pm}=&amp;\pm \abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Rightarrow E_{\pm}=&amp;\frac{\hbar^2 k^2}{2m}\pm
+\abs{\tilde{V}(\frac{2n\pi}{a})}\\
+\Delta E=&amp;2\abs{\tilde{V}(\frac{2n\pi}{a})}
+\end{align}
+\]</span> 这便是能隙的产生，比如当n=1时，比如<span
+class="math inline">\(k=\frac{\pi}{a},k&#39;=-\frac{\pi}{a}\)</span>时，能隙为<span
+class="math inline">\(2\abs{\tilde{V}(\frac{2\pi}{a})}\)</span>。未加入周期势时能量关于波矢是一个二次函数，在上述两态的附近分别都是连续的，但是加入周期势后这因为两态的相互作用能隙出现，这个能隙使得能量在<span
+class="math inline">\(k=\frac{\pi}{a}\)</span>与<span
+class="math inline">\(k=-\frac{\pi}{a}\)</span>的左右产生跳跃间断点，因此产生多个能带。</p>
+<p>值得一提的是，在能隙处有<span
+class="math inline">\(\pdv{E}{k}=0\)</span>，这是周期性与对称性共同要求的。</p>
+<h4 id="简约布里渊区图示">简约布里渊区图示</h4>
+<p>动量空间中产生能隙后，两个能隙之间的间距(指的是k的间隙，能量差距叫能隙的大小)除了<span
+class="math inline">\(k=\pm\frac{\pi}{a}\)</span>是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>外，其余的能隙间距都是<span
+class="math inline">\(\frac{\pi}{a}\)</span>，但是因为对称性使得<span
+class="math inline">\(\ket{k}\)</span>态与<span
+class="math inline">\(\ket{-k}\)</span>态一样，所以实际上其余的能隙间距也是<span
+class="math inline">\(\frac{2\pi}{a}\)</span>，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为<span
+class="math inline">\(\frac{2\pi}{a}\)</span>的区间<span
+class="math inline">\([-\frac{\pi}{a},-\frac{\pi}{a}]\)</span>内，其余取值与该区间的取值只相差<span
+class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
+<h2 id="紧束缚近似">紧束缚近似</h2>
+<p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></strong>，紧束缚近似的出发点是将电子近似为N个简并原子波函数的线性组合，这与前面的进自由电子近似相区别，我们将以电子在原子核某个轨道上的波函数作为非微扰的本征态，而其他原子的吸引势看成微扰。</p>
 <p>所谓的紧束缚就是假设原子对电子的束缚很紧，使得电子的轨道半径远小于原子核之间的距离，因此我们认为不同原子的轨道波函数是正交的关系。</p>
-<p>转换成数学的语言也就是</p>
-<script type="math/tex; mode=display">
+<p>转换成数学的语言也就是 <span class="math display">\[
 \begin{align}
- \psi(r)=&\sum\limits_{R_n}a_n\phi_i(r-R_n)
-\end{align}</script><script type="math/tex; mode=display">
+\psi(r)=&amp;\sum\limits_{R_n}a_n\phi_i(r-R_n)
+\end{align}
+\]</span> <span class="math display">\[
 \begin{align}
- \int \phi_i^*(r-R_n)\phi_i(r-R_m)\dd{r}=\delta_{mn}
-\end{align}</script><p>其中$\phi_i(r)$是原子轨道的波函数，其中指标i用于标记哪一个原子轨道，比如我们可以用所有简并的$1s$态也可以用所有简并的$2s$态来展开电子波函数<sup><a href="#fn_3" id="reffn_3">3</a></sup>.</p>
-<blockquote id="fn_3">
-<sup>3</sup>. 这里说的简并并不是指$1s$内部的简并态，说的是N个电子的$1s$态是简并的，$2s$同理。<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
-</blockquote>
-<p>通常来说，在考虑晶体中能量和$1s$差不多的电子态的时候，我们使用基态$1s$来做展开，所以后面的$\phi_i$会省去$i$。</p>
-<p>紧束缚近似的晶格势场当然也是周期性的，所以电子的波函数应当满足布洛赫定理</p>
-<script type="math/tex; mode=display">
+\int \phi_i^*(r-R_n)\phi_i(r-R_m)\dd{r}=\delta_{mn}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\phi_i(r)\)</span>是原子轨道的波函数，其中指标i用于标记哪一个原子轨道，比如我们可以用所有简并的<span
+class="math inline">\(1s\)</span>态也可以用所有简并的<span
+class="math inline">\(2s\)</span>态来展开电子波函数<a href="#fn5"
+class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>.</p>
+<p>通常来说，在考虑晶体中能量和<span
+class="math inline">\(1s\)</span>差不多的电子态的时候，我们使用基态<span
+class="math inline">\(1s\)</span>来做展开，所以后面的<span
+class="math inline">\(\phi_i\)</span>会省去<span
+class="math inline">\(i\)</span>。</p>
+<p>紧束缚近似的晶格势场当然也是周期性的，所以电子的波函数应当满足布洛赫定理
+<span class="math display">\[
 \begin{align}
 \psi(r+a)=\psi(r)
-\end{align}</script><p>从这个要求我们可以得到前面电子波函数对$1s$态的展开系数为$\frac{1}{\sqrt{N}}e^{ikR_n}$,即</p>
-<script type="math/tex; mode=display">
+\end{align}
+\]</span> 从这个要求我们可以得到前面电子波函数对<span
+class="math inline">\(1s\)</span>态的展开系数为<span
+class="math inline">\(\frac{1}{\sqrt{N}}e^{ikR_n}\)</span>,即 <span
+class="math display">\[
 \begin{align}
- \psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r)
-\end{align}</script><p>这个表达式称为$1s$原子轨道的布洛赫和</p>
-<p>对于</p>
-<script type="math/tex; mode=display">
+\psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r)
+\end{align}
+\]</span> 这个表达式称为<span
+class="math inline">\(1s\)</span>原子轨道的布洛赫和</p>
+<p>对于 <span class="math display">\[
 \begin{align}
-H=\frac{\hbar^2}{2m}\nabla^2+v(r)-\sum_n \frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
-\end{align}</script><p>的哈氏量，我们从其中的$\frac{\hbar^2}{2m}\nabla^2-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}$视为非微扰的部分，其本证函数取$1s$态，其余的部分统一打包为周期的$V(r)$，包含其余原子核的吸引势。</p>
-<p>对于这个N重简并的系统，我们当然不能使用非简并微扰论，而使用简并微扰论的矩阵来计算该微扰能量也颇有困难的，因此我们换种方法。既然$\psi_k(r)$已经被我们当做系统的本征态了，那哈氏量直接作用在其上应该得到本征能量</p>
-<script type="math/tex; mode=display">
+H=\frac{\hbar^2}{2m}\nabla^2+v(r)-\sum_n
+\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}
+\end{align}
+\]</span> 的哈氏量，我们从其中的<span
+class="math inline">\(\frac{\hbar^2}{2m}\nabla^2-\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r-R_n}}\)</span>视为非微扰的部分，其本证函数取<span
+class="math inline">\(1s\)</span>态，其余的部分统一打包为周期的<span
+class="math inline">\(V(r)\)</span>，包含其余原子核的吸引势。</p>
+<p>对于这个N重简并的系统，我们当然不能使用非简并微扰论，而使用简并微扰论的矩阵来计算该微扰能量也颇有困难的，因此我们换种方法。既然<span
+class="math inline">\(\psi_k(r)\)</span>已经被我们当做系统的本征态了，那哈氏量直接作用在其上应该得到本征能量
+<span class="math display">\[
 \begin{align}
- H\psi_k(r)=&E\psi_k(r)
-\end{align}</script><p>我们在两边同乘$\phi^*(r)$并积分有</p>
-<script type="math/tex; mode=display">
+H\psi_k(r)=&amp;E\psi_k(r)
+\end{align}
+\]</span> 我们在两边同乘<span
+class="math inline">\(\phi^*(r)\)</span>并积分有 <span
+class="math display">\[
 \begin{align}
- \int \phi^*(r)H\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr=&E\int \phi^*(r)\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr\\
- \sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr=&E\sum\limits_n e^{ikR_n}\int \phi^*(r)\phi(r-R_n)dr\\
-E\sum\limits_n e^{ikR_n} \delta_{0,n}=&\sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr
-\end{align}</script><p>将哈氏量分为非微扰与微扰部分得</p>
-<script type="math/tex; mode=display">
+\int \phi^*(r)H\frac{1}{\sqrt{N}}\sum\limits_n
+e^{ikR_n}\phi(r-R_n)dr=&amp;E\int
+\phi^*(r)\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n)dr\\
+\sum\limits_n e^{ikR_n}\int \phi^*(r)H\phi(r-R_n)dr=&amp;E\sum\limits_n
+e^{ikR_n}\int \phi^*(r)\phi(r-R_n)dr\\
+E\sum\limits_n e^{ikR_n} \delta_{0,n}=&amp;\sum\limits_n e^{ikR_n}\int
+\phi^*(r)H\phi(r-R_n)dr
+\end{align}
+\]</span> 将哈氏量分为非微扰与微扰部分得 <span class="math display">\[
 \begin{align}
-E=&\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int \phi^*(r)V(r)\phi(r-R_n)dr}\\
-=&\sum\limits_ne^{ikR_n}\bqty{E^0\delta_{0,n}+\int \phi^*(r)V(r)\phi(r-R_n)dr}\\
-=&E^0-\sum\limits_n e^{ikR_n}J(R_n)
-\end{align}</script><p>其中$E^0$是$1s$态的本征能量，$J(R_n)\triangleq-\int\phi^<em>(r)V(r)\phi(r-R_n)dr$ 称为第0个原子轨道与第n个原子轨道的<em>*交叠积分</em></em>，随着$R_n$是指数衰减的。</p>
-<p>因此我们一般只考虑$n=0\&amp;n=\pm1$的情况，即</p>
-<script type="math/tex; mode=display">
+E=&amp;\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;\sum\limits_ne^{ikR_n}\bqty{E^0\delta_{0,n}+\int
+\phi^*(r)V(r)\phi(r-R_n)dr}\\
+=&amp;E^0-\sum\limits_n e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(E^0\)</span>是<span
+class="math inline">\(1s\)</span>态的本征能量，<span
+class="math inline">\(J(R_n)\triangleq-\int\phi^*(r)V(r)\phi(r-R_n)dr\)</span>
+称为第0个原子轨道与第n个原子轨道的<strong>交叠积分</strong>，随着<span
+class="math inline">\(R_n\)</span>是指数衰减的。</p>
+<p>因此我们一般只考虑<span
+class="math inline">\(n=0\&amp;n=\pm1\)</span>的情况，即 <span
+class="math display">\[
 \begin{align}
- E=E^0-J(0)-\sum\limits_{\expval{R_n}}e^{ikR_n}J(R_n)
-\end{align}</script><p>其中$J(0)=-\int dr V\abs{\phi}^2$，$\expval{R_n}$代表最近邻原子之间的位移。</p>
-<p>以简并立方晶格为例子，最近邻的原子有上下左右前后六个，位矢$R_n$分别为$\mqty(a,0,0),(-a,0,0),(0,a,0)$…等，带入上式可以得到</p>
-<script type="math/tex; mode=display">
+E=E^0-J(0)-\sum\limits_{\expval{R_n}}e^{ikR_n}J(R_n)
+\end{align}
+\]</span> 其中<span class="math inline">\(J(0)=-\int dr
+V\abs{\phi}^2\)</span>，<span
+class="math inline">\(\expval{R_n}\)</span>代表最近邻原子之间的位移。</p>
+<p>以简并立方晶格为例子，最近邻的原子有上下左右前后六个，位矢<span
+class="math inline">\(R_n\)</span>分别为<span
+class="math inline">\(\mqty(a,0,0),(-a,0,0),(0,a,0)\)</span>...等，带入上式可以得到
+<span class="math display">\[
 \begin{align}
- E=&E^0-J(0)-2J(R_n)\pqty{\cos k_xa+\cos k_ya+\cos k_za}\\
-\triangleq&E^0-J_0-2J_1\pqty{\cos k_xa+\cos k_ya+\cos k_za}
-\end{align}</script><p>如果是面心立方，则最近邻有十二个，位矢分别为$\frac12\pqty{1,1,0},\frac12\pqty{-1,1,0}$…等，带入上式有</p>
-<script type="math/tex; mode=display">
+E=&amp;E^0-J(0)-2J(R_n)\pqty{\cos k_xa+\cos k_ya+\cos k_za}\\
+\triangleq&amp;E^0-J_0-2J_1\pqty{\cos k_xa+\cos k_ya+\cos k_za}
+\end{align}
+\]</span> 如果是面心立方，则最近邻有十二个，位矢分别为<span
+class="math inline">\(\frac12\pqty{1,1,0},\frac12\pqty{-1,1,0}\)</span>...等，带入上式有
+<span class="math display">\[
 \begin{align}
- E=&E^0-J_0-2J_1\left(\cos\frac a2(k_x+k_y)+\cos\frac a2(k_x-k_y)+\cos\frac a2(k_x+k_z)\right.\\
-&\left.+\cos\frac a2(k_x-k_z)+\cos\frac a2(k_y+k_z)+\cos\frac a2(k_y-k_z)\right)
-\end{align}</script><p>体心立方的情况就不敲了，很容易可以类比得到。</p>
-<p>从上面的结果可以很容易可以看出，简单立方晶格的能量关于波矢k变化，变化范围为$12J_1$，因此我们说$1s$的单原子能级展宽成<strong>能带</strong>，如法炮制我们可以得到其余原子能级也展宽成能带，这样便也得到了能带，$1s$的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
-<p>对于更高能级的单原子波函数，比如$p$态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
-<h2 id="电子态密度"><a href="#电子态密度" class="headerlink" title="电子态密度"></a>电子态密度</h2><p>态密度我们在上一份笔记是求过的，需要注意的是，之前求的态密度是自由电子气的，也就是已知能量$E$与波矢$k$的关系为</p>
-<script type="math/tex; mode=display">
+E=&amp;E^0-J_0-2J_1\left(\cos\frac a2(k_x+k_y)+\cos\frac
+a2(k_x-k_y)+\cos\frac a2(k_x+k_z)\right.\\
+&amp;\left.+\cos\frac a2(k_x-k_z)+\cos\frac a2(k_y+k_z)+\cos\frac
+a2(k_y-k_z)\right)
+\end{align}
+\]</span> 体心立方的情况就不敲了，很容易可以类比得到。</p>
+<p>从上面的结果可以很容易可以看出，简单立方晶格的能量关于波矢k变化，变化范围为<span
+class="math inline">\(12J_1\)</span>，因此我们说<span
+class="math inline">\(1s\)</span>的单原子能级展宽成<strong>能带</strong>，如法炮制我们可以得到其余原子能级也展宽成能带，这样便也得到了能带，<span
+class="math inline">\(1s\)</span>的能带与其余能带相距较远，没有重叠，但是对于较高的能级，他们的能量差本来就不大，展宽后的能带可能存在重叠现象。</p>
+<p>对于更高能级的单原子波函数，比如<span
+class="math inline">\(p\)</span>态本身是三重简并的，在展开的时候要考虑这三个简并态，因此波函数需要多一个对该三重简并的求和。</p>
+<h2 id="电子态密度">电子态密度</h2>
+<p>态密度我们在上一份笔记是求过的，需要注意的是，之前求的态密度是自由电子气的，也就是已知能量<span
+class="math inline">\(E\)</span>与波矢<span
+class="math inline">\(k\)</span>的关系为 <span class="math display">\[
 \begin{align}
- E=\frac{\hbar^2k^2}{2m}
-\end{align}</script><p>但是显然一般的模型并不具有上述色散关系，因此这一小节主要是推导一般色散关系下的态密度公式。</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>我们可以从定义出发，态密度是单位体积单位能量中的态数目，因此我们可以写出</p>
-<script type="math/tex; mode=display">
+E=\frac{\hbar^2k^2}{2m}
+\end{align}
+\]</span>
+但是显然一般的模型并不具有上述色散关系，因此这一小节主要是推导一般色散关系下的态密度公式。</p>
+<h3 id="方法一">方法一</h3>
+<p>我们可以从定义出发，态密度是单位体积单位能量中的态数目，因此我们可以写出
+<span class="math display">\[
 \begin{align}
- g(E)dE=\frac{dN}{L^D}
-\end{align}</script><p>其中$L^D$是实空间的体积，D是空间维度。在倒格空间中，态数目等于倒格空间的体积$V_k$除以$\pqty{\frac{2\pi}{L}}^D$，这是因为每个态占据的体积为$\pqty{\frac{2\pi}{L}}^D$，若考虑自旋则可以补上因子2，因此态密度可以进一步写为</p>
-<script type="math/tex; mode=display">
+g(E)dE=\frac{dN}{L^D}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(L^D\)</span>是实空间的体积，D是空间维度。在倒格空间中，态数目等于倒格空间的体积<span
+class="math inline">\(V_k\)</span>除以<span
+class="math inline">\(\pqty{\frac{2\pi}{L}}^D\)</span>，这是因为每个态占据的体积为<span
+class="math inline">\(\pqty{\frac{2\pi}{L}}^D\)</span>，若考虑自旋则可以补上因子2，因此态密度可以进一步写为
+<span class="math display">\[
 \begin{align}
- g(E)dE=&\frac{dV_k}{L^D\pqty{\frac{2\pi}{L}}^D}\\
- =&\frac{1}{(2\pi)^D}dk\int_{S(E)}dS
-\end{align}</script><p>其中$S(E)$是倒格空间中满足能量$E(\va{k})=E$的等能面（是一个镶嵌在D维中的<strong>超曲面</strong>），乘上$dk$即到达$E(\va{k})=E+dE$的等能面。这里的$dE$是由$dk$诱导出来的，所以</p>
-<script type="math/tex; mode=display">
+g(E)dE=&amp;\frac{dV_k}{L^D\pqty{\frac{2\pi}{L}}^D}\\
+=&amp;\frac{1}{(2\pi)^D}dk\int_{S(E)}dS
+\end{align}
+\]</span> 其中<span
+class="math inline">\(S(E)\)</span>是倒格空间中满足能量<span
+class="math inline">\(E(\va{k})=E\)</span>的等能面（是一个镶嵌在D维中的<strong>超曲面</strong>），乘上<span
+class="math inline">\(dk\)</span>即到达<span
+class="math inline">\(E(\va{k})=E+dE\)</span>的等能面。这里的<span
+class="math inline">\(dE\)</span>是由<span
+class="math inline">\(dk\)</span>诱导出来的，所以 <span
+class="math display">\[
 \begin{align}
- dE=&\abs{\nabla_{k_i}E}dk\\
- \Rightarrow g(E)\abs{\nabla_{k_i}E}dk=&\frac{1}{(2\pi)^D}dk\int_{S(E)}dS\\
- \Rightarrow g(E)=&\frac{1}{(2\pi)^D}\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}}
-\end{align}</script><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>考虑态数目的两种表达式，态数目等于各微观态<a href="http://sirohune.site/2023/03/15/Statistical-Review-Note/">平均占据数</a>的求和</p>
-<script type="math/tex; mode=display">
+dE=&amp;\abs{\nabla_{k_i}E}dk\\
+\Rightarrow
+g(E)\abs{\nabla_{k_i}E}dk=&amp;\frac{1}{(2\pi)^D}dk\int_{S(E)}dS\\
+\Rightarrow
+g(E)=&amp;\frac{1}{(2\pi)^D}\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span></p>
+<h3 id="方法二">方法二</h3>
+<p>考虑态数目的两种表达式，态数目等于各微观态<a
+href="http://sirohune.site/2023/03/15/Statistical-Review-Note/">平均占据数</a>的求和
+<span class="math display">\[
 \begin{align}
- N={\color{red}2}\sum\limits_{n,k\in BZ}f(E_{n,k})
-\end{align}</script><p>其中因子2来自自旋，采用简约布里渊区图示，只对第一布里渊区内的k求和。另一方面，根据态密度的定义可以写出</p>
-<script type="math/tex; mode=display">
+N={\color{red}2}\sum\limits_{n,k\in BZ}f(E_{n,k})
+\end{align}
+\]</span>
+其中因子2来自自旋，采用简约布里渊区图示，只对第一布里渊区内的k求和。另一方面，根据态密度的定义可以写出
+<span class="math display">\[
 \begin{align}
- N=&L^D\int f(E)g(E)dE\\
- \Rightarrow L^D\int f(E)g(E)dE=&2\sum\limits_{n,k\in BZ}f(E_{n,k})
-\end{align}</script><p>利用积分恒等式$\int \delta(E-E_{n,k})dE=1$,</p>
-<script type="math/tex; mode=display">
+N=&amp;L^D\int f(E)g(E)dE\\
+\Rightarrow L^D\int f(E)g(E)dE=&amp;2\sum\limits_{n,k\in BZ}f(E_{n,k})
+\end{align}
+\]</span> 利用积分恒等式<span class="math inline">\(\int
+\delta(E-E_{n,k})dE=1\)</span>, <span class="math display">\[
 \begin{align}
- \int f(E)g(E)dE=&\frac{2}{L^D}\sum\limits_{n,k\in BZ}f(E_{n,k})\int \delta(E-E_{n,k})dE\\
- =&\frac{2}{L^D}\int dE \sum\limits_{n}f(E)\pqty{\frac{L}{2\pi}}^D\int d^Dk\delta(E-E_{n,k})\\
- =&\frac{2}{(2\pi)^D}\int f(E)\sum\limits_n \int d^D k\delta(E-E_{n,k})\\
-\Rightarrow g(E)=&\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\delta(E-E_{n,k})
-\end{align}</script><p>可以对比发现这个公式与方法一的公式相差一个求和$\sum\limits_n$，其实第一个方法也应该考虑该求和，因为该求和是来自于：能带之间存在交叠现象，如果画在简约布里渊图示中就是横坐标的k与纵坐标的E都相等，但是他们确实是属于不同量子数n的，所以计算的时候应该将重叠的能带考虑进去。</p>
-<p>同时对我个人来说，第二个方法的公式并不能直接拿来计算。什么意思呢？当你给我第二个公式的时候，我计算的过程还是会将其化为方法一的形式，但是两个公式是等价的，因为根据$\delta$函数的性质，可以将其写为</p>
-<script type="math/tex; mode=display">
+\int f(E)g(E)dE=&amp;\frac{2}{L^D}\sum\limits_{n,k\in BZ}f(E_{n,k})\int
+\delta(E-E_{n,k})dE\\
+=&amp;\frac{2}{L^D}\int dE
+\sum\limits_{n}f(E)\pqty{\frac{L}{2\pi}}^D\int d^Dk\delta(E-E_{n,k})\\
+=&amp;\frac{2}{(2\pi)^D}\int f(E)\sum\limits_n \int d^D
+k\delta(E-E_{n,k})\\
+\Rightarrow g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D
+k\delta(E-E_{n,k})
+\end{align}
+\]</span> 可以对比发现这个公式与方法一的公式相差一个求和<span
+class="math inline">\(\sum\limits_n\)</span>，其实第一个方法也应该考虑该求和，因为该求和是来自于：能带之间存在交叠现象，如果画在简约布里渊图示中就是横坐标的k与纵坐标的E都相等，但是他们确实是属于不同量子数n的，所以计算的时候应该将重叠的能带考虑进去。</p>
+<p>同时对我个人来说，第二个方法的公式并不能直接拿来计算。什么意思呢？当你给我第二个公式的时候，我计算的过程还是会将其化为方法一的形式，但是两个公式是等价的，因为根据<span
+class="math inline">\(\delta\)</span>函数的性质，可以将其写为 <span
+class="math display">\[
 \begin{align}
- g(E)=&\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\delta(E-E_{n,k})\\
- =&\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\sum\limits_l \frac{\delta(\va{k}-\va{k_l})}{\abs{\nabla_{k_i}E}}
-\end{align}</script><p>上面积分的意义是对所有满足$E(\va{k_l})=E$的$\va{k}$进行计数，满足左边约束条件的$\va{k}$构成一个超曲面$S(E)$，如果没有$\nabla_K E$，那么积分$\int d^Dk \sum\limits_l \delta(\va{k}-\va{k_l})$就是$S(E)$的面积，现在不过是加上一个积分函数，因此上式进一步化为</p>
-<script type="math/tex; mode=display">
+g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\delta(E-E_{n,k})\\
+=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int d^D k\sum\limits_l
+\frac{\delta(\va{k}-\va{k_l})}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span> 上面积分的意义是对所有满足<span
+class="math inline">\(E(\va{k_l})=E\)</span>的<span
+class="math inline">\(\va{k}\)</span>进行计数，满足左边约束条件的<span
+class="math inline">\(\va{k}\)</span>构成一个超曲面<span
+class="math inline">\(S(E)\)</span>，如果没有<span
+class="math inline">\(\nabla_K E\)</span>，那么积分<span
+class="math inline">\(\int d^Dk \sum\limits_l
+\delta(\va{k}-\va{k_l})\)</span>就是<span
+class="math inline">\(S(E)\)</span>的面积，现在不过是加上一个积分函数，因此上式进一步化为
+<span class="math display">\[
 \begin{align}
- g(E)=&\frac{2}{(2\pi)^D}\sum\limits_n\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}} 
-\end{align}</script><h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>以作业题为例子，考虑二维正方晶格，第一布里渊区为$k_i\in[-\pi/a,\pi/a]$,色散关系为$E(\va{k})=C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)$，第一步我们要得到超曲面$S(\epsilon)$，超曲面上的波矢满足$E(\va{k})=\epsilon$，即</p>
-<script type="math/tex; mode=display">
+g(E)=&amp;\frac{2}{(2\pi)^D}\sum\limits_n\int_{S(E)}\frac{dS}{\abs{\nabla_{k_i}E}}
+\end{align}
+\]</span></p>
+<h3 id="例题">例题</h3>
+<p>以作业题为例子，考虑二维正方晶格，第一布里渊区为<span
+class="math inline">\(k_i\in[-\pi/a,\pi/a]\)</span>,色散关系为<span
+class="math inline">\(E(\va{k})=C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)\)</span>，第一步我们要得到超曲面<span
+class="math inline">\(S(\epsilon)\)</span>，超曲面上的波矢满足<span
+class="math inline">\(E(\va{k})=\epsilon\)</span>，即 <span
+class="math display">\[
 \begin{align}
- S(\epsilon)&:\ C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)-\epsilon=0\\
-\Rightarrow S(\epsilon)&:\ k_x^2-k_y^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}
-\end{align}</script><p>这里需要分类讨论</p>
-<script type="math/tex; mode=display">
+S(\epsilon)&amp;:\ C(\frac{\pi^2}{a^2}+k_x^2-k_y^2)-\epsilon=0\\
+\Rightarrow S(\epsilon)&amp;:\
+k_x^2-k_y^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}
+\end{align}
+\]</span> 这里需要分类讨论 <span class="math display">\[
 \begin{align}
- S(\epsilon):\begin{cases}
- \frac{k_x^2}{A^2}-\frac{k_y^2}{A^2}=1&, A^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}\\
- \frac{k_y^2}{A^2}-\frac{k_x^2}{A^2}=1&, A^2=\frac{\pi^2}{a^2}-\frac{\epsilon}{C}
- \end{cases}
-\end{align}</script><p>无论是那种情况，都是双曲线。而对于被积函数</p>
-<script type="math/tex; mode=display">
+S(\epsilon):\begin{cases}
+\frac{k_x^2}{A^2}-\frac{k_y^2}{A^2}=1&amp;,
+A^2=\frac{\epsilon}{C}-\frac{\pi^2}{a^2}\\
+\frac{k_y^2}{A^2}-\frac{k_x^2}{A^2}=1&amp;,
+A^2=\frac{\pi^2}{a^2}-\frac{\epsilon}{C}
+\end{cases}
+\end{align}
+\]</span> 无论是那种情况，都是双曲线。而对于被积函数 <span
+class="math display">\[
 \begin{align}
- \abs{\nabla_{k_i}E}=&C\abs{(2k_x,-2k_y)}\\
- =&2C\sqrt{k_x^2+k_y^2}
-\end{align}</script><p>同时此时无能带重叠，因此态密度为</p>
-<script type="math/tex; mode=display">
+\abs{\nabla_{k_i}E}=&amp;C\abs{(2k_x,-2k_y)}\\
+=&amp;2C\sqrt{k_x^2+k_y^2}
+\end{align}
+\]</span> 同时此时无能带重叠，因此态密度为 <span class="math display">\[
 \begin{align}
- g(\epsilon)=&\frac{2}{(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{2Ck}\\
- =&\frac{1}{C(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{k}
-\end{align}</script><p>假设是第一种情况，$S(\epsilon):\ k_x^2-k_y^2=A^2$，随意挑选$k_x,k_y$作为积分变量都可以，只要积分上下限不弄错，这里以$k_x$为例子，被积的双曲线具有明显的对称性，积分结果为第一象限的4倍，积分从A到$\pi/a$。积分线元为</p>
-<script type="math/tex; mode=display">
+g(\epsilon)=&amp;\frac{2}{(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{2Ck}\\
+=&amp;\frac{1}{C(2\pi)^2}\int_{S(\epsilon)}\frac{dl}{k}
+\end{align}
+\]</span> 假设是第一种情况，<span class="math inline">\(S(\epsilon):\
+k_x^2-k_y^2=A^2\)</span>，随意挑选<span
+class="math inline">\(k_x,k_y\)</span>作为积分变量都可以，只要积分上下限不弄错，这里以<span
+class="math inline">\(k_x\)</span>为例子，被积的双曲线具有明显的对称性，积分结果为第一象限的4倍，积分从A到<span
+class="math inline">\(\pi/a\)</span>。积分线元为 <span
+class="math display">\[
 \begin{align}
- dl=&\sqrt{1+\frac{k_x^2}{k_x^2-A^2}}dk_x\\
- =&\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}dk_x\\
- \Rightarrow g(\epsilon)=&\frac{1}{C\pi^2}\int_A^{\pi/a}dk_x\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}/\sqrt{2k_x^2-A^2}\\
- =&\frac{1}{C\pi^2}\int_A^{\pi/a}\frac{dk_x}{\sqrt{k_x^2-A^2}}\\
- =&\frac{1}{C\pi^2}arc\cosh\frac{\pi/a}{\sqrt{\epsilon/C-\pi^2/a^2}}
-\end{align}</script>
+dl=&amp;\sqrt{1+\frac{k_x^2}{k_x^2-A^2}}dk_x\\
+=&amp;\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}dk_x\\
+\Rightarrow
+g(\epsilon)=&amp;\frac{1}{C\pi^2}\int_A^{\pi/a}dk_x\sqrt{\frac{2k_x^2-A^2}{k_x^2-A^2}}/\sqrt{2k_x^2-A^2}\\
+=&amp;\frac{1}{C\pi^2}\int_A^{\pi/a}\frac{dk_x}{\sqrt{k_x^2-A^2}}\\
+=&amp;\frac{1}{C\pi^2}arc\cosh\frac{\pi/a}{\sqrt{\epsilon/C-\pi^2/a^2}}
+\end{align}
+\]</span></p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>起码对我来说不是那么自然，我因此想了很久关于n出现的合理性<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>当然也可能老师对此有详细的解释，而我没听课ort<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>因此弱周期势近似又称为近自由电子近似<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>这里说的简并并不是指<span
+class="math inline">\(1s\)</span>内部的简并态，说的是N个电子的<span
+class="math inline">\(1s\)</span>态是简并的，<span
+class="math inline">\(2s\)</span>同理。<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
     </div>
 
     
@@ -704,13 +953,13 @@ E=&\sum\limits_ne^{ikR_n} \bqty{\int \phi^*(r)H^0\phi(r-R_n)dr+\int \phi^*(r)V(r
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">76k</span>
+    <span title="Word count total">118k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:19</span>
+    <span title="Reading time total">3:34</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
