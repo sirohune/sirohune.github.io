@@ -27,7 +27,7 @@
 <meta property="og:description" content="在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-06-06T11:47:28.000Z">
-<meta property="article:modified_time" content="2023-06-06T14:12:08.657Z">
+<meta property="article:modified_time" content="2023-06-07T13:59:59.926Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="physics">
 <meta property="article:tag" content="notes">
@@ -262,9 +262,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-06-06 19:47:28 / Modified: 22:12:08" itemprop="dateCreated datePublished" datetime="2023-06-06T19:47:28+08:00">2023-06-06</time>
+      <time title="Created: 2023-06-06 19:47:28" itemprop="dateCreated datePublished" datetime="2023-06-06T19:47:28+08:00">2023-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-07 21:59:59" itemprop="dateModified" datetime="2023-06-07T21:59:59+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -297,14 +303,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>2.6k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>5 mins.</span>
+      <span>7 mins.</span>
     </span>
 </div>
 
@@ -363,18 +369,24 @@ document.addEventListener('DOMContentLoaded', () => {
 <script type="math/tex; mode=display">
 \begin{align}
  &\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
- &-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar \pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
- &-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
- &-m^2c^4 \beta^2=0
+ &{\color{red}-\hbar^2\pdv[2]{t}}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar \pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
+ &{\color{red}-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot p\beta}+imc^2\hbar\beta\pdv{t}-{\color{red}mc^3\beta\alpha\cdot p}\\
+ &{\color{red}-m^2c^4 \beta^2}=0
 \end{align}</script><script type="math/tex; mode=display">
 \begin{align}
 \Rightarrow& \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2 \alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
-\end{align}</script><p>然后将其与KG方程（令V=0）$(-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0$对比得到</p>
+\end{align}</script><p>然后将其与KG方程（令V=0）$(-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0$对比得到${\alpha_i,\beta}=0,\beta^2=1$以及$\alpha_i\alpha_jp^ip^j=0$，最后一个式子可以改写为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \frac{1}{2}(\alpha_i\alpha_jp^ip^j+\alpha_j\alpha_ip^jp^i)&= 0\\
+ \{\alpha_i,\alpha_j\}p^ip^j&= 2p_ip^i\\
+ \Rightarrow \{\alpha_i,\alpha_j\}&= 2\delta_{ij}
+\end{align}</script><p>综上有</p>
 <script type="math/tex; mode=display">
 \begin{align}
  \begin{cases}
    \{\alpha_i,\beta\}=0 & \\
-   \alpha_i\alpha_j=\delta_{ij}  & \\
+   \{\alpha_i,\alpha_j\}= 2\delta_{ij}  & \\
    \beta^2=1
  \end{cases}
 \end{align}</script><p>在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac Equation)</strong>，值得一提的是，<strong>Dirac Equation</strong>是可以纳入到量子力学的基本原理$i\hbar\pdv{t}\psi=H\psi$中的，其中$H$写为</p>
@@ -390,8 +402,29 @@ document.addEventListener('DOMContentLoaded', () => {
 <sup>3</sup>. 这是值得仔细思考的<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
 </blockquote>
 <p>因此狄拉克方程的解应当存在于标量函数空间与另一空间的直积空间当中。该方程计算得到的氢原子能级与实验符合得很好。根据我们初等量子力学的知识知道，电子除了空间部分的信息，还有自旋的信息，所以可以知道这一新的空间是自旋的空间。</p>
-<p>接下来我们定义新的符号来将上面的式子化简…</p>
-<h2 id="gamma-矩阵"><a href="#gamma-矩阵" class="headerlink" title="$\gamma$矩阵"></a>$\gamma$矩阵</h2>
+<p>接下来我们定义新的符号来将上面的式子化简，出于符号的使用习惯，得到的结果可能与喀书上的不同。</p>
+<p>将Dirac方程写到等式的左侧</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \bqty{i\hbar \pdv{t}-qV-c\alpha\cdot (p-qA)-mc^2\beta}\psi=0
+\end{align}</script><p>等式两端同乘一个$-\beta$，得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \bqty{-i\beta\hbar\pdv{t}+q\beta V+c\beta\alpha\cdot(p-qA)+mc^2}\psi=0
+\end{align}</script><p>取$x^\mu=(ct,x^i)^T$，$p<em>\mu=(\frac{i\hbar}{c}\pdv{t},p_i)$以及$A</em>\mu=(\frac{V}{c},A_i)$。喀的书上讲时间维度放在4号位置，同时加上了虚数，估计后文的度规会变成$\delta$，但我习惯用$\eta$，因此先用自己习惯的式子推导，后面如果不方便再换。在这样的四矢量定义下，上式变为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \bqty{-\beta c(p_0-qA_0)+c\beta \alpha_i(p^i-qA^i)+mc^2}\psi&= 0
+\end{align}</script><p>令上式中的$\beta\triangleq\gamma_0$，$\beta\alpha_i\triangleq \gamma_i$  ，则上式变为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \bqty{c\gamma_\mu (p^\mu-qA^\mu)+mc^2}\psi=0
+\end{align}</script><p>注意，我很早就开始使用爱因斯坦求和约定了，我采取的度规是$\eta=\text{diag}(-1,1,1,1)$ ,空间指标的升降不改变符号，时间指标升降出一个负号，因此$\gamma_0$是$\beta$而不是$-\beta$. </p>
+<p>在新的符号下，算符的对易关系为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \{\gamma_\mu,\gamma_\nu\}=2\delta
+\end{align}</script><h2 id="gamma-矩阵"><a href="#gamma-矩阵" class="headerlink" title="$\gamma$矩阵"></a>$\gamma$矩阵</h2>
     </div>
 
     
@@ -446,13 +479,13 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">75k</span>
+    <span title="Word count total">76k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:17</span>
+    <span title="Reading time total">2:19</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
