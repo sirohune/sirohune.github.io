@@ -27,12 +27,13 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="固体物理学习笔记（能带）">
 <meta property="og:url" content="https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2/index.html">
-<meta property="og:site_name" content="はくのblog">
+<meta property="og:site_name" content="はくのBlog">
 <meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 自由电子气有三个近似  自由电子近似 单电子近似 弛豫时间近似  这三个近似是自由电子气模型的基础，自由电子气模型一定程度上可以描述现实世界，但很显然还有不足之处，主要来自于近似过度。能带论是从自由电子气发展来的另外一个模型，它取消了自由电子近似，开始研究离子实对电子的影响。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2/band.png">
+<meta property="og:image" content="https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2/%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA.png">
 <meta property="article:published_time" content="2023-04-11T13:52:21.000Z">
-<meta property="article:modified_time" content="2023-06-14T11:02:52.173Z">
+<meta property="article:modified_time" content="2023-06-21T16:49:57.434Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="物理">
@@ -48,7 +49,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2/","path":"2023/04/11/Solid-State-Physics-Note-Part-2/","title":"固体物理学习笔记（能带）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>固体物理学习笔记（能带） | はくのblog</title>
+<title>固体物理学习笔记（能带） | はくのBlog</title>
   
 
 
@@ -62,7 +63,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
   
-  <link rel="alternate" type="application/rss+xml" title="はくのblog" href="https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/04/11/Solid-State-Physics-Note-Part-2//atom.xml">
   
 
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
@@ -120,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">はくのblog</p>
+      <p class="site-title">はくのBlog</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">发电的地方</p>
+      <p class="site-subtitle" itemprop="description">百洛的小屋</p>
   </div>
 
   <div class="site-nav-right">
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86bloch-theorem%E4%B8%8E%E8%83%BD%E5%B8%A6"><span class="nav-text">布洛赫定理(Bloch
-Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6"><span class="nav-text">电子态密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E7%94%B5%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="nav-text">布洛赫电子动力学</span></a></li></ol></div>
+Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86"><span class="nav-text">布洛赫定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-text">布洛赫定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E7%9F%A2k%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="nav-text">波矢k的物理意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E5%B8%A6"><span class="nav-text">关于能带</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%91%A8%E6%9C%9F%E5%8A%BF%E8%BF%91%E4%BC%BC"><span class="nav-text">弱周期势近似</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">非简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">一阶微扰能量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E5%BE%AE%E6%89%B0%E8%83%BD%E9%87%8F"><span class="nav-text">二阶微扰能量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%B9%B6%E5%BE%AE%E6%89%B0"><span class="nav-text">简并微扰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E7%BA%A6%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA%E5%9B%BE%E7%A4%BA"><span class="nav-text">简约布里渊区图示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E6%9D%9F%E7%BC%9A%E8%BF%91%E4%BC%BC"><span class="nav-text">紧束缚近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%80%81%E5%AF%86%E5%BA%A6"><span class="nav-text">电子态密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E7%94%B5%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="nav-text">布洛赫电子动力学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E9%9D%A2%E6%B3%A2%E6%B3%A2%E5%8C%85"><span class="nav-text">平面波波包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E6%B4%9B%E8%B5%AB%E6%B3%A2%E5%8C%85"><span class="nav-text">布洛赫波包</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -269,12 +270,12 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="はくのblog">
+      <meta itemprop="name" content="はくのBlog">
       <meta itemprop="description" content="物理与人生">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="固体物理学习笔记（能带） | はくのblog">
+      <meta itemprop="name" content="固体物理学习笔记（能带） | はくのBlog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -297,7 +298,7 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-14 19:02:52" itemprop="dateModified" datetime="2023-06-14T19:02:52+08:00">2023-06-14</time>
+      <time title="修改时间：2023-06-22 00:49:57" itemprop="dateModified" datetime="2023-06-22T00:49:57+08:00">2023-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -330,14 +331,14 @@ Theorem)与能带</span></a><ol class="nav-child"><li class="nav-item nav-level-
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>15k</span>
+      <span>19k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>28 分钟</span>
+      <span>35 分钟</span>
     </span>
 </div>
 
@@ -649,7 +650,11 @@ class="math inline">\(\ket{-k}\)</span>态一样，所以实际上其余的能�
 class="math inline">\(\frac{2\pi}{a}\)</span>，这恰好就是一维布里渊区的大小（其实并不是巧合）。因此我们在绘制能带的时候可以采取一些技巧，将所以的k值限制在一个大小为<span
 class="math inline">\(\frac{2\pi}{a}\)</span>的区间<span
 class="math inline">\([-\frac{\pi}{a},-\frac{\pi}{a}]\)</span>内，其余取值与该区间的取值只相差<span
-class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>，而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>。</p>
+class="math inline">\(\frac{2n\pi}{a}\)</span>，这种技巧是课堂的主要讲法，其实是把k的取值约束在第一布里渊区中，这种图示方法叫做<strong>简约布里渊区图示</strong>（如下方右图），而取遍所有k值的图示方法叫做<strong>重复布里渊区图示</strong>（如下方左图）。</p>
+<figure>
+<img src="布里渊区.png" alt="图源PPT|600" />
+<figcaption aria-hidden="true">图源PPT|600</figcaption>
+</figure>
 <h2 id="紧束缚近似">紧束缚近似</h2>
 <p>在很多绝缘体和半导体晶体中，电子受原子核吸引作用很强，被紧密束缚在原子核附近，这对应晶格势场大于动能的情况，用弱周期势近似不适合。此时我们采取一种新的近似叫做<strong>紧束缚近似<a
 href="#fn4" class="footnote-ref" id="fnref4"
@@ -900,6 +905,167 @@ g(\epsilon)=&amp;\frac{1}{C\pi^2}\int_A^{\pi/a}dk_x\sqrt{\frac{2k_x^2-A^2}{k_x^2
 \end{align}
 \]</span></p>
 <h2 id="布洛赫电子动力学">布洛赫电子动力学</h2>
+<p>本章有三个重要的结论:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>布洛赫波包群速度</th>
+<th>布洛赫电子有效质量</th>
+<th>动量的改变</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(v_k=\frac{1}{\hbar}\nabla_k
+E_k\)</span></td>
+<td><span
+class="math inline">\(m^*=\hbar^2(\pdv{E_k}{k_x}{k_y})^{-1}\)</span></td>
+<td><span class="math inline">\(\dv{k}{t}=\frac{F}{\hbar}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>经典力学的粒子与量子力学的波函数直接用波包状的波函数来衔接，因此波包的描述属于<strong>准经典</strong>模型。这种描述是合理的，因为波包的中心是确定的，同时又具有一定的展宽，其傅里叶变换得到动量空间的波函数，也是波包状，且展宽与位置空间的展宽成反比，恰好对应于量子力学中的不确定关系
+<span class="math display">\[
+\begin{align}
+\Delta r\cdot \Delta p\geq \frac{\hbar}{2}
+\end{align}
+\]</span></p>
+<p>前面解出的<span
+class="math inline">\(\psi_k\)</span>都是布洛赫电子的本征函数，而布洛赫电子的波函数应该是这些本征函数的叠加，且按照我们上面的说法，叠加后的结果应该是波包状的。为了讨论布洛赫波包，我们首先从平面波波包开始讨论。</p>
+<h3 id="平面波波包">平面波波包</h3>
+<p>对于一个中心在<span
+class="math inline">\(r_0\)</span>的平面波波包<span
+class="math inline">\(w(r)=\sum\limits_k
+\tilde{w}(k-k_0)e^{ik(r-r_0)}\)</span>. <span
+class="math inline">\(\tilde{w}\)</span>既是平面波叠加系数，也是动量空间的波函数，应当是分布在<span
+class="math inline">\(k_0\)</span>附近的波函数。<strong>准经典运动不关心波包的具体形式，只关心他们的中心位置如何随时间变化</strong>，因此我们可以选取熟悉的高斯型波包:
+<span class="math display">\[
+\begin{align}
+\tilde{w}(k-k_0)=\alpha e^{-\frac{(k-k_0)^2\Delta r^2}{2}}
+\end{align}
+\]</span> 因此位置空间的波包为 <span class="math display">\[
+\begin{align}
+w(r)&amp;= \alpha\sum\limits_k \exp(-\frac{(k-k_0)^2}{2})e^{ik(r-r_0)}\\
+&amp;= \alpha e^{ik(r-r_0)}(\frac{L}{2\pi})^D\int dk^D
+\exp(-\frac{(k-k_0)^2\Delta r^2}{2})e^{i(k-k_0)(r-r_0)}\\
+&amp;\propto \exp(-\frac{(r-r_0)^2}{2\Delta r^2})
+\end{align}
+\]</span> 确实得到了一个中心在<span
+class="math inline">\(r_0\)</span>的波包，且高斯波包的展宽为<span
+class="math inline">\(2\sigma=2\Delta
+r\)</span>，动量空间中的展宽为<span
+class="math inline">\(\frac{2}{\Delta
+r}\)</span>。<strong>位置和动量波函数的中心同时确定，因此叫准经典粒子</strong>。、</p>
+<h3 id="布洛赫波包">布洛赫波包</h3>
+<p>仿照平面波波包的构造（简单起见，波包中心设在0处） <span
+class="math display">\[
+\begin{align}
+b(r)&amp;= \sum\limits_k \tilde{b}(k-k_0)\psi_k(r)\\
+&amp;= \sum\limits_k \tilde{b}(k-k_0)e^{ikr}u_k(r)
+\end{align}
+\]</span>
+其中第二步是有布洛赫定理写出。接下来要采用<strong>包络近似(envelope
+approximation)</strong>，即要求动量空间中的波包比较集中，展宽<span
+class="math inline">\(\frac{2}{\Delta r}\)</span>
+远小于第一布里渊区的宽度<span
+class="math inline">\(\frac{2\pi}{a}\)</span>，后面的讨论都基于这个近似。</p>
+<p>在这个近似下 <span class="math display">\[
+\begin{align}
+\tilde{b}(k-k_0)u_k(r)&amp;\approx \tilde{b}(k-k_0)u_{k_0}(r)
+\end{align}
+\]</span> 因为<span
+class="math inline">\(\tilde{w}\)</span>集中分布在<span
+class="math inline">\(k_0\)</span>附近，因此其余部分乘上<span
+class="math inline">\(u_k(r)\)</span>可以近似忽略。因此有 <span
+class="math display">\[
+\begin{align}
+b(r)&amp;=u_{k_0}(r)\sum\limits_k \tilde{b}(k-k_0)e^{ikr}\\
+&amp;= w(r)u_{k_0}(r)
+\end{align}
+\]</span>
+第一个因子是平面波波包，第二个因子是一个周期函数。由于包络近似，周期函数的周期远小于包络近似的展宽，因此布洛赫波包<span
+class="math inline">\(b(r)\)</span>是一个被波包调制的周期函数。 <img
+src="波包.png" alt="图源PPT|600" /></p>
+<p>上图中左边是平面波波包，右边是布洛赫波包<a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>
+.</p>
+<p>上面只是演示一下布洛赫波包的构造方法，我们还没得到我们想要的中心位置随时间变化的关系。下面考虑<strong>布洛赫波包随时间演化</strong>。</p>
+<p><span class="math display">\[
+\begin{align}
+b(r,t)&amp;= \sum\limits_k \tilde{b}(k-k_0)e^{-iE_kt/\hbar}\psi_k(r)\\
+&amp;= u_{k_0}(r)\sum\limits_k \tilde{b}(k-k_0)e^{i(kr-E_kt/\hbar)}
+\end{align}
+\]</span> 由于包络近似，<span
+class="math inline">\(E_k\)</span>应该在<span
+class="math inline">\(k_0\)</span>附近展开，若是展开到零阶<span
+class="math inline">\(E_k\approx
+E_{k_0}\)</span>，得到的结果相比无非是多了一个因子<span
+class="math inline">\(e^{-iE_{k_0}t/\hbar}\)</span>，波包并不移动，因此我们需要展开到一阶
+<span class="math display">\[
+\begin{align}
+E_k&amp;\approx E_{k_0}+(k-k_0)\nabla_{k_0} E_{k_0}\\
+&amp;= E_{k_0}-k_0\nabla_{k_0} E_{k_0}+\color{red}{k\nabla_{k_0}
+E_{k_0}}
+\end{align}
+\]</span> 则布洛赫波包为 <span class="math display">\[
+\begin{align}
+b(r,t)&amp;= u_{k_0}(r)e^{-i(E_{k_0}-k_0\nabla_{k_0}
+E_{k_0})t/\hbar}\sum\limits_k \tilde{b}(k-k_0)e^{ik(r-\nabla_{k_0}
+E_{k_0}t/\hbar)}\\
+&amp;= u_{k_0}(r)e^{-if(k_0)t}w(r-t\nabla_{k_0} E_{k_0}/\hbar)
+\end{align}
+\]</span> 因此可以直接读数波包中心移动的速度为 <span
+class="math display">\[
+\begin{align}
+\dv{r}{t}=\frac{1}{\hbar}\nabla_kE_k
+\end{align}
+\]</span> 例如一维紧束缚近似的能带<span
+class="math inline">\(E_k=-2J\cos(ka)\)</span>，求出波包群速度为 <span
+class="math display">\[
+\begin{align}
+v_k&amp;= \frac{2Ja}{\hbar}\sin(ka)
+\end{align}
+\]</span> ### 外力作用下波包的运动</p>
+<p>外力下系统哈密顿量写为 <span class="math display">\[
+\begin{align}
+H=H_0-F\cdot r
+\end{align}
+\]</span> 因此无穷小时间后的布洛赫态为 <span class="math display">\[
+\begin{align}
+\psi_k(r,dt)&amp;= e^{-iHdt/\hbar}\psi_k(r,0)\\
+&amp;= e^{-i(E_k-F\cdot r)dt/\hbar}e^{ikr}u_k(r)\\
+&amp;= e^{-iE_kdt/\hbar}e^{i(k+F\cdot rdt/\hbar)}u_k(r)
+\end{align}
+\]</span> 包络近似下<span class="math inline">\(u_k\approx
+u_{k_0}\)</span>，因此上式为 <span class="math display">\[
+\begin{align}
+\psi_k(r,dt)&amp;= e^{-iE_kdt/\hbar}e^{i(k+F\cdot
+rdt/\hbar)}u_{k_0}(r)\\
+&amp;= e^{-iE_kdt/\hbar}\psi_{k+Fdt/\hbar}(r)
+\end{align}
+\]</span> 因此得到 <span class="math display">\[
+\begin{align}
+\dv{k}{t}&amp;= \frac{F}{\hbar}
+\end{align}
+\]</span> 如果把<span class="math inline">\(\hbar
+k\)</span>理解为动量，这其实就是经典力学的方程<span
+class="math inline">\(\dot{p}=F\)</span>.</p>
+<p>进一步利用经典的牛顿第三定律，我们可以得到布洛赫电子的有效质量。回忆上一小节的结果
+<span class="math display">\[
+\begin{align}
+F&amp;= m^*a\\
+&amp;= m^*\dot{v_k}\\
+&amp;= \frac{m^*}{\hbar}\pdv{E_k}{k_i}{k_j}\dv{k_j}{t}e_i\\
+&amp;= \hbar\dv{k_i}{t}e_i\\
+\Rightarrow m^*&amp;= \hbar^2 (\pdv{E_k}{k_i}{k_j})^{-1}
+\end{align}
+\]</span>
+可见半经典模型下，强行用一些经典的概念和公式去套，得到的有效质量是一个张量。</p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -911,13 +1077,17 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>因此弱周期势近似又称为近自由电子近似<a href="#fnref3"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>紧束缚近似在化学中称为原子轨道线性组合发（LCAO）<a
+<li id="fn4"><p>紧束缚近似在化学中称为原子轨道线性组合法（LCAO）<a
 href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>这里说的简并并不是指<span
 class="math inline">\(1s\)</span>内部的简并态，说的是N个电子的<span
 class="math inline">\(1s\)</span>态是简并的，<span
 class="math inline">\(2s\)</span>同理。<a href="#fnref5"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn6"><p>PPT中的波函数记号与我的不同，一方面PPT中不区分位置空间与动量空间，<span
+class="math inline">\(w(r),w(k)\)</span>不加以区分，另一方面平面波用小写w，布洛赫用大写W。<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -978,13 +1148,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">122k</span>
+    <span title="站点总字数">126k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:42</span>
+    <span title="站点阅读时长">3:48</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
