@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8Bdirac-equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#klein-gordon-equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirac-equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma%E7%9F%A9%E9%98%B5"><span class="nav-text">\(\gamma\)矩阵</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B-Dirac-Equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Klein-Gordon-Equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dirac-Equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma-%E7%9F%A9%E9%98%B5"><span class="nav-text">$\gamma$矩阵</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -341,126 +341,81 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
 <span id="more"></span>
-<pre><code>参考教材:《高等量子力学》——喀兴林</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
+<pre><code>参考教材:《高等量子力学》——喀兴林
+</code></pre><script type="math/tex; mode=display">
+\require{physics}</script><p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的$\gamma$矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
+<h1 id="狄拉克方程-Dirac-Equation"><a href="#狄拉克方程-Dirac-Equation" class="headerlink" title="狄拉克方程(Dirac Equation)"></a>狄拉克方程(Dirac Equation)</h1><h2 id="电子的相对论运动方程"><a href="#电子的相对论运动方程" class="headerlink" title="电子的相对论运动方程"></a>电子的相对论运动方程</h2><h3 id="Klein-Gordon-Equation"><a href="#Klein-Gordon-Equation" class="headerlink" title="Klein-Gordon Equation"></a>Klein-Gordon Equation</h3><p>回忆初等量子力学中，电子在电磁场中的运动方程为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
+ i\hbar\pdv{t}\psi=H\psi
+\end{align}</script><p>其中哈密顿量的表达式为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
+ H=\frac{(p-qA)^2}{2m}+qV
+\end{align}</script><p>很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
+ (i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
+\end{align}</script><blockquote id="fn_1">
+<sup>1</sup>. 对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<sup><a href="#fn_2" id="reffn_2">2</a></sup>，因为他有一系列问题:</p>
+<blockquote id="fn_2">
+<sup>2</sup>. 事实上我们知道，这应该是spin=0粒子的自由运动方程<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
 <ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
+<li>概率诠释$\psi^*\psi$并不是正定的，缺乏物理意义</li>
+<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到$-\infty$能级</li>
+<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的$\pdv{\psi}{t}$</li>
 <li>最重要的是，该方程计算的氢原子能级与实验不符</li>
 </ul>
 <p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法
-<span class="math display">\[
+<h3 id="Dirac-Equation"><a href="#Dirac-Equation" class="headerlink" title="Dirac Equation"></a>Dirac Equation</h3><p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
+<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha_x(-i\hbar\pdv{x})-c\alpha_y(-i\hbar\pdv{y})-c\alpha_z(-i\hbar\pdv{z})-\beta
-mc^2}\psi=0
-\end{align}
-\]</span> 其中质量与光速c的引入是为了使系数<span
-class="math inline">\(\alpha_i,\
-\beta\)</span>无量纲，同时这四个系数应当是（我觉得是假设的）定值，也就是说与时空无关。我们可以将其简写为
-<span class="math display">\[
+ \bqty{i\hbar\pdv{t}-c\alpha_x(-i\hbar\pdv{x})-c\alpha_y(-i\hbar\pdv{y})-c\alpha_z(-i\hbar\pdv{z})-\beta mc^2}\psi=0
+\end{align}</script><p>其中质量与光速c的引入是为了使系数$\alpha_i,\ \beta$无量纲，同时这四个系数应当是（我觉得是假设的）定值，也就是说与时空无关。我们可以将其简写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0
-\end{align}
-\]</span>
-因为我们要求满足该方程的解还能满足KG方程，因此我们在上式左边作用 <span
-class="math display">\[
+ \bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0
+\end{align}</script><p>因为我们要求满足该方程的解还能满足KG方程，因此我们在上式左边作用</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}
-\end{align}
-\]</span> 得到 <span class="math display">\[
+ \bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}
+\end{align}</script><p>得到</p>
+<script type="math/tex; mode=display">
 \begin{align}
-&amp;\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta
-mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
-&amp;-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar
-\pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
-&amp;-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot
-p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
-&amp;-m^2c^4 \beta^2=0
-\end{align}
-\]</span> <span class="math display">\[
+ &\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
+ &-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar \pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
+ &-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
+ &-m^2c^4 \beta^2=0
+\end{align}</script><script type="math/tex; mode=display">
 \begin{align}
-\Rightarrow&amp; \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2
-\alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
-\end{align}
-\]</span></p>
-<p>然后将其与KG方程（令V=0）<span
-class="math inline">\((-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0\)</span>对比得到
-<span class="math display">\[
+\Rightarrow& \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2 \alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
+\end{align}</script><p>然后将其与KG方程（令V=0）$(-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0$对比得到</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\begin{cases}
-   \{\alpha_i,\beta\}=0 &amp; \\
-   \alpha_i\alpha_j=\delta_{ij}  &amp; \\
+ \begin{cases}
+   \{\alpha_i,\beta\}=0 & \\
+   \alpha_i\alpha_j=\delta_{ij}  & \\
    \beta^2=1
-\end{cases}
-\end{align}
-\]</span>
-在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac
-Equation)</strong>，值得一提的是，<strong>Dirac
-Equation</strong>是可以纳入到量子力学的基本原理<span
-class="math inline">\(i\hbar\pdv{t}\psi=H\psi\)</span>中的，其中<span
-class="math inline">\(H\)</span>写为 <span class="math display">\[
+ \end{cases}
+\end{align}</script><p>在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac Equation)</strong>，值得一提的是，<strong>Dirac Equation</strong>是可以纳入到量子力学的基本原理$i\hbar\pdv{t}\psi=H\psi$中的，其中$H$写为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=c\alpha\cdot p+mc^2\beta
-\end{align}
-\]</span> 在电磁场中我们可以直接推广为 <span class="math display">\[
+ H=c\alpha\cdot p+mc^2\beta
+\end{align}</script><p>在电磁场中我们可以直接推广为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=c\alpha\cdot(p-qA)+qV+mc^2\beta
-\end{align}
-\]</span> 式子中的<span class="math inline">\(\alpha,\
-\beta\)</span>显然是算符，因为量子力学当中哈密顿量是一个算符，对于上面的等式当然要求右式是算符。或者从上面式子的要求<span
-class="math inline">\(\{\alpha_i,\beta\}=0\)</span>也能看出他们是算符。量子力学中的算符基本都是由<span
-class="math inline">\(x,p\)</span>组成，而这两个算符不是，因此这两个算符的出现意味着新的解空间的出现，不同于以往的函数空间<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
+ H=c\alpha\cdot(p-qA)+qV+mc^2\beta
+\end{align}</script><p>式子中的$\alpha,\ \beta$显然是算符，因为量子力学当中哈密顿量是一个算符，对于上面的等式当然要求右式是算符。或者从上面式子的要求${\alpha_i,\beta}=0$也能看出他们是算符。量子力学中的算符基本都是由$x,p$组成，而这两个算符不是，因此这两个算符的出现意味着新的解空间的出现，不同于以往的函数空间<sup><a href="#fn_3" id="reffn_3">3</a></sup>。</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 这是值得仔细思考的<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
 <p>因此狄拉克方程的解应当存在于标量函数空间与另一空间的直积空间当中。该方程计算得到的氢原子能级与实验符合得很好。根据我们初等量子力学的知识知道，电子除了空间部分的信息，还有自旋的信息，所以可以知道这一新的空间是自旋的空间。</p>
-<p>接下来我们定义新的符号来将上面的式子化简...</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>这是值得仔细思考的<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-
+<p>接下来我们定义新的符号来将上面的式子化简…</p>
+<h2 id="gamma-矩阵"><a href="#gamma-矩阵" class="headerlink" title="$\gamma$矩阵"></a>$\gamma$矩阵</h2>
     </div>
 
     
@@ -518,13 +473,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">126k</span>
+    <span title="站点总字数">93k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">2:49</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
