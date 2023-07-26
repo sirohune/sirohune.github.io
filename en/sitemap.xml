@@ -149,21 +149,14 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/daily/</loc>
-    <lastmod>2023-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://sirohune.site/en/tags/Mountain-travel/</loc>
-    <lastmod>2023-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sirohune.site/en/tags/notes/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sirohune.site/en/tags/Mathematical-physics/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -198,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/Mathematical-physics/</loc>
-    <lastmod>2023-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sirohune.site/en/tags/Solid-state-physics/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -219,6 +205,20 @@
   </url>
   
   <url>
+    <loc>https://sirohune.site/en/tags/daily/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://sirohune.site/en/tags/Mountain-travel/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://sirohune.site/en/tags/Thermodynamic-physics/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/Reading-notes/</loc>
+    <loc>https://sirohune.site/en/tags/Quantum-Mechanics/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/tags/Quantum-Mechanics/</loc>
+    <loc>https://sirohune.site/en/tags/Reading-notes/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -249,14 +249,14 @@
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/categories/Life/</loc>
+    <loc>https://sirohune.site/en/categories/physics/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sirohune.site/en/categories/physics/</loc>
+    <loc>https://sirohune.site/en/categories/Life/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
