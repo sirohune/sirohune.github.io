@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="aNO5OJ0VXdBc3AINNLH0mJJyAQkuN8KK-ipMzb6CLJ0">
+  <meta name="msvalidate.01" content="81D4979F22922ACDEC47E732B4E79F86">
+  <meta name="baidu-site-verification" content="codeva-8Bwmu2OwNw">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="为了解决网站上的bug，同时更好地自定义自己的网站，决定学习一些前端语言。 参考资料：http:&#x2F;&#x2F;c.biancheng.net&#x2F;view&#x2F;9381.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML-Study-Note">
+<meta property="og:url" content="https://sirohune.site/2023/06/12/HTML&CSS-Study-Note/index.html">
+<meta property="og:site_name" content="はくのBlog">
+<meta property="og:description" content="为了解决网站上的bug，同时更好地自定义自己的网站，决定学习一些前端语言。 参考资料：http:&#x2F;&#x2F;c.biancheng.net&#x2F;view&#x2F;9381.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-12T03:35:49.000Z">
+<meta property="article:modified_time" content="2023-07-26T10:35:53.500Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://sirohune.site/2023/06/12/HTML&CSS-Study-Note/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/06/12/HTML&CSS-Study-Note/","path":"2023/06/12/HTML&CSS-Study-Note/","title":"HTML-Study-Note"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTML-Study-Note | はくのBlog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/06/12/HTML&CSS-Study-Note//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">はくのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">百洛的小屋</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-language"><a href="https://sirohune.site/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li><li class="menu-item menu-item-journal"><a href="https://sirohune.site/2023/07/26/Journal/" rel="section"><i class="fa-solid fa-pencil fa-fw"></i>札记</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">网站是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">HTML是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E6%96%87%E6%9C%AC"><span class="nav-text">超文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80"><span class="nav-text">标记语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="nav-text">HTML文档结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E6%A0%87%E7%AD%BE%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="nav-text">HTML标签的语法格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E5%B1%9E%E6%80%A7%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-text">HTML属性的概念和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="nav-text">通用属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E6%AE%B5%E8%90%BD%E4%B8%AD%E7%9A%84%E7%A9%BA%E7%99%BD%E7%AC%A6"><span class="nav-text">HTML段落中的空白符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-text">HTML文本格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BEa"><span class="nav-text">HTML超链接标签&lt;a&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BEimg"><span class="nav-text">HTML图片标签&lt;img&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html%E5%B5%8C%E5%85%A5css%E6%A0%B7%E5%BC%8F%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="nav-text">HTML嵌入CSS样式（四种方法）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css"><span class="nav-text">CSS</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">物理与人生</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:hakufune@gmail.com" title="E-Mail → mailto:hakufune@gmail.com" rel="noopener me" target="_blank">E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://huanyushi.github.io/" title="https:&#x2F;&#x2F;huanyushi.github.io&#x2F;" rel="noopener" target="_blank">杂然赋流形丶</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://breayhing.github.io/" title="https:&#x2F;&#x2F;breayhing.github.io&#x2F;" rel="noopener" target="_blank">breayhing</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/06/12/HTML&CSS-Study-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="はくのBlog">
+      <meta itemprop="description" content="物理与人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTML-Study-Note | はくのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML-Study-Note
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-12 11:35:49" itemprop="dateCreated datePublished" datetime="2023-06-12T11:35:49+08:00">2023-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-26 18:35:53" itemprop="dateModified" datetime="2023-07-26T18:35:53+08:00">2023-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/06/12/HTML&CSS-Study-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/06/12/HTML&CSS-Study-Note/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>为了解决网站上的bug，同时更好地自定义自己的网站，决定学习一些前端语言。</p>
+<pre><code>参考资料：http://c.biancheng.net/view/9381.html</code></pre>
+<span id="more"></span>
+<h2 id="网站是什么">网站是什么</h2>
+<ul>
+<li>网站由一个个网页构成，网页本质上是服务器上的文件，就像本地电脑中的文件一样。</li>
+<li>网页有许多种后缀，html只是其中一种，但不管后缀是什么，他们本质都是html代码构成的文本文件。</li>
+<li>多个网页之间可能是从属关系（树状图），其顶级目录称为program，有一个专属的IP地址，我们通过访问该IP地址来访问program中的所有文件，也就是网站中的所有网页。</li>
+<li>IP地址是难以记忆的，我们<strong>用域名来助记</strong>，域名可以帮助用户记住网站链接以及品牌。因此域名是指向IP地址的，然后通过IP地址请求服务器上的文件，这就是<strong>域名解析</strong>，通过DNS服务器完成的。</li>
+<li>服务器由：主板、CPU、内存和风扇组成。实际上与我们的电脑机箱差不多，它需要存储信息（内存），处理信息（CPU）。唯一用途便是运行网站。</li>
+</ul>
+<h2 id="html是什么">HTML是什么</h2>
+<p>HTML<strong>不是</strong>编程语言，没有计算能力，只能静态展示网页信息。</p>
+<h3 id="超文本">超文本</h3>
+<p>HTML是超文本，即超越纯文本，意思是不仅包含文字，还能包含图片、音视频、表格、列表、链接、按钮、输入框等高级内容。</p>
+<h3 id="标记语言">标记语言</h3>
+<p>HTML通过标签来标记本文中的不同内容、格式、布局等。 - &lt;img&gt;
+标签表示一张图片 - &lt;a&gt; 标签表示一个链接 - &lt;table&gt;
+标签表示一个表格 - &lt;input&gt; 标签表示一个输入框 - &lt;p&gt;
+标签表示一段文本（paragraph？） - &lt;strong&gt; 标签表示文本加粗 -
+&lt;div&gt; 标签表示块级布局</p>
+<p>总之，==HTML可以理解为网页内容的排版布局语言==（有点像LaTeX？）</p>
+<p>HTML有两个重要版本，一个是HTML4，一个是HTML5，HTML4适应了 PC
+互联网时代，HTML 5
+适应了移动互联网时代。现在除了IE浏览器，几乎所有浏览器都支持HTML5，所以可以放心使用</p>
+<h3 id="html文档结构">HTML文档结构</h3>
+<p>HTML页面由尖括号的标签组成。跟LaTeX的环境类似，标签是成对出现的，一个代表开始，一个代表结束（闭合标签），例如&lt;b&gt;和&lt;/b&gt;。然后我们在标签的中间填写内容，下面是一个具体的例子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML演示<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://c.biancheng.net/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这是一个链接，指向C语言中文网首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>HTML教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>CSS教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>JavaScript教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>最前面的!DOCTYPE html
+是文档类型声明，用来说明这个是HTML文档，看的出来他没有闭合，所以他不是标签，doctype声明不区分大小写。</li>
+<li>&lt;html&gt;&lt;/html&gt;就像begin{document}一样，所有内容都写在里面</li>
+<li>&lt;head&gt;用来定义HTML文档的信息，比如标题和编码格式</li>
+<li>&lt;meta
+charset="UTF-8"&gt;为当前页面指明采用UTF-8编码，这是全球通用的编码格式</li>
+<li>&lt;title&gt;用于指明网页标题，显示在浏览器标签栏上</li>
+<li>&lt;body&gt;是网页的主体，网页显示的内容都在body中。所以可以看到，title并不在body中，因此不会显示在网页上，而是在标签栏上</li>
+<li>&lt;h1&gt;是标题、&lt;ul&gt;是列表、&lt;li&gt;是列表项、&lt;input
+type="text"/&gt;定义输入框（可以猜到h1是一级标题，最低有六级标题）</li>
+</ul>
+<h2 id="html标签的语法格式">HTML标签的语法格式</h2>
+<ul>
+<li>HTML标签语法==不区分大小写==，但是为了规范和专业，在定义标签时一律采用小写</li>
+<li>自闭合标签没有结束标签，而是在开始标签中添加/来闭合，比如
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;C语言中文网Logo&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 图像 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span> <span class="comment">&lt;!-- 分割线 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span> <span class="comment">&lt;!-- 文本换行 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 文本输入框 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="html属性的概念和使用">HTML属性的概念和使用</h2>
+<ul>
+<li>属性可以为HTML标签提供一些额外信息，添加在开始标签中，格式是attr="value"，用单引号双引号都可以，但是为了规范，请使用双引号</li>
+<li>属性分为专用属性与通用属性（还有自定义属性，需要借助CSS和JavaScript来处理自定义属性）。通用属性就是大部分标签都能使用的属性，专用属性只有特定标签才能够使用</li>
+</ul>
+<h3 id="通用属性">通用属性</h3>
+<ol type="1">
+<li>id属性：就是标签的名称，具有唯一性，使用CSS和JavaScript操作的时候，通过id来寻找</li>
+<li>class属性：class不具有唯一性，多个标签可以是同一个class，同一个标签也可以有多个class，CSS和JavaScript也可以通过class来操作标签</li>
+<li>title属性：用于描述标签内容，当鼠标移动到标签上时，网页会显示title的属性值（比如说title="这是一段描述"，鼠标移动上去后就会显示“这是一段描述”）</li>
+<li>style属性：在标签内部定义CSS样式</li>
+</ol>
+<h2 id="html段落中的空白符">HTML段落中的空白符</h2>
+<ul>
+<li>如果段落中出现多个连续的空格，浏览器会忽略这些空格只保留一个；</li>
+<li>如果段落中出现多个连续的换行，浏览器会将这些换行转换成一个空格。</li>
+</ul>
+<h2 id="html文本格式化">HTML文本格式化</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;...&lt;/b&gt;</td>
+<td>加粗标签中的字体</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="html超链接标签a">HTML超链接标签&lt;a&gt;</h2>
+<ul>
+<li>href
+本质上就是指向一个文件，这个文件几乎可以是任意格式的。如果浏览器支持这种格式，那么它就可以在浏览器上显示，比如常见的图片、音频、视频等，如果浏览器不支持这种格式，那么就提示用户下载。</li>
+<li>href
+使用的路径可以是绝对路径，也可以是相对路径。绝对路径往往以域名为起点;相对路径往往以当前文件或者当前域名为起点，</li>
+<li>target属性：用于指明新页面打开方式；_self是覆盖原有窗口（这个是默认值），_blank是新窗口打开</li>
+</ul>
+<h2 id="html图片标签img">HTML图片标签&lt;img&gt;</h2>
+<ul>
+<li>&lt;img&gt;是自闭和标签，有两个属性，一个是必选的scr，一个是可选的alt</li>
+<li>scr属性用于指明图片地址或者路径，支持jpg/png/gif等格式</li>
+<li>alt用于定义图片的文字描述信息，类似于LaTeX中的caption。当图片无法正常加载时，就会显示alt的信息</li>
+</ul>
+<h2 id="html嵌入css样式四种方法">HTML嵌入CSS样式（四种方法）</h2>
+<p>HTML表达能力有限，经常需要结合CSS一起使用。有四种使用方法。</p>
+<ul>
+<li>行内样式：在标签的style属性中定义CSS样式；多个CSS属性用分号间隔
+例子：
+<div
+style="background-color:#66CC99; color:#993300; height:30px; line-height:30px;">
+行内元素，div 块级元素
+</div></li>
+<li>内嵌样式：在HTML文档的头部（即head标签）使用style标签定义样式 例子：
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>内嵌式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: left;  <span class="comment">/*文本左对齐*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">18px</span>;  <span class="comment">/*字体大小 18 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">25px</span>;  <span class="comment">/*行高 25 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;  <span class="comment">/*首行缩进2个文字大小空间*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">500px</span>;  <span class="comment">/*段落宽度 500 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: <span class="number">0</span> auto;  <span class="comment">/*浏览器下居中*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;  <span class="comment">/*段落下边距 20 像素*/</span></span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>“百度”这一公司名称便来自宋词“众里寻他千百度”。（百度公司会议室名为青玉案，即是这首词的词牌）。而“熊掌”图标的想法来源于“猎人巡迹熊爪”的刺激，与李博士的“分析搜索技术”非常相似，从而构成百度的搜索概念，也最终成为了百度的图标形象。在这之后，由于在搜索引擎中，大都有动物形象来形象，如 SOHU 的狐，如 GOOGLE 的狗，而百度也便顺理成章称作了熊。百度熊也便成了百度公司的形象物。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>在百度那次更换 LOGO 的计划中，百度给出的 3 个新 LOGO 设计方案在网民的投票下，全部被否决，更多的网民将选票投给了原有的熊掌标志。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>此次更换 LOGO 的行动共进行了 3 轮投票，直到第 2 轮投票结束，新的笑脸 LOGO 都占据了绝对优势。但到最后一轮投票时，原有的熊掌标志却戏剧性地获得了最多的网民选票，从而把 3 个新 LOGO 方案彻底否决。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>链接式：使用link标签引入外部的CSS文件</li>
+<li>导入式：使用@import的命令导入外部CSS文件</li>
+</ul>
+<p>HTML先了解到这里~</p>
+<h2 id="css">CSS</h2>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/" rel="prev" title="Relativistic-Quantum-Mechanics(Part-1)">
+                  <i class="fa fa-chevron-left"></i> Relativistic-Quantum-Mechanics(Part-1)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/07/26/Journal/" rel="next" title="Journal">
+                  Journal <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">131k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:58</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/06/12/HTML&CSS-Study-Note/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
