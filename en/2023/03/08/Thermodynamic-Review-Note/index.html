@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/en/","images":"/en/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
 
-    <meta name="description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。 热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可">
+    <meta name="description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。 热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Thermodynamic-Review-Note">
 <meta property="og:url" content="https://sirohune.site/en/2023/03/08/Thermodynamic-Review-Note/index.html">
 <meta property="og:site_name" content="Haku&#39;s blog">
-<meta property="og:description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。 热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可">
+<meta property="og:description" content="参考书目： 《热力学·统计物理》—— 汪志诚 《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell 这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。 热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-08T12:24:17.000Z">
 <meta property="article:modified_time" content="2023-05-28T11:26:54.114Z">
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">热力学基本规律</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">热力学第一定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%AE%B9%E7%84%93"><span class="nav-number">1.2.</span> <span class="nav-text">热容、焓</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93"><span class="nav-number">1.2.1.</span> <span class="nav-text">对于理想气体</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E6%B8%A9%E4%B8%8E%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">等温与绝热过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E7%AD%89%E6%B8%A9%E8%86%A8%E8%83%80"><span class="nav-number">1.3.1.</span> <span class="nav-text">理想气体的等温膨胀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E7%BB%9D%E7%83%AD%E8%86%A8%E8%83%80"><span class="nav-number">1.3.2.</span> <span class="nav-text">理想气体的绝热膨胀</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">热力学第二定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E8%AF%BA%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%8D%A1%E8%AF%BA%E5%AE%9A%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">卡诺循环与卡诺定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%B8%8E%E7%86%B5"><span class="nav-number">1.6.</span> <span class="nav-text">克劳修斯不等式与熵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.6.1.</span> <span class="nav-text">熵增定律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD%E4%B8%8E%E5%90%89%E5%B8%83%E6%96%AF%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.</span> <span class="nav-text">亥姆霍兹自由能与吉布斯自由能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.1.</span> <span class="nav-text">亥姆霍兹自由能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%89%E5%B8%83%E6%96%AF%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.2.</span> <span class="nav-text">吉布斯自由能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxwell%E5%85%B3%E7%B3%BB%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8"><span class="nav-number">1.8.</span> <span class="nav-text">Maxwell关系及其应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#maxwell%E5%85%B3%E7%B3%BB"><span class="nav-number">1.8.1.</span> <span class="nav-text">Maxwell关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E6%B5%81%E8%BF%87%E7%A8%8B"><span class="nav-number">1.8.2.</span> <span class="nav-text">节流过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%86%E9%9D%99%E6%80%81%E7%BB%9D%E7%83%AD%E8%86%A8%E8%83%80"><span class="nav-number">1.8.3.</span> <span class="nav-text">准静态绝热膨胀</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%8F%98%E7%90%86%E8%AE%BA%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.9.</span> <span class="nav-text">相变理论与热力学第三定律</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E7%B3%BB%E7%9A%84%E7%9B%B8%E5%8F%98"><span class="nav-number">1.9.1.</span> <span class="nav-text">单元系的相变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E7%B3%BB%E7%83%AD%E5%8A%9B%E5%AD%A6%E6%96%B9%E7%A8%8B"><span class="nav-number">1.9.2.</span> <span class="nav-text">开系热力学方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E5%A4%8D%E7%9B%B8%E7%B3%BB%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%80%A7%E8%B4%A8"><span class="nav-number">1.9.3.</span> <span class="nav-text">单元复相系的平衡性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E5%A4%8D%E7%9B%B8%E7%B3%BB%E5%B9%B3%E8%A1%A1"><span class="nav-number">1.9.4.</span> <span class="nav-text">多元复相系平衡</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">热力学基本规律</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">热力学第一定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%AE%B9%E3%80%81%E7%84%93"><span class="nav-number">1.2.</span> <span class="nav-text">热容、焓</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93"><span class="nav-number">1.2.1.</span> <span class="nav-text">对于理想气体</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E6%B8%A9%E4%B8%8E%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">等温与绝热过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E7%AD%89%E6%B8%A9%E8%86%A8%E8%83%80"><span class="nav-number">1.3.1.</span> <span class="nav-text">理想气体的等温膨胀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E7%BB%9D%E7%83%AD%E8%86%A8%E8%83%80"><span class="nav-number">1.3.2.</span> <span class="nav-text">理想气体的绝热膨胀</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">热力学第二定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E8%AF%BA%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%8D%A1%E8%AF%BA%E5%AE%9A%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">卡诺循环与卡诺定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%B8%8E%E7%86%B5"><span class="nav-number">1.6.</span> <span class="nav-text">克劳修斯不等式与熵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.6.1.</span> <span class="nav-text">熵增定律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD%E4%B8%8E%E5%90%89%E5%B8%83%E6%96%AF%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.</span> <span class="nav-text">亥姆霍兹自由能与吉布斯自由能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.1.</span> <span class="nav-text">亥姆霍兹自由能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%89%E5%B8%83%E6%96%AF%E8%87%AA%E7%94%B1%E8%83%BD"><span class="nav-number">1.7.2.</span> <span class="nav-text">吉布斯自由能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maxwell%E5%85%B3%E7%B3%BB%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8"><span class="nav-number">1.8.</span> <span class="nav-text">Maxwell关系及其应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Maxwell%E5%85%B3%E7%B3%BB"><span class="nav-number">1.8.1.</span> <span class="nav-text">Maxwell关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E6%B5%81%E8%BF%87%E7%A8%8B"><span class="nav-number">1.8.2.</span> <span class="nav-text">节流过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%86%E9%9D%99%E6%80%81%E7%BB%9D%E7%83%AD%E8%86%A8%E8%83%80"><span class="nav-number">1.8.3.</span> <span class="nav-text">准静态绝热膨胀</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%8F%98%E7%90%86%E8%AE%BA%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.9.</span> <span class="nav-text">相变理论与热力学第三定律</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E7%B3%BB%E7%9A%84%E7%9B%B8%E5%8F%98"><span class="nav-number">1.9.1.</span> <span class="nav-text">单元系的相变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E7%B3%BB%E7%83%AD%E5%8A%9B%E5%AD%A6%E6%96%B9%E7%A8%8B"><span class="nav-number">1.9.2.</span> <span class="nav-text">开系热力学方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E5%A4%8D%E7%9B%B8%E7%B3%BB%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%80%A7%E8%B4%A8"><span class="nav-number">1.9.3.</span> <span class="nav-text">单元复相系的平衡性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E5%A4%8D%E7%9B%B8%E7%B3%BB%E5%B9%B3%E8%A1%A1"><span class="nav-number">1.9.4.</span> <span class="nav-text">多元复相系平衡</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -303,14 +303,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>10k</span>
+      <span>8.1k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>19 mins.</span>
+      <span>15 mins.</span>
     </span>
 </div>
 
@@ -323,444 +323,289 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考书目：
 《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。</p>
-<p>热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一系列平衡态来做热力学近似。<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></p>
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell
+</code></pre><p>这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。</p>
+<p>热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一系列平衡态来做热力学近似。<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
 <span id="more"></span>
-<h2 id="热力学基本规律">热力学基本规律</h2>
-<p>在平衡态下，系统的各种宏观物理量都具有确定值。热力学系统所处的平衡状态就是由其宏观物理量的数值确定的。<strong>但是我们选取的几个宏观量并不是线性独立的，这几个宏观量之间存在联系</strong>，因此这几个宏观量不可能全部独立改变，通常我们可以找到一个状态方程<span
-class="math inline">\(f(p,V,T)=0\)</span><a href="#fn2"
-class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>，在研究系统的时候，我们只需选取几个方便研究的宏观量作为自变量，其他宏观量自然可以表示成自变量的函数。挑选的自变量称为<strong>状态参量</strong>，其他函数称为状态函数。</p>
-<h3 id="热力学第一定律">热力学第一定律</h3>
-<p>系统能量的增加量等于吸热量加上外界对系统做的功</p>
-<p><span class="math display">\[
+<blockquote id="fn_1">
+<sup>1</sup>. 这点在卡诺热机中尤其体现<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<h2 id="热力学基本规律"><a href="#热力学基本规律" class="headerlink" title="热力学基本规律"></a>热力学基本规律</h2><p>在平衡态下，系统的各种宏观物理量都具有确定值。热力学系统所处的平衡状态就是由其宏观物理量的数值确定的。<strong>但是我们选取的几个宏观量并不是线性独立的，这几个宏观量之间存在联系</strong>，因此这几个宏观量不可能全部独立改变，通常我们可以找到一个状态方程$f(p,V,T)=0$<sup><a href="#fn_2" id="reffn_2">2</a></sup>，在研究系统的时候，我们只需选取几个方便研究的宏观量作为自变量，其他宏观量自然可以表示成自变量的函数。挑选的自变量称为<strong>状态参量</strong>，其他函数称为状态函数。</p>
+<blockquote id="fn_2">
+<sup>2</sup>. 比如说理想气体状态方程$pV=nTR$<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<h3 id="热力学第一定律"><a href="#热力学第一定律" class="headerlink" title="热力学第一定律"></a>热力学第一定律</h3><p>系统能量的增加量等于吸热量加上外界对系统做的功</p>
+<script type="math/tex; mode=display">
 \require{physics}
 \begin{equation}
-\Delta U=\Delta W+\Delta Q
-\end{equation}
-\]</span> 其实就是能量守恒的式子，或许你可以可以写为 <span
-class="math display">\[
+ \Delta U=\Delta W+\Delta Q
+\end{equation}</script><p>其实就是能量守恒的式子，或许你可以可以写为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\dd{U}=\dd{Q}+\dd{W}
-\end{equation}
-\]</span> 其中<span
-class="math inline">\(\dd{U}\)</span>是一个全微分，也就是说能量是一个态函数，也就说其数值与过程无关，其大小只与初末态有关，而<span
-class="math inline">\(\dd{Q}\)</span>与<span
-class="math inline">\(\dd{W}\)</span>是非恰当微分，很显然“吸收的热量”也不是什么状态函数，系统做功当然与过程有关。做功的微分只对可逆过程成立。但是对于不可逆过程AB我们可以用一系列可逆过程将两个状态联系起来。</p>
-<h3 id="热容焓">热容、焓</h3>
-<p><strong>热容</strong>的定义是系统升高单位温度所需要的热量即<span
-class="math inline">\(\Delta Q\)</span>与<span
-class="math inline">\(\Delta T\)</span>的比值 <span
-class="math display">\[
+ \dd{U}=\dd{Q}+\dd{W}
+\end{equation}</script><p>其中$\dd{U}$是一个全微分，也就是说能量是一个态函数，也就说其数值与过程无关，其大小只与初末态有关，而$\dd{Q}$与$\dd{W}$是非恰当微分，很显然“吸收的热量”也不是什么状态函数，系统做功当然与过程有关。做功的微分只对可逆过程成立。但是对于不可逆过程AB我们可以用一系列可逆过程将两个状态联系起来。</p>
+<h3 id="热容、焓"><a href="#热容、焓" class="headerlink" title="热容、焓"></a>热容、焓</h3><p><strong>热容</strong>的定义是系统升高单位温度所需要的热量即$\Delta Q$与$\Delta T$的比值</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-C=\lim_{\Delta T\to0}\frac{\Delta Q}{\Delta T}
-\end{equation}
-\]</span>
-这个定义是不是很眼熟？是的，初中学的比热容就与此相关，比热容是系统<strong>单位质量</strong>升高单位温度所需要的热量，所以将上述的热容除以系统质量即可得到比热容。除此之外，有时我们还关心<strong>单位物质的量</strong>升高单位温度所需要的热量，因此有摩尔热容的概念，也就是将上述热容除以物质的量。</p>
-<p>当给实验环境外加等容条件的时候，外界对系统无体积功<a href="#fn3"
-class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>，此时<span
-class="math inline">\(\Delta Q=\Delta U\)</span>，因此热容为</p>
-<p><span class="math display">\[
+ C=\lim_{\Delta T\to0}\frac{\Delta Q}{\Delta T}
+\end{equation}</script><p>这个定义是不是很眼熟？是的，初中学的比热容就与此相关，比热容是系统<strong>单位质量</strong>升高单位温度所需要的热量，所以将上述的热容除以系统质量即可得到比热容。除此之外，有时我们还关心<strong>单位物质的量</strong>升高单位温度所需要的热量，因此有摩尔热容的概念，也就是将上述热容除以物质的量。</p>
+<p>当给实验环境外加等容条件的时候，外界对系统无体积功<sup><a href="#fn_3" id="reffn_3">3</a></sup>，此时$\Delta Q=\Delta U$，因此热容为</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 这里当然也不讨论其他形式的功，对于非体积功，比如磁场之类的，会单独讨论。<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<script type="math/tex; mode=display">
 \begin{equation}
-C_V=\lim_{\Delta T\to0}\frac{\Delta U}{\Delta T}=\pqty{\pdv{U}{T}}_V
-\end{equation}
-\]</span> 因此等压过程有<span class="math inline">\(\Delta U=C_V\Delta
-T\)</span></p>
-<p>而当实验环境外加等压条件的时候，外界对系统的体积功为<span
-class="math inline">\(\Delta W=-p\Delta V\)</span>，此时 <span
-class="math display">\[
+ C_V=\lim_{\Delta T\to0}\frac{\Delta U}{\Delta T}=\pqty{\pdv{U}{T}}_V
+\end{equation}</script><p>因此等压过程有$\Delta U=C_V\Delta T$</p>
+<p>而当实验环境外加等压条件的时候，外界对系统的体积功为$\Delta W=-p\Delta V$，此时</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-C_p=\lim_{\Delta T\to0}\frac{\Delta U+p\Delta V}{\Delta T}
-\end{equation}
-\]</span>
-因此这是可以定义一个态函数<strong>焓（enthalpy）</strong>（其实就是内能的一个Legendre变换，将变量(T,V)更改为变量(T,p)）
-<span class="math display">\[
+ C_p=\lim_{\Delta T\to0}\frac{\Delta U+p\Delta V}{\Delta T}
+\end{equation}</script><p>因此这是可以定义一个态函数<strong>焓（enthalpy）</strong>（其实就是内能的一个Legendre变换，将变量(T,V)更改为变量(T,p)）</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-H=U+pV
-\end{equation}
-\]</span> 在等压时有<span class="math inline">\(\Delta H=\Delta
-U+p\Delta V\)</span>，因此热容为 <span class="math display">\[
+ H=U+pV
+\end{equation}</script><p>在等压时有$\Delta H=\Delta U+p\Delta V$，因此热容为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-C_p=\pqty{\pdv{H}{T}}_p
-\end{equation}
-\]</span> 因此等压过程时有<span class="math inline">\(\Delta H=C_p\Delta
-T\)</span></p>
-<p>等压热容与等容热容之间存在联系： <span class="math display">\[
+ C_p=\pqty{\pdv{H}{T}}_p
+\end{equation}</script><p>因此等压过程时有$\Delta H=C_p\Delta T$</p>
+<p>等压热容与等容热容之间存在联系：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\dd{Q}=&amp;\dd{U}+p\dd{V}\\
-=&amp;\pqty{\pdv{U}{T}}_V\dd{T}+\pqty{p+\pqty{\pdv{U}{V}}_T}\dd{V}\\
-\Rightarrow
-\pqty{\pdv{Q}{T}}_p=&amp;\pqty{\pdv{U}{T}}_V+\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p\\
-=&amp;C_V+\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p\\
-\Rightarrow C_p-C_V=&amp;\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p
-\end{align}
-\]</span> 将两者的比值定义为<strong>绝热指数</strong> <span
-class="math display">\[
-\gamma=\frac{C_p}{C_V}
-\]</span></p>
-<h4 id="对于理想气体">对于理想气体</h4>
-<p>气体足够稀薄，可以忽略分子之间的相互作用，气体的能量主要来自热运动，因此内能只包括分子运动，即内能是温度的函数，焓也同理，因此对于理想气体有
-<span class="math display">\[
+ \dd{Q}=&\dd{U}+p\dd{V}\\
+ =&\pqty{\pdv{U}{T}}_V\dd{T}+\pqty{p+\pqty{\pdv{U}{V}}_T}\dd{V}\\
+ \Rightarrow \pqty{\pdv{Q}{T}}_p=&\pqty{\pdv{U}{T}}_V+\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p\\
+ =&C_V+\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p\\
+ \Rightarrow C_p-C_V=&\pqty{p+\pqty{\pdv{U}{V}}_T}\pqty{\pdv{V}{T}}_p
+\end{align}</script><p>将两者的比值定义为<strong>绝热指数</strong></p>
+<script type="math/tex; mode=display">
+\gamma=\frac{C_p}{C_V}</script><h4 id="对于理想气体"><a href="#对于理想气体" class="headerlink" title="对于理想气体"></a>对于理想气体</h4><p>气体足够稀薄，可以忽略分子之间的相互作用，气体的能量主要来自热运动，因此内能只包括分子运动，即内能是温度的函数，焓也同理，因此对于理想气体有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-C_p-C_V=&amp;\pqty{p+0}\pqty{\pdv{V}{T}}_p\\
-=&amp;nR
-\end{align}
-\]</span></p>
-<h3 id="等温与绝热过程">等温与绝热过程</h3>
-<p>热力学的很多公式都是对可逆过程成立的，可是现实中很多情况并不是可逆的，但理论上我们可以足够缓慢地改变系统的参量，让系统参量产生无穷小变化，这一过程称为<strong>准静态过程</strong>，这样可以构建出一条理想的可逆路径。</p>
-<h4 id="理想气体的等温膨胀">理想气体的等温膨胀</h4>
-<p>理想气体内能只与温度有关，等温时内能不变 <span
-class="math display">\[
+C_p-C_V=&\pqty{p+0}\pqty{\pdv{V}{T}}_p\\
+=&nR
+\end{align}</script><h3 id="等温与绝热过程"><a href="#等温与绝热过程" class="headerlink" title="等温与绝热过程"></a>等温与绝热过程</h3><p>热力学的很多公式都是对可逆过程成立的，可是现实中很多情况并不是可逆的，但理论上我们可以足够缓慢地改变系统的参量，让系统参量产生无穷小变化，这一过程称为<strong>准静态过程</strong>，这样可以构建出一条理想的可逆路径。</p>
+<h4 id="理想气体的等温膨胀"><a href="#理想气体的等温膨胀" class="headerlink" title="理想气体的等温膨胀"></a>理想气体的等温膨胀</h4><p>理想气体内能只与温度有关，等温时内能不变</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\dd{Q}+&amp;\dd{W}=0\\
-\Rightarrow \Delta Q=&amp;-\int \dd{W}\\
-=&amp;\int p\dd{V}\\
-=&amp;\int \frac{nTR}{V}\dd{V}\\
-=&amp;nTR\ln{\frac{V_t}{V_0}}
-\end{align}
-\]</span></p>
-<h4 id="理想气体的绝热膨胀">理想气体的绝热膨胀</h4>
-<p>系统不从外界吸收热量:<span class="math inline">\(\Delta Q=0\)</span>
-<span class="math display">\[
+ \dd{Q}+&\dd{W}=0\\
+ \Rightarrow \Delta Q=&-\int \dd{W}\\
+ =&\int p\dd{V}\\
+ =&\int \frac{nTR}{V}\dd{V}\\
+ =&nTR\ln{\frac{V_t}{V_0}}
+\end{align}</script><h4 id="理想气体的绝热膨胀"><a href="#理想气体的绝热膨胀" class="headerlink" title="理想气体的绝热膨胀"></a>理想气体的绝热膨胀</h4><p>系统不从外界吸收热量:$\Delta Q=0$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-pV=&amp;nTR\\
-p\dd{V}+V\dd{p}=&amp;nR\dd{T}\\
-\because \dd{U}=&amp;-p\dd{V}=C_V\dd{T}\\
-\therefore p\dd{V}+V\dd{p}=&amp;-p\frac{C_p-C_V}{C_V}\dd{T}\\
-\Rightarrow p\gamma\dd{V}+V\dd{p}=&amp;0
-\end{align}
-\]</span> 在上式两边同乘体积<span
-class="math inline">\(V^{\gamma-1}\)</span>，有 <span
-class="math display">\[
+ pV=&nTR\\
+ p\dd{V}+V\dd{p}=&nR\dd{T}\\
+ \because \dd{U}=&-p\dd{V}=C_V\dd{T}\\
+ \therefore p\dd{V}+V\dd{p}=&-p\frac{C_p-C_V}{C_V}\dd{T}\\
+ \Rightarrow p\gamma\dd{V}+V\dd{p}=&0
+\end{align}</script><p>在上式两边同乘体积$V^{\gamma-1}$，有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-p\gamma V^{\gamma-1}\dd{V}+V^\gamma\dd{p}=&amp;0\\
-\Rightarrow \dd{\pqty{pV^\gamma}}=&amp;0\\
-\end{align}
-\]</span> 因此<span
-class="math inline">\(pV^\gamma\)</span>是一个常数，利用状态方程得到<span
-class="math inline">\(V^{\gamma-1}T\)</span> or <span
-class="math inline">\(T^\gamma p^{1-\gamma}\)</span>是一个常数</p>
-<h3 id="热力学第二定律">热力学第二定律</h3>
-<ul>
+ p\gamma V^{\gamma-1}\dd{V}+V^\gamma\dd{p}=&0\\
+ \Rightarrow \dd{\pqty{pV^\gamma}}=&0\\
+\end{align}</script><p>因此$pV^\gamma$是一个常数，利用状态方程得到$V^{\gamma-1}T$ or $T^\gamma p^{1-\gamma}$是一个常数</p>
+<h3 id="热力学第二定律"><a href="#热力学第二定律" class="headerlink" title="热力学第二定律"></a>热力学第二定律</h3><ul>
 <li>描述内机的开尔文表述：不可能从单一热源吸热，使之全部变成有用功而不引起其他变化</li>
 <li>描述制冷剂的克劳修斯表述：不可能将热量从低温转到高温而不引起其他变化</li>
 </ul>
-<h3 id="卡诺循环与卡诺定理">卡诺循环与卡诺定理</h3>
-<p>热机的工作循环是在p-V图上画一个圈，圈出来的面积代表系统对外做的功，同时可以算出系统的吸热量Q，从而可以得到热机工作效率。对于这样的圈，若是由两个等温过程与两个绝热过程构成循环，则称为<strong>卡诺循环</strong>。
-因为卡诺循环的过程中只有等温过程在吸收或者放出热量，利用等温过程计算出吸放热，两者之差为<span
-class="math inline">\(\Delta
-Q=nT_2R\ln(V_4/V_3)-nT_1R\ln(V_2/V_1)\)</span>（数字下标可能不一样），此时利用绝热过程可以得到<span
-class="math inline">\(\frac{V_4}{V_3}=\frac{V_2}{V_1}\)</span>，因此最后卡诺热机的效率计算为<span
-class="math inline">\(\eta=1-\frac{T_1}{T_2}\)</span>（<span
-class="math inline">\(T_2&gt;T_1\)</span>）</p>
-<p>卡诺热机是最有效的热机，<strong>卡诺定理：</strong>所有工作于两个热源之间的热机，以卡诺热机效率最高。
-推论：所有工作于两个热源之间的可逆热机都有相同的效率<span
-class="math inline">\(\eta_{\text{卡诺}}\)</span>。</p>
-<p>卡诺定理的证明只需要假设存在一个不可逆的热机，其效率大于卡诺热机，让他们从同一个高温热源吸收相同的热量<span
-class="math inline">\(Q_2&#39;=Q_2\)</span>，然后同时放出热量以及对外做功，根据假设不可逆热机对外做功更多<span
-class="math inline">\(W&#39;&gt;W\)</span>，对低温热源放出的热量更少<span
-class="math inline">\(Q_1&#39;&lt;Q_1\)</span>。此时将卡诺热机反向工作（因为卡诺热机是可逆的），则两个热机对高温热源的总效果是不吸热也不放热（因为一开始两者对其吸收的热量是相同的，现在卡诺热机反过来工作，就变成了对其释放相同的热量），而对低温热源的总效果是吸收一定的热量<span
-class="math inline">\(Q_1-Q_1&#39;\)</span>（因为一开始卡诺热机对其放出的热量更多，现在卡诺热机反过来工作了），将不可逆热机对外做的一部分功输入到卡诺热机中（卡诺热机反过来工作后需要外界对其做功），因此此时不可逆对外界的总做功为<span
-class="math inline">\(W&#39;-W&gt;0\)</span>,也就是说两台热机的总效果是：从低温热源吸收一定的热量并将其全部转化为功，不产生其他效果。<strong>这违背了热力学第二定律</strong>，因此假设错误，不存在效率高于卡诺热机的不可逆热机。</p>
-<h3 id="克劳修斯不等式与熵">克劳修斯不等式与熵</h3>
-<p>根据卡诺定理，任何热机的效率都小于等于卡诺热机的效率，设任意一个热机从高温热源吸热<span
-class="math inline">\(Q_2\)</span>，向低温热源放热<span
-class="math inline">\(Q_1\)</span>，则根据卡诺定理有 <span
-class="math display">\[
+<h3 id="卡诺循环与卡诺定理"><a href="#卡诺循环与卡诺定理" class="headerlink" title="卡诺循环与卡诺定理"></a>卡诺循环与卡诺定理</h3><p>热机的工作循环是在p-V图上画一个圈，圈出来的面积代表系统对外做的功，同时可以算出系统的吸热量Q，从而可以得到热机工作效率。对于这样的圈，若是由两个等温过程与两个绝热过程构成循环，则称为<strong>卡诺循环</strong>。<br>因为卡诺循环的过程中只有等温过程在吸收或者放出热量，利用等温过程计算出吸放热，两者之差为$\Delta Q=nT_2R\ln(V_4/V_3)-nT_1R\ln(V_2/V_1)$（数字下标可能不一样），此时利用绝热过程可以得到$\frac{V_4}{V_3}=\frac{V_2}{V_1}$，因此最后卡诺热机的效率计算为$\eta=1-\frac{T_1}{T_2}$（$T_2&gt;T_1$）</p>
+<p>卡诺热机是最有效的热机，<strong>卡诺定理：</strong>所有工作于两个热源之间的热机，以卡诺热机效率最高。<br>推论：所有工作于两个热源之间的可逆热机都有相同的效率$\eta_{\text{卡诺}}$。</p>
+<p>卡诺定理的证明只需要假设存在一个不可逆的热机，其效率大于卡诺热机，让他们从同一个高温热源吸收相同的热量$Q_2’=Q_2$，然后同时放出热量以及对外做功，根据假设不可逆热机对外做功更多$W’&gt;W$，对低温热源放出的热量更少$Q_1’<Q_1$。此时将卡诺热机反向工作（因为卡诺热机是可逆的），则两个热机对高温热源的总效果是不吸热也不放热（因为一开始两者对其吸收的热量是相同的，现在卡诺热机反过来工作，就变成了对其释放相同的热量），而对低温热源的总效果是吸收一定的热量$Q_1-Q_1'$（因为一开始卡诺热机对其放出的热量更多，现在卡诺热机反过来工作了），将不可逆热机对外做的一部分功输入到卡诺热机中（卡诺热机反过来工作后需要外界对其做功），因此此时不可逆对外界的总做功为$W'-W>0$,也就是说两台热机的总效果是：从低温热源吸收一定的热量并将其全部转化为功，不产生其他效果。<strong>这违背了热力学第二定律</strong>，因此假设错误，不存在效率高于卡诺热机的不可逆热机。</p>
+<h3 id="克劳修斯不等式与熵"><a href="#克劳修斯不等式与熵" class="headerlink" title="克劳修斯不等式与熵"></a>克劳修斯不等式与熵</h3><p>根据卡诺定理，任何热机的效率都小于等于卡诺热机的效率，设任意一个热机从高温热源吸热$Q_2$，向低温热源放热$Q_1$，则根据卡诺定理有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{Q_2-Q_1}{Q_2}\leq &amp;1-\frac{T_1}{T_2}\\
-\because Q_2,T_1&gt;&amp;0\\
-\therefore \frac{Q_2}{T_2}-\frac{Q_1}{T_1}\leq&amp;0
-\end{align}
-\]</span>
-上面的热量都是正数，每次描述热量都描述其传递方向，未对其规定方向，现在将其与热力学第一定律里的公式统一，将热量Q规定为系统的吸热，则上式改为
-<span class="math display">\[
+ \frac{Q_2-Q_1}{Q_2}\leq &1-\frac{T_1}{T_2}\\
+ \because Q_2,T_1>&0\\
+ \therefore \frac{Q_2}{T_2}-\frac{Q_1}{T_1}\leq&0
+\end{align}</script><p>上面的热量都是正数，每次描述热量都描述其传递方向，未对其规定方向，现在将其与热力学第一定律里的公式统一，将热量Q规定为系统的吸热，则上式改为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\frac{Q_2}{T_2}+\frac{Q_1}{T_1}\leq0
-\end{equation}
-\]</span> 推广到n个热源，然后积分代替求和有 <span
-class="math display">\[
+ \frac{Q_2}{T_2}+\frac{Q_1}{T_1}\leq0
+\end{equation}</script><p>推广到n个热源，然后积分代替求和有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\oint\frac{\dd{Q}}{T}\leq 0
-\end{equation}
-\]</span> 当热机可逆，也就是循环可逆时取等号。</p>
-<p>对于一个可逆循环，上式环路积分为0，也就是说对于A态到B态的积分与路径无关，应存在一个态函数只与初末态有关
-<span class="math display">\[
+ \oint\frac{\dd{Q}}{T}\leq 0
+\end{equation}</script><p>当热机可逆，也就是循环可逆时取等号。</p>
+<p>对于一个可逆循环，上式环路积分为0，也就是说对于A态到B态的积分与路径无关，应存在一个态函数只与初末态有关</p>
+<script type="math/tex; mode=display">
 \begin{align}
-S_B-S_A=&amp;\int_A^B\frac{\dd{Q}}{T}\\
-=&amp;\int_A^B\dd{S}\\
-\Rightarrow \dd{S}=&amp;\frac{\dd{Q}}{T}
-\end{align}
-\]</span> 这个态函数便定义为<strong>熵</strong>。虽然前面说过<span
-class="math inline">\(\dd{Q}\)</span>不是恰当微分，但是将其除以温度后却得到一个恰当微分。
-对于一个不可逆过程A到B，我们如果想计算这个过程的熵变，看似不可以直接用上面的式子进行计算，因为上面的公式是从可逆循环推导的，但是熵是一个态函数，其数值与过程无关，因此我们如果可以找到一个可逆变化过程将AB连接，则可以用上式计算AB之间的熵变。</p>
-<h4 id="熵增定律">熵增定律</h4>
-<p>熵增定律是热力学第二定律的数学表述。从A到B有两条路径连接，一条是可逆的记作<span
-class="math inline">\(R\)</span>，另外一条是不可逆的记作<span
-class="math inline">\(R&#39;\)</span>，该环路不可逆，则根据克劳修斯不等式有
-<span class="math display">\[
+ S_B-S_A=&\int_A^B\frac{\dd{Q}}{T}\\
+ =&\int_A^B\dd{S}\\
+ \Rightarrow \dd{S}=&\frac{\dd{Q}}{T}
+\end{align}</script><p>这个态函数便定义为<strong>熵</strong>。虽然前面说过$\dd{Q}$不是恰当微分，但是将其除以温度后却得到一个恰当微分。<br>对于一个不可逆过程A到B，我们如果想计算这个过程的熵变，看似不可以直接用上面的式子进行计算，因为上面的公式是从可逆循环推导的，但是熵是一个态函数，其数值与过程无关，因此我们如果可以找到一个可逆变化过程将AB连接，则可以用上式计算AB之间的熵变。</p>
+<h4 id="熵增定律"><a href="#熵增定律" class="headerlink" title="熵增定律"></a>熵增定律</h4><p>熵增定律是热力学第二定律的数学表述。从A到B有两条路径连接，一条是可逆的记作$R$，另外一条是不可逆的记作$R’$，该环路不可逆，则根据克劳修斯不等式有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-{\int_{A}^B}\limits_{R&#39;}\frac{\dd{Q}}{T}+{\int_{B}^A}\limits_{R}\frac{\dd{Q}}{T}\leq&amp;0\\
-{\int_{A}^B}\limits_{R&#39;}\frac{\dd{Q}}{T}\leq&amp;{\int_{A}^B}\limits_{R}\frac{\dd{Q}}{T}=S_B-S_A\\
-\Rightarrow \dd{S}\geq \frac{\dd{Q}}{T}
-\end{align}
-\]</span>
-也就是说对于一个不可逆的过程，如果你测出系统的吸热，然后除以温度，企图计算出熵的增加量，你得到的结果会小于熵真实的增加量。而对于一个热孤立系统有
-<span class="math display">\[
+ {\int_{A}^B}\limits_{R'}\frac{\dd{Q}}{T}+{\int_{B}^A}\limits_{R}\frac{\dd{Q}}{T}\leq&0\\
+ {\int_{A}^B}\limits_{R'}\frac{\dd{Q}}{T}\leq&{\int_{A}^B}\limits_{R}\frac{\dd{Q}}{T}=S_B-S_A\\
+ \Rightarrow \dd{S}\geq \frac{\dd{Q}}{T}
+\end{align}</script><p>也就是说对于一个不可逆的过程，如果你测出系统的吸热，然后除以温度，企图计算出熵的增加量，你得到的结果会小于熵真实的增加量。而对于一个热孤立系统有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\dd{S}\geq0
-\end{equation}
-\]</span>
-这是一个非常重要的方程，它是热力学第二定律的数学表述，揭示了热孤立系统任何变化的结果必定是熵不变或者增加，也就是说孤立系统的熵趋于极大值。</p>
-<h3 id="亥姆霍兹自由能与吉布斯自由能">亥姆霍兹自由能与吉布斯自由能</h3>
-<p>熵判据能够帮助我们判断某个绝热过程是不是可逆的，但实际情况的约束可能是等温过程或者等压过程，因此我们需要寻找其他态函数作为判据。</p>
-<h4 id="亥姆霍兹自由能">亥姆霍兹自由能</h4>
-<p>对于一个等温过程，根据克劳修斯不等式有 <span class="math display">\[
+ \dd{S}\geq0
+\end{equation}</script><p>这是一个非常重要的方程，它是热力学第二定律的数学表述，揭示了热孤立系统任何变化的结果必定是熵不变或者增加，也就是说孤立系统的熵趋于极大值。</p>
+<h3 id="亥姆霍兹自由能与吉布斯自由能"><a href="#亥姆霍兹自由能与吉布斯自由能" class="headerlink" title="亥姆霍兹自由能与吉布斯自由能"></a>亥姆霍兹自由能与吉布斯自由能</h3><p>熵判据能够帮助我们判断某个绝热过程是不是可逆的，但实际情况的约束可能是等温过程或者等压过程，因此我们需要寻找其他态函数作为判据。</p>
+<h4 id="亥姆霍兹自由能"><a href="#亥姆霍兹自由能" class="headerlink" title="亥姆霍兹自由能"></a>亥姆霍兹自由能</h4><p>对于一个等温过程，根据克劳修斯不等式有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Delta{Q}\leq &amp;T \Delta{S}\\
-\Rightarrow  \Delta{U}=&amp; \Delta{Q}+ \Delta{W}\\
-\leq&amp;T \Delta{S}+ \Delta{W}\\
-\Rightarrow - \Delta{W}\leq&amp;- \Delta{U}+T \Delta{S}
-\end{align}
-\]</span> 其中<span
-class="math inline">\(-\dd{W}\)</span>是系统对外做的功，若系统对外做功，则系统的能量应当减小，上式右边的内能是一个他函数，对于等温过程而言<span
-class="math inline">\(TS\)</span>也是一个态函数，因此可以在右边定义一个态函数为
-<span class="math display">\[
+ \Delta{Q}\leq &T \Delta{S}\\
+ \Rightarrow  \Delta{U}=& \Delta{Q}+ \Delta{W}\\
+ \leq&T \Delta{S}+ \Delta{W}\\
+ \Rightarrow - \Delta{W}\leq&- \Delta{U}+T \Delta{S}
+\end{align}</script><p>其中$-\dd{W}$是系统对外做的功，若系统对外做功，则系统的能量应当减小，上式右边的内能是一个他函数，对于等温过程而言$TS$也是一个态函数，因此可以在右边定义一个态函数为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
 F=U-TS
-\end{equation}
-\]</span> 则上面的不等式可以更改为 <span class="math display">\[
+\end{equation}</script><p>则上面的不等式可以更改为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-W_{\text{对外做功}}\leq&amp;F_{\text{初}}-F_{\text{末}}\\
-=&amp;-\Delta F
-\end{align}
-\]</span>
-因此可以看出，新定义的态函数规定了系统对外做功的上界，该态函数被称为<strong>亥姆霍兹自由能</strong>。可以看出，当系统把不对外做功时（一般是指等容过程）
-<span class="math display">\[
+ W_{\text{对外做功}}\leq&F_{\text{初}}-F_{\text{末}}\\
+ =&-\Delta F
+\end{align}</script><p>因此可以看出，新定义的态函数规定了系统对外做功的上界，该态函数被称为<strong>亥姆霍兹自由能</strong>。可以看出，当系统把不对外做功时（一般是指等容过程）</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\Delta F\leq 0
-\end{equation}
-\]</span> 即不可逆过程自由能减小，自由能减小是系统自发的方向。</p>
-<h4 id="吉布斯自由能">吉布斯自由能</h4>
-<p>仿照面的思路，对于等温等压过程有 <span class="math display">\[
+ \Delta F\leq 0
+\end{equation}</script><p>即不可逆过程自由能减小，自由能减小是系统自发的方向。</p>
+<h4 id="吉布斯自由能"><a href="#吉布斯自由能" class="headerlink" title="吉布斯自由能"></a>吉布斯自由能</h4><p>仿照面的思路，对于等温等压过程有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-p\Delta V\leq&amp;-\Delta F\\
-\Delta F+p\Delta V\leq &amp;0
-\end{align}
-\]</span> 因此可以定义新的态函数 <span class="math display">\[
+ p\Delta V\leq&-\Delta F\\
+ \Delta F+p\Delta V\leq &0
+\end{align}</script><p>因此可以定义新的态函数</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-G=F+pV
-\end{equation}
-\]</span> 其给出的判据为 <span class="math display">\[
+ G=F+pV
+\end{equation}</script><p>其给出的判据为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\Delta G\leq 0
-\end{equation}
-\]</span>
-定义的态函数称为<strong>吉布斯自由能</strong>，等温等压过程吉布斯自由能减小，代表系统自发演化的方向</p>
-<h3 id="maxwell关系及其应用">Maxwell关系及其应用</h3>
-<h4 id="maxwell关系">Maxwell关系</h4>
-<p>整理我们已有的态函数微分关系 <span class="math display">\[
+ \Delta G\leq 0
+\end{equation}</script><p>定义的态函数称为<strong>吉布斯自由能</strong>，等温等压过程吉布斯自由能减小，代表系统自发演化的方向</p>
+<h3 id="Maxwell关系及其应用"><a href="#Maxwell关系及其应用" class="headerlink" title="Maxwell关系及其应用"></a>Maxwell关系及其应用</h3><h4 id="Maxwell关系"><a href="#Maxwell关系" class="headerlink" title="Maxwell关系"></a>Maxwell关系</h4><p>整理我们已有的态函数微分关系</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   \dd{U}=T\dd{S}-p\dd{V}\\
   \dd{H}=T\dd{S}+V\dd{p}\\
   \dd{F}=-S\dd{T}-p\dd{V}\\
   \dd{G}=-S\dd{T}+V\dd{p}
-\end{cases}
-\end{equation}
-\]</span> 从上式可以看出，焓<span
-class="math inline">\(H(S,p)\)</span>是内能<span
-class="math inline">\(U(S,V)\)</span>关于<span
-class="math inline">\(pV\)</span>的Legendre变换，将自变量从<span
-class="math inline">\(S,\)</span>V变成<span
-class="math inline">\(S,p\)</span>.</p>
-<p>而<span
-class="math inline">\(F(T,V)\)</span>是内能关于ST的Legendre变换，将自变量从<span
-class="math inline">\(S,V\)</span>变成<span
-class="math inline">\(T,V\)</span>.</p>
-<p>最后的<span
-class="math inline">\(G(T,p)\)</span>可以看成是亥姆霍兹自由能<span
-class="math inline">\(F\)</span>关于<span
-class="math inline">\(pV\)</span>的Legendre变换，也可以看成是<span
-class="math inline">\(H\)</span>关于<span
-class="math inline">\(TS\)</span>的Legendre变换.</p>
-<p>从上面的微分关系我们可以直接读出 <span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>从上式可以看出，焓$H(S,p)$是内能$U(S,V)$关于$pV$的Legendre变换，将自变量从$S,$V变成$S,p$.</p>
+<p>而$F(T,V)$是内能关于ST的Legendre变换，将自变量从$S,V$变成$T,V$.</p>
+<p>最后的$G(T,p)$可以看成是亥姆霍兹自由能$F$关于$pV$的Legendre变换，也可以看成是$H$关于$TS$的Legendre变换.</p>
+<p>从上面的微分关系我们可以直接读出</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   \pqty{\pdv{U}{S}}_V=T;\pqty{\pdv{U}{V}}_S=-p\\
   \pqty{\pdv{H}{S}}_p=T;\pqty{\pdv{H}{p}}_S=V\\
   \pqty{\pdv{F}{T}}_V=-S;\pqty{\pdv{F}{V}}_T=-p\\
   \pqty{\pdv{G}{T}}_p=-S;\pqty{\pdv{G}{p}}_T=V
-\end{cases}
-\end{equation}
-\]</span>
-微积分告诉我们二阶偏导可以交换顺序，因此上式每一行都可以给出一个关系式，得到著名的<strong>Maxwell关系</strong>
-<span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>微积分告诉我们二阶偏导可以交换顺序，因此上式每一行都可以给出一个关系式，得到著名的<strong>Maxwell关系</strong></p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   \pqty{\pdv{T}{V}}_S=-\pqty{\pdv{p}{S}}_V\\
   \pqty{\pdv{T}{p}}_S=\pqty{\pdv{V}{S}}_p\\
   \pqty{\pdv{S}{V}}_T=\pqty{\pdv{p}{T}}_V\\
   \pqty{\pdv{S}{p}}_T=-\pqty{\pdv{V}{T}}_p
-\end{cases}
-\end{equation}
-\]</span>
-至于记忆方法，可以从任意式子出发，自变量每替换一次便出一个负号。</p>
-<h4 id="节流过程">节流过程</h4>
-<p><strong>有空再补</strong></p>
-<h4 id="准静态绝热膨胀">准静态绝热膨胀</h4>
-<p><strong>有空再补</strong></p>
-<h3 id="相变理论与热力学第三定律">相变理论与热力学第三定律</h3>
-<h4 id="单元系的相变">单元系的相变</h4>
-<p>为了判断系统是否处于平衡态，我们需要一些判断手段，这些判断手段就称为判据。基本所有的判据都是来自于克劳修斯不等式，比如说对于孤立系统（孤立系统带入是绝热的），我们一般使用熵判据：<span
-class="math inline">\(S\)</span>取极大值。也就是熵的一阶变分为0，二阶变分小于0。</p>
-<p>对于一个孤立系统，简单起见将其分为两个子系统1,2。因为是孤立系，所以有
-<span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>至于记忆方法，可以从任意式子出发，自变量每替换一次便出一个负号。</p>
+<h4 id="节流过程"><a href="#节流过程" class="headerlink" title="节流过程"></a>节流过程</h4><p><strong>有空再补</strong></p>
+<h4 id="准静态绝热膨胀"><a href="#准静态绝热膨胀" class="headerlink" title="准静态绝热膨胀"></a>准静态绝热膨胀</h4><p><strong>有空再补</strong></p>
+<h3 id="相变理论与热力学第三定律"><a href="#相变理论与热力学第三定律" class="headerlink" title="相变理论与热力学第三定律"></a>相变理论与热力学第三定律</h3><h4 id="单元系的相变"><a href="#单元系的相变" class="headerlink" title="单元系的相变"></a>单元系的相变</h4><p>为了判断系统是否处于平衡态，我们需要一些判断手段，这些判断手段就称为判据。基本所有的判据都是来自于克劳修斯不等式，比如说对于孤立系统（孤立系统带入是绝热的），我们一般使用熵判据：$S$取极大值。也就是熵的一阶变分为0，二阶变分小于0。</p>
+<p>对于一个孤立系统，简单起见将其分为两个子系统1,2。因为是孤立系，所以有</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   \delta U_1+\delta U_2=0\\
   \delta V_1+\delta V_2=0
-\end{cases}
-\end{equation}
-\]</span> 而总熵的变分为<span class="math inline">\(\delta S=\delta
-S_1+\delta S_2\)</span>，带入<span
-class="math inline">\(U(S,V)\)</span>的微分关系有 <span
-class="math display">\[
+ \end{cases}
+\end{equation}</script><p>而总熵的变分为$\delta S=\delta S_1+\delta S_2$，带入$U(S,V)$的微分关系有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta{S}=&amp;\frac{1}{T}\delta{U}+\frac{p}{T}\delta{V}\\
-\delta S=&amp;\frac{1}{T_1}\delta{U_1}+\frac{p_1}{T_1}\delta{V_1}\\
-&amp;+\frac{1}{T_2}\delta{U_2}+\frac{p_2}{T_2}\delta{V_2}\\
-=&amp;\pqty{\frac{1}{T_1}-\frac{1}{T_2}}\delta
-U_1+\pqty{\frac{p_1}{T_1}-\frac{p_2}{T_2}}\delta V_1\\
-=&amp;0
-\end{align}
-\]</span>
-当系统平衡的时候要求熵的一阶变分为0，因此熵判据得到，孤立系统平衡的时候，内部的子系统应当有温度处处相等，压强处处相等
-<span class="math display">\[
+ \delta{S}=&\frac{1}{T}\delta{U}+\frac{p}{T}\delta{V}\\
+ \delta S=&\frac{1}{T_1}\delta{U_1}+\frac{p_1}{T_1}\delta{V_1}\\
+ &+\frac{1}{T_2}\delta{U_2}+\frac{p_2}{T_2}\delta{V_2}\\
+ =&\pqty{\frac{1}{T_1}-\frac{1}{T_2}}\delta U_1+\pqty{\frac{p_1}{T_1}-\frac{p_2}{T_2}}\delta V_1\\
+ =&0
+\end{align}</script><p>当系统平衡的时候要求熵的一阶变分为0，因此熵判据得到，孤立系统平衡的时候，内部的子系统应当有温度处处相等，压强处处相等</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   T_1=T_2\\
   p_1=p_2
-\end{cases}
-\end{equation}
-\]</span> 当然，一阶变分为零并不能保证熵处于极大值点<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>，所以从二阶变分小于0我们还能得到一些信息</p>
-<p><span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>当然，一阶变分为零并不能保证熵处于极大值点<sup><a href="#fn_4" id="reffn_4">4</a></sup>，所以从二阶变分小于0我们还能得到一些信息</p>
+<blockquote id="fn_4">
+<sup>4</sup>. 当然，自然界不需要我们做什么事情来保证熵处于极大值，它自然会处于极大值<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta^2 S=&amp;\delta\pqty{\frac{1}{T}}\delta
-U+\delta\pqty{\frac{p}{T}}\delta V\\
-=&amp;-\frac{1}{T^2}\delta T\delta U+\
-\pqty{\frac{\delta p}{T}-\frac{p\delta T}{T^2}}\delta V
-\end{align}
-\]</span> 现在我们将上面的变量都统一为<span
-class="math inline">\(T\)</span>与<span
-class="math inline">\(V\)</span>: <span class="math display">\[
+ \delta^2 S=&\delta\pqty{\frac{1}{T}}\delta U+\delta\pqty{\frac{p}{T}}\delta V\\
+ =&-\frac{1}{T^2}\delta T\delta U+\
+ \pqty{\frac{\delta p}{T}-\frac{p\delta T}{T^2}}\delta V
+\end{align}</script><p>现在我们将上面的变量都统一为$T$与$V$:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\delta U=&amp;T\delta S-p\delta \\
-=&amp;T\pqty{\pdv{S}{T}}_V\delta T+\bqty{T\pqty{\pdv{S}{V}}_p-p}\delta
-V\\
-=&amp;C_V\delta T+\bqty{T\pqty{\pdv{p}{T}}_V-p}\delta V\\
-\delta p=&amp;\pqty{\pdv{p}{T}}_V\delta T+\pqty{\pdv{p}{V}}_T\delta V\\
-\Rightarrow \delta^2 S=&amp;-\frac{1}{T^2}\delta T\pqty{C_V\delta
-T+\bqty{T\pqty{\pdv{p}{T}}_V-p}\delta V}\\
-&amp;+\frac{\delta V}{T}\pqty{\pqty{\pdv{p}{T}}_V\delta
-T+\pqty{\pdv{p}{V}}_T\delta V}-\frac{p\delta T}{T^2}\delta V\\
-=&amp;-\frac{C_V}{T^2}\delta^2T+\frac{1}{T}\pqty{\pdv{p}{V}}_T\delta^2V\\
-&amp;&lt;0
-\end{align}
-\]</span>
-因此从上式可以得到，热孤立系统的等温热容应当是大于0的，对于等温过程，体积增大时，系统的体积是减小的，这符合我们的直觉，这同时也是平衡的<strong>稳定性条件</strong>。</p>
+ \delta U=&T\delta S-p\delta \\
+ =&T\pqty{\pdv{S}{T}}_V\delta T+\bqty{T\pqty{\pdv{S}{V}}_p-p}\delta V\\
+ =&C_V\delta T+\bqty{T\pqty{\pdv{p}{T}}_V-p}\delta V\\
+ \delta p=&\pqty{\pdv{p}{T}}_V\delta T+\pqty{\pdv{p}{V}}_T\delta V\\
+ \Rightarrow \delta^2 S=&-\frac{1}{T^2}\delta T\pqty{C_V\delta T+\bqty{T\pqty{\pdv{p}{T}}_V-p}\delta V}\\
+ &+\frac{\delta V}{T}\pqty{\pqty{\pdv{p}{T}}_V\delta T+\pqty{\pdv{p}{V}}_T\delta V}-\frac{p\delta T}{T^2}\delta V\\
+ =&-\frac{C_V}{T^2}\delta^2T+\frac{1}{T}\pqty{\pdv{p}{V}}_T\delta^2V\\
+ &<0
+\end{align}</script><p>因此从上式可以得到，热孤立系统的等温热容应当是大于0的，对于等温过程，体积增大时，系统的体积是减小的，这符合我们的直觉，这同时也是平衡的<strong>稳定性条件</strong>。</p>
 <p>其他判据也是类似这种推导，其实都是一些微分关系的转换。</p>
-<h4 id="开系热力学方程">开系热力学方程</h4>
-<p>考虑分子数的变化，将前面定义的函数进行修正 <span
-class="math display">\[
+<h4 id="开系热力学方程"><a href="#开系热力学方程" class="headerlink" title="开系热力学方程"></a>开系热力学方程</h4><p>考虑分子数的变化，将前面定义的函数进行修正</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   \dd{U}=T\dd{S}-p\dd{V}+\mu\dd{n}\\
   \dd{H}=T\dd{S}+V\dd{p}+\mu\dd{n}\\
   \dd{F}=-S\dd{T}-p\dd{V}+\mu\dd{n}\\
   \dd{G}=-S\dd{T}+V\dd{p}+\mu\dd{n}
-\end{cases}
-\end{equation}
-\]</span> 书上还定义<span
-class="math inline">\(G=nG_m\)</span>，因此化学势是单位摩尔的吉布斯能，且与粒子数无关。</p>
-<p>同时对于孤立系统的单元复相系（比如一个系统由水的气液固三态构成），根据熵判据可以得到，此时的平衡条件为
-<span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>书上还定义$G=nG_m$，因此化学势是单位摩尔的吉布斯能，且与粒子数无关。</p>
+<p>同时对于孤立系统的单元复相系（比如一个系统由水的气液固三态构成），根据熵判据可以得到，此时的平衡条件为</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-\begin{cases}
+ \begin{cases}
   T_1=T_2\\
   p_1=p_2\\
   \mu_1=\mu_2
-\end{cases}
-\end{equation}
-\]</span> 即要求两相的化学势相等.
-除此之外，前面提到过，等温等压时，系统应该趋于吉布斯自由能最小的方向，也就是说哪个相的化学势小，系统就应该趋于哪个相。</p>
-<h4 id="单元复相系的平衡性质">单元复相系的平衡性质</h4>
-<p>根据复相平衡的条件，我们可以得到一些关于相变的性质，比如说<strong>相变潜热</strong>。
-相变的时候化学势相等，所以当我们在平衡曲线（<span
-class="math inline">\(p-T\)</span>图）上移动的时候，两相的化学势始终相等，即<span
-class="math inline">\(\dd{\mu_1}=\dd{\mu_2}\)</span>，前面提到过，化学势为摩尔吉布斯函数，因此有
-<span class="math display">\[
+ \end{cases}
+\end{equation}</script><p>即要求两相的化学势相等. 除此之外，前面提到过，等温等压时，系统应该趋于吉布斯自由能最小的方向，也就是说哪个相的化学势小，系统就应该趋于哪个相。</p>
+<h4 id="单元复相系的平衡性质"><a href="#单元复相系的平衡性质" class="headerlink" title="单元复相系的平衡性质"></a>单元复相系的平衡性质</h4><p>根据复相平衡的条件，我们可以得到一些关于相变的性质，比如说<strong>相变潜热</strong>。<br>相变的时候化学势相等，所以当我们在平衡曲线（$p-T$图）上移动的时候，两相的化学势始终相等，即$\dd{\mu_1}=\dd{\mu_2}$，前面提到过，化学势为摩尔吉布斯函数，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
--S^1_m\dd{T}+V^1_m\dd{p}=&amp;-S^2_m\dd{T}+V^2_m\dd{p}\\
-\dv{p}{T}=&amp;\frac{S^1_m-S^2_m}{V^1_m-V^2_m}
-\end{align}
-\]</span> 因为<span class="math inline">\(\Delta Q=T\Delta
-S\)</span>，上式右边的分子为两相代表的熵，所以可以定义从相<span
-class="math inline">\(2\to1\)</span>相变所吸收的热量为<span
-class="math inline">\(L=T\Delta S\)</span>，因此有 <span
-class="math display">\[
+ -S^1_m\dd{T}+V^1_m\dd{p}=&-S^2_m\dd{T}+V^2_m\dd{p}\\
+ \dv{p}{T}=&\frac{S^1_m-S^2_m}{V^1_m-V^2_m}
+\end{align}</script><p>因为$\Delta Q=T\Delta S$，上式右边的分子为两相代表的熵，所以可以定义从相$2\to1$相变所吸收的热量为$L=T\Delta S$，因此有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\dv{p}{T}=&amp;\frac{L}{T\pqty{V^1_m-V^2_m}}
-\end{align}
-\]</span> 上式称为<strong>克拉伯龙方程</strong>。</p>
-<h4 id="多元复相系平衡">多元复相系平衡</h4>
-<p>多元系的复相平衡条件，书本上仅讨论了等温等压时，用吉布斯判据可以得到平衡时各组元中各相的化学势相等。<strong>当有半透膜时，则不要求化学势相等。</strong></p>
-<p>需要注意的是，对于复相系，一般是没法定义整体焓、自由能等态函数的。比如说，假设总焓<span
-class="math inline">\(H=H_1+H_2\)</span>，那么有 <span
-class="math display">\[
+ \dv{p}{T}=&\frac{L}{T\pqty{V^1_m-V^2_m}}
+\end{align}</script><p>上式称为<strong>克拉伯龙方程</strong>。</p>
+<h4 id="多元复相系平衡"><a href="#多元复相系平衡" class="headerlink" title="多元复相系平衡"></a>多元复相系平衡</h4><p>多元系的复相平衡条件，书本上仅讨论了等温等压时，用吉布斯判据可以得到平衡时各组元中各相的化学势相等。<strong>当有半透膜时，则不要求化学势相等。</strong></p>
+<p>需要注意的是，对于复相系，一般是没法定义整体焓、自由能等态函数的。比如说，假设总焓$H=H_1+H_2$，那么有</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=&amp;U_1+U_2+p_1V_1+p_2V_2\\
-=&amp;U++p_1V_1+p_2V_2\\
-\neq&amp;U++pV
-\end{align}
-\]</span> 作为广延量的U和V是可以直接相加定义的，但是上面的<span
-class="math inline">\(p_1\)</span>不一定等于<span
-class="math inline">\(p_2\)</span>，因此体积没法合并，也就是说最后的表达式没法写成<span
-class="math inline">\(U+pV\)</span>的形式，除非强度量——压强p相等。</p>
-<p>同理<span class="math inline">\(F=U-TS\)</span>要求各相强度量<span
-class="math inline">\(T\)</span>相等才有定义（<span
-class="math inline">\(G\)</span>就不用说了吧？）。</p>
-<p>对于多元复相系，有一个定律可以分析系统独立的强度量个数，设系统总的相数为<span
-class="math inline">\(\phi\)</span>，独立强度量个数为f，组元数为k，则
-<span class="math display">\[
+ H=&U_1+U_2+p_1V_1+p_2V_2\\
+ =&U++p_1V_1+p_2V_2\\
+ \neq&U++pV
+\end{align}</script><p>作为广延量的U和V是可以直接相加定义的，但是上面的$p_1$不一定等于$p_2$，因此体积没法合并，也就是说最后的表达式没法写成$U+pV$的形式，除非强度量——压强p相等。</p>
+<p>同理$F=U-TS$要求各相强度量$T$相等才有定义（$G$就不用说了吧？）。</p>
+<p>对于多元复相系，有一个定律可以分析系统独立的强度量个数，设系统总的相数为$\phi$，独立强度量个数为f，组元数为k，则</p>
+<script type="math/tex; mode=display">
 \begin{equation}
-f=k+2-\phi
-\end{equation}
-\]</span> 该定律称为<strong>吉布斯相律</strong>。</p>
+ f=k+2-\phi
+\end{equation}</script><p>该定律称为<strong>吉布斯相律</strong>。</p>
 <p><strong>统计物理部分请看[[Statistical-Review-Note]]</strong></p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>这点在卡诺热机中尤其体现<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>比如说理想气体状态方程<span
-class="math inline">\(pV=nTR\)</span><a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>这里当然也不讨论其他形式的功，对于非体积功，比如磁场之类的，会单独讨论。<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn4"><p>当然，自然界不需要我们做什么事情来保证熵处于极大值，它自然会处于极大值<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
     </div>
 
@@ -819,13 +664,13 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">117k</span>
+    <span title="Word count total">85k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:33</span>
+    <span title="Reading time total">2:35</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
