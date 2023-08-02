@@ -23,30 +23,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。">
+    <meta name="description" content="私の日本語のノート">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Relativistic-Quantum-Mechanics(Part-1)">
-<meta property="og:url" content="https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/index.html">
+<meta property="og:title" content="日本語の勉強">
+<meta property="og:url" content="https://sirohune.site/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/index.html">
 <meta property="og:site_name" content="はくのBlog">
-<meta property="og:description" content="在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。">
+<meta property="og:description" content="私の日本語のノート">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-06T11:47:28.000Z">
-<meta property="article:modified_time" content="2023-06-06T14:12:17.467Z">
+<meta property="article:published_time" content="2023-07-27T14:11:37.000Z">
+<meta property="article:modified_time" content="2023-08-02T11:34:45.445Z">
 <meta property="article:author" content="白舟尘">
-<meta property="article:tag" content="物理">
-<meta property="article:tag" content="笔记">
-<meta property="article:tag" content="量子场论">
+<meta property="article:tag" content="日语学习">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/">
+<link rel="canonical" href="https://sirohune.site/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/","path":"2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/","title":"Relativistic-Quantum-Mechanics(Part-1)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/","path":"2023/07/27/日本語の勉強/","title":"日本語の勉強"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Relativistic-Quantum-Mechanics(Part-1) | はくのBlog</title>
+<title>日本語の勉強 | はくのBlog</title>
   
 
 
@@ -60,7 +58,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
   
-  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7//atom.xml">
   
 
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
@@ -185,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8Bdirac-equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#klein-gordon-equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirac-equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma%E7%9F%A9%E9%98%B5"><span class="nav-text">\(\gamma\)矩阵</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E4%B8%8A"><span class="nav-text">新标日初级上</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E8%AF%BE"><span class="nav-text">第八课</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%8F%8A%E8%AF%8D%E8%AF%AD%E8%AE%B2%E8%A7%A3"><span class="nav-text">表达及词语讲解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E8%AF%BE"><span class="nav-text">第九课</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%8F%8A%E8%AF%8D%E8%AF%AD%E8%AE%B2%E8%A7%A3-1"><span class="nav-text">表达及词语讲解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E8%AF%BE"><span class="nav-text">第十课</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-2"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%8F%8A%E8%AF%8D%E8%AF%AD%E8%AE%B2%E8%A7%A3-2"><span class="nav-text">表达及词语讲解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E8%A1%A8"><span class="nav-text">语法表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A9%E8%AF%8D%E8%A1%A8"><span class="nav-text">助词表</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -258,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -271,12 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Relativistic-Quantum-Mechanics(Part-1) | はくのBlog">
+      <meta itemprop="name" content="日本語の勉強 | はくのBlog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Relativistic-Quantum-Mechanics(Part-1)
+          日本語の勉強
         </h1>
 
         <div class="post-meta-container">
@@ -286,9 +284,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-06 19:47:28 / 修改时间：22:12:17" itemprop="dateCreated datePublished" datetime="2023-06-06T19:47:28+08:00">2023-06-06</time>
+      <time title="创建时间：2023-07-27 22:11:37" itemprop="dateCreated datePublished" datetime="2023-07-27T22:11:37+08:00">2023-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-02 19:34:45" itemprop="dateModified" datetime="2023-08-02T19:34:45+08:00">2023-08-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+          <a href="/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/" itemprop="url" rel="index"><span itemprop="name">日本語</span></a>
         </span>
     </span>
 
@@ -309,8 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -321,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -339,127 +343,231 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
+        <p>私の日本語のノート</p>
 <span id="more"></span>
-<pre><code>参考教材:《高等量子力学》——喀兴林</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
-\begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
-\begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
-\begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
-<ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
-<li>最重要的是，该方程计算的氢原子能级与实验不符</li>
-</ul>
-<p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法
-<span class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha_x(-i\hbar\pdv{x})-c\alpha_y(-i\hbar\pdv{y})-c\alpha_z(-i\hbar\pdv{z})-\beta
-mc^2}\psi=0
-\end{align}
-\]</span> 其中质量与光速c的引入是为了使系数<span
-class="math inline">\(\alpha_i,\
-\beta\)</span>无量纲，同时这四个系数应当是（我觉得是假设的）定值，也就是说与时空无关。我们可以将其简写为
-<span class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0
-\end{align}
-\]</span>
-因为我们要求满足该方程的解还能满足KG方程，因此我们在上式左边作用 <span
-class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}
-\end{align}
-\]</span> 得到 <span class="math display">\[
-\begin{align}
-&amp;\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta
-mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
-&amp;-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar
-\pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
-&amp;-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot
-p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
-&amp;-m^2c^4 \beta^2=0
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-\Rightarrow&amp; \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2
-\alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
-\end{align}
-\]</span></p>
-<p>然后将其与KG方程（令V=0）<span
-class="math inline">\((-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0\)</span>对比得到
-<span class="math display">\[
-\begin{align}
-\begin{cases}
-   \{\alpha_i,\beta\}=0 &amp; \\
-   \alpha_i\alpha_j=\delta_{ij}  &amp; \\
-   \beta^2=1
-\end{cases}
-\end{align}
-\]</span>
-在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac
-Equation)</strong>，值得一提的是，<strong>Dirac
-Equation</strong>是可以纳入到量子力学的基本原理<span
-class="math inline">\(i\hbar\pdv{t}\psi=H\psi\)</span>中的，其中<span
-class="math inline">\(H\)</span>写为 <span class="math display">\[
-\begin{align}
-H=c\alpha\cdot p+mc^2\beta
-\end{align}
-\]</span> 在电磁场中我们可以直接推广为 <span class="math display">\[
-\begin{align}
-H=c\alpha\cdot(p-qA)+qV+mc^2\beta
-\end{align}
-\]</span> 式子中的<span class="math inline">\(\alpha,\
-\beta\)</span>显然是算符，因为量子力学当中哈密顿量是一个算符，对于上面的等式当然要求右式是算符。或者从上面式子的要求<span
-class="math inline">\(\{\alpha_i,\beta\}=0\)</span>也能看出他们是算符。量子力学中的算符基本都是由<span
-class="math inline">\(x,p\)</span>组成，而这两个算符不是，因此这两个算符的出现意味着新的解空间的出现，不同于以往的函数空间<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
-<p>因此狄拉克方程的解应当存在于标量函数空间与另一空间的直积空间当中。该方程计算得到的氢原子能级与实验符合得很好。根据我们初等量子力学的知识知道，电子除了空间部分的信息，还有自旋的信息，所以可以知道这一新的空间是自旋的空间。</p>
-<p>接下来我们定义新的符号来将上面的式子化简...</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>这是值得仔细思考的<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<h2 id="新标日初级上">新标日初级上</h2>
+<h3 id="第八课">第八课</h3>
+<h4 id="语法">语法</h4>
+<ol type="1">
+<li>之前で用于提示交通工具，现在拓展为“<strong>手段</strong>”以及“<strong>原材料</strong>”。
+例句为:</li>
 </ol>
-</section>
+<ul>
+<li>何==で==うどんを作りますか 乌冬面是什么做的</li>
+<li>李さんは日本語==で==手紙を書きます 小李用日语写信</li>
+<li>手紙を速達==で==送りました 用速递寄了信</li>
+</ul>
+<p>2.　A把什么东西给B， 用に提示B，を提示物体，谓语部分是あげます
+例句为: - 私は小野さん==に==お土産==を==あげます 我给了小野先生一件礼物
+- 小野さんは森さんにチョコレートをあげました
+小野先生给了森先生巧克力</p>
+<p>3.　A从B那里拿到什么东西，用に提示B，を提示物体，谓语部分是もらいます。除此之外，赠送者可以看成物品移动的起点，因此可以也可以用から
+例句为: - 私は小野さん==に==辞書==を==もらいました
+我从小野哪里得到了字典 - 私は長島さん==から==写真==を==もらいました
+我从长岛先生哪里得到了照片</p>
+<p>4.　A见B，助词に提示B，谓语是会います 例句为: -
+李さんは明日長島さん==に==会います 小李明天去见长岛 -
+私は駅で森さん==に==会います 我在车站遇见了森先生
+5.　もう表示“<strong>完了</strong>”“<strong>已经</strong>” 例句为: -
+昼ご飯を食べました　（吃过午饭了吗）　ええ，==もう==食べました
+（是的，我已经吃过了）</p>
+<p>6.　名词+（を）お願いします 例句为: - （打电话的时候）
+すみません、田中さんをお願いします （请田中先生接一下电话） -
+（在窗口请对方办手续） これ、お願いします （请帮我办一下这个）</p>
+<h4 id="表达及词语讲解">表达及词语讲解</h4>
+<ul>
+<li>わかりました</li>
+<li>さっき和たった今都是过去式。たった今是比较近的时候的用法。さっき是稍微前一些时候的用法</li>
+</ul>
+<h3 id="第九课">第九课</h3>
+<h4 id="语法-1">语法</h4>
+<ol type="1">
+<li>日语中形容词分为两类，<strong>一类形容词</strong>以「い」结尾，做谓语时后面加上です；否定时把结尾的「い」变成「く」，です变成ないです或者ありません</li>
+<li>需要特别注意的是，いいです的否定形式是よく　ないです</li>
+<li>当时态是过去式的时候，肯定形式是将「い」变成「かった」；否定形式是将词尾变成く＋なかったです或者く＋ありませんでした</li>
+<li>相对地，いいです的过去式以及否定形式是よかつたです和よく　ありませんでした</li>
+<li>一类形容词可以<strong>直接修饰</strong>名词。但是要注意形容词和名词之间不能加の</li>
+<li>あまり+否定形式，表示程度不高。比如说这个汤不太热：「このスープはあまり熱くないです」</li>
+<li>表示程度的副词：とても/たいへん（很，非常）&gt;
+少し/ちょっと(一点儿) &gt; あまり(不太) &gt; 全然(根本不)
+<strong>あまり/全然 后面要跟否定形式</strong></li>
+</ol>
+<h4 id="表达及词语讲解-1">表达及词语讲解</h4>
+<ul>
+<li>多い和少ない不同于其他一类形容词，<strong>不能单独修饰名词</strong>，比如说很多书要用たくさんの本而不是多い本</li>
+<li>あら是女性在感到惊讶的时候用的词语，由あれ变化而来</li>
+<li>「熱くないですか」否定疑问句，确认对方是否和自己持有相同看法。回答的时候可以用はい，也可以用いいえ</li>
+<li>ちょうといいです表示刚刚好，正合适。、</li>
+<li>お湯是“热水”或者“开水”的意思，水是凉水的意思。可以说熱いお湯/冷たい水，但不能说熱い水</li>
+</ul>
+<h3 id="第十课">第十课</h3>
+<h4 id="语法-2">语法</h4>
+<ol type="1">
+<li><strong>第二类形容词</strong>是不以「い」结尾的形容词，做谓语时后面加です。过去式是でした</li>
+<li>二类形容词的否定形式是将です改成でわありません。过去式的否定是でわありませんでした。<em>口语里でわ一般说じゃ</em>。</li>
+<li>二类形容词修饰名词的时候，是形容词+<strong>な</strong>+名词，比如“安静的城市”：静か<strong>な</strong>町</li>
+<li>询问某人或者某事物的性质的时候用：どんな+名词。相当于汉语“什么样的”。<strong>何の与どんな的区别在与，何の是询问内容和材料，比如看什么书，煮什么菜；而どんな是询问性质，比如什么样的书（有趣），什么样的菜（辣）</strong></li>
+<li>どうですか询问对方对某状态的意见或者感想，比如：この料理はどうですか；有时还用于劝诱对方进行某动作，比如：お茶，どうですか。</li>
+<li>用于口语的连词：でも表转折，そして表并列。</li>
+</ol>
+<h4 id="表达及词语讲解-2">表达及词语讲解</h4>
+<ul>
+<li>漂亮的：「綺麗」，平假名是きれい，容易被错认为一类形容词。</li>
+<li>あれえ表示感到吃惊或者意外而情不自禁发出的声音。</li>
+<li>是转换话题的时候使用，比如“（附和）。哎，请问这个美术馆里都有什么作品呢？”：ああ，そうですか。ところで，この美術館にはどんな作品がありますか。</li>
+<li>场所+中，表示场所的所有空间。时间+中，表示期间内的所有时间。比如“全世界”：世界中，“全年”：一年中。</li>
+<li>形容词+の，这里的「の」代指前文提到过的词语，可以避免重复使用词语。</li>
+</ul>
+<h2 id="语法表">语法表</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>语法</th>
+<th>中国語</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>「は」＋「です」</td>
+<td><strong>判断句</strong> 什么是什么</td>
+<td>姉さんは会社員です</td>
+</tr>
+<tr class="even">
+<td>「は」＋「ではありません」</td>
+<td>判断句的否定形式</td>
+<td>妹は学生ではありません</td>
+</tr>
+<tr class="odd">
+<td>「は」＋「でした」</td>
+<td>判断句的过去式</td>
+<td>母は昔女優でした</td>
+</tr>
+<tr class="even">
+<td>「は」＋「ではありませんでした」</td>
+<td>判断句过去式的否定形式</td>
+<td>母は昔医者ではありませんでした</td>
+</tr>
+<tr class="odd">
+<td>「は」＋「が」＋「います」/「あります」</td>
+<td>AwaBga，A有B，ga放在B的后面作为助词，用于标识主语</td>
+<td>私は猫がいます/　　　彼はパソコンがあります</td>
+</tr>
+<tr class="even">
+<td>「は」＋「が」＋「いません」/「ありません」</td>
+<td>上面的否定形式</td>
+<td>兄は犬がいません</td>
+</tr>
+<tr class="odd">
+<td>「は」＋「に」＋「います」/「あります」</td>
+<td><strong>所在句</strong>，AwaBに，A在B，ni放在B的后面作为助词，用于标识地点</td>
+<td>コピー機は研究室にあります</td>
+</tr>
+<tr class="even">
+<td>「は」＋「に」＋「いません」/「ありません」</td>
+<td>上面的否定形式</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>「に」＋「が」＋「います」/「あります」</td>
+<td><strong>存在句</strong>，AniBga，A处有B，ni标识地点，ga标识主语</td>
+<td>図書室に中国の雑誌があります</td>
+</tr>
+<tr class="even">
+<td>「に」＋「が」＋「いません」/「ありません」</td>
+<td>上面的否定形式</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>「は」＋「が」＋「好きです」</td>
+<td>AwaBga，A喜欢B</td>
+<td>彼女らは猫が好きです</td>
+</tr>
+<tr class="even">
+<td>「は」＋「を」＋「食べます」／「飲みます」</td>
+<td>AwaBo A吃B</td>
+<td>犬は牛肉を食べます</td>
+</tr>
+<tr class="odd">
+<td>「は」＋「を」＋「食べません」／「飲みません」</td>
+<td>上面的否定形式</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="助词表">助词表</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>助词</th>
+<th>用法</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>「は」</td>
+<td>1.提示主题 2.强调对比</td>
+<td>1．姉さん==は==会社員です　2.　</td>
+</tr>
+<tr class="even">
+<td>「が」</td>
+<td>提示主语</td>
+<td>図書館==に==雑誌==が==あります</td>
+</tr>
+<tr class="odd">
+<td>「へ」</td>
+<td>提示事物移动的方向</td>
+<td>今朝私は食堂へ行きました</td>
+</tr>
+<tr class="even">
+<td>「に」</td>
+<td>1. 提示具体的时间（万年历上有的），作为时间状语的组词 2.
+提示事物所在的场所 3. 同「へ」</td>
+<td>1．学校は八時半==に==始まります　2.　雑誌は図書館==に==あります　</td>
+</tr>
+<tr class="odd">
+<td>「で」</td>
+<td>1. 提示交通工具 2. 提示动作进行的场所 3.表示手段与原材料</td>
+<td>2.私は自転車==で==寮へ来ます 3. 李さんは日本語で手紙を書きます</td>
+</tr>
+<tr class="even">
+<td>「を」</td>
+<td>提示宾语</td>
+<td>今日の新聞==を==読みましたか　</td>
+</tr>
+<tr class="odd">
+<td>「も」</td>
+<td>也</td>
+<td>私==も==新聞を読みませんでした</td>
+</tr>
+<tr class="even">
+<td>「の」</td>
+<td>的</td>
+<td>私==の==猫今日は食べません</td>
+</tr>
+<tr class="odd">
+<td>「と」</td>
+<td>1. 和（and） 2. 提示共同做某事的对象</td>
+<td>1．李さん==と==黄さん昨日は図書館に行きませんでした　2.　私は彼女==と==映画館で映画を見ました</td>
+</tr>
+<tr class="even">
+<td>「か」</td>
+<td>或（or）</td>
+<td>私は毎朝パン==か==お粥を食べます</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -469,23 +577,18 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
-              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" rel="tag"># 量子场论</a>
+              <a href="/tags/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/" rel="tag"># 日语学习</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/05/28/Lie-Group-Study-Note-(part2)/" rel="prev" title="Lie-Group-Study-Note-(part2)">
-                  <i class="fa fa-chevron-left"></i> Lie-Group-Study-Note-(part2)
+                <a href="/2023/07/26/Journal/" rel="prev" title="札记">
+                  <i class="fa fa-chevron-left"></i> 札记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/06/12/HTML&CSS-Study-Note/" rel="next" title="HTML-Study-Note">
-                  HTML-Study-Note <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -567,11 +670,11 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
