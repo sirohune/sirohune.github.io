@@ -1,104 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CMT-Note</title>
-    <url>/2023/05/16/CMT-Note/</url>
-    <content><![CDATA[<pre><code>参考： 《A Short Course on Topological Insulators》</code></pre>
-<span id="more"></span>
-<h2 id="chapter-1-ssh-model">Chapter 1 SSH model</h2>
-<h2 id="chapter-2-berry-phase-chern-number">Chapter 2 Berry Phase, Chern
-Number</h2>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
-<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
-<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
-<h3 id="discrete-case">2.1 Discrete Case</h3>
-<p>我们定义<span
-class="math inline">\(\gamma_{12}\)</span>来代表两个非正交态<span
-class="math inline">\(\ket{\psi_1},\ket{\psi_2}\)</span>之间的相位差：
-<span class="math display">\[
-\begin{align}
-\gamma_{12}\triangleq
--\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
-\end{align}
-\]</span>
-很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位<span
-class="math inline">\(\alpha\)</span>，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：
-<span class="math display">\[
-\begin{align}
-\ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to
-\arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
-\end{align}
-\]</span></p>
-<h4 id="berry-phase">2.1.1 Berry Phase</h4>
-<p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：
-<span class="math display">\[
-\begin{align}
-\gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
-\end{align}
-\]</span></p>
-<p><strong>Attention!</strong>
-书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>： <span class="math display">\[
-\begin{align}
-\gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
-\end{align}
-\]</span></p>
-<p><strong>Conclusion：Berry相位指的是绕着<span
-class="math inline">\(S\)</span>一圈得到的相位差，其中<span
-class="math inline">\(S\)</span>是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
-<h4 id="berry-flux">2.1.2 Berry Flux</h4>
-<p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下: <span
-class="math display">\[
-\begin{align}
-\gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)})
-\end{align}
-\]</span>
-Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
-<p><img src="berry-fulx.png" />
-<img src="berry-fulx.png" width=80% height=50% align=center/></p>
-<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差： <span
-class="math display">\[
-\begin{align}
-F_{nm}&amp;=
-\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}
-\end{align}
-\]</span> 这将是一个规范不变的量，因为<span
-class="math inline">\(\gamma_{(n,m),(n+1,m)}\)</span>产生的多余相位将会被<span
-class="math inline">\(\gamma_{(n+1,m+1),(n,m+1)}\)</span>产生的所抵消（如果我们假设类似<span
-class="math inline">\(\gamma_{(1,2),(2,2)}\)</span>与<span
-class="math inline">\(\gamma_{(1,3),(2,3)}\)</span>产生的多余相位相等的话）</p>
-<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:
-<span class="math display">\[
-\begin{align}
-\gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}
-\end{align}
-\]</span>
-不过实际上，由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数，因此Berry相位和Berry流是可以相差<span
-class="math inline">\(2\pi\)</span>的整数倍的。</p>
-<h4 id="chern-number">2.1.3 Chern Number</h4>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>其实我也不知道这个式子是如何得到的<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>Mathematica</tag>
-        <tag>Calculation</tag>
-        <tag>physics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023年4月天水线（云浮）</title>
     <url>/2023/04/19/Climbing%20Diary-1/</url>
     <content><![CDATA[<pre><code>前念不生，即心
@@ -185,162 +87,247 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>札记</title>
-    <url>/2023/07/26/Journal/</url>
-    <content><![CDATA[<h1 id="section">2023-07-26</h1>
-<p>我们需给我们的业余生活留出一些时间交给艺术，以便保存和滋养我们的直觉想象和感悟能力。——王德峰</p>
-<hr />
-<h1 id="section-1">2023-08-02</h1>
-<p>看完了两季《legal
-high》，除了雅人叔在法庭上的百老汇表演以及<strong>可爱的</strong>新垣结衣之外，电视剧中对“真相”与“正义”的探讨也很有意思。剧中古美门、黛和羽生的碰撞对应的应该是<strong>分析法学派、自然法学派与社会法学派</strong>的碰撞。大致来说，分析法学派否认法律和道德之内的必然联系，自然法学派强调法律的正当性，即“恶法非法”，社会法学派强调社会总利益的最大值，而非个体利益的最大值。</p>
-<p>在看日剧的时候，我对于古美门所强调的“律师不是神，没有权利替委托人决定什么是正义，也无法知道案件的真相，因为证据不足所以对方败诉了，仅此而已，无关正义”十分赞同。但是实际生活中却有许多案件的判决让我直呼不公，这与看日剧时的心态相互矛盾，这个矛盾令我苦恼。</p>
-<p>为了解决这个矛盾，我需要逐渐明确自己之前所理解的“正义”，需要为其建立自洽的解释。</p>
-<hr />
-<h1 id="section-2">2023-08-24</h1>
-<p>《我是猫》，九州出版社的部分摘抄。</p>
-<pre><code>“大概是认为西洋人强大，哪怕是很勉强、很愚蠢的事情，也觉得不模仿就受不了。俗话说：随波逐流、随行就市、随遇而安。这一串的‘随’，岂不是愚笨到家了！”——p250
-“看来，出生时，无人深思熟虑；临死时，却无人不烦恼。”——p435
-“我等渴望自由，并得到了自由；得到了自由，却又感到不自由，因此而烦恼不已。因此西方文明似乎不错，但归根结底还是不行的。与此相反，在咱东方自古讲求精神修养，还是有其道理的。事实表明，个性发展的结果是大家全都得了神经衰弱症，苦不堪言。到了此时，才发现‘王者之民荡荡焉’这句话的真正价值，才能醒悟到‘无为而化’这句话不可轻慢，但是，纵然醒悟，为时已晚，宛如酒精中毒以后才明白‘啊，若是不喝酒就好了’一样。”——p447</code></pre>
-<p>夏目簌石出生于1867年，恰逢明治维新的浪潮。对于他这一代作家，对于从东方文化到西方文化的变迁是最敏感的，他父母作为旧时代的人，带着旧时代的思想抚养他，而他以及他的同龄人受到的是新式的，效仿西方的思想文化。文中有许多地方对比东西方哲学思想差异，似乎西方的哲学思想偏向于“积极地改造外界”，而东方的则是“安静地适应环境”。</p>
-<p>哪一种思想“更高级、更好”这个问题先放在一边，对于物理专业的学生，学习的自然是西方的科学（这里说的西方科学并不是说西方的理论，而是哲学语境下的西方科学），科学可以解释生活中的很多事情，形式理论的推导以及定量的计算都让人感到安心。但是这不是世界的全部，世界不仅有“自然”，还有“我”，了解自然却不一定能够得到宁静。物理学教我自然界是什么，将自然界本来的面貌摆在我面前，而内心的宁静则需要求助于东方的哲学，东方的哲学讲究修心。对于大多数普通人来说，内心所想与真实世界存在的距离需要东方哲学来弥补。</p>
-<hr />
-<h1 id="section-3">2023-09-02</h1>
-<p>舍友和我说他打算26岁结婚，我发现他结婚生子的时候我可能博士才读到一半。这五年和别人的人生轨迹对比，突然变得好长。2022年中国人均寿命77岁，假设我能活到70岁，人生也不过十四个五年，我已经过了四个五年，正在过第五个五年。</p>
-<p>假如我的寿命只有十四天，现在是我的第五天（不考虑婴儿成长问题），我会怎么做？我觉得自己会很不甘心，因为还有很多事情没有去完成，然后拼命在生命结束前完成我的清单。而我现在的生活态度却不是这样，有些事情并不是慢慢做就会做完的，而是会慢慢被自己放弃并遗忘。</p>
-]]></content>
-      <categories>
-        <category>札记</category>
-      </categories>
-      <tags>
-        <tag>札记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML-Study-Note</title>
-    <url>/2023/06/12/HTML&amp;CSS-Study-Note/</url>
-    <content><![CDATA[<p>为了解决网站上的bug，同时更好地自定义自己的网站，决定学习一些前端语言。</p>
-<pre><code>参考资料：http://c.biancheng.net/view/9381.html</code></pre>
+    <title>CMT-Note</title>
+    <url>/2023/09/01/CMT-Note/</url>
+    <content><![CDATA[<pre><code>参考： 《A Short Course on Topological Insulators》</code></pre>
 <span id="more"></span>
-<h2 id="网站是什么">网站是什么</h2>
-<ul>
-<li>网站由一个个网页构成，网页本质上是服务器上的文件，就像本地电脑中的文件一样。</li>
-<li>网页有许多种后缀，html只是其中一种，但不管后缀是什么，他们本质都是html代码构成的文本文件。</li>
-<li>多个网页之间可能是从属关系（树状图），其顶级目录称为program，有一个专属的IP地址，我们通过访问该IP地址来访问program中的所有文件，也就是网站中的所有网页。</li>
-<li>IP地址是难以记忆的，我们<strong>用域名来助记</strong>，域名可以帮助用户记住网站链接以及品牌。因此域名是指向IP地址的，然后通过IP地址请求服务器上的文件，这就是<strong>域名解析</strong>，通过DNS服务器完成的。</li>
-<li>服务器由：主板、CPU、内存和风扇组成。实际上与我们的电脑机箱差不多，它需要存储信息（内存），处理信息（CPU）。唯一用途便是运行网站。</li>
-</ul>
-<h2 id="html是什么">HTML是什么</h2>
-<p>HTML<strong>不是</strong>编程语言，没有计算能力，只能静态展示网页信息。</p>
-<h3 id="超文本">超文本</h3>
-<p>HTML是超文本，即超越纯文本，意思是不仅包含文字，还能包含图片、音视频、表格、列表、链接、按钮、输入框等高级内容。</p>
-<h3 id="标记语言">标记语言</h3>
-<p>HTML通过标签来标记本文中的不同内容、格式、布局等。 - &lt;img&gt;
-标签表示一张图片 - &lt;a&gt; 标签表示一个链接 - &lt;table&gt;
-标签表示一个表格 - &lt;input&gt; 标签表示一个输入框 - &lt;p&gt;
-标签表示一段文本（paragraph？） - &lt;strong&gt; 标签表示文本加粗 -
-&lt;div&gt; 标签表示块级布局</p>
-<p>总之，==HTML可以理解为网页内容的排版布局语言==（有点像LaTeX？）</p>
-<p>HTML有两个重要版本，一个是HTML4，一个是HTML5，HTML4适应了 PC
-互联网时代，HTML 5
-适应了移动互联网时代。现在除了IE浏览器，几乎所有浏览器都支持HTML5，所以可以放心使用</p>
-<h3 id="html文档结构">HTML文档结构</h3>
-<p>HTML页面由尖括号的标签组成。跟LaTeX的环境类似，标签是成对出现的，一个代表开始，一个代表结束（闭合标签），例如&lt;b&gt;和&lt;/b&gt;。然后我们在标签的中间填写内容，下面是一个具体的例子</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML演示<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://c.biancheng.net/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这是一个链接，指向C语言中文网首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>HTML教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>CSS教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>JavaScript教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>最前面的!DOCTYPE html
-是文档类型声明，用来说明这个是HTML文档，看的出来他没有闭合，所以他不是标签，doctype声明不区分大小写。</li>
-<li>&lt;html&gt;&lt;/html&gt;就像begin{document}一样，所有内容都写在里面</li>
-<li>&lt;head&gt;用来定义HTML文档的信息，比如标题和编码格式</li>
-<li>&lt;meta
-charset="UTF-8"&gt;为当前页面指明采用UTF-8编码，这是全球通用的编码格式</li>
-<li>&lt;title&gt;用于指明网页标题，显示在浏览器标签栏上</li>
-<li>&lt;body&gt;是网页的主体，网页显示的内容都在body中。所以可以看到，title并不在body中，因此不会显示在网页上，而是在标签栏上</li>
-<li>&lt;h1&gt;是标题、&lt;ul&gt;是列表、&lt;li&gt;是列表项、&lt;input
-type="text"/&gt;定义输入框（可以猜到h1是一级标题，最低有六级标题）</li>
-</ul>
-<h2 id="html标签的语法格式">HTML标签的语法格式</h2>
-<ul>
-<li>HTML标签语法==不区分大小写==，但是为了规范和专业，在定义标签时一律采用小写</li>
-<li>自闭合标签没有结束标签，而是在开始标签中添加/来闭合，比如
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;C语言中文网Logo&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 图像 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span> <span class="comment">&lt;!-- 分割线 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span> <span class="comment">&lt;!-- 文本换行 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 文本输入框 --&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="html属性的概念和使用">HTML属性的概念和使用</h2>
-<ul>
-<li>属性可以为HTML标签提供一些额外信息，添加在开始标签中，格式是attr="value"，用单引号双引号都可以，但是为了规范，请使用双引号</li>
-<li>属性分为专用属性与通用属性（还有自定义属性，需要借助CSS和JavaScript来处理自定义属性）。通用属性就是大部分标签都能使用的属性，专用属性只有特定标签才能够使用</li>
-</ul>
-<h3 id="通用属性">通用属性</h3>
-<ol type="1">
-<li>id属性：就是标签的名称，具有唯一性，使用CSS和JavaScript操作的时候，通过id来寻找</li>
-<li>class属性：class不具有唯一性，多个标签可以是同一个class，同一个标签也可以有多个class，CSS和JavaScript也可以通过class来操作标签</li>
-<li>title属性：用于描述标签内容，当鼠标移动到标签上时，网页会显示title的属性值（比如说title="这是一段描述"，鼠标移动上去后就会显示“这是一段描述”）</li>
-<li>style属性：在标签内部定义CSS样式</li>
+<h2 id="chapter-1-ssh-model">Chapter 1 SSH model</h2>
+<h2 id="chapter-2-berry-phase-chern-number">Chapter 2 Berry Phase, Chern
+Number</h2>
+<p>https://sirohune.site <span class="math display">\[
+\require{physics}
+\]</span>
+本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
+<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
+<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
+<h3 id="discrete-case">2.1 Discrete Case</h3>
+<p>我们定义<span
+class="math inline">\(\gamma_{12}\)</span>来代表两个非正交态<span
+class="math inline">\(\ket{\psi_1},\ket{\psi_2}\)</span>之间的相位差：
+<span class="math display">\[
+\begin{align}
+\gamma_{12}\triangleq
+-\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
+\end{align}
+\]</span>
+很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位<span
+class="math inline">\(\alpha\)</span>，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：
+<span class="math display">\[
+\begin{align}
+\ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to
+\arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
+\end{align}
+\]</span></p>
+<h4 id="berry-phase">2.1.1 Berry Phase</h4>
+<p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：
+<span class="math display">\[
+\begin{align}
+\gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
+\end{align}
+\]</span></p>
+<p><strong>Attention!</strong>
+书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>： <span class="math display">\[
+\begin{align}
+\gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
+\end{align}
+\]</span></p>
+<p><strong>Conclusion：Berry相位指的是绕着<span
+class="math inline">\(S\)</span>一圈得到的相位差，其中<span
+class="math inline">\(S\)</span>是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
+<h4 id="berry-flux">2.1.2 Berry Flux</h4>
+<p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下: <span
+class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)}).
+\end{align}
+\]</span>
+Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
+<p><img src="berry-fulx.png" /></p>
+<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差： <span
+class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}.
+\end{align}
+\]</span> 这将是一个规范不变的量，因为<span
+class="math inline">\(\gamma_{(n,m),(n+1,m)}\)</span>产生的多余相位将会被<span
+class="math inline">\(\gamma_{(n+1,m+1),(n,m+1)}\)</span>产生的所抵消（如果我们假设类似<span
+class="math inline">\(\gamma_{(1,2),(2,2)}\)</span>与<span
+class="math inline">\(\gamma_{(1,3),(2,3)}\)</span>产生的多余相位相等的话）</p>
+<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:
+<span class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}.
+\end{align}
+\]</span>
+Berry相位由规范不变的Berry构成，可以看出Berry相位也是规范不变的。</p>
+<p>由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数：
+<span class="math display">\[
+\begin{align}
+\exp[-i\sum\limits_n^{N-1}\sum\limits_m^{M-1}F_{nm}]=e^{-i\gamma_L},
+\end{align}
+\]</span> 因此实际上，Berry相位和Berry流是可以相差<span
+class="math inline">\(2\pi\)</span>的整数倍的。</p>
+<h4 id="chern-number">2.1.3 Chern Number</h4>
+<p>对于二维晶格，如果我们使用周期性边界条件，也就是说，对于一个矩形，对边分别认同，则我们得到的几何将是一个甜甜圈。对于这样的几何，很显然有如下结果：
+<span class="math display">\[
+\begin{align}
+\prod_m^M\prod_n^N e^{-iF_{nm}}=1.
+\end{align}
+\]</span>
+<strong>陈数</strong>在离散情况下的定义即为该甜甜圈表面Berry流之和除以<span
+class="math inline">\(2\pi\)</span>： <span class="math display">\[
+\begin{align}
+Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
+\end{align}
+\]</span>
+Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
+<p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
+<h3 id="continuum-case">Continuum Case</h3>
+<h4 id="berry-connection">2.2.1 Berry Connection</h4>
+<p>现在考虑连续的情况，<span
+class="math inline">\(\ket{\psi(R)}\)</span>在一条曲线上移动，<span
+class="math inline">\(R\)</span>代表位置，假定态矢量在曲线附近的开区间是光滑的（为此我们不用担心导数的一系列数学上的问题），根据之前的定义，我们考虑态矢量从<span
+class="math inline">\(R\)</span>处走到<span
+class="math inline">\(R+dR\)</span>处所变化的相位： <span
+class="math display">\[
+\begin{align}
+e^{-i\Delta\gamma}&amp;= \ip{\psi(R)}{\psi(R+dR)}\\
+&amp;\approx 1+\mel{\psi(R)}{\nabla}{\psi(R)}dR\\
+\Rightarrow \Delta\gamma&amp;= i\mel{\psi(R)}{\nabla}{\psi(R)}dR.
+\end{align}
+\]</span> 定义<strong>Berry联络</strong>为 <span class="math display">\[
+\begin{align}
+A(R)&amp;\triangleq \lim_{dR\to
+0}\frac{\Delta\gamma}{dR}=i\mel{\psi(R)}{\nabla}{\psi(R)}.
+\end{align}
+\]</span>
+Berry联络的意义是：态矢量在曲线上移动单位距离时，相位对应的变化。</p>
+<p>由于态矢量是归一化的，我们可以得到<span
+class="math inline">\(Re(\mel{\psi}{\nabla}{\psi})=0\)</span>: <span
+class="math display">\[
+\begin{align}
+\nabla\ip{\psi}{\psi}&amp;= \ip{\nabla\psi}{\psi}+\ip{\psi}{\nabla\psi}=
+0,
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\Rightarrow Re(\ip{\psi}{\nabla\psi})&amp;= 0.
+\end{align}
+\]</span> 因此Berry联络又可以写为 <span class="math display">\[
+\begin{align}
+A(R)=-Im(\ip{\psi(R)}{\nabla\psi(R)}).
+\end{align}
+\]</span> 很容易验证，Berry联络是不满足局域规范变换的： <span
+class="math display">\[
+\begin{align}
+\ket{\psi(R)}\to &amp;e^{i\alpha(R)},\\
+A(R)\to &amp; A(R)-\nabla\alpha(R).
+\end{align}
+\]</span>
+既然我们得到了相位关于位置的变化关系，我们可以很容易写出Berry相位：
+<span class="math display">\[
+\begin{align}
+\gamma(\mathscr{l})=-\arg\exp[-i\oint_\mathscr{l} A\cdot dR].
+\end{align}
+\]</span>
+我们将会证明它在连续情况下也是规范不变的，即便它看起来由非规范不变的Berry联络组成。</p>
+<h4 id="berry-curvature">2.2.2 Berry Curvature</h4>
+<p>与离散情况的思路一样，我们希望将Berry相位用规范不变的量来表示，以此证明它是规范不变的。将连续情况与离散情况对比，Berry相位为：
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}F_{nm})\\
+&amp;= \exp(-i\oint_\mathscr{l}A\cdot dR).
+\end{align}
+\]</span>
+一个是曲面的求和，一个是边界的积分，这让我们联想到斯托克斯定理，实际上，对离散的情况取极限，我们可以得到一个面积分。</p>
+<p>我们将二维晶格的晶格常数设为<span class="math inline">\(\Delta
+x,\Delta y\)</span>,当晶格常数趋于0的时候得到连续的情况。Berry流为：
+<span class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}\
+\end{align}
+\]</span>
+从上一个小节我们知道两个态矢量之间的相位差可以表示为Berry联络，因此Berry流可以写为:
+<span class="math display">\[
+\begin{align}
+F_{nm}= &amp;A_x(x_n+\frac{\Delta x}{2},y_m)\Delta x+A_y(x_n+\Delta
+x,y_m+\frac{\Delta y}{2})\\
++&amp;A_x(x_n+\frac{\Delta x}{2},y_m+\Delta y)(-\Delta
+x)+A_y(x_n,y_m+\frac{\Delta y}{2})(-\Delta y).
+\end{align}
+\]</span> 取<span class="math inline">\(\Delta x,\Delta y\to
+0\)</span>时： <span class="math display">\[
+\begin{align}
+F_{nm}=[\partial_xA_y(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})-\partial_yA_x(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})]\Delta x\Delta y.
+\end{align}
+\]</span> 定义<strong>Berry曲率</strong>为： <span
+class="math display">\[
+\begin{align}
+B=\lim_{\Delta x,\Delta y\to0}\frac{F_{nm}}{\Delta x\Delta y}.
+\end{align}
+\]</span> 将格点中间的位置记为<span
+class="math inline">\(R_{nm}\)</span>，则Berry曲率为: <span
+class="math display">\[
+\begin{align}
+B=\partial_xA_y(R_{nm})-\partial_yA_x(R_{nm}).
+\end{align}
+\]</span>
+回忆一下规范变换下Berry联络多出来的项，很显然Berry是规范不变的，因为多出来的项会被减号消去。回到正题，在晶格常数趋于零的极限下，Berry相位的表示可以写为:
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}B(R_{nm})\Delta x\Delta y)\\
+&amp;= \exp(-i\int_\mathscr{S} B(x,y)dxdy).
+\end{align}
+\]</span> 其中<span class="math inline">\(\mathscr{S}\)</span>是以<span
+class="math inline">\(\mathscr{l}\)</span>为边界的曲面</p>
+<h4 id="chern-number-1">2.2.3 Chern Number</h4>
+<p>在连续的情况下，陈数继承离散时的定义，取<span
+class="math inline">\(\Delta x,\Delta y\to
+0\)</span>即可，但是不知道为什么，书本对于陈数的定义忽然多了一个负号:
+<span class="math display">\[
+\begin{align}
+Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
+\end{align}
+\]</span>
+对于二维晶格材料，能谱上存在能带，当存在能隙的时候，能带之间清晰地被区分开，他们的态函数表示为<span
+class="math inline">\(\ket{u_n(k)}\)</span>,我们可以不带任何歧义地定义第n个能带的Berry联络：
+<span class="math display">\[
+\begin{align}
+A^{(n)}_j(k)=i\mel{u_n(k)}{\partial_{k_j}}{u_n(k)},
+\end{align}
+\]</span> 以及第n个能带的陈数: <span class="math display">\[
+\begin{align}
+Q^{(n)}=-\frac{1}{2\pi}\int_{BZ}dk_xdk_y(\pdv{A^{(n)}}{k_x}-\pdv{A^{(n)}}{k_y}).
+\end{align}
+\]</span>
+当系统绝热变化的时候，也就是说哈密顿量的改变不影响能隙的存在，此时Berry曲率连续变化，但是陈数是一个整数，所以陈数并不会改变<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>，因此我们说陈数是二维晶格模型的拓扑不变量，就像卷绕数winding
+numebr是一维SSH模型的拓扑不变量一样。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>其实我也不知道这个式子是如何得到的<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>对于色散关系，动量空间当然满足周期性边界条件<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-<h2 id="html段落中的空白符">HTML段落中的空白符</h2>
-<ul>
-<li>如果段落中出现多个连续的空格，浏览器会忽略这些空格只保留一个；</li>
-<li>如果段落中出现多个连续的换行，浏览器会将这些换行转换成一个空格。</li>
-</ul>
-<h2 id="html文本格式化">HTML文本格式化</h2>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>标签</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>&lt;...&lt;/b&gt;</td>
-<td>加粗标签中的字体</td>
-</tr>
-<tr class="even">
-<td>&lt;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="html超链接标签a">HTML超链接标签&lt;a&gt;</h2>
-<ul>
-<li>href
-本质上就是指向一个文件，这个文件几乎可以是任意格式的。如果浏览器支持这种格式，那么它就可以在浏览器上显示，比如常见的图片、音频、视频等，如果浏览器不支持这种格式，那么就提示用户下载。</li>
-<li>href
-使用的路径可以是绝对路径，也可以是相对路径。绝对路径往往以域名为起点;相对路径往往以当前文件或者当前域名为起点，</li>
-<li>target属性：用于指明新页面打开方式；_self是覆盖原有窗口（这个是默认值），_blank是新窗口打开</li>
-</ul>
-<h2 id="html图片标签img">HTML图片标签&lt;img&gt;</h2>
-<ul>
-<li>&lt;img&gt;是自闭和标签，有两个属性，一个是必选的scr，一个是可选的alt</li>
-<li>scr属性用于指明图片地址或者路径，支持jpg/png/gif等格式</li>
-<li>alt用于定义图片的文字描述信息，类似于LaTeX中的caption。当图片无法正常加载时，就会显示alt的信息</li>
-</ul>
-<h2 id="html嵌入css样式四种方法">HTML嵌入CSS样式（四种方法）</h2>
-<p>HTML表达能力有限，经常需要结合CSS一起使用。有四种使用方法。</p>
-<ul>
-<li>行内样式：在标签的style属性中定义CSS样式；多个CSS属性用分号间隔
-例子：
-<div
-style="background-color:#66CC99; color:#993300; height:30px; line-height:30px;">
-行内元素，div 块级元素
-</div></li>
-<li>内嵌样式：在HTML文档的头部（即head标签）使用style标签定义样式 例子：
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>内嵌式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: left;  <span class="comment">/*文本左对齐*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">18px</span>;  <span class="comment">/*字体大小 18 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">25px</span>;  <span class="comment">/*行高 25 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;  <span class="comment">/*首行缩进2个文字大小空间*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">500px</span>;  <span class="comment">/*段落宽度 500 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: <span class="number">0</span> auto;  <span class="comment">/*浏览器下居中*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;  <span class="comment">/*段落下边距 20 像素*/</span></span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>“百度”这一公司名称便来自宋词“众里寻他千百度”。（百度公司会议室名为青玉案，即是这首词的词牌）。而“熊掌”图标的想法来源于“猎人巡迹熊爪”的刺激，与李博士的“分析搜索技术”非常相似，从而构成百度的搜索概念，也最终成为了百度的图标形象。在这之后，由于在搜索引擎中，大都有动物形象来形象，如 SOHU 的狐，如 GOOGLE 的狗，而百度也便顺理成章称作了熊。百度熊也便成了百度公司的形象物。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>在百度那次更换 LOGO 的计划中，百度给出的 3 个新 LOGO 设计方案在网民的投票下，全部被否决，更多的网民将选票投给了原有的熊掌标志。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>此次更换 LOGO 的行动共进行了 3 轮投票，直到第 2 轮投票结束，新的笑脸 LOGO 都占据了绝对优势。但到最后一轮投票时，原有的熊掌标志却戏剧性地获得了最多的网民选票，从而把 3 个新 LOGO 方案彻底否决。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>链接式：使用link标签引入外部的CSS文件</li>
-<li>导入式：使用@import的命令导入外部CSS文件</li>
-</ul>
-<p>HTML先了解到这里~</p>
-<h2 id="css">CSS</h2>
+</section>
 ]]></content>
       <categories>
-        <category>HTML</category>
-        <category>CSS</category>
+        <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
+        <tag>Mathematica</tag>
+        <tag>Calculation</tag>
+        <tag>physics</tag>
       </tags>
   </entry>
   <entry>
@@ -528,29 +515,162 @@ orz（还是太菜了）</li>
       </tags>
   </entry>
   <entry>
-    <title>Lie-Group-Study-Note-(part2)</title>
-    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
-    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
-<span id="more"></span>
-<p>前情提要：<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
-| はくのblog</a></p>
-<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
-<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
-class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
-<span class="math display">\[
-\begin{align}
-\Lambda^T \eta \Lambda=\eta
-\end{align}
-\]</span></p>
+    <title>札记</title>
+    <url>/2023/07/26/Journal/</url>
+    <content><![CDATA[<h1 id="section">2023-07-26</h1>
+<p>我们需给我们的业余生活留出一些时间交给艺术，以便保存和滋养我们的直觉想象和感悟能力。——王德峰</p>
+<hr />
+<h1 id="section-1">2023-08-02</h1>
+<p>看完了两季《legal
+high》，除了雅人叔在法庭上的百老汇表演以及<strong>可爱的</strong>新垣结衣之外，电视剧中对“真相”与“正义”的探讨也很有意思。剧中古美门、黛和羽生的碰撞对应的应该是<strong>分析法学派、自然法学派与社会法学派</strong>的碰撞。大致来说，分析法学派否认法律和道德之内的必然联系，自然法学派强调法律的正当性，即“恶法非法”，社会法学派强调社会总利益的最大值，而非个体利益的最大值。</p>
+<p>在看日剧的时候，我对于古美门所强调的“律师不是神，没有权利替委托人决定什么是正义，也无法知道案件的真相，因为证据不足所以对方败诉了，仅此而已，无关正义”十分赞同。但是实际生活中却有许多案件的判决让我直呼不公，这与看日剧时的心态相互矛盾，这个矛盾令我苦恼。</p>
+<p>为了解决这个矛盾，我需要逐渐明确自己之前所理解的“正义”，需要为其建立自洽的解释。</p>
+<hr />
+<h1 id="section-2">2023-08-24</h1>
+<p>《我是猫》，九州出版社的部分摘抄。</p>
+<pre><code>“大概是认为西洋人强大，哪怕是很勉强、很愚蠢的事情，也觉得不模仿就受不了。俗话说：随波逐流、随行就市、随遇而安。这一串的‘随’，岂不是愚笨到家了！”——p250
+“看来，出生时，无人深思熟虑；临死时，却无人不烦恼。”——p435
+“我等渴望自由，并得到了自由；得到了自由，却又感到不自由，因此而烦恼不已。因此西方文明似乎不错，但归根结底还是不行的。与此相反，在咱东方自古讲求精神修养，还是有其道理的。事实表明，个性发展的结果是大家全都得了神经衰弱症，苦不堪言。到了此时，才发现‘王者之民荡荡焉’这句话的真正价值，才能醒悟到‘无为而化’这句话不可轻慢，但是，纵然醒悟，为时已晚，宛如酒精中毒以后才明白‘啊，若是不喝酒就好了’一样。”——p447</code></pre>
+<p>夏目簌石出生于1867年，恰逢明治维新的浪潮。对于他这一代作家，对于从东方文化到西方文化的变迁是最敏感的，他父母作为旧时代的人，带着旧时代的思想抚养他，而他以及他的同龄人受到的是新式的，效仿西方的思想文化。文中有许多地方对比东西方哲学思想差异，似乎西方的哲学思想偏向于“积极地改造外界”，而东方的则是“安静地适应环境”。</p>
+<p>哪一种思想“更高级、更好”这个问题先放在一边，对于物理专业的学生，学习的自然是西方的科学（这里说的西方科学并不是说西方的理论，而是哲学语境下的西方科学），科学可以解释生活中的很多事情，形式理论的推导以及定量的计算都让人感到安心。但是这不是世界的全部，世界不仅有“自然”，还有“我”，了解自然却不一定能够得到宁静。物理学教我自然界是什么，将自然界本来的面貌摆在我面前，而内心的宁静则需要求助于东方的哲学，东方的哲学讲究修心。对于大多数普通人来说，内心所想与真实世界存在的距离需要东方哲学来弥补。</p>
+<hr />
+<h1 id="section-3">2023-09-02</h1>
+<p>舍友和我说他打算26岁结婚，我发现他结婚生子的时候我可能博士才读到一半。这五年和别人的人生轨迹对比，突然变得好长。2022年中国人均寿命77岁，假设我能活到70岁，人生也不过十四个五年，我已经过了四个五年，正在过第五个五年。</p>
+<p>假如我的寿命只有十四天，现在是我的第五天（不考虑婴儿成长问题），我会怎么做？我觉得自己会很不甘心，因为还有很多事情没有去完成，然后拼命在生命结束前完成我的清单。而我现在的生活态度却不是这样，有些事情并不是慢慢做就会做完的，而是会慢慢被自己放弃并遗忘。</p>
 ]]></content>
       <categories>
-        <category>物理</category>
+        <category>札记</category>
+      </categories>
+      <tags>
+        <tag>札记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML-Study-Note</title>
+    <url>/2023/06/12/HTML&amp;CSS-Study-Note/</url>
+    <content><![CDATA[<p>为了解决网站上的bug，同时更好地自定义自己的网站，决定学习一些前端语言。</p>
+<pre><code>参考资料：http://c.biancheng.net/view/9381.html</code></pre>
+<span id="more"></span>
+<h2 id="网站是什么">网站是什么</h2>
+<ul>
+<li>网站由一个个网页构成，网页本质上是服务器上的文件，就像本地电脑中的文件一样。</li>
+<li>网页有许多种后缀，html只是其中一种，但不管后缀是什么，他们本质都是html代码构成的文本文件。</li>
+<li>多个网页之间可能是从属关系（树状图），其顶级目录称为program，有一个专属的IP地址，我们通过访问该IP地址来访问program中的所有文件，也就是网站中的所有网页。</li>
+<li>IP地址是难以记忆的，我们<strong>用域名来助记</strong>，域名可以帮助用户记住网站链接以及品牌。因此域名是指向IP地址的，然后通过IP地址请求服务器上的文件，这就是<strong>域名解析</strong>，通过DNS服务器完成的。</li>
+<li>服务器由：主板、CPU、内存和风扇组成。实际上与我们的电脑机箱差不多，它需要存储信息（内存），处理信息（CPU）。唯一用途便是运行网站。</li>
+</ul>
+<h2 id="html是什么">HTML是什么</h2>
+<p>HTML<strong>不是</strong>编程语言，没有计算能力，只能静态展示网页信息。</p>
+<h3 id="超文本">超文本</h3>
+<p>HTML是超文本，即超越纯文本，意思是不仅包含文字，还能包含图片、音视频、表格、列表、链接、按钮、输入框等高级内容。</p>
+<h3 id="标记语言">标记语言</h3>
+<p>HTML通过标签来标记本文中的不同内容、格式、布局等。 - &lt;img&gt;
+标签表示一张图片 - &lt;a&gt; 标签表示一个链接 - &lt;table&gt;
+标签表示一个表格 - &lt;input&gt; 标签表示一个输入框 - &lt;p&gt;
+标签表示一段文本（paragraph？） - &lt;strong&gt; 标签表示文本加粗 -
+&lt;div&gt; 标签表示块级布局</p>
+<p>总之，==HTML可以理解为网页内容的排版布局语言==（有点像LaTeX？）</p>
+<p>HTML有两个重要版本，一个是HTML4，一个是HTML5，HTML4适应了 PC
+互联网时代，HTML 5
+适应了移动互联网时代。现在除了IE浏览器，几乎所有浏览器都支持HTML5，所以可以放心使用</p>
+<h3 id="html文档结构">HTML文档结构</h3>
+<p>HTML页面由尖括号的标签组成。跟LaTeX的环境类似，标签是成对出现的，一个代表开始，一个代表结束（闭合标签），例如&lt;b&gt;和&lt;/b&gt;。然后我们在标签的中间填写内容，下面是一个具体的例子</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML演示<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://c.biancheng.net/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这是一个链接，指向C语言中文网首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>HTML教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>CSS教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>JavaScript教程<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>最前面的!DOCTYPE html
+是文档类型声明，用来说明这个是HTML文档，看的出来他没有闭合，所以他不是标签，doctype声明不区分大小写。</li>
+<li>&lt;html&gt;&lt;/html&gt;就像begin{document}一样，所有内容都写在里面</li>
+<li>&lt;head&gt;用来定义HTML文档的信息，比如标题和编码格式</li>
+<li>&lt;meta
+charset="UTF-8"&gt;为当前页面指明采用UTF-8编码，这是全球通用的编码格式</li>
+<li>&lt;title&gt;用于指明网页标题，显示在浏览器标签栏上</li>
+<li>&lt;body&gt;是网页的主体，网页显示的内容都在body中。所以可以看到，title并不在body中，因此不会显示在网页上，而是在标签栏上</li>
+<li>&lt;h1&gt;是标题、&lt;ul&gt;是列表、&lt;li&gt;是列表项、&lt;input
+type="text"/&gt;定义输入框（可以猜到h1是一级标题，最低有六级标题）</li>
+</ul>
+<h2 id="html标签的语法格式">HTML标签的语法格式</h2>
+<ul>
+<li>HTML标签语法==不区分大小写==，但是为了规范和专业，在定义标签时一律采用小写</li>
+<li>自闭合标签没有结束标签，而是在开始标签中添加/来闭合，比如
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;C语言中文网Logo&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 图像 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span> <span class="comment">&lt;!-- 分割线 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span> <span class="comment">&lt;!-- 文本换行 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入内容&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 文本输入框 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="html属性的概念和使用">HTML属性的概念和使用</h2>
+<ul>
+<li>属性可以为HTML标签提供一些额外信息，添加在开始标签中，格式是attr="value"，用单引号双引号都可以，但是为了规范，请使用双引号</li>
+<li>属性分为专用属性与通用属性（还有自定义属性，需要借助CSS和JavaScript来处理自定义属性）。通用属性就是大部分标签都能使用的属性，专用属性只有特定标签才能够使用</li>
+</ul>
+<h3 id="通用属性">通用属性</h3>
+<ol type="1">
+<li>id属性：就是标签的名称，具有唯一性，使用CSS和JavaScript操作的时候，通过id来寻找</li>
+<li>class属性：class不具有唯一性，多个标签可以是同一个class，同一个标签也可以有多个class，CSS和JavaScript也可以通过class来操作标签</li>
+<li>title属性：用于描述标签内容，当鼠标移动到标签上时，网页会显示title的属性值（比如说title="这是一段描述"，鼠标移动上去后就会显示“这是一段描述”）</li>
+<li>style属性：在标签内部定义CSS样式</li>
+</ol>
+<h2 id="html段落中的空白符">HTML段落中的空白符</h2>
+<ul>
+<li>如果段落中出现多个连续的空格，浏览器会忽略这些空格只保留一个；</li>
+<li>如果段落中出现多个连续的换行，浏览器会将这些换行转换成一个空格。</li>
+</ul>
+<h2 id="html文本格式化">HTML文本格式化</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;...&lt;/b&gt;</td>
+<td>加粗标签中的字体</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="html超链接标签a">HTML超链接标签&lt;a&gt;</h2>
+<ul>
+<li>href
+本质上就是指向一个文件，这个文件几乎可以是任意格式的。如果浏览器支持这种格式，那么它就可以在浏览器上显示，比如常见的图片、音频、视频等，如果浏览器不支持这种格式，那么就提示用户下载。</li>
+<li>href
+使用的路径可以是绝对路径，也可以是相对路径。绝对路径往往以域名为起点;相对路径往往以当前文件或者当前域名为起点，</li>
+<li>target属性：用于指明新页面打开方式；_self是覆盖原有窗口（这个是默认值），_blank是新窗口打开</li>
+</ul>
+<h2 id="html图片标签img">HTML图片标签&lt;img&gt;</h2>
+<ul>
+<li>&lt;img&gt;是自闭和标签，有两个属性，一个是必选的scr，一个是可选的alt</li>
+<li>scr属性用于指明图片地址或者路径，支持jpg/png/gif等格式</li>
+<li>alt用于定义图片的文字描述信息，类似于LaTeX中的caption。当图片无法正常加载时，就会显示alt的信息</li>
+</ul>
+<h2 id="html嵌入css样式四种方法">HTML嵌入CSS样式（四种方法）</h2>
+<p>HTML表达能力有限，经常需要结合CSS一起使用。有四种使用方法。</p>
+<ul>
+<li>行内样式：在标签的style属性中定义CSS样式；多个CSS属性用分号间隔
+例子：
+<div
+style="background-color:#66CC99; color:#993300; height:30px; line-height:30px;">
+行内元素，div 块级元素
+</div></li>
+<li>内嵌样式：在HTML文档的头部（即head标签）使用style标签定义样式 例子：
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>内嵌式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: left;  <span class="comment">/*文本左对齐*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">18px</span>;  <span class="comment">/*字体大小 18 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">25px</span>;  <span class="comment">/*行高 25 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;  <span class="comment">/*首行缩进2个文字大小空间*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">500px</span>;  <span class="comment">/*段落宽度 500 像素*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: <span class="number">0</span> auto;  <span class="comment">/*浏览器下居中*/</span></span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;  <span class="comment">/*段落下边距 20 像素*/</span></span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>“百度”这一公司名称便来自宋词“众里寻他千百度”。（百度公司会议室名为青玉案，即是这首词的词牌）。而“熊掌”图标的想法来源于“猎人巡迹熊爪”的刺激，与李博士的“分析搜索技术”非常相似，从而构成百度的搜索概念，也最终成为了百度的图标形象。在这之后，由于在搜索引擎中，大都有动物形象来形象，如 SOHU 的狐，如 GOOGLE 的狗，而百度也便顺理成章称作了熊。百度熊也便成了百度公司的形象物。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>在百度那次更换 LOGO 的计划中，百度给出的 3 个新 LOGO 设计方案在网民的投票下，全部被否决，更多的网民将选票投给了原有的熊掌标志。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>此次更换 LOGO 的行动共进行了 3 轮投票，直到第 2 轮投票结束，新的笑脸 LOGO 都占据了绝对优势。但到最后一轮投票时，原有的熊掌标志却戏剧性地获得了最多的网民选票，从而把 3 个新 LOGO 方案彻底否决。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>链接式：使用link标签引入外部的CSS文件</li>
+<li>导入式：使用@import的命令导入外部CSS文件</li>
+</ul>
+<p>HTML先了解到这里~</p>
+<h2 id="css">CSS</h2>
+]]></content>
+      <categories>
+        <category>HTML</category>
+        <category>CSS</category>
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>物理</tag>
-        <tag>群论</tag>
       </tags>
   </entry>
   <entry>
@@ -1159,570 +1279,132 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>群论</tag>
       </tags>
   </entry>
   <entry>
-    <title>数理方法复习（积分变换）</title>
-    <url>/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/</url>
-    <content><![CDATA[<pre><code>参考书籍：
-《数学物理方法简明导论》_v3.1——黄志琦
-《数学物理方法》——梁昆淼
-《数学物理方法》——吴崇试</code></pre>
+    <title>Relativistic-Quantum-Mechanics(Part-1)</title>
+    <url>/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/</url>
+    <content><![CDATA[<p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
 <span id="more"></span>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>物理</tag>
-        <tag>数学物理方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>固体物理学习笔记（自由电子气）</title>
-    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
-    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
-<span id="more"></span>
-<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
-<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
-<p>废话少说，先来看看Drude模型到底说了什么。</p>
-<h3 id="模型假设">模型假设</h3>
-<ol type="1">
-<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
-电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
-<li><p>自由电子<strong>气</strong>的<strong>气</strong>
-毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
-</ol>
-<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
-<ol start="3" type="1">
-<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
-<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
-来描述，这是电子气模型中很重要的一个参数</li>
-</ol>
-<p>我们假设粒子两次散射时间的平均时间为<span
-class="math inline">\(\tau\)</span> ，则<span
-class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
-class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
-class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
-class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
-<span class="math inline">\(\Delta
-t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
-dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
-<span class="math display">\[
-\require{physics}
-\begin{align}
-P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
-   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
-   =&amp;e^{t/\tau}
-\end{align}
-\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
-时间内发生第二次散射的概率为<span
-class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
-，则第二次散射发生的平均时间为 <span class="math display">\[
-\begin{align}
-\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
-  =&amp;\tau\Gamma(2)=\tau
-\end{align}
-\]</span></p>
-<p>所以参数<span
-class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
-<h3 id="电学性质">电学性质</h3>
-<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
-class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
-class="math inline">\(p(t)\)</span>，则接下来的<span
-class="math inline">\(dt\)</span>
-时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
-<span class="math display">\[
-\begin{align}
-p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
-  =&amp;p(t)+Fdt-pdt/\tau\\
-  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
-\end{align}
-\]</span></p>
-<p>这样便得到了电子气的运动方程</p>
-<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
-<p>均匀直流外电场下的运动方程为</p>
+<pre><code>参考教材:《高等量子力学》——喀兴林</code></pre>
 <p><span class="math display">\[
-\begin{equation}
-\dv{p(t)}{t}=-p/\tau-eE
-\end{equation}
+\require{physics}
 \]</span></p>
-<p>取动量导数为0，可以得到电子的稳态动量为<span
-class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
-class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
+<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
+class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
+<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
+<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
+<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
+<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
 class="math display">\[
 \begin{align}
-J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+i\hbar\pdv{t}\psi=H\psi
 \end{align}
-\]</span></p>
-<p>根据公式<span class="math inline">\(J=\sigma_0
-E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
-e^2 \tau/m\)</span> ，是一个由弛豫时间<span
-class="math inline">\(\tau\)</span> 及电子数密度<span
-class="math inline">\(\rho\)</span>
-共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
+\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
+\begin{align}
+H=\frac{(p-qA)^2}{2m}+qV
+\end{align}
+\]</span>
+很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
+<span class="math display">\[
+\begin{align}
+(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
+\end{align}
+\]</span> [^1]:
+对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
+<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
+Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
 href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
-class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
-<p>接着从热学的能均分定理<span
-class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
-class="math inline">\(1.2\times
-10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
-class="math inline">\(l=\tau \bar{v}\)</span>在
-0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
-<h4 id="交流外电场下">交流外电场下</h4>
-<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
-t}\)</span>，因此电子动量的形式应该也与之相同<span
-class="math inline">\(p(t)=p(\omega)e^{-i\omega
-t}\)</span>，将其带入运动方程得: <span class="math display">\[
-\begin{align}
--i\omega p(\omega)e^{-i\omega
-t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
-t}\\
-\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
-\end{align}
-\]</span></p>
-<p>带入电流密度公式<span class="math inline">\(J=\rho
-q\frac{p}{m}\)</span>得 <span class="math display">\[
-\begin{equation}
-J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
-\end{equation}
-\]</span> 因此可以得到交流复电导率为<span
-class="math inline">\(\sigma(\omega)=\frac{\rho
-e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
-.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
-<span class="math display">\[
-\begin{align}
-Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
-t}}{1-i\omega \tau}}\\
-=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
-t+\phi)}{\sqrt{1+\omega^2\tau^2}}
-\end{align}
-\]</span></p>
-<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
-class="math inline">\(\phi\)</span>以及振幅的衰减<span
-class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
-<p>这个模型可以用于电磁波对金属的影响，因为<span
-class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
-<h3 id="光学性质">光学性质</h3>
-<p>略</p>
-<h3 id="热学性质">热学性质</h3>
-<p>电子气的热学性质主要是热导率<span
-class="math inline">\(\kappa\)</span> 以及比热<span
-class="math inline">\(C_v\)</span>.</p>
-<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
-T\)</span>
-.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
-<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
-,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
-=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
-\end{align}
-\]</span></p>
-<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
-class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
-=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
-=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
-\end{align}
-\]</span></p>
-<p>速度平方的平均值<span
-class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
-class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
-，同时还可以得到<span
-class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
-class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
-=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
-\end{align}
-\]</span></p>
-<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
-class="math inline">\(\frac{3\rho\tau
-k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
-<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
-e^2\tau}{m};\kappa=\frac{3\rho\tau
-k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
-class="math inline">\(\frac{\kappa}{\sigma_0
-T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
-<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
-class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
-<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
-<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
-<h3 id="自由电子气的比热">自由电子气的比热</h3>
+role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
 <ul>
-<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
-class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
-E}+1}\)</span>.其中<span
-class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
-class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
-<li><p>量子态数量N与动量的关系</p></li>
+<li>概率诠释<span
+class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
+<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
+class="math inline">\(-\infty\)</span>能级</li>
+<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
+class="math inline">\(\pdv{\psi}{t}\)</span></li>
+<li>最重要的是，该方程计算的氢原子能级与实验不符</li>
 </ul>
-<p>对于自由电子的哈密顿量<span
-class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
-class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
-class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
-<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
-class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
-class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
-class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
-class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
+<p>但这不代表该方程无意义，只是不适用于电子。</p>
+<h3 id="dirac-equation">Dirac Equation</h3>
+<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
+<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法
 <span class="math display">\[
 \begin{align}
-dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\bqty{i\hbar\pdv{t}-c\alpha_x(-i\hbar\pdv{x})-c\alpha_y(-i\hbar\pdv{y})-c\alpha_z(-i\hbar\pdv{z})-\beta
+mc^2}\psi=0
 \end{align}
-\]</span></p>
-<p>补上电子自旋带来的自由度为<span
-class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
-k^2dk\)</span>。</p>
-<ul>
-<li>在固体物理中我们经常用到态密度<span
-class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
+\]</span> 其中质量与光速c的引入是为了使系数<span
+class="math inline">\(\alpha_i,\
+\beta\)</span>无量纲，同时这四个系数应当是（我觉得是假设的）定值，也就是说与时空无关。我们可以将其简写为
 <span class="math display">\[
 \begin{align}
-dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
-E=&amp;\frac{\hbar^2k^2}{2m}\\
-\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
-=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
-\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
-\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
-=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;g(E)dE
+\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0
 \end{align}
-\]</span></li>
-</ul>
-<p>因此态密度为<span
-class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
-正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>。</p>
-<p>因此数密度<span class="math inline">\(\rho=\int
-g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
-g(E)EdE\)</span>.</p>
-<h4 id="零温t0k时">零温T=0K时</h4>
-<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>。</p>
-<p>当T=0K时，费米分布<span
-class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
-class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
-class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
-class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
-class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
-class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
-<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
-class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
-<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
-<ul>
-<li><p>数密度 <span class="math display">\[
-\begin{align}
-\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
-\end{align}
-\]</span></p></li>
-<li><p>能量密度 <span class="math display">\[
-\begin{align}
-U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
-=&amp;\frac{3}{5}E_F\frac{N}{V}
-\end{align}
-\]</span></p></li>
-</ul>
-<p>因此我们可以得到单个电子的平均能量应该为<span
-class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
-这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
-<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
-<p>由于上述的原因，我们认为<span
-class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
-<span class="math display">\[
-\begin{align}
-N/V=&amp;\int_0^\infty f(E)g(E)dE\\
-U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
-\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
-\end{align}
-\]</span></p>
-<p>因此我们只需要计算出积分式<span
-class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
-class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
-class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
-class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
-class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
+\]</span>
+因为我们要求满足该方程的解还能满足KG方程，因此我们在上式左边作用 <span
 class="math display">\[
-\begin{equation}
-Q(E_F)=\int_0^{E_F} h(E)dE
-\end{equation}
-\]</span> 则有<span
-class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
-class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
 \begin{align}
-I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
-=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
+\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}
 \end{align}
-\]</span> 对于上式右边的第一项，E等于0的时，<span
-class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
-class="math inline">\(f(E)\)</span>为0.
-因此只剩下第二项积分表达式，第二项中包含<span
-class="math inline">\(-\pdv{f}{E}\)</span>
-，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
-class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
-class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
-class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
-class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
-class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
-class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
-class="math inline">\(-\infty\)</span>： <span class="math display">\[
+\]</span> 得到 <span class="math display">\[
 \begin{align}
-I=&amp;\int_{-\infty}^\infty
-dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
-f}\\
-=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
-f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
-&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
+&amp;\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta
+mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
+&amp;-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar
+\pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
+&amp;-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot
+p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
+&amp;-m^2c^4 \beta^2=0
 \end{align}
 \]</span> <span class="math display">\[
 \begin{align}
--\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-x=&amp;\frac{E-\mu}{k_bT}
+\Rightarrow&amp; \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2
+\alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
 \end{align}
 \]</span></p>
-<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
-函数的偏离，此时<span
-class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
-class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
-class="math inline">\(E=\mu\)</span>奇对称，而<span
-class="math inline">\(\delta\)</span> 函数关于<span
-class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>，因此积分<span
-class="math inline">\(I\)</span>化简为 <span class="math display">\[
-\begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE(E-\mu)^2\pqty{-\partial_E f}\\
-=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
-\end{align}
-\]</span></p>
-<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
-class="math display">\[
-\begin{equation}
-\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
-\end{equation}
-\]</span></p>
-<p>带入积分<span class="math inline">\(I\)</span>为 <span
-class="math display">\[
-\begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
-\end{align}
-\]</span></p>
-<ul>
-<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)dE\)</span></li>
-</ul>
-<p><span class="math display">\[
-\begin{align}
-I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
-\end{align}
-\]</span></p>
-<ul>
-<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)EdE\)</span> <span class="math display">\[
-\begin{align}
-I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
-\end{align}
-\]</span></li>
-</ul>
-<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
-class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
-class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
+<p>然后将其与KG方程（令V=0）<span
+class="math inline">\((-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0\)</span>对比得到
 <span class="math display">\[
 \begin{align}
-0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
-k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
-=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
-\end{align}
-\]</span></p>
-<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
-<span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
-\end{align}
-\]</span></p>
-<p>因此数密度的式子变为 <span class="math display">\[
-\begin{align}
-\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}=&amp;0\\
-\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
-\end{align}
-\]</span></p>
-<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
-class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
-\begin{align}
-\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
-}&#39;}_0=&amp;0\\
-\Rightarrow
-0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
-k_b)^2}{3}+0=&amp;0\\
-\Rightarrow
-\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{3}
-\end{align}
-\]</span></p>
-<p>带入态密度在零温时的表达式为 <span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{6}T^2\\
-  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
-  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
-\end{align}
-\]</span> 而化学势在零温时即为费米能量<span
-class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
-\begin{equation}
-\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
-\end{equation}
-\]</span></p>
-<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
-class="math display">\[
-\begin{equation}
-\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
-\end{equation}
-\]</span></p>
-<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
-<span class="math display">\[
-\begin{align}
-U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
-g(E_F)=&amp;C\sqrt{E_F}\\
-\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
-\end{align}
-\]</span></p>
-<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
-<span class="math display">\[
-\begin{align}
-C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
-\end{align}
-\]</span></p>
-<p>还可以得到单个电子的比热为 <span class="math display">\[
-\begin{align}
-C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
+\begin{cases}
+   \{\alpha_i,\beta\}=0 &amp; \\
+   \alpha_i\alpha_j=\delta_{ij}  &amp; \\
+   \beta^2=1
+\end{cases}
 \end{align}
 \]</span>
-这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
-<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
-<p>根据上一节的推导，热导率和比热的关系为<span
-class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
-，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
-<span class="math display">\[
+在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac
+Equation)</strong>，值得一提的是，<strong>Dirac
+Equation</strong>是可以纳入到量子力学的基本原理<span
+class="math inline">\(i\hbar\pdv{t}\psi=H\psi\)</span>中的，其中<span
+class="math inline">\(H\)</span>写为 <span class="math display">\[
 \begin{align}
-\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
-=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
+H=c\alpha\cdot p+mc^2\beta
 \end{align}
-\]</span></p>
-<p>相比Durde模型给出的<span
-class="math inline">\(\frac{3}{2}\frac{\rho\tau
-k_b^2T}{m}\)</span>更接近实验值。</p>
-<h3 id="泡利顺磁性">泡利顺磁性</h3>
-<p><strong>暂略，以后再补上</strong></p>
-<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
-<p>晶格结构是后面能带论以及晶格振动的基础。</p>
-<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
-<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
-<ul>
-<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
-<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
-<li><p>基矢的长度称为晶格常数</p></li>
-<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
-<li><p>最小的周期重复单元叫原胞</p></li>
-</ul>
-<h2 id="晶向与晶面">晶向与晶面</h2>
-<ul>
-<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
-<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
-</ul>
-<h2 id="倒格空间">倒格空间</h2>
-<ul>
-<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
-<span class="math display">\[
+\]</span> 在电磁场中我们可以直接推广为 <span class="math display">\[
 \begin{align}
-2d\sin\theta=n\lambda
+H=c\alpha\cdot(p-qA)+qV+mc^2\beta
 \end{align}
-\]</span> 其中d是原子间距，<span
-class="math inline">\(\theta\)</span>是入射角的余角</p></li>
-<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
-class="math display">\[
-\begin{align}
-\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
-\end{align}
-\]</span> 其中<span
-class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
-class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
-<li><p>劳厄方程给出一个定义倒格矢<span
-class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
-class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
-class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
-\begin{align}
-a_i\cdot b_j=\delta_{ij}2\pi
-\end{align}
-\]</span>
-上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
-</ul>
-<p>倒格矢<span
-class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
-<ul>
-<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
-class="math display">\[
-\begin{align}
-b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
-b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
-b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
-\end{align}
-\]</span></li>
-</ul>
+\]</span> 式子中的<span class="math inline">\(\alpha,\
+\beta\)</span>显然是算符，因为量子力学当中哈密顿量是一个算符，对于上面的等式当然要求右式是算符。或者从上面式子的要求<span
+class="math inline">\(\{\alpha_i,\beta\}=0\)</span>也能看出他们是算符。量子力学中的算符基本都是由<span
+class="math inline">\(x,p\)</span>组成，而这两个算符不是，因此这两个算符的出现意味着新的解空间的出现，不同于以往的函数空间<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>。</p>
+<p>因此狄拉克方程的解应当存在于标量函数空间与另一空间的直积空间当中。该方程计算得到的氢原子能级与实验符合得很好。根据我们初等量子力学的知识知道，电子除了空间部分的信息，还有自旋的信息，所以可以知道这一新的空间是自旋的空间。</p>
+<p>接下来我们定义新的符号来将上面的式子化简...</p>
+<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li
-id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
+<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
-href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
-class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
-href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>虽然积分区间不关于<span
-class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
-class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+<li id="fn2"><p>这是值得仔细思考的<a href="#fnref2"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
@@ -1731,9 +1413,9 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
-        <tag>固体物理</tag>
+        <tag>笔记</tag>
+        <tag>量子场论</tag>
       </tags>
   </entry>
   <entry>
@@ -2489,143 +2171,9 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>数学物理方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Relativistic-Quantum-Mechanics(Part-1)</title>
-    <url>/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/</url>
-    <content><![CDATA[<p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
-<span id="more"></span>
-<pre><code>参考教材:《高等量子力学》——喀兴林</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
-\begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
-\begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
-\begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
-<ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
-<li>最重要的是，该方程计算的氢原子能级与实验不符</li>
-</ul>
-<p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法
-<span class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha_x(-i\hbar\pdv{x})-c\alpha_y(-i\hbar\pdv{y})-c\alpha_z(-i\hbar\pdv{z})-\beta
-mc^2}\psi=0
-\end{align}
-\]</span> 其中质量与光速c的引入是为了使系数<span
-class="math inline">\(\alpha_i,\
-\beta\)</span>无量纲，同时这四个系数应当是（我觉得是假设的）定值，也就是说与时空无关。我们可以将其简写为
-<span class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0
-\end{align}
-\]</span>
-因为我们要求满足该方程的解还能满足KG方程，因此我们在上式左边作用 <span
-class="math display">\[
-\begin{align}
-\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta mc^2}
-\end{align}
-\]</span> 得到 <span class="math display">\[
-\begin{align}
-&amp;\bqty{i\hbar\pdv{t}+c\alpha\cdot p+\beta
-mc^2}\bqty{i\hbar\pdv{t}-c\alpha\cdot p-\beta mc^2}\psi=0\\
-&amp;-\hbar^2\pdv[2]{t}-ic\hbar \pdv{t}\alpha \cdot p-imc^2\hbar
-\pdv{t}\beta+ic\hbar \alpha \cdot p \pdv{t}\\
-&amp;-c^2(\alpha\cdot p)^2 -mc^3 \alpha\cdot
-p\beta+imc^2\hbar\beta\pdv{t}-mc^3\beta\alpha\cdot p\\
-&amp;-m^2c^4 \beta^2=0
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-\Rightarrow&amp; \bqty{-\hbar^2\pdv[2]{t}-mc^3\{\alpha_i,\beta\}p^i-c^2
-\alpha_i\alpha_j p^ip^j-m^2c^4\beta^2}\psi=0
-\end{align}
-\]</span></p>
-<p>然后将其与KG方程（令V=0）<span
-class="math inline">\((-\hbar^2\pdv[2]{t}-c^2p^2-m^2c^4)\psi=0\)</span>对比得到
-<span class="math display">\[
-\begin{align}
-\begin{cases}
-   \{\alpha_i,\beta\}=0 &amp; \\
-   \alpha_i\alpha_j=\delta_{ij}  &amp; \\
-   \beta^2=1
-\end{cases}
-\end{align}
-\]</span>
-在满足上述要求的情况下，方程的解便可以同时满足KG方程。满足上述约束的方程即是<strong>狄拉克方程(Dirac
-Equation)</strong>，值得一提的是，<strong>Dirac
-Equation</strong>是可以纳入到量子力学的基本原理<span
-class="math inline">\(i\hbar\pdv{t}\psi=H\psi\)</span>中的，其中<span
-class="math inline">\(H\)</span>写为 <span class="math display">\[
-\begin{align}
-H=c\alpha\cdot p+mc^2\beta
-\end{align}
-\]</span> 在电磁场中我们可以直接推广为 <span class="math display">\[
-\begin{align}
-H=c\alpha\cdot(p-qA)+qV+mc^2\beta
-\end{align}
-\]</span> 式子中的<span class="math inline">\(\alpha,\
-\beta\)</span>显然是算符，因为量子力学当中哈密顿量是一个算符，对于上面的等式当然要求右式是算符。或者从上面式子的要求<span
-class="math inline">\(\{\alpha_i,\beta\}=0\)</span>也能看出他们是算符。量子力学中的算符基本都是由<span
-class="math inline">\(x,p\)</span>组成，而这两个算符不是，因此这两个算符的出现意味着新的解空间的出现，不同于以往的函数空间<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
-<p>因此狄拉克方程的解应当存在于标量函数空间与另一空间的直积空间当中。该方程计算得到的氢原子能级与实验符合得很好。根据我们初等量子力学的知识知道，电子除了空间部分的信息，还有自旋的信息，所以可以知道这一新的空间是自旋的空间。</p>
-<p>接下来我们定义新的符号来将上面的式子化简...</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>这是值得仔细思考的<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>物理</tag>
-        <tag>量子场论</tag>
       </tags>
   </entry>
   <entry>
@@ -2665,6 +2213,586 @@ checked="" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bin
         <tag>记录</tag>
         <tag>博客</tag>
         <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固体物理学习笔记（自由电子气）</title>
+    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
+    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
+<span id="more"></span>
+<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
+<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
+<p>废话少说，先来看看Drude模型到底说了什么。</p>
+<h3 id="模型假设">模型假设</h3>
+<ol type="1">
+<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
+电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
+<li><p>自由电子<strong>气</strong>的<strong>气</strong>
+毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
+</ol>
+<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
+<ol start="3" type="1">
+<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
+<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
+来描述，这是电子气模型中很重要的一个参数</li>
+</ol>
+<p>我们假设粒子两次散射时间的平均时间为<span
+class="math inline">\(\tau\)</span> ，则<span
+class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
+class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
+class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
+class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
+<span class="math inline">\(\Delta
+t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
+dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
+<span class="math display">\[
+\require{physics}
+\begin{align}
+P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
+   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
+   =&amp;e^{t/\tau}
+\end{align}
+\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
+时间内发生第二次散射的概率为<span
+class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
+，则第二次散射发生的平均时间为 <span class="math display">\[
+\begin{align}
+\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
+  =&amp;\tau\Gamma(2)=\tau
+\end{align}
+\]</span></p>
+<p>所以参数<span
+class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
+<h3 id="电学性质">电学性质</h3>
+<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
+class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
+class="math inline">\(p(t)\)</span>，则接下来的<span
+class="math inline">\(dt\)</span>
+时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
+<span class="math display">\[
+\begin{align}
+p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
+  =&amp;p(t)+Fdt-pdt/\tau\\
+  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
+\end{align}
+\]</span></p>
+<p>这样便得到了电子气的运动方程</p>
+<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
+<p>均匀直流外电场下的运动方程为</p>
+<p><span class="math display">\[
+\begin{equation}
+\dv{p(t)}{t}=-p/\tau-eE
+\end{equation}
+\]</span></p>
+<p>取动量导数为0，可以得到电子的稳态动量为<span
+class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
+class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
+class="math display">\[
+\begin{align}
+J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+\end{align}
+\]</span></p>
+<p>根据公式<span class="math inline">\(J=\sigma_0
+E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
+e^2 \tau/m\)</span> ，是一个由弛豫时间<span
+class="math inline">\(\tau\)</span> 及电子数密度<span
+class="math inline">\(\rho\)</span>
+共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
+class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
+<p>接着从热学的能均分定理<span
+class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
+class="math inline">\(1.2\times
+10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
+class="math inline">\(l=\tau \bar{v}\)</span>在
+0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
+<h4 id="交流外电场下">交流外电场下</h4>
+<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
+t}\)</span>，因此电子动量的形式应该也与之相同<span
+class="math inline">\(p(t)=p(\omega)e^{-i\omega
+t}\)</span>，将其带入运动方程得: <span class="math display">\[
+\begin{align}
+-i\omega p(\omega)e^{-i\omega
+t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
+t}\\
+\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
+\end{align}
+\]</span></p>
+<p>带入电流密度公式<span class="math inline">\(J=\rho
+q\frac{p}{m}\)</span>得 <span class="math display">\[
+\begin{equation}
+J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
+\end{equation}
+\]</span> 因此可以得到交流复电导率为<span
+class="math inline">\(\sigma(\omega)=\frac{\rho
+e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
+.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
+<span class="math display">\[
+\begin{align}
+Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
+t}}{1-i\omega \tau}}\\
+=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
+t+\phi)}{\sqrt{1+\omega^2\tau^2}}
+\end{align}
+\]</span></p>
+<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
+class="math inline">\(\phi\)</span>以及振幅的衰减<span
+class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
+<p>这个模型可以用于电磁波对金属的影响，因为<span
+class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
+<h3 id="光学性质">光学性质</h3>
+<p>略</p>
+<h3 id="热学性质">热学性质</h3>
+<p>电子气的热学性质主要是热导率<span
+class="math inline">\(\kappa\)</span> 以及比热<span
+class="math inline">\(C_v\)</span>.</p>
+<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
+T\)</span>
+.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
+<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
+,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
+=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
+\end{align}
+\]</span></p>
+<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
+class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
+=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
+=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
+\end{align}
+\]</span></p>
+<p>速度平方的平均值<span
+class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
+class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
+，同时还可以得到<span
+class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
+=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
+\end{align}
+\]</span></p>
+<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
+class="math inline">\(\frac{3\rho\tau
+k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
+<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
+e^2\tau}{m};\kappa=\frac{3\rho\tau
+k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
+class="math inline">\(\frac{\kappa}{\sigma_0
+T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
+<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
+class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
+<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
+<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
+<h3 id="自由电子气的比热">自由电子气的比热</h3>
+<ul>
+<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
+class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
+E}+1}\)</span>.其中<span
+class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
+class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
+<li><p>量子态数量N与动量的关系</p></li>
+</ul>
+<p>对于自由电子的哈密顿量<span
+class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
+class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
+class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
+<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
+class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
+class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
+class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
+class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
+<span class="math display">\[
+\begin{align}
+dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\end{align}
+\]</span></p>
+<p>补上电子自旋带来的自由度为<span
+class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
+k^2dk\)</span>。</p>
+<ul>
+<li>在固体物理中我们经常用到态密度<span
+class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
+<span class="math display">\[
+\begin{align}
+dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
+E=&amp;\frac{\hbar^2k^2}{2m}\\
+\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
+=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
+\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
+\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
+=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;g(E)dE
+\end{align}
+\]</span></li>
+</ul>
+<p>因此态密度为<span
+class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
+正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。</p>
+<p>因此数密度<span class="math inline">\(\rho=\int
+g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
+g(E)EdE\)</span>.</p>
+<h4 id="零温t0k时">零温T=0K时</h4>
+<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>。</p>
+<p>当T=0K时，费米分布<span
+class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
+class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
+class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
+class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
+class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
+class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
+<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
+class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
+<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
+<ul>
+<li><p>数密度 <span class="math display">\[
+\begin{align}
+\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{align}
+\]</span></p></li>
+<li><p>能量密度 <span class="math display">\[
+\begin{align}
+U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
+=&amp;\frac{3}{5}E_F\frac{N}{V}
+\end{align}
+\]</span></p></li>
+</ul>
+<p>因此我们可以得到单个电子的平均能量应该为<span
+class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
+这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
+<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
+<p>由于上述的原因，我们认为<span
+class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
+<span class="math display">\[
+\begin{align}
+N/V=&amp;\int_0^\infty f(E)g(E)dE\\
+U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
+\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
+\end{align}
+\]</span></p>
+<p>因此我们只需要计算出积分式<span
+class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
+class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
+class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
+class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
+class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
+class="math display">\[
+\begin{equation}
+Q(E_F)=\int_0^{E_F} h(E)dE
+\end{equation}
+\]</span> 则有<span
+class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
+class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
+\begin{align}
+I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
+=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
+\end{align}
+\]</span> 对于上式右边的第一项，E等于0的时，<span
+class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
+class="math inline">\(f(E)\)</span>为0.
+因此只剩下第二项积分表达式，第二项中包含<span
+class="math inline">\(-\pdv{f}{E}\)</span>
+，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
+class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
+class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
+class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
+class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
+class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
+class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
+class="math inline">\(-\infty\)</span>： <span class="math display">\[
+\begin{align}
+I=&amp;\int_{-\infty}^\infty
+dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
+f}\\
+=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
+f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
+&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+-\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+x=&amp;\frac{E-\mu}{k_bT}
+\end{align}
+\]</span></p>
+<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
+函数的偏离，此时<span
+class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
+class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
+class="math inline">\(E=\mu\)</span>奇对称，而<span
+class="math inline">\(\delta\)</span> 函数关于<span
+class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>，因此积分<span
+class="math inline">\(I\)</span>化简为 <span class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE(E-\mu)^2\pqty{-\partial_E f}\\
+=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
+\end{align}
+\]</span></p>
+<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
+class="math display">\[
+\begin{equation}
+\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
+\end{equation}
+\]</span></p>
+<p>带入积分<span class="math inline">\(I\)</span>为 <span
+class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)dE\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)EdE\)</span> <span class="math display">\[
+\begin{align}
+I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
+\end{align}
+\]</span></li>
+</ul>
+<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
+class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
+class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
+<span class="math display">\[
+\begin{align}
+0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
+k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
+=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+\end{align}
+\]</span></p>
+<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
+<span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
+\end{align}
+\]</span></p>
+<p>因此数密度的式子变为 <span class="math display">\[
+\begin{align}
+\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}=&amp;0\\
+\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
+\end{align}
+\]</span></p>
+<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
+class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
+\begin{align}
+\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+}&#39;}_0=&amp;0\\
+\Rightarrow
+0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
+k_b)^2}{3}+0=&amp;0\\
+\Rightarrow
+\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{3}
+\end{align}
+\]</span></p>
+<p>带入态密度在零温时的表达式为 <span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{6}T^2\\
+  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
+  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
+\end{align}
+\]</span> 而化学势在零温时即为费米能量<span
+class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
+\begin{equation}
+\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
+\end{equation}
+\]</span></p>
+<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
+class="math display">\[
+\begin{equation}
+\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{equation}
+\]</span></p>
+<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
+<span class="math display">\[
+\begin{align}
+U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
+g(E_F)=&amp;C\sqrt{E_F}\\
+\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
+\end{align}
+\]</span></p>
+<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
+<span class="math display">\[
+\begin{align}
+C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
+\end{align}
+\]</span></p>
+<p>还可以得到单个电子的比热为 <span class="math display">\[
+\begin{align}
+C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
+\end{align}
+\]</span>
+这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
+<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
+<p>根据上一节的推导，热导率和比热的关系为<span
+class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
+，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
+<span class="math display">\[
+\begin{align}
+\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
+=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
+\end{align}
+\]</span></p>
+<p>相比Durde模型给出的<span
+class="math inline">\(\frac{3}{2}\frac{\rho\tau
+k_b^2T}{m}\)</span>更接近实验值。</p>
+<h3 id="泡利顺磁性">泡利顺磁性</h3>
+<p><strong>暂略，以后再补上</strong></p>
+<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
+<p>晶格结构是后面能带论以及晶格振动的基础。</p>
+<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
+<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
+<ul>
+<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
+<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
+<li><p>基矢的长度称为晶格常数</p></li>
+<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
+<li><p>最小的周期重复单元叫原胞</p></li>
+</ul>
+<h2 id="晶向与晶面">晶向与晶面</h2>
+<ul>
+<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
+<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
+</ul>
+<h2 id="倒格空间">倒格空间</h2>
+<ul>
+<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
+<span class="math display">\[
+\begin{align}
+2d\sin\theta=n\lambda
+\end{align}
+\]</span> 其中d是原子间距，<span
+class="math inline">\(\theta\)</span>是入射角的余角</p></li>
+<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
+class="math display">\[
+\begin{align}
+\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
+class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
+<li><p>劳厄方程给出一个定义倒格矢<span
+class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
+class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
+class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
+\begin{align}
+a_i\cdot b_j=\delta_{ij}2\pi
+\end{align}
+\]</span>
+上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
+</ul>
+<p>倒格矢<span
+class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
+<ul>
+<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
+class="math display">\[
+\begin{align}
+b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
+b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
+b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
+\end{align}
+\]</span></li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
+class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>虽然积分区间不关于<span
+class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
+class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>固体物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lie-Group-Study-Note-(part2)</title>
+    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
+    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<span id="more"></span>
+<p>前情提要：<a
+href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
+| はくのblog</a></p>
+<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
+<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
+class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
+<span class="math display">\[
+\begin{align}
+\Lambda^T \eta \Lambda=\eta
+\end{align}
+\]</span></p>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>群论</tag>
       </tags>
   </entry>
   <entry>
@@ -3448,9 +3576,27 @@ href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>固体物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数理方法复习（积分变换）</title>
+    <url>/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/</url>
+    <content><![CDATA[<pre><code>参考书籍：
+《数学物理方法简明导论》_v3.1——黄志琦
+《数学物理方法》——梁昆淼
+《数学物理方法》——吴崇试</code></pre>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>数学物理方法</tag>
       </tags>
   </entry>
   <entry>
@@ -4018,69 +4164,10 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>固体物理</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>《资本论》读书笔记</title>
-    <url>/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<pre><code>参考：
-《资本论》——马克思 恩格斯
-复旦王德峰教授公开课</code></pre>
-<span id="more"></span>
-<p>《资本论》中提到，资本家先预付一定的货币购置生产资料以及雇佣工人生产，然后将生产的产品卖到市场，这个价格包含了必要劳动时间与剩余劳动时间，实现资本的增值；资本将人的劳动抽象化，资本增值要么延长劳动时间要么增加剩余价值的比例，追求剩余价值的同时便带来了技术，同时也带来了一个指标：<strong>效率</strong></p>
-<p>追求“效率”让社会的节奏越来越快，类似“时间就是金钱，效率就是生命”的口号潜移默化地影响我们的观念。资本的逻辑造成了一种<strong>进步强制</strong><a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>——“停下就是落后”。因此社会仿佛一条湍急的河流，谁也不敢停下来，网络上流行视频的长度从四十分钟到二十分钟再到现在的五六分钟，客观上可能没有那么多空闲时间，但很多时候也是我们没法静下心来观看一个二十分钟的视频，许多视频软件也贴心地为我们准备了“长按屏幕倍速播放功能”，这或许是如今社会短视频盛行的原因之一。</p>
-<p>技术以及对效率的追求<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>使我们的生活效率越来越高，但是人生的意义却越来越空虚化<a
-href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>。就我自己而言，早上在图书馆学习，然后中午骑个车去若海吃饭，吃完饭再回到图书馆，晚上再骑个车去若海或者鸡山吃饭，然后再回到图书馆。每次回到图书馆都很恍惚<a
-href="#fn4" class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>，对于“离开图书馆去吃饭”这件事好像没有什么很深的印象，一天就这样匆匆忙忙地过去了，一天也不知道自己在忙什么事情。后来我决定走路去吃饭，虽然走到若海比骑单车慢很多，但是我似乎感受到了“<strong>生活</strong>”，“生活”就在看似浪费时间的空间移动上<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，也在透过树叶洒在泥土上的阳光里。</p>
-<p>资本停止增值就会死亡，资本对剩余价值的追求带来资本的内部矛盾：资本提高剩余价值的比例，降低必要劳动的比例，则相同的时间会更多的产品生产，但工人的工资却没有增加，市场的购买力不增加，因此生产的产品没法进行价值实现，抑制资本的增值。<strong>这是广大民众购买力的限制与商品的大量生产和销售之间的矛盾</strong><a
-href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>。</p>
-<p>剩余劳动与剩余价值是两个概念。从前也追求剩余劳动，正是剩余劳动将一部分的人从生产劳动中解放出来，从事艺术、哲学与科学的研究。资本主义极大地促进了生产力的发展，剩余劳动的积累是史无前例的，这是不容置疑的。但这蕴含着资本的另一矛盾：资本对生产力的促进是为了追求剩余价值，实现资本的增值，若生产的产品无法进行价值的实现，那么资本主义便会破坏既得的剩余劳动，破坏生产力。</p>
-<p>还有一段不知道插在哪里的话，是王德峰教授课上举的例子。从前表达爱意的情书，需要跋山涉水几天才能送达到意中人的手里，而现在有微信，随时随地都可以进行信息的交流，方便了的同时却缺少了寄托思念的过程。在信件到达之前的那种期待，或许能促进两人感情的增长，或许与“小别胜新欢”是同一个道理<a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>这是王德峰教授说的<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>这里并无对技术以及效率进行批判的意思<a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>这也是王德峰教授说的~我觉得很有道理<a href="#fnref3"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>当然也是困得要命，吃饱就困。所以不排除是我太困的原因。<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>没想到更好的词来描述我慢慢走到若海这件事情<a
-href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>王德峰教授言<a href="#fnref6" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>人就是难得到的才会珍惜。<a href="#fnref7"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2023/02/22/Test/</url>
-    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
-\hat{H}\ket{\psi}=E\ket{\psi}
-\]</span> 上方应该有一个定态薛定谔方程</p>
-]]></content>
   </entry>
   <entry>
     <title>热统复习（统计物理部分）</title>
@@ -4759,10 +4846,18 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>热力学与统计力学</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2023/02/22/Test/</url>
+    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
+\hat{H}\ket{\psi}=E\ket{\psi}
+\]</span> 上方应该有一个定态薛定谔方程</p>
+]]></content>
   </entry>
   <entry>
     <title>热统复习（热力学部分）</title>
@@ -5212,9 +5307,60 @@ href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         <category>物理</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>物理</tag>
+        <tag>笔记</tag>
         <tag>热力学与统计力学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《资本论》读书笔记</title>
+    <url>/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<pre><code>参考：
+《资本论》——马克思 恩格斯
+复旦王德峰教授公开课</code></pre>
+<span id="more"></span>
+<p>《资本论》中提到，资本家先预付一定的货币购置生产资料以及雇佣工人生产，然后将生产的产品卖到市场，这个价格包含了必要劳动时间与剩余劳动时间，实现资本的增值；资本将人的劳动抽象化，资本增值要么延长劳动时间要么增加剩余价值的比例，追求剩余价值的同时便带来了技术，同时也带来了一个指标：<strong>效率</strong></p>
+<p>追求“效率”让社会的节奏越来越快，类似“时间就是金钱，效率就是生命”的口号潜移默化地影响我们的观念。资本的逻辑造成了一种<strong>进步强制</strong><a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>——“停下就是落后”。因此社会仿佛一条湍急的河流，谁也不敢停下来，网络上流行视频的长度从四十分钟到二十分钟再到现在的五六分钟，客观上可能没有那么多空闲时间，但很多时候也是我们没法静下心来观看一个二十分钟的视频，许多视频软件也贴心地为我们准备了“长按屏幕倍速播放功能”，这或许是如今社会短视频盛行的原因之一。</p>
+<p>技术以及对效率的追求<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>使我们的生活效率越来越高，但是人生的意义却越来越空虚化<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。就我自己而言，早上在图书馆学习，然后中午骑个车去若海吃饭，吃完饭再回到图书馆，晚上再骑个车去若海或者鸡山吃饭，然后再回到图书馆。每次回到图书馆都很恍惚<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>，对于“离开图书馆去吃饭”这件事好像没有什么很深的印象，一天就这样匆匆忙忙地过去了，一天也不知道自己在忙什么事情。后来我决定走路去吃饭，虽然走到若海比骑单车慢很多，但是我似乎感受到了“<strong>生活</strong>”，“生活”就在看似浪费时间的空间移动上<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，也在透过树叶洒在泥土上的阳光里。</p>
+<p>资本停止增值就会死亡，资本对剩余价值的追求带来资本的内部矛盾：资本提高剩余价值的比例，降低必要劳动的比例，则相同的时间会更多的产品生产，但工人的工资却没有增加，市场的购买力不增加，因此生产的产品没法进行价值实现，抑制资本的增值。<strong>这是广大民众购买力的限制与商品的大量生产和销售之间的矛盾</strong><a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>。</p>
+<p>剩余劳动与剩余价值是两个概念。从前也追求剩余劳动，正是剩余劳动将一部分的人从生产劳动中解放出来，从事艺术、哲学与科学的研究。资本主义极大地促进了生产力的发展，剩余劳动的积累是史无前例的，这是不容置疑的。但这蕴含着资本的另一矛盾：资本对生产力的促进是为了追求剩余价值，实现资本的增值，若生产的产品无法进行价值的实现，那么资本主义便会破坏既得的剩余劳动，破坏生产力。</p>
+<p>还有一段不知道插在哪里的话，是王德峰教授课上举的例子。从前表达爱意的情书，需要跋山涉水几天才能送达到意中人的手里，而现在有微信，随时随地都可以进行信息的交流，方便了的同时却缺少了寄托思念的过程。在信件到达之前的那种期待，或许能促进两人感情的增长，或许与“小别胜新欢”是同一个道理<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>这是王德峰教授说的<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>这里并无对技术以及效率进行批判的意思<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>这也是王德峰教授说的~我觉得很有道理<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>当然也是困得要命，吃饱就困。所以不排除是我太困的原因。<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>没想到更好的词来描述我慢慢走到若海这件事情<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>王德峰教授言<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>人就是难得到的才会珍惜。<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>

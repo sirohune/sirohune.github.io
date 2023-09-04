@@ -23,30 +23,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg">
+    <meta name="description" content="参考： 《A Short Course on Topological Insulators》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lie-Group-Study-Note-(part2)">
-<meta property="og:url" content="https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)/index.html">
+<meta property="og:title" content="CMT-Note">
+<meta property="og:url" content="https://sirohune.site/2023/09/01/CMT-Note/index.html">
 <meta property="og:site_name" content="はくのBlog">
-<meta property="og:description" content="参考教材《Physics from symmetry》-Jakob Schwichtenberg">
+<meta property="og:description" content="参考： 《A Short Course on Topological Insulators》">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-28T14:41:01.000Z">
-<meta property="article:modified_time" content="2023-05-28T14:47:44.526Z">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/CMT-Note/berry-fulx.png">
+<meta property="article:published_time" content="2023-09-01T11:52:57.000Z">
+<meta property="article:modified_time" content="2023-09-04T06:54:47.548Z">
 <meta property="article:author" content="白舟尘">
-<meta property="article:tag" content="物理">
-<meta property="article:tag" content="笔记">
-<meta property="article:tag" content="群论">
+<meta property="article:tag" content="Mathematica">
+<meta property="article:tag" content="Calculation">
+<meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sirohune.site/2023/09/01/CMT-Note/berry-fulx.png">
 
 
-<link rel="canonical" href="https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)/">
+<link rel="canonical" href="https://sirohune.site/2023/09/01/CMT-Note/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)/","path":"2023/05/28/Lie-Group-Study-Note-(part2)/","title":"Lie-Group-Study-Note-(part2)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/09/01/CMT-Note/","path":"2023/09/01/CMT-Note/","title":"CMT-Note"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Lie-Group-Study-Note-(part2) | はくのBlog</title>
+<title>CMT-Note | はくのBlog</title>
   
 
 
@@ -60,7 +62,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
   
-  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/09/01/CMT-Note//atom.xml">
   
 
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
@@ -185,7 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4o13"><span class="nav-text">洛伦兹群O(1,3)</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-1-ssh-model"><span class="nav-text">Chapter 1 SSH model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-2-berry-phase-chern-number"><span class="nav-text">Chapter 2 Berry Phase, Chern
+Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#discrete-case"><span class="nav-text">2.1 Discrete Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-phase"><span class="nav-text">2.1.1 Berry Phase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-flux"><span class="nav-text">2.1.2 Berry Flux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number"><span class="nav-text">2.1.3 Chern Number</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuum-case"><span class="nav-text">Continuum Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-connection"><span class="nav-text">2.2.1 Berry Connection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-curvature"><span class="nav-text">2.2.2 Berry Curvature</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number-1"><span class="nav-text">2.2.3 Chern Number</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -258,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/09/01/CMT-Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -271,12 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Lie-Group-Study-Note-(part2) | はくのBlog">
+      <meta itemprop="name" content="CMT-Note | はくのBlog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Lie-Group-Study-Note-(part2)
+          CMT-Note
         </h1>
 
         <div class="post-meta-container">
@@ -286,9 +289,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-05-28 22:41:01 / 修改时间：22:47:44" itemprop="dateCreated datePublished" datetime="2023-05-28T22:41:01+08:00">2023-05-28</time>
+      <time title="创建时间：2023-09-01 19:52:57" itemprop="dateCreated datePublished" datetime="2023-09-01T19:52:57+08:00">2023-09-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-04 14:54:47" itemprop="dateModified" datetime="2023-09-04T14:54:47+08:00">2023-09-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -309,8 +318,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/05/28/Lie-Group-Study-Note-(part2)/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/05/28/Lie-Group-Study-Note-(part2)/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/09/01/CMT-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/09/01/CMT-Note/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -321,14 +330,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>195</span>
+      <span>5.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>10 分钟</span>
     </span>
 </div>
 
@@ -339,19 +348,237 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     <div class="post-body" itemprop="articleBody">
-        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+        <pre><code>参考： 《A Short Course on Topological Insulators》</code></pre>
 <span id="more"></span>
-<p>前情提要：<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
-| はくのblog</a></p>
-<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
-<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
-class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
+<h2 id="chapter-1-ssh-model">Chapter 1 SSH model</h2>
+<h2 id="chapter-2-berry-phase-chern-number">Chapter 2 Berry Phase, Chern
+Number</h2>
+<p>https://sirohune.site <span class="math display">\[
+\require{physics}
+\]</span>
+本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
+<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
+<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
+<h3 id="discrete-case">2.1 Discrete Case</h3>
+<p>我们定义<span
+class="math inline">\(\gamma_{12}\)</span>来代表两个非正交态<span
+class="math inline">\(\ket{\psi_1},\ket{\psi_2}\)</span>之间的相位差：
 <span class="math display">\[
 \begin{align}
-\Lambda^T \eta \Lambda=\eta
+\gamma_{12}\triangleq
+-\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
+\end{align}
+\]</span>
+很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位<span
+class="math inline">\(\alpha\)</span>，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：
+<span class="math display">\[
+\begin{align}
+\ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to
+\arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
 \end{align}
 \]</span></p>
+<h4 id="berry-phase">2.1.1 Berry Phase</h4>
+<p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：
+<span class="math display">\[
+\begin{align}
+\gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
+\end{align}
+\]</span></p>
+<p><strong>Attention!</strong>
+书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>： <span class="math display">\[
+\begin{align}
+\gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
+\end{align}
+\]</span></p>
+<p><strong>Conclusion：Berry相位指的是绕着<span
+class="math inline">\(S\)</span>一圈得到的相位差，其中<span
+class="math inline">\(S\)</span>是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
+<h4 id="berry-flux">2.1.2 Berry Flux</h4>
+<p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下: <span
+class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)}).
+\end{align}
+\]</span>
+Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
+<p><img src="berry-fulx.png" /></p>
+<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差： <span
+class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}.
+\end{align}
+\]</span> 这将是一个规范不变的量，因为<span
+class="math inline">\(\gamma_{(n,m),(n+1,m)}\)</span>产生的多余相位将会被<span
+class="math inline">\(\gamma_{(n+1,m+1),(n,m+1)}\)</span>产生的所抵消（如果我们假设类似<span
+class="math inline">\(\gamma_{(1,2),(2,2)}\)</span>与<span
+class="math inline">\(\gamma_{(1,3),(2,3)}\)</span>产生的多余相位相等的话）</p>
+<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:
+<span class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}.
+\end{align}
+\]</span>
+Berry相位由规范不变的Berry构成，可以看出Berry相位也是规范不变的。</p>
+<p>由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数：
+<span class="math display">\[
+\begin{align}
+\exp[-i\sum\limits_n^{N-1}\sum\limits_m^{M-1}F_{nm}]=e^{-i\gamma_L},
+\end{align}
+\]</span> 因此实际上，Berry相位和Berry流是可以相差<span
+class="math inline">\(2\pi\)</span>的整数倍的。</p>
+<h4 id="chern-number">2.1.3 Chern Number</h4>
+<p>对于二维晶格，如果我们使用周期性边界条件，也就是说，对于一个矩形，对边分别认同，则我们得到的几何将是一个甜甜圈。对于这样的几何，很显然有如下结果：
+<span class="math display">\[
+\begin{align}
+\prod_m^M\prod_n^N e^{-iF_{nm}}=1.
+\end{align}
+\]</span>
+<strong>陈数</strong>在离散情况下的定义即为该甜甜圈表面Berry流之和除以<span
+class="math inline">\(2\pi\)</span>： <span class="math display">\[
+\begin{align}
+Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
+\end{align}
+\]</span>
+Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
+<p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
+<h3 id="continuum-case">Continuum Case</h3>
+<h4 id="berry-connection">2.2.1 Berry Connection</h4>
+<p>现在考虑连续的情况，<span
+class="math inline">\(\ket{\psi(R)}\)</span>在一条曲线上移动，<span
+class="math inline">\(R\)</span>代表位置，假定态矢量在曲线附近的开区间是光滑的（为此我们不用担心导数的一系列数学上的问题），根据之前的定义，我们考虑态矢量从<span
+class="math inline">\(R\)</span>处走到<span
+class="math inline">\(R+dR\)</span>处所变化的相位： <span
+class="math display">\[
+\begin{align}
+e^{-i\Delta\gamma}&amp;= \ip{\psi(R)}{\psi(R+dR)}\\
+&amp;\approx 1+\mel{\psi(R)}{\nabla}{\psi(R)}dR\\
+\Rightarrow \Delta\gamma&amp;= i\mel{\psi(R)}{\nabla}{\psi(R)}dR.
+\end{align}
+\]</span> 定义<strong>Berry联络</strong>为 <span class="math display">\[
+\begin{align}
+A(R)&amp;\triangleq \lim_{dR\to
+0}\frac{\Delta\gamma}{dR}=i\mel{\psi(R)}{\nabla}{\psi(R)}.
+\end{align}
+\]</span>
+Berry联络的意义是：态矢量在曲线上移动单位距离时，相位对应的变化。</p>
+<p>由于态矢量是归一化的，我们可以得到<span
+class="math inline">\(Re(\mel{\psi}{\nabla}{\psi})=0\)</span>: <span
+class="math display">\[
+\begin{align}
+\nabla\ip{\psi}{\psi}&amp;= \ip{\nabla\psi}{\psi}+\ip{\psi}{\nabla\psi}=
+0,
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\Rightarrow Re(\ip{\psi}{\nabla\psi})&amp;= 0.
+\end{align}
+\]</span> 因此Berry联络又可以写为 <span class="math display">\[
+\begin{align}
+A(R)=-Im(\ip{\psi(R)}{\nabla\psi(R)}).
+\end{align}
+\]</span> 很容易验证，Berry联络是不满足局域规范变换的： <span
+class="math display">\[
+\begin{align}
+\ket{\psi(R)}\to &amp;e^{i\alpha(R)},\\
+A(R)\to &amp; A(R)-\nabla\alpha(R).
+\end{align}
+\]</span>
+既然我们得到了相位关于位置的变化关系，我们可以很容易写出Berry相位：
+<span class="math display">\[
+\begin{align}
+\gamma(\mathscr{l})=-\arg\exp[-i\oint_\mathscr{l} A\cdot dR].
+\end{align}
+\]</span>
+我们将会证明它在连续情况下也是规范不变的，即便它看起来由非规范不变的Berry联络组成。</p>
+<h4 id="berry-curvature">2.2.2 Berry Curvature</h4>
+<p>与离散情况的思路一样，我们希望将Berry相位用规范不变的量来表示，以此证明它是规范不变的。将连续情况与离散情况对比，Berry相位为：
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}F_{nm})\\
+&amp;= \exp(-i\oint_\mathscr{l}A\cdot dR).
+\end{align}
+\]</span>
+一个是曲面的求和，一个是边界的积分，这让我们联想到斯托克斯定理，实际上，对离散的情况取极限，我们可以得到一个面积分。</p>
+<p>我们将二维晶格的晶格常数设为<span class="math inline">\(\Delta
+x,\Delta y\)</span>,当晶格常数趋于0的时候得到连续的情况。Berry流为：
+<span class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}\
+\end{align}
+\]</span>
+从上一个小节我们知道两个态矢量之间的相位差可以表示为Berry联络，因此Berry流可以写为:
+<span class="math display">\[
+\begin{align}
+F_{nm}= &amp;A_x(x_n+\frac{\Delta x}{2},y_m)\Delta x+A_y(x_n+\Delta
+x,y_m+\frac{\Delta y}{2})\\
++&amp;A_x(x_n+\frac{\Delta x}{2},y_m+\Delta y)(-\Delta
+x)+A_y(x_n,y_m+\frac{\Delta y}{2})(-\Delta y).
+\end{align}
+\]</span> 取<span class="math inline">\(\Delta x,\Delta y\to
+0\)</span>时： <span class="math display">\[
+\begin{align}
+F_{nm}=[\partial_xA_y(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})-\partial_yA_x(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})]\Delta x\Delta y.
+\end{align}
+\]</span> 定义<strong>Berry曲率</strong>为： <span
+class="math display">\[
+\begin{align}
+B=\lim_{\Delta x,\Delta y\to0}\frac{F_{nm}}{\Delta x\Delta y}.
+\end{align}
+\]</span> 将格点中间的位置记为<span
+class="math inline">\(R_{nm}\)</span>，则Berry曲率为: <span
+class="math display">\[
+\begin{align}
+B=\partial_xA_y(R_{nm})-\partial_yA_x(R_{nm}).
+\end{align}
+\]</span>
+回忆一下规范变换下Berry联络多出来的项，很显然Berry是规范不变的，因为多出来的项会被减号消去。回到正题，在晶格常数趋于零的极限下，Berry相位的表示可以写为:
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}B(R_{nm})\Delta x\Delta y)\\
+&amp;= \exp(-i\int_\mathscr{S} B(x,y)dxdy).
+\end{align}
+\]</span> 其中<span class="math inline">\(\mathscr{S}\)</span>是以<span
+class="math inline">\(\mathscr{l}\)</span>为边界的曲面</p>
+<h4 id="chern-number-1">2.2.3 Chern Number</h4>
+<p>在连续的情况下，陈数继承离散时的定义，取<span
+class="math inline">\(\Delta x,\Delta y\to
+0\)</span>即可，但是不知道为什么，书本对于陈数的定义忽然多了一个负号:
+<span class="math display">\[
+\begin{align}
+Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
+\end{align}
+\]</span>
+对于二维晶格材料，能谱上存在能带，当存在能隙的时候，能带之间清晰地被区分开，他们的态函数表示为<span
+class="math inline">\(\ket{u_n(k)}\)</span>,我们可以不带任何歧义地定义第n个能带的Berry联络：
+<span class="math display">\[
+\begin{align}
+A^{(n)}_j(k)=i\mel{u_n(k)}{\partial_{k_j}}{u_n(k)},
+\end{align}
+\]</span> 以及第n个能带的陈数: <span class="math display">\[
+\begin{align}
+Q^{(n)}=-\frac{1}{2\pi}\int_{BZ}dk_xdk_y(\pdv{A^{(n)}}{k_x}-\pdv{A^{(n)}}{k_y}).
+\end{align}
+\]</span>
+当系统绝热变化的时候，也就是说哈密顿量的改变不影响能隙的存在，此时Berry曲率连续变化，但是陈数是一个整数，所以陈数并不会改变<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>，因此我们说陈数是二维晶格模型的拓扑不变量，就像卷绕数winding
+numebr是一维SSH模型的拓扑不变量一样。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>其实我也不知道这个式子是如何得到的<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>对于色散关系，动量空间当然满足周期性边界条件<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -361,23 +588,20 @@ class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"># 物理</a>
-              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/tags/%E7%BE%A4%E8%AE%BA/" rel="tag"># 群论</a>
+              <a href="/tags/Mathematica/" rel="tag"># Mathematica</a>
+              <a href="/tags/Calculation/" rel="tag"># Calculation</a>
+              <a href="/tags/physics/" rel="tag"># physics</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/05/20/Solid-State-Physics-Note-Part-3/" rel="prev" title="固体物理学习笔记（晶格振动）">
-                  <i class="fa fa-chevron-left"></i> 固体物理学习笔记（晶格振动）
+                <a href="/2023/07/26/Journal/" rel="prev" title="札记">
+                  <i class="fa fa-chevron-left"></i> 札记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/" rel="next" title="Relativistic-Quantum-Mechanics(Part-1)">
-                  Relativistic-Quantum-Mechanics(Part-1) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -463,7 +687,7 @@ class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/05/28/Lie-Group-Study-Note-(part2)/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/09/01/CMT-Note/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
