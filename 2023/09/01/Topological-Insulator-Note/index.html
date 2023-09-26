@@ -25,30 +25,31 @@
 
     <meta name="description" content="参考： 《A Short Course on Topological Insulators》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CMT-Note">
-<meta property="og:url" content="https://sirohune.site/2023/09/01/CMT-Note/index.html">
+<meta property="og:title" content="Topological-Insulator-Note">
+<meta property="og:url" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note/index.html">
 <meta property="og:site_name" content="はくのBlog">
 <meta property="og:description" content="参考： 《A Short Course on Topological Insulators》">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sirohune.site/2023/09/01/CMT-Note/berry-fulx.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note/berry-fulx.png">
 <meta property="article:published_time" content="2023-09-01T11:52:57.000Z">
-<meta property="article:modified_time" content="2023-09-04T07:10:01.070Z">
+<meta property="article:modified_time" content="2023-09-09T15:44:00.036Z">
 <meta property="article:author" content="白舟尘">
-<meta property="article:tag" content="Mathematica">
-<meta property="article:tag" content="Calculation">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="condensed matter theory">
+<meta property="article:tag" content="Topological-Insulator">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sirohune.site/2023/09/01/CMT-Note/berry-fulx.png">
+<meta name="twitter:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note/berry-fulx.png">
 
 
-<link rel="canonical" href="https://sirohune.site/2023/09/01/CMT-Note/">
+<link rel="canonical" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/09/01/CMT-Note/","path":"2023/09/01/CMT-Note/","title":"CMT-Note"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/09/01/Topological-Insulator-Note/","path":"2023/09/01/Topological-Insulator-Note/","title":"Topological-Insulator-Note"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>CMT-Note | はくのBlog</title>
+<title>Topological-Insulator-Note | はくのBlog</title>
   
 
 
@@ -62,7 +63,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
   
-  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/09/01/CMT-Note//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note//atom.xml">
   
 
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-1-ssh-model"><span class="nav-text">Chapter 1 SSH model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-2-berry-phase-chern-number"><span class="nav-text">Chapter 2 Berry Phase, Chern
-Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#discrete-case"><span class="nav-text">2.1 Discrete Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-phase"><span class="nav-text">2.1.1 Berry Phase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-flux"><span class="nav-text">2.1.2 Berry Flux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number"><span class="nav-text">2.1.3 Chern Number</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuum-case"><span class="nav-text">Continuum Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-connection"><span class="nav-text">2.2.1 Berry Connection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-curvature"><span class="nav-text">2.2.2 Berry Curvature</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number-1"><span class="nav-text">2.2.3 Chern Number</span></a></li></ol></li></ol></li></ol></div>
+Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#discrete-case"><span class="nav-text">2.1 Discrete Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-phase"><span class="nav-text">2.1.1 Berry Phase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-flux"><span class="nav-text">2.1.2 Berry Flux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number"><span class="nav-text">2.1.3 Chern Number</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuum-case"><span class="nav-text">2.2 Continuum Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-connection"><span class="nav-text">2.2.1 Berry Connection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#berry-curvature"><span class="nav-text">2.2.2 Berry Curvature</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chern-number-1"><span class="nav-text">2.2.3 Chern Number</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -261,7 +262,7 @@ Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/09/01/CMT-Note/">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -274,12 +275,12 @@ Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="CMT-Note | はくのBlog">
+      <meta itemprop="name" content="Topological-Insulator-Note | はくのBlog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CMT-Note
+          Topological-Insulator-Note
         </h1>
 
         <div class="post-meta-container">
@@ -297,7 +298,7 @@ Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-04 15:10:01" itemprop="dateModified" datetime="2023-09-04T15:10:01+08:00">2023-09-04</time>
+      <time title="修改时间：2023-09-09 23:44:00" itemprop="dateModified" datetime="2023-09-09T23:44:00+08:00">2023-09-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -318,8 +319,8 @@ Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/09/01/CMT-Note/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/09/01/CMT-Note/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/09/01/Topological-Insulator-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/09/01/Topological-Insulator-Note/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -444,7 +445,7 @@ Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
 \]</span>
 Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
 <p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
-<h3 id="continuum-case">Continuum Case</h3>
+<h3 id="continuum-case">2.2 Continuum Case</h3>
 <h4 id="berry-connection">2.2.1 Berry Connection</h4>
 <p>现在考虑连续的情况，<span
 class="math inline">\(\ket{\psi(R)}\)</span>在一条曲线上移动，<span
@@ -548,7 +549,7 @@ class="math inline">\(\mathscr{l}\)</span>为边界的曲面</p>
 <h4 id="chern-number-1">2.2.3 Chern Number</h4>
 <p>在连续的情况下，陈数继承离散时的定义，取<span
 class="math inline">\(\Delta x,\Delta y\to
-0\)</span>即可，但是不知道为什么，书本对于陈数的定义忽然多了一个负号:
+0\)</span>即可，书本对于陈数的定义忽然多了一个负号(跟闵氏度规一样，可以有两种等价的定义，相差一个负号):
 <span class="math display">\[
 \begin{align}
 Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
@@ -588,8 +589,9 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Mathematica/" rel="tag"># Mathematica</a>
-              <a href="/tags/Calculation/" rel="tag"># Calculation</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/condensed-matter-theory/" rel="tag"># condensed matter theory</a>
+              <a href="/tags/Topological-Insulator/" rel="tag"># Topological-Insulator</a>
               <a href="/tags/physics/" rel="tag"># physics</a>
           </div>
 
@@ -634,13 +636,13 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">141k</span>
+    <span title="站点总字数">144k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:16</span>
+    <span title="站点阅读时长">4:22</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
@@ -687,7 +689,7 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/09/01/CMT-Note/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/09/01/Topological-Insulator-Note/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
