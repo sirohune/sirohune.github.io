@@ -1041,32 +1041,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
-    <title>Lie-Group-Study-Note-(part2)</title>
-    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
-    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
-<span id="more"></span>
-<p>前情提要：<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
-| はくのblog</a></p>
-<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
-<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
-class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
-<span class="math display">\[
-\begin{align}
-\Lambda^T \eta \Lambda=\eta
-\end{align}
-\]</span></p>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>群论</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数理方法复习（积分变换）</title>
     <url>/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/</url>
     <content><![CDATA[<pre><code>参考书籍：
@@ -1082,236 +1056,6 @@ class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度
         <tag>物理</tag>
         <tag>笔记</tag>
         <tag>数学物理方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Relativistic-Quantum-Mechanics(Part-1)</title>
-    <url>/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/</url>
-    <content><![CDATA[<p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
-<span id="more"></span>
-<pre><code>参考教材:《高等量子力学》——喀兴林
-《Modern Quantum Mechanics》——J.J. Sakurai</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
-\begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
-\begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
-\begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
-<ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
-<li>最重要的是，该方程计算的氢原子能级与实验不符</li>
-</ul>
-<p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：
-<span class="math display">\[
-\begin{align}
-i\pdv{t}\psi&amp;= (i\alpha \cdot \nabla +\beta m)\psi
-\end{align}
-\]</span> 简单起见，我们先假设系数<span
-class="math inline">\(\alpha,\beta\)</span>不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:
-<span class="math display">\[
-\begin{align}
--\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 从这里开始我们使用自然单位制:<span
-class="math inline">\(c=\hbar=1\)</span>.上式中的<span
-class="math inline">\(\{A,B\}\)</span>代表反对易子<span
-class="math inline">\(AB+BA\)</span>.我们进一步用反对易子将上式写为:
-<span class="math display">\[
-\begin{align}
--\pdv[2]{t}&amp;=
-(-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 在自然单位之下，KG方程应该写为: <span class="math display">\[
-\begin{align}
--\pdv[2]{t}&amp;= -\nabla^2+m^2
-\end{align}
-\]</span>
-因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数<span
-class="math inline">\(\alpha,\beta\)</span>我们有如下要求: <span
-class="math display">\[
-\begin{align}
-\{\alpha^i,\alpha^j\}&amp;= 2\delta^{ij}\\
-\{\alpha^i,\beta\}&amp;= 0\\
-\beta^2&amp;= 1
-\end{align}
-\]</span> 如此一来，Dirac方程写为: <span class="math display">\[
-\begin{align}
-i\frac{\partial }{\partial t}\psi&amp;= (i\alpha\cdot \nabla+\beta
-m)\psi
-\end{align}
-\]</span> 为了得到更简洁的协变形式，我们左乘一个<span
-class="math inline">\(\beta\)</span>同时移项: <span
-class="math display">\[
-\begin{align}
-(i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
-\end{align}
-\]</span> 我们期待写成的形式为: <span class="math display">\[
-\begin{align}
-(i\gamma^\mu \partial_\mu-m)\psi&amp;= 0\\
-(-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&amp;= 0
-\end{align}
-\]</span> 因此我们定义: <span class="math display">\[
-\begin{align}
-\gamma^0&amp;= -\beta\\
-\gamma^i&amp;= -\beta\alpha^i
-\end{align}
-\]</span> 很容易可以得到: <span class="math display">\[
-\begin{align}
-\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
-\end{align}
-\]</span> 当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为: <span
-class="math display">\[
-\begin{align}
-\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
-\end{align}
-\]</span> 此处的<span class="math inline">\(\gamma\)</span>即著名的<span
-class="math inline">\(\gamma\)</span>矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式<span
-class="math inline">\(i\frac{\partial }{\partial
-t}=\alpha\cdot\nabla+m\)</span>，研究对称性的时候一般用协变形式的<span
-class="math inline">\(i\gamma^\mu\partial_\mu=m\)</span>。</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<p>我们得到了Dirac方程的形式，但是我们还不知道<span
-class="math inline">\(\alpha,\beta\)</span>分别是什么，更别说由他们得到的<span
-class="math inline">\(\gamma\)</span>。从我们对<span
-class="math inline">\(\alpha,\beta\)</span>的要求可以猜测，<span
-class="math inline">\(\alpha\)</span>或许跟泡利矩阵有关系，因为泡利矩阵满足:
-<span class="math display">\[
-\begin{align}
-\{\sigma_i,\sigma_j\}&amp;= 2\delta_{ij}
-\end{align}
-\]</span> 但问题在于，在矩阵的二维表示中，我们无法找<span
-class="math inline">\(\beta\)</span>。<a
-href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">回忆四元数</a>我们知道，该空间任意一个元素都可以表示为:
-<span class="math display">\[
-\begin{align}
-\beta&amp;= a\cdot \mathbb{1}+x^i\sigma_i\\
-&amp;= \begin{pmatrix}a+x^3&amp;x^2-ix^3\\
-x^2+ix^3&amp;a-x^3\end{pmatrix}\\
-\Rightarrow \{\beta,\sigma_j\}&amp;= 2a\sigma_j+2x^i\delta_{ij}\\
-&amp;= 0
-\end{align}
-\]</span> 当<span class="math inline">\(j=3\)</span>时： <span
-class="math display">\[
-\begin{align}
-a\sigma_3+x^3\delta_{ij}&amp;= \begin{pmatrix}a+x^3&amp;0\\0&amp;-a+x^3
-\end{pmatrix}\\
-&amp;= \begin{pmatrix}0&amp;0\\0&amp;0\end{pmatrix}\\
-\Rightarrow a&amp;= x^3=0
-\end{align}
-\]</span> 同理可以得到所有分量<span
-class="math inline">\(a,x^i\)</span>均为0.也就是说在2x2矩阵的表示中我们找不到合适的<span
-class="math inline">\(\alpha,\beta\)</span>。因此我们将目光看向4x4的矩阵：
-<span class="math display">\[
-\begin{align}
-\alpha^i&amp;\triangleq  \sigma^x\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^z\otimes \sigma^0
-\end{align}
-\]</span> 这是Sakurai老师书中使用的定义，其中<span
-class="math inline">\(\sigma^0\)</span>代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的<span
-class="math inline">\(\gamma\)</span>矩阵。比如我们可以这样定义: <span
-class="math display">\[
-\begin{align}
-\alpha^i &amp;\triangleq \sigma^j\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^k\otimes \sigma^0
-\end{align}
-\]</span> 其中<span class="math inline">\(j\neq
-k\)</span>，否则等价于2x2矩阵表示。很容易验证： <span
-class="math display">\[
-\begin{align}
-\{\alpha^m,\alpha^n\}&amp;= (\sigma^j)^2\otimes
-\sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
-&amp;= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
-\{\alpha^i,\beta\}&amp;= (\sigma^j\sigma^k)\otimes
-\sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
-&amp;= 0
-\end{align}
-\]</span> 上式最后一步使用了<span class="math inline">\(j\neq
-k\)</span>的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
-<p>喀老师的书上是使用了群论的知识分析得到<span
-class="math inline">\(\alpha,\beta\)</span>必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
-<h2 id="守恒流">守恒流</h2>
-<p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:
-<span class="math display">\[
-\begin{align}
-\frac{\partial }{\partial t}\rho+\nabla\cdot J=0
-\end{align}
-\]</span> 从Dirac方程入手: <span class="math display">\[
-\begin{align}
-\psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta
-m)\psi&amp;= 0\\
-\psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta
-m)\psi^*&amp;= 0
-\end{align}
-\]</span>
-其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:
-<span class="math display">\[
-\begin{align}
-i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial
-t}\psi^*)&amp;=
-i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
-\frac{\partial }{\partial t}(\psi^*\psi)&amp;=
-\nabla\cdot(\psi^*\alpha\psi)\\
-  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&amp;=
-\nabla_i(\bar{\psi}\gamma^i\psi)
-\end{align}
-\]</span> 综上我们可以写出: <span class="math display">\[
-\begin{align}
-\partial_\mu J^\mu=0
-\end{align}
-\]</span> 其中<span
-class="math inline">\(J^\mu=\bar{\psi}\gamma^\mu\psi\)</span>.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
-<h2 id="free-particle-solution">Free-Particle Solution</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>量子场论</tag>
       </tags>
   </entry>
   <entry>
@@ -2073,6 +1817,262 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
+    <title>Lie-Group-Study-Note-(part2)</title>
+    <url>/2023/05/28/Lie-Group-Study-Note-(part2)/</url>
+    <content><![CDATA[<pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+<span id="more"></span>
+<p>前情提要：<a
+href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
+| はくのblog</a></p>
+<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
+<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
+class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
+<span class="math display">\[
+\begin{align}
+\Lambda^T \eta \Lambda=\eta
+\end{align}
+\]</span></p>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>群论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Relativistic-Quantum-Mechanics(Part-1)</title>
+    <url>/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)/</url>
+    <content><![CDATA[<p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
+<span id="more"></span>
+<pre><code>参考教材:《高等量子力学》——喀兴林
+《Modern Quantum Mechanics》——J.J. Sakurai</code></pre>
+<p><span class="math display">\[
+\require{physics}
+\]</span></p>
+<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
+class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
+<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
+<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
+<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
+<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
+class="math display">\[
+\begin{align}
+i\hbar\pdv{t}\psi=H\psi
+\end{align}
+\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
+\begin{align}
+H=\frac{(p-qA)^2}{2m}+qV
+\end{align}
+\]</span>
+很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
+<span class="math display">\[
+\begin{align}
+(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
+\end{align}
+\]</span> [^1]:
+对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
+<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
+Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
+<ul>
+<li>概率诠释<span
+class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
+<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
+class="math inline">\(-\infty\)</span>能级</li>
+<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
+class="math inline">\(\pdv{\psi}{t}\)</span></li>
+<li>最重要的是，该方程计算的氢原子能级与实验不符</li>
+</ul>
+<p>但这不代表该方程无意义，只是不适用于电子。</p>
+<h3 id="dirac-equation">Dirac Equation</h3>
+<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
+<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：
+<span class="math display">\[
+\begin{align}
+i\pdv{t}\psi&amp;= (i\alpha \cdot \nabla +\beta m)\psi
+\end{align}
+\]</span> 简单起见，我们先假设系数<span
+class="math inline">\(\alpha,\beta\)</span>不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:
+<span class="math display">\[
+\begin{align}
+-\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
+\end{align}
+\]</span> 从这里开始我们使用自然单位制:<span
+class="math inline">\(c=\hbar=1\)</span>.上式中的<span
+class="math inline">\(\{A,B\}\)</span>代表反对易子<span
+class="math inline">\(AB+BA\)</span>.我们进一步用反对易子将上式写为:
+<span class="math display">\[
+\begin{align}
+-\pdv[2]{t}&amp;=
+(-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
+\end{align}
+\]</span> 在自然单位之下，KG方程应该写为: <span class="math display">\[
+\begin{align}
+-\pdv[2]{t}&amp;= -\nabla^2+m^2
+\end{align}
+\]</span>
+因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数<span
+class="math inline">\(\alpha,\beta\)</span>我们有如下要求: <span
+class="math display">\[
+\begin{align}
+\{\alpha^i,\alpha^j\}&amp;= 2\delta^{ij}\\
+\{\alpha^i,\beta\}&amp;= 0\\
+\beta^2&amp;= 1
+\end{align}
+\]</span> 如此一来，Dirac方程写为: <span class="math display">\[
+\begin{align}
+i\frac{\partial }{\partial t}\psi&amp;= (i\alpha\cdot \nabla+\beta
+m)\psi
+\end{align}
+\]</span> 为了得到更简洁的协变形式，我们左乘一个<span
+class="math inline">\(\beta\)</span>同时移项: <span
+class="math display">\[
+\begin{align}
+(i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
+\end{align}
+\]</span> 我们期待写成的形式为: <span class="math display">\[
+\begin{align}
+(i\gamma^\mu \partial_\mu-m)\psi&amp;= 0\\
+(-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&amp;= 0
+\end{align}
+\]</span> 因此我们定义: <span class="math display">\[
+\begin{align}
+\gamma^0&amp;= -\beta\\
+\gamma^i&amp;= -\beta\alpha^i
+\end{align}
+\]</span> 很容易可以得到: <span class="math display">\[
+\begin{align}
+\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
+\end{align}
+\]</span> 当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为: <span
+class="math display">\[
+\begin{align}
+\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\end{align}
+\]</span> 此处的<span class="math inline">\(\gamma\)</span>即著名的<span
+class="math inline">\(\gamma\)</span>矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式<span
+class="math inline">\(i\frac{\partial }{\partial
+t}=\alpha\cdot\nabla+m\)</span>，研究对称性的时候一般用协变形式的<span
+class="math inline">\(i\gamma^\mu\partial_\mu=m\)</span>。</p>
+<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
+<p>我们得到了Dirac方程的形式，但是我们还不知道<span
+class="math inline">\(\alpha,\beta\)</span>分别是什么，更别说由他们得到的<span
+class="math inline">\(\gamma\)</span>。从我们对<span
+class="math inline">\(\alpha,\beta\)</span>的要求可以猜测，<span
+class="math inline">\(\alpha\)</span>或许跟泡利矩阵有关系，因为泡利矩阵满足:
+<span class="math display">\[
+\begin{align}
+\{\sigma_i,\sigma_j\}&amp;= 2\delta_{ij}
+\end{align}
+\]</span> 但问题在于，在矩阵的二维表示中，我们无法找<span
+class="math inline">\(\beta\)</span>。<a
+href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">回忆四元数</a>我们知道，该空间任意一个元素都可以表示为:
+<span class="math display">\[
+\begin{align}
+\beta&amp;= a\cdot \mathbb{1}+x^i\sigma_i\\
+&amp;= \begin{pmatrix}a+x^3&amp;x^2-ix^3\\
+x^2+ix^3&amp;a-x^3\end{pmatrix}\\
+\Rightarrow \{\beta,\sigma_j\}&amp;= 2a\sigma_j+2x^i\delta_{ij}\\
+&amp;= 0
+\end{align}
+\]</span> 当<span class="math inline">\(j=3\)</span>时： <span
+class="math display">\[
+\begin{align}
+a\sigma_3+x^3\delta_{ij}&amp;= \begin{pmatrix}a+x^3&amp;0\\0&amp;-a+x^3
+\end{pmatrix}\\
+&amp;= \begin{pmatrix}0&amp;0\\0&amp;0\end{pmatrix}\\
+\Rightarrow a&amp;= x^3=0
+\end{align}
+\]</span> 同理可以得到所有分量<span
+class="math inline">\(a,x^i\)</span>均为0.也就是说在2x2矩阵的表示中我们找不到合适的<span
+class="math inline">\(\alpha,\beta\)</span>。因此我们将目光看向4x4的矩阵：
+<span class="math display">\[
+\begin{align}
+\alpha^i&amp;\triangleq  \sigma^x\otimes \sigma^i\\
+\beta &amp;\triangleq \sigma^z\otimes \sigma^0
+\end{align}
+\]</span> 这是Sakurai老师书中使用的定义，其中<span
+class="math inline">\(\sigma^0\)</span>代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的<span
+class="math inline">\(\gamma\)</span>矩阵。比如我们可以这样定义: <span
+class="math display">\[
+\begin{align}
+\alpha^i &amp;\triangleq \sigma^j\otimes \sigma^i\\
+\beta &amp;\triangleq \sigma^k\otimes \sigma^0
+\end{align}
+\]</span> 其中<span class="math inline">\(j\neq
+k\)</span>，否则等价于2x2矩阵表示。很容易验证： <span
+class="math display">\[
+\begin{align}
+\{\alpha^m,\alpha^n\}&amp;= (\sigma^j)^2\otimes
+\sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
+&amp;= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
+\{\alpha^i,\beta\}&amp;= (\sigma^j\sigma^k)\otimes
+\sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
+&amp;= 0
+\end{align}
+\]</span> 上式最后一步使用了<span class="math inline">\(j\neq
+k\)</span>的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
+<p>喀老师的书上是使用了群论的知识分析得到<span
+class="math inline">\(\alpha,\beta\)</span>必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
+<h2 id="守恒流">守恒流</h2>
+<p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:
+<span class="math display">\[
+\begin{align}
+\frac{\partial }{\partial t}\rho+\nabla\cdot J=0
+\end{align}
+\]</span> 从Dirac方程入手: <span class="math display">\[
+\begin{align}
+\psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta
+m)\psi&amp;= 0\\
+\psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta
+m)\psi^*&amp;= 0
+\end{align}
+\]</span>
+其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:
+<span class="math display">\[
+\begin{align}
+i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial
+t}\psi^*)&amp;=
+i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
+\frac{\partial }{\partial t}(\psi^*\psi)&amp;=
+\nabla\cdot(\psi^*\alpha\psi)\\
+  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
+\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+\Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
+\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+\frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&amp;=
+\nabla_i(\bar{\psi}\gamma^i\psi)
+\end{align}
+\]</span> 综上我们可以写出: <span class="math display">\[
+\begin{align}
+\partial_\mu J^\mu=0
+\end{align}
+\]</span> 其中<span
+class="math inline">\(J^\mu=\bar{\psi}\gamma^\mu\psi\)</span>.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
+<h2 id="free-particle-solution">Free-Particle Solution</h2>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>量子场论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>建站记录</title>
     <url>/2023/02/10/Site%20record/</url>
     <content><![CDATA[<p>感谢131的帮助，个人网站算是部署好了（<del>真是辛苦我了</del>），终于有了属于自己的一个网站~</p>
@@ -2109,6 +2109,560 @@ checked="" />在各个搜索引擎备案(百度的好麻烦，就弄Google和bin
         <tag>记录</tag>
         <tag>博客</tag>
         <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固体物理学习笔记（自由电子气）</title>
+    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
+    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
+<span id="more"></span>
+<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
+<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
+<p>废话少说，先来看看Drude模型到底说了什么。</p>
+<h3 id="模型假设">模型假设</h3>
+<ol type="1">
+<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
+电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
+<li><p>自由电子<strong>气</strong>的<strong>气</strong>
+毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
+</ol>
+<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
+<ol start="3" type="1">
+<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
+<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
+来描述，这是电子气模型中很重要的一个参数</li>
+</ol>
+<p>我们假设粒子两次散射时间的平均时间为<span
+class="math inline">\(\tau\)</span> ，则<span
+class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
+class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
+class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
+class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
+<span class="math inline">\(\Delta
+t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
+dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
+<span class="math display">\[
+\require{physics}
+\begin{align}
+P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
+   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
+   =&amp;e^{t/\tau}
+\end{align}
+\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
+时间内发生第二次散射的概率为<span
+class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
+，则第二次散射发生的平均时间为 <span class="math display">\[
+\begin{align}
+\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
+  =&amp;\tau\Gamma(2)=\tau
+\end{align}
+\]</span></p>
+<p>所以参数<span
+class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
+<h3 id="电学性质">电学性质</h3>
+<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
+class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
+class="math inline">\(p(t)\)</span>，则接下来的<span
+class="math inline">\(dt\)</span>
+时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
+<span class="math display">\[
+\begin{align}
+p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
+  =&amp;p(t)+Fdt-pdt/\tau\\
+  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
+\end{align}
+\]</span></p>
+<p>这样便得到了电子气的运动方程</p>
+<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
+<p>均匀直流外电场下的运动方程为</p>
+<p><span class="math display">\[
+\begin{equation}
+\dv{p(t)}{t}=-p/\tau-eE
+\end{equation}
+\]</span></p>
+<p>取动量导数为0，可以得到电子的稳态动量为<span
+class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
+class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
+class="math display">\[
+\begin{align}
+J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
+\end{align}
+\]</span></p>
+<p>根据公式<span class="math inline">\(J=\sigma_0
+E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
+e^2 \tau/m\)</span> ，是一个由弛豫时间<span
+class="math inline">\(\tau\)</span> 及电子数密度<span
+class="math inline">\(\rho\)</span>
+共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
+class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
+<p>接着从热学的能均分定理<span
+class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
+class="math inline">\(1.2\times
+10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
+class="math inline">\(l=\tau \bar{v}\)</span>在
+0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
+<h4 id="交流外电场下">交流外电场下</h4>
+<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
+t}\)</span>，因此电子动量的形式应该也与之相同<span
+class="math inline">\(p(t)=p(\omega)e^{-i\omega
+t}\)</span>，将其带入运动方程得: <span class="math display">\[
+\begin{align}
+-i\omega p(\omega)e^{-i\omega
+t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
+t}\\
+\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
+\end{align}
+\]</span></p>
+<p>带入电流密度公式<span class="math inline">\(J=\rho
+q\frac{p}{m}\)</span>得 <span class="math display">\[
+\begin{equation}
+J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
+\end{equation}
+\]</span> 因此可以得到交流复电导率为<span
+class="math inline">\(\sigma(\omega)=\frac{\rho
+e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
+.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
+<span class="math display">\[
+\begin{align}
+Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
+t}}{1-i\omega \tau}}\\
+=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
+t+\phi)}{\sqrt{1+\omega^2\tau^2}}
+\end{align}
+\]</span></p>
+<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
+class="math inline">\(\phi\)</span>以及振幅的衰减<span
+class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
+<p>这个模型可以用于电磁波对金属的影响，因为<span
+class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
+<h3 id="光学性质">光学性质</h3>
+<p>略</p>
+<h3 id="热学性质">热学性质</h3>
+<p>电子气的热学性质主要是热导率<span
+class="math inline">\(\kappa\)</span> 以及比热<span
+class="math inline">\(C_v\)</span>.</p>
+<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
+T\)</span>
+.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
+<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
+,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
+=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
+\end{align}
+\]</span></p>
+<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
+class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
+=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
+=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
+\end{align}
+\]</span></p>
+<p>速度平方的平均值<span
+class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
+class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
+，同时还可以得到<span
+class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
+class="math display">\[
+\begin{align}
+J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
+=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
+\end{align}
+\]</span></p>
+<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
+class="math inline">\(\frac{3\rho\tau
+k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
+<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
+e^2\tau}{m};\kappa=\frac{3\rho\tau
+k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
+class="math inline">\(\frac{\kappa}{\sigma_0
+T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
+<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
+class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
+<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
+<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
+<h3 id="自由电子气的比热">自由电子气的比热</h3>
+<ul>
+<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
+class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
+E}+1}\)</span>.其中<span
+class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
+class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
+<li><p>量子态数量N与动量的关系</p></li>
+</ul>
+<p>对于自由电子的哈密顿量<span
+class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
+class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
+class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
+<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
+class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
+class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
+class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
+class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
+<span class="math display">\[
+\begin{align}
+dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
+\end{align}
+\]</span></p>
+<p>补上电子自旋带来的自由度为<span
+class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
+k^2dk\)</span>。</p>
+<ul>
+<li>在固体物理中我们经常用到态密度<span
+class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
+<span class="math display">\[
+\begin{align}
+dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
+E=&amp;\frac{\hbar^2k^2}{2m}\\
+\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
+=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
+\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
+\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
+=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;g(E)dE
+\end{align}
+\]</span></li>
+</ul>
+<p>因此态密度为<span
+class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
+正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。</p>
+<p>因此数密度<span class="math inline">\(\rho=\int
+g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
+g(E)EdE\)</span>.</p>
+<h4 id="零温t0k时">零温T=0K时</h4>
+<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>。</p>
+<p>当T=0K时，费米分布<span
+class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
+class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
+class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
+class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
+class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
+class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
+<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
+class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
+<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
+<ul>
+<li><p>数密度 <span class="math display">\[
+\begin{align}
+\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{align}
+\]</span></p></li>
+<li><p>能量密度 <span class="math display">\[
+\begin{align}
+U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
+=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
+=&amp;\frac{3}{5}E_F\frac{N}{V}
+\end{align}
+\]</span></p></li>
+</ul>
+<p>因此我们可以得到单个电子的平均能量应该为<span
+class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
+这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
+<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
+<p>由于上述的原因，我们认为<span
+class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
+<span class="math display">\[
+\begin{align}
+N/V=&amp;\int_0^\infty f(E)g(E)dE\\
+U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
+\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
+\end{align}
+\]</span></p>
+<p>因此我们只需要计算出积分式<span
+class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
+class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
+class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
+class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
+class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
+class="math display">\[
+\begin{equation}
+Q(E_F)=\int_0^{E_F} h(E)dE
+\end{equation}
+\]</span> 则有<span
+class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
+class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
+\begin{align}
+I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
+=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
+\end{align}
+\]</span> 对于上式右边的第一项，E等于0的时，<span
+class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
+class="math inline">\(f(E)\)</span>为0.
+因此只剩下第二项积分表达式，第二项中包含<span
+class="math inline">\(-\pdv{f}{E}\)</span>
+，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
+class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
+class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
+class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
+class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
+class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
+class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
+class="math inline">\(-\infty\)</span>： <span class="math display">\[
+\begin{align}
+I=&amp;\int_{-\infty}^\infty
+dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
+f}\\
+=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
+f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
+&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+-\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+x=&amp;\frac{E-\mu}{k_bT}
+\end{align}
+\]</span></p>
+<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
+函数的偏离，此时<span
+class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
+class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
+class="math inline">\(E=\mu\)</span>奇对称，而<span
+class="math inline">\(\delta\)</span> 函数关于<span
+class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>，因此积分<span
+class="math inline">\(I\)</span>化简为 <span class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE(E-\mu)^2\pqty{-\partial_E f}\\
+=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
+=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
+dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
+\end{align}
+\]</span></p>
+<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
+class="math display">\[
+\begin{equation}
+\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
+\end{equation}
+\]</span></p>
+<p>带入积分<span class="math inline">\(I\)</span>为 <span
+class="math display">\[
+\begin{align}
+I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)dE\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
+\end{align}
+\]</span></p>
+<ul>
+<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
+g(E)EdE\)</span> <span class="math display">\[
+\begin{align}
+I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
+\end{align}
+\]</span></li>
+</ul>
+<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
+class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
+class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
+<span class="math display">\[
+\begin{align}
+0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
+k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
+=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+\end{align}
+\]</span></p>
+<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
+<span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
+\end{align}
+\]</span></p>
+<p>因此数密度的式子变为 <span class="math display">\[
+\begin{align}
+\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}=&amp;0\\
+\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
+\end{align}
+\]</span></p>
+<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
+class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
+\begin{align}
+\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
+k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
+}&#39;}_0=&amp;0\\
+\Rightarrow
+0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
+k_b)^2}{3}+0=&amp;0\\
+\Rightarrow
+\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{3}
+\end{align}
+\]</span></p>
+<p>带入态密度在零温时的表达式为 <span class="math display">\[
+\begin{align}
+\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
+k_b)^2}{6}T^2\\
+  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
+  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
+\end{align}
+\]</span> 而化学势在零温时即为费米能量<span
+class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
+\begin{equation}
+\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
+\end{equation}
+\]</span></p>
+<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
+class="math display">\[
+\begin{equation}
+\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
+\end{equation}
+\]</span></p>
+<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
+<span class="math display">\[
+\begin{align}
+U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
+g(E_F)=&amp;C\sqrt{E_F}\\
+\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
+=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
+\end{align}
+\]</span></p>
+<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
+<span class="math display">\[
+\begin{align}
+C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
+\end{align}
+\]</span></p>
+<p>还可以得到单个电子的比热为 <span class="math display">\[
+\begin{align}
+C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
+\end{align}
+\]</span>
+这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
+<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
+<p>根据上一节的推导，热导率和比热的关系为<span
+class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
+，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
+<span class="math display">\[
+\begin{align}
+\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
+=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
+\end{align}
+\]</span></p>
+<p>相比Durde模型给出的<span
+class="math inline">\(\frac{3}{2}\frac{\rho\tau
+k_b^2T}{m}\)</span>更接近实验值。</p>
+<h3 id="泡利顺磁性">泡利顺磁性</h3>
+<p><strong>暂略，以后再补上</strong></p>
+<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
+<p>晶格结构是后面能带论以及晶格振动的基础。</p>
+<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
+<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
+<ul>
+<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
+<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
+<li><p>基矢的长度称为晶格常数</p></li>
+<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
+<li><p>最小的周期重复单元叫原胞</p></li>
+</ul>
+<h2 id="晶向与晶面">晶向与晶面</h2>
+<ul>
+<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
+<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
+</ul>
+<h2 id="倒格空间">倒格空间</h2>
+<ul>
+<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
+<span class="math display">\[
+\begin{align}
+2d\sin\theta=n\lambda
+\end{align}
+\]</span> 其中d是原子间距，<span
+class="math inline">\(\theta\)</span>是入射角的余角</p></li>
+<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
+class="math display">\[
+\begin{align}
+\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
+\end{align}
+\]</span> 其中<span
+class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
+class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
+<li><p>劳厄方程给出一个定义倒格矢<span
+class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
+class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
+class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
+\begin{align}
+a_i\cdot b_j=\delta_{ij}2\pi
+\end{align}
+\]</span>
+上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
+</ul>
+<p>倒格矢<span
+class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
+<ul>
+<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
+class="math display">\[
+\begin{align}
+b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
+b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
+b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
+\end{align}
+\]</span></li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
+class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>虽然积分区间不关于<span
+class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
+class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>笔记</tag>
+        <tag>固体物理</tag>
       </tags>
   </entry>
   <entry>
@@ -2885,568 +3439,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 id="fn6"><p>PPT中的波函数记号与我的不同，一方面PPT中不区分位置空间与动量空间，<span
 class="math inline">\(w(r),w(k)\)</span>不加以区分，另一方面平面波用小写w，布洛赫用大写W。<a
 href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-        <tag>笔记</tag>
-        <tag>固体物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2023/02/22/Test/</url>
-    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
-\hat{H}\ket{\psi}=E\ket{\psi}
-\]</span> 上方应该有一个定态薛定谔方程</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>固体物理学习笔记（自由电子气）</title>
-    <url>/2023/03/01/Solid-State-Physics-Note-Part-1/</url>
-    <content><![CDATA[<h1 id="金属自由电子气">金属自由电子气</h1>
-<span id="more"></span>
-<h2 id="德鲁特drude-模型">德鲁特(Drude) 模型</h2>
-<p>Drude模型出现的时候量子力学还没建立起来，此时Drude用的是经典自由电子气模型来近似金属中的电子。Drude模型对金属<strong>电、光以及热导率</strong>描述较为成功（起码量级以及定性上是相符合的），但对电子比热的解释与实际情况偏离较大。这便有了下一小节的Sommerfeld模型，Sommerfeld是用量子自由电子气模型来近似金属中的电子，用费米统计来描述电子。</p>
-<p>废话少说，先来看看Drude模型到底说了什么。</p>
-<h3 id="模型假设">模型假设</h3>
-<ol type="1">
-<li><p><strong>自由</strong>电子气体的<strong>自由</strong>
-电子与正电荷之间的电磁相互作用是长程作用，但是我们将其大小视为很小以至于可以忽略。只有当电子与正电荷发生瞬时碰撞散射的时候才认为电子与正电荷有相互作用。也就是说，对于正电荷与电子而言，电子是自由的，与正电荷的相互作用只在他们散射的时候才存在。</p></li>
-<li><p>自由电子<strong>气</strong>的<strong>气</strong>
-毕竟是把电子类比理想气体，理想气体分子之间的相互作用是被忽略的，因此该模型也是将电子之间的相互作用忽略不计。</p></li>
-</ol>
-<p>电子气与普通理想气体的区别是，电子气带电，可以被外电场加速，但无法被无限加速，因为Drude模型对于该模型的散射有如下假设</p>
-<ol start="3" type="1">
-<li>瞬时碰撞后动量的方向是随机分布的，因此平均为0</li>
-<li>电子碰撞的几率用弛豫时间<span class="math inline">\(\tau\)</span>
-来描述，这是电子气模型中很重要的一个参数</li>
-</ol>
-<p>我们假设粒子两次散射时间的平均时间为<span
-class="math inline">\(\tau\)</span> ，则<span
-class="math inline">\(dt\)</span> 时间内发生散射的概率即为<span
-class="math inline">\(\frac{dt}{\tau}\)</span>。取某一次散射发生的时刻为<span
-class="math inline">\(t=0\)</span>，可以得到粒子从0-t时间段内不发生散射的概率为<span
-class="math inline">\(e^{-t/\tau}\)</span> ，证明如下：将t时间段分为N段
-<span class="math inline">\(\Delta
-t=t/N\)</span>，当N趋于无穷的时候<span class="math inline">\(\Delta t\to
-dt\)</span>，因此粒子从0-t时间段内不发生散射的概率即为每一个小时间段都不发生散射:
-<span class="math display">\[
-\require{physics}
-\begin{align}
-P(t)=&amp;\lim_{N\to\infty} \pqty{1-\frac{\Delta t}{\tau}}^N\\
-   =&amp;\lim_{N\to\infty}\pqty{1-\frac{t}{N\tau}}^N\\
-   =&amp;e^{t/\tau}
-\end{align}
-\]</span> 则粒子在t时刻后的<span class="math inline">\(dt\)</span>
-时间内发生第二次散射的概率为<span
-class="math inline">\(e^{-t/\tau}dt/\tau\)</span>
-，则第二次散射发生的平均时间为 <span class="math display">\[
-\begin{align}
-\expval{t}=&amp;\int_0^\infty te^{-t/\tau}dt/\tau\\
-  =&amp;\tau\Gamma(2)=\tau
-\end{align}
-\]</span></p>
-<p>所以参数<span
-class="math inline">\(\tau\)</span>的意义就是我们一开始所假设的两次散射之间的平均时间。</p>
-<h3 id="电学性质">电学性质</h3>
-<p>有了上述假设之后，我们便可以利用该模型分析微观机制。探究<span
-class="math inline">\(dt\)</span>时间段内电子的动量变化，假设t时刻电子的动量为<span
-class="math inline">\(p(t)\)</span>，则接下来的<span
-class="math inline">\(dt\)</span>
-时刻，电子如果没发生碰撞，就会被外力加速，如果发生碰撞了，根据假设动量归零。因此:
-<span class="math display">\[
-\begin{align}
-p(t+dt)&amp;=0+(1-dt/\tau)(p(t)+Fdt)\\
-  =&amp;p(t)+Fdt-pdt/\tau\\
-  \Rightarrow \dv{p(t)}{t}=&amp;-p/\tau+F
-\end{align}
-\]</span></p>
-<p>这样便得到了电子气的运动方程</p>
-<h4 id="均匀直流外电场下">均匀直流外电场下</h4>
-<p>均匀直流外电场下的运动方程为</p>
-<p><span class="math display">\[
-\begin{equation}
-\dv{p(t)}{t}=-p/\tau-eE
-\end{equation}
-\]</span></p>
-<p>取动量导数为0，可以得到电子的稳态动量为<span
-class="math inline">\(p=-e\tau E\)</span>。电流密度的公式为<span
-class="math inline">\(J=\rho qv\)</span>，因此电流密度为 <span
-class="math display">\[
-\begin{align}
-J=\rho (-e)\frac{-e\tau E}{m}=\frac{\rho e^2\tau E}{m}
-\end{align}
-\]</span></p>
-<p>根据公式<span class="math inline">\(J=\sigma_0
-E\)</span>可以得到直流电导率为<span class="math inline">\(\sigma_0=\rho
-e^2 \tau/m\)</span> ，是一个由弛豫时间<span
-class="math inline">\(\tau\)</span> 及电子数密度<span
-class="math inline">\(\rho\)</span>
-共同决定的参数。因此在实验中测出直流电导率后，便可以得到各种金属的弛豫时间<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> ,电子的弛豫时间量级在<span
-class="math inline">\(10^{-15}-10^{-14}\)</span>s之间。</p>
-<p>接着从热学的能均分定理<span
-class="math inline">\(\frac{1}{2}m\bar{v}^2=\frac{3}{2}k_bT\)</span>，可以得到室温300K下电子运动的平均速度约为<span
-class="math inline">\(1.2\times
-10^{5}m/s\)</span>.将平均速度与弛豫时间相乘便可得到平均自由程<span
-class="math inline">\(l=\tau \bar{v}\)</span>在
-0.1-1nm之间，与原子之间的平均间距相当，侧面证明了弛豫时间假设的合理性。</p>
-<h4 id="交流外电场下">交流外电场下</h4>
-<p><span class="math inline">\(E(t)=E(\omega)e^{-i\omega
-t}\)</span>，因此电子动量的形式应该也与之相同<span
-class="math inline">\(p(t)=p(\omega)e^{-i\omega
-t}\)</span>，将其带入运动方程得: <span class="math display">\[
-\begin{align}
--i\omega p(\omega)e^{-i\omega
-t}=&amp;-\frac{1}{\tau}p(\omega)e^{-i\omega t}-eE(\omega) e^{-i\omega
-t}\\
-\Rightarrow p(\omega)=&amp;\frac{-e\tau E(\omega)}{1-i\omega\tau}
-\end{align}
-\]</span></p>
-<p>带入电流密度公式<span class="math inline">\(J=\rho
-q\frac{p}{m}\)</span>得 <span class="math display">\[
-\begin{equation}
-J(\omega)=\frac{\rho e^2\tau E(\omega)}{m\pqty{1-i\omega\tau}}
-\end{equation}
-\]</span> 因此可以得到交流复电导率为<span
-class="math inline">\(\sigma(\omega)=\frac{\rho
-e^2\tau}{m\pqty{1-i\omega \tau}}=\sigma_0/\pqty{1-i\omega\tau}\)</span>
-.虽然上面的表述都是用复数，但用于实际情况时都是取实部，因此很容易可以得到
-<span class="math display">\[
-\begin{align}
-Re\pqty{J(t)}=&amp;\sigma_0 E(\omega)Re\pqty{\frac{e^{-i\omega
-t}}{1-i\omega \tau}}\\
-=&amp;\sigma_0 E(\omega)\frac{\cos(\omega
-t+\phi)}{\sqrt{1+\omega^2\tau^2}}
-\end{align}
-\]</span></p>
-<p>可以看出电流密度与外加交电场相比，多了一个相位差<span
-class="math inline">\(\phi\)</span>以及振幅的衰减<span
-class="math inline">\(\frac{1}{\sqrt{1+\omega^2\tau^2}}\)</span>.</p>
-<p>这个模型可以用于电磁波对金属的影响，因为<span
-class="math inline">\(E=cB\)</span>，电磁波中对金属的影响主要来自于电场，同时当光的波长远大于电子的平均自由程时可以认为电子感受到的是均匀电场，因此可以使用该模型描述电磁波对金属的影响。</p>
-<h3 id="光学性质">光学性质</h3>
-<p>略</p>
-<h3 id="热学性质">热学性质</h3>
-<p>电子气的热学性质主要是热导率<span
-class="math inline">\(\kappa\)</span> 以及比热<span
-class="math inline">\(C_v\)</span>.</p>
-<p>热导率的定义是净热流<span class="math inline">\(J_Q=-\kappa \nabla
-T\)</span>
-.其微观机制是电子无规则运动，而不同温度场上不同点的电子携带的能量不同，假设从高温跑到低温的电子数量与低温到高温的电子数量相同，也会有净热流流向低温部分，更别说高温区的电子运动速度更快。</p>
-<p>热流为<span class="math inline">\(J=\rho vE(T)\)</span>
-,其中E为电子的能量。考虑一个垂直于x轴的截面，平均净流量为 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\expval{\rho v_x \pdv{E}{x}\delta x}\\
-=&amp;\rho\expval{v_x\pdv{E}{T}\pdv{T}{x}\delta x}
-\end{align}
-\]</span></p>
-<p>既然是统计平均，我们认为电子每两次散射之间的行为是相同的，所以<span
-class="math inline">\(\delta x=v_x \tau\)</span>，带入上式有 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho\pdv{E}{T}\pdv{T}{x}\expval{v_x^2\tau}\\
-=&amp;\rho\pdv{E}{T}\pdv{T}{x}\frac{\tau}{3}\expval{v^2}\\
-=&amp;\rho C_V\pdv{T}{x}\frac{\tau}{3}\expval{v^2}
-\end{align}
-\]</span></p>
-<p>速度平方的平均值<span
-class="math inline">\(\expval{v^2}\)</span>有能均分定义得到<span
-class="math inline">\(\expval{v^2}=\frac{3}{m}k_bT\)</span>
-，同时还可以得到<span
-class="math inline">\(\pdv{E}{T}=\frac{3}{2}k_b\)</span> <a href="#fn2"
-class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>带入上式得到 <span
-class="math display">\[
-\begin{align}
-J_Q=&amp;\rho \frac{3}{2}k_b\frac{\tau k_bT}{m}\pdv{T}{x}\\
-=&amp;\frac{3\rho\tau k_b^2T}{2m}\pdv{T}{x}
-\end{align}
-\]</span></p>
-<p>根据上式可以读出<span class="math inline">\(\kappa\)</span>为<span
-class="math inline">\(\frac{3\rho\tau
-k_b^2T}{2m}\)</span>(这里可能会遇到符号问题，不过那都是人为规定方向的问题，只消取正号即可)。</p>
-<p>对比直流电导率与热导率<span class="math inline">\(\sigma_0=\frac{\rho
-e^2\tau}{m};\kappa=\frac{3\rho\tau
-k_b^2T}{2m}\)</span>，可以得到一个常数比值<span
-class="math inline">\(\frac{\kappa}{\sigma_0
-T}=\frac{3k_b^2}{2e^2}\)</span>。因此如果该模型正确，则所有金属的热导率与直流电导率的比值应该是同一个常数，与温度也无干系。</p>
-<p>实验中测得该比值确实收温度影响不大，不同金属的比值在同一个量级，也就是本模型开头提及的：定性上符合，定量上不符合。除此之外，Drude模型对电子比热的计算直接利用了热学中的能均分定理得到的<span
-class="math inline">\(C_v=\rho\pdv{E}{T}=\frac{3\rho}{2}k_b\)</span>是一个与温度无关的常数，而实验中测得的电子比热不仅与温度有关，数值还远小于Drude模型给出的预言。</p>
-<h2 id="索末菲sommerfeld-模型">索末菲(Sommerfeld) 模型</h2>
-<p>为解决上述电子的比热问题，需要用到量子力学的费米统计分布。</p>
-<h3 id="自由电子气的比热">自由电子气的比热</h3>
-<ul>
-<li><p>热统给出能量为E的费米子每个量子态上的平均粒子数为<span
-class="math inline">\(f(E)=\frac{1}{e^{\alpha+\beta
-E}+1}\)</span>.其中<span
-class="math inline">\(\alpha=-\frac{\mu}{kT}\)</span>，<span
-class="math inline">\(\beta=\frac{1}{kT}\)</span>.</p></li>
-<li><p>量子态数量N与动量的关系</p></li>
-</ul>
-<p>对于自由电子的哈密顿量<span
-class="math inline">\(H=\frac{p^2}{2m}\)</span>，得到电子的解为<span
-class="math inline">\(e^{ikx}\)</span>，取周期性边界条件，得到波矢的离散取值<span
-class="math inline">\(k_x=\frac{2n_x\pi}{L}\)</span>，其中L是金属的尺寸。</p>
-<p>由边界条件可以看出，在动量空间中，每个电子对动量的占据不是连续的，而是离散的晶格，可以视作边长为<span
-class="math inline">\(\frac{2\pi}{L}\)</span>的立方体，也就是说每个态在动量空间中的体积是<span
-class="math inline">\(\frac{2\pi}{L}\)</span>.因此<span
-class="math inline">\(dk_xdk_ydk_z\)</span>中有<span
-class="math inline">\(dk_xdk_ydk_z/\pqty{\frac{2\pi}{L}}^3\)</span>个态，即
-<span class="math display">\[
-\begin{align}
-dN=&amp;\frac{V}{\pqty{2\pi}^3}4\pi k^2dk
-\end{align}
-\]</span></p>
-<p>补上电子自旋带来的自由度为<span
-class="math inline">\(dN=\frac{2V}{\pqty{2\pi}^3}4\pi
-k^2dk\)</span>。</p>
-<ul>
-<li>在固体物理中我们经常用到态密度<span
-class="math inline">\(g(E)\)</span>，也就是单位体积中每能量间隔中有多少电子态数目:
-<span class="math display">\[
-\begin{align}
-dN/V=&amp;\frac{1}{\pi^2}k^2dk\\
-E=&amp;\frac{\hbar^2k^2}{2m}\\
-\Rightarrow dE=&amp;\frac{\hbar^2kdk}{m}\\
-=&amp;\frac{\hbar^2}{m}\frac{\sqrt{2mE}}{\hbar}dk\\
-\Rightarrow dN/V=&amp;\frac{2mE}{\hbar^2
-\pi^2}\frac{m}{\hbar\sqrt{2mE}}dE\\
-=&amp;\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;g(E)dE
-\end{align}
-\]</span></li>
-</ul>
-<p>因此态密度为<span
-class="math inline">\(g(E)=\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\sqrt{E}\)</span>
-正比于能量的根号<a href="#fn3" class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>。</p>
-<p>因此数密度<span class="math inline">\(\rho=\int
-g(E)dE\)</span>，能量密度为<span class="math inline">\(U/V=\int
-g(E)EdE\)</span>.</p>
-<h4 id="零温t0k时">零温T=0K时</h4>
-<p>热学性质从零温T=0K开始考虑，因为这是最简单的情况<a href="#fn4"
-class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>。</p>
-<p>当T=0K时，费米分布<span
-class="math inline">\(f(E)\)</span>变成一个阶跃函数，当E大于化学势<span
-class="math inline">\(\mu\)</span>时为0，当E小于化学势<span
-class="math inline">\(\mu\)</span>时为1，这个化学势也就是T=0K时电子所能取到的最高能量，将其记作<span
-class="math inline">\(E_F\)</span>，称为<strong>费米能量</strong>，对于普通金属，这个值在2-10eV之间<a
-href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>，其换算为温度为<span
-class="math inline">\(T_F=E_F/k_b\)</span>称为费米温度，大约在<span
-class="math inline">\(10^4-10^5\)</span>K的量级，是一个<strong>远高于室温</strong>的值。正是由于这个性质，才有了后面对于T&gt;0K的计算。</p>
-<p>0K时电子能量有一个最大的取值，则对应动量有一个最大的取值<span
-class="math inline">\(k_F\)</span>，记作<strong>费米波矢</strong>，所有可能存在的电子在动量空间中形成一个球，半径就是费米波矢，该球称为费米球，球面称为费米面，这个费米面很重要，因为我们认为T&gt;0K时电子气的性质主要由费米面附近的电子贡献，至于为什么之后会说。</p>
-<p>我们试着计算一下零温时电子气的数密度以及能量密度</p>
-<ul>
-<li><p>数密度 <span class="math display">\[
-\begin{align}
-\rho= N/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}dE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
-\end{align}
-\]</span></p></li>
-<li><p>能量密度 <span class="math display">\[
-\begin{align}
-U/V=&amp;\int_0^{E_F}\frac{2m^2}{\pi^2\hbar^3}\sqrt{E}EdE\\
-=&amp;\frac{\sqrt{2m^2}}{\pi^2\hbar^3}\frac{2}{5}E_F^{5/2}\\
-=&amp;\frac{3}{5}E_F\frac{N}{V}
-\end{align}
-\]</span></p></li>
-</ul>
-<p>因此我们可以得到单个电子的平均能量应该为<span
-class="math inline">\(U/N=\frac{3}{5}E_F\)</span>.
-这便是与由能均分定理得到的平均能量不同的，能均分得到的能量正比于温度，在零温时能量为0；而量子统计给出的平均能量则是与电子的数密度相关的一个数值，在零温的时候非零。同时费米能量远大于室温所带来的热扰动，处于基态的电子想要跃迁到费米能量以上需要极大的能量，这个概率是非常小的，基本上热扰动只会影响费米面附近的电子，也就是说，这部分的电子是其非零温时性质的主要贡献者。</p>
-<h4 id="非零温t0k时">非零温T&gt;0K时</h4>
-<p>由于上述的原因，我们认为<span
-class="math inline">\(f(E)\)</span>在非零温时的函数表达式只是轻微偏离阶跃函数。此时数密度与能量密度的公式为
-<span class="math display">\[
-\begin{align}
-N/V=&amp;\int_0^\infty f(E)g(E)dE\\
-U/V=&amp;\int_0^\infty f(E)g(E)EdE\\
-\Rightarrow I=&amp;\int_0^\infty f(E)h(E)dE
-\end{align}
-\]</span></p>
-<p>因此我们只需要计算出积分式<span
-class="math inline">\(I\)</span>的一般表达式即可得到数密度与能量密度（数密度的<span
-class="math inline">\(h(E)=g(E)\)</span>,能量密度的<span
-class="math inline">\(h(E)=g(E)E\)</span>）。为了计算<span
-class="math inline">\(I\)</span>，我们需要借助零温时的表达式,将T=0K时的<span
-class="math inline">\(I\)</span>记作Q，是费米能量的函数 <span
-class="math display">\[
-\begin{equation}
-Q(E_F)=\int_0^{E_F} h(E)dE
-\end{equation}
-\]</span> 则有<span
-class="math inline">\(\pdv{Q}{E}=h(E)\)</span>，将其带入<span
-class="math inline">\(I\)</span>的积分得到 <span class="math display">\[
-\begin{align}
-I=&amp;\int_0^\infty f(E)\pdv{Q}{E}dE\\
-=&amp;\eval{f(E)Q(E)}_0^\infty-\int_0^\infty \pdv{f}{E}Q(E)
-\end{align}
-\]</span> 对于上式右边的第一项，E等于0的时，<span
-class="math inline">\(Q(E)\)</span>作为变上限积分为0；而E趋于无穷时，费米分布函数<span
-class="math inline">\(f(E)\)</span>为0.
-因此只剩下第二项积分表达式，第二项中包含<span
-class="math inline">\(-\pdv{f}{E}\)</span>
-，由于费米分布是对阶跃函数的小偏离，所以其导数应该是对<span
-class="math inline">\(\delta\)</span> 函数的小偏离。当其导数就是<span
-class="math inline">\(\delta\)</span> 函数时，积分由费米能量<span
-class="math inline">\(E_F\)</span>贡献，而当其有微小偏离时，积分应该由化学势<span
-class="math inline">\(\mu\)</span>附近的能量E贡献<a href="#fn6"
-class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>，因此只需将Q在<span
-class="math inline">\(\mu\)</span>处进行泰勒展开，先展开到二阶项<a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>，同时积分下限更改为<span
-class="math inline">\(-\infty\)</span>： <span class="math display">\[
-\begin{align}
-I=&amp;\int_{-\infty}^\infty
-dE\pqty{Q(\mu)+Q&#39;(\mu)(E-\mu)+Q&#39;&#39;(\mu)(E-\mu)^2/2}\pqty{-\partial_E
-f}\\
-=&amp;Q(\mu)\int_{-\infty}^\infty dE\pqty{-\partial_E
-f}+\int_{-\infty}0^\infty dEQ&#39;(\mu)(E-\mu)\pqty{-\partial_E f}\\
-&amp;+\int_{-\infty}^\infty dEQ&#39;&#39;(\mu)(E-\mu)^2/2
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
--\pdv{f}{E}=&amp;\frac{1}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-x=&amp;\frac{E-\mu}{k_bT}
-\end{align}
-\]</span></p>
-<p>将Q泰勒展开后便是考虑了<span class="math inline">\(\delta\)</span>
-函数的偏离，此时<span
-class="math inline">\(-\pdv{f}{E}\)</span>的积分便如<span
-class="math inline">\(\delta\)</span> 函数一般，上式第二项积分关于<span
-class="math inline">\(E=\mu\)</span>奇对称，而<span
-class="math inline">\(\delta\)</span> 函数关于<span
-class="math inline">\(E=\mu\)</span>对称偶对称，结果应当是0<a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>，因此积分<span
-class="math inline">\(I\)</span>化简为 <span class="math display">\[
-\begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE(E-\mu)^2\pqty{-\partial_E f}\\
-=&amp;Q(\mu))+Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dE\frac{(k_bTx)^2}{(k_bT)(e^{x/2}+e^{-x/2})^2}\\
-=&amp;Q(\mu))+(k_bT)^2Q&#39;&#39;(\mu)/2\int_{-\infty}^\infty
-dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}
-\end{align}
-\]</span></p>
-<p>上式已将积分上下限更改为正负无穷。此处需要用到一个特殊积分 <span
-class="math display">\[
-\begin{equation}
-\int_{-\infty}^\infty dx\frac{x^2}{(e^{x/2}+e^{-x/2})^2}=\frac{\pi^2}{3}
-\end{equation}
-\]</span></p>
-<p>带入积分<span class="math inline">\(I\)</span>为 <span
-class="math display">\[
-\begin{align}
-I=&amp;Q(\mu)+Q&#39;&#39;(\mu)\frac{(\pi k_bT)^2}{6}
-\end{align}
-\]</span></p>
-<ul>
-<li>当计算数密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)dE\)</span></li>
-</ul>
-<p><span class="math display">\[
-\begin{align}
-I=N/V=&amp;Q(\mu)+g&#39;(\mu)\frac{(\pi k_bT)^2}{6}
-\end{align}
-\]</span></p>
-<ul>
-<li>当计算能量密度时，<span class="math inline">\(Q(E_F)=\int_0^{E_F}
-g(E)EdE\)</span> <span class="math display">\[
-\begin{align}
-I=U/V=&amp;Q(\mu)+\frac{(\pi k_bT)^2}{6}\pqty{\mu g(\mu)}&#39;
-\end{align}
-\]</span></li>
-</ul>
-<p>求出来数密度<span class="math inline">\(\rho\)</span>与能量密度<span
-class="math inline">\(U/V\)</span>的表达式中含有有限温度下的化学势<span
-class="math inline">\(\mu(T)\)</span>，这是一个未知数，所以为了求得数密度与能量密度的表达式，我们需要将化学势与温度的关系求出来。为此，要从“<strong>数密度与温度无关</strong>”入手，忽略温度对体积的影响，电子数目不变，因此认为数密度对温度的偏导为0，即：
-<span class="math display">\[
-\begin{align}
-0=&amp;\pdv{Q(\mu)}{T}+g&#39;&#39;(\mu)\pdv{\mu}{T}\frac{(\pi
-k_bT)^2}{6}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T\\
-=&amp;\pdv{\mu}{T}\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}+g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
-\end{align}
-\]</span></p>
-<p>我们取T=0K，原因有二。其一，上式对于任意温度都是成立的；其二，零温时的化学势是远高于室温的，所以有限温度时的化学势对于零温时的化学势应该只有微小的偏移，也就是说
-<span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+\mu(0)&#39;T+\frac{\mu&#39;&#39;(0)}{2}T^2+\order{\epsilon^3}
-\end{align}
-\]</span></p>
-<p>因此数密度的式子变为 <span class="math display">\[
-\begin{align}
-\eval{\pdv{\mu}{T}}_0\pqty{g(\mu)+g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}=&amp;0\\
-\Rightarrow\eval{\pdv{\mu}{T}}_0=&amp;0
-\end{align}
-\]</span></p>
-<p>因此我们还需要对数密度的式子再求一次导得到化学势关于温度的二阶导才能得到不同于0K化学势的<span
-class="math inline">\(\mu(T)\)</span>: <span class="math display">\[
-\begin{align}
-\eval{\pqty{\pdv{\mu}{T}g(\mu)}&#39;}_0+\eval{\pqty{g&#39;&#39;(\mu)\frac{(\pi
-k_bT)^2}{6}}&#39;}_0+\eval{\pqty{g&#39;(\mu)\frac{(\pi k_b)^2}{3}T
-}&#39;}_0=&amp;0\\
-\Rightarrow
-0+g(\mu)\eval{\pdv[2]{\mu}{T}}_0+0+\eval{g&#39;(\mu)}_0\frac{(\pi
-k_b)^2}{3}+0=&amp;0\\
-\Rightarrow
-\eval{\pdv[2]{\mu}{T}}_0=-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{3}
-\end{align}
-\]</span></p>
-<p>带入态密度在零温时的表达式为 <span class="math display">\[
-\begin{align}
-\mu(T)=&amp;\mu(0)+0-\frac{g&#39;(\mu_0)}{g(\mu_0)}\frac{(\pi
-k_b)^2}{6}T^2\\
-  =&amp;\mu(0)-\frac{(\pi k_b)^2}{12\mu(0)}T^2\\
-  =&amp;\mu(0)\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{\mu(0)}}^2}
-\end{align}
-\]</span> 而化学势在零温时即为费米能量<span
-class="math inline">\(E_F\)</span>，因此有 <span class="math display">\[
-\begin{equation}
-\mu(T)=E_F\pqty{1-\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2}
-\end{equation}
-\]</span></p>
-<p>由于数密度不是温度的函数，因此直接取T=0K时的数密度即可: <span
-class="math display">\[
-\begin{equation}
-\rho=\frac{\sqrt{2m^3}}{\pi^2\hbar^3}\frac{2}{3}E_F^{3/2}
-\end{equation}
-\]</span></p>
-<p>对于能量密度，由于温度与费米能量相比是个小量，因此温度是一个小量，将其展开到二阶:
-<span class="math display">\[
-\begin{align}
-U/V=&amp;Q(E_F)+Q&#39;(E_F)(\mu-E_F)+\pqty{E_Fg&#39;(E_F)+g(E_F)}\frac{\pi^2k_b^2}{6}T^2\\
-g(E_F)=&amp;C\sqrt{E_F}\\
-\Rightarrow  U/V=&amp;C\frac{2}{5}E_F^{5/2}-CE_F^{5/2}\frac{\pi^2}{12}\pqty{\frac{k_bT}{E_F}}^2+\pqty{\frac{C}{2}E_F^{1/2}+CE_F^{1/2}}\frac{\pi^2k_b^2}{6}T^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}-g(E)\frac{\pi^2}{12}\pqty{k_bT}^2+g(E)\frac{\pi^2}{4}\pqty{k_bT}^2\\
-=&amp;\frac{2}{5}g(E)E_F^{2}+g(E)\frac{\pi^2}{6}\pqty{k_bT}^2
-\end{align}
-\]</span></p>
-<p>上式第一部分便是零温时电子气的能量密度，第二部分是热扰动带来的能量变化，由此可以求出电子气单位体积比热为
-<span class="math display">\[
-\begin{align}
-C_V=&amp;\pdv{T}U/V=g(E)\frac{\pi^2}{3}k_b^2T
-\end{align}
-\]</span></p>
-<p>还可以得到单个电子的比热为 <span class="math display">\[
-\begin{align}
-C_V/\rho=\frac{C_V}{g(E)E_F2/3}=\frac{\pi^2k_bT}{2E_F}k_b
-\end{align}
-\]</span>
-这是一个与温度相关的量，且室温远低于费米温度，所以电子贡献的热容远小于Drude模型的预言。</p>
-<h3 id="自由电子气的热导率">自由电子气的热导率</h3>
-<p>根据上一节的推导，热导率和比热的关系为<span
-class="math inline">\(\kappa=\frac{\tau}{3}C_V\bar{v}^2\)</span>
-，由于只有费米面附近的电子贡献热容，因此这里的速度应该取费米速度，而不是能均分给出的平均速度，即
-<span class="math display">\[
-\begin{align}
-\kappa=&amp;\frac{\tau}{3}g(E)\frac{\pi^2}{3}k_b^2T\frac{2E_F}{m}\\
-=&amp;\frac{\pi^2}{3}\frac{\rho\tau k_b^2T}{m}
-\end{align}
-\]</span></p>
-<p>相比Durde模型给出的<span
-class="math inline">\(\frac{3}{2}\frac{\rho\tau
-k_b^2T}{m}\)</span>更接近实验值。</p>
-<h3 id="泡利顺磁性">泡利顺磁性</h3>
-<p><strong>暂略，以后再补上</strong></p>
-<h1 id="晶格结构与倒格空间">晶格结构与倒格空间</h1>
-<p>晶格结构是后面能带论以及晶格振动的基础。</p>
-<h2 id="布拉伐格子基元与单胞">布拉伐格子、基元与单胞</h2>
-<p>晶体由<strong>基元</strong>与<strong>布拉伐格子</strong>组成。</p>
-<ul>
-<li><p>布拉伐格子是抽象的数学概念，代表晶格点阵，点阵上任意两点都是等价的。</p></li>
-<li><p>选取相邻格子之间的位移矢量作为基矢（线性独立的），张成格矢空间，与后面的倒格矢空间对应。</p></li>
-<li><p>基矢的长度称为晶格常数</p></li>
-<li><p>单胞/晶胞是晶格的重复单元，但不一定是最小的</p></li>
-<li><p>最小的周期重复单元叫原胞</p></li>
-</ul>
-<h2 id="晶向与晶面">晶向与晶面</h2>
-<ul>
-<li>晶向用[]和&lt;&gt;表示，后者代表一族等价的晶向</li>
-<li>晶面用()和{}表示，后者代表一族等价的晶面</li>
-</ul>
-<h2 id="倒格空间">倒格空间</h2>
-<ul>
-<li><p>布拉格从错误的物理图像出发给出正确的结论：<strong>布拉格定律</strong>
-<span class="math display">\[
-\begin{align}
-2d\sin\theta=n\lambda
-\end{align}
-\]</span> 其中d是原子间距，<span
-class="math inline">\(\theta\)</span>是入射角的余角</p></li>
-<li><p>劳尔将衍射视作弹性散射，给出劳厄方程 <span
-class="math display">\[
-\begin{align}
-\va{R}\cdot (\va{k}-\va{k&#39;})=2n\pi
-\end{align}
-\]</span> 其中<span
-class="math inline">\(\va{R}\)</span>是原子之间的位移矢量，<span
-class="math inline">\(\va{k},\va{k&#39;}\)</span>分别是入射波矢与出射波矢。</p></li>
-<li><p>劳厄方程给出一个定义倒格矢<span
-class="math inline">\(\va{G}\)</span>的动机，类似对偶矢量（但并不一样），我们定义一个倒格空间，其基矢为<span
-class="math inline">\(b_i\)</span>，要求该倒格基矢与基矢<span
-class="math inline">\(a_j\)</span>的关系为 <span class="math display">\[
-\begin{align}
-a_i\cdot b_j=\delta_{ij}2\pi
-\end{align}
-\]</span>
-上面的基矢为了方便，省略矢量符号，后文的矢量也省略了。</p></li>
-</ul>
-<p>倒格矢<span
-class="math inline">\(G\)</span>就生活在倒格空间中，满足波矢只差为倒格矢的散射才能干涉相长。</p>
-<ul>
-<li>从前面对倒格基矢的要求可以得到倒格基矢与基矢的关系为 <span
-class="math display">\[
-\begin{align}
-b_1=&amp;2\pi\frac{a_2\times a_3}{a_1\cdot(a_2\times a_3)}\\
-b_2=&amp;2\pi\frac{a_3\times a_1}{a_2\cdot(a_3\times a_1)}\\
-b_3=&amp;2\pi\frac{a_1\times a_2}{a_3\cdot(a_1\times a_2)}
-\end{align}
-\]</span></li>
-</ul>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li
-id="fn1"><p>至于电子数密度，猜测应该是测出金属重量后计算原子数个数，然后再根据体积计算电子数密度。<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn2"><p>这里是不太严谨的，因为能均分定理是对平均值使用的，这里的E并不在平均值符号里，乘积的平均值也不一定等于平均值的乘积<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>这里取的能量与动量的关系是非相对论的，所以结论只适用于非相对论性气体。对于相对论性的气体，取相对论性的能动量关系E=pc即可<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>物理中的常见操作<a href="#fnref4" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn5"><p>这个费米能量是零温时的化学势，是根据下面数密度与费米能量的关系，测出数密度再计算得到费米能量<a
-href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn6"><p>注意不是费米能量附近，前面定义的费米能量是在零温时候的，即<span
-class="math inline">\(E_F=\mu(0)\)</span>，此时已经是非零温的情况<a
-href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>多退少补~<a href="#fnref7" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>虽然积分区间不关于<span
-class="math inline">\(E=\mu\)</span>对称，但是积分主要贡献就在<span
-class="math inline">\(E=\mu\)</span>周围<a href="#fnref8"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 ]]></content>
@@ -4712,6 +4704,259 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       </tags>
   </entry>
   <entry>
+    <title>测试</title>
+    <url>/2023/02/22/Test/</url>
+    <content><![CDATA[<p>本页面用于检验数学公式渲染是否成功 <span class="math display">\[
+\hat{H}\ket{\psi}=E\ket{\psi}
+\]</span> 上方应该有一个定态薛定谔方程</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Topological-Insulator-Note</title>
+    <url>/2023/09/01/Topological-Insulator-Note/</url>
+    <content><![CDATA[<pre><code>参考： 《A Short Course on Topological Insulators》</code></pre>
+<span id="more"></span>
+<h2 id="chapter-1-ssh-model">Chapter 1 SSH model</h2>
+<h2 id="chapter-2-berry-phase-chern-number">Chapter 2 Berry Phase, Chern
+Number</h2>
+<p><span class="math display">\[
+\require{physics}
+\]</span>
+本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
+<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
+<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
+<h3 id="discrete-case">2.1 Discrete Case</h3>
+<p>我们定义<span
+class="math inline">\(\gamma_{12}\)</span>来代表两个非正交态<span
+class="math inline">\(\ket{\psi_1},\ket{\psi_2}\)</span>之间的相位差：
+<span class="math display">\[
+\begin{align}
+\gamma_{12}\triangleq
+-\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
+\end{align}
+\]</span>
+很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位<span
+class="math inline">\(\alpha\)</span>，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：
+<span class="math display">\[
+\begin{align}
+\ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to
+\arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
+\end{align}
+\]</span></p>
+<h4 id="berry-phase">2.1.1 Berry Phase</h4>
+<p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：
+<span class="math display">\[
+\begin{align}
+\gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
+\end{align}
+\]</span></p>
+<p><strong>Attention!</strong>
+书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>： <span class="math display">\[
+\begin{align}
+\gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
+\end{align}
+\]</span></p>
+<p><strong>Conclusion：Berry相位指的是绕着<span
+class="math inline">\(S\)</span>一圈得到的相位差，其中<span
+class="math inline">\(S\)</span>是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
+<h4 id="berry-flux">2.1.2 Berry Flux</h4>
+<p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下: <span
+class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)}).
+\end{align}
+\]</span>
+Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
+<p><img src="berry-fulx.png" /></p>
+<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差： <span
+class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}.
+\end{align}
+\]</span> 这将是一个规范不变的量，因为<span
+class="math inline">\(\gamma_{(n,m),(n+1,m)}\)</span>产生的多余相位将会被<span
+class="math inline">\(\gamma_{(n+1,m+1),(n,m+1)}\)</span>产生的所抵消（如果我们假设类似<span
+class="math inline">\(\gamma_{(1,2),(2,2)}\)</span>与<span
+class="math inline">\(\gamma_{(1,3),(2,3)}\)</span>产生的多余相位相等的话）</p>
+<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:
+<span class="math display">\[
+\begin{align}
+\gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}.
+\end{align}
+\]</span>
+Berry相位由规范不变的Berry构成，可以看出Berry相位也是规范不变的。</p>
+<p>由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数：
+<span class="math display">\[
+\begin{align}
+\exp[-i\sum\limits_n^{N-1}\sum\limits_m^{M-1}F_{nm}]=e^{-i\gamma_L},
+\end{align}
+\]</span> 因此实际上，Berry相位和Berry流是可以相差<span
+class="math inline">\(2\pi\)</span>的整数倍的。</p>
+<h4 id="chern-number">2.1.3 Chern Number</h4>
+<p>对于二维晶格，如果我们使用周期性边界条件，也就是说，对于一个矩形，对边分别认同，则我们得到的几何将是一个甜甜圈。对于这样的几何，很显然有如下结果：
+<span class="math display">\[
+\begin{align}
+\prod_m^M\prod_n^N e^{-iF_{nm}}=1.
+\end{align}
+\]</span>
+<strong>陈数</strong>在离散情况下的定义即为该甜甜圈表面Berry流之和除以<span
+class="math inline">\(2\pi\)</span>： <span class="math display">\[
+\begin{align}
+Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
+\end{align}
+\]</span>
+Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
+<p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
+<h3 id="continuum-case">2.2 Continuum Case</h3>
+<h4 id="berry-connection">2.2.1 Berry Connection</h4>
+<p>现在考虑连续的情况，<span
+class="math inline">\(\ket{\psi(R)}\)</span>在一条曲线上移动，<span
+class="math inline">\(R\)</span>代表位置，假定态矢量在曲线附近的开区间是光滑的（为此我们不用担心导数的一系列数学上的问题），根据之前的定义，我们考虑态矢量从<span
+class="math inline">\(R\)</span>处走到<span
+class="math inline">\(R+dR\)</span>处所变化的相位： <span
+class="math display">\[
+\begin{align}
+e^{-i\Delta\gamma}&amp;= \ip{\psi(R)}{\psi(R+dR)}\\
+&amp;\approx 1+\mel{\psi(R)}{\nabla}{\psi(R)}dR\\
+\Rightarrow \Delta\gamma&amp;= i\mel{\psi(R)}{\nabla}{\psi(R)}dR.
+\end{align}
+\]</span> 定义<strong>Berry联络</strong>为 <span class="math display">\[
+\begin{align}
+A(R)&amp;\triangleq \lim_{dR\to
+0}\frac{\Delta\gamma}{dR}=i\mel{\psi(R)}{\nabla}{\psi(R)}.
+\end{align}
+\]</span>
+Berry联络的意义是：态矢量在曲线上移动单位距离时，相位对应的变化。</p>
+<p>由于态矢量是归一化的，我们可以得到<span
+class="math inline">\(Re(\mel{\psi}{\nabla}{\psi})=0\)</span>: <span
+class="math display">\[
+\begin{align}
+\nabla\ip{\psi}{\psi}&amp;= \ip{\nabla\psi}{\psi}+\ip{\psi}{\nabla\psi}=
+0,
+\end{align}
+\]</span> <span class="math display">\[
+\begin{align}
+\Rightarrow Re(\ip{\psi}{\nabla\psi})&amp;= 0.
+\end{align}
+\]</span> 因此Berry联络又可以写为 <span class="math display">\[
+\begin{align}
+A(R)=-Im(\ip{\psi(R)}{\nabla\psi(R)}).
+\end{align}
+\]</span> 很容易验证，Berry联络是不满足局域规范变换的： <span
+class="math display">\[
+\begin{align}
+\ket{\psi(R)}\to &amp;e^{i\alpha(R)},\\
+A(R)\to &amp; A(R)-\nabla\alpha(R).
+\end{align}
+\]</span>
+既然我们得到了相位关于位置的变化关系，我们可以很容易写出Berry相位：
+<span class="math display">\[
+\begin{align}
+\gamma(\mathscr{l})=-\arg\exp[-i\oint_\mathscr{l} A\cdot dR].
+\end{align}
+\]</span>
+我们将会证明它在连续情况下也是规范不变的，即便它看起来由非规范不变的Berry联络组成。</p>
+<h4 id="berry-curvature">2.2.2 Berry Curvature</h4>
+<p>与离散情况的思路一样，我们希望将Berry相位用规范不变的量来表示，以此证明它是规范不变的。将连续情况与离散情况对比，Berry相位为：
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}F_{nm})\\
+&amp;= \exp(-i\oint_\mathscr{l}A\cdot dR).
+\end{align}
+\]</span>
+一个是曲面的求和，一个是边界的积分，这让我们联想到斯托克斯定理，实际上，对离散的情况取极限，我们可以得到一个面积分。</p>
+<p>我们将二维晶格的晶格常数设为<span class="math inline">\(\Delta
+x,\Delta y\)</span>,当晶格常数趋于0的时候得到连续的情况。Berry流为：
+<span class="math display">\[
+\begin{align}
+F_{nm}&amp;=
+\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}\
+\end{align}
+\]</span>
+从上一个小节我们知道两个态矢量之间的相位差可以表示为Berry联络，因此Berry流可以写为:
+<span class="math display">\[
+\begin{align}
+F_{nm}= &amp;A_x(x_n+\frac{\Delta x}{2},y_m)\Delta x+A_y(x_n+\Delta
+x,y_m+\frac{\Delta y}{2})\\
++&amp;A_x(x_n+\frac{\Delta x}{2},y_m+\Delta y)(-\Delta
+x)+A_y(x_n,y_m+\frac{\Delta y}{2})(-\Delta y).
+\end{align}
+\]</span> 取<span class="math inline">\(\Delta x,\Delta y\to
+0\)</span>时： <span class="math display">\[
+\begin{align}
+F_{nm}=[\partial_xA_y(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})-\partial_yA_x(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
+y}{2})]\Delta x\Delta y.
+\end{align}
+\]</span> 定义<strong>Berry曲率</strong>为： <span
+class="math display">\[
+\begin{align}
+B=\lim_{\Delta x,\Delta y\to0}\frac{F_{nm}}{\Delta x\Delta y}.
+\end{align}
+\]</span> 将格点中间的位置记为<span
+class="math inline">\(R_{nm}\)</span>，则Berry曲率为: <span
+class="math display">\[
+\begin{align}
+B=\partial_xA_y(R_{nm})-\partial_yA_x(R_{nm}).
+\end{align}
+\]</span>
+回忆一下规范变换下Berry联络多出来的项，很显然Berry是规范不变的，因为多出来的项会被减号消去。回到正题，在晶格常数趋于零的极限下，Berry相位的表示可以写为:
+<span class="math display">\[
+\begin{align}
+e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}B(R_{nm})\Delta x\Delta y)\\
+&amp;= \exp(-i\int_\mathscr{S} B(x,y)dxdy).
+\end{align}
+\]</span> 其中<span class="math inline">\(\mathscr{S}\)</span>是以<span
+class="math inline">\(\mathscr{l}\)</span>为边界的曲面</p>
+<h4 id="chern-number-1">2.2.3 Chern Number</h4>
+<p>在连续的情况下，陈数继承离散时的定义，取<span
+class="math inline">\(\Delta x,\Delta y\to
+0\)</span>即可，书本对于陈数的定义忽然多了一个负号(跟闵氏度规一样，可以有两种等价的定义，相差一个负号):
+<span class="math display">\[
+\begin{align}
+Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
+\end{align}
+\]</span>
+对于二维晶格材料，能谱上存在能带，当存在能隙的时候，能带之间清晰地被区分开，他们的态函数表示为<span
+class="math inline">\(\ket{u_n(k)}\)</span>,我们可以不带任何歧义地定义第n个能带的Berry联络：
+<span class="math display">\[
+\begin{align}
+A^{(n)}_j(k)=i\mel{u_n(k)}{\partial_{k_j}}{u_n(k)},
+\end{align}
+\]</span> 以及第n个能带的陈数: <span class="math display">\[
+\begin{align}
+Q^{(n)}=-\frac{1}{2\pi}\int_{BZ}dk_xdk_y(\pdv{A^{(n)}}{k_x}-\pdv{A^{(n)}}{k_y}).
+\end{align}
+\]</span>
+当系统绝热变化的时候，也就是说哈密顿量的改变不影响能隙的存在，此时Berry曲率连续变化，但是陈数是一个整数，所以陈数并不会改变<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>，因此我们说陈数是二维晶格模型的拓扑不变量，就像卷绕数winding
+numebr是一维SSH模型的拓扑不变量一样。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>其实我也不知道这个式子是如何得到的<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>对于色散关系，动量空间当然满足周期性边界条件<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>物理</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>condensed matter theory</tag>
+        <tag>Topological-Insulator</tag>
+        <tag>physics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>热统复习（热力学部分）</title>
     <url>/2023/03/08/Thermodynamic-Review-Note/</url>
     <content><![CDATA[<pre><code>参考书目：
@@ -5213,251 +5458,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 ]]></content>
       <tags>
         <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Topological-Insulator-Note</title>
-    <url>/2023/09/01/Topological-Insulator-Note/</url>
-    <content><![CDATA[<pre><code>参考： 《A Short Course on Topological Insulators》</code></pre>
-<span id="more"></span>
-<h2 id="chapter-1-ssh-model">Chapter 1 SSH model</h2>
-<h2 id="chapter-2-berry-phase-chern-number">Chapter 2 Berry Phase, Chern
-Number</h2>
-<p><span class="math display">\[
-\require{physics}
-\]</span>
-本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
-<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
-<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
-<h3 id="discrete-case">2.1 Discrete Case</h3>
-<p>我们定义<span
-class="math inline">\(\gamma_{12}\)</span>来代表两个非正交态<span
-class="math inline">\(\ket{\psi_1},\ket{\psi_2}\)</span>之间的相位差：
-<span class="math display">\[
-\begin{align}
-\gamma_{12}\triangleq
--\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
-\end{align}
-\]</span>
-很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位<span
-class="math inline">\(\alpha\)</span>，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：
-<span class="math display">\[
-\begin{align}
-\ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to
-\arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
-\end{align}
-\]</span></p>
-<h4 id="berry-phase">2.1.1 Berry Phase</h4>
-<p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：
-<span class="math display">\[
-\begin{align}
-\gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
-\end{align}
-\]</span></p>
-<p><strong>Attention!</strong>
-书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>： <span class="math display">\[
-\begin{align}
-\gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
-\end{align}
-\]</span></p>
-<p><strong>Conclusion：Berry相位指的是绕着<span
-class="math inline">\(S\)</span>一圈得到的相位差，其中<span
-class="math inline">\(S\)</span>是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
-<h4 id="berry-flux">2.1.2 Berry Flux</h4>
-<p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下: <span
-class="math display">\[
-\begin{align}
-\gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)}).
-\end{align}
-\]</span>
-Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
-<p><img src="berry-fulx.png" /></p>
-<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差： <span
-class="math display">\[
-\begin{align}
-F_{nm}&amp;=
-\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}.
-\end{align}
-\]</span> 这将是一个规范不变的量，因为<span
-class="math inline">\(\gamma_{(n,m),(n+1,m)}\)</span>产生的多余相位将会被<span
-class="math inline">\(\gamma_{(n+1,m+1),(n,m+1)}\)</span>产生的所抵消（如果我们假设类似<span
-class="math inline">\(\gamma_{(1,2),(2,2)}\)</span>与<span
-class="math inline">\(\gamma_{(1,3),(2,3)}\)</span>产生的多余相位相等的话）</p>
-<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:
-<span class="math display">\[
-\begin{align}
-\gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}.
-\end{align}
-\]</span>
-Berry相位由规范不变的Berry构成，可以看出Berry相位也是规范不变的。</p>
-<p>由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数：
-<span class="math display">\[
-\begin{align}
-\exp[-i\sum\limits_n^{N-1}\sum\limits_m^{M-1}F_{nm}]=e^{-i\gamma_L},
-\end{align}
-\]</span> 因此实际上，Berry相位和Berry流是可以相差<span
-class="math inline">\(2\pi\)</span>的整数倍的。</p>
-<h4 id="chern-number">2.1.3 Chern Number</h4>
-<p>对于二维晶格，如果我们使用周期性边界条件，也就是说，对于一个矩形，对边分别认同，则我们得到的几何将是一个甜甜圈。对于这样的几何，很显然有如下结果：
-<span class="math display">\[
-\begin{align}
-\prod_m^M\prod_n^N e^{-iF_{nm}}=1.
-\end{align}
-\]</span>
-<strong>陈数</strong>在离散情况下的定义即为该甜甜圈表面Berry流之和除以<span
-class="math inline">\(2\pi\)</span>： <span class="math display">\[
-\begin{align}
-Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
-\end{align}
-\]</span>
-Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
-<p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
-<h3 id="continuum-case">2.2 Continuum Case</h3>
-<h4 id="berry-connection">2.2.1 Berry Connection</h4>
-<p>现在考虑连续的情况，<span
-class="math inline">\(\ket{\psi(R)}\)</span>在一条曲线上移动，<span
-class="math inline">\(R\)</span>代表位置，假定态矢量在曲线附近的开区间是光滑的（为此我们不用担心导数的一系列数学上的问题），根据之前的定义，我们考虑态矢量从<span
-class="math inline">\(R\)</span>处走到<span
-class="math inline">\(R+dR\)</span>处所变化的相位： <span
-class="math display">\[
-\begin{align}
-e^{-i\Delta\gamma}&amp;= \ip{\psi(R)}{\psi(R+dR)}\\
-&amp;\approx 1+\mel{\psi(R)}{\nabla}{\psi(R)}dR\\
-\Rightarrow \Delta\gamma&amp;= i\mel{\psi(R)}{\nabla}{\psi(R)}dR.
-\end{align}
-\]</span> 定义<strong>Berry联络</strong>为 <span class="math display">\[
-\begin{align}
-A(R)&amp;\triangleq \lim_{dR\to
-0}\frac{\Delta\gamma}{dR}=i\mel{\psi(R)}{\nabla}{\psi(R)}.
-\end{align}
-\]</span>
-Berry联络的意义是：态矢量在曲线上移动单位距离时，相位对应的变化。</p>
-<p>由于态矢量是归一化的，我们可以得到<span
-class="math inline">\(Re(\mel{\psi}{\nabla}{\psi})=0\)</span>: <span
-class="math display">\[
-\begin{align}
-\nabla\ip{\psi}{\psi}&amp;= \ip{\nabla\psi}{\psi}+\ip{\psi}{\nabla\psi}=
-0,
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-\Rightarrow Re(\ip{\psi}{\nabla\psi})&amp;= 0.
-\end{align}
-\]</span> 因此Berry联络又可以写为 <span class="math display">\[
-\begin{align}
-A(R)=-Im(\ip{\psi(R)}{\nabla\psi(R)}).
-\end{align}
-\]</span> 很容易验证，Berry联络是不满足局域规范变换的： <span
-class="math display">\[
-\begin{align}
-\ket{\psi(R)}\to &amp;e^{i\alpha(R)},\\
-A(R)\to &amp; A(R)-\nabla\alpha(R).
-\end{align}
-\]</span>
-既然我们得到了相位关于位置的变化关系，我们可以很容易写出Berry相位：
-<span class="math display">\[
-\begin{align}
-\gamma(\mathscr{l})=-\arg\exp[-i\oint_\mathscr{l} A\cdot dR].
-\end{align}
-\]</span>
-我们将会证明它在连续情况下也是规范不变的，即便它看起来由非规范不变的Berry联络组成。</p>
-<h4 id="berry-curvature">2.2.2 Berry Curvature</h4>
-<p>与离散情况的思路一样，我们希望将Berry相位用规范不变的量来表示，以此证明它是规范不变的。将连续情况与离散情况对比，Berry相位为：
-<span class="math display">\[
-\begin{align}
-e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}F_{nm})\\
-&amp;= \exp(-i\oint_\mathscr{l}A\cdot dR).
-\end{align}
-\]</span>
-一个是曲面的求和，一个是边界的积分，这让我们联想到斯托克斯定理，实际上，对离散的情况取极限，我们可以得到一个面积分。</p>
-<p>我们将二维晶格的晶格常数设为<span class="math inline">\(\Delta
-x,\Delta y\)</span>,当晶格常数趋于0的时候得到连续的情况。Berry流为：
-<span class="math display">\[
-\begin{align}
-F_{nm}&amp;=
-\gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}\
-\end{align}
-\]</span>
-从上一个小节我们知道两个态矢量之间的相位差可以表示为Berry联络，因此Berry流可以写为:
-<span class="math display">\[
-\begin{align}
-F_{nm}= &amp;A_x(x_n+\frac{\Delta x}{2},y_m)\Delta x+A_y(x_n+\Delta
-x,y_m+\frac{\Delta y}{2})\\
-+&amp;A_x(x_n+\frac{\Delta x}{2},y_m+\Delta y)(-\Delta
-x)+A_y(x_n,y_m+\frac{\Delta y}{2})(-\Delta y).
-\end{align}
-\]</span> 取<span class="math inline">\(\Delta x,\Delta y\to
-0\)</span>时： <span class="math display">\[
-\begin{align}
-F_{nm}=[\partial_xA_y(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
-y}{2})-\partial_yA_x(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta
-y}{2})]\Delta x\Delta y.
-\end{align}
-\]</span> 定义<strong>Berry曲率</strong>为： <span
-class="math display">\[
-\begin{align}
-B=\lim_{\Delta x,\Delta y\to0}\frac{F_{nm}}{\Delta x\Delta y}.
-\end{align}
-\]</span> 将格点中间的位置记为<span
-class="math inline">\(R_{nm}\)</span>，则Berry曲率为: <span
-class="math display">\[
-\begin{align}
-B=\partial_xA_y(R_{nm})-\partial_yA_x(R_{nm}).
-\end{align}
-\]</span>
-回忆一下规范变换下Berry联络多出来的项，很显然Berry是规范不变的，因为多出来的项会被减号消去。回到正题，在晶格常数趋于零的极限下，Berry相位的表示可以写为:
-<span class="math display">\[
-\begin{align}
-e^{-i\gamma_L}&amp;= \exp(-i\sum\limits_{nm}B(R_{nm})\Delta x\Delta y)\\
-&amp;= \exp(-i\int_\mathscr{S} B(x,y)dxdy).
-\end{align}
-\]</span> 其中<span class="math inline">\(\mathscr{S}\)</span>是以<span
-class="math inline">\(\mathscr{l}\)</span>为边界的曲面</p>
-<h4 id="chern-number-1">2.2.3 Chern Number</h4>
-<p>在连续的情况下，陈数继承离散时的定义，取<span
-class="math inline">\(\Delta x,\Delta y\to
-0\)</span>即可，书本对于陈数的定义忽然多了一个负号(跟闵氏度规一样，可以有两种等价的定义，相差一个负号):
-<span class="math display">\[
-\begin{align}
-Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
-\end{align}
-\]</span>
-对于二维晶格材料，能谱上存在能带，当存在能隙的时候，能带之间清晰地被区分开，他们的态函数表示为<span
-class="math inline">\(\ket{u_n(k)}\)</span>,我们可以不带任何歧义地定义第n个能带的Berry联络：
-<span class="math display">\[
-\begin{align}
-A^{(n)}_j(k)=i\mel{u_n(k)}{\partial_{k_j}}{u_n(k)},
-\end{align}
-\]</span> 以及第n个能带的陈数: <span class="math display">\[
-\begin{align}
-Q^{(n)}=-\frac{1}{2\pi}\int_{BZ}dk_xdk_y(\pdv{A^{(n)}}{k_x}-\pdv{A^{(n)}}{k_y}).
-\end{align}
-\]</span>
-当系统绝热变化的时候，也就是说哈密顿量的改变不影响能隙的存在，此时Berry曲率连续变化，但是陈数是一个整数，所以陈数并不会改变<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>，因此我们说陈数是二维晶格模型的拓扑不变量，就像卷绕数winding
-numebr是一维SSH模型的拓扑不变量一样。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>其实我也不知道这个式子是如何得到的<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>对于色散关系，动量空间当然满足周期性边界条件<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>物理</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>condensed matter theory</tag>
-        <tag>Topological-Insulator</tag>
-        <tag>physics</tag>
       </tags>
   </entry>
   <entry>
