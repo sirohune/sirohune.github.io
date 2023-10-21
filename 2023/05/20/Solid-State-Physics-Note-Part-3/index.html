@@ -23,22 +23,21 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
+    <meta name="description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="固体物理学习笔记（晶格振动）">
 <meta property="og:url" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/index.html">
 <meta property="og:site_name" content="はくのBlog">
-<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
+<meta property="og:description" content="参考资料： 《固体物理基础》——阎守胜 课程PPT——俞宏毅 回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——晶格振动">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/%E4%B8%80%E7%BB%B4%E5%8D%95%E5%8E%9F%E5%AD%90%E8%89%B2%E6%95%A3%E5%85%B3%E7%B3%BB.png">
-<meta property="og:image" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/%E4%B8%80%E7%BB%B4%E5%8F%8C%E5%8E%9F%E5%AD%90%E9%93%BE.png">
 <meta property="og:image" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/%E4%B8%80%E7%BB%B4%E5%8F%8C%E5%8E%9F%E5%AD%90%E8%89%B2%E6%95%A3%E5%85%B3%E7%B3%BB.png">
 <meta property="og:image" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/%E9%AB%98%E7%BB%B4%E6%8C%AF%E5%8A%A8%E4%BE%8B%E9%A2%98.png">
 <meta property="article:published_time" content="2023-05-20T01:35:25.000Z">
 <meta property="article:modified_time" content="2023-06-24T00:50:01.817Z">
 <meta property="article:author" content="白舟尘">
-<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="物理">
+<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="固体物理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://sirohune.site/2023/05/20/Solid-State-Physics-Note-Part-3/%E4%B8%80%E7%BB%B4%E5%8D%95%E5%8E%9F%E5%AD%90%E8%89%B2%E6%95%A3%E5%85%B3%E7%B3%BB.png">
@@ -346,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>23 分钟</span>
+      <span>25 分钟</span>
     </span>
 </div>
 
@@ -359,346 +358,561 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
         <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅
-</code></pre><p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
+课程PPT——俞宏毅</code></pre>
+<p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
 <span id="more"></span>
-<p>对于体系的哈密顿量</p>
-<script type="math/tex; mode=display">
+<p>对于体系的哈密顿量 <span class="math display">\[
 \require{physics}
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
- &+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
-\end{align}</script><p>原本$R<em>n$代表离子实的位置，但由于我们上一章的近似，我们通常认为$R_n$是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置$R$，$V</em>{mn}(R)$是所有离子实之间的相互作用，$V<em>{en}(r,R)$是所有离子实与所有电子之间相互作用，$V</em>{en}(R_n)$代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+\frac{1}{2}\sum_{n,m}\frac{(Ze)^2}{\abs{R_n-R_m}}-\sum_{i,n}\frac{1}{4\pi\epsilon}\frac{Ze^2}{\abs{r_i-R_n}}
+\end{align}
+\]</span> 原本<span
+class="math inline">\(R_n\)</span>代表离子实的位置，但由于我们上一章的近似，我们通常认为<span
+class="math inline">\(R_n\)</span>是晶格的平衡位置，不随时间改变，因此为了表征此时离子实在运动，我们取另外一个符号来代表所有离子实的实时位置<span
+class="math inline">\(R\)</span>，<span
+class="math inline">\(V_{mn}(R)\)</span>是所有离子实之间的相互作用，<span
+class="math inline">\(V_{en}(r,R)\)</span>是所有离子实与所有电子之间相互作用，<span
+class="math inline">\(V_{en}(R_n)\)</span>代表所有离子实在平衡位置时与所有电子的相互作用，这一项是我们上一章用到的，根据这个记号，哈密顿量写为
+<span class="math display">\[
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n \frac{\hbar^2}{2M}\nabla_n^2\\
- &+V_{mn}(R)+V_{en}(r,R)
-\end{align}</script><p>为了使用上一章的结论，我们将哈密顿量改写为</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2\\
+&amp;+V_{mn}(R)+V_{en}(r,R)
+\end{align}
+\]</span> 为了使用上一章的结论，我们将哈密顿量改写为 <span
+class="math display">\[
 \begin{align}
- H=&-\sum_i \frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
- &-\sum_n \frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
- =&H_e+H_n
-\end{align}</script><p>很显然$H_e$的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解$H_n$的本征函数即可。将原子总波函数写为$\Psi(r,R)=\psi(r,R_n)\chi(R)$，带入薛定谔方程得</p>
-<script type="math/tex; mode=display">
+H=&amp;-\sum_i
+\frac{\hbar^2}{2m}\nabla^2_i+\frac{1}{2}\sum_{i,j}\frac{1}{4\pi\epsilon}\frac{e^2}{\abs{r_i-r_j}}+V_{en}(r,R_n)\\
+&amp;-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+V_{en}(r,R)-V_{en}(r,R_n)\\
+=&amp;H_e+H_n
+\end{align}
+\]</span> 很显然<span
+class="math inline">\(H_e\)</span>的本征函数我们上一章已经解过，即布洛赫电子，因此我们只需要解<span
+class="math inline">\(H_n\)</span>的本征函数即可。将原子总波函数写为<span
+class="math inline">\(\Psi(r,R)=\psi(r,R_n)\chi(R)\)</span>，带入薛定谔方程得
+<span class="math display">\[
 \begin{align}
-(H_e+H_n)\psi(r,R_n)\chi(R)=&E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
- =&E\psi(r,R_n)\chi(R)
-\end{align}</script><p>其中$E_e$为布洛赫电子的能量,与总能量关系为$E=E_e+E_n$，上述方程左乘$\psi^*(r,R_n)$并对电子位矢积分得</p>
-<script type="math/tex; mode=display">
+(H_e+H_n)\psi(r,R_n)\chi(R)=&amp;E_e\psi(r,R_n)\chi(R)+H_n\psi(r,R_n)\chi(R)\\
+=&amp;E\psi(r,R_n)\chi(R)
+\end{align}
+\]</span> 其中<span
+class="math inline">\(E_e\)</span>为布洛赫电子的能量,与总能量关系为<span
+class="math inline">\(E=E_e+E_n\)</span>，上述方程左乘<span
+class="math inline">\(\psi^*(r,R_n)\)</span>并对电子位矢积分得 <span
+class="math display">\[
 \begin{align}
- E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&E\chi(R)\\
- \int\psi^*H_n\psi dr \chi(R)=&E_n\chi(R)\\
-\end{align}</script><p>带入$H_n$表达式有</p>
-<script type="math/tex; mode=display">
+E_e\chi(R)+\int \psi^*H_n\psi dr \chi(R)=&amp;E\chi(R)\\
+\int\psi^*H_n\psi dr \chi(R)=&amp;E_n\chi(R)\\
+\end{align}
+\]</span> 带入<span class="math inline">\(H_n\)</span>表达式有 <span
+class="math display">\[
 \begin{align}
- E_n\chi(R)=&\bqty{-\sum_n \frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int \psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
- =&[T_n+V(R)]\chi(R)
-\end{align}</script><p>到目前为止我们还未用到近似，上面的总势能$V(R)$具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。<br>但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
-<h1 id="晶格振动的经典理论"><a href="#晶格振动的经典理论" class="headerlink" title="晶格振动的经典理论"></a>晶格振动的经典理论</h1><h2 id="简谐近似"><a href="#简谐近似" class="headerlink" title="简谐近似"></a>简谐近似</h2><p>根据简谐近似，我们将第n个离子实的坐标写为</p>
-<script type="math/tex; mode=display">
+E_n\chi(R)=&amp;\bqty{-\sum_n
+\frac{\hbar^2}{2M}\nabla_n^2+V_{mn}(R)+\int
+\psi^*[V_{en}(r,R)-V_{en}(r,R_n)]\psi \dd r}\chi(R)\\
+=&amp;[T_n+V(R)]\chi(R)
+\end{align}
+\]</span></p>
+<p>到目前为止我们还未用到近似，上面的总势能<span
+class="math inline">\(V(R)\)</span>具有复杂的表达式，包含所有离子实之间的相互作用以及所有离子实与电子之间的相互作用，难以直接求解。
+但是因为离子实本身相对电子质量很大，其对平衡位置的瞬时偏离很小，根据这一事实对势能进行小量展开，保留至二阶项，这种近似称为<strong>简谐近似</strong>。更高阶的项称为非简谐项。</p>
+<h1 id="晶格振动的经典理论">晶格振动的经典理论</h1>
+<h2 id="简谐近似">简谐近似</h2>
+<p>根据简谐近似，我们将第n个离子实的坐标写为 <span
+class="math display">\[
 \begin{align}
- R(n)=R_n+u_n
-\end{align}</script><p>$u_n$表示第n个粒子实对其平衡位置的偏离，令$\phi(\Delta R)$为两个离子实之间的势能</p>
-<script type="math/tex; mode=display">
+R(n)=R_n+u_n
+\end{align}
+\]</span> <span
+class="math inline">\(u_n\)</span>表示第n个粒子实对其平衡位置的偏离，令<span
+class="math inline">\(\phi(\Delta R)\)</span>为两个离子实之间的势能
+<span class="math display">\[
 \begin{align}
- V(R)=&\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
- \approx & \frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
- &+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
-\end{align}</script><p>理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的$\phi’=0$，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为</p>
-<script type="math/tex; mode=display">
+V(R)=&amp;\frac{1}{2}\sum\limits_{m,n}\phi\pqty{R(n)-R(m)}\\
+\approx &amp;
+\frac{1}{2}\sum\limits_{m,n}[\phi(R_n-R_m)+\nabla\phi(R_n-R_m)(u_n-u_m)\\
+&amp;+\frac{1}{2}\nabla^2\phi(R_n-R_m)(u_n-u_m)^2+\order{u^3}]
+\end{align}
+\]</span>
+理论力学的小振动理论告诉我们，在平衡位置的扰动，势能一阶导数为0，因此上面的<span
+class="math inline">\(\phi&#39;=0\)</span>，第一项对所有晶格求和，是一个不随时间变化的常数，将其舍去，保留到微扰的二阶，势能写为
+<span class="math display">\[
 \begin{align}
- V(R)&\approx \frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
-\end{align}</script><p>这边是简谐近似的势能项。</p>
-<h2 id="一维振动"><a href="#一维振动" class="headerlink" title="一维振动"></a>一维振动</h2><h3 id="单原子链"><a href="#单原子链" class="headerlink" title="单原子链"></a>单原子链</h3><p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为</p>
-<script type="math/tex; mode=display">
+V(R)&amp;\approx
+\frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
+\end{align}
+\]</span> 这边是简谐近似的势能项。</p>
+<h2 id="一维振动">一维振动</h2>
+<h3 id="单原子链">单原子链</h3>
+<p>简单起见，考虑一维的单原子链，且仅考虑<strong>相邻原子</strong>之间的相互作用，则势能项写为
+<span class="math display">\[
 \begin{align}
- V(R)\approx& \frac{1}{2}\sum\limits_n \phi''_{xx}(u_n-u_{n+1})^2
-\end{align}</script><p>记$\beta=\phi’’_{xx}$，根据经典的牛顿力学，第n个原子的运动方程为</p>
-<script type="math/tex; mode=display">
+V(R)\approx&amp; \frac{1}{2}\sum\limits_n
+\phi&#39;&#39;_{xx}(u_n-u_{n+1})^2
+\end{align}
+\]</span> 记<span
+class="math inline">\(\beta=\phi&#39;&#39;_{xx}\)</span>，根据经典的牛顿力学，第n个原子的运动方程为
+<span class="math display">\[
 \begin{align}
- M\dv[2]{t}u_n=&-\pdv{V}{u_n}\\
- =&\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
- =&\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
-\end{align}</script><p>如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理</p>
-<script type="math/tex; mode=display">
+M\dv[2]{t}u_n=&amp;-\pdv{V}{u_n}\\
+=&amp;\sum\limits_m \beta (u_m-u_{m+1})(\delta_{mn}-\delta_{n,m+1})\\
+=&amp;\beta\pqty{2u_n-u_{n+1}-u_{n-1}}
+\end{align}
+\]</span>
+如此，我们便得到了一维单原子链的运动方程。很显然该模型是一个具有周期的模型，因此解应当满足布洛赫定理
+<span class="math display">\[
 \begin{align}
- u(x+R_n)=e^{iqR_n}u(x)
-\end{align}</script><p>因此$u(na,t)=e^{iqna}u(0,t)$，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
-<p>把解带进去我们可以得到一维单原子链的解与色散关系</p>
-<script type="math/tex; mode=display">
+u(x+R_n)=e^{iqR_n}u(x)
+\end{align}
+\]</span> 因此<span
+class="math inline">\(u(na,t)=e^{iqna}u(0,t)\)</span>，a是原子之间的间距，q是晶格振动的波矢，与电子的波矢k相区分。</p>
+<p>把解带进去我们可以得到一维单原子链的解与色散关系 <span
+class="math display">\[
 \begin{align}
- Me^{iqna}\dv[2]{t}u_0=&\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
- M\dv[2]{t}u_0=&\beta\pqty{2-2\cos{qa}}u_0\\
-\Rightarrow u_0=&Ae^{-i\omega t}
-\end{align}</script><p>其中</p>
-<script type="math/tex; mode=display">
+Me^{iqna}\dv[2]{t}u_0=&amp;\beta\pqty{2e^{iqna}-e^{iq(n-1)a}-e^{iq(n+1)a}}u_0\\
+M\dv[2]{t}u_0=&amp;\beta\pqty{2-2\cos{qa}}u_0\\
+\Rightarrow u_0=&amp;Ae^{-i\omega t}
+\end{align}
+\]</span> 其中 <span class="math display">\[
 \begin{align}
- \omega=&\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
- =&2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
-\end{align}</script><p><img src="一维单原子色散关系.png" alt="一维单原子色散关系(图源PPT)"></p>
-<p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢$q$给出不同波长$2\pi/q$的简正模式，这种波称为<strong>格波</strong>。</p>
-<p>在长波极限下$qa\ll 1$，色散关系变为</p>
-<script type="math/tex; mode=display">
+\omega=&amp;\sqrt{\frac{\beta(2-2\cos{qa})}{M}}\\
+=&amp;2\sqrt{\frac{\beta}{M}}\abs{\sin(qa/2)}
+\end{align}
+\]</span></p>
+<figure>
+<img src="一维单原子色散关系.png" alt="一维单原子色散关系(图源PPT)" />
+<figcaption aria-hidden="true">一维单原子色散关系(图源PPT)</figcaption>
+</figure>
+<p>这种解意味着该一维原胞中所有原子振动的振幅是一样的，只有相位的不同；不同的波矢<span
+class="math inline">\(q\)</span>给出不同波长<span
+class="math inline">\(2\pi/q\)</span>的简正模式，这种波称为<strong>格波</strong>。</p>
+<p>在长波极限下<span class="math inline">\(qa\ll
+1\)</span>，色散关系变为 <span class="math display">\[
 \begin{align}
- \omega&\approx a\sqrt{\frac{\beta}{M}}\abs{q}
-\end{align}</script><p>与一维连续弹性介质中声波的色散关系相同，系数$a\sqrt{\frac{\beta}{M}}$为声速。这样的振动模式称为声学膜，这一支色散关系称为声学支。与之对应的还有光学支，光学支在一维单原子模型中没有出现，但是在一维双原子链中便会出现。</p>
-<h3 id="双原子链"><a href="#双原子链" class="headerlink" title="双原子链"></a>双原子链</h3><p>现在讨论一维双原子链，不同原子间隔排列，彼此之间相距a<br><img src="一维双原子链.png" alt="图源PPT"></p>
-<p>假设红色的原子质量为m，蓝色的为M，则很容易可以写出运动方程:</p>
-<script type="math/tex; mode=display">
+\omega&amp;\approx a\sqrt{\frac{\beta}{M}}\abs{q}
+\end{align}
+\]</span> 与一维连续弹性介质中声波的色散关系相同，系数<span
+class="math inline">\(a\sqrt{\frac{\beta}{M}}\)</span>为声速。这样的振动模式称为声学膜，这一支色散关系称为声学支。与之对应的还有光学支，光学支在一维单原子模型中没有出现，但是在一维双原子链中便会出现。</p>
+<h3 id="双原子链">双原子链</h3>
+<p>现在讨论一维双原子链，不同原子间隔排列，彼此之间相距a <img
+src="一维双原子链.png" alt="图源PPT" /></p>
+<p>假设红色的原子质量为m，蓝色的为M，则很容易可以写出运动方程: <span
+class="math display">\[
 \begin{align}
- m\dv[2]{t}u_{2n}&= -\beta(2u_{2n}-u_{2n-1}-u_{2n+1})\\
- M\dv[2]{t}u_{2n+1}&= -\beta(2u_{2n+1}-u_{2n}-u_{2n+2})
-\end{align}</script><p>带入布洛赫解:</p>
-<script type="math/tex; mode=display">
+m\dv[2]{t}u_{2n}&amp;= -\beta(2u_{2n}-u_{2n-1}-u_{2n+1})\\
+M\dv[2]{t}u_{2n+1}&amp;= -\beta(2u_{2n+1}-u_{2n}-u_{2n+2})
+\end{align}
+\]</span> 带入布洛赫解: <span class="math display">\[
 \begin{align}
- \begin{cases}
- u_{2n}=Ae^{i(q2na-\omega t)}\\
- u_{2n+1}=Be^{i(q(2n+1)a-\omega t)}
- \end{cases}
-\end{align}</script><p>得到:</p>
-<script type="math/tex; mode=display">
+\begin{cases}
+u_{2n}=Ae^{i(q2na-\omega t)}\\
+u_{2n+1}=Be^{i(q(2n+1)a-\omega t)}
+\end{cases}
+\end{align}
+\]</span> 得到: <span class="math display">\[
 \begin{align}
- -m\omega^2A&= -\beta(2A-Be^{-iqa}-Be^{iqa})\\
- -M\omega^2B&= -\beta(2B-Ae^{-iqa}-Ae^{iqa})
-\end{align}</script><p>将其化简得到如下方程</p>
-<script type="math/tex; mode=display">
+-m\omega^2A&amp;= -\beta(2A-Be^{-iqa}-Be^{iqa})\\
+-M\omega^2B&amp;= -\beta(2B-Ae^{-iqa}-Ae^{iqa})
+\end{align}
+\]</span> 将其化简得到如下方程 <span class="math display">\[
 \begin{align}
- (m\omega^2-2\beta)A+2B\beta\cos(qa)&= 0\\
- 2A\beta\cos(qa)+(M\omega^2-2\beta)B&= 0
-\end{align}</script><p>显然要是上述方程组有非平庸解，系数需满足</p>
-<script type="math/tex; mode=display">
+(m\omega^2-2\beta)A+2B\beta\cos(qa)&amp;= 0\\
+2A\beta\cos(qa)+(M\omega^2-2\beta)B&amp;= 0
+\end{align}
+\]</span> 显然要是上述方程组有非平庸解，系数需满足 <span
+class="math display">\[
 \begin{align}
- (m\omega^2-2\beta)(M\omega^2-2\beta)-4\beta^2\cos^2(qa)&= 0\\
- Mm\omega^4-2(M+m)\beta\omega^2+4\beta^2(1-\cos^2(qa))&= 0\\
- Mm\omega^4-2(M+m)\beta\omega^2+4\beta^2\sin^2(qa)&= 0\\
-\end{align}</script><script type="math/tex; mode=display">
+(m\omega^2-2\beta)(M\omega^2-2\beta)-4\beta^2\cos^2(qa)&amp;= 0\\
+Mm\omega^4-2(M+m)\beta\omega^2+4\beta^2(1-\cos^2(qa))&amp;= 0\\
+Mm\omega^4-2(M+m)\beta\omega^2+4\beta^2\sin^2(qa)&amp;= 0\\
+\end{align}
+\]</span> <span class="math display">\[
 \begin{align}
-  \Rightarrow \omega^2_{\pm}&= \frac{1}{Mm}[(M+m)\beta\pm\sqrt{(M+m)^2\beta^2-4Mm\beta^2\sin^2(qa)}]\\
- \omega^2_{\pm}&= \frac{M+m}{Mm}\beta(1\pm\sqrt{1-\frac{4Mm}{(M+m)^2}\sin^2(qa)})
-\end{align}</script><p>很显然当$M=m$时，从双原子回到单原子，重新得到单原子的色散关系。</p>
-<p>在长波极限下，上式化为</p>
-<script type="math/tex; mode=display">
+  \Rightarrow \omega^2_{\pm}&amp;=
+\frac{1}{Mm}[(M+m)\beta\pm\sqrt{(M+m)^2\beta^2-4Mm\beta^2\sin^2(qa)}]\\
+\omega^2_{\pm}&amp;=
+\frac{M+m}{Mm}\beta(1\pm\sqrt{1-\frac{4Mm}{(M+m)^2}\sin^2(qa)})
+\end{align}
+\]</span> 很显然当<span
+class="math inline">\(M=m\)</span>时，从双原子回到单原子，重新得到单原子的色散关系。</p>
+<p>在长波极限下，上式化为 <span class="math display">\[
 \begin{align}
- \omega^2_-&=\frac{M+m}{Mm}\beta \frac{2Mm}{(M+m)^2}\sin^2(qa)\\
- &=\frac{2\beta}{M+m}(qa)^2\\
- \omega^2_+&=\frac{M+m}{Mm}\beta(2-\frac{2Mm}{(M+m)^2}(qa)^2)\\
- &\approx 2\beta\frac{M+m}{Mm}
-\end{align}</script><p><img src="一维双原子色散关系.png" alt="一维双原子色散关系(图源PPT)"><br>图如所示，下面那只是声学支，上面那只是光学支。</p>
-<p>从方程也可以看出来，在长波极限下，对于声学支$\omega\approx0$，因此有$\frac{A}{B}\approx1$，两种原子振动方向相同。而对于光学支$\omega^2\approx2\beta\frac{M+m}{Mm}$，因此有$\frac{A}{B}\approx-\frac{M}{m}$，两种原子振动方向<strong>相反</strong>，幅值比值与质量成反比。</p>
-<p>在布里渊区边界$q=\frac{\pi}{2a}$上，假设$M&gt;m$，则光学支和声学支为</p>
-<script type="math/tex; mode=display">
+\omega^2_-&amp;=\frac{M+m}{Mm}\beta \frac{2Mm}{(M+m)^2}\sin^2(qa)\\
+&amp;=\frac{2\beta}{M+m}(qa)^2\\
+\omega^2_+&amp;=\frac{M+m}{Mm}\beta(2-\frac{2Mm}{(M+m)^2}(qa)^2)\\
+&amp;\approx 2\beta\frac{M+m}{Mm}
+\end{align}
+\]</span> <img src="一维双原子色散关系.png"
+alt="一维双原子色散关系(图源PPT)" />
+图如所示，下面那只是声学支，上面那只是光学支。</p>
+<p>从方程也可以看出来，在长波极限下，对于声学支<span
+class="math inline">\(\omega\approx0\)</span>，因此有<span
+class="math inline">\(\frac{A}{B}\approx1\)</span>，两种原子振动方向相同。而对于光学支<span
+class="math inline">\(\omega^2\approx2\beta\frac{M+m}{Mm}\)</span>，因此有<span
+class="math inline">\(\frac{A}{B}\approx-\frac{M}{m}\)</span>，两种原子振动方向<strong>相反</strong>，幅值比值与质量成反比。</p>
+<p>在布里渊区边界<span
+class="math inline">\(q=\frac{\pi}{2a}\)</span>上，假设<span
+class="math inline">\(M&gt;m\)</span>，则光学支和声学支为 <span
+class="math display">\[
 \begin{align}
- \omega^2_-&= \frac{2\beta}{M}\\
- \omega^2_+&= \frac{2\beta}{m}
-\end{align}</script><p>将其带入方程组可以得到，在声学支的布里渊区边界，A=0，即红色的原子不震动，只有蓝色原子在振动；在光学支的布里渊区边界，B=0，即蓝色原子不振动，只有红色原子在振动。</p>
-<h2 id="高维振动"><a href="#高维振动" class="headerlink" title="高维振动"></a>高维振动</h2><p>对于高维振动，可能是我不会用书上的公式</p>
-<script type="math/tex; mode=display">
+\omega^2_-&amp;= \frac{2\beta}{M}\\
+\omega^2_+&amp;= \frac{2\beta}{m}
+\end{align}
+\]</span>
+将其带入方程组可以得到，在声学支的布里渊区边界，A=0，即红色的原子不震动，只有蓝色原子在振动；在光学支的布里渊区边界，B=0，即蓝色原子不振动，只有红色原子在振动。</p>
+<h2 id="高维振动">高维振动</h2>
+<p>对于高维振动，可能是我不会用书上的公式 <span class="math display">\[
 \begin{align}
- V(R)&\approx \frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
-\end{align}</script><p>对于简单立方晶格，我用该公式写出来的方程总是错误的。以后有机会再看看吧，现在只能用老师给的公式，我觉得老师给的公式也很有道理，只是不知道如何将两个公式统一。</p>
-<p>比如说对于二维的晶格，选定nl晶格后，周围晶格n’l’对其的弹力方向是$e=\frac{R<em>{n’l’}-R</em>{nl}}{\abs{R<em>{n’l’}-R</em>{nl}}}$，弹力大小是$-\beta(u<em>{nl}-u</em>{n’l’})\cdot \frac{R<em>{n’l’}-R</em>{nl}}{\abs{R<em>{n’l’}-R</em>{nl}}}$，其物理意义很明显，只有在$e$方向上的位置偏移$u$才对弹力有所贡献。</p>
-<p>以作业题为例:<br><img src="高维振动例题.png" alt="高维振动例题(图源PPT)"></p>
-<p>将$R<em>3$位置的晶格对$R$位置晶格的拉力记作$F</em>{R_3}$，则根据上面的公式有</p>
-<script type="math/tex; mode=display">
+V(R)&amp;\approx
+\frac{1}{4}\sum\limits_{m,n}\nabla^2\phi_{mn}(u_n-u_m)^2
+\end{align}
+\]</span>
+对于简单立方晶格，我用该公式写出来的方程总是错误的。以后有机会再看看吧，现在只能用老师给的公式，我觉得老师给的公式也很有道理，只是不知道如何将两个公式统一。</p>
+<p>比如说对于二维的晶格，选定nl晶格后，周围晶格n'l'对其的弹力方向是<span
+class="math inline">\(e=\frac{R_{n&#39;l&#39;}-R_{nl}}{\abs{R_{n&#39;l&#39;}-R_{nl}}}\)</span>，弹力大小是<span
+class="math inline">\(-\beta(u_{nl}-u_{n&#39;l&#39;})\cdot
+\frac{R_{n&#39;l&#39;}-R_{nl}}{\abs{R_{n&#39;l&#39;}-R_{nl}}}\)</span>，其物理意义很明显，只有在<span
+class="math inline">\(e\)</span>方向上的位置偏移<span
+class="math inline">\(u\)</span>才对弹力有所贡献。</p>
+<p>以作业题为例: <img src="高维振动例题.png"
+alt="高维振动例题(图源PPT)" /></p>
+<p>将<span class="math inline">\(R_3\)</span>位置的晶格对<span
+class="math inline">\(R\)</span>位置晶格的拉力记作<span
+class="math inline">\(F_{R_3}\)</span>，则根据上面的公式有 <span
+class="math display">\[
 \begin{align}
- F_{R_3}&= -\beta(u^x_R-u^x_{R_3}+u^y_R-u^y_{R_3})\cdot\frac{-e_x-\sqrt{3}e_y}{2}\frac{-e_x-\sqrt{3}e_y}{2}\\
- &= -\beta(u^x_R-u^x_{R_3}+u^y_R-u^y_{R_3})\cdot (\frac{e_{xx}+\sqrt{3}e_{yx}}{4}+\frac{\sqrt{3}e_{yx}+3e_{yy}}{4})\\
- &= -\frac{\beta}{4}(u^x_R+\sqrt{3}u^y_R-u^x_{R_3}-\sqrt{3}u^y_{R_3})e_x-\frac{\beta}{4}(\sqrt{3}u^x_R+3u^y_R-\sqrt{3}u^x_{R_3}-3u^y_{R_3})e_y
-\end{align}</script><p>上式中的$e<em>{xx}$代表x方向基矢的张量积，$u^x\cdot e</em>{xx}=u^x e_x$ ，同时，第一项是$R_3$对$R$晶格拉力的x分量，第二项是y分量。按照上面的步骤，把周围六个晶格的拉力求和即可得到x方向的运动方程和y方向的运动方程。之后带入布洛赫解即可</p>
-<script type="math/tex; mode=display">
+F_{R_3}&amp;=
+-\beta(u^x_R-u^x_{R_3}+u^y_R-u^y_{R_3})\cdot\frac{-e_x-\sqrt{3}e_y}{2}\frac{-e_x-\sqrt{3}e_y}{2}\\
+&amp;= -\beta(u^x_R-u^x_{R_3}+u^y_R-u^y_{R_3})\cdot
+(\frac{e_{xx}+\sqrt{3}e_{yx}}{4}+\frac{\sqrt{3}e_{yx}+3e_{yy}}{4})\\
+&amp;=
+-\frac{\beta}{4}(u^x_R+\sqrt{3}u^y_R-u^x_{R_3}-\sqrt{3}u^y_{R_3})e_x-\frac{\beta}{4}(\sqrt{3}u^x_R+3u^y_R-\sqrt{3}u^x_{R_3}-3u^y_{R_3})e_y
+\end{align}
+\]</span> 上式中的<span
+class="math inline">\(e_{xx}\)</span>代表x方向基矢的张量积，<span
+class="math inline">\(u^x\cdot e_{xx}=u^x e_x\)</span>
+，同时，第一项是<span class="math inline">\(R_3\)</span>对<span
+class="math inline">\(R\)</span>晶格拉力的x分量，第二项是y分量。按照上面的步骤，把周围六个晶格的拉力求和即可得到x方向的运动方程和y方向的运动方程。之后带入布洛赫解即可
+<span class="math display">\[
 \begin{align}
- u_n^x&= A_xe^{i(q\cdot R_n-\omega t)}\\
-u_n^y&= A_ye^{i(q\cdot R_n-\omega t)}
-\end{align}</script><p>值得注意的是，波矢$q$也是有两个分量$q_x,q_y$的，不再像一维那样只有一个q。</p>
-<h1 id="晶格振动的量子理论"><a href="#晶格振动的量子理论" class="headerlink" title="晶格振动的量子理论"></a>晶格振动的量子理论</h1><p><strong>咕</strong></p>
-<h1 id="输运现象"><a href="#输运现象" class="headerlink" title="输运现象"></a>输运现象</h1><p>输运现象这一章就是同时考虑电子的布洛赫单电子态以及晶格振动，根据电子和原子实的修正，得到固体材料的热导率与电导率。我们将电子和晶格振动的影响称为<strong>电子-声子相互作用</strong>。</p>
+u_n^x&amp;= A_xe^{i(q\cdot R_n-\omega t)}\\
+u_n^y&amp;= A_ye^{i(q\cdot R_n-\omega t)}
+\end{align}
+\]</span> 值得注意的是，波矢<span
+class="math inline">\(q\)</span>也是有两个分量<span
+class="math inline">\(q_x,q_y\)</span>的，不再像一维那样只有一个q。</p>
+<h1 id="晶格振动的量子理论">晶格振动的量子理论</h1>
+<p><strong>咕</strong></p>
+<h1 id="输运现象">输运现象</h1>
+<p>输运现象这一章就是同时考虑电子的布洛赫单电子态以及晶格振动，根据电子和原子实的修正，得到固体材料的热导率与电导率。我们将电子和晶格振动的影响称为<strong>电子-声子相互作用</strong>。</p>
 <p>当固体材料处于平衡态的时候是没有电流的，但若存在外场，分布函数不再是平衡分布，正是非平衡分布带来了电流密度。同时，电子与声子的散射也会影响分布函数。也就是说声电相互作用主要体现在散射上，当且仅当考虑弛豫时间外的散射效应时才会受声电效应影响。</p>
-<h2 id="玻尔兹曼方程"><a href="#玻尔兹曼方程" class="headerlink" title="玻尔兹曼方程"></a>玻尔兹曼方程</h2><p>热平衡的情况下，温度均匀分布且无外场，电子满足费米平衡分布:</p>
-<script type="math/tex; mode=display">
+<h2 id="玻尔兹曼方程">玻尔兹曼方程</h2>
+<p>热平衡的情况下，温度均匀分布且无外场，电子满足费米平衡分布: <span
+class="math display">\[
 \begin{align}
- f_0(\epsilon_k)&= \frac{1}{e^{\beta(\epsilon_k-\mu)}+1}
-\end{align}</script><p>非平衡时分布函数记作$f(r,k,t)$，温度和外场的非均匀分布会使得分布函数是位置$r$的函数，外场的存在同时还会改变其动量$k$，假设不存在在电声散射，则$t$时刻$r,k$处的电子来自于$dt$时刻前位于$r-\dot{r}dt,k-\dot{k}dt$的电子:</p>
-<script type="math/tex; mode=display">
+f_0(\epsilon_k)&amp;= \frac{1}{e^{\beta(\epsilon_k-\mu)}+1}
+\end{align}
+\]</span> 非平衡时分布函数记作<span
+class="math inline">\(f(r,k,t)\)</span>，温度和外场的非均匀分布会使得分布函数是位置<span
+class="math inline">\(r\)</span>的函数，外场的存在同时还会改变其动量<span
+class="math inline">\(k\)</span>，假设不存在在电声散射，则<span
+class="math inline">\(t\)</span>时刻<span
+class="math inline">\(r,k\)</span>处的电子来自于<span
+class="math inline">\(dt\)</span>时刻前位于<span
+class="math inline">\(r-\dot{r}dt,k-\dot{k}dt\)</span>的电子: <span
+class="math display">\[
 \begin{align}
- f(r,k,t)=f(r-\dot{r}dt,k-\dot{k}dt,t-dt)
-\end{align}</script><p>此时再将声子散射带来的影响考虑进去<sup><a href="#fn_1" id="reffn_1">1</a></sup> :</p>
-<script type="math/tex; mode=display">
+f(r,k,t)=f(r-\dot{r}dt,k-\dot{k}dt,t-dt)
+\end{align}
+\]</span> 此时再将声子散射带来的影响考虑进去<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> :
+<span class="math display">\[
 \begin{align}
- f(r,k,t)=f(r-\dot{r}dt,k-\dot{k}dt,t-dt)+(\pdv{f}{t})_{coll}dt
-\end{align}</script><blockquote id="fn_1">
-<sup>1</sup>. 这实际上就是一个建模的过程，并不是由什么第一性原理写出的方程，因此不必深究<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<p>将上式展开到$dt$的一阶，可以得到</p>
-<script type="math/tex; mode=display">
+f(r,k,t)=f(r-\dot{r}dt,k-\dot{k}dt,t-dt)+(\pdv{f}{t})_{coll}dt
+\end{align}
+\]</span></p>
+<p>将上式展开到<span class="math inline">\(dt\)</span>的一阶，可以得到
+<span class="math display">\[
 \begin{align}
- \pdv{f}{t}+\pdv{f}{r}\dot{r}+\pdv{f}{k}\dot{k}=(\pdv{f}{t})_{coll}
-\end{align}</script><p>稳态时$\pdv{f}{t}=0$，我们得到<strong>玻尔兹曼方程</strong>:</p>
-<script type="math/tex; mode=display">
+\pdv{f}{t}+\pdv{f}{r}\dot{r}+\pdv{f}{k}\dot{k}=(\pdv{f}{t})_{coll}
+\end{align}
+\]</span> 稳态时<span
+class="math inline">\(\pdv{f}{t}=0\)</span>，我们得到<strong>玻尔兹曼方程</strong>:
+<span class="math display">\[
 \begin{align}
- \dot{r}\cdot \pdv{f}{r}+\dot{k}\cdot \pdv{f}{k}=(\pdv{f}{t})_{coll}
-\end{align}</script><p>左边两项称为漂移项，右边那项称为散射项或者碰撞项</p>
-<p>由布洛赫电子动力学知道:</p>
-<script type="math/tex; mode=display">
+\dot{r}\cdot \pdv{f}{r}+\dot{k}\cdot \pdv{f}{k}=(\pdv{f}{t})_{coll}
+\end{align}
+\]</span> 左边两项称为漂移项，右边那项称为散射项或者碰撞项</p>
+<p>由布洛赫电子动力学知道: <span class="math display">\[
 \begin{align}
- \dot{r}&= \frac{1}{\hbar}\pdv{E}{k}\\
- \dot{k}&= \frac{1}{\hbar}F
-\end{align}</script><p>漂移项带来的影响通常被我们当成<strong>微扰</strong>，在围绕下，分布函数$f$相对平衡分布函数$f_0$的偏移很小，因此我们直接写出</p>
-<script type="math/tex; mode=display">
+\dot{r}&amp;= \frac{1}{\hbar}\pdv{E}{k}\\
+\dot{k}&amp;= \frac{1}{\hbar}F
+\end{align}
+\]</span>
+漂移项带来的影响通常被我们当成<strong>微扰</strong>，在围绕下，分布函数<span
+class="math inline">\(f\)</span>相对平衡分布函数<span
+class="math inline">\(f_0\)</span>的偏移很小，因此我们直接写出 <span
+class="math display">\[
 \begin{align}
- f(r,k,t)&= f_0+f_1
-\end{align}</script><p>做了这样的近似后，玻尔兹曼方程依旧难以求解，主要来自于右边的散射项我们不知道如何处理，这里依旧采用近似的方法。我们考虑这样一个过程，加上外场后固体材料进入非平衡分布，去掉外场后固体材料应该恢复平衡分布，而去掉外场后，方程应当只剩下</p>
-<script type="math/tex; mode=display">
+f(r,k,t)&amp;= f_0+f_1
+\end{align}
+\]</span>
+做了这样的近似后，玻尔兹曼方程依旧难以求解，主要来自于右边的散射项我们不知道如何处理，这里依旧采用近似的方法。我们考虑这样一个过程，加上外场后固体材料进入非平衡分布，去掉外场后固体材料应该恢复平衡分布，而去掉外场后，方程应当只剩下
+<span class="math display">\[
 \begin{align}
- \pdv{f}{t}&= (\pdv{f}{t})_{coll}
-\end{align}</script><p>也就是说固体材料恢复平衡分布的原因是碰撞，因此当分布偏离平衡很小时，我们可以做<strong>弛豫时间近似</strong>，即碰撞使得系统在$\tau$内恢复平衡</p>
-<script type="math/tex; mode=display">
+\pdv{f}{t}&amp;= (\pdv{f}{t})_{coll}
+\end{align}
+\]</span>
+也就是说固体材料恢复平衡分布的原因是碰撞，因此当分布偏离平衡很小时，我们可以做<strong>弛豫时间近似</strong>，即碰撞使得系统在<span
+class="math inline">\(\tau\)</span>内恢复平衡 <span
+class="math display">\[
 \begin{align}
- \tau(\pdv{f}{t})_{coll}=-f+f_0
-\end{align}</script><p>将上式与$f$的近似带入玻尔兹曼方程，忽略$f_1$相对位置$r$和动量$k$的偏导，可以得到</p>
-<script type="math/tex; mode=display">
+\tau(\pdv{f}{t})_{coll}=-f+f_0
+\end{align}
+\]</span> 将上式与<span
+class="math inline">\(f\)</span>的近似带入玻尔兹曼方程，忽略<span
+class="math inline">\(f_1\)</span>相对位置<span
+class="math inline">\(r\)</span>和动量<span
+class="math inline">\(k\)</span>的偏导，可以得到 <span
+class="math display">\[
 \begin{align}
- \dot{r}\cdot\pdv{f_0}{r}+\dot{k}\cdot\pdv{f_0}{k}&= -\frac{f-f_0}{\tau}\\
- \dot{r}\cdot\pdv{f_0}{r}+\dot{k}\cdot\pdv{f_0}{k}&= -\frac{f_1}{\tau}
-\end{align}</script><p>这个方程是我们对玻尔兹曼方程做了一系列近似得到的，解出$f_1$便可以得到非平衡分布$f_0+f_1$，然后便可以进一步计算得到电导率与热导率。超出弛豫时间的近似我们将在后面讨论。</p>
-<h2 id="电导率"><a href="#电导率" class="headerlink" title="电导率"></a>电导率</h2><p>从简单的出发，假设系统温度分布均匀，外场为均匀电场，则我们要解的方程为</p>
-<script type="math/tex; mode=display">
+\dot{r}\cdot\pdv{f_0}{r}+\dot{k}\cdot\pdv{f_0}{k}&amp;=
+-\frac{f-f_0}{\tau}\\
+\dot{r}\cdot\pdv{f_0}{r}+\dot{k}\cdot\pdv{f_0}{k}&amp;=
+-\frac{f_1}{\tau}
+\end{align}
+\]</span> 这个方程是我们对玻尔兹曼方程做了一系列近似得到的，解出<span
+class="math inline">\(f_1\)</span>便可以得到非平衡分布<span
+class="math inline">\(f_0+f_1\)</span>，然后便可以进一步计算得到电导率与热导率。超出弛豫时间的近似我们将在后面讨论。</p>
+<h2 id="电导率">电导率</h2>
+<p>从简单的出发，假设系统温度分布均匀，外场为均匀电场，则我们要解的方程为
+<span class="math display">\[
 \begin{align}
- 0+(-\frac{eE}{\hbar})\cdot\pdv{f}{k}&= -\frac{f_1}{\tau}\\
- \Rightarrow f_1&= \frac{e\tau E}{\hbar}\cdot\pdv{f_0}{k}\\
-\Rightarrow f&= f_0+\pdv{f_0}{k}\cdot\frac{e\tau E}{\hbar}\\
-\Rightarrow f(k)&\approx f_0(k+\frac{e\tau E}{\hbar})
-\end{align}</script><p>也就是说外电场使得费米面在k空间发生平移。</p>
-<p>求得非平衡分布后，下一步便是计算电流密度的表达式，我们期望得到形式为$J=\sigma E$的表达式，然后便可以从电流密度的表达式读出电导率。</p>
-<p>电流密度的表达式为</p>
-<script type="math/tex; mode=display">
+0+(-\frac{eE}{\hbar})\cdot\pdv{f}{k}&amp;= -\frac{f_1}{\tau}\\
+\Rightarrow f_1&amp;= \frac{e\tau E}{\hbar}\cdot\pdv{f_0}{k}\\
+\Rightarrow f&amp;= f_0+\pdv{f_0}{k}\cdot\frac{e\tau E}{\hbar}\\
+\Rightarrow f(k)&amp;\approx f_0(k+\frac{e\tau E}{\hbar})
+\end{align}
+\]</span> 也就是说外电场使得费米面在k空间发生平移。</p>
+<p>求得非平衡分布后，下一步便是计算电流密度的表达式，我们期望得到形式为<span
+class="math inline">\(J=\sigma
+E\)</span>的表达式，然后便可以从电流密度的表达式读出电导率。</p>
+<p>电流密度的表达式为 <span class="math display">\[
 \begin{align}
- J&= \frac{\textcolor{red}{2}}{V}\sum\limits_k (-e)v_k f_k\\
- &= -\frac{2e}{L^D}\frac{L^D}{(2\pi)^D}\int d^Dkv_kf(k)\\
- &= -\frac{2e}{(2\pi)^D}\int d^D kv_kf_0-\frac{2e}{(2\pi)^D}\int d^D kv_kf_1
-\end{align}</script><p>上式中$D$是材料的维度。正如本章开头所说，平衡分布时无电流分布，因此第一项积分为0，只剩下第二项</p>
-<script type="math/tex; mode=display">
+J&amp;= \frac{\textcolor{red}{2}}{V}\sum\limits_k (-e)v_k f_k\\
+&amp;= -\frac{2e}{L^D}\frac{L^D}{(2\pi)^D}\int d^Dkv_kf(k)\\
+&amp;= -\frac{2e}{(2\pi)^D}\int d^D kv_kf_0-\frac{2e}{(2\pi)^D}\int d^D
+kv_kf_1
+\end{align}
+\]</span> 上式中<span
+class="math inline">\(D\)</span>是材料的维度。正如本章开头所说，平衡分布时无电流分布，因此第一项积分为0，只剩下第二项
+<span class="math display">\[
 \begin{align}
- J&=-\frac{2e}{(2\pi)^D}\int \frac{e\tau E}{\hbar}\cdot\pdv{f_0}{k}v_kd^Dk\\
- &= -\frac{2e^2\tau }{(2\pi)^D\hbar}\int \pdv{f_0}{E_k}(E\cdot\nabla_k E_k) v_kd^Dk
-\end{align}</script><p>前面提过，电子的速度为</p>
-<script type="math/tex; mode=display">
+J&amp;=-\frac{2e}{(2\pi)^D}\int \frac{e\tau
+E}{\hbar}\cdot\pdv{f_0}{k}v_kd^Dk\\
+&amp;= -\frac{2e^2\tau }{(2\pi)^D\hbar}\int
+\pdv{f_0}{E_k}(E\cdot\nabla_k E_k) v_kd^Dk
+\end{align}
+\]</span> 前面提过，电子的速度为 <span class="math display">\[
 \begin{align}
- \dot{r}=v_k=\frac{1}{\hbar}\nabla_kE_k
-\end{align}</script><p>因此上式可以进一步改写为</p>
-<script type="math/tex; mode=display">
+\dot{r}=v_k=\frac{1}{\hbar}\nabla_kE_k
+\end{align}
+\]</span> 因此上式可以进一步改写为 <span class="math display">\[
 \begin{align}
- J&= -\frac{2e^2\tau }{(2\pi)^D}\int \pdv{f_0}{E_k}(E\cdot v_k) v_kd^Dk\\
- &= -\frac{2e^2\tau }{(2\pi)^D}\int \pdv{f_0}{E_k}( v_k\otimes v_k) d^Dk\cdot E
-\end{align}</script><p>至此，我们终于将电流密度写成$\sigma \cdot E$的形式，但是需要注意的是，表达式中的$v<em>k\otimes v_k$是两个矢量的张量积，因此电导率是一个张量，应当写成$\sigma</em>{ij}$的形式。</p>
-<script type="math/tex; mode=display">
+J&amp;= -\frac{2e^2\tau }{(2\pi)^D}\int \pdv{f_0}{E_k}(E\cdot v_k)
+v_kd^Dk\\
+&amp;= -\frac{2e^2\tau }{(2\pi)^D}\int \pdv{f_0}{E_k}( v_k\otimes v_k)
+d^Dk\cdot E
+\end{align}
+\]</span> 至此，我们终于将电流密度写成<span class="math inline">\(\sigma
+\cdot E\)</span>的形式，但是需要注意的是，表达式中的<span
+class="math inline">\(v_k\otimes
+v_k\)</span>是两个矢量的张量积，因此电导率是一个张量，应当写成<span
+class="math inline">\(\sigma_{ij}\)</span>的形式。 <span
+class="math display">\[
 \begin{align}
- \sigma_{ij}=\frac{2e^2\tau }{(2\pi)^D}\int (-\pdv{f_0}{E_k})(v_k)_i (v_k)_j d^Dk
-\end{align}</script><p>若系统是各向同性的，比如立方晶体，则电导率只有对角分量非零，且均相等$\sigma<em>{xx}=\sigma</em>{yy}=\sigma_{zz}$，这样我们可以定义这个值为我们的电导率$\sigma$,因此有</p>
-<script type="math/tex; mode=display">
+\sigma_{ij}=\frac{2e^2\tau }{(2\pi)^D}\int (-\pdv{f_0}{E_k})(v_k)_i
+(v_k)_j d^Dk
+\end{align}
+\]</span>
+若系统是各向同性的，比如立方晶体，则电导率只有对角分量非零，且均相等<span
+class="math inline">\(\sigma_{xx}=\sigma_{yy}=\sigma_{zz}\)</span>，这样我们可以定义这个值为我们的电导率<span
+class="math inline">\(\sigma\)</span>,因此有 <span
+class="math display">\[
 \begin{align}
- \sigma&= \frac{1}{D}\sum\limits_i\sigma_{ii}\\
- &= \frac{1}{D}\sum\limits_i\frac{2e^2\tau }{(2\pi)^D}\int (-\pdv{f_0}{E_k})(v_k)_i^2 d^Dk\\
- &= \frac{2e^2\tau }{\textcolor{red}{D}(2\pi)^D}\int (-\pdv{f_0}{E_k})v_k^2 d^Dk
-\end{align}</script><p>$-\pdv{f_0}{E_k}$近似为一个处在费米面的delta函数$\delta(E_k-E_F)$，因此积分变为</p>
-<script type="math/tex; mode=display">
+\sigma&amp;= \frac{1}{D}\sum\limits_i\sigma_{ii}\\
+&amp;= \frac{1}{D}\sum\limits_i\frac{2e^2\tau }{(2\pi)^D}\int
+(-\pdv{f_0}{E_k})(v_k)_i^2 d^Dk\\
+&amp;= \frac{2e^2\tau }{\textcolor{red}{D}(2\pi)^D}\int
+(-\pdv{f_0}{E_k})v_k^2 d^Dk
+\end{align}
+\]</span></p>
+<p><span
+class="math inline">\(-\pdv{f_0}{E_k}\)</span>近似为一个处在费米面的delta函数<span
+class="math inline">\(\delta(E_k-E_F)\)</span>，因此积分变为 <span
+class="math display">\[
 \begin{align}
- \sigma&=  \frac{2e^2\tau }{D(2\pi)^D}\oint\int  \delta(E_k-E_F)v_k^2 dSdk\\
-&= \frac{2e^2\tau }{D(2\pi)^D}\oint\int  \delta(E_k-E_F)v_k^2 dS\frac{dE_k}{\abs{\nabla_kE_k}}\\
-&= \frac{2e^2\tau }{D(2\pi)^D\hbar}\oint  \frac{v_{k_F}^2} {\abs{v_k}}dS_F
-\end{align}</script><p>各向同性的色散关系为:</p>
-<script type="math/tex; mode=display">
+\sigma&amp;=  \frac{2e^2\tau }{D(2\pi)^D}\oint\int  \delta(E_k-E_F)v_k^2
+dSdk\\
+&amp;= \frac{2e^2\tau }{D(2\pi)^D}\oint\int  \delta(E_k-E_F)v_k^2
+dS\frac{dE_k}{\abs{\nabla_kE_k}}\\
+&amp;= \frac{2e^2\tau }{D(2\pi)^D\hbar}\oint  \frac{v_{k_F}^2}
+{\abs{v_k}}dS_F
+\end{align}
+\]</span></p>
+<p>各向同性的色散关系为: <span class="math display">\[
 \begin{align}
- E_k&= \frac{\hbar^2 k^2}{2m^*}\\
-\Rightarrow v_k &=\frac{\hbar^2 k}{m^*}
-\end{align}</script><p>其中$m^*$为有效质量，将其带入电导率表达式，同时取材料为三维:</p>
-<script type="math/tex; mode=display">
+E_k&amp;= \frac{\hbar^2 k^2}{2m^*}\\
+\Rightarrow v_k &amp;=\frac{\hbar^2 k}{m^*}
+\end{align}
+\]</span> 其中<span
+class="math inline">\(m^*\)</span>为有效质量，将其带入电导率表达式，同时取材料为三维:
+<span class="math display">\[
 \begin{align}
- \sigma&= \frac{2e^2\tau }{3(2\pi)^3\hbar}\frac{\hbar^2k_F}{m^*}\oint   dS_F\\
- &= \frac{e^2\tau \hbar }{3m^*}k_F^3
-\end{align}</script><p>若利用之前求过的$k_F^3=3\pi^2 \rho$的话，电导率可以进一步写为</p>
-<script type="math/tex; mode=display">
+\sigma&amp;= \frac{2e^2\tau
+}{3(2\pi)^3\hbar}\frac{\hbar^2k_F}{m^*}\oint   dS_F\\
+&amp;= \frac{e^2\tau \hbar }{3m^*}k_F^3
+\end{align}
+\]</span> 若利用之前求过的<span class="math inline">\(k_F^3=3\pi^2
+\rho\)</span>的话，电导率可以进一步写为 <span class="math display">\[
 \begin{align}
- \sigma&= \frac{e^2}{m^*}\rho \tau
-\end{align}</script><p>我们发现其与之前Drude模型的电导率表达式形式一致，这解释了为什么之前错误的模型可以在很多情况下得到令人满意的结果。</p>
-<h2 id="热导率与热电势"><a href="#热导率与热电势" class="headerlink" title="热导率与热电势"></a>热导率与热电势</h2><p>仿照上节的思路，考虑外电场为零，但是温度场非均匀，则此时需要解的方程为</p>
-<script type="math/tex; mode=display">
+\sigma&amp;= \frac{e^2}{m^*}\rho \tau
+\end{align}
+\]</span>
+我们发现其与之前Drude模型的电导率表达式形式一致，这解释了为什么之前错误的模型可以在很多情况下得到令人满意的结果。</p>
+<h2 id="热导率与热电势">热导率与热电势</h2>
+<p>仿照上节的思路，考虑外电场为零，但是温度场非均匀，则此时需要解的方程为
+<span class="math display">\[
 \begin{align}
- v_k \cdot\pdv{f_0}{T}\nabla T&= -\frac{f_1}{\tau}\\
-\Rightarrow f_1&= -\tau v_k \cdot\pdv{f_0}{T}\nabla T\\
-\Rightarrow f&= f_0-\tau v_k \cdot\pdv{f_0}{T}\nabla T
-\end{align}</script><p>我们希望利用$-\pdv{f_0}{E_k}$近似为$\delta$函数的结论，因此我们将上式中对温度的偏导替换为对能量的偏导，很容易验证</p>
-<script type="math/tex; mode=display">
+v_k \cdot\pdv{f_0}{T}\nabla T&amp;= -\frac{f_1}{\tau}\\
+\Rightarrow f_1&amp;= -\tau v_k \cdot\pdv{f_0}{T}\nabla T\\
+\Rightarrow f&amp;= f_0-\tau v_k \cdot\pdv{f_0}{T}\nabla T
+\end{align}
+\]</span> 我们希望利用<span
+class="math inline">\(-\pdv{f_0}{E_k}\)</span>近似为<span
+class="math inline">\(\delta\)</span>函数的结论，因此我们将上式中对温度的偏导替换为对能量的偏导，很容易验证
+<span class="math display">\[
 \begin{align}
- \pdv{f_0}{T}&= -\frac{1}{(e^{\beta(E_k-\mu)}+1)^2}\pdv{e^{\beta(E_k-\mu)}}{T}\\
- &= -\frac{E_k-\mu}{T}\pdv{f_0}{E_k}
-\end{align}</script><p>将其带入我们解出分布函数</p>
-<script type="math/tex; mode=display">
+\pdv{f_0}{T}&amp;=
+-\frac{1}{(e^{\beta(E_k-\mu)}+1)^2}\pdv{e^{\beta(E_k-\mu)}}{T}\\
+&amp;= -\frac{E_k-\mu}{T}\pdv{f_0}{E_k}
+\end{align}
+\]</span> 将其带入我们解出分布函数 <span class="math display">\[
 \begin{align}
- f&= f_0+\tau(E_k-\mu)\pdv{f_0}{E_k}v_k\cdot \frac{\nabla T}{T}
-\end{align}</script><p>将其带入电流密度表达式有</p>
-<script type="math/tex; mode=display">
+f&amp;= f_0+\tau(E_k-\mu)\pdv{f_0}{E_k}v_k\cdot \frac{\nabla T}{T}
+\end{align}
+\]</span> 将其带入电流密度表达式有 <span class="math display">\[
 \begin{align}
- J_Q&= -\frac{2e}{(2\pi)^D}\int d^D kv_kf_1\\
- &= \frac{2e\tau}{(2\pi)^D}\int d^D k(-\pdv{f_0}{E_k})v_k\otimes v_k \frac{(E_k-\mu)}{T}\cdot\nabla T\\
- &= \sigma_T\cdot \nabla T
-\end{align}</script><p>因此我们得到结论，即便材料外部不存在电场，非均匀分布的温度也会使得材料出现电流密度，我们将其称为<strong>热电流</strong>，其正比于温度梯度，系数称为<strong>热电导率</strong>，是一个张量。</p>
-<p>仿照上节的做法，考虑各向同性的材料，同时利用$dk=\frac{dE_k}{\hbar\abs{v_k}}$得：</p>
-<script type="math/tex; mode=display">
+J_Q&amp;= -\frac{2e}{(2\pi)^D}\int d^D kv_kf_1\\
+&amp;= \frac{2e\tau}{(2\pi)^D}\int d^D k(-\pdv{f_0}{E_k})v_k\otimes v_k
+\frac{(E_k-\mu)}{T}\cdot\nabla T\\
+&amp;= \sigma_T\cdot \nabla T
+\end{align}
+\]</span>
+因此我们得到结论，即便材料外部不存在电场，非均匀分布的温度也会使得材料出现电流密度，我们将其称为<strong>热电流</strong>，其正比于温度梯度，系数称为<strong>热电导率</strong>，是一个张量。</p>
+<p>仿照上节的做法，考虑各向同性的材料，同时利用<span
+class="math inline">\(dk=\frac{dE_k}{\hbar\abs{v_k}}\)</span>得： <span
+class="math display">\[
 \begin{align}
- \sigma_{Tij}&= \frac{2e\tau}{(2\pi)^D}\int (-\pdv{f_0}{E_k})(v_k)_i (v_k)_j \frac{(E_k-\mu)}{T}d^Dk\\
- \Rightarrow \sigma_T&= \frac{2e\tau}{D(2\pi)^D}\int(-\pdv{f_0}{E_k}) v_k^2 \frac{(E_F-\mu)}{T}d^Dk
-\end{align}</script><p>我们发现上式不能直接使用$\delta$函数的近似，因为$\mu=E_F$，这种近似会使得被函数为0，但是与$\delta$函数相似的性质可以允许我们将$-\pdv{f_0}{E_k}$之外的部分做泰勒展开，一般展开到二阶便是很好的近似。</p>
-<p>除了电荷，温度梯度更重要的作用是产生热流，根据热力学的公式(体积无变化)</p>
-<script type="math/tex; mode=display">
+\sigma_{Tij}&amp;= \frac{2e\tau}{(2\pi)^D}\int (-\pdv{f_0}{E_k})(v_k)_i
+(v_k)_j \frac{(E_k-\mu)}{T}d^Dk\\
+\Rightarrow \sigma_T&amp;= \frac{2e\tau}{D(2\pi)^D}\int(-\pdv{f_0}{E_k})
+v_k^2 \frac{(E_F-\mu)}{T}d^Dk
+\end{align}
+\]</span> 我们发现上式不能直接使用<span
+class="math inline">\(\delta\)</span>函数的近似，因为<span
+class="math inline">\(\mu=E_F\)</span>，这种近似会使得被函数为0，但是与<span
+class="math inline">\(\delta\)</span>函数相似的性质可以允许我们将<span
+class="math inline">\(-\pdv{f_0}{E_k}\)</span>之外的部分做泰勒展开，一般展开到二阶便是很好的近似。</p>
+<p>除了电荷，温度梯度更重要的作用是产生热流，根据热力学的公式(体积无变化)
+<span class="math display">\[
 \begin{align}
- dQ=dU-\mu dN
-\end{align}</script><p>我们得到处于$k$态电子携带的热量为$E_k-\mu$,，因此热流密度的表达式为</p>
-<script type="math/tex; mode=display">
+dQ=dU-\mu dN
+\end{align}
+\]</span> 我们得到处于<span
+class="math inline">\(k\)</span>态电子携带的热量为<span
+class="math inline">\(E_k-\mu\)</span>,，因此热流密度的表达式为 <span
+class="math display">\[
 \begin{align}
- J_Q&= \frac{2}{(2\pi)^D}\int d^Dk (E_k-\mu)v_kf\\
- &= \frac{2}{(2\pi)^D}\int d^Dk (E_k-\mu)v_kf_1\\
- &= \frac{2\tau}{(2\pi)^D}\int d^Dk \pdv{f_0}{E_k} \frac{(E_k-\mu)^2}{T}(v_k\otimes v_k)\cdot\nabla T\\
- &= \sigma_Q\cdot \nabla T
-\end{align}</script><p>读出<strong>热导率</strong>为(也是张量)</p>
-<script type="math/tex; mode=display">
+J_Q&amp;= \frac{2}{(2\pi)^D}\int d^Dk (E_k-\mu)v_kf\\
+&amp;= \frac{2}{(2\pi)^D}\int d^Dk (E_k-\mu)v_kf_1\\
+&amp;= \frac{2\tau}{(2\pi)^D}\int d^Dk \pdv{f_0}{E_k}
+\frac{(E_k-\mu)^2}{T}(v_k\otimes v_k)\cdot\nabla T\\
+&amp;= \sigma_Q\cdot \nabla T
+\end{align}
+\]</span> 读出<strong>热导率</strong>为(也是张量) <span
+class="math display">\[
 \begin{align}
- \sigma_{Qij}&= - \frac{2\tau}{(2\pi)^D}\int d^Dk (-\pdv{f_0}{E_k}) \frac{(E_k-\mu)^2}{T}(v_k)_i (v_k)_j\\
- \Rightarrow \sigma_Q&=  - \frac{2\tau}{D(2\pi)^D}\int (-\pdv{f_0}{E_k}) \frac{(E_F-\mu)^2}{T}v_k^2d^Dk
-\end{align}</script><p>综上，我们得到了热导率与热电导率的表达式</p>
-<div class="table-container">
+\sigma_{Qij}&amp;= - \frac{2\tau}{(2\pi)^D}\int d^Dk (-\pdv{f_0}{E_k})
+\frac{(E_k-\mu)^2}{T}(v_k)_i (v_k)_j\\
+\Rightarrow \sigma_Q&amp;=  - \frac{2\tau}{D(2\pi)^D}\int
+(-\pdv{f_0}{E_k}) \frac{(E_F-\mu)^2}{T}v_k^2d^Dk
+\end{align}
+\]</span></p>
+<p>综上，我们得到了热导率与热电导率的表达式</p>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
-<tr>
-<th>$\sigma$</th>
+<tr class="header">
+<th><span class="math inline">\(\sigma\)</span></th>
 <th>表达式</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>热电导率</td>
-<td>$\frac{2e\tau}{D(2\pi)^D}\int(-\pdv{f_0}{E_k})  \frac{(E_F-\mu)}{T}v_k^2d^Dk$</td>
+<td><span
+class="math inline">\(\frac{2e\tau}{D(2\pi)^D}\int(-\pdv{f_0}{E_k})
+\frac{(E_F-\mu)}{T}v_k^2d^Dk\)</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>热导率</td>
-<td>$- \frac{2\tau}{D(2\pi)^D}\int (-\pdv{f_0}{E_k}) \frac{(E_F-\mu)^2}{T}v_k^2d^Dk$</td>
+<td><span class="math inline">\(- \frac{2\tau}{D(2\pi)^D}\int
+(-\pdv{f_0}{E_k}) \frac{(E_F-\mu)^2}{T}v_k^2d^Dk\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>正如前面所说，在实际运算的时候我们通常将上面的表达式写作（根据色散关系将$k$的积分写成能量的积分）</p>
-<script type="math/tex; mode=display">
+<p>正如前面所说，在实际运算的时候我们通常将上面的表达式写作（根据色散关系将<span
+class="math inline">\(k\)</span>的积分写成能量的积分） <span
+class="math display">\[
 \begin{align}
- \sigma=A\int Q(E_k)(-\pdv{f_0}{E_k})dE_k 
-\end{align}</script><p>将$Q(E_k)$小量展开为$Q(E_k)\approx Q(\mu)+Q’(\mu)(E_k-\mu)+Q’’(\mu)(E_k-\mu)^2$，根据上面的表达式可以知道，第一项$Q(\mu)=0$，而第二项关于$-\pdv{f_0}{E_k}$是奇函数，因此积分为0，剩下非零的只有第二项。因为</p>
-<script type="math/tex; mode=display">
+\sigma=A\int Q(E_k)(-\pdv{f_0}{E_k})dE_k
+\end{align}
+\]</span> 将<span class="math inline">\(Q(E_k)\)</span>小量展开为<span
+class="math inline">\(Q(E_k)\approx
+Q(\mu)+Q&#39;(\mu)(E_k-\mu)+Q&#39;&#39;(\mu)(E_k-\mu)^2\)</span>，根据上面的表达式可以知道，第一项<span
+class="math inline">\(Q(\mu)=0\)</span>，而第二项关于<span
+class="math inline">\(-\pdv{f_0}{E_k}\)</span>是奇函数，因此积分为0，剩下非零的只有第二项。因为
+<span class="math display">\[
 \begin{align}
- -\pdv{f_0}{E_k}=\frac{\beta e^{\beta(E_k-\mu)}}{(e^{\beta(E_k-\mu)}+1)^2}
-\end{align}</script><p>因此积分的时候可以做标量替换$\beta(E_k-\mu)\triangleq x$，最后利用一个积分结论：</p>
-<script type="math/tex; mode=display">
+-\pdv{f_0}{E_k}=\frac{\beta
+e^{\beta(E_k-\mu)}}{(e^{\beta(E_k-\mu)}+1)^2}
+\end{align}
+\]</span> 因此积分的时候可以做标量替换<span
+class="math inline">\(\beta(E_k-\mu)\triangleq
+x\)</span>，最后利用一个积分结论： <span class="math display">\[
 \begin{align}
- \int_{-\infty}^\infty dx \frac{x^2e^x}{(e^x+1)^2}=\frac{\pi^2}{3}
-\end{align}</script><p>便可得到热导率与热电导率的结果。</p>
+\int_{-\infty}^\infty dx \frac{x^2e^x}{(e^x+1)^2}=\frac{\pi^2}{3}
+\end{align}
+\]</span> 便可得到热导率与热电导率的结果。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>这实际上就是一个建模的过程，并不是由什么第一性原理写出的方程，因此不必深究<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -708,8 +922,8 @@ u_n^y&= A_ye^{i(q\cdot R_n-\omega t)}
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
               <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 物理</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
               <a href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 固体物理</a>
           </div>
 
@@ -757,13 +971,13 @@ u_n^y&= A_ye^{i(q\cdot R_n-\omega t)}
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">124k</span>
+    <span title="站点总字数">159k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:46</span>
+    <span title="站点阅读时长">4:49</span>
   </span>
 </div>
 
