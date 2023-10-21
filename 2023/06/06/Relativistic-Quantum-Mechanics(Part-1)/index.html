@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8Bdirac-equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#klein-gordon-equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirac-equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma%E7%9F%A9%E9%98%B5"><span class="nav-text">\(\gamma\)矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%88%E6%81%92%E6%B5%81"><span class="nav-text">守恒流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#free-particle-solution"><span class="nav-text">Free-Particle Solution</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B-Dirac-Equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Klein-Gordon-Equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dirac-Equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma-%E7%9F%A9%E9%98%B5"><span class="nav-text">$\gamma$矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%88%E6%81%92%E6%B5%81"><span class="nav-text">守恒流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Free-Particle-Solution"><span class="nav-text">Free-Particle Solution</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.2k</span>
+      <span>4.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -355,221 +355,144 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
 <span id="more"></span>
 <pre><code>参考教材:《高等量子力学》——喀兴林
-《Modern Quantum Mechanics》——J.J. Sakurai</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span></p>
-<p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
+《Modern Quantum Mechanics》——J.J. Sakurai
+</code></pre><script type="math/tex; mode=display">
+\require{physics}</script><p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的$\gamma$矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
+<h1 id="狄拉克方程-Dirac-Equation"><a href="#狄拉克方程-Dirac-Equation" class="headerlink" title="狄拉克方程(Dirac Equation)"></a>狄拉克方程(Dirac Equation)</h1><h2 id="电子的相对论运动方程"><a href="#电子的相对论运动方程" class="headerlink" title="电子的相对论运动方程"></a>电子的相对论运动方程</h2><h3 id="Klein-Gordon-Equation"><a href="#Klein-Gordon-Equation" class="headerlink" title="Klein-Gordon Equation"></a>Klein-Gordon Equation</h3><p>回忆初等量子力学中，电子在电磁场中的运动方程为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
+ i\hbar\pdv{t}\psi=H\psi
+\end{align}</script><p>其中哈密顿量的表达式为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
+ H=\frac{(p-qA)^2}{2m}+qV
+\end{align}</script><p>很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
+ (i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
+\end{align}</script><blockquote id="fn_1">
+<sup>1</sup>. 对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<sup><a href="#fn_2" id="reffn_2">2</a></sup>，因为他有一系列问题:</p>
+<blockquote id="fn_2">
+<sup>2</sup>. 事实上我们知道，这应该是spin=0粒子的自由运动方程<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
 <ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
+<li>概率诠释$\psi^*\psi$并不是正定的，缺乏物理意义</li>
+<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到$-\infty$能级</li>
+<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的$\pdv{\psi}{t}$</li>
 <li>最重要的是，该方程计算的氢原子能级与实验不符</li>
 </ul>
 <p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：
-<span class="math display">\[
+<h3 id="Dirac-Equation"><a href="#Dirac-Equation" class="headerlink" title="Dirac Equation"></a>Dirac Equation</h3><p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
+<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\pdv{t}\psi&amp;= (i\alpha \cdot \nabla +\beta m)\psi
-\end{align}
-\]</span> 简单起见，我们先假设系数<span
-class="math inline">\(\alpha,\beta\)</span>不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:
-<span class="math display">\[
+ i\pdv{t}\psi&= (i\alpha \cdot \nabla +\beta m)\psi
+\end{align}</script><p>简单起见，我们先假设系数$\alpha,\beta$不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 从这里开始我们使用自然单位制:<span
-class="math inline">\(c=\hbar=1\)</span>.上式中的<span
-class="math inline">\(\{A,B\}\)</span>代表反对易子<span
-class="math inline">\(AB+BA\)</span>.我们进一步用反对易子将上式写为:
-<span class="math display">\[
+ -\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
+\end{align}</script><p>从这里开始我们使用自然单位制:$c=\hbar=1$.上式中的${A,B}$代表反对易子$AB+BA$.我们进一步用反对易子将上式写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}&amp;=
-(-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 在自然单位之下，KG方程应该写为: <span class="math display">\[
+ -\pdv[2]{t}&= (-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
+\end{align}</script><p>在自然单位之下，KG方程应该写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}&amp;= -\nabla^2+m^2
-\end{align}
-\]</span>
-因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数<span
-class="math inline">\(\alpha,\beta\)</span>我们有如下要求: <span
-class="math display">\[
+ -\pdv[2]{t}&= -\nabla^2+m^2
+\end{align}</script><p>因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数$\alpha,\beta$我们有如下要求:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\alpha^i,\alpha^j\}&amp;= 2\delta^{ij}\\
-\{\alpha^i,\beta\}&amp;= 0\\
-\beta^2&amp;= 1
-\end{align}
-\]</span> 如此一来，Dirac方程写为: <span class="math display">\[
+ \{\alpha^i,\alpha^j\}&= 2\delta^{ij}\\
+ \{\alpha^i,\beta\}&= 0\\
+ \beta^2&= 1
+\end{align}</script><p>如此一来，Dirac方程写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\frac{\partial }{\partial t}\psi&amp;= (i\alpha\cdot \nabla+\beta
-m)\psi
-\end{align}
-\]</span> 为了得到更简洁的协变形式，我们左乘一个<span
-class="math inline">\(\beta\)</span>同时移项: <span
-class="math display">\[
+ i\frac{\partial }{\partial t}\psi&= (i\alpha\cdot \nabla+\beta m)\psi
+\end{align}</script><p>为了得到更简洁的协变形式，我们左乘一个$\beta$同时移项:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
-\end{align}
-\]</span> 我们期待写成的形式为: <span class="math display">\[
+ (i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
+\end{align}</script><p>我们期待写成的形式为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\gamma^\mu \partial_\mu-m)\psi&amp;= 0\\
-(-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&amp;= 0
-\end{align}
-\]</span> 因此我们定义: <span class="math display">\[
+ (i\gamma^\mu \partial_\mu-m)\psi&= 0\\
+ (-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&= 0
+\end{align}</script><p>因此我们定义:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\gamma^0&amp;= -\beta\\
-\gamma^i&amp;= -\beta\alpha^i
-\end{align}
-\]</span> 很容易可以得到: <span class="math display">\[
+ \gamma^0&= -\beta\\
+ \gamma^i&= -\beta\alpha^i
+\end{align}</script><p>很容易可以得到:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
-\end{align}
-\]</span> 当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为: <span
-class="math display">\[
+ \{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
+\end{align}</script><p>当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
-\end{align}
-\]</span> 此处的<span class="math inline">\(\gamma\)</span>即著名的<span
-class="math inline">\(\gamma\)</span>矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式<span
-class="math inline">\(i\frac{\partial }{\partial
-t}=\alpha\cdot\nabla+m\)</span>，研究对称性的时候一般用协变形式的<span
-class="math inline">\(i\gamma^\mu\partial_\mu=m\)</span>。</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<p>我们得到了Dirac方程的形式，但是我们还不知道<span
-class="math inline">\(\alpha,\beta\)</span>分别是什么，更别说由他们得到的<span
-class="math inline">\(\gamma\)</span>。从我们对<span
-class="math inline">\(\alpha,\beta\)</span>的要求可以猜测，<span
-class="math inline">\(\alpha\)</span>或许跟泡利矩阵有关系，因为泡利矩阵满足:
-<span class="math display">\[
+ \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\end{align}</script><p>此处的$\gamma$即著名的$\gamma$矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式$i\frac{\partial }{\partial t}=\alpha\cdot\nabla+m$，研究对称性的时候一般用协变形式的$i\gamma^\mu\partial_\mu=m$。</p>
+<h2 id="gamma-矩阵"><a href="#gamma-矩阵" class="headerlink" title="$\gamma$矩阵"></a>$\gamma$矩阵</h2><p>我们得到了Dirac方程的形式，但是我们还不知道$\alpha,\beta$分别是什么，更别说由他们得到的$\gamma$。从我们对$\alpha,\beta$的要求可以猜测，$\alpha$或许跟泡利矩阵有关系，因为泡利矩阵满足:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\sigma_i,\sigma_j\}&amp;= 2\delta_{ij}
-\end{align}
-\]</span> 但问题在于，在矩阵的二维表示中，我们无法找<span
-class="math inline">\(\beta\)</span>。<a
-href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">回忆四元数</a>我们知道，该空间任意一个元素都可以表示为:
-<span class="math display">\[
+ \{\sigma_i,\sigma_j\}&= 2\delta_{ij}
+\end{align}</script><p>但问题在于，在矩阵的二维表示中，我们无法找$\beta$。<a href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1">回忆四元数</a>/)我们知道，该空间任意一个元素都可以表示为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\beta&amp;= a\cdot \mathbb{1}+x^i\sigma_i\\
-&amp;= \begin{pmatrix}a+x^3&amp;x^2-ix^3\\
-x^2+ix^3&amp;a-x^3\end{pmatrix}\\
-\Rightarrow \{\beta,\sigma_j\}&amp;= 2a\sigma_j+2x^i\delta_{ij}\\
-&amp;= 0
-\end{align}
-\]</span> 当<span class="math inline">\(j=3\)</span>时： <span
-class="math display">\[
+ \beta&= a\cdot \mathbb{1}+x^i\sigma_i\\
+ &= \begin{pmatrix}a+x^3&x^2-ix^3\\ x^2+ix^3&a-x^3\end{pmatrix}\\
+\Rightarrow \{\beta,\sigma_j\}&= 2a\sigma_j+2x^i\delta_{ij}\\
+&= 0
+\end{align}</script><p>当$j=3$时：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-a\sigma_3+x^3\delta_{ij}&amp;= \begin{pmatrix}a+x^3&amp;0\\0&amp;-a+x^3
-\end{pmatrix}\\
-&amp;= \begin{pmatrix}0&amp;0\\0&amp;0\end{pmatrix}\\
-\Rightarrow a&amp;= x^3=0
-\end{align}
-\]</span> 同理可以得到所有分量<span
-class="math inline">\(a,x^i\)</span>均为0.也就是说在2x2矩阵的表示中我们找不到合适的<span
-class="math inline">\(\alpha,\beta\)</span>。因此我们将目光看向4x4的矩阵：
-<span class="math display">\[
+ a\sigma_3+x^3\delta_{ij}&= \begin{pmatrix}a+x^3&0\\0&-a+x^3 \end{pmatrix}\\
+ &= \begin{pmatrix}0&0\\0&0\end{pmatrix}\\
+\Rightarrow a&= x^3=0
+\end{align}</script><p>同理可以得到所有分量$a,x^i$均为0.也就是说在2x2矩阵的表示中我们找不到合适的$\alpha,\beta$。因此我们将目光看向4x4的矩阵：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\alpha^i&amp;\triangleq  \sigma^x\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^z\otimes \sigma^0
-\end{align}
-\]</span> 这是Sakurai老师书中使用的定义，其中<span
-class="math inline">\(\sigma^0\)</span>代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的<span
-class="math inline">\(\gamma\)</span>矩阵。比如我们可以这样定义: <span
-class="math display">\[
+ \alpha^i&\triangleq  \sigma^x\otimes \sigma^i\\
+ \beta &\triangleq \sigma^z\otimes \sigma^0
+\end{align}</script><p>这是Sakurai老师书中使用的定义，其中$\sigma^0$代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的$\gamma$矩阵。比如我们可以这样定义:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\alpha^i &amp;\triangleq \sigma^j\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^k\otimes \sigma^0
-\end{align}
-\]</span> 其中<span class="math inline">\(j\neq
-k\)</span>，否则等价于2x2矩阵表示。很容易验证： <span
-class="math display">\[
+ \alpha^i &\triangleq \sigma^j\otimes \sigma^i\\
+ \beta &\triangleq \sigma^k\otimes \sigma^0
+\end{align}</script><p>其中$j\neq k$，否则等价于2x2矩阵表示。很容易验证：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\alpha^m,\alpha^n\}&amp;= (\sigma^j)^2\otimes
-\sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
-&amp;= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
-\{\alpha^i,\beta\}&amp;= (\sigma^j\sigma^k)\otimes
-\sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
-&amp;= 0
-\end{align}
-\]</span> 上式最后一步使用了<span class="math inline">\(j\neq
-k\)</span>的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
-<p>喀老师的书上是使用了群论的知识分析得到<span
-class="math inline">\(\alpha,\beta\)</span>必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
-<h2 id="守恒流">守恒流</h2>
-<p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:
-<span class="math display">\[
+ \{\alpha^m,\alpha^n\}&= (\sigma^j)^2\otimes \sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
+ &= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
+ \{\alpha^i,\beta\}&= (\sigma^j\sigma^k)\otimes \sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
+ &= 0
+\end{align}</script><p>上式最后一步使用了$j\neq k$的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
+<p>喀老师的书上是使用了群论的知识分析得到$\alpha,\beta$必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
+<h2 id="守恒流"><a href="#守恒流" class="headerlink" title="守恒流"></a>守恒流</h2><p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{\partial }{\partial t}\rho+\nabla\cdot J=0
-\end{align}
-\]</span> 从Dirac方程入手: <span class="math display">\[
+ \frac{\partial }{\partial t}\rho+\nabla\cdot J=0
+\end{align}</script><p>从Dirac方程入手:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta
-m)\psi&amp;= 0\\
-\psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta
-m)\psi^*&amp;= 0
-\end{align}
-\]</span>
-其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:
-<span class="math display">\[
+ \psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta m)\psi&= 0\\
+ \psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta m)\psi^*&= 0
+\end{align}</script><p>其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial
-t}\psi^*)&amp;=
-i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
-\frac{\partial }{\partial t}(\psi^*\psi)&amp;=
-\nabla\cdot(\psi^*\alpha\psi)\\
-  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&amp;=
-\nabla_i(\bar{\psi}\gamma^i\psi)
-\end{align}
-\]</span> 综上我们可以写出: <span class="math display">\[
+ i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial t}\psi^*)&= i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
+ \frac{\partial }{\partial t}(\psi^*\psi)&= \nabla\cdot(\psi^*\alpha\psi)\\
+  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&= \nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+ \Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&= \nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+ \frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&= \nabla_i(\bar{\psi}\gamma^i\psi)
+\end{align}</script><p>综上我们可以写出:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\partial_\mu J^\mu=0
-\end{align}
-\]</span> 其中<span
-class="math inline">\(J^\mu=\bar{\psi}\gamma^\mu\psi\)</span>.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
-<h2 id="free-particle-solution">Free-Particle Solution</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-
+ \partial_\mu J^\mu=0
+\end{align}</script><p>其中$J^\mu=\bar{\psi}\gamma^\mu\psi$.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
+<h2 id="Free-Particle-Solution"><a href="#Free-Particle-Solution" class="headerlink" title="Free-Particle Solution"></a>Free-Particle Solution</h2>
     </div>
 
     
@@ -627,13 +550,13 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">159k</span>
+    <span title="站点总字数">124k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:49</span>
+    <span title="站点阅读时长">3:46</span>
   </span>
 </div>
 
