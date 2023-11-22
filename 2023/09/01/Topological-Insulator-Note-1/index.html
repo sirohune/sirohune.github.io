@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="aNO5OJ0VXdBc3AINNLH0mJJyAQkuN8KK-ipMzb6CLJ0">
+  <meta name="msvalidate.01" content="81D4979F22922ACDEC47E732B4E79F86">
+  <meta name="baidu-site-verification" content="codeva-8Bwmu2OwNw">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="参考： 《A Short Course on Topological Insulators》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Topological-Insulator-Note-1">
+<meta property="og:url" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/index.html">
+<meta property="og:site_name" content="はくのBlog">
+<meta property="og:description" content="参考： 《A Short Course on Topological Insulators》">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/ssh-model.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/dispersion.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/dimerized.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/example.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/example-N=50.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/chang-winding-number.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/SSH-phase-diagram.png">
+<meta property="og:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/berry-fulx.png">
+<meta property="article:published_time" content="2023-09-01T11:52:57.000Z">
+<meta property="article:modified_time" content="2023-11-03T10:13:59.290Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="condensed matter theory">
+<meta property="article:tag" content="Topological-Insulator">
+<meta property="article:tag" content="physics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/ssh-model.png">
+
+
+<link rel="canonical" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/","path":"2023/09/01/Topological-Insulator-Note-1/","title":"Topological-Insulator-Note-1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Topological-Insulator-Note-1 | はくのBlog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">はくのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">百洛的小屋</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-language"><a href="/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li><li class="menu-item menu-item-journal"><a href="https://sirohune.site/2023/07/26/Journal/" rel="section"><i class="fa-solid fa-pencil fa-fw"></i>札记</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-1-SSH-model"><span class="nav-text">Chapter 1 SSH model</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-The-SSH-Hamiltonian"><span class="nav-text">1.1 The SSH Hamiltonian</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-External-and-Internal-Degrees-of-Freedom"><span class="nav-text">1.1.1 External and Internal Degrees of Freedom</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Bulk-Hamiltonian"><span class="nav-text">1.2 Bulk Hamiltonian</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-Bulk-Momentum-Space-Hamiltonian"><span class="nav-text">1.2.1 Bulk Momentum-Space Hamiltonian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-The-Hopping-Is-Staggered-to-Open-a-Gap"><span class="nav-text">1.2.2 The Hopping Is Staggered to Open a Gap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-Edge-States"><span class="nav-text">1.3 Edge States</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1-Fully-Dimerized-Limits"><span class="nav-text">1.3.1 Fully Dimerized Limits</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2-Moving-Away-from-the-Fully-Dimerized-Limit"><span class="nav-text">1.3.2 Moving Away from the Fully Dimerized Limit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-Chiral-Symmetry"><span class="nav-text">1.4 Chiral Symmetry</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-A-Different-Type-of-Symmetry"><span class="nav-text">1.4.1 A Different Type of Symmetry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-Consequence-of-Chiral-Symmetry-for-Energy-Eigenstates"><span class="nav-text">1.4.2 Consequence of Chiral Symmetry for Energy Eigenstates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-3-Consequence-of-Chiral-Symmetry-Bulk-Winding-Number-for-the-SSH-Model"><span class="nav-text">1.4.3 Consequence of Chiral Symmetry: Bulk Winding Number for the SSH Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-Number-of-Edge-States-as-Topological-Invariant"><span class="nav-text">1.5 Number of Edge States as Topological Invariant</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-1-Topological-Invariant"><span class="nav-text">1.5.1 Topological Invariant</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-2-Bulk-Boundary-Correspondence-in-the-SSH-Model"><span class="nav-text">1.5.2 Bulk-Boundary Correspondence in the SSH Model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-3-Exact-Calculation-of-Edge-States"><span class="nav-text">1.5.3 Exact Calculation of Edge States</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-2-Berry-Phase-Chern-Number"><span class="nav-text">Chapter 2 Berry Phase, Chern Number</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Discrete-Case"><span class="nav-text">2.1 Discrete Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-Berry-Phase"><span class="nav-text">2.1.1 Berry Phase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-Berry-Flux"><span class="nav-text">2.1.2 Berry Flux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-Chern-Number"><span class="nav-text">2.1.3 Chern Number</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Continuum-Case"><span class="nav-text">2.2 Continuum Case</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-Berry-Connection"><span class="nav-text">2.2.1 Berry Connection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-Berry-Curvature"><span class="nav-text">2.2.2 Berry Curvature</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-Chern-Number"><span class="nav-text">2.2.3 Chern Number</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">物理与人生</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:hakufune@gmail.com" title="E-Mail → mailto:hakufune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://huanyushi.github.io/" title="https:&#x2F;&#x2F;huanyushi.github.io&#x2F;" rel="noopener" target="_blank">杂然赋流形丶</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://breayhing.github.io/" title="https:&#x2F;&#x2F;breayhing.github.io&#x2F;" rel="noopener" target="_blank">breayhing</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/09/01/Topological-Insulator-Note-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="はくのBlog">
+      <meta itemprop="description" content="物理与人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Topological-Insulator-Note-1 | はくのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Topological-Insulator-Note-1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-01 19:52:57" itemprop="dateCreated datePublished" datetime="2023-09-01T19:52:57+08:00">2023-09-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-11-03 18:13:59" itemprop="dateModified" datetime="2023-11-03T18:13:59+08:00">2023-11-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2023/09/01/Topological-Insulator-Note-1/" class="post-meta-item leancloud_visitors" data-flag-title="Topological-Insulator-Note-1" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/09/01/Topological-Insulator-Note-1/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/09/01/Topological-Insulator-Note-1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>17k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>30 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <pre><code>参考： 《A Short Course on Topological Insulators》
+</code></pre><span id="more"></span>
+<h2 id="Chapter-1-SSH-model"><a href="#Chapter-1-SSH-model" class="headerlink" title="Chapter 1 SSH model"></a>Chapter 1 SSH model</h2><h3 id="1-1-The-SSH-Hamiltonian"><a href="#1-1-The-SSH-Hamiltonian" class="headerlink" title="1.1 The SSH Hamiltonian"></a>1.1 The SSH Hamiltonian</h3><p>SSH模型是一个二周期标准紧束缚模型，一个原胞中有两个个点A，B。将不同原胞之间的跃迁强度设为$w$,则原胞内不同原子的跃迁强度为$v$,因此哈密顿量写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H&= v\sum\limits_m^N(|{m,B}\rangle\langle{m,A}|+h.c.)+w\sum\limits_m^{N-1}(|{m+1,A}\rangle\langle{m,B}|+h.c.),
+\end{align}</script><p>其中$h.c.$代表厄米共轭，m是原胞序号。个人觉得，从这个哈密顿量可以看出SSH模型的物理图像应该与双原子的一维晶格振动更接近，只需将跃迁强度解释为相互作用强度，只不过晶格振动是晶格的，这里是电子的。</p>
+<p><img src="ssh-model.png" alt=""></p>
+<p>比如N=4的SSH模型哈密顿量矩阵表示如下:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H&= \begin{pmatrix}0&v&0&0&0&0&0&0\\
+v&0&w&0&0&0&0&0\\
+0&w&0&v&0&0&0&0\\
+0&0&v&0&w&0&0&0\\
+0&0&0&w&0&v&0&0\\
+0&0&0&0&v&0&w&0\\
+0&0&0&0&0&w&0&v\\
+0&0&0&0&0&0&v&0\end{pmatrix}.
+\end{align}</script><h4 id="1-1-1-External-and-Internal-Degrees-of-Freedom"><a href="#1-1-1-External-and-Internal-Degrees-of-Freedom" class="headerlink" title="1.1.1 External and Internal Degrees of Freedom"></a>1.1.1 External and Internal Degrees of Freedom</h4><p>为了更好地研究SSH模型，我们将系统分为两个部分，一个是外部自由度，即不同的原胞；一个是内部自由度，即一个原胞内不同的原子：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |{m,\alpha}\rangle\to |{m}\rangle \otimes |{\alpha}\rangle,
+\end{align}</script><p>其中$m=1,…,N$,$\alpha\in {A,B}$.现在我们用这种视角再回看前面写出的SSH哈密顿量矩阵表示，每2*2矩阵看出一个块矩阵，则很显然对角块矩阵可以写为$v\sigma_x=v\begin{pmatrix}0&amp;1\1&amp;0\end{pmatrix}$,而次对角的块矩阵，比如对角线下方的次对角块矩阵可以写为$w\begin{pmatrix}0&amp;1\0&amp;0\end{pmatrix}=w\frac{\sigma_x+i\sigma_y}{2}$,因此哈密顿量写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H=v\sum\limits_m^N |{m}\rangle \langle{m}|\otimes \sigma_x+w\sum\limits_m^{N-1}(|{m+1}\rangle \langle{m}| \otimes \frac{\sigma_x+i\sigma_y}{2}+h.c.)
+\end{align}</script><p>这种表示方法将后面研究能谱时会发挥作用。</p>
+<h3 id="1-2-Bulk-Hamiltonian"><a href="#1-2-Bulk-Hamiltonian" class="headerlink" title="1.2 Bulk Hamiltonian"></a>1.2 Bulk Hamiltonian</h3><p>固体物理中，系统总是分为bulk和边界两部分，因为通常N的量级很大，所以bulk是系统的主要组成成分，决定了系统最重要的物理性质，因此本小节先研究bulk部分。</p>
+<p>处理bulk时，因为N很大，所以系统通常被加以周期性边界条件，如此一来，SSH模型的bulk哈密顿量写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H_b=\sum\limits_m^N(v |{m,B}\rangle \langle{m,A}|+w |{(m\mod{N})+1,A}\rangle \langle{m,B}|)+h.c.
+\end{align}</script><p>这里的mod使得第N个原胞的B原子与第一个原胞的A原子“连接”成环。</p>
+<h4 id="1-2-1-Bulk-Momentum-Space-Hamiltonian"><a href="#1-2-1-Bulk-Momentum-Space-Hamiltonian" class="headerlink" title="1.2.1 Bulk Momentum-Space Hamiltonian"></a>1.2.1 Bulk Momentum-Space Hamiltonian</h4><p>当我们不关心原胞中的具体细节的时候，也就是只考虑外部自由度的时候，回忆紧束缚模型：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \psi_k(r)=\frac{1}{\sqrt{N}}\sum\limits_n e^{ikR_n}\phi(r-R_n),
+\end{align}</script><p>其中$\phi(r-R_n)$是第n个原胞单独的波函数,$R_n=na$，这里我们将原胞间距a设为1，同时因为这里只考虑外部自由度，我们将符号$\psi_k$留给整个系统的本征态，外部自由度的本征态写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |{k}\rangle\frac{1}{\sqrt{N}}\sum\limits_m^Ne^{imk}|{m}\rangle.
+\end{align}</script><p>$k$取在第一布里渊区$k\in {\frac{2\pi}{N},…,2\pi}$.完整系统的本征态写为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |{\psi_n}\rangle&= |{k}\rangle\otimes |{u_n(k)}\rangle\\
+ |{u_n(k)}\rangle&= a_n(k) |{A}\rangle+b_n(k)|{B}\rangle.
+\end{align}</script><p>我们想研究内部自由度对能量的影响，因此我们要取定外部自由度$k$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= \langle{k}|H_b |{k}\rangle\\
+ H(k)|{u_n(k)}\rangle&= E_n(k) |{u_n(k)}\rangle.
+\end{align}</script><p>将$|{k}\rangle=\frac{1}{\sqrt{N}}\sum\limits_m^Ne^{imk}|{m}\rangle$带入$H(k)$的定义中可以得到(这里不写出计算过程)：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= v |{B}\rangle \langle{A}|+w^{-ik}|{A}\rangle \langle{B}|+h.c..
+\end{align}</script><p>写成矩阵表示即：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= \begin{pmatrix}0&v+we^{-ik}\\
+v+we^{ik}&0\end{pmatrix}\\
+H(k)\begin{pmatrix}a(k)\\
+b(k\end{pmatrix}&= E(k)\begin{pmatrix}a(k)\\
+b(k\end{pmatrix}.
+\end{align}</script><h4 id="1-2-2-The-Hopping-Is-Staggered-to-Open-a-Gap"><a href="#1-2-2-The-Hopping-Is-Staggered-to-Open-a-Gap" class="headerlink" title="1.2.2 The Hopping Is Staggered to Open a Gap"></a>1.2.2 The Hopping Is Staggered to Open a Gap</h4><p>上一小节写出的动量空间哈密顿量的本征值很容易写出：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ E(k)=\pm |v+we^{-ik}|=\pm\sqrt{v^2+w^2+2vw\cos k}.
+\end{align}</script><p>我们可以画出其色散关系<br><img src="dispersion.png" alt=""><br>这里给出mathematica代码:<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Manipulate</span><span class="punctuation">[</span><span class="built_in">Module</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="variable">ep</span><span class="operator">,</span> <span class="variable">en</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="variable">ep</span><span class="punctuation">[</span><span class="type">k_</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="built_in">Sqrt</span><span class="punctuation">[</span><span class="variable">v</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="variable">w</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">2</span> <span class="variable">w</span> <span class="variable">v</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line">  <span class="variable">en</span><span class="punctuation">[</span><span class="type">k_</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="operator">-</span><span class="built_in">Sqrt</span><span class="punctuation">[</span><span class="variable">v</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="variable">w</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">2</span> <span class="variable">w</span> <span class="variable">v</span> <span class="built_in">Cos</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line">  <span class="built_in">Plot</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="variable">ep</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="operator">,</span> <span class="variable">en</span><span class="punctuation">[</span><span class="variable">k</span><span class="punctuation">]</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">k</span><span class="operator">,</span> <span class="operator">-</span><span class="built_in">Pi</span><span class="operator">,</span> <span class="built_in">Pi</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="built_in">PlotRange</span> <span class="operator">-&gt;</span> <span class="built_in">Automatic</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="punctuation">&#123;</span><span class="variable">w</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span></span><br><span class="line">    <span class="string">&quot;w&quot;</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="number">0.01</span><span class="operator">,</span> <span class="number">10</span><span class="operator">,</span> <span class="number">0.1</span><span class="punctuation">&#125;</span><span class="operator">,</span><span class="comment">(*调节参数 w 的范围和步长*)</span><span class="punctuation">&#123;</span><span class="punctuation">&#123;</span><span class="variable">v</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="string">&quot;v&quot;</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="number">0.01</span><span class="operator">,</span> <span class="number">10</span><span class="operator">,</span> </span><br><span class="line">  <span class="number">0.1</span><span class="punctuation">&#125;</span>   <span class="comment">(*调节参数 v 的范围和步长*)</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure><br>代码是非常简陋的，但是足矣让我们调节w与v的相对大小来观察色散关系。能隙大小为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Delta=|v-w|.
+\end{align}</script><p>因此当两个跃迁强度大小不同的时候，能带打开。当且仅当跃迁强度相等的时候能隙闭合，此时SSH模型用于描述导体。虽然严格的分析还需要考虑晶格振动，但是这个简单的模型已经可以让我们直观地理解跃迁强度对色散关系的影响。</p>
+<p>为了后面叙述的方面，我们要在这里介绍一下动量哈密顿量的另外一种视角，任何内部自由度为2的哈密顿量都可以写成如下形式:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= d_0\sigma_0+d\cdot\sigma.
+\end{align}</script><p>因此我们可以读出SSH模型的动量哈密顿量满足:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ d_x(k)=v+w\cos k;\quad d_y(k)=w\sin k.
+\end{align}</script><p>其余分量$d_0=d_z=0$。对于每一个给定的跃迁强度w和v，哈密顿矢量随着k变化。可以看出其形式是一个圆心与原点相距为v，圆半径为w的圆曲线。后面会讨论到，对于该圆轨道是否绕过原点，可以定义一个winding number，这个数是一维的<strong>拓扑不变量</strong>。</p>
+<h3 id="1-3-Edge-States"><a href="#1-3-Edge-States" class="headerlink" title="1.3 Edge States"></a>1.3 Edge States</h3><p>前面讨论了系统的bulk部分，现在讨论边缘Edge部分。我们从完全二聚化极限开始讨论，在这个极限下edge态的定义并不清晰，之后我们逐渐远离该极限，得到一个对edge实用的定义。</p>
+<h4 id="1-3-1-Fully-Dimerized-Limits"><a href="#1-3-1-Fully-Dimerized-Limits" class="headerlink" title="1.3.1 Fully Dimerized Limits"></a>1.3.1 Fully Dimerized Limits</h4><p>完全二聚化应该是化学中的概念，用我们这里的语言来说，就是w和v其中有一个为0，看起来就是把一维双原子链两两切割，如下图所示。<br><img src="dimerized.png" alt=""></p>
+<p>上图的第一种情况，也就是v=1,w=0，被我们称为平庸(trivial)情况。此时可以很容易求得$H(k)$本征值为$E=\pm1$，且本征态为$|{m,A}\rangle\pm |{m,B}\rangle$.此时$H(k)=\sigma_x$，是一个与波数k无关的量。能隙$\Delta$也是与波数k无关，即得到两个平的能带。</p>
+<p>对于第二种情况，也就是v=0，w=1，被我们称为拓扑(topological)情况。此时的本征值也是正负一，但是本征态与平庸情况差一相位，即$|{m,B}\rangle\pm |{m+1,A}\rangle$.这里的m取值从1到N-1.此时$H(k)=\sigma_x\cos k+\sigma_y\sin k$，当k遍历布里渊区时动量哈密顿量绕原点一圈。</p>
+<p>不过无论是哪一种情况，得到的能带都是平的，因此完全二聚化极限也被叫做平带极限(flat-band limit)，由于原子链二聚化，粒子不再沿着原子链运动，群速度为0.</p>
+<p>前面拓扑情况的本征矢中缺少了$|{1,A}\rangle,|{N,B}\rangle$两个态，很容易验证，当$v=0,w=1$时这两个态对应本征值为0：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H |{1,A}\rangle=H |{N,B}\rangle=0
+\end{align}</script><p>很显然这两个态符合我们对edge的理解，这两个是最简单的一种edge态。从图像可以看出这两个边缘的原子并不与其他原子相互作用，同时紧束缚模型把每个位置的onsite potentials位点势能设为0，所以edge态能量为0.</p>
+<h4 id="1-3-2-Moving-Away-from-the-Fully-Dimerized-Limit"><a href="#1-3-2-Moving-Away-from-the-Fully-Dimerized-Limit" class="headerlink" title="1.3.2 Moving Away from the Fully Dimerized Limit"></a>1.3.2 Moving Away from the Fully Dimerized Limit</h4><p>我们现在逐步取消全二聚化极限，观察edge态会有什么变化。书中给出的例子是N=10的。我们使用mathematica也可以画出下图：<br><img src="example.png" alt=""><br>其中纵坐标是本征能量，横坐标是参数v的取值。显然当我们逐步增大原胞内不同原子之间的跃迁强度v的时候，边缘态的能谱在很大一个范围内都接近于0.</p>
+<p>这里给出mathematica代码：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(*写一个基底，i代表原胞序号，alpha代表原胞中的不同原子*)</span></span><br><span class="line"><span class="variable">basis</span><span class="punctuation">[</span><span class="type">n_</span><span class="operator">,</span> <span class="type">i_</span><span class="operator">,</span> <span class="variable">\[Alpha]</span><span class="type">_</span><span class="punctuation">]</span> <span class="operator">:=</span> </span><br><span class="line">  <span class="built_in">Table</span><span class="punctuation">[</span><span class="built_in">If</span><span class="punctuation">[</span><span class="variable">\[Alpha]</span> <span class="operator">==</span> <span class="number">1</span><span class="operator">,</span> <span class="built_in">If</span><span class="punctuation">[</span><span class="variable">j</span> <span class="operator">==</span> <span class="number">2</span> <span class="variable">i</span> <span class="operator">-</span> <span class="number">1</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="punctuation">]</span><span class="operator">,</span> </span><br><span class="line">    <span class="built_in">If</span><span class="punctuation">[</span><span class="variable">j</span> <span class="operator">==</span> <span class="number">2</span> <span class="variable">i</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">j</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">2</span><span class="operator">*</span><span class="variable">n</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="comment">(*写出哈密顿量的一半*)</span></span><br><span class="line"><span class="variable">Hh</span><span class="punctuation">[</span><span class="type">n_</span><span class="operator">,</span> <span class="type">v_</span><span class="operator">,</span> <span class="type">w_</span><span class="punctuation">]</span> <span class="operator">:=</span> </span><br><span class="line">  <span class="built_in">Sum</span><span class="punctuation">[</span><span class="variable">v</span><span class="operator">*</span><span class="built_in">KroneckerProduct</span><span class="punctuation">[</span><span class="variable">basis</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">m</span><span class="operator">,</span> <span class="number">2</span><span class="punctuation">]</span><span class="operator">,</span> <span class="variable">basis</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">m</span><span class="operator">,</span> <span class="number">1</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">m</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="variable">n</span><span class="punctuation">&#125;</span><span class="punctuation">]</span> <span class="operator">+</span></span><br><span class="line">    <span class="built_in">Sum</span><span class="punctuation">[</span><span class="variable">w</span><span class="operator">*</span><span class="built_in">KroneckerProduct</span><span class="punctuation">[</span><span class="variable">basis</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">m</span> <span class="operator">+</span> <span class="number">1</span><span class="operator">,</span> <span class="number">1</span><span class="punctuation">]</span><span class="operator">,</span> <span class="variable">basis</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">m</span><span class="operator">,</span> <span class="number">2</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">m</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span></span><br><span class="line">      <span class="variable">n</span> <span class="operator">-</span> <span class="number">1</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="comment">(*加上它的厄米共轭得到完整哈密顿量*)</span></span><br><span class="line"><span class="variable">H</span><span class="punctuation">[</span><span class="type">n_</span><span class="operator">,</span> <span class="type">v_</span><span class="operator">,</span> <span class="type">w_</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="variable">Hh</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">v</span><span class="operator">,</span> <span class="variable">w</span><span class="punctuation">]</span> <span class="operator">+</span> <span class="built_in">ConjugateTranspose</span><span class="punctuation">[</span><span class="variable">Hh</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">v</span><span class="operator">,</span> <span class="variable">w</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">end</span> <span class="operator">=</span> <span class="number">3</span><span class="operator">;</span><span class="comment">(*参数v从0取到end=3*)</span></span><br><span class="line"><span class="variable">y</span> <span class="operator">=</span> <span class="built_in">ConstantArray</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="number">200</span><span class="punctuation">]</span><span class="operator">;</span><span class="comment">(*欲在0到3之间取200个点*)</span></span><br><span class="line"><span class="comment">(*每次都计算一次特征值，注意，对每个给定参数v均由20个特征值*)</span></span><br><span class="line"><span class="built_in">Do</span><span class="punctuation">[</span></span><br><span class="line"> <span class="variable">y</span><span class="punctuation">[</span><span class="punctuation">[</span><span class="variable">n</span><span class="punctuation">]</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="built_in">Eigenvalues</span><span class="punctuation">[</span><span class="variable">H</span><span class="punctuation">[</span><span class="number">10</span><span class="operator">,</span> <span class="variable">n</span><span class="operator">*</span><span class="variable">end</span><span class="operator">/</span><span class="number">200</span><span class="operator">,</span> <span class="number">1</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"> <span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">n</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">200</span><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line"><span class="comment">(*分别提取出第i个特征值，同时为其赋予横坐标方便后面画图*)</span></span><br><span class="line"><span class="variable">eigendate</span><span class="punctuation">[</span><span class="type">i_</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">Table</span><span class="punctuation">[</span><span class="punctuation">&#123;</span><span class="variable">end</span><span class="operator">/</span><span class="number">200</span><span class="operator">*</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">y</span><span class="punctuation">[</span><span class="punctuation">[</span><span class="variable">n</span><span class="operator">,</span> <span class="variable">i</span><span class="punctuation">]</span><span class="punctuation">]</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">n</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">200</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">data</span> <span class="operator">=</span> <span class="built_in">Table</span><span class="punctuation">[</span><span class="variable">eigendate</span><span class="punctuation">[</span><span class="variable">n</span><span class="punctuation">]</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="variable">n</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">20</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="built_in">ListLinePlot</span><span class="punctuation">[</span><span class="variable">data</span><span class="operator">,</span> <span class="built_in">PlotRange</span> <span class="operator">-&gt;</span> <span class="punctuation">&#123;</span><span class="punctuation">&#123;</span><span class="number">0</span><span class="operator">,</span> <span class="number">3</span><span class="punctuation">&#125;</span><span class="operator">,</span> <span class="punctuation">&#123;</span><span class="operator">-</span><span class="number">3</span><span class="operator">,</span> <span class="number">3</span><span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure></p>
+<p>从图中可以看出，因为0能量处在bulk的能隙中，所以edge态是局域的。换句话说，对于我们前面求过的bulk能带，如果能带分裂的话，E=0一定是处在能隙中的，我们假设edge态可以扩散到bulk中，那么它就应该可以画在能带中，但是edge态能量为0，无法画上去，也就是说edge态是局域态，不会扩散到bulk中。</p>
+<p>讨论完了bulk与edge后，我们接下来要介绍前面提到过的<strong>拓扑不变量winding number</strong>与edge态之间的联系，这种联系被称为bulk-boundary对应。在SSH模型中，这个特性来自于手性对称性。</p>
+<p>最后，为更直观地显示N对edge的影响，给出N=50的能量关于v的图像:<br><img src="example-N=50.png" alt=""></p>
+<h3 id="1-4-Chiral-Symmetry"><a href="#1-4-Chiral-Symmetry" class="headerlink" title="1.4 Chiral Symmetry"></a>1.4 Chiral Symmetry</h3><h4 id="1-4-1-A-Different-Type-of-Symmetry"><a href="#1-4-1-A-Different-Type-of-Symmetry" class="headerlink" title="1.4.1 A Different Type of Symmetry"></a>1.4.1 A Different Type of Symmetry</h4><p>量子力学中提过，如果算符A和哈密顿量对易，那么系统通常具有某种对称性。而这里介绍的手性对称性却与之相反，他要求:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Gamma H\Gamma^\dagger=-H,
+\end{align}</script><p>如果系统满足上式，则我们说系统具有手性对称性，其中算符$\Gamma$满足除幺正外的一系列要求,称为子晶格算符(sublattice operator)。</p>
+<p>第一个要求是厄米性:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Gamma^\dagger&= \Gamma\\
+ \Rightarrow \Gamma^2&= 1.
+\end{align}</script><p>第二个要求是子晶格算符局域，也就说作用于第m个原胞的算符作用在第m+1个原胞上结果为0.</p>
+<p>第三个要求是鲁棒性。以SSH模型为例，系统哈密顿量受到跃迁强度$v$和$w$的影响。鲁棒性要求，当改变跃迁参数的时候，原先满足手性对称性的哈密顿量始终满足该对称性。</p>
+<h4 id="1-4-2-Consequence-of-Chiral-Symmetry-for-Energy-Eigenstates"><a href="#1-4-2-Consequence-of-Chiral-Symmetry-for-Energy-Eigenstates" class="headerlink" title="1.4.2 Consequence of Chiral Symmetry for Energy Eigenstates"></a>1.4.2 Consequence of Chiral Symmetry for Energy Eigenstates</h4><p>从定义可以看出，手性对称性与一般的对称性不同（多了负号）。手性对称性又被称作子晶格对称性(sublattice symmetry),对于子晶格算符，我们介意将其分解为子晶格投影算符:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P_A=\frac{1}{2}(1+\Gamma);\quad P_B=\frac{1}{2}(1-\Gamma).
+\end{align}</script><p>投影算符满足:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P_\alpha |{m,\beta}\rangle=\delta_{\alpha,\beta}|{m,\beta}\rangle.
+\end{align}</script><p>很显然根据上面投影算符的定义有:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P_A+P_B=1;\quad P_A-P_B=\Gamma.
+\end{align}</script><p>第一个式子是很容易理解的，两个投影算符的和作用在任意一个态上得到或A或B，又或是两者分量之和。第一个式子帮助我们确认投影算符的定义无误，第二个式子则帮助我们理解子晶格算符，它作用在任意一个态上，对于B原子的分量总是会多出一个负号。</p>
+<p>借助子晶格算符的定义，我们还可以得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P_\alpha HP_\alpha= 0;\quad  H= P_A HP_B+P_BHP_A.
+\end{align}</script><p>将投影算符与子晶格算符的关系即可验算上式。实际上，用两个投影算符来定义手型对称性等价于用子晶格算符来做定义。</p>
+<p>从$\Gamma H\Gamma^\dagger=-H$可以得到子晶格算符会将本征态的本征值反号：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H\Gamma |{\psi_n}\rangle&= -\Gamma H |{\psi_n}\rangle\\
+ &= -E_n(\Gamma |{\psi_n}\rangle).
+\end{align}</script><p>也就是说，对于本征能量不为0的态$|{\psi_n}\rangle$,子晶格算符作用上去后得到的态$\Gamma |{\psi_n}\rangle$与原来正交:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \langle{\psi_n}|\Gamma |{\psi_n}\rangle&= 0\\
+ \Rightarrow \langle{\psi_n}|P_A|{\psi_n}\rangle&= \langle{\psi_n}|P_B|{\psi_n}\rangle.
+\end{align}</script><p>除此之外，根据定义我们还可以得到，投影算符作用在态上得到的态$P_\alpha |{\psi_n}\rangle$是子晶格算符的本征矢:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Gamma P_{A/B} |{\psi_n}\rangle=\pm P_{A/B}|{\psi_n}\rangle.
+\end{align}</script><p>上式可以通过带入投影算符的定义验证。因为投影算符作用得到的结果是子晶格A或B其中之一，是$\Gamma$的本征矢，所以我猜这是$\Gamma$被称为子晶格算符的原因。</p>
+<h4 id="1-4-3-Consequence-of-Chiral-Symmetry-Bulk-Winding-Number-for-the-SSH-Model"><a href="#1-4-3-Consequence-of-Chiral-Symmetry-Bulk-Winding-Number-for-the-SSH-Model" class="headerlink" title="1.4.3 Consequence of Chiral Symmetry: Bulk Winding Number for the SSH Model"></a>1.4.3 Consequence of Chiral Symmetry: Bulk Winding Number for the SSH Model</h4><p>在动量空间中，系统只有A和B两个自由度，此时投影算符写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ P_A= \begin{pmatrix}1&0\\
+0&0\end{pmatrix};\quad  P_B= \begin{pmatrix}0&0\\
+0&1\end{pmatrix}.
+\end{align}</script><p>则投影算符$\Gamma=P_A-P_B$可以写为$\sigma_z$.因为SSH模型具有手性对称性，也就是:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \Gamma H+H\Gamma&= 0\\
+\Rightarrow \sigma_z H+H\sigma_z&= 0.
+\end{align}</script><p>前文提到过，动量哈密顿量可以表示为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= d_0\sigma_0+d\cdot\sigma.
+\end{align}</script><p>手性对称性可以保证$d_z=0$.动量哈密顿量以泡利矩阵为基底展开的矢量$d(k)$在$\sigma_x,\sigma_y$平面上形成闭合曲线。当曲线过零点的时候，也就是存在一个k使得$d(k)=0$时，存在一个k使得能隙闭合，此时系统不是绝缘体，不属于我们讨论范围。而当矢量$d(k)$始终不过原点的时候，我们可以定义一个<strong>winding number</strong>，称为<strong>绕数</strong>。</p>
+<p>绕数的定义方式是，在闭合曲线上标明方向（$d(k)$随着k的改变应当有方向），接着从原点引出一条射向无穷远处的线，当射线与轨迹曲线相交时进行判断，如果曲线是逆时针则绕数+1（从0开始计），如果是顺时针则绕数-1。</p>
+<p>很显然绕数与矢量$d(k)$离原点的距离无关，因此我们将其投影到单位圆上，定义单位矢量$\tilde{d}$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \tilde{d}=\frac{d}{|d|}.
+\end{align}</script><p>因为我们研究的是绝缘，能带不闭合，所以上式分母不为0。如此我们可以进一步写出绕数的计算式:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \nu=\frac{1}{2\pi}\int_{-\pi}^{\pi}(\tilde{d}(k)\times\frac{d}{dk}\tilde{d}(k))_zdk.
+\end{align}</script><p>上式的叉乘可以保证曲线逆时针绕原点一圈计为1，顺时针计为-1.</p>
+<p>在计算SSH模型的绕数的时候，我们可以采用更加简便的表达式:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H(k)&= d_x\sigma_x+d_y\sigma_y\\
+ &= \begin{pmatrix}0&h(k)\\
+h^*(k)&0\end{pmatrix}.
+\end{align}</script><p>上式中的$h(k)=d_x-id_y$.根据叉乘的计算规则得到前面定义的绕数积分中，测度为$d_xd_y’-d_yd_x’$.很容易验证如下定义的绕数与原定义相差一个负号:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \nu=\frac{1}{2\pi i}\int_{-\pi}^{\pi}dk\frac{d}{dl}\log(h(k)).
+\end{align}</script><p>对于SSH模型来说，绕数不是0就是1，这取决于参数v和w(注意，绕数的表示字母是希腊字母nu)。前面提到的SSH模型的平庸情况和拓扑情况分别对于绕数等于0和1的情况。为什么说绕数是SSH模型的拓扑不变量呢？</p>
+<p>因为如果想改变绕数，比如从0到1，只有两个办法，a)一个是移动曲线，直至其经过原点，或者b)将其从$\sigma_x,\sigma_y$平面内抬起，然后套在原点上，如下图所示:<br><img src="chang-winding-number.png" alt=""><br>第一种方法会使能带闭合，变成导体，而我们研究绝缘体。第二种方法会破坏系统的手性对称性。因此我们说绕数是拓扑不变量。</p>
+<h3 id="1-5-Number-of-Edge-States-as-Topological-Invariant"><a href="#1-5-Number-of-Edge-States-as-Topological-Invariant" class="headerlink" title="1.5 Number of Edge States as Topological Invariant"></a>1.5 Number of Edge States as Topological Invariant</h3><p>对于绝缘体来说，绝热变化要满足:</p>
+<ol>
+<li>参数连续变化</li>
+<li>系统重要的对称性不能被破坏</li>
+<li>能带不能闭合</li>
+</ol>
+<p>大致上可以理解为系统变化得很缓慢，但值得一提的是，edge态的绝热变换与bulk的绝热变化需要做出区分，在第四章中我们会提到这一点（可能写不到第四章就是了）。</p>
+<h4 id="1-5-1-Topological-Invariant"><a href="#1-5-1-Topological-Invariant" class="headerlink" title="1.5.1 Topological Invariant"></a>1.5.1 Topological Invariant</h4><p>如果有某个与绝缘体哈密顿量有关的整数在系统的绝热变化下保持不变，那么我们称这个整数为<strong>拓扑不变量</strong>。需要注意的是，因为拓扑不变量定义依赖于绝热变化，所以拓扑不变量只在热力学极限下有定义，同时取决于我们好奇的对称性。</p>
+<p>定义了绝热变化与拓扑不变量后，我们便可以将具有拓扑不变量系统的哈密顿量视为相同的。比如说SSH模型中，绕数为0的哈密顿量绝热等价，绕数为1的亦然。我们可以画出如下相图:<br><img src="SSH-phase-diagram.png" alt=""></p>
+<h4 id="1-5-2-Bulk-Boundary-Correspondence-in-the-SSH-Model"><a href="#1-5-2-Bulk-Boundary-Correspondence-in-the-SSH-Model" class="headerlink" title="1.5.2 Bulk-Boundary Correspondence in the SSH Model"></a>1.5.2 Bulk-Boundary Correspondence in the SSH Model</h4><p>这里不加证明地指出，edge态的净数目也是一个拓扑不变量。体态边界对应关系指的是两个拓扑不变量之间的关系。绕数是从bulk哈密顿量中得到的，而edge态净数目是从边界得到的，两者总是同时变化，因此体态bulk和边界boundary有对应关系，这使得我们可以通过研究bulk来预言一些boundary的性质。</p>
+<h4 id="1-5-3-Exact-Calculation-of-Edge-States"><a href="#1-5-3-Exact-Calculation-of-Edge-States" class="headerlink" title="1.5.3 Exact Calculation of Edge States"></a>1.5.3 Exact Calculation of Edge States</h4><p>本小节我们来计算edge态的具体表达形式。考虑一般性，我们取消SSH模型的平移不变性，考虑每个每个原胞有自己的跃迁强度$v_m,w_m$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H&= \sum\limits_m^N(v_m|{m,B}\rangle\langle{m,A}|+h.c.)+\sum\limits_m^{N-1}(w_m|{m+1,A}\rangle\langle{m,B}|+h.c.).
+\end{align}</script><p>我们设edge态的形式为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \sum\limits_{m}^{N}(a_m |{m,A}\rangle+b_m |{m,B}\rangle).
+\end{align}</script><p>将其带入薛定谔方程得到:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ H\sum\limits_{m}^{N}(a_m |{m,A}\rangle+b_m |{m,B}\rangle)=0.
+\end{align}</script><p>很容易可以得到如下的代数方程($m=1,…,N-1$):</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ v_ma_m+w_ma_{m+1}&= 0\\
+ w_mb_m+v_{m+1}b_{m+1}&= 0.
+\end{align}</script><p>在边界上有$v_Na_N=v_1b_1=0$.利用高中求解数列表达式的技巧可以得到如下结果:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ a_m&= (\prod_{j=1}^{m-1}\frac{-v_j}{w_j})a_1;\quad m=2,...,N\\
+ b_m&= \frac{w_N}{w_m}(\prod_{m+1}^{N}\frac{-v_j}{w_j})b_N;\quad m=1,...,N-1.
+\end{align}</script><p>因为该假设中$v_1,v_N\neq0$，所以边界上只能得到:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ b_1=a_N=0.
+\end{align}</script><p>将其带入到上面的解中得到:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ a_N= (\prod_{j=1}^{N-1}\frac{-v_j}{w_j})a_1&= 0\\
+\Rightarrow a_1&= 0\\
+\Rightarrow a_m&= 0 .
+\end{align}</script><p>对于$b_m$也是如此，也就是说在一般情况下，不存在能量为0的态。尽管不存在准确的零能解，但是当原胞之间的跃迁强度远大于原胞内跃迁强度的时候，我们可以得到热力学极限下的近似零能解。在此极限下，我们定义bulk平均值(其实有点像几何平均数):</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \overline{\log|v|}&= \frac{1}{N-1}\sum\limits_m^{N-1}\log|v_m|\\
+  \overline{\log|w|}&= \frac{1}{N-1}\sum\limits_m^{N-1}\log|w_m|.
+\end{align}</script><p>如此一来，前面的$|a_N|,|b_1|$便可以写成：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |a_N| &=  (\prod_{j=1}^{N-1}\frac{|v_j|}{|w_j|})|a_1|;\quad |b_1|= \frac{|v_N|}{|w_1|}\prod_{j=2}^{N-1}\frac{|v_j|}{|w_j|}|b_N|\\
+ \Rightarrow &\begin{cases}|a_N|= |a_1|\exp[(N-1)(\overline{\log|v|}-\overline{\log|w|})]\\
+|b_1|= |b_N|\frac{|v_N |}{|v_1|}\exp[(N-1)(\overline{\log|v|}-\overline{\log|w|})]\end{cases}.
+\end{align}</script><p>定义局域长度(localization length):</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \xi&= \frac{1}{\overline{\log|w|}-\overline{\log|v|}}.
+\end{align}</script><p>则$|a_N|,|b_1|$写成:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |a_N|=|a_1|e^{(N-1)/\xi};\quad |b_1|=|b_N|\frac{|v_N |}{|v_1|}e^{-(N-1)/\xi}.
+\end{align}</script><p>只有在热力学极限下，bulk平均值才有意义，我们才有上面的表达式。$w&gt;v$的条件保证局域长度$\xi&gt;0$。既然此时$|a_N|,|b_1|\neq0$，则我们可以根据前面求得的$a_m,b_m$表达式写出零能解:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ |{L}\rangle=\sum\limits_m^Na_m |{m,A}\rangle;\quad |{R}\rangle=\sum\limits_m^Nb_m |{m,B}\rangle.
+\end{align}</script><h2 id="Chapter-2-Berry-Phase-Chern-Number"><a href="#Chapter-2-Berry-Phase-Chern-Number" class="headerlink" title="Chapter 2 Berry Phase, Chern Number"></a>Chapter 2 Berry Phase, Chern Number</h2><script type="math/tex; mode=display">
+\require{physics}</script><p>本章将会介绍介绍二维拓扑绝缘体中很重要的一个拓扑不变量——陈数。</p>
+<p>一言蔽之，<strong>陈数是一个与Berry曲率的面积分成比例的量</strong>。</p>
+<p>与陈数相关的概念有Berry相位，Berry曲率，我们将会一一介绍。接下来将从离散变量的角度和连续变量的角度分别引入上述概念。</p>
+<h3 id="2-1-Discrete-Case"><a href="#2-1-Discrete-Case" class="headerlink" title="2.1 Discrete Case"></a>2.1 Discrete Case</h3><p>我们定义$\gamma_{12}$来代表两个非正交态$\ket{\psi_1},\ket{\psi_2}$之间的相位差：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma_{12}\triangleq -\arg\bra{\psi_1}\ket{\psi_2}=\arg\bra{\psi_2}\ket{\psi_1}.
+\end{align}</script><p>很显然对于一个全局的规范变换：所有态矢量同时加上一个相同的相位$\alpha$，不会影响前面定义的相对相位。也就是说相对相位是具有<strong>全局规范对称性</strong>的，但是很显然不满足<strong>局域规范对称</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \ket{\psi_j}\to e^{i\alpha_j}\ket{\psi_j}\Rightarrow \gamma_{ij}\to \arg\bra{\psi_j}\ket{\psi_i}+i(\alpha_i-\alpha_j).
+\end{align}</script><h4 id="2-1-1-Berry-Phase"><a href="#2-1-1-Berry-Phase" class="headerlink" title="2.1.1 Berry Phase"></a>2.1.1 Berry Phase</h4><p>Berry相位的定义是在希尔伯特空间中取大于等于3个态，然后环绕一圈得到的相位差之和：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma_L=-\arg(\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}\ket{\psi_3}...\bra{\psi_N}\ket{\psi_1})
+\end{align}</script><p><strong>Attention!</strong><br>书上说为了体现Berry相位的规范不变性，可以将Berry相位写成投影算符的形式<sup><a href="#fn_1" id="reffn_1">1</a></sup>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma_L=-\arg\Tr(\ket{\psi_1}\bra{\psi_1}\ket{\psi_2}\bra{\psi_2}...\ket{\psi_N}\bra{\psi_N}).
+\end{align}</script><p><strong>Conclusion：Berry相位指的是绕着$S$一圈得到的相位差，其中$S$是感兴趣的研究区域，比如二维材料的边缘。</strong></p>
+<h4 id="2-1-2-Berry-Flux"><a href="#2-1-2-Berry-Flux" class="headerlink" title="2.1.2 Berry Flux"></a>2.1.2 Berry Flux</h4><p>对于二维晶格，假设其有n行m列原子。则上一节的Berry相位计算如下:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma_L=\sum\limits_n^{N-1}(\gamma_{(n,1),(n+1,1)}+\gamma_{(n+1,M),(n,M)})+\sum\limits_m^{M-1}(\gamma_{(N,m),(N,m+1)}+\gamma_{(1,m+1),(1,m)}).
+\end{align}</script><p>Berry相位应该是规范不变的，除了上一小节的投影算子的表示方法，还可以写成其他规范不变的表示方法.</p>
+<p><img src="berry-fulx.png" alt=""></p>
+<p>定义Berry流如上图所示，是为绕相邻四个格点一圈的相位差：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ F_{nm}&= \gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}.
+\end{align}</script><p>这将是一个规范不变的量，因为$\gamma<em>{(n,m),(n+1,m)}$产生的多余相位将会被$\gamma</em>{(n+1,m+1),(n,m+1)}$产生的所抵消（如果我们假设类似$\gamma<em>{(1,2),(2,2)}$与$\gamma</em>{(1,3),(2,3)}$产生的多余相位相等的话）</p>
+<p>这种Berry流就像电磁学中的环路电流一样，边界所围绕的区域中的Berry流之和等于边界上的Berry相位:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma_L=\sum\limits_{n}^{N-1}\sum\limits_m^{M-1}F_{nm}.
+\end{align}</script><p>Berry相位由规范不变的Berry构成，可以看出Berry相位也是规范不变的。</p>
+<p>由于Berry相位最初的定义是利用了arg函数，书本上对于Berry流的定义也是利用arg函数：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \exp[-i\sum\limits_n^{N-1}\sum\limits_m^{M-1}F_{nm}]=e^{-i\gamma_L},
+\end{align}</script><p>因此实际上，Berry相位和Berry流是可以相差$2\pi$的整数倍的。</p>
+<h4 id="2-1-3-Chern-Number"><a href="#2-1-3-Chern-Number" class="headerlink" title="2.1.3 Chern Number"></a>2.1.3 Chern Number</h4><p>对于二维晶格，如果我们使用周期性边界条件，也就是说，对于一个矩形，对边分别认同，则我们得到的几何将是一个甜甜圈。对于这样的几何，很显然有如下结果：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \prod_m^M\prod_n^N e^{-iF_{nm}}=1.
+\end{align}</script><p><strong>陈数</strong>在离散情况下的定义即为该甜甜圈表面Berry流之和除以$2\pi$：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ Q=\frac{1}{2\pi}\sum\limits_{nm}F_{nm}.
+\end{align}</script><p>Berry流是相邻四个格点之间的涡流，陈数作为Berry之和，其意义应该是整个曲面的涡流。同时，陈数作为规范不变的Berry之和，自身也是一个规范不变量。同时从前面的描述也可以看出，陈数Q应为整数。</p>
+<p>虽然本小节以甜甜圈为例子，但是实际上这些结论可以推广到所有的可定向闭合曲面。</p>
+<h3 id="2-2-Continuum-Case"><a href="#2-2-Continuum-Case" class="headerlink" title="2.2 Continuum Case"></a>2.2 Continuum Case</h3><h4 id="2-2-1-Berry-Connection"><a href="#2-2-1-Berry-Connection" class="headerlink" title="2.2.1 Berry Connection"></a>2.2.1 Berry Connection</h4><p>现在考虑连续的情况，$\ket{\psi(R)}$在一条曲线上移动，$R$代表位置，假定态矢量在曲线附近的开区间是光滑的（为此我们不用担心导数的一系列数学上的问题），根据之前的定义，我们考虑态矢量从$R$处走到$R+dR$处所变化的相位：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e^{-i\Delta\gamma}&= \ip{\psi(R)}{\psi(R+dR)}\\
+ &\approx 1+\mel{\psi(R)}{\nabla}{\psi(R)}dR\\
+\Rightarrow \Delta\gamma&= i\mel{\psi(R)}{\nabla}{\psi(R)}dR.
+\end{align}</script><p>定义<strong>Berry联络</strong>为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ A(R)&\triangleq \lim_{dR\to 0}\frac{\Delta\gamma}{dR}=i\mel{\psi(R)}{\nabla}{\psi(R)}.
+\end{align}</script><p>Berry联络的意义是：态矢量在曲线上移动单位距离时，相位对应的变化。</p>
+<p>由于态矢量是归一化的，我们可以得到$Re(\mel{\psi}{\nabla}{\psi})=0$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \nabla\ip{\psi}{\psi}&= \ip{\nabla\psi}{\psi}+\ip{\psi}{\nabla\psi}= 0,
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+ \Rightarrow Re(\ip{\psi}{\nabla\psi})&= 0.
+\end{align}</script><p>因此Berry联络又可以写为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ A(R)=-Im(\ip{\psi(R)}{\nabla\psi(R)}).
+\end{align}</script><p>很容易验证，Berry联络是不满足局域规范变换的：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \ket{\psi(R)}\to &e^{i\alpha(R)},\\
+ A(R)\to & A(R)-\nabla\alpha(R).
+\end{align}</script><p>既然我们得到了相位关于位置的变化关系，我们可以很容易写出Berry相位：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \gamma(\mathscr{l})=-\arg\exp[-i\oint_\mathscr{l} A\cdot dR].
+\end{align}</script><p>我们将会证明它在连续情况下也是规范不变的，即便它看起来由非规范不变的Berry联络组成。</p>
+<h4 id="2-2-2-Berry-Curvature"><a href="#2-2-2-Berry-Curvature" class="headerlink" title="2.2.2 Berry Curvature"></a>2.2.2 Berry Curvature</h4><p>与离散情况的思路一样，我们希望将Berry相位用规范不变的量来表示，以此证明它是规范不变的。将连续情况与离散情况对比，Berry相位为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e^{-i\gamma_L}&= \exp(-i\sum\limits_{nm}F_{nm})\\
+ &= \exp(-i\oint_\mathscr{l}A\cdot dR).
+\end{align}</script><p>一个是曲面的求和，一个是边界的积分，这让我们联想到斯托克斯定理，实际上，对离散的情况取极限，我们可以得到一个面积分。</p>
+<p>我们将二维晶格的晶格常数设为$\Delta x,\Delta y$,当晶格常数趋于0的时候得到连续的情况。Berry流为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ F_{nm}&= \gamma_{(n,m),(n+1,m)}+\gamma_{(n+1,m),(n+1,m+1)}+\gamma_{(n+1,m+1),(n,m+1)}+\gamma_{(n,m+1),(n,m)}\
+\end{align}</script><p>从上一个小节我们知道两个态矢量之间的相位差可以表示为Berry联络，因此Berry流可以写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ F_{nm}= &A_x(x_n+\frac{\Delta x}{2},y_m)\Delta x+A_y(x_n+\Delta x,y_m+\frac{\Delta y}{2})\\
+ +&A_x(x_n+\frac{\Delta x}{2},y_m+\Delta y)(-\Delta x)+A_y(x_n,y_m+\frac{\Delta y}{2})(-\Delta y).
+\end{align}</script><p>取$\Delta x,\Delta y\to 0$时：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ F_{nm}=[\partial_xA_y(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta y}{2})-\partial_yA_x(x_n+\frac{\Delta x}{2},y_m+\frac{\Delta y}{2})]\Delta x\Delta y.
+\end{align}</script><p>定义<strong>Berry曲率</strong>为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ B=\lim_{\Delta x,\Delta y\to0}\frac{F_{nm}}{\Delta x\Delta y}.
+\end{align}</script><p>将格点中间的位置记为$R_{nm}$，则Berry曲率为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ B=\partial_xA_y(R_{nm})-\partial_yA_x(R_{nm}).
+\end{align}</script><p>回忆一下规范变换下Berry联络多出来的项，很显然Berry是规范不变的，因为多出来的项会被减号消去。回到正题，在晶格常数趋于零的极限下，Berry相位的表示可以写为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e^{-i\gamma_L}&= \exp(-i\sum\limits_{nm}B(R_{nm})\Delta x\Delta y)\\
+ &= \exp(-i\int_\mathscr{S} B(x,y)dxdy).
+\end{align}</script><p>其中$\mathscr{S}$是以$\mathscr{l}$为边界的曲面</p>
+<h4 id="2-2-3-Chern-Number"><a href="#2-2-3-Chern-Number" class="headerlink" title="2.2.3 Chern Number"></a>2.2.3 Chern Number</h4><p>在连续的情况下，陈数继承离散时的定义，取$\Delta x,\Delta y\to 0$即可，书本对于陈数的定义忽然多了一个负号(跟闵氏度规一样，可以有两种等价的定义，相差一个负号):</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ Q=-\frac{1}{2\pi}\int_\mathscr{S}Bdxdy.
+\end{align}</script><p>对于二维晶格材料，能谱上存在能带，当存在能隙的时候，能带之间清晰地被区分开，他们的态函数表示为$\ket{u_n(k)}$,我们可以不带任何歧义地定义第n个能带的Berry联络：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ A^{(n)}_j(k)=i\mel{u_n(k)}{\partial_{k_j}}{u_n(k)},
+\end{align}</script><p>以及第n个能带的陈数:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ Q^{(n)}=-\frac{1}{2\pi}\int_{BZ}dk_xdk_y(\pdv{A_y^{(n)}}{k_x}-\pdv{A_x^{(n)}}{k_y}).
+\end{align}</script><p>当系统绝热变化的时候，也就是说哈密顿量的改变不影响能隙的存在，此时Berry曲率连续变化，但是陈数是一个整数，所以陈数并不会改变<sup><a href="#fn_2" id="reffn_2">2</a></sup>，因此我们说陈数是二维晶格模型的拓扑不变量，就像卷绕数winding numebr是一维SSH模型的拓扑不变量一样。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. 其实我也不知道这个式子是如何得到的<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 对于色散关系，动量空间当然满足周期性边界条件<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+              <a href="/tags/condensed-matter-theory/" rel="tag"><i class="fa fa-tag"></i> condensed matter theory</a>
+              <a href="/tags/Topological-Insulator/" rel="tag"><i class="fa fa-tag"></i> Topological-Insulator</a>
+              <a href="/tags/physics/" rel="tag"><i class="fa fa-tag"></i> physics</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/27/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7/" rel="prev" title="日本語の勉強">
+                  <i class="fa fa-chevron-left"></i> 日本語の勉強
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/10/20/Climbing-Diary-2/" rel="next" title="2023年10月黄牛石线（河源）">
+                  2023年10月黄牛石线（河源） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">129k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:55</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"ATNFx4lMAOb1EStx2xmTSarx-gzGzoHsz","app_key":"qRgHmWOabSiwV9WS1qZLjx3Q","server_url":"https://atnfx4lm.lc-cn-n1-shared.com","security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/09/01/Topological-Insulator-Note-1/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
