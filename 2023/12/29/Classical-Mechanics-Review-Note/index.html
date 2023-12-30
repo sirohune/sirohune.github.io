@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="aNO5OJ0VXdBc3AINNLH0mJJyAQkuN8KK-ipMzb6CLJ0">
+  <meta name="msvalidate.01" content="81D4979F22922ACDEC47E732B4E79F86">
+  <meta name="baidu-site-verification" content="codeva-8Bwmu2OwNw">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。 参考教材：《理论力学》——高显">
+<meta property="og:type" content="article">
+<meta property="og:title" content="经典力学期末辅导">
+<meta property="og:url" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/index.html">
+<meta property="og:site_name" content="はくのBlog">
+<meta property="og:description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。 参考教材：《理论力学》——高显">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/scatter-angle.png">
+<meta property="article:published_time" content="2023-12-29T07:44:35.000Z">
+<meta property="article:modified_time" content="2023-12-30T12:55:05.302Z">
+<meta property="article:author" content="白舟尘">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="经典力学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
+
+
+<link rel="canonical" href="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/","path":"2023/12/29/Classical-Mechanics-Review-Note/","title":"经典力学期末辅导"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>经典力学期末辅导 | はくのBlog</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-pearl.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  
+  <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note//atom.xml">
+  
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client@2.3.0/waline.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    if (link.getAttribute('href').startsWith('https://sirohune.site')) {
+      link.setAttribute('rel', 'nofollow noreferrer noopener');
+      link.setAttribute('target', '_blank');
+      link.addEventListener('click', () => {
+        const url = link.getAttribute('href');
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const title = doc.querySelector('title').textContent;
+            const newUrl = new URL(url, 'https://sirohune.site').href;
+            history.pushState({}, title, newUrl);
+            document.documentElement.innerHTML = doc.documentElement.innerHTML;
+            document.title = title;
+            window.scrollTo(0, 0);
+            document.querySelector('body').classList.remove('waline-open');
+          });
+        return false;
+      });
+    }
+  }
+});
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">はくのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">百洛的小屋</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-language"><a href="/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li><li class="menu-item menu-item-journal"><a href="https://sirohune.site/2023/07/26/Journal/" rel="section"><i class="fa-solid fa-pencil fa-fw"></i>札记</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-text">1. 两体问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%80%80%E8%80%A6"><span class="nav-text">1.1 两体退耦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%BF%83%E5%8A%BF%E5%9C%BA"><span class="nav-text">1.2 中心势场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%99%AE%E5%8B%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.1 开普勒问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.2 散射问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%8C%AF%E5%8A%A8"><span class="nav-text">2. 小振动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#section"><span class="nav-text">2.1</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E8%BD%AC%E5%8A%A8"><span class="nav-text">3. 刚体转动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%90%86%E8%AE%BA"><span class="nav-text">3.1 转动理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-text">3.1.1 转动的描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%BE%A4"><span class="nav-text">3.1.2 转动群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="nav-text">3.1.3 角速度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93"><span class="nav-text">3.2 刚体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%AF%E9%87%8F%E5%BC%A0%E9%87%8F"><span class="nav-text">3.2.1 惯量张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="nav-text">3.2.2 欧拉方程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BA%E9%A1%BF%E5%AE%9A%E7%90%86"><span class="nav-text">4. 诺顿定理*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95a"><span class="nav-text">附录A</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白舟尘"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">白舟尘</p>
+  <div class="site-description" itemprop="description">物理与人生</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:hakufune@gmail.com" title="E-Mail → mailto:hakufune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://huanyushi.github.io/" title="https:&#x2F;&#x2F;huanyushi.github.io&#x2F;" rel="noopener" target="_blank">杂然赋流形丶</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://breayhing.github.io/" title="https:&#x2F;&#x2F;breayhing.github.io&#x2F;" rel="noopener" target="_blank">breayhing</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="白舟尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="はくのBlog">
+      <meta itemprop="description" content="物理与人生">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="经典力学期末辅导 | はくのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          经典力学期末辅导
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-29 15:44:35" itemprop="dateCreated datePublished" datetime="2023-12-29T15:44:35+08:00">2023-12-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-30 20:55:05" itemprop="dateModified" datetime="2023-12-30T20:55:05+08:00">2023-12-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2023/12/29/Classical-Mechanics-Review-Note/" class="post-meta-item leancloud_visitors" data-flag-title="经典力学期末辅导" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/12/29/Classical-Mechanics-Review-Note/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/12/29/Classical-Mechanics-Review-Note/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <div class="note default no-icon"><p>为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。
+参考教材：《理论力学》——高显</p>
+</div>
+<span id="more"></span>
+<h1 id="两体问题">1. 两体问题</h1>
+<h2 id="两体退耦">1.1 两体退耦</h2>
+<p>两体问题主要分为三种cases：</p>
+<ul>
+<li><strong>束缚态</strong></li>
+<li><strong>散射</strong></li>
+<li>衰变</li>
+</ul>
+<p>参考书目只讨论了前两种情况，因此本笔记也是一样。</p>
+<p>两体问题的拉氏量很容易可以写出<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>： <span
+class="math display">\[
+\require{physics}
+\begin{align}
+L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V(x_1,x_2).
+\end{align}
+\]</span></p>
+<p>我们只考虑两体构成的系统，无其他系统作用的时候，时空背景应该是非常对称的。具体体现为，其应该具有空间平移不变性与各向同性。空间平移不变性是说，我们将整个系统一起平移到任意位置，应该分辨不出与原先位置的区别，因此势能可以写为<span
+class="math inline">\(V(x_1,x_2)=V(x_1-x_2)\)</span>的形式；而各向同性则要求我们以任意角度来研究系统都是一致的，也就是说将整个系统转动一个角度，其内部相互作用不变，分辨不出与原先角度的区别，因此势能可以进一步写为<span
+class="math inline">\(V(\abs{x_1-x_2})\)</span>的形式.最后我们拉氏量写为:
+<span class="math display">\[
+\begin{align}
+L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V\abs{x_1-x_2}).
+\end{align}
+\]</span>
+它依旧是不好处理的，因为两个坐标在势能中以耦合的形式出现，因此我们首先要做的就是退耦。退耦有两个要求：</p>
+<ol type="1">
+<li>保持<strong>动能形式不变</strong></li>
+<li>使得<strong>势能退耦</strong></li>
+</ol>
+<p>退耦是以坐标变换的形式实现的，我们假设有那么一组坐标<span
+class="math inline">\(y_1,y_2\)</span>能够满足我们的要求，他们与原先坐标的关系为:
+<span class="math display">\[
+\begin{align}
+\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\begin{pmatrix}y_1\\y_2\end{pmatrix}.
+\end{align}
+\]</span> 首先退耦要求动能： <span class="math display">\[
+\begin{align}
+  T&amp;=
+\frac{1}{2}\begin{pmatrix}\dot{x}_1&amp;\dot{x}_2\end{pmatrix}\begin{pmatrix}m_1&amp;\\&amp;m_2\end{pmatrix}\begin{pmatrix}\dot{x}_1\\\dot{x}_2\end{pmatrix}\\
+&amp;=
+\frac{1}{2}\begin{pmatrix}\dot{y}_1&amp;\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2m_1+c^2m_2&amp;abm_1+dcm_2\\abm_1+cdm_2&amp;b^2m_1+d^2m_2\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix}，
+\end{align}
+\]</span> 保持对角形式，因此有: <span class="math display">\[
+\begin{align}
+abm_1+dcm_2&amp;= 0\\
+\Rightarrow \frac{ab}{cd}=-\frac{m_2}{m_1}.
+\end{align}
+\]</span> 退耦第二个条件要求势能退耦: <span class="math display">\[
+\begin{align}
+\abs{x_1-x_2}=|(a-c)y_1+(b-d)y_2|.
+\end{align}
+\]</span> 因此有<span class="math inline">\(a=c\)</span>或者<span
+class="math inline">\(b=d\)</span>.不妨令<span
+class="math inline">\(a=c\)</span>，与第一个条件结合有<span
+class="math inline">\(\frac{b}{d}=-\frac{m_2}{m_1}\)</span>则动能可以写为:
+<span class="math display">\[
+\begin{align}
+  T&amp;=
+\frac{1}{2}\begin{pmatrix}\dot{y}_1&amp;\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2(m_1+m_2)&amp;\\&amp;k^2m_1m_2(m_1+m_2)\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix},
+\end{align}
+\]</span> 其中<span class="math inline">\(k\)</span>定义为<span
+class="math inline">\(b=-km_2,d=km_1\)</span>.势能写为<span
+class="math inline">\(V(|k(m_2+m_1)y_2|)\)</span>.</p>
+<p>显然只要坐标变换满足上面的要求，就可以实现退耦。因此我们不妨选择<span
+class="math inline">\(a=1,k=\frac{1}{m_1+m2}\)</span>,则此时<span
+class="math inline">\(y_1=\frac{m_1x_1+m_2x_2}{m_1+m_2},y_2=\mathbf{r}\)</span><a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>： <span class="math display">\[
+\begin{align}
+L=
+\frac{1}{2}\begin{pmatrix}\dot{x}_c&amp;\dot{r}\end{pmatrix}\begin{pmatrix}m_c&amp;\\&amp;m_r\end{pmatrix}\begin{pmatrix}\dot{x}_c\\\dot{r}\end{pmatrix}+V(r).
+\end{align}
+\]</span>
+到这里就实现了坐标的退耦，从定义可以看出第一个坐标是质心坐标，第二个坐标是相对矢量，<span
+class="math inline">\(m_c\)</span>和<span
+class="math inline">\(m_r\)</span>分别是质心质量和约化质量<span
+class="math inline">\(\frac{m_1m_2}{m_1+m_2}\)</span>.</p>
+<p>因此我们可以将拉氏量拆成两部分来分析，第一部分是质心的运动，等效于质量为<span
+class="math inline">\(m_c\)</span>的自由粒子。第二部分是相对运动，拉氏量为:
+<span class="math display">\[
+\begin{align}
+L_r=\frac{m_r}{2}\dot{r}^2-V(r).
+\end{align}
+\]</span> 用球坐标则写为: <span class="math display">\[
+\begin{align}
+L_r=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)-V(r).
+\end{align}
+\]</span> 在各向同性的背景下，势能已经默认是中心势场了。</p>
+<h2 id="中心势场">1.2 中心势场</h2>
+<p>直接带入拉格朗日方程的话不太好求解，观察可以发现拉氏量不显含时间，且存在循环坐标，因此我们利用积分常数<span
+class="math inline">\(E,J\)</span>来求解.</p>
+<p><span class="math inline">\(L\)</span>不显含时间，因此能量<span
+class="math inline">\(E=T+V=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)+V(r)\)</span>是一个常数;拉氏量中不含坐标<span
+class="math inline">\(\phi\)</span>，因此z方向<span
+class="math inline">\(J_z=m(r\sin\theta)^2\dot{\phi}\)</span>是一个常数.关于该常数的物理意义为什么是z方向角动量的讨论见附录A.到这里只能得到z分量是常数，其他分量可以随时间改变。但是考虑各向同性，我们可以随意选择z轴，如此一来所有方向的角动量都是常数，因此总角动量是常数，我们不妨选定角动量方程为z轴。</p>
+<p>角动量是常数使得我们可以选取<span
+class="math inline">\(\theta=\frac{\pi}{2}\)</span>固定不变。因此能量写为:
+<span class="math display">\[
+\begin{align}
+E=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\phi}^2)+V(r).
+\end{align}
+\]</span> 我们从上式写出径向速度的表达式: <span class="math display">\[
+\begin{align}
+\frac{\mathrm{d}}{\mathrm{d}t}r=\pm\sqrt{\frac{2(E-V)}{m}-\frac{J^2}{m^2r^2}}.
+\end{align}
+\]</span> 因为我们关心的是<span
+class="math inline">\(r(\phi)\)</span>,要得到<span
+class="math inline">\(r\)</span>关于<span
+class="math inline">\(\phi\)</span>的方程，所以我们想办法把时间<span
+class="math inline">\(t\)</span>消去。利用另外一个常数<span
+class="math inline">\(J\)</span>: <span class="math display">\[
+\begin{align}
+J&amp;= mr^2\dot{\phi}\\
+\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\phi&amp;= \frac{J}{mr^2}.
+\end{align}
+\]</span> 与上面能量常数的式子一比得到: <span class="math display">\[
+\begin{align}
+\frac{\mathrm{d}}{\mathrm{d}\phi}r=\pm
+\frac{r^2}{J}\sqrt{2m(E-V)-\frac{J^2}{r^2}} .
+\end{align}
+\]</span> 在给出具体的势能<span
+class="math inline">\(V(r)\)</span>后，理论上可以积分得到<span
+class="math inline">\(r(\phi)\)</span>。</p>
+<h3 id="开普勒问题">1.2.1 开普勒问题</h3>
+<p>开普勒问题即<span
+class="math inline">\(V(r)=-\frac{\alpha}{r},\alpha&gt;0\)</span>.将其带入上面的积分表达式并进行积分可以得到：
+<span class="math display">\[
+\begin{align}
+\int \mathrm{d}\phi &amp;=
+J\int\frac{1}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}\frac{\mathrm{d}r}{r^2}\\
+\phi-\phi_0&amp;=
+-J\int\frac{1}{\sqrt{2m(E+\frac{\alpha}{r})-\frac{J^2}{r^2}}}\mathrm{d}(\frac{1}{r}).
+\end{align}
+\]</span> 对右边积分的分母进行配分: <span class="math display">\[
+\begin{align}
+2mE+\frac{2m \alpha}{r}-\frac{J^2}{r^2}&amp;=
+2mE+\frac{m^2\alpha^2}{J^2}-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2\\
+&amp;\triangleq A^2-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2.
+\end{align}
+\]</span> 带回积分中有： <span class="math display">\[
+\begin{align}
+\phi-\phi_0&amp;= -J\int\frac{\mathrm{d}(\frac{1}{r}-\frac{m
+\alpha}{J^2})}{\sqrt{A^2-J^2(\frac{1}{r}-\frac{m \alpha^2}{J^2})^2}}.
+\end{align}
+\]</span> 这是高数中熟悉的积分，三角换元即可<span
+class="math inline">\(J(\frac{1}{r}-\frac{m
+\alpha}{J^2})=A\sin\theta\)</span>: <span class="math display">\[
+\begin{align}
+\phi-\phi_0&amp;= -\int \mathrm{d}\theta=-\theta\\
+&amp;= -\arcsin[\frac{J}{A}(\frac{1}{r}-\frac{m\alpha}{J^2})]\\
+\Rightarrow \frac{1}{r}&amp;=
+\frac{m\alpha}{J^2}-\frac{A}{J}\sin(\phi-\phi_0)\\
+\Rightarrow r&amp;=
+\frac{\frac{J^2}{m\alpha}}{1-\frac{AJ}{m\alpha}\sin(\phi-\phi_0)}.
+\end{align}
+\]</span>
+之所以写成这种形式，是我们提前知道开普勒问题的轨道应该是圆锥曲线形式的<span
+class="math inline">\(r=\frac{p}{1+e\cos\phi}\)</span><a href="#fn3"
+class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.对比之下我们可以设出半通径<span
+class="math inline">\(p\)</span>和偏心率<span
+class="math inline">\(e\)</span>为： <span class="math display">\[
+\begin{align}
+\begin{cases}
+  p=\frac{J^2}{m\alpha}\\
+e=\sqrt{1+\frac{2EJ^2}{m\alpha^2}}
+\end{cases}.
+\end{align}
+\]</span> 同时不妨设<span
+class="math inline">\(\phi_0=\frac{\pi}{2}\)</span>，最后半径可以写为圆锥曲线的形式。当总能量E小于零时，离心率<span
+class="math inline">\(e\)</span>小于1，轨道为椭圆曲线；总能量E大于零时，离心率<span
+class="math inline">\(e\)</span>大于1，轨道为双曲线；当总能量E等于零时，离心率刚好为1，轨道为双曲线。</p>
+<h3 id="散射问题">1.2.2 散射问题</h3>
+<p>散射问题与开普勒问题的区别只在势能的正负号。散射的势能大于零，因此粒子会远离其中一个粒子。散射问题的核心方程是前面的:
+<span class="math display">\[
+\begin{align}
+\mathrm{d}\phi=\frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
+\end{align}
+\]</span> 在进行计算之前我们需要讨论一下不同参考系角度的问题。 <img
+src="fig-8-10.png" />
+右边的小图可以不用看，主要看左边的小图，不带波浪号写小写的<span
+class="math inline">\(p_1,p_2\)</span>是任意参考系中的动量，而大写的<span
+class="math inline">\(P_1=\frac{m_1}{m_1+m_2}P,P_2=\frac{m_2}{m_1+m_2}P\)</span>是总动量<span
+class="math inline">\(P\)</span>按照质量比例划分的动量，我觉得没有什么物理意义，只是用于辅助。带波浪号且小写的<span
+class="math inline">\(\tilde{p}_1,\tilde{p}_2\)</span>是质心系中的动量，<span
+class="math inline">\(\tilde{p}_1&#39;,\tilde{p}_2&#39;\)</span>是质心系中碰撞后的动量。质心系中有:
+<span class="math display">\[
+\begin{align}
+\tilde{p}_1+\tilde{p}_2&amp;= 0\\
+\tilde{p}_1&#39;+\tilde{p}_2&#39;&amp;= 0.
+\end{align}
+\]</span>
+这四个动量的波长都相等，因此以他们的模长做一个圆，即得到左边的小图，这是对任意参考系都成立的。我们现在取一个特殊的参考系——靶核静止系。
+<img src="fig-8-11.png" /></p>
+<p>在该参考系中，<span
+class="math inline">\(p_2=0,P=p_1\)</span>，因此<span
+class="math inline">\(P_2=\frac{m_2}{m_1+m_2}P\equiv\tilde{p}_1\)</span>.所以上图中的<span
+class="math inline">\(\theta\)</span>实际上是<span
+class="math inline">\(\tilde{p}_1,\tilde{p}_1&#39;\)</span>的夹角，也就是质心系中<span
+class="math inline">\(m_1\)</span>碰撞前后的夹角。<span
+class="math inline">\(\phi_1,\phi_2\)</span>则是在靶核静止系中两个粒子碰撞前后的夹角，他们与<span
+class="math inline">\(\theta\)</span>有如下几何关系: <span
+class="math display">\[
+\begin{align}
+\begin{cases}
+\tan\phi_1=\frac{m_2\sin\theta }{m_1+m_2\cos\theta}\\
+\phi_2=\frac{\pi-\theta}{2}
+\end{cases}.
+\end{align}
+\]</span> 因此碰撞后两粒子的偏转角归结为求<span
+class="math inline">\(m_1\)</span>在质心系中的偏转角<span
+class="math inline">\(\theta\)</span>.因此我们对核心式子进行积分： <span
+class="math display">\[
+\begin{align}
+\phi_0=\int_{r_{min}}^\infty
+\frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
+\end{align}
+\]</span> <img src="scatter-angle.png" /></p>
+<p>其中最小半径由“此时径向速度为0”这一事实给出: <span
+class="math display">\[
+\begin{align}
+E=\frac{J^2}{2mr_^2}+V(r_{min}).
+\end{align}
+\]</span> 从上式中反解出<span
+class="math inline">\(r_{min}\)</span>代入积分下限，再代入势能的具体形式即可（比如<span
+class="math inline">\(V=\frac{\alpha}{r}\)</span>）,最终散射角<span
+class="math inline">\(\theta=\pi-2\phi_0\)</span>.</p>
+<h1 id="小振动">2. 小振动</h1>
+<h2 id="section">2.1</h2>
+<h1 id="刚体转动">3. 刚体转动</h1>
+<h2 id="转动理论">3.1 转动理论</h2>
+<h3 id="转动的描述">3.1.1 转动的描述</h3>
+<h3 id="转动群">3.1.2 转动群</h3>
+<p>期末试题应该不会考，想了解可见<a
+href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)</a>.</p>
+<h3 id="角速度">3.1.3 角速度</h3>
+<h2 id="刚体">3.2 刚体</h2>
+<h3 id="惯量张量">3.2.1 惯量张量</h3>
+<h3 id="欧拉方程">3.2.2 欧拉方程</h3>
+<h1 id="诺顿定理">4. 诺顿定理*</h1>
+<h1 id="附录a">附录A</h1>
+<p>关于常数<span
+class="math inline">\(C=m(r\sin\theta)^2\dot{\phi}\)</span>，我们可以利用直角坐标与球坐标的关系将其写为直角坐标的形式。
+<span class="math display">\[
+\begin{align}
+\frac{y}{x}&amp;= \tan\phi\\
+\phi&amp;= \arctan \frac{y}{x}\\
+\Rightarrow \dot{\phi}&amp;= \frac{x\dot{y}-\dot{x}y}{x^2+y^2}.\\
+x^2+y^2&amp;= (r\sin\theta)^2
+\end{align}
+\]</span> 带回常数<span class="math inline">\(C\)</span>得到： <span
+class="math display">\[
+\begin{align}
+C=m(x\dot{y}-\dot{x}y).
+\end{align}
+\]</span> 而角动量<span class="math inline">\(J\)</span>的表达式为:
+<span class="math display">\[
+\begin{align}
+J&amp;= p\times r\\
+&amp;=
+m\det(\begin{pmatrix}&amp;&amp;\\x&amp;y&amp;z\\\dot{x}&amp;\dot{y}&amp;\dot{z}\end{pmatrix})\\
+&amp;= m(y\dot{z}-z\dot{y},z\dot{x}-\dot{z}x,x\dot{y}-\dot{x}y).
+\end{align}
+\]</span> 因此可以看出常数<span
+class="math inline">\(C\)</span>是角动量的z分量。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>这里的两个坐标都是三维矢量，但是我懒得加粗，后文也是。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn2"><p>这里强调r是一个矢量所以加粗了，后面放进绝对值符号后得到的就不是矢量了。<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn3"><p>高老师的书上是在积分前就设出了半通径和偏心率，我觉得那应该是事先知道结论的做法。<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+              <a href="/tags/%E7%89%A9%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 物理</a>
+              <a href="/tags/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 经典力学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/22/Climbing-Diary-3/" rel="prev" title="2023年双十一大东山">
+                  <i class="fa fa-chevron-left"></i> 2023年双十一大东山
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白舟尘</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">176k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:19</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"ATNFx4lMAOb1EStx2xmTSarx-gzGzoHsz","app_key":"qRgHmWOabSiwV9WS1qZLjx3Q","server_url":"https://atnfx4lm.lc-cn-n1-shared.com","security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn, en","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"你有什么想说的~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/12/29/Classical-Mechanics-Review-Note/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
