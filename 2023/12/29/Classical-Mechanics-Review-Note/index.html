@@ -23,23 +23,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sirohune.site","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。 参考教材：《理论力学》——高显">
+    <meta name="description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。参考教材：《理论力学》——高显">
 <meta property="og:type" content="article">
 <meta property="og:title" content="经典力学期末辅导">
 <meta property="og:url" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/index.html">
 <meta property="og:site_name" content="はくのBlog">
-<meta property="og:description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。 参考教材：《理论力学》——高显">
+<meta property="og:description" content="为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。参考教材：《理论力学》——高显">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-10.png">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/scatter-angle.png">
 <meta property="article:published_time" content="2023-12-29T07:44:35.000Z">
-<meta property="article:modified_time" content="2023-12-30T12:55:05.302Z">
+<meta property="article:modified_time" content="2024-01-01T10:16:19.502Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="经典力学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
+<meta name="twitter:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-10.png">
 
 
 <link rel="canonical" href="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/">
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-text">1. 两体问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%80%80%E8%80%A6"><span class="nav-text">1.1 两体退耦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%BF%83%E5%8A%BF%E5%9C%BA"><span class="nav-text">1.2 中心势场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%99%AE%E5%8B%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.1 开普勒问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.2 散射问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%8C%AF%E5%8A%A8"><span class="nav-text">2. 小振动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#section"><span class="nav-text">2.1</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E8%BD%AC%E5%8A%A8"><span class="nav-text">3. 刚体转动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%90%86%E8%AE%BA"><span class="nav-text">3.1 转动理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-text">3.1.1 转动的描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%BE%A4"><span class="nav-text">3.1.2 转动群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="nav-text">3.1.3 角速度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93"><span class="nav-text">3.2 刚体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%AF%E9%87%8F%E5%BC%A0%E9%87%8F"><span class="nav-text">3.2.1 惯量张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="nav-text">3.2.2 欧拉方程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BA%E9%A1%BF%E5%AE%9A%E7%90%86"><span class="nav-text">4. 诺顿定理*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95a"><span class="nav-text">附录A</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%B8%A4%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-text">1. 两体问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%B8%A4%E4%BD%93%E9%80%80%E8%80%A6"><span class="nav-text">1.1 两体退耦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E4%B8%AD%E5%BF%83%E5%8A%BF%E5%9C%BA"><span class="nav-text">1.2 中心势场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E5%BC%80%E6%99%AE%E5%8B%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.1 开普勒问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E6%95%A3%E5%B0%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.2 散射问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%B0%8F%E6%8C%AF%E5%8A%A8"><span class="nav-text">2. 小振动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E7%AE%80%E6%AD%A3%E6%A8%A1%E5%BC%8F"><span class="nav-text">2.1 简正模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%AE%80%E6%AD%A3%E5%9D%90%E6%A0%87"><span class="nav-text">2.2 简正坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%88%9A%E4%BD%93%E8%BD%AC%E5%8A%A8"><span class="nav-text">3. 刚体转动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E8%BD%AC%E5%8A%A8%E7%90%86%E8%AE%BA"><span class="nav-text">3.1 转动理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E8%BD%AC%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-text">3.1.1 转动的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-1-%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-text">3.1.1.1 坐标变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1-2-%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%9F%BA%E5%8F%98%E6%8D%A2"><span class="nav-text">1.3.1.2 线性空间中的基变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E8%BD%AC%E5%8A%A8%E7%BE%A4"><span class="nav-text">3.1.2 转动群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="nav-text">3.1.3 角速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%88%9A%E4%BD%93"><span class="nav-text">3.2 刚体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E6%83%AF%E9%87%8F%E5%BC%A0%E9%87%8F"><span class="nav-text">3.2.1 惯量张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="nav-text">3.2.2 欧拉方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-3"><span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E8%AF%BA%E9%A1%BF%E5%AE%9A%E7%90%86"><span class="nav-text">4. 诺顿定理*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95A"><span class="nav-text">附录A</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -297,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-30 20:55:05" itemprop="dateModified" datetime="2023-12-30T20:55:05+08:00">2023-12-30</time>
+      <time title="修改时间：2024-01-01 18:16:19" itemprop="dateModified" datetime="2024-01-01T18:16:19+08:00">2024-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -337,14 +338,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>6.9k</span>
+      <span>12k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>12 分钟</span>
+      <span>22 分钟</span>
     </span>
 </div>
 
@@ -355,290 +356,327 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     <div class="post-body" itemprop="articleBody">
-        <div class="note default no-icon"><p>为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。
-参考教材：《理论力学》——高显</p>
+        <div class="note default no-icon"><p>为22级同学进行期末知识梳理的笔记。仅包含同学存疑的知识点，未来考虑补全。<br>参考教材：《理论力学》——高显</p>
 </div>
 <span id="more"></span>
-<h1 id="两体问题">1. 两体问题</h1>
-<h2 id="两体退耦">1.1 两体退耦</h2>
-<p>两体问题主要分为三种cases：</p>
+<h1 id="1-两体问题"><a href="#1-两体问题" class="headerlink" title="1. 两体问题"></a>1. 两体问题</h1><h2 id="1-1-两体退耦"><a href="#1-1-两体退耦" class="headerlink" title="1.1 两体退耦"></a>1.1 两体退耦</h2><p>两体问题主要分为三种cases：</p>
 <ul>
 <li><strong>束缚态</strong></li>
 <li><strong>散射</strong></li>
 <li>衰变</li>
 </ul>
 <p>参考书目只讨论了前两种情况，因此本笔记也是一样。</p>
-<p>两体问题的拉氏量很容易可以写出<a href="#fn1" class="footnote-ref"
-id="fnref1" role="doc-noteref"><sup>1</sup></a>： <span
-class="math display">\[
+<p>两体问题的拉氏量很容易可以写出<sup><a href="#fn_1" id="reffn_1">1</a></sup>：</p>
+<script type="math/tex; mode=display">
 \require{physics}
 \begin{align}
-L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V(x_1,x_2).
-\end{align}
-\]</span></p>
-<p>我们只考虑两体构成的系统，无其他系统作用的时候，时空背景应该是非常对称的。具体体现为，其应该具有空间平移不变性与各向同性。空间平移不变性是说，我们将整个系统一起平移到任意位置，应该分辨不出与原先位置的区别，因此势能可以写为<span
-class="math inline">\(V(x_1,x_2)=V(x_1-x_2)\)</span>的形式；而各向同性则要求我们以任意角度来研究系统都是一致的，也就是说将整个系统转动一个角度，其内部相互作用不变，分辨不出与原先角度的区别，因此势能可以进一步写为<span
-class="math inline">\(V(\abs{x_1-x_2})\)</span>的形式.最后我们拉氏量写为:
-<span class="math display">\[
+ L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V(x_1,x_2).
+\end{align}</script><p>我们只考虑两体构成的系统，无其他系统作用的时候，时空背景应该是非常对称的。具体体现为，其应该具有空间平移不变性与各向同性。空间平移不变性是说，我们将整个系统一起平移到任意位置，应该分辨不出与原先位置的区别，因此势能可以写为$V(x_1,x_2)=V(x_1-x_2)$的形式；而各向同性则要求我们以任意角度来研究系统都是一致的，也就是说将整个系统转动一个角度，其内部相互作用不变，分辨不出与原先角度的区别，因此势能可以进一步写为$V(\abs{x_1-x_2})$的形式.最后我们拉氏量写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V\abs{x_1-x_2}).
-\end{align}
-\]</span>
-它依旧是不好处理的，因为两个坐标在势能中以耦合的形式出现，因此我们首先要做的就是退耦。退耦有两个要求：</p>
-<ol type="1">
+ L=\frac{m_1}{2}\dot{x}_1^2+\frac{m_2}{2}\dot{x}_2^2-V\abs{x_1-x_2}).
+\end{align}</script><p>它依旧是不好处理的，因为两个坐标在势能中以耦合的形式出现，因此我们首先要做的就是退耦。退耦有两个要求：</p>
+<ol>
 <li>保持<strong>动能形式不变</strong></li>
 <li>使得<strong>势能退耦</strong></li>
 </ol>
-<p>退耦是以坐标变换的形式实现的，我们假设有那么一组坐标<span
-class="math inline">\(y_1,y_2\)</span>能够满足我们的要求，他们与原先坐标的关系为:
-<span class="math display">\[
+<p>退耦是以坐标变换的形式实现的，我们假设有那么一组坐标$y_1,y_2$能够满足我们的要求，他们与原先坐标的关系为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\begin{pmatrix}y_1\\y_2\end{pmatrix}.
-\end{align}
-\]</span> 首先退耦要求动能： <span class="math display">\[
+ \begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}y_1\\y_2\end{pmatrix}.
+\end{align}</script><p>首先退耦要求动能：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-  T&amp;=
-\frac{1}{2}\begin{pmatrix}\dot{x}_1&amp;\dot{x}_2\end{pmatrix}\begin{pmatrix}m_1&amp;\\&amp;m_2\end{pmatrix}\begin{pmatrix}\dot{x}_1\\\dot{x}_2\end{pmatrix}\\
-&amp;=
-\frac{1}{2}\begin{pmatrix}\dot{y}_1&amp;\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2m_1+c^2m_2&amp;abm_1+dcm_2\\abm_1+cdm_2&amp;b^2m_1+d^2m_2\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix}，
-\end{align}
-\]</span> 保持对角形式，因此有: <span class="math display">\[
+  T&= \frac{1}{2}\begin{pmatrix}\dot{x}_1&\dot{x}_2\end{pmatrix}\begin{pmatrix}m_1&\\&m_2\end{pmatrix}\begin{pmatrix}\dot{x}_1\\\dot{x}_2\end{pmatrix}\\
+&= \frac{1}{2}\begin{pmatrix}\dot{y}_1&\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2m_1+c^2m_2&abm_1+dcm_2\\abm_1+cdm_2&b^2m_1+d^2m_2\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix}，
+\end{align}</script><p>保持对角形式，因此有:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-abm_1+dcm_2&amp;= 0\\
+ abm_1+dcm_2&= 0\\
 \Rightarrow \frac{ab}{cd}=-\frac{m_2}{m_1}.
-\end{align}
-\]</span> 退耦第二个条件要求势能退耦: <span class="math display">\[
+\end{align}</script><p>退耦第二个条件要求势能退耦:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\abs{x_1-x_2}=|(a-c)y_1+(b-d)y_2|.
-\end{align}
-\]</span> 因此有<span class="math inline">\(a=c\)</span>或者<span
-class="math inline">\(b=d\)</span>.不妨令<span
-class="math inline">\(a=c\)</span>，与第一个条件结合有<span
-class="math inline">\(\frac{b}{d}=-\frac{m_2}{m_1}\)</span>则动能可以写为:
-<span class="math display">\[
+ \abs{x_1-x_2}=|(a-c)y_1+(b-d)y_2|.
+\end{align}</script><p>因此有$a=c$或者$b=d$.不妨令$a=c$，与第一个条件结合有$\frac{b}{d}=-\frac{m_2}{m_1}$则动能可以写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-  T&amp;=
-\frac{1}{2}\begin{pmatrix}\dot{y}_1&amp;\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2(m_1+m_2)&amp;\\&amp;k^2m_1m_2(m_1+m_2)\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix},
-\end{align}
-\]</span> 其中<span class="math inline">\(k\)</span>定义为<span
-class="math inline">\(b=-km_2,d=km_1\)</span>.势能写为<span
-class="math inline">\(V(|k(m_2+m_1)y_2|)\)</span>.</p>
-<p>显然只要坐标变换满足上面的要求，就可以实现退耦。因此我们不妨选择<span
-class="math inline">\(a=1,k=\frac{1}{m_1+m2}\)</span>,则此时<span
-class="math inline">\(y_1=\frac{m_1x_1+m_2x_2}{m_1+m_2},y_2=\mathbf{r}\)</span><a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>： <span class="math display">\[
+  T&= \frac{1}{2}\begin{pmatrix}\dot{y}_1&\dot{y}_2\end{pmatrix}\begin{pmatrix}a^2(m_1+m_2)&\\&k^2m_1m_2(m_1+m_2)\end{pmatrix}\begin{pmatrix}\dot{y}_1\\\dot{y}_2\end{pmatrix},
+\end{align}</script><p>其中$k$定义为$b=-km_2,d=km_1$.势能写为$V(|k(m_2+m_1)y_2|)$.</p>
+<p>显然只要坐标变换满足上面的要求，就可以实现退耦。因此我们不妨选择$a=1,k=\frac{1}{m_1+m2}$,则此时$y_1=\frac{m_1x_1+m_2x_2}{m_1+m_2},y_2=\mathbf{r}$<sup><a href="#fn_2" id="reffn_2">2</a></sup>：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-L=
-\frac{1}{2}\begin{pmatrix}\dot{x}_c&amp;\dot{r}\end{pmatrix}\begin{pmatrix}m_c&amp;\\&amp;m_r\end{pmatrix}\begin{pmatrix}\dot{x}_c\\\dot{r}\end{pmatrix}+V(r).
-\end{align}
-\]</span>
-到这里就实现了坐标的退耦，从定义可以看出第一个坐标是质心坐标，第二个坐标是相对矢量，<span
-class="math inline">\(m_c\)</span>和<span
-class="math inline">\(m_r\)</span>分别是质心质量和约化质量<span
-class="math inline">\(\frac{m_1m_2}{m_1+m_2}\)</span>.</p>
-<p>因此我们可以将拉氏量拆成两部分来分析，第一部分是质心的运动，等效于质量为<span
-class="math inline">\(m_c\)</span>的自由粒子。第二部分是相对运动，拉氏量为:
-<span class="math display">\[
+ L= \frac{1}{2}\begin{pmatrix}\dot{x}_c&\dot{r}\end{pmatrix}\begin{pmatrix}m_c&\\&m_r\end{pmatrix}\begin{pmatrix}\dot{x}_c\\\dot{r}\end{pmatrix}+V(r).
+\end{align}</script><p>到这里就实现了坐标的退耦，从定义可以看出第一个坐标是质心坐标，第二个坐标是相对矢量，$m_c$和$m_r$分别是质心质量和约化质量$\frac{m_1m_2}{m_1+m_2}$.</p>
+<p>因此我们可以将拉氏量拆成两部分来分析，第一部分是质心的运动，等效于质量为$m_c$的自由粒子。第二部分是相对运动，拉氏量为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-L_r=\frac{m_r}{2}\dot{r}^2-V(r).
-\end{align}
-\]</span> 用球坐标则写为: <span class="math display">\[
+ L_r=\frac{m_r}{2}\dot{r}^2-V(r).
+\end{align}</script><p>用球坐标则写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-L_r=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)-V(r).
-\end{align}
-\]</span> 在各向同性的背景下，势能已经默认是中心势场了。</p>
-<h2 id="中心势场">1.2 中心势场</h2>
-<p>直接带入拉格朗日方程的话不太好求解，观察可以发现拉氏量不显含时间，且存在循环坐标，因此我们利用积分常数<span
-class="math inline">\(E,J\)</span>来求解.</p>
-<p><span class="math inline">\(L\)</span>不显含时间，因此能量<span
-class="math inline">\(E=T+V=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)+V(r)\)</span>是一个常数;拉氏量中不含坐标<span
-class="math inline">\(\phi\)</span>，因此z方向<span
-class="math inline">\(J_z=m(r\sin\theta)^2\dot{\phi}\)</span>是一个常数.关于该常数的物理意义为什么是z方向角动量的讨论见附录A.到这里只能得到z分量是常数，其他分量可以随时间改变。但是考虑各向同性，我们可以随意选择z轴，如此一来所有方向的角动量都是常数，因此总角动量是常数，我们不妨选定角动量方程为z轴。</p>
-<p>角动量是常数使得我们可以选取<span
-class="math inline">\(\theta=\frac{\pi}{2}\)</span>固定不变。因此能量写为:
-<span class="math display">\[
+ L_r=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)-V(r).
+\end{align}</script><p>在各向同性的背景下，势能已经默认是中心势场了。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. 这里的两个坐标都是三维矢量，但是我懒得加粗，后文也是。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 这里强调r是一个矢量所以加粗了，后面放进绝对值符号后得到的就不是矢量了。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<h2 id="1-2-中心势场"><a href="#1-2-中心势场" class="headerlink" title="1.2 中心势场"></a>1.2 中心势场</h2><p>直接带入拉格朗日方程的话不太好求解，观察可以发现拉氏量不显含时间，且存在循环坐标，因此我们利用积分常数$E,J$来求解.</p>
+<p>$L_r$不显含时间，因此能量$E=T+V=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\theta}^2+r^2\dot{\phi}^2\sin^2\theta)+V(r)$是一个常数;拉氏量中不含坐标$\phi$，因此z方向$J_z=m(r\sin\theta)^2\dot{\phi}$是一个常数<sup><a href="#fn_3" id="reffn_3">3</a></sup>.关于该常数的物理意义为什么是z方向角动量的讨论见附录A.到这里只能得到z分量是常数，其他分量可以随时间改变。但是考虑各向同性，我们可以随意选择z轴，如此一来所有方向的角动量都是常数，因此总角动量是常数，我们不妨选定角动量方程为z轴。</p>
+<blockquote id="fn_3">
+<sup>3</sup>. 从这里开始，我们省略约化质量的下标，将其直接记为$m$<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<p>角动量是常数使得我们可以选取$\theta=\frac{\pi}{2}$固定不变。因此能量写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-E=\frac{m_r}{2}(\dot{r}^2+r^2\dot{\phi}^2)+V(r).
-\end{align}
-\]</span> 我们从上式写出径向速度的表达式: <span class="math display">\[
+ E=\frac{m}{2}(\dot{r}^2+r^2\dot{\phi}^2)+V(r).
+\end{align}</script><p>我们从上式写出径向速度的表达式:</p>
+<script type="math/tex; mode=display">
 \begin{align}
 \frac{\mathrm{d}}{\mathrm{d}t}r=\pm\sqrt{\frac{2(E-V)}{m}-\frac{J^2}{m^2r^2}}.
-\end{align}
-\]</span> 因为我们关心的是<span
-class="math inline">\(r(\phi)\)</span>,要得到<span
-class="math inline">\(r\)</span>关于<span
-class="math inline">\(\phi\)</span>的方程，所以我们想办法把时间<span
-class="math inline">\(t\)</span>消去。利用另外一个常数<span
-class="math inline">\(J\)</span>: <span class="math display">\[
+\end{align}</script><p>因为我们关心的是$r(\phi)$,要得到$r$关于$\phi$的方程，所以我们想办法把时间$t$消去。利用另外一个常数$J$:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-J&amp;= mr^2\dot{\phi}\\
-\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\phi&amp;= \frac{J}{mr^2}.
-\end{align}
-\]</span> 与上面能量常数的式子一比得到: <span class="math display">\[
+ J&= mr^2\dot{\phi}\\
+\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\phi&= \frac{J}{mr^2}.
+\end{align}</script><p>与上面能量常数的式子一比得到:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{\mathrm{d}}{\mathrm{d}\phi}r=\pm
-\frac{r^2}{J}\sqrt{2m(E-V)-\frac{J^2}{r^2}} .
-\end{align}
-\]</span> 在给出具体的势能<span
-class="math inline">\(V(r)\)</span>后，理论上可以积分得到<span
-class="math inline">\(r(\phi)\)</span>。</p>
-<h3 id="开普勒问题">1.2.1 开普勒问题</h3>
-<p>开普勒问题即<span
-class="math inline">\(V(r)=-\frac{\alpha}{r},\alpha&gt;0\)</span>.将其带入上面的积分表达式并进行积分可以得到：
-<span class="math display">\[
+ \frac{\mathrm{d}}{\mathrm{d}\phi}r=\pm \frac{r^2}{J}\sqrt{2m(E-V)-\frac{J^2}{r^2}} .
+\end{align}</script><p>在给出具体的势能$V(r)$后，理论上可以积分得到$r(\phi)$。</p>
+<h3 id="1-2-1-开普勒问题"><a href="#1-2-1-开普勒问题" class="headerlink" title="1.2.1 开普勒问题"></a>1.2.1 开普勒问题</h3><p>开普勒问题即$V(r)=-\frac{\alpha}{r},\alpha&gt;0$.将其带入上面的积分表达式并进行积分可以得到：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\int \mathrm{d}\phi &amp;=
-J\int\frac{1}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}\frac{\mathrm{d}r}{r^2}\\
-\phi-\phi_0&amp;=
--J\int\frac{1}{\sqrt{2m(E+\frac{\alpha}{r})-\frac{J^2}{r^2}}}\mathrm{d}(\frac{1}{r}).
-\end{align}
-\]</span> 对右边积分的分母进行配分: <span class="math display">\[
+ \int \mathrm{d}\phi &= J\int\frac{1}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}\frac{\mathrm{d}r}{r^2}\\
+\phi-\phi_0&= -J\int\frac{1}{\sqrt{2m(E+\frac{\alpha}{r})-\frac{J^2}{r^2}}}\mathrm{d}(\frac{1}{r}).
+\end{align}</script><p>对右边积分的分母进行配分:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-2mE+\frac{2m \alpha}{r}-\frac{J^2}{r^2}&amp;=
-2mE+\frac{m^2\alpha^2}{J^2}-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2\\
-&amp;\triangleq A^2-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2.
-\end{align}
-\]</span> 带回积分中有： <span class="math display">\[
+ 2mE+\frac{2m \alpha}{r}-\frac{J^2}{r^2}&= 2mE+\frac{m^2\alpha^2}{J^2}-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2\\
+ &\triangleq A^2-J^2(\frac{1}{r}-\frac{m \alpha}{J^2})^2.
+\end{align}</script><p>带回积分中有：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\phi-\phi_0&amp;= -J\int\frac{\mathrm{d}(\frac{1}{r}-\frac{m
-\alpha}{J^2})}{\sqrt{A^2-J^2(\frac{1}{r}-\frac{m \alpha^2}{J^2})^2}}.
-\end{align}
-\]</span> 这是高数中熟悉的积分，三角换元即可<span
-class="math inline">\(J(\frac{1}{r}-\frac{m
-\alpha}{J^2})=A\sin\theta\)</span>: <span class="math display">\[
+ \phi-\phi_0&= -J\int\frac{\mathrm{d}(\frac{1}{r}-\frac{m \alpha}{J^2})}{\sqrt{A^2-J^2(\frac{1}{r}-\frac{m \alpha^2}{J^2})^2}}.
+\end{align}</script><p>这是高数中熟悉的积分，三角换元即可$J(\frac{1}{r}-\frac{m \alpha}{J^2})=A\sin\theta$:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\phi-\phi_0&amp;= -\int \mathrm{d}\theta=-\theta\\
-&amp;= -\arcsin[\frac{J}{A}(\frac{1}{r}-\frac{m\alpha}{J^2})]\\
-\Rightarrow \frac{1}{r}&amp;=
-\frac{m\alpha}{J^2}-\frac{A}{J}\sin(\phi-\phi_0)\\
-\Rightarrow r&amp;=
-\frac{\frac{J^2}{m\alpha}}{1-\frac{AJ}{m\alpha}\sin(\phi-\phi_0)}.
-\end{align}
-\]</span>
-之所以写成这种形式，是我们提前知道开普勒问题的轨道应该是圆锥曲线形式的<span
-class="math inline">\(r=\frac{p}{1+e\cos\phi}\)</span><a href="#fn3"
-class="footnote-ref" id="fnref3"
-role="doc-noteref"><sup>3</sup></a>.对比之下我们可以设出半通径<span
-class="math inline">\(p\)</span>和偏心率<span
-class="math inline">\(e\)</span>为： <span class="math display">\[
+ \phi-\phi_0&= -\int \mathrm{d}\theta=-\theta\\
+ &= -\arcsin[\frac{J}{A}(\frac{1}{r}-\frac{m\alpha}{J^2})]\\
+\Rightarrow \frac{1}{r}&= \frac{m\alpha}{J^2}-\frac{A}{J}\sin(\phi-\phi_0)\\
+\Rightarrow r&= \frac{\frac{J^2}{m\alpha}}{1-\frac{AJ}{m\alpha}\sin(\phi-\phi_0)}.
+\end{align}</script><p>之所以写成这种形式，是我们提前知道开普勒问题的轨道应该是圆锥曲线形式的$r=\frac{p}{1+e\cos\phi}$<sup><a href="#fn_4" id="reffn_4">4</a></sup>.对比之下我们可以设出半通径$p$和偏心率$e$为：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\begin{cases}
+ \begin{cases}
   p=\frac{J^2}{m\alpha}\\
-e=\sqrt{1+\frac{2EJ^2}{m\alpha^2}}
+ e=\sqrt{1+\frac{2EJ^2}{m\alpha^2}}
 \end{cases}.
-\end{align}
-\]</span> 同时不妨设<span
-class="math inline">\(\phi_0=\frac{\pi}{2}\)</span>，最后半径可以写为圆锥曲线的形式。当总能量E小于零时，离心率<span
-class="math inline">\(e\)</span>小于1，轨道为椭圆曲线；总能量E大于零时，离心率<span
-class="math inline">\(e\)</span>大于1，轨道为双曲线；当总能量E等于零时，离心率刚好为1，轨道为双曲线。</p>
-<h3 id="散射问题">1.2.2 散射问题</h3>
-<p>散射问题与开普勒问题的区别只在势能的正负号。散射的势能大于零，因此粒子会远离其中一个粒子。散射问题的核心方程是前面的:
-<span class="math display">\[
+\end{align}</script><p>同时不妨设$\phi_0=\frac{\pi}{2}$，最后半径可以写为圆锥曲线的形式。当总能量E小于零时，离心率$e$小于1，轨道为椭圆曲线；总能量E大于零时，离心率$e$大于1，轨道为双曲线；当总能量E等于零时，离心率刚好为1，轨道为双曲线。</p>
+<blockquote id="fn_4">
+<sup>4</sup>. 高老师的书上是在积分前就设出了半通径和偏心率，我觉得那应该是事先知道结论的做法。<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<h3 id="1-2-2-散射问题"><a href="#1-2-2-散射问题" class="headerlink" title="1.2.2 散射问题"></a>1.2.2 散射问题</h3><p>散射问题与开普勒问题的区别只在势能的正负号。散射的势能大于零，因此粒子会远离其中一个粒子。散射问题的核心方程是前面的:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\mathrm{d}\phi=\frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
-\end{align}
-\]</span> 在进行计算之前我们需要讨论一下不同参考系角度的问题。 <img
-src="fig-8-10.png" />
-右边的小图可以不用看，主要看左边的小图，不带波浪号写小写的<span
-class="math inline">\(p_1,p_2\)</span>是任意参考系中的动量，而大写的<span
-class="math inline">\(P_1=\frac{m_1}{m_1+m_2}P,P_2=\frac{m_2}{m_1+m_2}P\)</span>是总动量<span
-class="math inline">\(P\)</span>按照质量比例划分的动量，我觉得没有什么物理意义，只是用于辅助。带波浪号且小写的<span
-class="math inline">\(\tilde{p}_1,\tilde{p}_2\)</span>是质心系中的动量，<span
-class="math inline">\(\tilde{p}_1&#39;,\tilde{p}_2&#39;\)</span>是质心系中碰撞后的动量。质心系中有:
-<span class="math display">\[
+ \mathrm{d}\phi=\frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
+\end{align}</script><p>在进行计算之前我们需要讨论一下不同参考系角度的问题。<br><img src="fig-8-10.png" alt=""><br>右边的小图可以不用看，主要看左边的小图，不带波浪号写小写的$p_1,p_2$是任意参考系中的动量，而大写的$P_1=\frac{m_1}{m_1+m_2}P,P_2=\frac{m_2}{m_1+m_2}P$是总动量$P$按照质量比例划分的动量，我觉得没有什么物理意义，只是用于辅助。带波浪号且小写的$\tilde{p}_1,\tilde{p}_2$是质心系中的动量，$\tilde{p}_1’,\tilde{p}_2’$是质心系中碰撞后的动量。质心系中有:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\tilde{p}_1+\tilde{p}_2&amp;= 0\\
-\tilde{p}_1&#39;+\tilde{p}_2&#39;&amp;= 0.
-\end{align}
-\]</span>
-这四个动量的波长都相等，因此以他们的模长做一个圆，即得到左边的小图，这是对任意参考系都成立的。我们现在取一个特殊的参考系——靶核静止系。
-<img src="fig-8-11.png" /></p>
-<p>在该参考系中，<span
-class="math inline">\(p_2=0,P=p_1\)</span>，因此<span
-class="math inline">\(P_2=\frac{m_2}{m_1+m_2}P\equiv\tilde{p}_1\)</span>.所以上图中的<span
-class="math inline">\(\theta\)</span>实际上是<span
-class="math inline">\(\tilde{p}_1,\tilde{p}_1&#39;\)</span>的夹角，也就是质心系中<span
-class="math inline">\(m_1\)</span>碰撞前后的夹角。<span
-class="math inline">\(\phi_1,\phi_2\)</span>则是在靶核静止系中两个粒子碰撞前后的夹角，他们与<span
-class="math inline">\(\theta\)</span>有如下几何关系: <span
-class="math display">\[
+ \tilde{p}_1+\tilde{p}_2&= 0\\
+\tilde{p}_1'+\tilde{p}_2'&= 0.
+\end{align}</script><p>这四个动量的波长都相等，因此以他们的模长做一个圆，即得到左边的小图，这是对任意参考系都成立的。我们现在取一个特殊的参考系——靶核静止系。<br><img src="fig-8-11.png" alt=""></p>
+<p>在该参考系中，$p_2=0,P=p_1$，因此$P_2=\frac{m_2}{m_1+m_2}P\equiv\tilde{p}_1$.所以上图中的$\theta$实际上是$\tilde{p}_1,\tilde{p}_1’$的夹角，也就是质心系中$m_1$碰撞前后的夹角。$\phi_1,\phi_2$则是在靶核静止系中两个粒子碰撞前后的夹角，他们与$\theta$有如下几何关系:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\begin{cases}
-\tan\phi_1=\frac{m_2\sin\theta }{m_1+m_2\cos\theta}\\
-\phi_2=\frac{\pi-\theta}{2}
+ \begin{cases}
+ \tan\phi_1=\frac{m_2\sin\theta }{m_1+m_2\cos\theta}\\
+ \phi_2=\frac{\pi-\theta}{2}
 \end{cases}.
-\end{align}
-\]</span> 因此碰撞后两粒子的偏转角归结为求<span
-class="math inline">\(m_1\)</span>在质心系中的偏转角<span
-class="math inline">\(\theta\)</span>.因此我们对核心式子进行积分： <span
-class="math display">\[
+\end{align}</script><p>因此碰撞后两粒子的偏转角归结为求$m_1$在质心系中的偏转角$\theta$.因此我们对核心式子进行积分：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\phi_0=\int_{r_{min}}^\infty
-\frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
-\end{align}
-\]</span> <img src="scatter-angle.png" /></p>
-<p>其中最小半径由“此时径向速度为0”这一事实给出: <span
-class="math display">\[
+ \phi_0=\int_{r_{min}}^\infty \frac{J}{r^2}\frac{\mathrm{d}r}{\sqrt{2m(E-V)-\frac{J^2}{r^2}}}.
+\end{align}</script><p><img src="scatter-angle.png" alt=""></p>
+<p>其中最小半径由“此时径向速度为0”这一事实给出:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-E=\frac{J^2}{2mr_^2}+V(r_{min}).
-\end{align}
-\]</span> 从上式中反解出<span
-class="math inline">\(r_{min}\)</span>代入积分下限，再代入势能的具体形式即可（比如<span
-class="math inline">\(V=\frac{\alpha}{r}\)</span>）,最终散射角<span
-class="math inline">\(\theta=\pi-2\phi_0\)</span>.</p>
-<h1 id="小振动">2. 小振动</h1>
-<h2 id="section">2.1</h2>
-<h1 id="刚体转动">3. 刚体转动</h1>
-<h2 id="转动理论">3.1 转动理论</h2>
-<h3 id="转动的描述">3.1.1 转动的描述</h3>
-<h3 id="转动群">3.1.2 转动群</h3>
-<p>期末试题应该不会考，想了解可见<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)</a>.</p>
-<h3 id="角速度">3.1.3 角速度</h3>
-<h2 id="刚体">3.2 刚体</h2>
-<h3 id="惯量张量">3.2.1 惯量张量</h3>
-<h3 id="欧拉方程">3.2.2 欧拉方程</h3>
-<h1 id="诺顿定理">4. 诺顿定理*</h1>
-<h1 id="附录a">附录A</h1>
-<p>关于常数<span
-class="math inline">\(C=m(r\sin\theta)^2\dot{\phi}\)</span>，我们可以利用直角坐标与球坐标的关系将其写为直角坐标的形式。
-<span class="math display">\[
+ E=\frac{J^2}{2mr_{min}^2}+V(r_{min}).
+\end{align}</script><p>从上式中反解出$r_{min}$代入积分下限，再代入势能的具体形式即可（比如$V=\frac{\alpha}{r}$）,最终散射角$\theta=\pi-2\phi_0$.</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h1 id="2-小振动"><a href="#2-小振动" class="headerlink" title="2. 小振动"></a>2. 小振动</h1><h2 id="2-1-简正模式"><a href="#2-1-简正模式" class="headerlink" title="2.1 简正模式"></a>2.1 简正模式</h2><p>假设原本拉氏量的稳定解已知，我们对系统做一扰动，则系统位形会微扰平衡位置进行振动。根据微扰展开的知识我们知道，微扰拉氏量在背景做小量展开得到的零阶量是未微扰的拉氏量，其给出稳定的背景解；而一阶拉氏量在背景处（背景满足零阶拉氏量给出的运动方程）自动为零；因此二次项是贡献振动的第一项。我们将拉氏量小量展开到二阶后，在相差边界项的意义下总可以写成如下形式:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{y}{x}&amp;= \tan\phi\\
-\phi&amp;= \arctan \frac{y}{x}\\
-\Rightarrow \dot{\phi}&amp;= \frac{x\dot{y}-\dot{x}y}{x^2+y^2}.\\
-x^2+y^2&amp;= (r\sin\theta)^2
-\end{align}
-\]</span> 带回常数<span class="math inline">\(C\)</span>得到： <span
-class="math display">\[
+ L_2=\frac{1}{2}\dot{q}^TG\dot{q}-\frac{1}{2}q^TWq.
+\end{align}</script><p>其中的$q$是系统是系统相对背景的位形（可以理解为微扰位形），对于多变量的情况$q$自动变成矢量，$G$自动变成一个矩阵。利用分量形式可以很容易写出该拉氏量的拉格朗日方程:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-C=m(x\dot{y}-\dot{x}y).
-\end{align}
-\]</span> 而角动量<span class="math inline">\(J\)</span>的表达式为:
-<span class="math display">\[
+ G\ddot{q}+Wq=0.
+\end{align}</script><p>其解具有谐振子的形式，可以直接写出：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-J&amp;= p\times r\\
-&amp;=
-m\det(\begin{pmatrix}&amp;&amp;\\x&amp;y&amp;z\\\dot{x}&amp;\dot{y}&amp;\dot{z}\end{pmatrix})\\
-&amp;= m(y\dot{z}-z\dot{y},z\dot{x}-\dot{z}x,x\dot{y}-\dot{x}y).
-\end{align}
-\]</span> 因此可以看出常数<span
-class="math inline">\(C\)</span>是角动量的z分量。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>这里的两个坐标都是三维矢量，但是我懒得加粗，后文也是。<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn2"><p>这里强调r是一个矢量所以加粗了，后面放进绝对值符号后得到的就不是矢量了。<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li
-id="fn3"><p>高老师的书上是在积分前就设出了半通径和偏心率，我觉得那应该是事先知道结论的做法。<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+ q=Ae^{-i\omega t}+c.c.,
+\end{align}</script><p>其中系数A是一个<strong>待定的</strong>复常矢量，维度与坐标个数系统，$c.c.$代表复共轭。其中$\omega$被称为小振动系统的<strong>特征频率</strong>，目前我们还没解出来。为了得到特征频率，我们把解带回到方程中得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ G\ddot{q}+Wq&= -\omega^2Gq+Wq\\
+&= (W-\omega^2 G)q=0\\
+\Rightarrow (W-\omega^2 G)A&= 0.
+\end{align}</script><p>根据线性代数的知识我们知道，要使$A$有解，需系数行列式为0：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \det(W-\omega^2G)=0.
+\end{align}</script><p>这个方程可以解出若干个特征频率，几个不同特征频率即有几种<strong>简振模式</strong>，不同的特征频率$\omega<em>\alpha$带回方程得到不同的特征矢量$A</em>\alpha$，得到的解$q<em>\alpha=A</em>\alpha e^{-i\omega_\alpha t}+c.c.$是对应的<strong>简正模式</strong>。</p>
+<p>最后系统的通解是所有简正模式的叠加：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ q(t)&= \sum\limits_\alpha C_\alpha e^{-i\phi_\alpha}A_\alpha e^{-i\omega_\alpha t}+c.c..
+\end{align}</script><p><strong>求解简正模式一般步骤如下:</strong><br><div class="note primary no-icon"><ol>
+<li>拉氏量小量展开到二阶$L_2$.</li>
+<li>写成$L_2=\frac{1}{2}\dot{q}^TG\dot{q}-\frac{1}{2}q^TWq$的形式，读出$G,W$.</li>
+<li>解特征方程$\det(W-\omega^2 G)=0$得到$\omega<em>\alpha$与$A</em>\alpha$.</li>
 </ol>
-</section>
+</div></p>
+<h2 id="2-2-简正坐标"><a href="#2-2-简正坐标" class="headerlink" title="2.2 简正坐标"></a>2.2 简正坐标</h2><p>在前面求解出的简正模式中，单个模式的振动可能涉及多个自由度，同时系统的真实运动又是由所有简正频率的线性叠加，因此这种“多对多”的关系会为问题带来复杂性。<strong>简正坐标</strong>便是对原本的广义坐标进行坐标变换后得到的一组特别的广义坐标，使得每个简正频率只对应一个变换后的一个自由度。</p>
+<p>之所以不同的振动自由度会混合在一起，是因为我们的$G,W$矩阵不是对角的。所以求简正坐标归结为，选取一组新的广义坐标$\zeta$使得二次拉氏量在该坐标下的$\tilde{G},\tilde{W}$矩阵对角化。像两体问题退耦一样，我们取新旧坐标之间满足简单的线性变换关系：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ q=M\zeta ,
+\end{align}</script><p>将其带入到原二阶拉氏量中有：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ L_2&= \frac{1}{2}\dot{q}^TG\dot{q}-\frac{1}{2}q^TWq\\
+&= \frac{1}{2}\dot{\zeta}^TM^TGM\dot{\zeta}-\frac{1}{2}\zeta^T M^TWM\zeta\\
+&\triangleq \frac{1}{2}\dot{\zeta}^T\tilde{G}\dot{\zeta}-\frac{1}{2}\zeta^T \tilde{W}\zeta
+\end{align}</script><p>利用线性代数的知识，我们不加证明地指出，对于正定的两个实对称矩阵，一定可以同时对角化，且总可以取s个线性独立的特征矢量组成矩阵$M$使得两个矩阵对角化。我们将特征矢量$A_\alpha$在$G-$内积的意义下归一：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ A^T_\alpha GA_\beta=\delta_{\alpha\beta}.
+\end{align}</script><p>如此组成的变化矩阵$M$满足：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ M&= \begin{pmatrix}A_1&A_2&\dots&A_s\end{pmatrix}\\
+\Rightarrow {M^a}_\alpha&= A^a_\alpha.
+\end{align}</script><p>其中行指标写在左边，列指标写在右边，$\alpha$指代第$\alpha$个特征矢量，$a$指代某个特征矢量的$a$分量，可以使得$\tilde{G}$矩阵满足:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\tilde{G}_{\alpha\beta}&= (M^TGM)_{\alpha\beta} \\
+&= {M^a}_\alpha G_{ab}{M^b}_\beta\\
+ &= A^a_\alpha G_{ab}A^b_\beta\\
+&= A_\alpha^TGA_\alpha=\delta_{\alpha\beta}.
+\end{align}</script><p>根据运动方程，如此构成的矩阵$M$也可以是$W$矩阵对角化：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ (W-\omega_\beta^2G)A_{\beta}&= 0\\
+A^T_\alpha (W-\omega_\beta^2G)A_{\beta}&=0\\
+\Rightarrow A^T_\alpha WA_\beta&= \omega_\beta^2\delta_{\alpha\beta}.
+\end{align}</script><p>因此我们找到了使得两个矩阵$G,M$同时对角化的矩阵$M$,他由系统的特征矢量构成，可以使得我们进行一个特殊的坐标变换，变换后的一个特征频率对于一个自由度。变换后的坐标称为简正坐标：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \zeta&= M^{-1}q\\
+ &= M^TGq.
+\end{align}</script><p>综上，我们<strong>得到简正坐标的一般步骤为：</strong><br><div class="note primary no-icon"><ol>
+<li>求解简正模式，得到特征矢量$A_\alpha$.</li>
+<li>将特征矢量$A<em>\alpha$在$G-$内积的意义下归一化：$A</em>{\alpha}^TGA<em>{\beta}=\delta</em>{\alpha\beta}$.</li>
+<li>将归一化后的特征矢量排排坐得到变换矩阵$M=\begin{pmatrix}A_1&amp;\dots&amp;A_s\end{pmatrix}$.</li>
+<li>写出简正坐标：$\zeta=M^TGq$.</li>
+</ol>
+</div></p>
+<h2 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h2><h1 id="3-刚体转动"><a href="#3-刚体转动" class="headerlink" title="3. 刚体转动"></a>3. 刚体转动</h1><h2 id="3-1-转动理论"><a href="#3-1-转动理论" class="headerlink" title="3.1 转动理论"></a>3.1 转动理论</h2><h3 id="3-1-1-转动的描述"><a href="#3-1-1-转动的描述" class="headerlink" title="3.1.1 转动的描述"></a>3.1.1 转动的描述</h3><p>从直觉来说，转动是一种保距的操作，转动后各个点之间的距离保持不变。抽象地说，转动是：</p>
+<ul>
+<li>保度规的坐标变换</li>
+<li>正交归一基的线性变换</li>
+</ul>
+<p>两个观点是等价的，只不过第一个是主动变换的角度，第二个是被动变换的角度。</p>
+<h4 id="3-1-1-1-坐标变换"><a href="#3-1-1-1-坐标变换" class="headerlink" title="3.1.1.1 坐标变换"></a>3.1.1.1 坐标变换</h4><p>首先我们要求在转动前后空间的线元不变，其次我们希望转动后还能以原先的度规来衡量空间距。以欧式空间为例，变换前空间线元为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \mathrm{d}s^2=\delta_{ij}\mathrm{d}x^i\mathrm{d}x^j,
+\end{align}</script><p>变换后的坐标记为$\tilde{x}(x)$，则线元表达式写为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \mathrm{d}s^2=\delta_{ij}\frac{\partial x^i}{\partial \tilde{x}^k} \frac{\partial x^j}{\partial \tilde{x}^l}\mathrm{d}\tilde{x}^k\tilde{x}^l.
+\end{align}</script><p>要求以欧式度规度量空间：$\mathrm{d}s^2=\delta_{kl}\mathrm{d}\tilde{x}^k\tilde{x}^l$,则转动的坐标便要要满足：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \delta_{ij}\frac{\partial x^i}{\partial \tilde{x}^k} \frac{\partial x^j}{\partial \tilde{x}^l}=\delta_{kl}.
+\end{align}</script><p>这就是为什么为什么说转动是一种保度规的特殊坐标变换<sup><a href="#fn_5" id="reffn_5">5</a></sup>。我们记这个坐标变换为${R^i}_j$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ {R^i}_j=\frac{\partial }{\partial \tilde{x}^j}x^i;\quad {(R^{-i})^i}_j=\frac{\partial }{\partial x^j}\tilde{x}^i.
+\end{align}</script><p>根据保度规要求，其满足$R^T1R=1$,所以欧式空间的转动矩阵是<strong>正交矩阵</strong>，转动被称为<strong>正交变换</strong>。他能够使得欧式空间中矢量的内积不变：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ {v'}^Tv'&= {v}^TR^TTv\\
+&= {v}^Tv.
+\end{align}</script><h4 id="1-3-1-2-线性空间中的基变换"><a href="#1-3-1-2-线性空间中的基变换" class="headerlink" title="1.3.1.2 线性空间中的基变换"></a>1.3.1.2 线性空间中的基变换</h4><p>设线性空间中的两组基${e_i},{\tilde{e}_i}$满足线性变换：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e_i={O^j}_i\tilde{e}_j;\quad \tilde{e}_i={(O^{-1})^j}_ie_j.
+\end{align}</script><p>基底变换应该满足$<e_i,e_j>=&lt;\tilde{e}<em>i,\tilde{e}_i&gt;=\delta</em>{ij}$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ <e_i,e_j>&= <{O^k}_i\tilde{e}_k,{O^l}_i\tilde{e}_l>\\
+&={O^k}_i{O^l}_i <\tilde{e}_k,\tilde{e}_l>\\
+&= {O^k}_i{O^l}_i \delta_{kl}\\
+&= \delta_{ij}.
+\end{align}</script><p>可以看出基变换的矩阵与转动的坐标变换矩阵一样，说明坐标变换和基变换是转动的两种视角。</p>
+<blockquote id="fn_5">
+<sup>5</sup>. 并不是所有的空间都存在满足上述条件的坐标变换，这对空间本身提出很高的要求。<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
+</blockquote>
+<h3 id="3-1-2-转动群"><a href="#3-1-2-转动群" class="headerlink" title="3.1.2 转动群"></a>3.1.2 转动群</h3><p>期末试题应该不会考，想了解可见<a href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1">群论学习笔记(part1) </a>/).</p>
+<h3 id="3-1-3-角速度"><a href="#3-1-3-角速度" class="headerlink" title="3.1.3 角速度"></a>3.1.3 角速度</h3><p>设${\bar{e}_i}$是一组静止的基底，而${e_i}$是一组转动的基底，因此我们可以写出他们的关系:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+e_i(t)={R_i}^j(t)\bar{e}_j.
+\end{align}</script><p>考虑无穷小时间后的基底应该与原先相差一个无穷小转动：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ e(t+\mathrm{d}t)-e(t)&= \mathrm{d}t{\Omega^j}_ie_j(t)\\
+ &= \frac{\mathrm{d}}{\mathrm{d}t}e_i(t)\mathrm{d}t \\
+\Rightarrow  \frac{\mathrm{d}}{\mathrm{d}t}e_i(t)&= {\Omega^j}_ie_j(t).
+\end{align}</script><p>因此上面的$\Omega$衡量基矢变换的速率，可以被称为<strong>角速度矩阵</strong>，是一个反对称矩阵。我们可以写出角速度矩阵与转动矩阵之间的关系：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \frac{\mathrm{d}}{\mathrm{d}t}e_i(t)&= \frac{\mathrm{d}}{\mathrm{d}t}{R_i}^j\bar{e}_j\\
+&=  (\frac{\mathrm{d}}{\mathrm{d}t}{R_i}^j) {R^k}_je_k(t)\\
+\Rightarrow {\Omega^j}_i&=  (\frac{\mathrm{d}}{\mathrm{d}t}{R_i}^k) {R^j}_k=- {R_i}^k \frac{\mathrm{d}}{\mathrm{d}t}{R^j}_k.
+\end{align}</script><p>若是考虑两组运动基底之间的关系，设他们之间关系为$\tilde{e}_i={A_i}^je_j$,则组基底各自代表的参考系中，角动量的关系为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \frac{\mathrm{d}}{\mathrm{d}t}\tilde{e}_i&= \frac{\mathrm{d}}{\mathrm{d}t}({A_i}^je_j)\\
+ &= (\frac{\mathrm{d}}{\mathrm{d}t}{A_i}^j)e_j+{A_i}^k\frac{\mathrm{d}}{\mathrm{d}t}e_k\\
+&= (\frac{\mathrm{d}}{\mathrm{d}t}{A_i}^j){A^k}_j\tilde{e}_k+{A_i}^k{\Omega^j}_ke_j\\
+&=  (\frac{\mathrm{d}}{\mathrm{d}t}{A_i}^j){A^k}_j\tilde{e}_k+{A_i}^k{\Omega^j}_k{A^k}_j\tilde{e}_k\\
+&= {\tilde{\Omega}^k}_i\tilde{e}_k.
+\end{align}</script><p>因此可以直接读出${\tilde{e}_i}$参考系中的角速度矩阵为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \tilde{\Omega}=-\frac{\mathrm{dA}}{\mathrm{d}t}A^T+A\Omega A^T.
+\end{align}</script><p>其中特殊的情况就是，两个运动基底之间相对静止$\frac{\mathrm{d}}{\mathrm{d}t}A=0$:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \tilde{\Omega}=A\Omega A^T.
+\end{align}</script><p>符合我们的认知：从一个空间O经过正交变换$A$变换到另外一个空间O’，则两个空间中算符的关系为相似变换$X’=AXA^T$.</p>
+<h3 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h3><h2 id="3-2-刚体"><a href="#3-2-刚体" class="headerlink" title="3.2 刚体"></a>3.2 刚体</h2><h3 id="3-2-1-惯量张量"><a href="#3-2-1-惯量张量" class="headerlink" title="3.2.1 惯量张量"></a>3.2.1 惯量张量</h3><h3 id="3-2-2-欧拉方程"><a href="#3-2-2-欧拉方程" class="headerlink" title="3.2.2 欧拉方程"></a>3.2.2 欧拉方程</h3><h3 id="例题-3"><a href="#例题-3" class="headerlink" title="例题"></a>例题</h3><h1 id="4-诺顿定理"><a href="#4-诺顿定理" class="headerlink" title="4. 诺顿定理*"></a>4. 诺顿定理*</h1><h1 id="附录A"><a href="#附录A" class="headerlink" title="附录A"></a>附录A</h1><p>关于常数$C=m(r\sin\theta)^2\dot{\phi}$，我们可以利用直角坐标与球坐标的关系将其写为直角坐标的形式。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ \frac{y}{x}&= \tan\phi\\
+\phi&= \arctan \frac{y}{x}\\
+\Rightarrow \dot{\phi}&= \frac{x\dot{y}-\dot{x}y}{x^2+y^2}.\\
+x^2+y^2&= (r\sin\theta)^2
+\end{align}</script><p>带回常数$C$得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ C=m(x\dot{y}-\dot{x}y).
+\end{align}</script><p>而角动量$J$的表达式为:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+ J&= p\times r\\
+&= m\det(\begin{pmatrix}&&\\x&y&z\\\dot{x}&\dot{y}&\dot{z}\end{pmatrix})\\
+&= m(y\dot{z}-z\dot{y},z\dot{x}-\dot{z}x,x\dot{y}-\dot{x}y).
+\end{align}</script><p>因此可以看出常数$C$是角动量的z分量。</p>
 
     </div>
 
@@ -683,7 +721,7 @@ href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -694,13 +732,13 @@ href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">176k</span>
+    <span title="站点总字数">142k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:19</span>
+    <span title="站点阅读时长">4:18</span>
   </span>
 </div>
 
