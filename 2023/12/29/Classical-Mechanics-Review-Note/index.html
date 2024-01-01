@@ -32,8 +32,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/scatter-angle.png">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-12-1.png">
 <meta property="article:published_time" content="2023-12-29T07:44:35.000Z">
-<meta property="article:modified_time" content="2024-01-01T10:16:19.502Z">
+<meta property="article:modified_time" content="2024-01-01T13:09:40.791Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="物理">
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-text">1. 两体问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%80%80%E8%80%A6"><span class="nav-text">1.1 两体退耦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%BF%83%E5%8A%BF%E5%9C%BA"><span class="nav-text">1.2 中心势场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%99%AE%E5%8B%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.1 开普勒问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.2 散射问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%8C%AF%E5%8A%A8"><span class="nav-text">2. 小振动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E6%AD%A3%E6%A8%A1%E5%BC%8F"><span class="nav-text">2.1 简正模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E6%AD%A3%E5%9D%90%E6%A0%87"><span class="nav-text">2.2 简正坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E8%BD%AC%E5%8A%A8"><span class="nav-text">3. 刚体转动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%90%86%E8%AE%BA"><span class="nav-text">3.1 转动理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-text">3.1.1 转动的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-text">3.1.1.1 坐标变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%9F%BA%E5%8F%98%E6%8D%A2"><span class="nav-text">1.3.1.2 线性空间中的基变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%BE%A4"><span class="nav-text">3.1.2 转动群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="nav-text">3.1.3 角速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93"><span class="nav-text">3.2 刚体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%AF%E9%87%8F%E5%BC%A0%E9%87%8F"><span class="nav-text">3.2.1 惯量张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="nav-text">3.2.2 欧拉方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-3"><span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BA%E9%A1%BF%E5%AE%9A%E7%90%86"><span class="nav-text">4. 诺顿定理*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95a"><span class="nav-text">附录A</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-text">1. 两体问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%BD%93%E9%80%80%E8%80%A6"><span class="nav-text">1.1 两体退耦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%BF%83%E5%8A%BF%E5%9C%BA"><span class="nav-text">1.2 中心势场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%99%AE%E5%8B%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.1 开普勒问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.2.2 散射问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%8C%AF%E5%8A%A8"><span class="nav-text">2. 小振动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E6%AD%A3%E6%A8%A1%E5%BC%8F"><span class="nav-text">2.1 简正模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E6%AD%A3%E5%9D%90%E6%A0%87"><span class="nav-text">2.2 简正坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E8%BD%AC%E5%8A%A8"><span class="nav-text">3. 刚体转动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%90%86%E8%AE%BA"><span class="nav-text">3.1 转动理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-text">3.1.1 转动的描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-text">3.1.1.1 坐标变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%9F%BA%E5%8F%98%E6%8D%A2"><span class="nav-text">1.3.1.2 线性空间中的基变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%8A%A8%E7%BE%A4"><span class="nav-text">3.1.2 转动群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="nav-text">3.1.3 角速度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93"><span class="nav-text">3.2 刚体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%AF%E9%87%8F%E5%BC%A0%E9%87%8F"><span class="nav-text">3.2.1 惯量张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="nav-text">3.2.2 欧拉方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BA%E9%A1%BF%E5%AE%9A%E7%90%86"><span class="nav-text">4. 诺顿定理*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95a"><span class="nav-text">附录A</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -297,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-01 18:16:19" itemprop="dateModified" datetime="2024-01-01T18:16:19+08:00">2024-01-01</time>
+      <time title="修改时间：2024-01-01 21:09:40" itemprop="dateModified" datetime="2024-01-01T21:09:40+08:00">2024-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -337,14 +338,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>13k</span>
+      <span>15k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>24 分钟</span>
+      <span>27 分钟</span>
     </span>
 </div>
 
@@ -848,11 +849,81 @@ class="math display">\[
 \]</span> 符合我们的认知：从一个空间O经过正交变换<span
 class="math inline">\(A\)</span>变换到另外一个空间O'，则两个空间中算符的关系为相似变换<span
 class="math inline">\(X&#39;=AXA^T\)</span>.</p>
-<h3 id="例题-2">例题</h3>
+<p><strong>(这节不考，先写到这儿)</strong></p>
 <h2 id="刚体">3.2 刚体</h2>
 <h3 id="惯量张量">3.2.1 惯量张量</h3>
+<p>刚体转动的时候，希望计算整个刚体由转动带来的动能<span
+class="math inline">\(T\)</span>,设刚体的质量分布为<span
+class="math inline">\(\rho(x)\)</span>,我们先考虑<span
+class="math inline">\(x\)</span>处转动的动能为: <span
+class="math display">\[
+\begin{align}
+\frac{1}{2}\mathrm{d}^3x\rho(x)v^2(x)&amp;=
+\frac{1}{2}\mathrm{d}^3\rho(x)(\omega\times x)^2\\
+&amp;=  \frac{1}{2}\mathrm{d}^3\rho(x)\epsilon^{ijk}\omega_jx_k\epsilon_{imn}\omega^mx^n\\
+&amp;=  \frac{1}{2}\mathrm{d}^3\rho(x)(\delta^j_m\delta^k_n-\delta^j_n\delta^k_m)\omega_j\omega^mx_kx^n\\
+&amp;=  \frac{1}{2}\mathrm{d}^3\rho(x)(\omega^j\omega_jx^k
+x_k-\omega_jx^j\omega^kx_k)\\
+&amp;=  \frac{1}{2}\mathrm{d}^3\rho(x)(\omega^2x^2-(\omega\cdot x)^2).
+\end{align}
+\]</span> 对整个刚体积分得到刚体转动的动能为: <span
+class="math display">\[
+\begin{align}
+T=\frac{1}{2}\int
+\mathrm{d}^3x\rho(x)(x^2\delta_{ij}-x_ix_j)\omega^i\omega^j.
+\end{align}
+\]</span> 类比平动动能表达式<span
+class="math inline">\(\frac{1}{2}m\delta_{ij}v^iv^j\)</span>得到： <span
+class="math display">\[
+\begin{align}
+T&amp;= \frac{1}{2}I_{ij}\omega^i\omega^j\\
+\Rightarrow I_{ij}&amp;= \int
+\mathrm{d}^3x\rho(x)(x^2\delta_{ij}-x_ix_j).
+\end{align}
+\]</span> 其中<span
+class="math inline">\(I_{ij}\)</span>称为惯量张量,根据类比也可以写出<strong>角动量</strong>:<span
+class="math inline">\(J_i=I_{ij}\omega^j\)</span>。若存在另一参考系<span
+class="math inline">\(\{\tilde{e}_i\}\)</span>,与原参考系相差变换<span
+class="math inline">\(R\)</span>,则另一参考系中的惯量张量为: <span
+class="math display">\[
+\begin{align}
+\tilde{I}=RIR^T.
+\end{align}
+\]</span>
+满足二阶张量的变换规则。或者将惯量张量视作算符，满足不同参考系之间算符的相似变换。</p>
+<p>我们可以根据算符的视角来找到某个特殊的参考系（某组特殊的基矢），使得在该参考系（基矢）下，惯量张量对角化，这样的参考系<span
+class="math inline">\(\{\tilde{e}_i\}\)</span>被称为<strong>惯量主轴</strong>（因为惯量张量只有对角分量），此时对角元被称为<strong>主轴转动惯量</strong>。</p>
+<p>既然<span
+class="math inline">\(I\)</span>视作算符，我们在初始参考系中的矩阵<span
+class="math inline">\(I_{e_i}\)</span>并不对角化，但是我们可以求他的本征值和本征矢量，本征矢在对角线上排排坐就得到对角化的惯量张量<span
+class="math inline">\(\tilde{I}\)</span>,对应的本征矢量归一化后就是目标参考系的正交归一基矢<span
+class="math inline">\(\{\tilde{e}_i\}\)</span>.</p>
+<p><strong>平行轴定理：</strong> <div class="note primary no-icon"><p>刚体相对于不同两点的惯量张量之间的关系通常比较复杂。一个特例是其中一点是刚体的质心
+<span class="math inline">\(C\)</span>。如下图所示，点 P
+相对于质心的位矢为<span
+class="math inline">\(r\)</span>，则刚体相对P点的惯量张量 <span
+class="math inline">\(I_{ij}^{(P)}\)</span>与相对质心的惯量张量<span
+class="math inline">\(I_{ij}^{(C)}\)</span>之间满足简单关系(固体质量为M):
+<span class="math display">\[
+  \begin{align}
+I_{ij}^{(P)}=I_{ij}^{(C)}+M(r^2\delta_{ij}-r_ir_j).
+\end{align}
+  \]</span> <img src="fig-12-1.png" /></p>
+</div></p>
 <h3 id="欧拉方程">3.2.2 欧拉方程</h3>
-<h3 id="例题-3">例题</h3>
+<p>在固体参考系中，且选取惯性主轴，根据转动的知识可以写出: <span
+class="math display">\[
+\begin{align}
+D_tJ_i=\frac{\mathrm{d}}{\mathrm{d}t}J_i+(\omega\times J)_i=N_i.
+\end{align}
+\]</span> 具体分量可以写成： <span class="math display">\[
+\begin{align}
+I_1\dot{\omega}_1-\omega_2\omega_3(I_2-I_3)&amp;= N_1\\
+I_2\dot{\omega}_2-\omega_3\omega_1(I_3-I_1)&amp;= N_2\\
+I_3\dot{\omega}_3-\omega_1\omega_2(I_1-I_2)&amp;= N_3.
+\end{align}
+\]</span> 这就是三维空间中固体转动的<strong>欧拉方程</strong>。</p>
+<h3 id="例题-2">例题</h3>
 <h1 id="诺顿定理">4. 诺顿定理*</h1>
 <h1 id="附录a">附录A</h1>
 <p>关于常数<span
@@ -954,13 +1025,13 @@ href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">182k</span>
+    <span title="站点总字数">184k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:31</span>
+    <span title="站点阅读时长">5:34</span>
   </span>
 </div>
 
