@@ -32,9 +32,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-8-11.png">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/scatter-angle.png">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/hw16-3.png">
+<meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/hw16-2.png">
 <meta property="og:image" content="https://sirohune.site/2023/12/29/Classical-Mechanics-Review-Note/fig-12-1.png">
 <meta property="article:published_time" content="2023-12-29T07:44:35.000Z">
-<meta property="article:modified_time" content="2024-01-01T13:09:40.791Z">
+<meta property="article:modified_time" content="2024-01-02T15:16:06.292Z">
 <meta property="article:author" content="白舟尘">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="物理">
@@ -298,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-01 21:09:40" itemprop="dateModified" datetime="2024-01-01T21:09:40+08:00">2024-01-01</time>
+      <time title="修改时间：2024-01-02 23:16:06" itemprop="dateModified" datetime="2024-01-02T23:16:06+08:00">2024-01-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -338,14 +340,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>15k</span>
+      <span>19k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>27 分钟</span>
+      <span>35 分钟</span>
     </span>
 </div>
 
@@ -591,6 +593,60 @@ class="math inline">\(r_{min}\)</span>代入积分下限，再代入势能的具
 class="math inline">\(V=\frac{\alpha}{r}\)</span>）,最终散射角<span
 class="math inline">\(\theta=\pi-2\phi_0\)</span>.</p>
 <h2 id="例题">例题</h2>
+<p><strong>例1</strong> <div class="note default no-icon"><p>**Hw16 <img src="hw16-3.png" /></p>
+<ol type="1">
+<li><p>第一问很简单<span
+class="math inline">\(L=\frac{m}{2}(\dot{r}^2+r^2\dot{\phi}^2)-V(r)\)</span>,不用解释.</p></li>
+<li><p>熟悉有效势的朋友都知道，有效势能是势能加上角动量带来影响，所以我们要先求角动量。</p>
+<p>拉氏量不含广义坐标<span
+class="math inline">\(\phi\)</span>，所以角动量是积分常数： <span
+class="math display">\[
+\begin{align}
+J&amp;\triangleq \frac{\partial L}{\partial \dot{\phi}}=mr^2\dot{\phi}.
+\end{align}
+\]</span>
+为了写出有效势，<strong>不能把积分常数带回拉氏量</strong>，写出径向运动方程，再将其中的角动量部分与势能部分定义为有效势能：
+<span class="math display">\[
+\begin{align}
+\frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial L}{\partial
+\dot{r}})-\frac{\partial L}{\partial r}&amp;= 0\\
+\Rightarrow m\ddot{r}-m\dot{\phi}^2r+\partial_rV&amp;= 0\\
+\Rightarrow m\ddot{r}+\partial_r(V+\frac{J^2}{2mr^2})&amp;= 0\\
+\Rightarrow V_{eff}&amp;\triangleq V+\frac{J^2}{2mr^2}.
+\end{align}
+\]</span></p></li>
+<li><p>回忆中心势场的推导，我们从积分常数<span
+class="math inline">\(E\)</span>得到<span
+class="math inline">\(\dot{r}\)</span>表达式，在从积分常数<span
+class="math inline">\(J\)</span>得到<span
+class="math inline">\(\dot{\phi}\)</span>的表达式，两者一比便得到所需的<span
+class="math inline">\(\frac{\mathrm{d}\phi}{\mathrm{d}r}\)</span>:</p>
+<p><span class="math display">\[
+   \begin{align}
+E&amp;= \frac{m}{2}\dot{r}^2+V_{eff}\\
+\Rightarrow \dot{r}&amp;= \pm\sqrt{\frac{2(E-V_{eff})}{m}}\\
+J&amp;= mr^2\dot{\phi}\\
+\Rightarrow \dot{\phi}&amp;= \frac{J}{mr^2}\\
+\Rightarrow \frac{\mathrm{d}\phi}{\mathrm{d}r}&amp;=
+\frac{\dot{\phi}}{\dot{r}}=\pm\frac{J}{r^2}\sqrt{\frac{1}{2m(E-V_{eff})}}.
+\end{align}
+\]</span></p></li>
+<li><p>因为是圆轨道，所以周期的表达式就是简单的<span
+class="math inline">\(T=\frac{2\pi}{\dot{\phi}}=\frac{2\pi
+ma^2}{J}\)</span>,我们只需要把角动量与圆轨道半径<span
+class="math inline">\(a\)</span>的关系找到即可，圆轨道在<strong>有效势稳定极值点</strong>的位置，因此对有效势求导，要求结果等于0即可求出轨道半径：</p>
+<p><span class="math display">\[
+\begin{align}
+\partial_r (-\frac{\alpha m}{4r^4}+\frac{J^2}{2mr^2})&amp;= \frac{m
+\alpha}{r^5}-\frac{J^2}{mr^3}\\
+\partial_rV_{eff}|_a= 0 \Rightarrow&amp;\frac{m
+\alpha}{a^5}-\frac{J^2}{ma^3}=0\\
+a&amp;= \frac{\sqrt{\alpha}m}{J}\\
+\Rightarrow T&amp;= \frac{2\pi ma^3}{\sqrt{\alpha}m}
+\end{align}
+\]</span></p></li>
+</ol>
+</div></p>
 <h1 id="小振动">2. 小振动</h1>
 <h2 id="简正模式">2.1 简正模式</h2>
 <p>假设原本拉氏量的稳定解已知，我们对系统做一扰动，则系统位形会微扰平衡位置进行振动。根据微扰展开的知识我们知道，微扰拉氏量在背景做小量展开得到的零阶量是未微扰的拉氏量，其给出稳定的背景解；而一阶拉氏量在背景处（背景满足零阶拉氏量给出的运动方程）自动为零；因此二次项是贡献振动的第一项。我们将拉氏量小量展开到二阶后，在相差边界项的意义下总可以写成如下形式:
@@ -727,6 +783,69 @@ class="math inline">\(M=\begin{pmatrix}A_1&amp;\dots&amp;A_s\end{pmatrix}\)</spa
 </ol>
 </div></p>
 <h2 id="例题-1">例题</h2>
+<p><strong>例1</strong> <div class="note default no-icon"><p><strong>Hw16</strong> <img src="hw16-2.png" />
+（写完后发现这个在高老师的例题里有，那这里就不详细敲了）
+这个拉氏量函数形式很简单，所以平衡位置展开到二阶也很简单，直接写出:
+<span class="math display">\[
+\begin{align}
+L^{(2)}&amp;=
+\frac{m}{2}(\dot{q}_1^2+\dot{q}_3^2)+\frac{M}{2}\dot{q}_3^2-\frac{k}{2}((q_2-q_1)^2+(q_3-q_2)^2).
+\end{align}
+\]</span> 读出动能以及势能项系数矩阵： <span class="math display">\[
+\begin{align}
+G=\begin{pmatrix}m&amp;&amp;\\
+&amp;M&amp;\\
+&amp;&amp;m\end{pmatrix},\quad  W=\begin{pmatrix}k&amp;-k&amp;\\
+-k&amp;2k&amp;-k\\
+&amp;-k&amp;k\end{pmatrix}.
+\end{align}
+\]</span> 因此特征方程为: <span class="math display">\[
+\begin{align}
+det(W-\omega^2G)=\omega^2(k^2-\omega^2m)(Mm\omega^2-k(M+2m))=0.
+\end{align}
+\]</span> 因此三个<strong>特征频率</strong>分别为<span
+class="math inline">\(\omega_1^2=0,\omega_2^2=\frac{k}{m},\omega_3^2=\frac{k(M+2m)}{Mm}\)</span>.对应的（<span
+class="math inline">\(G-\)</span>内积）归一化特征向量为: <span
+class="math display">\[
+\begin{align}
+A_1=\frac{1}{\sqrt{2m+M}}\begin{pmatrix}1\\
+1\\
+1\end{pmatrix},\ A_2=\frac{1}{\sqrt{2m}}\begin{pmatrix}1\\
+0\\
+1\end{pmatrix},\ A_3=\sqrt{\frac{M}{2Mm+4m^2}}\begin{pmatrix}1\\
+-2\frac{m}{M}\\
+1\end{pmatrix}.
+\end{align}
+\]</span> 因此可以得到<strong>简正坐标</strong>为: <span
+class="math display">\[
+\begin{align}
+\zeta=\begin{pmatrix}A_1^T\\
+A_2^T\\
+A_3^T\end{pmatrix}Gq=\begin{pmatrix}\frac{m(q_1+q_3)+Mq_2}{\sqrt{2m+M}}\\
+\sqrt{\frac{m}{2}}(q_1-q_3)\\
+\frac{\sqrt{mM}(q_1-2q_2+q_3)}{\sqrt{2(2m+M)}}\end{pmatrix}.
+\end{align}
+\]</span> 根据题意有<span
+class="math inline">\(m(q_1+q_3)+Mq_2=0\)</span>,因此上式变为： <span
+class="math display">\[
+\begin{align}
+\zeta=\begin{pmatrix}0\\
+\sqrt{\frac{m}{2}}(q_1-q_3)\\
+\sqrt{\frac{m(M+2m)}{2M}}(q_1+q_3)\end{pmatrix}.
+\end{align}
+\]</span> 这里的<span
+class="math inline">\(q\)</span>是相对平衡位置的小振动坐标，也就是高老师书中例题解的<span
+class="math inline">\(x\)</span>，对于本题目而言，广义坐标<span
+class="math inline">\(x\)</span>是平衡位置与小振动的叠加<span
+class="math inline">\(x=\bar{x}+q\)</span>,因此简正坐标又可以写为 <span
+class="math display">\[
+\begin{align}
+\zeta=\begin{pmatrix}0\\
+\sqrt{\frac{m}{2}}(x_1-x_3+2b)\\
+\sqrt{\frac{m(M+2m)}{2M}}(x_1+x_3)\end{pmatrix}.
+\end{align}
+\]</span></p>
+</div></p>
 <h1 id="刚体转动">3. 刚体转动</h1>
 <h2 id="转动理论">3.1 转动理论</h2>
 <h3 id="转动的描述">3.1.1 转动的描述</h3>
@@ -924,6 +1043,60 @@ I_3\dot{\omega}_3-\omega_1\omega_2(I_1-I_2)&amp;= N_3.
 \end{align}
 \]</span> 这就是三维空间中固体转动的<strong>欧拉方程</strong>。</p>
 <h3 id="例题-2">例题</h3>
+<p><strong>例1</strong> <div class="note default no-icon"><p><strong>Hw16 T5</strong></p>
+<p>有一质量为<span class="math inline">\(m\)</span>，半径为 <span
+class="math inline">\(R\)</span>
+的均质实心球。以球面上任一点为坐标原点，以过原点<span
+class="math inline">\(x\)</span>轴和<span
+class="math inline">\(y\)</span>轴，以原点与球心的连线为<span
+class="math inline">\(z\)</span>轴建立坐标系（<span
+class="math inline">\(z\)</span>轴的正方向指向球心）。</p>
+<ol type="1">
+<li><p>公式是<span class="math inline">\(I_{ij}= \int
+\mathrm{d}^3x\rho(x)(x^2\delta_{ij}-x_ix_j)\)</span>,均质实心球密度为<span
+class="math inline">\(\rho(x)=\frac{m}{V}\)</span>,先计算质心系中的惯量张量：
+<span class="math display">\[
+\begin{align}
+I_{ij}^C=\int_{S^2}
+\mathrm{d}^3x\frac{m}{V}\begin{pmatrix}y^2+z^2&amp;-xy&amp;-xz\\
+&amp;x^2+z^2&amp;-yz\\
+&amp;&amp;x^2+y^2\end{pmatrix}
+\end{align}
+\]</span>
+因为这是对称矩阵，所以另外半省略没写，根据高数的积分经验，对于该关于原点对称的积分范围，非对角元上的积分结果自然为0，只需积对角元，且由于系统各向同性，三个结果应该相同，记作<span
+class="math inline">\(I\)</span>。不妨将他们三个加起来得到<span
+class="math inline">\(3I\)</span>一起积分： <span
+class="math display">\[
+\begin{align}
+3I&amp;= \int_{S^2}\mathrm{d}^3x\frac{m}{V}2(x^2+y^2+z^2)\\
+&amp;= \int_{S^2}\frac{m}{V}2r^2r^2\sin\theta \mathrm{d}\theta
+\mathrm{d}\phi \mathrm{d}r\\
+&amp;= \int_{S^2}\frac{m}{V}2r^44\pi\mathrm{d}r=\frac{8mR^5}{5V}\\
+\Rightarrow I&amp;= \frac{2mR^2}{5}
+\end{align}
+\]</span> 因此质心系中的惯量张量为<span
+class="math inline">\(I^C=diag(I,I,I)\)</span>.再利用平行轴定理<span
+class="math inline">\(I_{ij}=I^C_{ij}+m(r^2\delta_{ij}-r_ir_j)\)</span>，质心系与目标参考系之间的位矢差为<span
+class="math inline">\(r=(0,0,R)\)</span>,因此<span
+class="math inline">\(I_{zz}\)</span>不变，<span
+class="math inline">\(I_{xx}=I_{yy}=I+mR^2=\frac{7mR^2}{5}\)</span>.最终结果为<span
+class="math inline">\(diag(\frac{7mR^2}{5},\frac{7mR^2}{5},\frac{2mR^2}{5})\)</span>.</p></li>
+<li><p>转动动能应该是一个标量，与参考系无关，公式是<span
+class="math inline">\(T=\frac{I_{ij}}{2}\omega_i\omega_j\)</span>,但是不同参考系下角速度和惯量张量的大小不一样。我们需要用题目参考系下惯量张量来进行计算，也就是上一问的结果：
+<span class="math display">\[
+\begin{align}
+T&amp;=
+\frac{1}{2}\frac{m\omega_0^2R^2}{5}\begin{pmatrix}1&amp;2&amp;3\end{pmatrix}\begin{pmatrix}7&amp;&amp;\\
+&amp;7&amp;\\
+&amp;&amp;2
+\end{pmatrix}\begin{pmatrix}1\\
+2\\
+3\end{pmatrix}\\
+&amp;= \frac{53\omega_0^2R^2}{10}.
+\end{align}
+\]</span></p></li>
+</ol>
+</div></p>
 <h1 id="诺顿定理">4. 诺顿定理*</h1>
 <h1 id="附录a">附录A</h1>
 <p>关于常数<span
@@ -1025,13 +1198,13 @@ href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">184k</span>
+    <span title="站点总字数">188k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:34</span>
+    <span title="站点阅读时长">5:42</span>
   </span>
 </div>
 
