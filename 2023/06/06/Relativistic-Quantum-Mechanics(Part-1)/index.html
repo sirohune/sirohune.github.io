@@ -63,7 +63,119 @@
   <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/06/06/Relativistic-Quantum-Mechanics(Part-1)//atom.xml">
   
 
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
@@ -185,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8Bdirac-equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#klein-gordon-equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirac-equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma%E7%9F%A9%E9%98%B5"><span class="nav-text">\(\gamma\)矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%88%E6%81%92%E6%B5%81"><span class="nav-text">守恒流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#free-particle-solution"><span class="nav-text">Free-Particle Solution</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B-Dirac-Equation"><span class="nav-text">狄拉克方程(Dirac Equation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="nav-text">电子的相对论运动方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Klein-Gordon-Equation"><span class="nav-text">Klein-Gordon Equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dirac-Equation"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma-%E7%9F%A9%E9%98%B5"><span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%88%E6%81%92%E6%B5%81"><span class="nav-text">守恒流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Free-Particle-Solution"><span class="nav-text">Free-Particle Solution</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -334,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.2k</span>
+      <span>4.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -355,221 +467,144 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>在学习量子力学的时候尝试自学过量子场论，可惜当时对其缺乏一些全局的了解，对着干巴巴的公式硬推了一段时间后便放弃了。现在看了一些讲全局的图像的QFT教材后，感觉自己可以重新尝试学习QFT了。</p>
 <span id="more"></span>
 <pre><code>参考教材:《高等量子力学》——喀兴林
-《Modern Quantum Mechanics》——J.J. Sakurai</code></pre>
-<p><span class="math display">\[
-\require{physics}
-\]</span>
-喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<span
-class="math inline">\(\gamma\)</span>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
-<h1 id="狄拉克方程dirac-equation">狄拉克方程(Dirac Equation)</h1>
-<h2 id="电子的相对论运动方程">电子的相对论运动方程</h2>
-<h3 id="klein-gordon-equation">Klein-Gordon Equation</h3>
-<p>回忆初等量子力学中，电子在电磁场中的运动方程为 <span
-class="math display">\[
+《Modern Quantum Mechanics》——J.J. Sakurai
+</code></pre><script type="math/tex; mode=display">
+\require{physics}</script><p>喀兴林老师的高量写得非常好，我在学习量子力学的时候读过部分章节，但是当时看到繁琐的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>矩阵觉得麻烦，便没有仔细阅读相对论性量子力学部分的章节。但现在看来，这确实是很好的衔接章节。(本文使用闵氏度规为(-1,1,1,1))</p>
+<h1 id="狄拉克方程-Dirac-Equation"><a href="#狄拉克方程-Dirac-Equation" class="headerlink" title="狄拉克方程(Dirac Equation)"></a>狄拉克方程(Dirac Equation)</h1><h2 id="电子的相对论运动方程"><a href="#电子的相对论运动方程" class="headerlink" title="电子的相对论运动方程"></a>电子的相对论运动方程</h2><h3 id="Klein-Gordon-Equation"><a href="#Klein-Gordon-Equation" class="headerlink" title="Klein-Gordon Equation"></a>Klein-Gordon Equation</h3><p>回忆初等量子力学中，电子在电磁场中的运动方程为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\hbar\pdv{t}\psi=H\psi
-\end{align}
-\]</span> 其中哈密顿量的表达式为 <span class="math display">\[
+ i\hbar\pdv{t}\psi=H\psi
+\end{align}</script><p>其中哈密顿量的表达式为</p>
+<script type="math/tex; mode=display">
 \begin{align}
-H=\frac{(p-qA)^2}{2m}+qV
-\end{align}
-\]</span>
-很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式[^1]
-<span class="math display">\[
+ H=\frac{(p-qA)^2}{2m}+qV
+\end{align}</script><p>很显然是一个非相对论的表达式，从微分方程的形式也可以看出：时间是一阶导，空间是二阶导，时间与空间地位不相等，因此不符合相对论。我们将其改写为相对论形式<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
-\end{align}
-\]</span> [^1]:
-对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。</p>
-<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon
-Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，因为他有一系列问题:</p>
+ (i\hbar\pdv{t}-qV)^2\psi=(c^2p^2+m^2c^4)\psi
+\end{align}</script><blockquote id="fn_1">
+<sup>1</sup>. 对于为什么A不见了，高量中没有提及，我在后续QFT的笔记中应该会补充。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+<p>该方程称为<strong>克莱因—戈登方程(Klein-Gordon Equation)</strong>，是一个相对论性的方程。但该方程并不是电子的运动方程<sup><a href="#fn_2" id="reffn_2">2</a></sup>，因为他有一系列问题:</p>
+<blockquote id="fn_2">
+<sup>2</sup>. 事实上我们知道，这应该是spin=0粒子的自由运动方程<a href="#reffn_2" title="Jump back to footnote [2] in the text."> ↩</a>
+</blockquote>
 <ul>
-<li>概率诠释<span
-class="math inline">\(\psi^*\psi\)</span>并不是正定的，缺乏物理意义</li>
-<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<span
-class="math inline">\(-\infty\)</span>能级</li>
-<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<span
-class="math inline">\(\pdv{\psi}{t}\)</span></li>
+<li>概率诠释<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="3.933ex" height="2.034ex" role="img" focusable="false" viewBox="0 -694 1738.6 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g><g data-mml-node="mo" transform="translate(684,363) scale(0.707)"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g></g><g data-mml-node="mi" transform="translate(1087.6,0)"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g></g></g></svg></mjx-container>并不是正定的，缺乏物理意义</li>
+<li>总能量有无下限的负本征值，则该方程的定态解理论上可以跃迁到<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="4.023ex" height="1.505ex" role="img" focusable="false" viewBox="0 -583 1778 665"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container>能级</li>
+<li>这是一个时间的二阶偏微分方程，解方程还需要初始时刻的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.131ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3152 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext" fill="red" stroke="red"><path data-c="5C" d="M56 731Q56 740 62 745T75 750Q85 750 92 740Q96 733 270 255T444 -231Q444 -239 438 -244T424 -250Q414 -250 407 -240Q404 -236 230 242T56 731Z"></path><path data-c="70" d="M36 -148H50Q89 -148 97 -134V-126Q97 -119 97 -107T97 -77T98 -38T98 6T98 55T98 106Q98 140 98 177T98 243T98 296T97 335T97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 61 434T98 436Q115 437 135 438T165 441T176 442H179V416L180 390L188 397Q247 441 326 441Q407 441 464 377T522 216Q522 115 457 52T310 -11Q242 -11 190 33L182 40V-45V-101Q182 -128 184 -134T195 -145Q216 -148 244 -148H260V-194H252L228 -193Q205 -192 178 -192T140 -191Q37 -191 28 -194H20V-148H36ZM424 218Q424 292 390 347T305 402Q234 402 182 337V98Q222 26 294 26Q345 26 384 80T424 218Z" transform="translate(500,0)"></path><path data-c="64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z" transform="translate(1056,0)"></path><path data-c="76" d="M338 431Q344 429 422 429Q479 429 503 431H508V385H497Q439 381 423 345Q421 341 356 172T288 -2Q283 -11 263 -11Q244 -11 239 -2Q99 359 98 364Q93 378 82 381T43 385H19V431H25L33 430Q41 430 53 430T79 430T104 429T122 428Q217 428 232 431H240V385H226Q187 384 184 370Q184 366 235 234L286 102L377 341V349Q377 363 367 372T349 383T335 385H331V431H338Z" transform="translate(1612,0)"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2140,0)"><g data-mml-node="mi"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2791,0)"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g></g></g></g></svg></mjx-container></li>
 <li>最重要的是，该方程计算的氢原子能级与实验不符</li>
 </ul>
 <p>但这不代表该方程无意义，只是不适用于电子。</p>
-<h3 id="dirac-equation">Dirac Equation</h3>
-<p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
-<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：
-<span class="math display">\[
+<h3 id="Dirac-Equation"><a href="#Dirac-Equation" class="headerlink" title="Dirac Equation"></a>Dirac Equation</h3><p>由于上述讨论的结果，克莱因戈登方程是正确的，但是态函数不对，因此态函数可能不仅满足克莱因戈登（KG）方程，还满足另一个要求更高的方程，在那个方程的约束下，或许可以解决概率诠释的问题。</p>
+<p>对于新的相对论性方程，起码时间要是一阶的，因此空间也应该是一阶的，既然如此，我们可以用待定系数法，设方程为：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\pdv{t}\psi&amp;= (i\alpha \cdot \nabla +\beta m)\psi
-\end{align}
-\]</span> 简单起见，我们先假设系数<span
-class="math inline">\(\alpha,\beta\)</span>不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:
-<span class="math display">\[
+ i\pdv{t}\psi&= (i\alpha \cdot \nabla +\beta m)\psi
+\end{align}</script><p>简单起见，我们先假设系数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>不是时空的函数，如果无法得到希望的方程，我们再将其一般化为时空的函数。我们将其再作用一次:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 从这里开始我们使用自然单位制:<span
-class="math inline">\(c=\hbar=1\)</span>.上式中的<span
-class="math inline">\(\{A,B\}\)</span>代表反对易子<span
-class="math inline">\(AB+BA\)</span>.我们进一步用反对易子将上式写为:
-<span class="math display">\[
+ -\pdv[2]{t}\psi=(-\alpha^i\nabla_i\alpha^j\nabla_j+im\{\alpha_i,\beta\}\nabla_i+\beta^2m^2)
+\end{align}</script><p>从这里开始我们使用自然单位制:<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="9.417ex" height="1.758ex" role="img" focusable="false" viewBox="0 -695 4162.1 777"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(710.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(1766.6,0)"><path data-c="210F" d="M182 599Q182 611 174 615T133 619Q118 619 114 621T109 630Q109 636 114 656T122 681Q125 685 202 688Q272 695 286 695Q304 695 304 684Q304 682 295 644T282 597Q282 592 360 592H399Q430 592 445 587T460 563Q460 552 451 541L442 535H266L251 468Q247 453 243 436T236 409T233 399Q233 395 244 404Q295 441 357 441Q405 441 445 417T485 333Q485 284 449 178T412 58T426 44Q447 44 466 68Q485 87 500 130L509 152H531H543Q562 152 562 144Q562 128 546 93T494 23T415 -13Q385 -13 359 3T322 44Q318 52 318 77Q318 99 352 196T386 337Q386 386 346 386Q318 386 286 370Q267 361 245 338T211 292Q207 287 193 235T162 113T138 21Q128 7 122 4Q105 -12 83 -12Q66 -12 54 -2T42 26L166 530Q166 534 161 534T129 535Q127 535 122 535T112 534Q74 534 74 562Q74 570 77 576T84 585T96 589T109 591T124 592T138 592L182 595V599Z"></path></g><g data-mml-node="mo" transform="translate(2606.3,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(3662.1,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container>.上式中的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="4.42ex" height="2.059ex" role="img" focusable="false" viewBox="0 -716 1953.7 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(750,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1194.7,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></g></svg></mjx-container>代表反对易子<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="9.594ex" height="1.805ex" role="img" focusable="false" viewBox="0 -716 4240.4 798"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(750,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(1731.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2731.4,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(3490.4,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g></g></g></svg></mjx-container>.我们进一步用反对易子将上式写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}&amp;=
-(-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
-\end{align}
-\]</span> 在自然单位之下，KG方程应该写为: <span class="math display">\[
+ -\pdv[2]{t}&= (-\frac{1}{2}\{\alpha^i,\alpha^i\}\nabla_i\nabla_j+im\{\alpha,\beta\}\nabla_i+\beta^2m^2)
+\end{align}</script><p>在自然单位之下，KG方程应该写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
--\pdv[2]{t}&amp;= -\nabla^2+m^2
-\end{align}
-\]</span>
-因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数<span
-class="math inline">\(\alpha,\beta\)</span>我们有如下要求: <span
-class="math display">\[
+ -\pdv[2]{t}&= -\nabla^2+m^2
+\end{align}</script><p>因为KG方程是满足相对论能动量关系的，因此我们希望Dirac方程是可以得到KG方程的，因此对于系数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>我们有如下要求:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\alpha^i,\alpha^j\}&amp;= 2\delta^{ij}\\
-\{\alpha^i,\beta\}&amp;= 0\\
-\beta^2&amp;= 1
-\end{align}
-\]</span> 如此一来，Dirac方程写为: <span class="math display">\[
+ \{\alpha^i,\alpha^j\}&= 2\delta^{ij}\\
+ \{\alpha^i,\beta\}&= 0\\
+ \beta^2&= 1
+\end{align}</script><p>如此一来，Dirac方程写为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i\frac{\partial }{\partial t}\psi&amp;= (i\alpha\cdot \nabla+\beta
-m)\psi
-\end{align}
-\]</span> 为了得到更简洁的协变形式，我们左乘一个<span
-class="math inline">\(\beta\)</span>同时移项: <span
-class="math display">\[
+ i\frac{\partial }{\partial t}\psi&= (i\alpha\cdot \nabla+\beta m)\psi
+\end{align}</script><p>为了得到更简洁的协变形式，我们左乘一个<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.281ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 566 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>同时移项:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
-\end{align}
-\]</span> 我们期待写成的形式为: <span class="math display">\[
+ (i\beta\frac{\partial }{\partial t}-i\beta\alpha\cdot\nabla-m)\psi=0
+\end{align}</script><p>我们期待写成的形式为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-(i\gamma^\mu \partial_\mu-m)\psi&amp;= 0\\
-(-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&amp;= 0
-\end{align}
-\]</span> 因此我们定义: <span class="math display">\[
+ (i\gamma^\mu \partial_\mu-m)\psi&= 0\\
+ (-i\gamma^0\frac{\partial }{\partial t}+i\gamma^i\nabla_i-m)&= 0
+\end{align}</script><p>因此我们定义:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\gamma^0&amp;= -\beta\\
-\gamma^i&amp;= -\beta\alpha^i
-\end{align}
-\]</span> 很容易可以得到: <span class="math display">\[
+ \gamma^0&= -\beta\\
+ \gamma^i&= -\beta\alpha^i
+\end{align}</script><p>很容易可以得到:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
-\end{align}
-\]</span> 当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为: <span
-class="math display">\[
+ \{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}
+\end{align}</script><p>当然，如果使用的度规是(1,-1,-1,-1)的话，那么上式修改为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
-\end{align}
-\]</span> 此处的<span class="math inline">\(\gamma\)</span>即著名的<span
-class="math inline">\(\gamma\)</span>矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式<span
-class="math inline">\(i\frac{\partial }{\partial
-t}=\alpha\cdot\nabla+m\)</span>，研究对称性的时候一般用协变形式的<span
-class="math inline">\(i\gamma^\mu\partial_\mu=m\)</span>。</p>
-<h2 id="gamma矩阵"><span class="math inline">\(\gamma\)</span>矩阵</h2>
-<p>我们得到了Dirac方程的形式，但是我们还不知道<span
-class="math inline">\(\alpha,\beta\)</span>分别是什么，更别说由他们得到的<span
-class="math inline">\(\gamma\)</span>。从我们对<span
-class="math inline">\(\alpha,\beta\)</span>的要求可以猜测，<span
-class="math inline">\(\alpha\)</span>或许跟泡利矩阵有关系，因为泡利矩阵满足:
-<span class="math display">\[
+ \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\end{align}</script><p>此处的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>即著名的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>矩阵。至此我们得到了Dirac的两种形式，两种形式都非常有用，求解运动方程的时候一般用第一个形式<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.817ex;" xmlns="http://www.w3.org/2000/svg" width="15.995ex" height="2.852ex" role="img" focusable="false" viewBox="0 -899.6 7069.9 1260.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mfrac" transform="translate(345,0)"><g data-mml-node="mi" transform="translate(347.6,394) scale(0.707)"><path data-c="1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path></g><g data-mml-node="mrow" transform="translate(220,-345.6) scale(0.707)"><g data-mml-node="mi"><path data-c="1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path></g><g data-mml-node="mi" transform="translate(566,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g></g><rect width="855.5" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(1718.3,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2774,0)"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(3636.3,0)"><path data-c="22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mi" transform="translate(4136.5,0)"><path data-c="2207" d="M46 676Q46 679 51 683H781Q786 679 786 676Q786 674 617 326T444 -26Q439 -33 416 -33T388 -26Q385 -22 216 326T46 676ZM697 596Q697 597 445 597T193 596Q195 591 319 336T445 80L697 596Z"></path></g><g data-mml-node="mo" transform="translate(5191.7,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(6191.9,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>，研究对称性的时候一般用协变形式的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.685ex;" xmlns="http://www.w3.org/2000/svg" width="10.635ex" height="2.303ex" role="img" focusable="false" viewBox="0 -715 4700.6 1017.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="msup" transform="translate(345,0)"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g><g data-mml-node="mi" transform="translate(627.3,363) scale(0.707)"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g><g data-mml-node="msub" transform="translate(1448.6,0)"><g data-mml-node="mi"><path data-c="1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path></g><g data-mml-node="mi" transform="translate(564,-150) scale(0.707)"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g><g data-mml-node="mo" transform="translate(2766.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(3822.6,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>。</p>
+<h2 id="gamma-矩阵"><a href="#gamma-矩阵" class="headerlink" title="$\gamma$矩阵"></a><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>矩阵</h2><p>我们得到了Dirac方程的形式，但是我们还不知道<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>分别是什么，更别说由他们得到的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>。从我们对<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>的要求可以猜测，<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.448ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 640 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g></g></g></svg></mjx-container>或许跟泡利矩阵有关系，因为泡利矩阵满足:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\sigma_i,\sigma_j\}&amp;= 2\delta_{ij}
-\end{align}
-\]</span> 但问题在于，在矩阵的二维表示中，我们无法找<span
-class="math inline">\(\beta\)</span>。<a
-href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">回忆四元数</a>我们知道，该空间任意一个元素都可以表示为:
-<span class="math display">\[
+ \{\sigma_i,\sigma_j\}&= 2\delta_{ij}
+\end{align}</script><p>但问题在于，在矩阵的二维表示中，我们无法找<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.281ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 566 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>。<a href="http://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1">回忆四元数</a>/)我们知道，该空间任意一个元素都可以表示为:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\beta&amp;= a\cdot \mathbb{1}+x^i\sigma_i\\
-&amp;= \begin{pmatrix}a+x^3&amp;x^2-ix^3\\
-x^2+ix^3&amp;a-x^3\end{pmatrix}\\
-\Rightarrow \{\beta,\sigma_j\}&amp;= 2a\sigma_j+2x^i\delta_{ij}\\
-&amp;= 0
-\end{align}
-\]</span> 当<span class="math inline">\(j=3\)</span>时： <span
-class="math display">\[
+ \beta&= a\cdot \mathbb{1}+x^i\sigma_i\\
+ &= \begin{pmatrix}a+x^3&x^2-ix^3\\ x^2+ix^3&a-x^3\end{pmatrix}\\
+\Rightarrow \{\beta,\sigma_j\}&= 2a\sigma_j+2x^i\delta_{ij}\\
+&= 0
+\end{align}</script><p>当<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.462ex;" xmlns="http://www.w3.org/2000/svg" width="5.08ex" height="1.966ex" role="img" focusable="false" viewBox="0 -665 2245.6 869"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g><g data-mml-node="mo" transform="translate(689.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(1745.6,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></svg></mjx-container>时：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-a\sigma_3+x^3\delta_{ij}&amp;= \begin{pmatrix}a+x^3&amp;0\\0&amp;-a+x^3
-\end{pmatrix}\\
-&amp;= \begin{pmatrix}0&amp;0\\0&amp;0\end{pmatrix}\\
-\Rightarrow a&amp;= x^3=0
-\end{align}
-\]</span> 同理可以得到所有分量<span
-class="math inline">\(a,x^i\)</span>均为0.也就是说在2x2矩阵的表示中我们找不到合适的<span
-class="math inline">\(\alpha,\beta\)</span>。因此我们将目光看向4x4的矩阵：
-<span class="math display">\[
+ a\sigma_3+x^3\delta_{ij}&= \begin{pmatrix}a+x^3&0\\0&-a+x^3 \end{pmatrix}\\
+ &= \begin{pmatrix}0&0\\0&0\end{pmatrix}\\
+\Rightarrow a&= x^3=0
+\end{align}</script><p>同理可以得到所有分量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="4.237ex" height="2.318ex" role="img" focusable="false" viewBox="0 -830.4 1872.6 1024.4"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(529,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msup" transform="translate(973.7,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,363) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>均为0.也就是说在2x2矩阵的表示中我们找不到合适的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>。因此我们将目光看向4x4的矩阵：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\alpha^i&amp;\triangleq  \sigma^x\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^z\otimes \sigma^0
-\end{align}
-\]</span> 这是Sakurai老师书中使用的定义，其中<span
-class="math inline">\(\sigma^0\)</span>代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的<span
-class="math inline">\(\gamma\)</span>矩阵。比如我们可以这样定义: <span
-class="math display">\[
+ \alpha^i&\triangleq  \sigma^x\otimes \sigma^i\\
+ \beta &\triangleq \sigma^z\otimes \sigma^0
+\end{align}</script><p>这是Sakurai老师书中使用的定义，其中<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.28ex" height="1.912ex" role="img" focusable="false" viewBox="0 -833.9 1007.6 844.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D70E" d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"></path></g><g data-mml-node="mn" transform="translate(604,363) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g></svg></mjx-container>代表单位矩阵，需要知道，这种并不是唯一的，实际使用中有许多的<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.229ex" height="1.486ex" role="img" focusable="false" viewBox="0 -441 543 657"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g></g></g></svg></mjx-container>矩阵。比如我们可以这样定义:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\alpha^i &amp;\triangleq \sigma^j\otimes \sigma^i\\
-\beta &amp;\triangleq \sigma^k\otimes \sigma^0
-\end{align}
-\]</span> 其中<span class="math inline">\(j\neq
-k\)</span>，否则等价于2x2矩阵表示。很容易验证： <span
-class="math display">\[
+ \alpha^i &\triangleq \sigma^j\otimes \sigma^i\\
+ \beta &\triangleq \sigma^k\otimes \sigma^0
+\end{align}</script><p>其中<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.486ex;" xmlns="http://www.w3.org/2000/svg" width="5.128ex" height="2.106ex" role="img" focusable="false" viewBox="0 -716 2266.6 931"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g><g data-mml-node="mo" transform="translate(689.8,0)"><path data-c="2260" d="M166 -215T159 -215T147 -212T141 -204T139 -197Q139 -190 144 -183L306 133H70Q56 140 56 153Q56 168 72 173H327L406 327H72Q56 332 56 347Q56 360 70 367H426Q597 702 602 707Q605 716 618 716Q625 716 630 712T636 703T638 696Q638 692 471 367H707Q722 359 722 347Q722 336 708 328L451 327L371 173H708Q722 163 722 153Q722 140 707 133H351Q175 -210 170 -212Q166 -215 159 -215Z"></path></g><g data-mml-node="mi" transform="translate(1745.6,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg></mjx-container>，否则等价于2x2矩阵表示。很容易验证：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\{\alpha^m,\alpha^n\}&amp;= (\sigma^j)^2\otimes
-\sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
-&amp;= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
-\{\alpha^i,\beta\}&amp;= (\sigma^j\sigma^k)\otimes
-\sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
-&amp;= 0
-\end{align}
-\]</span> 上式最后一步使用了<span class="math inline">\(j\neq
-k\)</span>的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
-<p>喀老师的书上是使用了群论的知识分析得到<span
-class="math inline">\(\alpha,\beta\)</span>必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
-<h2 id="守恒流">守恒流</h2>
-<p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:
-<span class="math display">\[
+ \{\alpha^m,\alpha^n\}&= (\sigma^j)^2\otimes \sigma^m\sigma^n+(\sigma^j)^2\otimes \sigma^n\sigma^m\\
+ &= \mathbb{1}\otimes2\delta^{nm}=2\delta^{mn}\\
+ \{\alpha^i,\beta\}&= (\sigma^j\sigma^k)\otimes \sigma^i+(\sigma^k\sigma^j)\otimes\sigma^i\\
+ &= 0
+\end{align}</script><p>上式最后一步使用了<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.486ex;" xmlns="http://www.w3.org/2000/svg" width="5.128ex" height="2.106ex" role="img" focusable="false" viewBox="0 -716 2266.6 931"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g><g data-mml-node="mo" transform="translate(689.8,0)"><path data-c="2260" d="M166 -215T159 -215T147 -212T141 -204T139 -197Q139 -190 144 -183L306 133H70Q56 140 56 153Q56 168 72 173H327L406 327H72Q56 332 56 347Q56 360 70 367H426Q597 702 602 707Q605 716 618 716Q625 716 630 712T636 703T638 696Q638 692 471 367H707Q722 359 722 347Q722 336 708 328L451 327L371 173H708Q722 163 722 153Q722 140 707 133H351Q175 -210 170 -212Q166 -215 159 -215Z"></path></g><g data-mml-node="mi" transform="translate(1745.6,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg></mjx-container>的条件。如上，最起码上面这种定义方式也是符合条件的，所以定义方式并不唯一。</p>
+<p>喀老师的书上是使用了群论的知识分析得到<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="3.735ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1650.7 899"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(640,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1084.7,0)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g></g></g></svg></mjx-container>必须是4x4矩阵表示，这里不多介绍，或许以后会回来补充（<del>咕咕咕警告！</del>）。</p>
+<h2 id="守恒流"><a href="#守恒流" class="headerlink" title="守恒流"></a>守恒流</h2><p>Dirac方程没有解决负能量的问题，但是它解决了负概率的问题。现在我们来推导守恒流，我们希望得到如下的表达式:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\frac{\partial }{\partial t}\rho+\nabla\cdot J=0
-\end{align}
-\]</span> 从Dirac方程入手: <span class="math display">\[
+ \frac{\partial }{\partial t}\rho+\nabla\cdot J=0
+\end{align}</script><p>从Dirac方程入手:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta
-m)\psi&amp;= 0\\
-\psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta
-m)\psi^*&amp;= 0
-\end{align}
-\]</span>
-其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:
-<span class="math display">\[
+ \psi^*(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i-\beta m)\psi&= 0\\
+ \psi(i\frac{\partial }{\partial t}-i\alpha^i\nabla_i+\beta m)\psi^*&= 0
+\end{align}</script><p>其中第二个式子是将Dirac方程整体做复共轭，然后再同乘一个负号，因此最后的结果就是质量项系数反号。将两式相加得:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial
-t}\psi^*)&amp;=
-i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
-\frac{\partial }{\partial t}(\psi^*\psi)&amp;=
-\nabla\cdot(\psi^*\alpha\psi)\\
-  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&amp;=
-\nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
-\frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&amp;=
-\nabla_i(\bar{\psi}\gamma^i\psi)
-\end{align}
-\]</span> 综上我们可以写出: <span class="math display">\[
+ i(\psi^*\frac{\partial }{\partial t}\psi+\psi\frac{\partial }{\partial t}\psi^*)&= i(\psi^*\alpha^i\nabla_i\psi+\psi\alpha^i\nabla_i\psi^*)\\
+ \frac{\partial }{\partial t}(\psi^*\psi)&= \nabla\cdot(\psi^*\alpha\psi)\\
+  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&= \nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+ \Rightarrow  \frac{\partial }{\partial t}(\psi^*\beta\beta\psi)&= \nabla\cdot(\psi^*\beta\beta\alpha\psi)\\
+ \frac{\partial }{\partial t}(\bar{\psi}\gamma^0\psi)&= \nabla_i(\bar{\psi}\gamma^i\psi)
+\end{align}</script><p>综上我们可以写出:</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\partial_\mu J^\mu=0
-\end{align}
-\]</span> 其中<span
-class="math inline">\(J^\mu=\bar{\psi}\gamma^\mu\psi\)</span>.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
-<h2 id="free-particle-solution">Free-Particle Solution</h2>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>事实上我们知道，这应该是spin=0粒子的自由运动方程<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-
+ \partial_\mu J^\mu=0
+\end{align}</script><p>其中<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="11.166ex" height="2.627ex" role="img" focusable="false" viewBox="0 -945 4935.5 1161"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D43D" d="M447 625Q447 637 354 637H329Q323 642 323 645T325 664Q329 677 335 683H352Q393 681 498 681Q541 681 568 681T605 682T619 682Q633 682 633 672Q633 670 630 658Q626 642 623 640T604 637Q552 637 545 623Q541 610 483 376Q420 128 419 127Q397 64 333 21T195 -22Q137 -22 97 8T57 88Q57 130 80 152T132 174Q177 174 182 130Q182 98 164 80T123 56Q115 54 115 53T122 44Q148 15 197 15Q235 15 271 47T324 130Q328 142 387 380T447 625Z"></path></g><g data-mml-node="mi" transform="translate(719.9,363) scale(0.707)"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g><g data-mml-node="mo" transform="translate(1474.1,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2529.8,0)"><g data-mml-node="mover"><g data-mml-node="mi"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g><g data-mml-node="mo" transform="translate(436.5,255) translate(-250 0)"><path data-c="AF" d="M69 544V590H430V544H69Z"></path></g></g></g><g data-mml-node="msup" transform="translate(3180.8,0)"><g data-mml-node="mi"><path data-c="1D6FE" d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z"></path></g><g data-mml-node="mi" transform="translate(627.3,363) scale(0.707)"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g><g data-mml-node="mi" transform="translate(4284.5,0)"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g></g></g></svg></mjx-container>.在研究Dirac方程对于自由粒子的解后，我们会对刚定义的概率密度/概率流有进一步的认识。</p>
+<h2 id="Free-Particle-Solution"><a href="#Free-Particle-Solution" class="headerlink" title="Free-Particle Solution"></a>Free-Particle Solution</h2>
     </div>
 
     
@@ -627,13 +662,13 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">189k</span>
+    <span title="站点总字数">149k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:43</span>
+    <span title="站点阅读时长">4:32</span>
   </span>
 </div>
 

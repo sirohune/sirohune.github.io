@@ -56,7 +56,119 @@
   </noscript>
   
 
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
@@ -332,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>25 分钟</span>
+      <span>23 分钟</span>
     </span>
 </div>
 
@@ -345,8 +457,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅</code></pre>
-<p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
+课程PPT——俞宏毅
+</code></pre><p>回顾上一章的内容，我们因为自由电子气的模型过于简单，考虑了近自由的电子，也就是考虑了离子实对电子的影响，但是忽略了离子实的运动，将离子视作不改变位置的晶格。而在这一章，我们将进一步取消我们的近似，从而得到更符合实际的模型——<strong>晶格振动</strong></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/05/20/Solid-State-Physics-Note-Part-3/#more" rel="contents">
@@ -477,7 +589,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <pre><code>参考书籍：
 《数学物理方法简明导论》_v3.1——黄志琦
 《数学物理方法》——梁昆淼
-《数学物理方法》——吴崇试</code></pre>
+《数学物理方法》——吴崇试
+</code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/04/20/Mathematical-Physics-Methods-Review-Notes-(Integral-Transformation)/#more" rel="contents">
@@ -606,7 +719,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     <div class="post-body" itemprop="articleBody">
           <pre><code>前念不生，即心
-后念不灭，即佛</code></pre>
+后念不灭，即佛
+</code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/04/19/Climbing%20Diary-1/#more" rel="contents">
@@ -716,14 +830,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>20k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>36 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -736,8 +850,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考资料：
 《固体物理基础》——阎守胜
-课程PPT——俞宏毅</code></pre>
-<p>自由电子气有三个近似</p>
+课程PPT——俞宏毅
+</code></pre><p>自由电子气有三个近似</p>
 <ul>
 <li>自由电子近似</li>
 <li>单电子近似</li>
@@ -813,7 +927,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-12 09:43:39" itemprop="dateModified" datetime="2023-07-12T09:43:39+08:00">2023-07-12</time>
+      <time title="修改时间：2024-05-26 11:50:49" itemprop="dateModified" datetime="2024-05-26T11:50:49+08:00">2024-05-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -853,14 +967,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>17k</span>
+      <span>15k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>31 分钟</span>
+      <span>28 分钟</span>
     </span>
 </div>
 
@@ -873,8 +987,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考书目：
 《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell
+</code></pre><p>这部分是从系统的微观状态出发，用统计的观点重新得到热力学的结论。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/15/Statistical-Review-Note/#more" rel="contents">
@@ -984,14 +1098,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>18k</span>
+      <span>17k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>33 分钟</span>
+      <span>30 分钟</span>
     </span>
 </div>
 
@@ -1005,8 +1119,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <pre><code>参考书籍：
 《数学物理方法简明导论》_v3.1——黄志琦
 《数学物理方法》——梁昆淼
-《数学物理方法》——吴崇试</code></pre>
-<h2 id="复变函数">复变函数</h2>
+《数学物理方法》——吴崇试
+</code></pre><h2 id="复变函数"><a href="#复变函数" class="headerlink" title="复变函数"></a>复变函数</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/13/Mathematical-Physics-Methods-Review-Notes-(Complex-function)/#more" rel="contents">
@@ -1101,7 +1215,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1121,7 +1235,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考：
 《资本论》——马克思 恩格斯
-复旦王德峰教授公开课</code></pre>
+复旦王德峰教授公开课
+</code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/10/%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -1191,7 +1306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-18 23:06:30" itemprop="dateModified" datetime="2023-04-18T23:06:30+08:00">2023-04-18</time>
+      <time title="修改时间：2024-05-26 10:56:19" itemprop="dateModified" datetime="2024-05-26T10:56:19+08:00">2024-05-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1231,14 +1346,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>10k</span>
+      <span>9.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>19 分钟</span>
+      <span>17 分钟</span>
     </span>
 </div>
 
@@ -1251,11 +1366,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="post-body" itemprop="articleBody">
           <pre><code>参考书目：
 《热力学·统计物理》—— 汪志诚
-《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell</code></pre>
-<p>这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。</p>
-<p>热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一系列平衡态来做热力学近似。<a
-href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></p>
+《热物理概念》—— Stephen J.Blundell and Katherine M.Blundell
+</code></pre><p>这部分基本是热力学的回顾，涉及一堆热学量的定义以及偏导关系。</p>
+<p>热学是一门唯象的学科，它能够给出状态方程，但他没法解释为什么方程长这样，他不关心粒子究竟如何运动；同时热力学惯性系统的热平衡态，因此热学没法描述临时的演化过程是如何的，但我们可以找到一系列平衡态来做热力学近似。<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/08/Thermodynamic-Review-Note/#more" rel="contents">
@@ -1365,14 +1478,14 @@ role="doc-noteref"><sup>1</sup></a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>14k</span>
+      <span>12k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>25 分钟</span>
+      <span>23 分钟</span>
     </span>
 </div>
 
@@ -1383,7 +1496,8 @@ role="doc-noteref"><sup>1</sup></a></p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
+          <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg
+</code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/06/Lie-Group-Study-Note-(part1)/#more" rel="contents">
@@ -1493,14 +1607,14 @@ role="doc-noteref"><sup>1</sup></a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>12k</span>
+      <span>11k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>22 分钟</span>
+      <span>21 分钟</span>
     </span>
 </div>
 
@@ -1511,7 +1625,7 @@ role="doc-noteref"><sup>1</sup></a></p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="金属自由电子气">金属自由电子气</h1>
+          <h1 id="金属自由电子气"><a href="#金属自由电子气" class="headerlink" title="金属自由电子气"></a>金属自由电子气</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/01/Solid-State-Physics-Note-Part-1/#more" rel="contents">
@@ -1561,13 +1675,13 @@ role="doc-noteref"><sup>1</sup></a></p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">189k</span>
+    <span title="站点总字数">149k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:43</span>
+    <span title="站点阅读时长">4:32</span>
   </span>
 </div>
 

@@ -63,7 +63,119 @@
   <link rel="alternate" type="application/rss+xml" title="はくのBlog" href="https://sirohune.site/2023/05/28/Lie-Group-Study-Note-(part2)//atom.xml">
   
 
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <script src="//cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
@@ -185,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4o13"><span class="nav-text">洛伦兹群O(1,3)</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4O-1-3"><span class="nav-text">洛伦兹群O(1,3)</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>195</span>
+      <span>191</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -346,20 +458,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     <div class="post-body" itemprop="articleBody">
-        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg</code></pre>
-<span id="more"></span>
-<p>前情提要：<a
-href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1)/">群论学习笔记(part1)
-| はくのblog</a></p>
-<h2 id="洛伦兹群o13">洛伦兹群O(1,3)</h2>
-<p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<span
-class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足
-<span class="math display">\[
+        <pre><code>参考教材《Physics from symmetry》-Jakob Schwichtenberg
+</code></pre><span id="more"></span>
+<p>前情提要：<a href="https://sirohune.site/2023/03/06/Lie-Group-Study-Note-(part1">群论学习笔记(part1) | はくのblog </a>/)</p>
+<h2 id="洛伦兹群O-1-3"><a href="#洛伦兹群O-1-3" class="headerlink" title="洛伦兹群O(1,3)"></a>洛伦兹群O(1,3)</h2><p>洛伦兹群与前面提到的转动群的区别是，前面的转动群是保欧式度规<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.14ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 504 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g></g></g></svg></mjx-container>不变，而洛伦兹群是保闵可夫斯基度规不变，也就是说满足</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\Lambda^T \eta \Lambda=\eta
-\end{align}
-\]</span></p>
-
+ \Lambda^T \eta \Lambda=\eta
+\end{align}</script>
     </div>
 
     
@@ -417,13 +523,13 @@ class="math inline">\(I\)</span>不变，而洛伦兹群是保闵可夫斯基度
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">189k</span>
+    <span title="站点总字数">149k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:43</span>
+    <span title="站点阅读时长">4:32</span>
   </span>
 </div>
 
